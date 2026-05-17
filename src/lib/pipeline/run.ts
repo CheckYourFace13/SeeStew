@@ -14,6 +14,7 @@ import {
   buildArticleFromVideoFallback,
   buildObscureStory,
 } from "./story-writer";
+import { validateArticleForPublish } from "./validate-story";
 
 export type PipelineResult = {
   ok: boolean;
@@ -25,6 +26,11 @@ export type PipelineResult = {
 const hasOpenRouter = () => Boolean(pipelineConfig.openRouterApiKey);
 
 async function publishArticle(article: Awaited<ReturnType<typeof buildArticleFromVideo>>) {
+  const validation = validateArticleForPublish(article);
+  if (!validation.ok) {
+    console.error(`Story rejected (${article.slug}):`, validation.errors.join("; "));
+    return false;
+  }
   const filePath = join(process.cwd(), "content", "articles", `${article.slug}.json`);
   if (existsSync(filePath)) return false;
   saveArticle(article);
@@ -120,7 +126,7 @@ export async function runStoryPipeline(): Promise<PipelineResult> {
     skipped,
     message:
       published.length > 0
-        ? `Published: ${published.join(", ")}`
+        ? `Published: ${published.join(", ")}. New story URLs appear within ~10 minutes (ISR) without a full rebuild.`
         : hasOpenRouter()
           ? "Nothing new to publish this run."
           : "Set OPENROUTER_API_KEY for AI stories, or waiting on new YouTube videos.",

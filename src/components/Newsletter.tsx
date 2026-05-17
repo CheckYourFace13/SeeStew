@@ -16,7 +16,7 @@ export function Newsletter() {
     <section className="rounded-2xl bg-brand-primary px-6 py-10 text-white md:px-10">
       <h2 className="font-heading text-2xl font-bold text-brand-gold">Get updates</h2>
       <p className="mt-2 max-w-xl text-brand-pale/90">
-        New documentaries and articles — send your email and we will add you to the list.
+        New documentaries and history stories — send your email and we will add you to the list.
       </p>
       <form
         onSubmit={handleSubmit}

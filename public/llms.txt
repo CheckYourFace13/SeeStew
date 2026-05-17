@@ -7,7 +7,7 @@
 - https://seestew.com/
 - https://seestew.com/videos — long-form documentaries (embedded from YouTube)
 - https://seestew.com/shorts — short-form clips from YouTube Shorts
-- https://seestew.com/articles — history articles with citations and references
+- https://seestew.com/articles — American history stories with cited facts (URL path /articles; nav label “Stories”)
 - https://seestew.com/topics — browse by category
 - https://seestew.com/social — official social links
 - https://seestew.com/feed.xml — RSS for new articles

@@ -74,16 +74,14 @@ function classifyFormat(
   if (text.includes("#shorts") || text.includes("youtube short")) {
     return "short";
   }
-  if (durationSeconds > 0 && durationSeconds <= youtubeConfig.shortFormMaxSeconds) {
-    return "short";
+  if (durationSeconds > 0) {
+    if (durationSeconds <= youtubeConfig.shortFormMaxSeconds) return "short";
+    if (durationSeconds >= youtubeConfig.longFormMinSeconds) return "long";
+    return durationSeconds > youtubeConfig.shortFormMaxSeconds ? "long" : "short";
   }
-  if (durationSeconds >= youtubeConfig.longFormMinSeconds) {
-    return "long";
-  }
-  if (durationSeconds > youtubeConfig.shortFormMaxSeconds) {
-    return "long";
-  }
-  return "short";
+  // RSS feeds often omit duration — default to long-form unless title signals a Short
+  if (/\bshorts?\b/i.test(title) && title.length < 72) return "short";
+  return "long";
 }
 
 async function getUploadsPlaylistId(
@@ -241,12 +239,17 @@ export async function getYouTubeVideos(): Promise<YouTubeVideo[]> {
   return FALLBACK_VIDEOS;
 }
 
+const LONG_FALLBACK = FALLBACK_VIDEOS.filter((v) => v.format === "long");
+
 export async function getLongFormVideos(): Promise<YouTubeVideo[]> {
-  return (await getYouTubeVideos()).filter((v) => v.format === "long");
+  const long = (await getYouTubeVideos()).filter((v) => v.format === "long");
+  if (long.length > 0) return long;
+  return LONG_FALLBACK;
 }
 
 export async function getShortFormVideos(): Promise<YouTubeVideo[]> {
-  return (await getYouTubeVideos()).filter((v) => v.format === "short");
+  const shorts = (await getYouTubeVideos()).filter((v) => v.format === "short");
+  return shorts;
 }
 
 export async function getVideoBySlug(slug: string): Promise<YouTubeVideo | undefined> {

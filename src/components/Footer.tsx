@@ -31,7 +31,7 @@ export function Footer() {
             </li>
             <li>
               <Link href="/articles" className="hover:text-white">
-                Articles
+                Stories
               </Link>
             </li>
             <li>

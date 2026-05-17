@@ -22,7 +22,7 @@ export async function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>${siteConfig.name} — American History Articles</title>
+    <title>${siteConfig.name} — American History Stories</title>
     <link>${siteConfig.url}</link>
     <description>${siteConfig.description}</description>
     <language>en-us</language>

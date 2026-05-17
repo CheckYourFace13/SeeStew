@@ -6,7 +6,8 @@ import {
   videoCompanionPrompt,
   WRITER_SYSTEM,
 } from "./prompts";
-import { validateReferences, stripAiPhrases } from "./sanitize";
+import { stripAiPhrases } from "./sanitize";
+import { validateReferences } from "./validate-story";
 
 type StoryJson = {
   title: string;
@@ -70,14 +71,15 @@ async function generateStory(userPrompt: string, retries = 2): Promise<StoryJson
               : ""),
         },
       ],
-      { maxTokens: 8000, temperature: 0.6 + i * 0.05 }
+      { maxTokens: 8000, temperature: 0.35 + i * 0.05 }
     );
 
     try {
       const story = parseStoryJson(raw);
       const wordCount = story.content.split(/\s+/).length;
-      if (!validateReferences(story.references)) {
-        lastError = "insufficient references";
+      const refCheck = validateReferences(story.references);
+      if (!refCheck.ok) {
+        lastError = refCheck.errors.join("; ");
         continue;
       }
       if (wordCount < 800) {
@@ -118,7 +120,7 @@ function toArticle(
 
 /** Template fallback when OpenRouter is not configured */
 export function buildArticleFromVideoFallback(video: YouTubeVideo): Article {
-  const content = `## ${video.title}\n\nWatch the documentary above for the full story. SeeStew covers this on [YouTube](https://www.youtube.com/@SeeStew).\n\n## Sources\n\n1. SeeStew — *YouTube*. [Link](https://www.youtube.com/@SeeStew)`;
+  const content = `## ${video.title}\n\nWatch the documentary above for the full story. SeeStew covers this topic on [YouTube](https://www.youtube.com/@SeeStew).\n\n## Sources\n\n1. SeeStew — *YouTube*. [Link](https://www.youtube.com/@SeeStew)\n2. Library of Congress — *American History collections*. [Link](https://www.loc.gov/collections/)`;
   return {
     slug: slugify(video.title, video.id.slice(0, 6)),
     title: video.title,
@@ -131,6 +133,11 @@ export function buildArticleFromVideoFallback(video: YouTubeVideo): Article {
         title: "SeeStew YouTube Channel",
         publisher: "YouTube",
         url: "https://www.youtube.com/@SeeStew",
+      },
+      {
+        title: "Library of Congress Digital Collections",
+        publisher: "Library of Congress",
+        url: "https://www.loc.gov/collections/",
       },
     ],
     relatedVideoId: video.id,

@@ -28,16 +28,5 @@ export function stripAiPhrases(text: string): string {
   return out.replace(/\s{2,}/g, " ").replace(/\n{3,}/g, "\n\n").trim();
 }
 
-export function validateReferences(
-  refs: Array<{ title?: string; url?: string; publisher?: string }>
-): boolean {
-  if (!refs || refs.length < 5) return false;
-  return refs.every(
-    (r) =>
-      r.title &&
-      r.url &&
-      r.url.startsWith("https://") &&
-      r.url.length > 12 &&
-      !r.url.includes("example.com")
-  );
-}
+/** @deprecated Use validateReferences from validate-story.ts */
+export { validateReferences } from "./validate-story";

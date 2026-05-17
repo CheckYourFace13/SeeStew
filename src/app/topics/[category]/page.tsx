@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getAllArticles, getArticlesByCategory } from "@/lib/articles";
-import { siteConfig } from "@/lib/config";
+import { AdSlot } from "@/components/AdSlot";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
+import { getAllArticles, getArticlesByCategory } from "@/lib/articles";
+import { siteConfig } from "@/lib/config";
 import { buildBreadcrumbJsonLd } from "@/lib/seo";
+import { getTopicHub, getTopicHubForCategory } from "@/lib/topic-seo";
 
 type Props = { params: Promise<{ category: string }> };
 
@@ -25,11 +27,14 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category: slug } = await params;
-  const name = slugToCategory(slug);
+  const hub = getTopicHub(slug);
+  const name = slugToCategory(slug) ?? hub?.title;
   if (!name) return { title: "Topic not found" };
   return {
-    title: `${name} — American History Articles`,
-    description: `SeeStew articles about ${name}: sourced US history stories, scandals, and documentaries.`,
+    title: hub?.title ?? `${name} — American History Stories`,
+    description:
+      hub?.description ??
+      `SeeStew stories about ${name}: sourced U.S. history facts with citations and documentaries.`,
     alternates: { canonical: `${siteConfig.url}/topics/${slug}` },
   };
 }
@@ -37,9 +42,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function TopicCategoryPage({ params }: Props) {
   const { category: slug } = await params;
   const categoryName = slugToCategory(slug);
-  if (!categoryName) notFound();
+  const hub = getTopicHub(slug) ?? (categoryName ? getTopicHubForCategory(categoryName) : undefined);
 
-  const articles = getArticlesByCategory(categoryName);
+  if (!categoryName && !hub) notFound();
+
+  const displayName = categoryName ?? hub!.title;
+  const articles = categoryName ? getArticlesByCategory(categoryName) : [];
   const url = `${siteConfig.url}/topics/${slug}`;
 
   return (
@@ -48,19 +56,41 @@ export default async function TopicCategoryPage({ params }: Props) {
         data={buildBreadcrumbJsonLd([
           { name: "Home", url: siteConfig.url },
           { name: "Topics", url: `${siteConfig.url}/topics` },
-          { name: categoryName, url },
+          { name: displayName, url },
         ])}
       />
       <Breadcrumbs
         items={[
           { label: "Home", href: "/" },
           { label: "Topics", href: "/topics" },
-          { label: categoryName },
+          { label: displayName },
         ]}
       />
-      <h1 className="font-heading text-4xl font-bold text-ink">{categoryName}</h1>
-      <p className="mt-3 text-ink-muted">
-        {articles.length} article{articles.length === 1 ? "" : "s"} with citations.
+      <h1 className="font-heading text-4xl font-bold text-ink">
+        {hub?.title ?? displayName}
+      </h1>
+      <p className="mt-3 max-w-3xl text-lg text-ink-muted">
+        {hub?.intro ??
+          `Sourced SeeStew stories about ${displayName} with cited facts and references.`}
+      </p>
+
+      {hub?.searchAngles && hub.searchAngles.length > 0 && (
+        <p className="mt-4 text-sm text-ink-muted">
+          Readers search for: {hub.searchAngles.join(" · ")}.
+        </p>
+      )}
+
+      <AdSlot className="mt-8" format="horizontal" label="Advertisement" />
+
+      <p className="mt-6 text-ink-muted">
+        {articles.length} stor{articles.length === 1 ? "y" : "ies"} with citations.{" "}
+        <Link href="/videos" className="text-brand-mid underline">
+          Watch documentaries
+        </Link>{" "}
+        ·{" "}
+        <Link href="/shorts" className="text-brand-mid underline">
+          Shorts
+        </Link>
       </p>
 
       <ul className="mt-10 space-y-4">
@@ -76,6 +106,16 @@ export default async function TopicCategoryPage({ params }: Props) {
           </li>
         ))}
       </ul>
+
+      {articles.length === 0 && (
+        <p className="mt-10 text-ink-muted">
+          Stories for this topic are coming soon. Browse{" "}
+          <Link href="/articles" className="underline">
+            all stories
+          </Link>
+          .
+        </p>
+      )}
     </div>
   );
 }

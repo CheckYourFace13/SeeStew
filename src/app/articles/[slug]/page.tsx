@@ -2,21 +2,26 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/AdSlot";
+import { ArticleBody } from "@/components/ArticleBody";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
-import { MarkdownContent } from "@/components/MarkdownContent";
 import { ReferencesList } from "@/components/ReferencesList";
+import { RelatedContent } from "@/components/RelatedContent";
 import { VideoPlayer } from "@/components/VideoPlayer";
-import { getAllArticles, getArticle } from "@/lib/articles";
+import { getAllArticles, getArticle, getArticlesByCategory } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
 import {
   buildArticleJsonLd,
   buildBreadcrumbJsonLd,
   referencesToCitationSchema,
 } from "@/lib/seo";
-import { getVideoById } from "@/lib/youtube";
+import { getLongFormVideos, getVideoById } from "@/lib/youtube";
 
 type Props = { params: Promise<{ slug: string }> };
+
+/** New cron-published stories appear within ~10 min without a full rebuild. */
+export const revalidate = 600;
+export const dynamicParams = true;
 
 export async function generateStaticParams() {
   return getAllArticles().map((a) => ({ slug: a.slug }));
@@ -25,14 +30,15 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const article = getArticle(slug);
-  if (!article) return { title: "Article not found" };
+  if (!article) return { title: "Story not found" };
   const url = `${siteConfig.url}/articles/${slug}`;
   return {
     title: article.title,
-    description: article.excerpt,
+    description: `${article.excerpt} Sourced American history facts from SeeStew.`,
     keywords: [
       article.category,
-      "American history",
+      "American history facts",
+      "American history stories",
       article.title,
       "SeeStew",
     ],
@@ -56,6 +62,8 @@ export default async function ArticlePage({ params }: Props) {
     ? await getVideoById(article.relatedVideoId)
     : undefined;
   const topicSlug = article.category.toLowerCase().replace(/\s+/g, "-");
+  const relatedStories = getArticlesByCategory(article.category);
+  const relatedVideos = (await getLongFormVideos()).slice(0, 4);
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-10 md:px-6" itemScope itemType="https://schema.org/Article">
@@ -63,7 +71,7 @@ export default async function ArticlePage({ params }: Props) {
         data={[
           buildBreadcrumbJsonLd([
             { name: "Home", url: siteConfig.url },
-            { name: "Articles", url: `${siteConfig.url}/articles` },
+            { name: "Stories", url: `${siteConfig.url}/articles` },
             { name: article.title, url },
           ]),
           buildArticleJsonLd(article, url),
@@ -83,7 +91,7 @@ export default async function ArticlePage({ params }: Props) {
       <Breadcrumbs
         items={[
           { label: "Home", href: "/" },
-          { label: "Articles", href: "/articles" },
+          { label: "Stories", href: "/articles" },
           { label: article.category, href: `/topics/${topicSlug}` },
           { label: article.title },
         ]}
@@ -104,26 +112,38 @@ export default async function ArticlePage({ params }: Props) {
         </p>
       </header>
 
-      <AdSlot className="mt-8" format="horizontal" />
+      <AdSlot className="mt-8" format="horizontal" label="Advertisement" />
 
       {relatedVideo && (
         <section className="my-10">
-          <h2 className="mb-4 font-heading text-xl font-bold">Watch the video</h2>
+          <h2 className="mb-4 font-heading text-xl font-bold">Watch the documentary</h2>
           <VideoPlayer videoId={relatedVideo.id} title={relatedVideo.title} />
+          <p className="mt-3 text-sm text-ink-muted">
+            <Link href={`/videos/${relatedVideo.slug}`} className="text-brand-mid underline">
+              More notes on this episode →
+            </Link>
+          </p>
         </section>
       )}
 
-      <div className="prose-history mt-10" itemProp="articleBody">
-        <MarkdownContent content={article.content} />
+      <div className="mt-10" itemProp="articleBody">
+        <ArticleBody content={article.content} />
       </div>
 
       {article.references && article.references.length > 0 && (
         <ReferencesList references={article.references} />
       )}
 
-      <AdSlot className="mt-10" />
+      <AdSlot className="mt-10" format="rectangle" label="Advertisement" />
 
-      <nav className="mt-12 rounded-xl bg-brand-wash p-6 text-sm" aria-label="Related SeeStew links">
+      <RelatedContent
+        category={article.category}
+        currentSlug={article.slug}
+        relatedStories={relatedStories}
+        relatedVideos={relatedVideos}
+      />
+
+      <nav className="mt-12 rounded-xl bg-brand-wash p-6 text-sm" aria-label="SeeStew channels">
         <p className="font-semibold text-ink">SeeStew elsewhere</p>
         <ul className="mt-3 space-y-2 text-ink-muted">
           <li>
@@ -132,18 +152,13 @@ export default async function ArticlePage({ params }: Props) {
             </a>
           </li>
           <li>
-            <a href={siteConfig.social.instagram} className="text-brand-mid underline" target="_blank" rel="noopener noreferrer">
-              Instagram @see.stew
-            </a>
-          </li>
-          <li>
-            <a href={siteConfig.social.tiktok} className="text-brand-mid underline" target="_blank" rel="noopener noreferrer">
-              TikTok @see.stew
-            </a>
+            <Link href="/shorts" className="text-brand-mid underline">
+              History shorts
+            </Link>
           </li>
           <li>
             <Link href="/videos" className="text-brand-mid underline">
-              Documentaries on seestew.com
+              Documentaries
             </Link>
           </li>
         </ul>

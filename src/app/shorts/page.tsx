@@ -5,10 +5,12 @@ import { VideoCard } from "@/components/VideoCard";
 import { siteConfig } from "@/lib/config";
 import { getShortFormVideos } from "@/lib/youtube";
 
+export const revalidate = 1800;
+
 export const metadata: Metadata = {
-  title: "History Shorts",
+  title: "American History Shorts — SeeStew",
   description:
-    "Short-form American history clips from SeeStew on YouTube, synced to seestew.com. Also on Instagram and TikTok @see.stew.",
+    "Quick American history clips and facts from SeeStew — YouTube Shorts synced here, plus @see.stew on Instagram and TikTok.",
   alternates: { canonical: `${siteConfig.url}/shorts` },
 };
 

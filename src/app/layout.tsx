@@ -98,7 +98,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/logo.png" />
         <link rel="apple-touch-icon" href="/logo-light.png" />
-        <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="SeeStew Articles" />
+        <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="SeeStew Stories" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs" />
         <link rel="preconnect" href="https://www.youtube.com" />
         <link rel="preconnect" href="https://i.ytimg.com" />

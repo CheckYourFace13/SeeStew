@@ -68,12 +68,12 @@ Supports `npm start`, API cron, and server features.
 
 6. **SSL** — enable free SSL for seestew.com in hPanel (Let’s Encrypt).
 
-7. **Cron** (new articles twice daily)  
+7. **Cron** (new stories twice daily)  
    - hPanel → **Cron Jobs** (or use cron-job.org):  
    ```
    curl -s "https://seestew.com/api/cron/publish?secret=YOUR_CRON_SECRET"
    ```
-   - After cron runs, trigger a **redeploy/rebuild** if articles are baked at build time, OR configure Hostinger to rebuild on schedule.
+   - New story pages use **ISR** (`revalidate` ~10 minutes) — they should appear **without a full rebuild**. If a new slug 404s after 15 minutes, run `npm run build && npm start` once on the server.
 
 8. **Search Console**  
    - Submit sitemap: `https://seestew.com/sitemap.xml`  

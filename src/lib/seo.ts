@@ -48,7 +48,7 @@ export function buildWebSiteJsonLd() {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: `${siteConfig.url}/articles?q={search_term_string}`,
+        urlTemplate: `${siteConfig.url}/topics?q={search_term_string}`,
       },
       "query-input": "required name=search_term_string",
     },
@@ -81,11 +81,39 @@ export function buildOrganizationJsonLd() {
   };
 }
 
+export function buildVideoObjectJsonLd(video: {
+  id: string;
+  title: string;
+  description: string;
+  thumbnail: string;
+  slug: string;
+}) {
+  const pageUrl = `${siteConfig.url}/videos/${video.slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: video.title,
+    description: video.description,
+    thumbnailUrl: video.thumbnail,
+    embedUrl: `https://www.youtube.com/embed/${video.id}`,
+    contentUrl: `https://www.youtube.com/watch?v=${video.id}`,
+    uploadDate: new Date().toISOString().split("T")[0],
+    inLanguage: siteConfig.locale,
+    isFamilyFriendly: true,
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      logo: { "@type": "ImageObject", url: `${siteConfig.url}${siteConfig.logo}` },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
+  };
+}
+
 export function buildArticleJsonLd(article: Article, url: string) {
   const citations = (article.references ?? []).map((r) => r.url);
   return {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     "@id": url,
     headline: article.title,
     description: article.excerpt,
@@ -131,12 +159,17 @@ export const homeFaqs: FaqItem[] = [
   {
     question: "What topics does SeeStew cover?",
     answer:
-      "US presidents, wars, scandals, colonial history, political fights, crime, exploration, and overlooked events with sourced articles on seestew.com/articles.",
+      "US presidents, wars, scandals, colonial history, political fights, crime, exploration, and overlooked events with sourced history stories and facts on seestew.com/articles.",
   },
   {
     question: "Does SeeStew cite sources?",
     answer:
-      "Yes. Articles on seestew.com include linked references to archives, museums, government sites, and established histories.",
+      "Yes. Stories on seestew.com include linked references to archives, museums, government sites, and established histories.",
+  },
+  {
+    question: "Where can I read strange American history facts?",
+    answer:
+      "SeeStew publishes sourced stories about forgotten U.S. events, presidential history, and Revolutionary War episodes at seestew.com/articles and seestew.com/topics.",
   },
 ];
 
@@ -149,4 +182,10 @@ export const defaultKeywords = [
   "presidential history",
   "obscure US history",
   "history articles with sources",
+  "American history stories",
+  "strange American history facts",
+  "forgotten U.S. history",
+  "Revolutionary War stories",
+  "presidential history facts",
+  "American politics explained",
 ];

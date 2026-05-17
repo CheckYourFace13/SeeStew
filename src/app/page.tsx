@@ -143,7 +143,7 @@ export default async function HomePage() {
               Stories of American History
             </h2>
             <p className="mt-2 text-ink-muted">
-              Sourced articles to read with our videos.
+              Sourced history stories with cited facts — read alongside our videos.
             </p>
             <div className="mt-10 grid gap-6 md:grid-cols-3">
               {articles.map((article) => (
@@ -166,7 +166,7 @@ export default async function HomePage() {
             </div>
             <p className="mt-8">
               <Link href="/articles" className="link-nav text-sm font-medium">
-                All articles →
+                All stories →
               </Link>
             </p>
           </div>

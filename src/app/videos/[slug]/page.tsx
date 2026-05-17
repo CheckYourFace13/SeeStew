@@ -8,13 +8,9 @@ import { SocialLinks } from "@/components/SocialLinks";
 import { VideoCard } from "@/components/VideoCard";
 import { VideoPlayer } from "@/components/VideoPlayer";
 import { siteConfig } from "@/lib/config";
-import { buildBreadcrumbJsonLd } from "@/lib/seo";
+import { buildBreadcrumbJsonLd, buildVideoObjectJsonLd } from "@/lib/seo";
 import { getVideoEditorial } from "@/lib/video-editorial";
-import {
-  getLongFormVideos,
-  getVideoBySlug,
-  youtubeWatchUrl,
-} from "@/lib/youtube";
+import { getLongFormVideos, getVideoBySlug } from "@/lib/youtube";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -61,20 +57,7 @@ export default async function VideoWatchPage({ params }: Props) {
             { name: "Documentaries", url: `${siteConfig.url}/videos` },
             { name: video.title, url: `${siteConfig.url}/videos/${slug}` },
           ]),
-          {
-            "@context": "https://schema.org",
-            "@type": "VideoObject",
-            name: video.title,
-            description: video.description,
-            thumbnailUrl: video.thumbnail,
-            embedUrl: `https://www.youtube.com/embed/${video.id}`,
-            contentUrl: youtubeWatchUrl(video.id),
-            publisher: {
-              "@type": "Organization",
-              name: siteConfig.name,
-              logo: `${siteConfig.url}${siteConfig.logo}`,
-            },
-          },
+          buildVideoObjectJsonLd(video),
         ]}
       />
 
@@ -101,7 +84,7 @@ export default async function VideoWatchPage({ params }: Props) {
         </div>
 
         <aside className="space-y-8">
-          <AdSlot format="vertical" label="Sponsored" />
+          <AdSlot format="vertical" label="Advertisement" />
           {related.length > 0 && (
             <div>
               <h2 className="font-heading text-lg font-bold text-ink">More episodes</h2>

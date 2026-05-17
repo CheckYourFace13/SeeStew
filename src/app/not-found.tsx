@@ -26,7 +26,7 @@ export default function NotFound() {
         </li>
         <li>
           <Link href="/articles" className="underline">
-            Articles
+            Stories
           </Link>
         </li>
       </ul>

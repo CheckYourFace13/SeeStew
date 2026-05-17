@@ -53,7 +53,7 @@ export default function AboutPage() {
         <p>
           Videos on this site use the same uploads as the channel. If you want the algorithm to
           pick up the next release, subscribe on YouTube. If you want the write-up, read the{" "}
-          <Link href="/articles">articles</Link> or the notes under each{" "}
+          <Link href="/articles">stories</Link> or the notes under each{" "}
           <Link href="/videos">documentary</Link>.
         </p>
         <h2>Contact</h2>

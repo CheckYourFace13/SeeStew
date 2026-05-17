@@ -1,19 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AdSlot } from "@/components/AdSlot";
+import { JsonLd } from "@/components/JsonLd";
 import { getAllArticles, getAllCategories } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
-import { JsonLd } from "@/components/JsonLd";
+import { topicHubs } from "@/lib/topic-seo";
 
 export const metadata: Metadata = {
-  title: "American History Topics",
+  title: "American History Topics — Stories & Facts",
   description:
-    "Browse SeeStew articles by topic: presidents, scandals, revolution, military history, and more.",
+    "Browse SeeStew topics: presidential history facts, Revolutionary War stories, political scandals, and strange American history — each story cites sources.",
   alternates: { canonical: `${siteConfig.url}/topics` },
 };
 
 export default function TopicsPage() {
   const categories = getAllCategories();
   const articles = getAllArticles();
+  const knownSlugs = new Set(topicHubs.map((t) => t.slug));
 
   const itemList = {
     "@context": "https://schema.org",
@@ -23,34 +26,57 @@ export default function TopicsPage() {
       "@type": "ListItem",
       position: i + 1,
       name: cat,
-      url: `${siteConfig.url}/topics/${encodeURIComponent(cat.toLowerCase().replace(/\s+/g, "-"))}`,
+      url: `${siteConfig.url}/topics/${cat.toLowerCase().replace(/\s+/g, "-")}`,
     })),
   };
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 md:px-6">
       <JsonLd data={itemList} />
-      <h1 className="font-heading text-4xl font-bold text-ink">Topics</h1>
-      <p className="mt-3 max-w-2xl text-ink-muted">
-        Sourced articles grouped by subject. Each piece links primary references.
+      <h1 className="font-heading text-4xl font-bold text-ink">American History Topics</h1>
+      <p className="mt-3 max-w-3xl text-lg text-ink-muted">
+        Explore sourced U.S. history by subject — forgotten events, presidential timelines,
+        Revolutionary War episodes, and American politics explained with cited facts. Every story
+        links references you can verify.
       </p>
 
+      <AdSlot className="mt-8" format="horizontal" label="Advertisement" />
+
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {categories.map((cat) => {
-          const count = articles.filter((a) => a.category === cat).length;
-          const slug = cat.toLowerCase().replace(/\s+/g, "-");
+        {topicHubs.map((hub) => {
+          const count = articles.filter(
+            (a) => a.category.toLowerCase().replace(/\s+/g, "-") === hub.slug
+          ).length;
           return (
             <Link
-              key={cat}
-              href={`/topics/${slug}`}
+              key={hub.slug}
+              href={`/topics/${hub.slug}`}
               className="rounded-xl border border-brand-wash bg-white p-6 shadow-sm hover:shadow-md"
             >
-              <h2 className="font-heading text-xl font-bold text-brand-primary">{cat}</h2>
-              <p className="mt-2 text-sm text-ink-muted">{count} articles</p>
+              <h2 className="font-heading text-xl font-bold text-brand-primary">{hub.title}</h2>
+              <p className="mt-2 text-sm text-ink-muted">{hub.description}</p>
+              <p className="mt-3 text-xs text-brand-mid">{count} stories</p>
             </Link>
           );
         })}
+        {categories
+          .filter((cat) => !knownSlugs.has(cat.toLowerCase().replace(/\s+/g, "-")))
+          .map((cat) => {
+            const slug = cat.toLowerCase().replace(/\s+/g, "-");
+            const count = articles.filter((a) => a.category === cat).length;
+            return (
+              <Link
+                key={cat}
+                href={`/topics/${slug}`}
+                className="rounded-xl border border-brand-wash bg-white p-6 shadow-sm hover:shadow-md"
+              >
+                <h2 className="font-heading text-xl font-bold text-brand-primary">{cat}</h2>
+                <p className="mt-2 text-sm text-ink-muted">{count} stories with citations</p>
+              </Link>
+            );
+          })}
       </div>
     </div>
   );
 }
+

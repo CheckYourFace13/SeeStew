@@ -24,10 +24,10 @@ export default function TermsPage() {
         <section>
           <h2>Content</h2>
           <p>
-            Articles and original text on this site are owned by {siteConfig.name}
+            Stories and original text on this site are owned by {siteConfig.name}
             unless otherwise noted. Video content is hosted on YouTube and
             subject to YouTube&apos;s terms. You may share links to our pages;
-            do not republish full articles without permission.
+            do not republish full stories without permission.
           </p>
         </section>
 

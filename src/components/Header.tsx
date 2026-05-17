@@ -7,7 +7,7 @@ import { Logo } from "@/components/Logo";
 const nav = [
   { href: "/videos", label: "Videos" },
   { href: "/shorts", label: "Shorts" },
-  { href: "/articles", label: "Articles" },
+  { href: "/articles", label: "Stories" },
   { href: "/social", label: "Connect" },
   { href: "/about", label: "About" },
 ];
