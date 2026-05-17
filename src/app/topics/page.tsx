@@ -35,9 +35,9 @@ export default function TopicsPage() {
       <JsonLd data={itemList} />
       <h1 className="font-heading text-4xl font-bold text-ink">American History Topics</h1>
       <p className="mt-3 max-w-3xl text-lg text-ink-muted">
-        Explore sourced U.S. history by subject — forgotten events, presidential timelines,
-        Revolutionary War episodes, and American politics explained with cited facts. Every story
-        links references you can verify.
+        Explore unbelievable American history by subject — forgotten disasters, presidential
+        drama, Revolutionary War twists, and shocking political history. Strange facts and true
+        stories you will want to share.
       </p>
 
       <AdSlot className="mt-8" format="horizontal" label="Advertisement" />

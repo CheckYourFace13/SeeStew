@@ -80,7 +80,7 @@ export default async function ShortsPage() {
       <p className="mt-12 text-center text-sm text-ink-muted">
         Want the full story? Browse{" "}
         <Link href="/videos" className="font-semibold text-brand-mid underline">
-          documentaries
+          history videos
         </Link>
         .
       </p>

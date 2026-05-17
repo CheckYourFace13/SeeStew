@@ -47,7 +47,7 @@ export function Footer() {
             Connect
           </p>
           <p className="mt-3 text-sm text-brand-meteorite-light/90">
-            Follow SeeStew for new documentaries and daily history clips.
+            Follow SeeStew for new history videos and daily clips.
           </p>
           <ul className="mt-4 flex flex-wrap gap-3">
             {socials.map((s) => (

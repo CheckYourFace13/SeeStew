@@ -37,7 +37,7 @@ export default async function HomePage() {
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link href="/videos" className="btn-primary">
-              Watch documentaries
+              Watch videos
             </Link>
             <a
               href={siteConfig.social.youtubeSubscribe}
@@ -77,7 +77,7 @@ export default async function HomePage() {
           </div>
           <p className="mt-8 text-center">
             <Link href="/videos" className="link-nav text-sm font-medium">
-              View all documentaries →
+              View all videos →
             </Link>
           </p>
         </div>
@@ -143,7 +143,7 @@ export default async function HomePage() {
               Stories of American History
             </h2>
             <p className="mt-2 text-ink-muted">
-              Sourced history stories with cited facts — read alongside our videos.
+              Shocking, strange, and forgotten moments from America&apos;s past — read the full story.
             </p>
             <div className="mt-10 grid gap-6 md:grid-cols-3">
               {articles.map((article) => (

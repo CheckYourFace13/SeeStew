@@ -16,7 +16,7 @@ export default function NotFound() {
         </li>
         <li>
           <Link href="/videos" className="underline">
-            Documentaries
+            Videos
           </Link>
         </li>
         <li>

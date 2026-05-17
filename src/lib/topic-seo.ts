@@ -14,7 +14,7 @@ export const topicHubs: TopicHub[] = [
     description:
       "Presidential history facts and stories from Washington to modern eras — elections, policies, and legacies with cited sources.",
     intro:
-      "Explore U.S. presidents with sourced stories: inaugurations, crises, and decisions that shaped the country. Each SeeStew story links archives, museums, or established histories.",
+      "Weird presidential episodes, election chaos, and White House drama — the strange side of U.S. presidents you did not hear in school.",
     searchAngles: [
       "presidential history facts",
       "U.S. president timelines",

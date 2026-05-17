@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: hub?.title ?? `${name} — American History Stories`,
     description:
       hub?.description ??
-      `SeeStew stories about ${name}: sourced U.S. history facts with citations and documentaries.`,
+      `Unbelievable ${name} stories and strange American history facts — shocking true tales on SeeStew.`,
     alternates: { canonical: `${siteConfig.url}/topics/${slug}` },
   };
 }
@@ -71,7 +71,7 @@ export default async function TopicCategoryPage({ params }: Props) {
       </h1>
       <p className="mt-3 max-w-3xl text-lg text-ink-muted">
         {hub?.intro ??
-          `Sourced SeeStew stories about ${displayName} with cited facts and references.`}
+          `Shocking and forgotten ${displayName} stories from American history.`}
       </p>
 
       {hub?.searchAngles && hub.searchAngles.length > 0 && (
@@ -85,7 +85,7 @@ export default async function TopicCategoryPage({ params }: Props) {
       <p className="mt-6 text-ink-muted">
         {articles.length} stor{articles.length === 1 ? "y" : "ies"} with citations.{" "}
         <Link href="/videos" className="text-brand-mid underline">
-          Watch documentaries
+          Watch videos
         </Link>{" "}
         ·{" "}
         <Link href="/shorts" className="text-brand-mid underline">

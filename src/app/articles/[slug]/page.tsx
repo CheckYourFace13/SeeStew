@@ -7,6 +7,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { ReferencesList } from "@/components/ReferencesList";
 import { RelatedContent } from "@/components/RelatedContent";
+import { StoryHero } from "@/components/StoryHero";
 import { VideoPlayer } from "@/components/VideoPlayer";
 import { getAllArticles, getArticle, getArticlesByCategory } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
@@ -34,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const url = `${siteConfig.url}/articles/${slug}`;
   return {
     title: article.title,
-    description: `${article.excerpt} Sourced American history facts from SeeStew.`,
+    description: `${article.excerpt} — unbelievable true stories from American history on SeeStew.`,
     keywords: [
       article.category,
       "American history facts",
@@ -112,11 +113,16 @@ export default async function ArticlePage({ params }: Props) {
         </p>
       </header>
 
+      <StoryHero
+        article={article}
+        youtubeThumbnail={relatedVideo?.thumbnail}
+      />
+
       <AdSlot className="mt-8" format="horizontal" label="Advertisement" />
 
       {relatedVideo && (
         <section className="my-10">
-          <h2 className="mb-4 font-heading text-xl font-bold">Watch the documentary</h2>
+          <h2 className="mb-4 font-heading text-xl font-bold">Watch the full video</h2>
           <VideoPlayer videoId={relatedVideo.id} title={relatedVideo.title} />
           <p className="mt-3 text-sm text-ink-muted">
             <Link href={`/videos/${relatedVideo.slug}`} className="text-brand-mid underline">
@@ -158,7 +164,7 @@ export default async function ArticlePage({ params }: Props) {
           </li>
           <li>
             <Link href="/videos" className="text-brand-mid underline">
-              Documentaries
+              History videos
             </Link>
           </li>
         </ul>

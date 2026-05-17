@@ -10,7 +10,7 @@ import { VideoPlayer } from "@/components/VideoPlayer";
 import { siteConfig } from "@/lib/config";
 import { buildBreadcrumbJsonLd, buildVideoObjectJsonLd } from "@/lib/seo";
 import { getVideoEditorial } from "@/lib/video-editorial";
-import { getLongFormVideos, getVideoBySlug } from "@/lib/youtube";
+import { getLongFormVideos, getVideoBySlug, isLongFormVideo } from "@/lib/youtube";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -22,13 +22,13 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const video = await getVideoBySlug(slug);
-  if (!video || video.format !== "long") return { title: "Video not found" };
+  if (!video || !isLongFormVideo(video)) return { title: "Video not found" };
 
   return {
     title: video.title,
     description:
       video.description?.slice(0, 155) ||
-      `Watch ${video.title} — a SeeStew documentary on American history.`,
+      `Watch ${video.title} — a SeeStew story from American history.`,
     alternates: { canonical: `${siteConfig.url}/videos/${slug}` },
     openGraph: {
       type: "video.other",
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function VideoWatchPage({ params }: Props) {
   const { slug } = await params;
   const video = await getVideoBySlug(slug);
-  if (!video || video.format !== "long") notFound();
+  if (!video || !isLongFormVideo(video)) notFound();
 
   const editorial = getVideoEditorial(video);
   const related = (await getLongFormVideos())
@@ -54,7 +54,7 @@ export default async function VideoWatchPage({ params }: Props) {
         data={[
           buildBreadcrumbJsonLd([
             { name: "Home", url: siteConfig.url },
-            { name: "Documentaries", url: `${siteConfig.url}/videos` },
+            { name: "Videos", url: `${siteConfig.url}/videos` },
             { name: video.title, url: `${siteConfig.url}/videos/${slug}` },
           ]),
           buildVideoObjectJsonLd(video),
@@ -63,7 +63,7 @@ export default async function VideoWatchPage({ params }: Props) {
 
       <nav className="mb-6 text-sm text-ink-muted">
         <Link href="/videos" className="hover:text-brand-mid">
-          Documentaries
+          Videos
         </Link>
         <span className="mx-2">/</span>
         <span className="text-ink">{video.title}</span>

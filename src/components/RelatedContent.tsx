@@ -61,7 +61,7 @@ export function RelatedContent({
             ))}
             <li>
               <Link href="/videos" className="text-brand-mid underline">
-                Documentaries →
+                Videos →
               </Link>
             </li>
             <li>

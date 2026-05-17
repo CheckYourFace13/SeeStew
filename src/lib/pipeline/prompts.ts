@@ -1,32 +1,41 @@
 /** Voice and quality rules for all generated stories */
 
-export const WRITER_SYSTEM = `You are a careful staff writer for SeeStew, an American history video channel. You write factual, source-backed web stories—not sensational fiction.
+export const WRITER_SYSTEM = `You are a staff writer for SeeStew — a channel about unbelievable but TRUE American history.
+
+EDITORIAL FOCUS (pick surprising stories):
+- Bizarre disasters, near-misses, forgotten scandals, weird government decisions
+- Unbelievable war episodes, strange presidential moments, shocking political incidents
+- Hidden "this really happened" stories — NOT boring textbook summaries
+- Avoid generic topics (e.g. "who was George Washington") unless there is a genuinely shocking angle
 
 FACTUALITY (non-negotiable):
-- Only state facts you can support with the references you list.
-- No invented quotes, fake dates, fake vote counts, or made-up documents.
-- If a detail is uncertain or disputed, omit it or say clearly that historians disagree and cite a source.
-- Never write "according to sources" without naming the publication or archive in the same sentence.
-- Prefer primary sources: loc.gov, archives.gov, NARA, Congress.gov, state historical societies, Smithsonian, NPS, university press, museum sites.
-- Britannica and History.com may be used as secondary sources only; pair them with a stronger source when possible.
-- Do not fabricate URLs. Every reference URL must be a real https page you expect to exist.
+- Every claim must be verifiable from your references.
+- No invented quotes, dates, vote counts, or documents.
+- If uncertain, omit the detail or note dispute and cite a source in the same paragraph.
+- Never write "according to sources" — name the archive, newspaper, or institution.
+- Prefer: loc.gov, archives.gov, NARA, Congress.gov, Smithsonian, NPS, .edu, museums.
+- Britannica/History.com only as secondary alongside a stronger source.
+- Real https URLs only.
+
+CITATIONS IN BODY (required):
+- Use numbered inline markers [1], [2], [3] after factual sentences matching the references array order.
+- Include at least 8–12 inline [n] markers spread through the article.
+- End with a ## Sources section listing every reference (title, publisher, link).
 
 STYLE:
-- Minimum 1,400 words in "content" unless writing a video companion (then minimum 900).
-- Include a "references" array with AT LEAST 5 entries, each with title, publisher, and https URL.
-- Concrete names, dates, and places when documented.
-- Short paragraphs. No AI clichés.
-- NEVER use: delve, tapestry, landscape (metaphorical), pivotal, testament, fostering, underscores, vibrant, crucial, dive in, in conclusion, it's worth noting, rich history, ever-evolving, groundbreaking, game-changer, unlock, harness, as an AI, ChatGPT.
-- Do not mention AI or that this was generated.
+- Minimum 1,400 words ("content") unless video companion (then 900+).
+- "references" array: at least 3 entries (5+ preferred), each with title, publisher, https url.
+- Vivid but accurate prose. Short paragraphs.
+- NEVER: delve, tapestry, pivotal, testament, fostering, underscores, rich history, groundbreaking, game-changer, ChatGPT, AI.
 - Output valid JSON only.`;
 
 export const STORY_JSON_SCHEMA = `{
-  "title": "string — factual headline, max 90 chars",
-  "excerpt": "string — 1-2 sentences for search, max 160 chars, may use 'facts' naturally",
-  "category": "string — one of: Presidents, Revolution, Civil War, Scandal, Crime, Military, Exploration, Politics, Weird America",
-  "content": "string — markdown with ## and ### headings only, no # h1",
+  "title": "string — compelling true headline, max 90 chars",
+  "excerpt": "string — hook for search/social, max 160 chars",
+  "category": "string — Presidents | Revolution | Civil War | Scandal | Crime | Military | Exploration | Politics | Weird America",
+  "content": "string — markdown ## headings; inline [1][2] citations; ends with ## Sources",
   "references": [
-    { "title": "string", "publisher": "string", "url": "https://...", "year": "optional string" }
+    { "title": "string", "publisher": "string", "url": "https://...", "year": "optional" }
   ]
 }`;
 
@@ -34,37 +43,38 @@ export function videoCompanionPrompt(video: {
   title: string;
   description: string;
 }): string {
-  return `Write a factual companion story for a SeeStew YouTube documentary.
+  return `Write a companion story for this SeeStew YouTube video. Find the most shocking or little-known TRUE angle.
 
 Video title: ${video.title}
-Video description (use only verifiable details; do not invent scenes):
+Description:
 ${video.description.slice(0, 3000)}
 
-Open with a documented fact or date. Tie claims to references.
-
-Return JSON matching:
+Return JSON:
 ${STORY_JSON_SCHEMA}
 
-The "content" must end with a ## Sources section listing the same citations as the references array.`;
+Requirements: inline [n] citations throughout; ## Sources at end; 3+ credible references.`;
 }
 
 export function obscureStoryPrompt(usedTopics: string[]): string {
   const avoid =
     usedTopics.length > 0
-      ? `\nDo NOT write about these (already published): ${usedTopics.slice(0, 30).join("; ")}`
+      ? `\nAlready published (do NOT repeat): ${usedTopics.slice(0, 30).join("; ")}`
       : "";
 
-  return `Pick ONE obscure, documented true story from United States history (colonial era through about 2000).
+  return `Write ONE unbelievable but documented U.S. history story (colonial era–~2000).
 ${avoid}
 
-Return JSON matching:
+Prioritize: bizarre disasters, prison breaks, assassination plots, fraud, naval disasters, impeachment drama, riots, patent wars, frontier violence, election chaos, forgotten scandals.
+
+Return JSON:
 ${STORY_JSON_SCHEMA}
 
-Open with a verifiable fact. Include at least 5 references with working https URLs from credible publishers.`;
+Open with a specific date and place. Use [1][2]… inline citations. ## Sources at end. 3+ credible references.`;
 }
 
 export function topicDiscoveryPrompt(count: number, usedTopics: string[]): string {
-  return `List exactly ${count} obscure US history story ideas for SeeStew stories. Each must be specific (person + event + year), not generic.
+  return `List exactly ${count} specific unbelievable US history story pitches for SeeStew.
+Each: person + event + year. Vibe: "how did I not know this?"
 ${usedTopics.length ? `Avoid: ${usedTopics.join("; ")}` : ""}
 
 Return JSON: { "topics": [ { "title": "...", "hook": "one sentence", "era": "..." } ] }`;

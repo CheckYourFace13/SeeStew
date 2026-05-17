@@ -20,7 +20,7 @@ export const siteConfig = {
   name: "SeeStew",
   tagline: "American History & Politics",
   description:
-    "Welcome to SeeStew — fascinating insights into American history, politics, and compelling stories. Watch documentaries on YouTube and follow daily clips on Instagram and TikTok.",
+    "SeeStew — unbelievable true stories from American history. Watch long-form videos, read shocking hidden history, and follow daily clips on YouTube, Instagram, and TikTok.",
   url: "https://seestew.com",
   email: "info@seestew.com",
   logo: "/logo.png",
@@ -56,10 +56,10 @@ export const youtubeConfig = {
   channelId: process.env.YOUTUBE_CHANNEL_ID ?? "",
   apiKey: process.env.YOUTUBE_API_KEY ?? "",
   handle: "SeeStew",
-  /** Videos longer than this count as long-form (seconds) */
-  longFormMinSeconds: 180,
-  /** Videos this length or shorter count as short-form */
-  shortFormMaxSeconds: 90,
+  /** /videos requires duration >= this (seconds) — 2 minutes */
+  longFormMinSeconds: 120,
+  /** Used for heuristic Short detection when duration is ambiguous */
+  shortFormMaxSeconds: 119,
 } as const;
 
 export const pipelineConfig = {

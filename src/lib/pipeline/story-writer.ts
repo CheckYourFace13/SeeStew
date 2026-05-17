@@ -67,7 +67,7 @@ async function generateStory(userPrompt: string, retries = 2): Promise<StoryJson
           content:
             userPrompt +
             (i > 0
-              ? "\n\nYour last draft failed validation: need 5+ real https references and 1400+ words. Fix and return JSON only."
+              ? "\n\nYour last draft failed validation: need 3+ credible https references, inline [1][2][3] citations in body, ## Sources section, 900+ words. Fix and return JSON only."
               : ""),
         },
       ],
@@ -120,7 +120,7 @@ function toArticle(
 
 /** Template fallback when OpenRouter is not configured */
 export function buildArticleFromVideoFallback(video: YouTubeVideo): Article {
-  const content = `## ${video.title}\n\nWatch the documentary above for the full story. SeeStew covers this topic on [YouTube](https://www.youtube.com/@SeeStew).\n\n## Sources\n\n1. SeeStew — *YouTube*. [Link](https://www.youtube.com/@SeeStew)\n2. Library of Congress — *American History collections*. [Link](https://www.loc.gov/collections/)`;
+  const content = `## ${video.title}\n\nSeeStew covers this episode on YouTube [1]. For broader American history collections, see the Library of Congress [2] and National Archives [3].\n\n## Sources\n\n1. SeeStew — *YouTube*. [Link](https://www.youtube.com/@SeeStew)\n2. Library of Congress — *Digital Collections*. [Link](https://www.loc.gov/collections/)\n3. National Archives — *Research*. [Link](https://www.archives.gov/research)`;
   return {
     slug: slugify(video.title, video.id.slice(0, 6)),
     title: video.title,
@@ -138,6 +138,11 @@ export function buildArticleFromVideoFallback(video: YouTubeVideo): Article {
         title: "Library of Congress Digital Collections",
         publisher: "Library of Congress",
         url: "https://www.loc.gov/collections/",
+      },
+      {
+        title: "National Archives Research",
+        publisher: "National Archives",
+        url: "https://www.archives.gov/research",
       },
     ],
     relatedVideoId: video.id,

@@ -1,6 +1,5 @@
 import type { Article, ArticleReference } from "@/lib/articles";
 
-/** Domains we treat as credible primary/secondary (not exhaustive). */
 const CREDIBLE_DOMAIN_PATTERNS = [
   /\.gov$/i,
   /\.edu$/i,
@@ -12,22 +11,13 @@ const CREDIBLE_DOMAIN_PATTERNS = [
   /history\.gov/i,
   /senate\.gov/i,
   /house\.gov/i,
-  /supremecourt\.gov/i,
   /britannica\.com/i,
   /history\.com/i,
   /si\.edu/i,
   /museum/i,
-  /university/i,
-  /press\./i,
   /jstor\.org/i,
-  /doi\.org/i,
-  /worldcat/i,
-  /nytimes\.com/i,
-  /washingtonpost\.com/i,
   /pbs\.org/i,
   /npr\.org/i,
-  /youtube\.com\/@see/i,
-  /youtube\.com\/watch/i,
 ];
 
 const PLACEHOLDER_URL_PATTERNS = [
@@ -36,7 +26,6 @@ const PLACEHOLDER_URL_PATTERNS = [
   /lorem/i,
   /your-?url/i,
   /insert-?url/i,
-  /#$/,
   /localhost/i,
 ];
 
@@ -44,11 +33,9 @@ const VAGUE_SOURCE_PHRASES = [
   /\baccording to sources\b/i,
   /\baccording to some\b/i,
   /\bmany experts believe\b/i,
-  /\bhistorians say\b(?![^.]*\([1-9]\))/i,
   /\bit is said that\b/i,
   /\brumors suggest\b/i,
   /\bsources claim\b/i,
-  /\bwithout citation\b/i,
 ];
 
 const FABRICATED_QUOTE_PATTERN =
@@ -79,26 +66,28 @@ function isValidReference(ref: ArticleReference): boolean {
 
 export function validateReferences(refs: ArticleReference[] | undefined): StoryValidationResult {
   const errors: string[] = [];
-  if (!refs || refs.length < 2) {
-    errors.push("At least 2 cited sources with https URLs are required.");
+  if (!refs || refs.length < 3) {
+    errors.push("At least 3 cited sources with https URLs are required.");
     return { ok: false, errors };
   }
 
   for (let i = 0; i < refs.length; i++) {
-    const ref = refs[i];
-    if (!isValidReference(ref)) {
+    if (!isValidReference(refs[i])) {
       errors.push(`Source ${i + 1} is missing title, publisher, or a valid https URL.`);
     }
   }
 
   const credibleCount = refs.filter((r) => isCredibleUrl(r.url)).length;
-  if (credibleCount < 1) {
-    errors.push(
-      "At least 1 source should be from a credible domain (.gov, .edu, museum, archives, major publisher)."
-    );
+  if (credibleCount < 2) {
+    errors.push("At least 2 sources should be from credible domains (.gov, .edu, museum, archives).");
   }
 
   return { ok: errors.length === 0, errors };
+}
+
+function countInlineCitations(body: string): number {
+  const markers = body.match(/\[\d+\]/g);
+  return markers ? new Set(markers).size : 0;
 }
 
 export function validateArticleForPublish(article: Article): StoryValidationResult {
@@ -124,15 +113,25 @@ export function validateArticleForPublish(article: Article): StoryValidationResu
   errors.push(...refCheck.errors);
 
   const body = article.content ?? "";
+
+  if (!/##\s*Sources/i.test(body)) {
+    errors.push('Body must end with a "## Sources" section.');
+  }
+
+  const inlineCount = countInlineCitations(body);
+  if (inlineCount < 3) {
+    errors.push("Body needs at least 3 inline citation markers like [1], [2], [3].");
+  }
+
   for (const re of VAGUE_SOURCE_PHRASES) {
     if (re.test(body)) {
-      errors.push(`Body contains vague sourcing: ${re.source}`);
+      errors.push(`Body contains vague sourcing (${re.source}).`);
       break;
     }
   }
 
   if (FABRICATED_QUOTE_PATTERN.test(body)) {
-    errors.push("Body may contain unsourced direct quotes; cite the speaker and source.");
+    errors.push("Body may contain unsourced direct quotes.");
   }
 
   if (/\b(lorem ipsum|TODO|TBD|\[insert)\b/i.test(body)) {

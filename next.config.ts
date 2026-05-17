@@ -6,6 +6,10 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       { protocol: "https", hostname: "i.ytimg.com" },
       { protocol: "https", hostname: "img.youtube.com" },
+      { protocol: "https", hostname: "loc.gov" },
+      { protocol: "https", hostname: "www.loc.gov" },
+      { protocol: "https", hostname: "tile.loc.gov" },
+      { protocol: "https", hostname: "cdn.loc.gov" },
     ],
   },
   async redirects() {

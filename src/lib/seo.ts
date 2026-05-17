@@ -149,7 +149,7 @@ export const homeFaqs: FaqItem[] = [
   {
     question: "What is SeeStew?",
     answer:
-      "SeeStew is an American history channel. Full documentaries are on YouTube at youtube.com/@SeeStew. Short clips are on Instagram and TikTok at @see.stew.",
+      "SeeStew tells unbelievable true stories from American history. Full videos are on YouTube at youtube.com/@SeeStew. Short clips are on Instagram and TikTok at @see.stew.",
   },
   {
     question: "Where can I watch SeeStew for free?",
@@ -159,17 +159,17 @@ export const homeFaqs: FaqItem[] = [
   {
     question: "What topics does SeeStew cover?",
     answer:
-      "US presidents, wars, scandals, colonial history, political fights, crime, exploration, and overlooked events with sourced history stories and facts on seestew.com/articles.",
+      "US presidents, wars, scandals, colonial history, political fights, crime, exploration, and shocking forgotten events — read and watch on seestew.com.",
   },
   {
     question: "Does SeeStew cite sources?",
     answer:
-      "Yes. Stories on seestew.com include linked references to archives, museums, government sites, and established histories.",
+      "SeeStew stories cover strange disasters, political scandals, presidential oddities, and hidden U.S. history with named sources at the bottom of each article.",
   },
   {
     question: "Where can I read strange American history facts?",
     answer:
-      "SeeStew publishes sourced stories about forgotten U.S. events, presidential history, and Revolutionary War episodes at seestew.com/articles and seestew.com/topics.",
+      "Browse unbelievable American history stories and strange U.S. history facts at seestew.com/articles and seestew.com/topics.",
   },
 ];
 

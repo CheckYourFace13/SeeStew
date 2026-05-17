@@ -1,35 +1,41 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
-import { getAllArticles } from "@/lib/articles";
+import { StoryCard } from "@/components/StoryCard";
+import { getArticlesForStoriesPage } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
+import { getYouTubeVideos } from "@/lib/youtube";
 
 export const revalidate = 300;
 
 export const metadata: Metadata = {
-  title: "American History Stories & Facts",
+  title: "Unbelievable American History Stories",
   description:
-    "Read sourced American history stories with cited facts — presidents, scandals, Revolution, and forgotten U.S. events. Every SeeStew story links credible references.",
+    "True stories from American history — strange disasters, forgotten scandals, shocking politics, and hidden moments from the past. Read the wildest verified tales on SeeStew.",
   alternates: { canonical: `${siteConfig.url}/articles` },
 };
 
-export default function ArticlesPage() {
-  const articles = getAllArticles();
+export default async function ArticlesPage() {
+  const articles = getArticlesForStoriesPage();
+  const videos = await getYouTubeVideos();
+  const thumbByVideoId = new Map(videos.map((v) => [v.id, v.thumbnail]));
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 md:px-6">
       <header className="mb-10 max-w-3xl">
-        <h1 className="font-heading text-4xl font-bold text-ink">American History Stories</h1>
-        <p className="mt-3 text-lg text-ink-muted">
-          Sourced stories with cited facts — strange episodes, presidential history, Revolutionary War
-          events, and American politics explained. Each piece names archives, museums, or established
-          histories. Pair with our{" "}
+        <h1 className="font-heading text-4xl font-bold text-ink md:text-5xl">
+          Unbelievable True Stories from American History
+        </h1>
+        <p className="mt-4 text-lg text-ink-muted">
+          Strange, shocking, and fascinating moments from America&apos;s past — forgotten disasters,
+          political twists, presidential oddities, and hidden history that sounds made up (but
+          isn&apos;t). Watch the full story on{" "}
           <Link href="/videos" className="text-brand-mid underline">
-            documentaries
+            our videos
           </Link>{" "}
-          and{" "}
+          or grab a quick hit on{" "}
           <Link href="/shorts" className="text-brand-mid underline">
-            shorts
+            Shorts
           </Link>
           .
         </p>
@@ -39,31 +45,29 @@ export default function ArticlesPage() {
 
       {articles.length === 0 ? (
         <p className="mt-10 text-ink-muted">
-          New stories publish regularly. Browse{" "}
+          New stories land here regularly. Explore{" "}
           <Link href="/topics" className="underline">
             topics
           </Link>{" "}
-          or watch{" "}
+          or{" "}
           <Link href="/videos" className="underline">
-            documentaries
+            watch history videos
           </Link>
           .
         </p>
       ) : (
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {articles.map((article) => (
-            <Link
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {articles.map((article, i) => (
+            <StoryCard
               key={article.slug}
-              href={`/articles/${article.slug}`}
-              className="block rounded-xl border border-brand-wash bg-white p-6 shadow-sm transition hover:shadow-md"
-            >
-              <span className="text-xs font-medium uppercase text-brand-bright">
-                {article.category}
-              </span>
-              <h2 className="mt-2 font-heading text-xl font-bold text-ink">{article.title}</h2>
-              <p className="mt-2 line-clamp-3 text-ink-muted">{article.excerpt}</p>
-              <p className="mt-3 text-sm text-brand-mid">Read story →</p>
-            </Link>
+              article={article}
+              youtubeThumbnail={
+                article.relatedVideoId
+                  ? thumbByVideoId.get(article.relatedVideoId)
+                  : undefined
+              }
+              priority={i < 4}
+            />
           ))}
         </div>
       )}

@@ -2,7 +2,7 @@ import { existsSync } from "fs";
 import { join } from "path";
 import { getAllArticles, saveArticle } from "@/lib/articles";
 import { pipelineConfig } from "@/lib/config";
-import { getYouTubeVideos } from "@/lib/youtube";
+import { getYouTubeVideos, isLongFormVideo } from "@/lib/youtube";
 import {
   getPendingTopics,
   markTopicPublished,
@@ -14,6 +14,7 @@ import {
   buildArticleFromVideoFallback,
   buildObscureStory,
 } from "./story-writer";
+import { attachStoryImage } from "./attach-story-image";
 import { validateArticleForPublish } from "./validate-story";
 
 export type PipelineResult = {
@@ -26,14 +27,15 @@ export type PipelineResult = {
 const hasOpenRouter = () => Boolean(pipelineConfig.openRouterApiKey);
 
 async function publishArticle(article: Awaited<ReturnType<typeof buildArticleFromVideo>>) {
-  const validation = validateArticleForPublish(article);
+  const withImage = await attachStoryImage(article);
+  const validation = validateArticleForPublish(withImage);
   if (!validation.ok) {
     console.error(`Story rejected (${article.slug}):`, validation.errors.join("; "));
     return false;
   }
   const filePath = join(process.cwd(), "content", "articles", `${article.slug}.json`);
   if (existsSync(filePath)) return false;
-  saveArticle(article);
+  saveArticle(withImage);
   return true;
 }
 
@@ -57,7 +59,7 @@ export async function runStoryPipeline(): Promise<PipelineResult> {
   const videos = await getYouTubeVideos();
   const videoCandidates = videos.filter(
     (v) =>
-      v.format === "long" &&
+      isLongFormVideo(v) &&
       !state.processedVideoIds.includes(v.id) &&
       !existingVideoIds.has(v.id)
   );
