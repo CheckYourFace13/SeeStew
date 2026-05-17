@@ -1,0 +1,17 @@
+{
+  "name": "SeeStew — American History & Politics",
+  "short_name": "SeeStew",
+  "description": "Explore American history and politics on SeeStew.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1F1346",
+  "theme_color": "#673de6",
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "/logo-light.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

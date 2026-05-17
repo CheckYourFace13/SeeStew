@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  /* Hostinger / Zyro design tokens */
+  --color-brand-dark: #1f1346;
+  --color-brand-primary: #2f1c6a;
+  --color-brand-mid: #5025d1;
+  --color-brand-bright: #673de6;
+  --color-brand-light: #8c85ff;
+  --color-brand-pale: #b39ef3;
+  --color-brand-wash: #ebe4ff;
+  --color-brand-meteorite: #8c85ff;
+  --color-brand-meteorite-light: #d5dfff;
+  --color-brand-pink: #d63163;
+  --color-brand-pink-bright: #fc5185;
+  --color-brand-gold: #ffcd35;
+  --color-brand-warning: #fea419;
+  --color-nav: #1b1171;
+  --color-nav-hover: #fa0707;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f2f3f6;
+  --color-ink: #1d1e20;
+  --color-ink-muted: #36344d;
+  --color-ink-soft: #727586;
+  --font-heading: var(--font-outfit), "Outfit", sans-serif;
+  --font-body: var(--font-inter), "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-surface text-ink antialiased;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-heading {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Primary CTA — matches Zyro primary button */
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-lg bg-brand-bright px-6 py-3 text-sm font-medium text-white transition;
+}
+.btn-primary:hover {
+  @apply bg-brand-mid;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center rounded-lg border-2 border-brand-bright px-6 py-3 text-sm font-medium text-brand-primary transition;
+}
+.btn-outline:hover {
+  @apply border-nav-hover text-nav-hover;
+}
+
+.link-nav {
+  @apply text-nav transition;
+}
+.link-nav:hover {
+  color: var(--color-nav-hover);
+}
+
+.section-muted {
+  @apply bg-surface-muted;
+}
+
+.section-pad {
+  @apply py-14 md:py-16;
+}
+
+.container-page {
+  @apply mx-auto max-w-6xl px-4 md:px-6;
+}
+
+.prose-history {
+  @apply leading-relaxed text-ink-muted;
+  font-family: var(--font-body);
+}
+
+.prose-history h2 {
+  @apply mt-8 mb-3 text-2xl font-semibold text-brand-primary;
+  font-family: var(--font-heading);
+}
+
+.prose-history h3 {
+  @apply mt-6 mb-2 text-xl font-semibold text-ink;
+  font-family: var(--font-heading);
+}
+
+.prose-history p {
+  @apply mb-4;
+}
+
+.prose-history ul,
+.prose-history ol {
+  @apply mb-4 pl-6;
+}
+
+.prose-history ul {
+  @apply list-disc;
+}
+
+.prose-history ol {
+  @apply list-decimal;
+}
+
+.ad-slot {
+  @apply my-6 flex min-h-[90px] items-center justify-center rounded-lg border border-dashed border-brand-meteorite-light bg-surface-muted text-sm text-ink-soft;
+}
