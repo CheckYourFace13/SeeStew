@@ -1,29 +1,29 @@
 #!/usr/bin/env node
 /**
  * Standalone daily story generator for SeeStew.
- * Runs without a web server — safe for GitHub Actions or local use.
  *
- * Required env vars:
- *   OPENROUTER_API_KEY  — OpenRouter API key
- *   OPENROUTER_MODEL    — (optional, default: openai/gpt-4o-mini)
- *
- * Usage:
- *   node scripts/generate-daily-story.mjs
+ * Required: OPENROUTER_API_KEY
+ * Optional: OPENROUTER_MODEL (default: openai/gpt-4o-mini)
  */
 
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from "fs";
 import { join } from "path";
+import { validateStory } from "./article-validation.mjs";
 
 const CONTENT_DIR = join(process.cwd(), "content", "articles");
 
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
 const PRIMARY_MODEL = process.env.OPENROUTER_MODEL || "openai/gpt-4o-mini";
 
+/** Long-form JSON reliability: GPT first, Claude second, Gemini last */
 const FALLBACK_MODELS = [
   "openai/gpt-4o-mini",
-  "google/gemini-2.0-flash-001",
   "anthropic/claude-3.5-haiku",
+  "google/gemini-2.0-flash-001",
 ];
+
+const MAX_TOKENS = 16384;
+const ATTEMPTS_PER_MODEL = 2;
 
 function getModelQueue() {
   const models = [PRIMARY_MODEL];
@@ -65,15 +65,72 @@ function getAllExistingArticles() {
 class ModelError extends Error {
   constructor(message, { model, status, retryable = true } = {}) {
     super(message);
+    this.name = "ModelError";
     this.model = model;
     this.status = status;
     this.retryable = retryable;
   }
 }
 
-async function callOpenRouter(messages, { model, maxTokens = 12000, temperature = 0.3 } = {}) {
+class ParseError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = "ParseError";
+  }
+}
+
+// --- JSON extraction / repair ---
+
+function stripControlChars(s) {
+  return s.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, "");
+}
+
+function extractJsonObject(raw) {
+  let s = raw.trim();
+  s = s.replace(/^```(?:json)?\s*/i, "").replace(/\s*```\s*$/gi, "").trim();
+  const start = s.indexOf("{");
+  const end = s.lastIndexOf("}");
+  if (start === -1 || end === -1 || end <= start) return null;
+  return stripControlChars(s.slice(start, end + 1));
+}
+
+function parseStoryJson(raw, { logOnFail = true } = {}) {
+  const extracted = extractJsonObject(raw);
+  if (!extracted) {
+    if (logOnFail) {
+      console.error("  No JSON object found in response.");
+      console.error("  First 500 chars:", raw.slice(0, 500));
+    }
+    throw new ParseError("No JSON object found in model output");
+  }
+
+  try {
+    return JSON.parse(extracted);
+  } catch (e) {
+    if (logOnFail) {
+      console.error(`  JSON.parse failed: ${e.message}`);
+      console.error("  First 500 chars of cleaned JSON:", extracted.slice(0, 500));
+      console.error("  Last 500 chars of cleaned JSON:", extracted.slice(-500));
+    }
+    throw new ParseError(e.message);
+  }
+}
+
+// --- OpenRouter ---
+
+async function callOpenRouter(messages, { model, maxTokens = MAX_TOKENS, temperature = 0.3, jsonMode = true } = {}) {
   const useModel = model || PRIMARY_MODEL;
-  console.log(`  Calling model: ${useModel}`);
+  console.log(`  Calling model: ${useModel} (max_tokens=${maxTokens})`);
+
+  const body = {
+    model: useModel,
+    messages,
+    max_tokens: maxTokens,
+    temperature,
+  };
+  if (jsonMode) {
+    body.response_format = { type: "json_object" };
+  }
 
   const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
     method: "POST",
@@ -83,38 +140,30 @@ async function callOpenRouter(messages, { model, maxTokens = 12000, temperature 
       "HTTP-Referer": "https://seestew.com",
       "X-Title": "SeeStew Daily Story",
     },
-    body: JSON.stringify({
-      model: useModel,
-      messages,
-      max_tokens: maxTokens,
-      temperature,
-      response_format: { type: "json_object" },
-    }),
+    body: JSON.stringify(body),
   });
 
   if (!res.ok) {
     let errorBody = "";
     try {
-      const text = await res.text();
-      errorBody = text.slice(0, 1000);
+      errorBody = (await res.text()).slice(0, 1000);
     } catch {}
 
-    let errorMsg = "";
+    let errorMsg = errorBody;
     try {
       const parsed = JSON.parse(errorBody);
       errorMsg = parsed.error?.message || parsed.error?.code || errorBody;
-    } catch {
-      errorMsg = errorBody || `HTTP ${res.status}`;
-    }
+    } catch {}
 
     console.error(`  [OpenRouter FAILED] model=${useModel} status=${res.status}`);
-    console.error(`  Error: ${errorMsg.slice(0, 500)}`);
+    console.error(`  Error: ${String(errorMsg).slice(0, 500)}`);
 
     const retryable = res.status >= 500 || res.status === 429;
-    throw new ModelError(
-      `OpenRouter ${res.status}: ${errorMsg.slice(0, 200)}`,
-      { model: useModel, status: res.status, retryable }
-    );
+    throw new ModelError(`OpenRouter ${res.status}: ${String(errorMsg).slice(0, 200)}`, {
+      model: useModel,
+      status: res.status,
+      retryable,
+    });
   }
 
   const data = await res.json();
@@ -125,125 +174,105 @@ async function callOpenRouter(messages, { model, maxTokens = 12000, temperature 
   return content;
 }
 
+async function repairJsonWithModel(raw, model) {
+  console.log(`  Requesting JSON repair from ${model}...`);
+  const repaired = await callOpenRouter(
+    [
+      {
+        role: "system",
+        content:
+          "You fix malformed JSON. Return ONLY a single valid JSON object. No markdown. No code fences. No comments. Escape newlines inside strings as \\n.",
+      },
+      {
+        role: "user",
+        content: `Convert this into valid JSON only, preserving all story content and references:\n\n${raw.slice(0, 80000)}`,
+      },
+    ],
+    { model, maxTokens: MAX_TOKENS, temperature: 0, jsonMode: true }
+  );
+  return parseStoryJson(repaired, { logOnFail: true });
+}
+
 // --- Prompts ---
 
-const WRITER_SYSTEM = `You are a staff writer for SeeStew — a channel about unbelievable TRUE stories from United States history.
+const WRITER_SYSTEM = `You are a staff writer for SeeStew — unbelievable TRUE stories from United States history.
 
-YOUR JOB: Write stories that make people say "Wait… that actually happened?"
+OUTPUT FORMAT (strict):
+- Return ONLY valid JSON. One root object.
+- No markdown outside JSON. No code fences. No comments before or after.
+- The "content" field MUST be a JSON string (escape internal quotes and newlines as \\n).
+- The "references" field MUST be a JSON array of objects.
+- Do not truncate. Complete the full JSON object.
 
-TOPIC SELECTION:
-- Forgotten U.S. disasters, bizarre political scandals, strange presidential episodes
-- Shocking court cases, military near-misses, weird laws, forgotten crimes
-- Strange survival stories, hidden Revolutionary War episodes, Civil War oddities
-- Cold War near-disasters, Gilded Age corruption, "this really happened" moments
-- NEVER write generic textbook summaries or boring overviews
+STORY RULES:
+- U.S. history only (1600–2000). Unbelievable but documented true events.
+- No invented quotes, dialogue, dates, or documents.
+- Use inline citation markers [1], [2], [3], [4], [5], [6] after factual claims (10+ total).
+- End "content" with a ## Sources section matching citation numbers.
 
-FACTUALITY (non-negotiable):
-- Every claim must be backed by your references
-- No invented quotes or dialogue
-- No invented dates, names, or documents
-- No fake dramatic details
-- Never write "according to sources" — name the specific institution
+LENGTH (write long — validation rejects short drafts):
+- Target 1,800+ words in "content" (minimum 1,500 to pass validation).
+- Target 6+ entries in "references" (minimum 4 to pass; at least 2 from .gov or .edu).
 
-CITATIONS (required in body):
-- Use numbered inline markers [1], [2], [3], [4] etc. after factual claims
-- Spread at least 10 inline citations throughout the article
-- End with ## Sources section listing every reference matching the numbers
-
-STRUCTURE:
-- Minimum 1,500 words in "content" field
-- "references" array: at least 4 entries, each with title, publisher, https url
-- At least 2 references from .gov or .edu domains
-- Open with a specific date, place, and action
-- Use ## and ### headings, short paragraphs, vivid but accurate prose
-- NEVER: delve, tapestry, pivotal, testament, fostering, underscores, rich history, groundbreaking, game-changer
-
-OUTPUT: valid JSON only.`;
+Never use: delve, tapestry, pivotal, testament, fostering, underscores, rich history, groundbreaking, game-changer.`;
 
 const STORY_JSON_SCHEMA = `{
-  "title": "string — compelling headline about something unbelievable-but-true, max 90 chars",
-  "excerpt": "string — hook that makes reader want to click, max 160 chars",
-  "category": "string — Presidents | Revolution | Civil War | Scandal | Crime | Military | Exploration | Politics | Weird America",
-  "content": "string — markdown with ## headings; inline [1][2][3][4] citations; ends with ## Sources",
+  "title": "string, max 90 chars",
+  "excerpt": "string, max 160 chars",
+  "category": "Presidents | Revolution | Civil War | Scandal | Crime | Military | Exploration | Politics | Weird America",
+  "content": "string — full article markdown with ## headings, inline [1][2] citations, ends with ## Sources",
   "references": [
     { "title": "string", "publisher": "string", "url": "https://...", "year": "optional" }
   ]
 }`;
 
-function buildPrompt(usedTopics) {
-  const avoid = usedTopics.length > 0
-    ? `\nAlready published (do NOT repeat): ${usedTopics.slice(0, 40).join("; ")}`
-    : "";
+function buildPrompt(usedTopics, { retryReason = null } = {}) {
+  const avoid =
+    usedTopics.length > 0
+      ? `\nAlready published (do NOT repeat): ${usedTopics.slice(0, 40).join("; ")}`
+      : "";
 
-  return `Write ONE unbelievable but 100% documented true story from United States history (1600–2000).
+  let extra = "";
+  if (retryReason) {
+    extra = `\n\nYOUR PREVIOUS DRAFT FAILED. Fix exactly:\n${retryReason}\n\nReturn ONLY valid JSON. No fences. Target 1800+ words and 6+ references.`;
+  }
+
+  return `Write ONE unbelievable but 100% documented true U.S. history story.
 ${avoid}
 
-Pick from categories like:
-- A forgotten disaster that killed dozens but nobody remembers today
-- A president who did something so bizarre it was covered up
-- A government decision so strange it sounds like satire
-- A military near-miss that almost changed history
-- A political scandal wilder than fiction
-- A crime so audacious people refused to believe it happened
-- A court case with an insane twist
-- A Cold War incident that nearly ended civilization
-- A Gilded Age fraud that bankrupted thousands
-
-Return JSON:
+Return a single JSON object matching this schema:
 ${STORY_JSON_SCHEMA}
 
 HARD REQUIREMENTS:
-- 1500+ words in content
-- 4+ references with https URLs (at least 2 from .gov or .edu)
-- 10+ inline [n] citation markers spread through the article
-- ## Sources section at end
-- Open with a specific date and place`;
+- 1800+ words in "content" (never under 1500)
+- 6+ references with https URLs (at least 2 from .gov or .edu)
+- 10+ inline [n] citation markers in the body
+- ## Sources section at end of "content"
+- Open with a specific date and place
+- JSON only — complete the entire object${extra}`;
 }
 
-// --- Validation ---
+const JSON_RETRY_INSTRUCTION = `
 
-const CREDIBLE_PATTERNS = [/\.gov$/i, /\.edu$/i, /loc\.gov/i, /archives\.gov/i, /smithsonian/i, /si\.edu/i, /museum/i, /congress\.gov/i, /nps\.gov/i, /pbs\.org/i, /npr\.org/i];
-
-function validate(story) {
-  const errors = [];
-  const words = (story.content || "").split(/\s+/).length;
-  if (words < 1500) errors.push(`Content is ${words} words (need 1500+)`);
-
-  const refs = story.references || [];
-  if (refs.length < 4) errors.push(`Only ${refs.length} references (need 4+)`);
-
-  const credible = refs.filter((r) => {
-    try {
-      const host = new URL(r.url).hostname.replace(/^www\./, "");
-      return CREDIBLE_PATTERNS.some((p) => p.test(host));
-    } catch { return false; }
-  }).length;
-  if (credible < 2) errors.push(`Only ${credible} credible sources (need 2+)`);
-
-  const citations = (story.content || "").match(/\[\d+\]/g);
-  const unique = citations ? new Set(citations).size : 0;
-  if (unique < 4) errors.push(`Only ${unique} inline citations (need 4+)`);
-
-  if (!/##\s*Sources/i.test(story.content || "")) errors.push("Missing ## Sources section");
-
-  if (!story.title || story.title.length < 10) errors.push("Title too short");
-  if (!story.excerpt || story.excerpt.length < 30) errors.push("Excerpt too short");
-  if (!story.category) errors.push("Missing category");
-
-  for (const r of refs) {
-    if (!r.url?.startsWith("https://")) errors.push(`Reference "${r.title}" has no https URL`);
-    if (!r.title || r.title.length < 4) errors.push("Reference with missing/short title");
-    if (!r.publisher || r.publisher.length < 2) errors.push("Reference with missing publisher");
-  }
-
-  return { ok: errors.length === 0, errors };
-}
+CRITICAL: Your last response was NOT valid JSON or was truncated.
+Return ONLY one complete valid JSON object.
+- No markdown fences
+- No text outside the JSON
+- Escape newlines in "content" as \\n
+- Include the full article — do not stop mid-string
+- 1800+ words, 6+ references`;
 
 // --- Image metadata ---
 
 async function searchLocImage(query) {
   try {
-    const params = new URLSearchParams({ q: query.slice(0, 120), fo: "json", at: "results", c: "5", sp: "1" });
+    const params = new URLSearchParams({
+      q: query.slice(0, 120),
+      fo: "json",
+      at: "results",
+      c: "5",
+      sp: "1",
+    });
     const res = await fetch(`https://www.loc.gov/search/?${params}`);
     if (!res.ok) return null;
     const data = await res.json();
@@ -265,7 +294,12 @@ function buildImagePrompt(story) {
 async function attachImage(story) {
   const yearMatch = (story.content || "").match(/\b(1[5-9]\d{2}|200\d)\b/);
   const year = yearMatch ? yearMatch[0] : "";
-  const queryWords = story.title.replace(/[—–:]/g, " ").split(/\s+/).filter((w) => w.length > 3).slice(0, 5).join(" ");
+  const queryWords = story.title
+    .replace(/[—–:]/g, " ")
+    .split(/\s+/)
+    .filter((w) => w.length > 3)
+    .slice(0, 5)
+    .join(" ");
   const query = [queryWords, year, story.category].filter(Boolean).join(" ");
 
   const loc = await searchLocImage(query);
@@ -285,6 +319,28 @@ async function attachImage(story) {
   };
 }
 
+// --- Generation attempt ---
+
+async function generateOnce({ model, usedTitles, retryReason, jsonRetry, rawForRepair }) {
+  if (rawForRepair) {
+    const parsed = await repairJsonWithModel(rawForRepair, model);
+    return { parsed, raw: rawForRepair };
+  }
+
+  const userPrompt = buildPrompt(usedTitles, { retryReason }) + (jsonRetry ? JSON_RETRY_INSTRUCTION : "");
+
+  const raw = await callOpenRouter(
+    [
+      { role: "system", content: WRITER_SYSTEM },
+      { role: "user", content: userPrompt },
+    ],
+    { model, maxTokens: MAX_TOKENS, temperature: jsonRetry ? 0.2 : 0.35 }
+  );
+
+  const parsed = parseStoryJson(raw);
+  return { parsed, raw };
+}
+
 // --- Main ---
 
 async function main() {
@@ -299,89 +355,108 @@ async function main() {
   const modelQueue = getModelQueue();
   console.log(`Existing articles: ${existing.length}`);
   console.log(`Primary model: ${PRIMARY_MODEL}`);
-  console.log(`Fallback models: ${modelQueue.slice(1).join(", ") || "(none)"}`);
+  console.log(`Model queue: ${modelQueue.join(" → ")}`);
+  console.log(`Max tokens per call: ${MAX_TOKENS}`);
   console.log("");
-
-  const RETRY_MSG = `\n\nYour last draft FAILED validation. Fix these issues:
-- 1500+ words in content field
-- 4+ references with real https URLs (2+ from .gov/.edu)
-- 10+ inline [1][2][3] markers spread through the body
-- ## Sources section at the end
-Return JSON ONLY.`;
 
   let story = null;
   let lastError = "";
   let totalAttempts = 0;
-  const MAX_TOTAL_ATTEMPTS = 6;
   const failedModels = new Set();
+  let lastRaw = "";
 
   for (const model of modelQueue) {
     if (story) break;
-    if (totalAttempts >= MAX_TOTAL_ATTEMPTS) break;
 
-    const attemptsForModel = model === PRIMARY_MODEL ? 2 : 1;
+    let retryReason = null;
+    let jsonRetry = false;
+    let rawForRepair = null;
 
-    for (let attempt = 0; attempt < attemptsForModel; attempt++) {
-      if (totalAttempts >= MAX_TOTAL_ATTEMPTS) break;
+    for (let attempt = 0; attempt < ATTEMPTS_PER_MODEL; attempt++) {
       totalAttempts++;
-
-      console.log(`\nAttempt ${totalAttempts}/${MAX_TOTAL_ATTEMPTS} [${model}]...`);
-
-      const prompt = buildPrompt(usedTitles) + (attempt > 0 ? RETRY_MSG : "");
+      console.log(`\nAttempt ${totalAttempts} [${model}] (${attempt + 1}/${ATTEMPTS_PER_MODEL} for this model)...`);
 
       try {
-        const raw = await callOpenRouter(
-          [
-            { role: "system", content: WRITER_SYSTEM },
-            { role: "user", content: prompt },
-          ],
-          { model, maxTokens: 12000, temperature: 0.3 + attempt * 0.05 }
-        );
+        const { parsed, raw } = await generateOnce({
+          model,
+          usedTitles,
+          retryReason,
+          jsonRetry,
+          rawForRepair,
+        });
 
-        const cleaned = raw.replace(/^```json\s*/i, "").replace(/```\s*$/i, "").trim();
-        const parsed = JSON.parse(cleaned);
+        lastRaw = raw;
+        rawForRepair = null;
+        jsonRetry = false;
 
-        const validation = validate(parsed);
+        const validation = validateStory(parsed);
         if (!validation.ok) {
           lastError = validation.errors.join("; ");
           console.log(`  Validation failed: ${lastError}`);
-          continue;
+          console.log(
+            `  Stats: ${validation.stats.words} words, ${validation.stats.refs} refs, ${validation.stats.citations} citations`
+          );
+
+          if (attempt < ATTEMPTS_PER_MODEL - 1) {
+            retryReason = validation.errors.map((e) => `- ${e}`).join("\n");
+            continue;
+          }
+          break;
         }
 
         story = parsed;
-        console.log(`  Success with model: ${model}`);
+        console.log(`  Success with ${model}: ${validation.stats.words} words, ${validation.stats.refs} refs`);
         break;
       } catch (e) {
         lastError = e.message;
-        if (e instanceof ModelError && !e.retryable) {
-          console.log(`  Non-retryable error on ${model}, moving to next model...`);
+
+        if (e instanceof ModelError) {
+          if (!e.retryable || e.status === 402 || e.status === 403 || e.status === 404) {
+            console.log(`  Model ${model} unavailable (${e.status ?? "error"}), next model...`);
+            failedModels.add(model);
+            break;
+          }
+          console.log(`  Provider error: ${lastError}`);
+          if (attempt < ATTEMPTS_PER_MODEL - 1) continue;
           failedModels.add(model);
           break;
         }
-        if (e instanceof ModelError && (e.status === 402 || e.status === 404 || e.status === 403)) {
-          console.log(`  Model ${model} unavailable (${e.status}), moving to next model...`);
-          failedModels.add(model);
+
+        if (e instanceof ParseError) {
+          console.log(`  Parse error: ${lastError}`);
+          if (lastRaw && attempt < ATTEMPTS_PER_MODEL - 1) {
+            rawForRepair = lastRaw;
+            continue;
+          }
+          if (attempt < ATTEMPTS_PER_MODEL - 1) {
+            jsonRetry = true;
+            continue;
+          }
           break;
         }
+
         console.log(`  Error: ${lastError}`);
+        if (attempt < ATTEMPTS_PER_MODEL - 1) {
+          jsonRetry = true;
+        }
       }
     }
   }
 
   if (!story) {
-    console.error(`\nFAILED after ${totalAttempts} attempts across ${modelQueue.length} model(s).`);
+    console.error(`\nFAILED after ${totalAttempts} attempt(s) across ${modelQueue.length} model(s).`);
     console.error(`Last error: ${lastError}`);
     if (failedModels.size > 0) {
-      console.error(`Models that failed: ${[...failedModels].join(", ")}`);
+      console.error(`Models unavailable or exhausted: ${[...failedModels].join(", ")}`);
     }
     console.error("\nTroubleshooting:");
-    console.error("  - Check OpenRouter credits: https://openrouter.ai/credits");
-    console.error("  - Verify model availability: https://openrouter.ai/models");
-    console.error("  - Ensure OPENROUTER_API_KEY has billing enabled");
+    console.error("  - Malformed JSON: set OPENROUTER_MODEL=openai/gpt-4o-mini");
+    console.error("  - Too short / no refs: model may have truncated — check max_tokens and retry");
+    console.error("  - Credits: https://openrouter.ai/credits");
+    console.error("  - Validate existing articles: npm run validate:articles");
     process.exit(1);
   }
 
-  // Ensure ## Sources section
   if (!/##\s*Sources/i.test(story.content)) {
     const block = story.references
       .map((r, i) => `${i + 1}. ${r.title} — *${r.publisher}*. [Link](${r.url})`)
@@ -395,22 +470,26 @@ Return JSON ONLY.`;
     process.exit(1);
   }
 
+  const finalCheck = validateStory(story);
+  if (!finalCheck.ok) {
+    console.error(`\nRefusing to save — final validation failed: ${finalCheck.errors.join("; ")}`);
+    process.exit(1);
+  }
+
   console.log(`\nStory: "${story.title}"`);
   console.log(`Slug: ${slug}`);
-  console.log(`Words: ${story.content.split(/\s+/).length}`);
-  console.log(`References: ${story.references.length}`);
+  console.log(`Words: ${finalCheck.stats.words}`);
+  console.log(`References: ${finalCheck.stats.refs}`);
 
-  // Attach image
   console.log("\nSearching for archive image...");
   const image = await attachImage(story);
   console.log(`Image: ${image.card ? "LOC archive" : "AI prompt generated"}`);
 
-  // Build article JSON
   const article = {
     slug,
     title: story.title,
     excerpt: story.excerpt,
-    readMinutes: Math.max(5, Math.ceil(story.content.split(/\s+/).length / 220)),
+    readMinutes: Math.max(5, Math.ceil(finalCheck.stats.words / 220)),
     category: story.category || "Weird America",
     content: story.content,
     references: story.references,
@@ -420,7 +499,6 @@ Return JSON ONLY.`;
     createdAt: new Date().toISOString(),
   };
 
-  // Save
   const filePath = join(CONTENT_DIR, `${slug}.json`);
   writeFileSync(filePath, JSON.stringify(article, null, 2), "utf-8");
   console.log(`\nSaved: ${filePath}`);
