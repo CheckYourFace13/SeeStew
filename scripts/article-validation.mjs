@@ -33,8 +33,15 @@ export function countWords(text) {
   return (text || "").split(/\s+/).filter(Boolean).length;
 }
 
+/** Article body only — exclude ## Sources block for citation counting */
+export function getArticleBody(content) {
+  const parts = (content || "").split(/^##\s*Sources\s*$/im);
+  return parts[0] || content || "";
+}
+
 export function countInlineCitations(content) {
-  const matches = (content || "").match(/\[\d+\]/g);
+  const body = getArticleBody(content);
+  const matches = body.match(/\[\d+\]/g);
   return matches ? new Set(matches).size : 0;
 }
 
@@ -49,20 +56,47 @@ export function countCredibleRefs(refs) {
   }).length;
 }
 
+export function buildReferencesFromSources(requiredSources) {
+  return (requiredSources || []).map((s) => ({
+    title: s.title,
+    publisher: s.publisher,
+    url: s.url,
+    ...(s.year ? { year: s.year } : {}),
+  }));
+}
+
+export function buildSourcesSection(references) {
+  return references
+    .map((r, i) => `${i + 1}. ${r.title} — *${r.publisher}*. [Link](${r.url})`)
+    .join("\n");
+}
+
+/** Attach curated references and rebuild ## Sources in markdown content */
+export function finalizeMarkdownContent(markdownBody, requiredSources) {
+  const references = buildReferencesFromSources(requiredSources);
+  let body = (markdownBody || "").trim();
+  body = body.replace(/\n##\s*Sources[\s\S]*$/i, "").trim();
+  const sourcesBlock = buildSourcesSection(references);
+  const content = `${body}\n\n## Sources\n\n${sourcesBlock}`;
+  return { content, references };
+}
+
 export function validateStory(story, { allowedSources } = {}) {
   const errors = [];
   const content = story.content || "";
   const refs = story.references || [];
   const words = countWords(content);
+  const bodyWords = countWords(getArticleBody(content));
 
   if (words < 1500) errors.push(`Content is ${words} words (need 1500+)`);
+  if (bodyWords < 1200) errors.push(`Article body (excl. Sources) is ${bodyWords} words — likely too short`);
   if (refs.length < 4) errors.push(`Only ${refs.length} references (need 4+)`);
 
   const credible = countCredibleRefs(refs);
   if (credible < 2) errors.push(`Only ${credible} credible sources (need 2+)`);
 
   const citations = countInlineCitations(content);
-  if (citations < 4) errors.push(`Only ${citations} inline citations (need 4+)`);
+  if (citations < 4) errors.push(`Only ${citations} inline citations in body (need 4+)`);
 
   if (!/##\s*Sources/i.test(content)) errors.push("Missing ## Sources section");
 
@@ -92,32 +126,7 @@ export function validateStory(story, { allowedSources } = {}) {
   return {
     ok: errors.length === 0,
     errors,
-    stats: { words, refs: refs.length, credible, citations },
-  };
-}
-
-/** Replace model references with curated list; rebuild ## Sources in body. */
-export function enforceCuratedReferences(story, requiredSources) {
-  const references = requiredSources.map((s) => ({
-    title: s.title,
-    publisher: s.publisher,
-    url: s.url,
-    ...(s.year ? { year: s.year } : {}),
-  }));
-
-  let content = (story.content || "").trim();
-  content = content.replace(/\n##\s*Sources[\s\S]*$/i, "").trim();
-
-  const sourcesBlock = references
-    .map((r, i) => `${i + 1}. ${r.title} — *${r.publisher}*. [Link](${r.url})`)
-    .join("\n");
-
-  content = `${content}\n\n## Sources\n\n${sourcesBlock}`;
-
-  return {
-    ...story,
-    content,
-    references,
+    stats: { words, bodyWords, refs: refs.length, credible, citations },
   };
 }
 

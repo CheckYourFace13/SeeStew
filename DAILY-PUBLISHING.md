@@ -1,6 +1,8 @@
 # Daily Story Publishing — SeeStew
 
-SeeStew publishes one new 1500+ word factual U.S. history story daily via **GitHub Actions**, using a **curated topic/source queue**. The model writes the article; **sources are fixed in the queue** — the model cannot invent URLs.
+SeeStew publishes one new 1500+ word factual U.S. history story daily via **GitHub Actions**, using a **curated topic/source queue**.
+
+**Architecture:** The model returns **Markdown body text only**. Node.js builds the final article JSON (title, slug, excerpt, references, image) — the model never outputs JSON or controls URLs.
 
 ---
 
@@ -9,14 +11,16 @@ SeeStew publishes one new 1500+ word factual U.S. history story daily via **GitH
 1. GitHub Actions runs daily at **10:00 UTC** (5:00 AM Eastern).
 2. `npm run validate:queue` checks the queue file.
 3. `node scripts/generate-daily-story.mjs` picks the **first pending** topic from `content/story-queue.json`.
-4. OpenRouter writes the article using **only** the queue item’s `requiredSources` (4–6 HTTPS URLs).
-5. The script **replaces** any model references with the curated list and rebuilds `## Sources`.
-6. If under 1500 words, an **expansion call** targets 1800–2200 words (same sources).
-7. Validates word count, citations, and curated URLs.
-8. LOC image search uses `imageSearchTerms`; otherwise saves `imagePrompt`.
-9. Saves `content/articles/<slug>.json` and marks the queue item `published`.
-10. Commits **both** the article and `content/story-queue.json`.
-11. Hostinger auto-deploys from `main`.
+4. Script sets metadata from the queue item (title, slug, excerpt, category).
+5. OpenRouter writes **Markdown only** (1800–2200 words, inline `[1]` citations, `## Sources`).
+6. Script injects curated `references` from the queue and rebuilds `## Sources`.
+7. If under 1500 words → **expansion** call (Markdown only).
+8. If fewer than 4 citation markers → **citation repair** call (Markdown only).
+9. Validates word count, citations (in body only), and curated references.
+10. LOC image search via `imageSearchTerms`; otherwise `imagePrompt`.
+11. Saves `content/articles/<slug>.json` (clean JSON from Node) and marks queue item `published`.
+12. Commits article + `content/story-queue.json`.
+13. Hostinger auto-deploys from `main`.
 
 ---
 
@@ -52,17 +56,16 @@ Fallback model in script: `anthropic/claude-3.5-haiku` (Gemini not used for dail
 
 ## Troubleshooting
 
-### Malformed JSON
+### Malformed JSON / truncated output
 
-- Script strips fences, extracts `{…}`, removes control characters.
-- Expansion/retry uses `response_format: { type: "json_object" }`.
+- **Fixed:** Model no longer returns JSON. Markdown-only generation avoids `Unterminated string` errors.
+
+### Model too short / 0 citations
+
+- Sources always come from the queue (script-built `references` array).
+- Expansion call if body is under 1500 words.
+- Citation repair call if fewer than 4 unique `[n]` markers in the body.
 - Set `OPENROUTER_MODEL=openai/gpt-4o-mini`.
-
-### Model too short / 0 references
-
-- Sources come from the queue — **not** from the model.
-- `enforceCuratedReferences()` always injects the curated list before validation.
-- Expansion call runs if draft is under 1500 words.
 
 ### Insufficient credible sources
 
