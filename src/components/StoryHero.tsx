@@ -10,10 +10,7 @@ export function StoryHero({
   youtubeThumbnail?: string;
 }) {
   const image = resolveStoryImage(article, { youtubeThumbnail });
-  const heroSrc =
-    article.image?.hero && article.image.hero.startsWith("/")
-      ? article.image.hero
-      : image.src;
+  const heroSrc = article.image?.hero ?? image.src;
 
   return (
     <div className="relative mt-6 aspect-[16/9] overflow-hidden rounded-xl bg-brand-dark">
@@ -24,7 +21,7 @@ export function StoryHero({
         className="object-cover"
         sizes="(max-width: 768px) 100vw, 720px"
         priority
-        unoptimized={image.isRemote && heroSrc.includes("loc.gov")}
+        unoptimized={heroSrc.startsWith("https://") && heroSrc.includes("loc.gov")}
       />
       {image.credit && (
         <p className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-4 py-3 text-xs text-white/90">

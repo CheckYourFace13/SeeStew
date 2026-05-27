@@ -92,7 +92,7 @@ export async function runStoryPipeline(): Promise<PipelineResult> {
     }
   }
 
-  // 2) Obscure history stories (queue + fresh ideas)
+  // 2) Obscure history stories — always attempt at least 1 per run
   if (hasOpenRouter()) {
     const pending = getPendingTopics();
     const obscureSlots = Math.max(1, budget - published.length);

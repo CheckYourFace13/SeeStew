@@ -55,6 +55,14 @@ function parseStoryJson(raw: string): StoryJson {
   return data;
 }
 
+const RETRY_MSG = `\n\nYour last draft FAILED validation. Requirements:
+- 1500+ words in content field
+- 4+ references with real https URLs (at least 2 from .gov or .edu)
+- 10+ inline [1][2][3] citation markers spread through the body
+- ## Sources section at the end matching the reference numbers
+- No invented quotes or dialogue
+Fix and return JSON ONLY.`;
+
 async function generateStory(userPrompt: string, retries = 2): Promise<StoryJson> {
   let lastError = "unknown";
 
@@ -64,36 +72,45 @@ async function generateStory(userPrompt: string, retries = 2): Promise<StoryJson
         { role: "system", content: WRITER_SYSTEM },
         {
           role: "user",
-          content:
-            userPrompt +
-            (i > 0
-              ? "\n\nYour last draft failed validation: need 3+ credible https references, inline [1][2][3] citations in body, ## Sources section, 900+ words. Fix and return JSON only."
-              : ""),
+          content: userPrompt + (i > 0 ? RETRY_MSG : ""),
         },
       ],
-      { maxTokens: 8000, temperature: 0.35 + i * 0.05 }
+      { maxTokens: 12000, temperature: 0.3 + i * 0.05 }
     );
 
     try {
       const story = parseStoryJson(raw);
       const wordCount = story.content.split(/\s+/).length;
+
       const refCheck = validateReferences(story.references);
       if (!refCheck.ok) {
         lastError = refCheck.errors.join("; ");
         continue;
       }
-      if (wordCount < 800) {
-        lastError = "too short";
+
+      if (wordCount < 1500) {
+        lastError = `too short (${wordCount} words, need 1500+)`;
         continue;
       }
-      story.content = appendReferencesBlock(story.content, story.references);
+
+      const inlineCitations = (story.content.match(/\[\d+\]/g) ?? []);
+      const uniqueCitations = new Set(inlineCitations).size;
+      if (uniqueCitations < 4) {
+        lastError = `insufficient inline citations (${uniqueCitations}, need 4+)`;
+        continue;
+      }
+
+      if (!/##\s*Sources/i.test(story.content)) {
+        story.content = appendReferencesBlock(story.content, story.references);
+      }
+
       return story;
     } catch (e) {
       lastError = e instanceof Error ? e.message : "parse error";
     }
   }
 
-  throw new Error(`Story generation failed: ${lastError}`);
+  throw new Error(`Story generation failed after ${retries + 1} attempts: ${lastError}`);
 }
 
 function toArticle(
@@ -118,9 +135,9 @@ function toArticle(
   };
 }
 
-/** Template fallback when OpenRouter is not configured */
+/** Fallback when OpenRouter is not configured — minimal placeholder for video companion */
 export function buildArticleFromVideoFallback(video: YouTubeVideo): Article {
-  const content = `## ${video.title}\n\nSeeStew covers this episode on YouTube [1]. For broader American history collections, see the Library of Congress [2] and National Archives [3].\n\n## Sources\n\n1. SeeStew — *YouTube*. [Link](https://www.youtube.com/@SeeStew)\n2. Library of Congress — *Digital Collections*. [Link](https://www.loc.gov/collections/)\n3. National Archives — *Research*. [Link](https://www.archives.gov/research)`;
+  const content = `## ${video.title}\n\nSeeStew covers this episode on YouTube [1]. For broader American history collections, see the Library of Congress [2], National Archives [3], and the Smithsonian [4].\n\n## Sources\n\n1. SeeStew — *YouTube*. [Link](https://www.youtube.com/@SeeStew)\n2. Library of Congress — *Digital Collections*. [Link](https://www.loc.gov/collections/)\n3. National Archives — *Research*. [Link](https://www.archives.gov/research)\n4. Smithsonian — *American History*. [Link](https://americanhistory.si.edu/)`;
   return {
     slug: slugify(video.title, video.id.slice(0, 6)),
     title: video.title,
@@ -129,21 +146,10 @@ export function buildArticleFromVideoFallback(video: YouTubeVideo): Article {
     category: "Documentary",
     content,
     references: [
-      {
-        title: "SeeStew YouTube Channel",
-        publisher: "YouTube",
-        url: "https://www.youtube.com/@SeeStew",
-      },
-      {
-        title: "Library of Congress Digital Collections",
-        publisher: "Library of Congress",
-        url: "https://www.loc.gov/collections/",
-      },
-      {
-        title: "National Archives Research",
-        publisher: "National Archives",
-        url: "https://www.archives.gov/research",
-      },
+      { title: "SeeStew YouTube Channel", publisher: "YouTube", url: "https://www.youtube.com/@SeeStew" },
+      { title: "Library of Congress Digital Collections", publisher: "Library of Congress", url: "https://www.loc.gov/collections/" },
+      { title: "National Archives Research", publisher: "National Archives", url: "https://www.archives.gov/research" },
+      { title: "Smithsonian American History", publisher: "Smithsonian", url: "https://americanhistory.si.edu/" },
     ],
     relatedVideoId: video.id,
     sourceVideoId: video.id,
@@ -151,9 +157,7 @@ export function buildArticleFromVideoFallback(video: YouTubeVideo): Article {
   };
 }
 
-export async function buildArticleFromVideo(
-  video: YouTubeVideo
-): Promise<Article> {
+export async function buildArticleFromVideo(video: YouTubeVideo): Promise<Article> {
   const story = await generateStory(videoCompanionPrompt(video));
   return toArticle(story, {
     slugSuffix: video.id.slice(0, 6),
@@ -167,7 +171,7 @@ export async function buildObscureStory(
   topicTitle?: string
 ): Promise<Article> {
   const prompt = topicTitle
-    ? `Write the full article for this specific story: "${topicTitle}". ${obscureStoryPrompt(usedTitles)}`
+    ? `Write the full 1500+ word article for this specific story: "${topicTitle}". ${obscureStoryPrompt(usedTitles)}`
     : obscureStoryPrompt(usedTitles);
 
   const story = await generateStory(prompt);

@@ -30,7 +30,7 @@ export async function chatCompletion(
     body: JSON.stringify({
       model: pipelineConfig.openRouterModel,
       messages,
-      max_tokens: options?.maxTokens ?? 8000,
+      max_tokens: options?.maxTokens ?? 12000,
       temperature: options?.temperature ?? 0.65,
       response_format: { type: "json_object" },
     }),

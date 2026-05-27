@@ -108,7 +108,7 @@ export async function searchLibraryOfCongressImage(
 }
 
 export function buildImagePrompt(article: Pick<Article, "title" | "category" | "excerpt">): string {
-  return `Editorial illustration, American history, ${article.category}: ${article.title}. ${article.excerpt}. Period-accurate, dignified, no text, no logos, painterly documentary style.`;
+  return `Historic editorial illustration for "${article.title}". Category: ${article.category}. Scene: ${article.excerpt}. Style: period-accurate, muted earth tones, painterly, no text overlays, no logos, suitable as article hero image.`;
 }
 
 export function resolveStoryImage(

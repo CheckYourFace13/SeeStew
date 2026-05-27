@@ -27,6 +27,3 @@ export function stripAiPhrases(text: string): string {
   }
   return out.replace(/\s{2,}/g, " ").replace(/\n{3,}/g, "\n\n").trim();
 }
-
-/** @deprecated Use validateReferences from validate-story.ts */
-export { validateReferences } from "./validate-story";

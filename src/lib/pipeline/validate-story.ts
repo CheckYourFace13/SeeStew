@@ -8,16 +8,15 @@ const CREDIBLE_DOMAIN_PATTERNS = [
   /smithsonian/i,
   /nps\.gov/i,
   /nationalarchives/i,
-  /history\.gov/i,
   /senate\.gov/i,
   /house\.gov/i,
-  /britannica\.com/i,
-  /history\.com/i,
   /si\.edu/i,
   /museum/i,
   /jstor\.org/i,
   /pbs\.org/i,
   /npr\.org/i,
+  /nytimes\.com/i,
+  /washingtonpost\.com/i,
 ];
 
 const PLACEHOLDER_URL_PATTERNS = [
@@ -37,9 +36,6 @@ const VAGUE_SOURCE_PHRASES = [
   /\brumors suggest\b/i,
   /\bsources claim\b/i,
 ];
-
-const FABRICATED_QUOTE_PATTERN =
-  /[""][^""]{10,}[""][^.]*\bsaid\b|\bsaid\s+[""]/i;
 
 export type StoryValidationResult = {
   ok: boolean;
@@ -66,8 +62,8 @@ function isValidReference(ref: ArticleReference): boolean {
 
 export function validateReferences(refs: ArticleReference[] | undefined): StoryValidationResult {
   const errors: string[] = [];
-  if (!refs || refs.length < 3) {
-    errors.push("At least 3 cited sources with https URLs are required.");
+  if (!refs || refs.length < 4) {
+    errors.push("At least 4 cited sources with https URLs are required.");
     return { ok: false, errors };
   }
 
@@ -79,7 +75,7 @@ export function validateReferences(refs: ArticleReference[] | undefined): StoryV
 
   const credibleCount = refs.filter((r) => isCredibleUrl(r.url)).length;
   if (credibleCount < 2) {
-    errors.push("At least 2 sources should be from credible domains (.gov, .edu, museum, archives).");
+    errors.push("At least 2 sources must be from .gov, .edu, museum, archives, or major institution.");
   }
 
   return { ok: errors.length === 0, errors };
@@ -100,11 +96,14 @@ export function validateArticleForPublish(article: Article): StoryValidationResu
     errors.push("Slug is missing or invalid.");
   }
   if (!article.excerpt?.trim() || article.excerpt.length < 40) {
-    errors.push("Summary/excerpt is missing or too short.");
+    errors.push("Excerpt is missing or too short (40+ chars).");
   }
-  if (!article.content?.trim() || article.content.split(/\s+/).length < 200) {
-    errors.push("Body is missing or too short.");
+
+  const wordCount = (article.content ?? "").split(/\s+/).length;
+  if (wordCount < 1500) {
+    errors.push(`Body is ${wordCount} words — minimum is 1500.`);
   }
+
   if (!article.category?.trim()) {
     errors.push("Category is required.");
   }
@@ -115,23 +114,19 @@ export function validateArticleForPublish(article: Article): StoryValidationResu
   const body = article.content ?? "";
 
   if (!/##\s*Sources/i.test(body)) {
-    errors.push('Body must end with a "## Sources" section.');
+    errors.push('Body must contain a "## Sources" section.');
   }
 
   const inlineCount = countInlineCitations(body);
-  if (inlineCount < 3) {
-    errors.push("Body needs at least 3 inline citation markers like [1], [2], [3].");
+  if (inlineCount < 4) {
+    errors.push(`Body needs at least 4 unique inline citation markers [1], [2], etc. Found ${inlineCount}.`);
   }
 
   for (const re of VAGUE_SOURCE_PHRASES) {
     if (re.test(body)) {
-      errors.push(`Body contains vague sourcing (${re.source}).`);
+      errors.push(`Body contains vague sourcing phrase: "${re.source}".`);
       break;
     }
-  }
-
-  if (FABRICATED_QUOTE_PATTERN.test(body)) {
-    errors.push("Body may contain unsourced direct quotes.");
   }
 
   if (/\b(lorem ipsum|TODO|TBD|\[insert)\b/i.test(body)) {

@@ -86,12 +86,13 @@ export function isLongFormVideo(video: YouTubeVideo): boolean {
   return false;
 }
 
-/** True when video belongs on /shorts. */
+/** True when video belongs on /shorts. Catches everything that isn't long-form. */
 export function isShortFormVideo(video: YouTubeVideo): boolean {
   if (looksLikeShort(video.title, video.description)) return true;
-  if (video.durationSeconds > 0 && video.durationSeconds < LONG_VIDEO_MIN_SECONDS) {
-    return true;
-  }
+  if (video.durationSeconds > 0 && video.durationSeconds < LONG_VIDEO_MIN_SECONDS) return true;
+  // Unknown duration (0) without Short signals — put on /shorts as safe fallback
+  // rather than losing it entirely. This prevents orphaned videos.
+  if (video.durationSeconds === 0) return true;
   return false;
 }
 
@@ -279,6 +280,8 @@ async function fetchFromRss(channelId: string): Promise<YouTubeVideo[]> {
     .filter((v): v is YouTubeVideo => v !== null);
 }
 
+let _durationWarnLogged = false;
+
 async function enrichMissingDurations(
   videos: YouTubeVideo[],
   apiKey: string
@@ -287,6 +290,15 @@ async function enrichMissingDurations(
   if (missing.length === 0) return videos;
 
   const durations = await fetchDurationsByIds(missing, apiKey);
+
+  const stillMissing = missing.filter((id) => !durations.has(id) || durations.get(id) === 0);
+  if (stillMissing.length > 0 && !_durationWarnLogged) {
+    _durationWarnLogged = true;
+    console.warn(
+      `[youtube] API returned no duration for ${stillMissing.length} video(s): ${stillMissing.slice(0, 5).join(", ")}${stillMissing.length > 5 ? "..." : ""}. Routed to /shorts as safe fallback.`
+    );
+  }
+
   return videos.map((v) => {
     if (v.durationSeconds > 0) return v;
     const seconds = durations.get(v.id) ?? 0;
