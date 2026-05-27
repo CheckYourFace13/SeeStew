@@ -1,3 +1,1477 @@
 {
-  "topics": []
+  "topics": [],
+  "items": [
+    {
+      "id": "black-sox-scandal-1919",
+      "title": "The Black Sox Scandal: Eight Players Accused of Throwing the 1919 World Series",
+      "hook": "Gamblers met star pitchers, and America’s pastime faced its greatest corruption crisis.",
+      "category": "Scandal",
+      "angle": "How the 1919 fix unraveled, why a jury acquitted the players, and how Judge Landis banned them anyway.",
+      "keywords": [
+        "1919 World Series",
+        "Chicago White Sox",
+        "gambling",
+        "Judge Landis"
+      ],
+      "requiredSources": [
+        {
+          "title": "The Black Sox Scandal",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/magazine/publications/prologue/2013/fall/black-sox"
+        },
+        {
+          "title": "Black Sox Scandal",
+          "publisher": "FBI",
+          "url": "https://www.fbi.gov/history/famous-cases/black-sox-scandal"
+        },
+        {
+          "title": "1919 World Series",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/collections/baseball-cards/articles-and-essays/1919-world-series/"
+        },
+        {
+          "title": "Eight Men Out",
+          "publisher": "PBS",
+          "url": "https://www.pbs.org/wgbh/americanexperience/features/eight-men-out/"
+        },
+        {
+          "title": "Chicago Historical Society on the Black Sox",
+          "publisher": "Chicago History Museum",
+          "url": "https://www.chicagohistory.org/black-sox/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Black Sox 1919 World Series Chicago baseball"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "teapot-dome-scandal-1920s",
+      "title": "Teapot Dome: When Cabinet Secretaries Sold Navy Oil Reserves",
+      "hook": "Secret leases, private yachts, and the bribery scandal that defined 1920s Washington corruption.",
+      "category": "Scandal",
+      "angle": "Interior Secretary Albert Fall, Wyoming oil fields, and the first cabinet member sent to prison for a crime in office.",
+      "keywords": [
+        "Teapot Dome",
+        "Albert Fall",
+        "Warren Harding",
+        "oil leases"
+      ],
+      "requiredSources": [
+        {
+          "title": "Teapot Dome Scandal",
+          "publisher": "U.S. Senate",
+          "url": "https://www.senate.gov/about/powers-procedures/investigations/teapot-dome.htm"
+        },
+        {
+          "title": "Teapot Dome",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/milestone-documents/teapot-dome-scandal"
+        },
+        {
+          "title": "Albert B. Fall and Teapot Dome",
+          "publisher": "Department of the Interior",
+          "url": "https://www.doi.gov/heritage/teapot-dome"
+        },
+        {
+          "title": "The Teapot Dome Scandal",
+          "publisher": "History, Art & Archives, U.S. House",
+          "url": "https://history.house.gov/HistoricalHighlight/Detail/15032434783"
+        },
+        {
+          "title": "Teapot Dome Scandal",
+          "publisher": "Encyclopedia Britannica (reference)",
+          "url": "https://www.britannica.com/event/Teapot-Dome-Scandal"
+        }
+      ],
+      "imageSearchTerms": [
+        "Teapot Dome oil scandal Wyoming 1920s"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "bonus-army-1932",
+      "title": "The Bonus Army: When Hoover Ordered Tanks Against WWI Veterans",
+      "hook": "Thousands of unemployed veterans camped in Washington — until the Army drove them out with tear gas.",
+      "category": "Military",
+      "angle": "The 1932 march, the Anacostia flats encampment, MacArthur’s controversial assault, and the political fallout.",
+      "keywords": [
+        "Bonus Army",
+        "1932",
+        "Herbert Hoover",
+        "Douglas MacArthur"
+      ],
+      "requiredSources": [
+        {
+          "title": "The Bonus Army",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/publications/prologue/2006/spring/bonus-army.html"
+        },
+        {
+          "title": "Bonus March",
+          "publisher": "U.S. Army",
+          "url": "https://history.army.mil/html/reference/bonus/index.html"
+        },
+        {
+          "title": "The Bonus Army",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/the-bonus-army-130075741/"
+        },
+        {
+          "title": "1932 Bonus March",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/today-in-history/july-28/"
+        },
+        {
+          "title": "Veterans Bonus March",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/articles/bonus-army.htm"
+        }
+      ],
+      "imageSearchTerms": [
+        "Bonus Army 1932 Washington veterans march"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "tulsa-race-massacre-1921",
+      "title": "The Tulsa Race Massacre: When a Prosperous Black District Was Destroyed",
+      "hook": "Greenwood burned for days; hundreds died; and the story was buried for generations.",
+      "category": "Crime",
+      "angle": "The 1921 attack on Black Wall Street, aerial bombardment claims, mass graves, and the 2021 centennial reckoning.",
+      "keywords": [
+        "Tulsa",
+        "Greenwood",
+        "1921",
+        "race massacre"
+      ],
+      "requiredSources": [
+        {
+          "title": "1921 Tulsa Race Massacre",
+          "publisher": "National Museum of African American History and Culture",
+          "url": "https://nmaahc.si.edu/explore/exhibitions/tulsa-race-massacre"
+        },
+        {
+          "title": "Tulsa Race Massacre",
+          "publisher": "Oklahoma Historical Society",
+          "url": "https://www.okhistory.org/learn/tulsa-race-massacre"
+        },
+        {
+          "title": "Tulsa Race Massacre",
+          "publisher": "Department of Justice",
+          "url": "https://www.justice.gov/crt/tulsa-race-massacre"
+        },
+        {
+          "title": "Tulsa Race Riot",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/collections/tulsa-race-massacre/"
+        },
+        {
+          "title": "Tulsa Race Massacre",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/research/african-american/tulsa"
+        }
+      ],
+      "imageSearchTerms": [
+        "Tulsa Greenwood 1921 race massacre"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "move-bombing-1985",
+      "title": "MOVE: When Philadelphia Police Dropped a Bomb on a City Block",
+      "hook": "A helicopter-delivered explosive killed 11 people and burned 61 homes in West Philadelphia.",
+      "category": "Crime",
+      "angle": "The 1985 confrontation, the radical group MOVE, Mayor Goode, and why the city formally apologized decades later.",
+      "keywords": [
+        "MOVE",
+        "Philadelphia",
+        "1985",
+        "Osage Avenue"
+      ],
+      "requiredSources": [
+        {
+          "title": "MOVE Bombing",
+          "publisher": "City of Philadelphia",
+          "url": "https://www.phila.gov/programs/move-commission/"
+        },
+        {
+          "title": "1985 MOVE bombing",
+          "publisher": "PBS",
+          "url": "https://www.pbs.org/wgbh/americanexperience/features/philadelphia-move-bombing/"
+        },
+        {
+          "title": "MOVE",
+          "publisher": "NPR",
+          "url": "https://www.npr.org/series/103537450/move"
+        },
+        {
+          "title": "Philadelphia MOVE bombing",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/philadelphia-move-bombing-180975647/"
+        },
+        {
+          "title": "MOVE bombing records",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "MOVE bombing Philadelphia 1985 Osage Avenue"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "ludlow-massacre-1914",
+      "title": "The Ludlow Massacre: When Colorado Militia Killed Striking Miners’ Families",
+      "hook": "A tent colony burned; two women and eleven children died underground; and labor war erupted across the coalfields.",
+      "category": "Crime",
+      "angle": "The 1914 Colorado coal strike, Rockefeller ownership, National Guard machine guns, and federal intervention.",
+      "keywords": [
+        "Ludlow",
+        "Colorado",
+        "coal strike",
+        "1914"
+      ],
+      "requiredSources": [
+        {
+          "title": "Ludlow Massacre",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/places/ludlow-tent-colony-site.htm"
+        },
+        {
+          "title": "Ludlow Massacre",
+          "publisher": "Colorado Encyclopedia",
+          "url": "https://coloradoencyclopedia.org/article/ludlow-massacre"
+        },
+        {
+          "title": "The Ludlow Massacre",
+          "publisher": "United Mine Workers",
+          "url": "https://umwa.org/ludlow/"
+        },
+        {
+          "title": "Ludlow tent colony",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/pictures/item/co0220/"
+        },
+        {
+          "title": "Labor conflict in Colorado",
+          "publisher": "U.S. Department of Labor",
+          "url": "https://www.dol.gov/general/aboutdol/history"
+        }
+      ],
+      "imageSearchTerms": [
+        "Ludlow massacre 1914 Colorado coal miners"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "wilmington-coup-1898",
+      "title": "The Wilmington Coup of 1898: America’s Only Violent Overthrow of a City Government",
+      "hook": "White supremacists expelled elected officials, burned a Black newspaper, and killed dozens in North Carolina.",
+      "category": "Politics",
+      "angle": "The only successful coup on U.S. soil, the fusionist coalition it destroyed, and the 2021 state truth commission.",
+      "keywords": [
+        "Wilmington",
+        "1898",
+        "North Carolina",
+        "coup"
+      ],
+      "requiredSources": [
+        {
+          "title": "1898 Wilmington",
+          "publisher": "North Carolina Department of Natural and Cultural Resources",
+          "url": "https://www.dncr.nc.gov/1898-wilmington"
+        },
+        {
+          "title": "Wilmington Race Riot",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/nc0260/"
+        },
+        {
+          "title": "Wilmington 1898",
+          "publisher": "National Museum of African American History and Culture",
+          "url": "https://nmaahc.si.edu/explore/stories/wilmington-1898"
+        },
+        {
+          "title": "1898 Wilmington report",
+          "publisher": "University of North Carolina",
+          "url": "https://1898wilmington.org/"
+        },
+        {
+          "title": "Wilmington insurrection",
+          "publisher": "U.S. House",
+          "url": "https://history.house.gov/HistoricalHighlight/Detail/15032406455"
+        }
+      ],
+      "imageSearchTerms": [
+        "Wilmington North Carolina 1898 coup"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "lake-peigneur-1980",
+      "title": "Lake Peigneur: When a Drill Bit Punched Into a Salt Mine and Swallowed a Lake",
+      "hook": "A oil rig punctured a mine under a Louisiana lake — reversing the Delcambre Canal and pulling barges under.",
+      "category": "Weird America",
+      "angle": "The 1980 disaster, the whirlpool, the missing island, and how everyone miraculously escaped the rig.",
+      "keywords": [
+        "Lake Peigneur",
+        "Louisiana",
+        "salt mine",
+        "1980"
+      ],
+      "requiredSources": [
+        {
+          "title": "Lake Peigneur disaster",
+          "publisher": "U.S. Geological Survey",
+          "url": "https://www.usgs.gov/"
+        },
+        {
+          "title": "Lake Peigneur",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/smart-news/the-day-a-louisiana-lake-disappeared-180949899/"
+        },
+        {
+          "title": "Lake Peigneur",
+          "publisher": "National Geographic",
+          "url": "https://www.nationalgeographic.com/science/article/lake-peigneur-disaster"
+        },
+        {
+          "title": "Jefferson Island disaster",
+          "publisher": "Louisiana Geological Survey",
+          "url": "https://www.lgs.lsu.edu/"
+        },
+        {
+          "title": "Mine inundation",
+          "publisher": "Mine Safety and Health Administration",
+          "url": "https://www.msha.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Lake Peigneur Louisiana 1980 whirlpool drill"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "titan-ii-damascus-1980",
+      "title": "The Titan II Missile Explosion: When a Wrench Dropped on Arkansas",
+      "hook": "A maintenance mishap vented fuel, exploded a nuclear missile silo, and killed one airman in 1980.",
+      "category": "Military",
+      "angle": "The Damascus, Arkansas accident, the 9-megaton warhead that did not detonate, and Cold War near-miss protocols.",
+      "keywords": [
+        "Titan II",
+        "Damascus Arkansas",
+        "1980",
+        "ICBM"
+      ],
+      "requiredSources": [
+        {
+          "title": "Titan II accident",
+          "publisher": "U.S. Air Force",
+          "url": "https://www.af.mil/News/Article-Display/Article/121184/titan-ii-accident/"
+        },
+        {
+          "title": "Damascus Titan II",
+          "publisher": "Department of Energy",
+          "url": "https://www.energy.gov/nnsa/nuclear-weapons-history"
+        },
+        {
+          "title": "Titan II explosion",
+          "publisher": "Arkansas Department of Emergency Management",
+          "url": "https://www.adem.arkansas.gov/"
+        },
+        {
+          "title": "Command and Control",
+          "publisher": "PBS",
+          "url": "https://www.pbs.org/wgbh/americanexperience/features/command-and-control/"
+        },
+        {
+          "title": "Titan II silo",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/tiup/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Titan II missile explosion Damascus Arkansas 1980"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "minuteman-missile-accidents",
+      "title": "America’s Minuteman Missiles: The Accidents That Almost Started Nuclear War",
+      "hook": "False alarms, dropped tools, and fire in silos — how the U.S. came close to launching by mistake.",
+      "category": "Military",
+      "angle": "Declassified near-misses in the ICBM fleet, Goldsboro parallels, and why humans stayed in the loop.",
+      "keywords": [
+        "Minuteman",
+        "ICBM",
+        "nuclear accident",
+        "Cold War"
+      ],
+      "requiredSources": [
+        {
+          "title": "Minuteman missile",
+          "publisher": "U.S. Air Force",
+          "url": "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104577/lgm-30-minuteman/"
+        },
+        {
+          "title": "Nuclear weapons accidents",
+          "publisher": "Department of Defense",
+          "url": "https://www.defense.gov/News/News-Stories/Article/Article/2098680/"
+        },
+        {
+          "title": "Minuteman Missile National Historic Site",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/mimi/"
+        },
+        {
+          "title": "Broken Arrow incidents",
+          "publisher": "National Security Archive",
+          "url": "https://nsarchive.gwu.edu/briefing-book/nuclear-vault"
+        },
+        {
+          "title": "ICBM history",
+          "publisher": "Smithsonian National Air and Space Museum",
+          "url": "https://airandspace.si.edu/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Minuteman missile silo accident Cold War"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "tuskegee-syphilis-study",
+      "title": "The Tuskegee Study: When the U.S. Government Lied to Black Men for 40 Years",
+      "hook": "Researchers watched syphilis progress without treatment — long after penicillin existed.",
+      "category": "Scandal",
+      "angle": "Macon County, Alabama; the 1932–1972 study; whistleblowers; and the Belmont Report that followed.",
+      "keywords": [
+        "Tuskegee",
+        "syphilis",
+        "public health",
+        "medical ethics"
+      ],
+      "requiredSources": [
+        {
+          "title": "Tuskegee Study",
+          "publisher": "Centers for Disease Control and Prevention",
+          "url": "https://www.cdc.gov/tuskegee/index.html"
+        },
+        {
+          "title": "Tuskegee Syphilis Study",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/research/african-american/tuskegee"
+        },
+        {
+          "title": "About the USPHS Syphilis Study",
+          "publisher": "National Institutes of Health",
+          "url": "https://www.nih.gov/about-nih/who-we-are/nih-director/statements/apology-tuskegee-study"
+        },
+        {
+          "title": "Tuskegee timeline",
+          "publisher": "U.S. Department of Health and Human Services",
+          "url": "https://www.hhs.gov/ohrp/education-and-outreach/about-research-involving-human-subjects/tuskegee/index.html"
+        },
+        {
+          "title": "Tuskegee study",
+          "publisher": "Smithsonian National Museum of African American History and Culture",
+          "url": "https://nmaahc.si.edu/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Tuskegee syphilis study Alabama 1932"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "poison-squad-wiley",
+      "title": "The Poison Squad: When Civil Servants Ate Borax to Prove Food Was Fake",
+      "hook": "Harvey Wiley’s volunteers swallowed preservatives so Congress would pass the Pure Food and Drug Act.",
+      "category": "Weird America",
+      "angle": "The 1902 dining room at the USDA, public stunt science, and the birth of FDA food regulation.",
+      "keywords": [
+        "Poison Squad",
+        "Harvey Wiley",
+        "FDA",
+        "food safety"
+      ],
+      "requiredSources": [
+        {
+          "title": "Harvey Washington Wiley",
+          "publisher": "U.S. Food and Drug Administration",
+          "url": "https://www.fda.gov/about-fda/histories-fda/harvey-washington-wiley"
+        },
+        {
+          "title": "Pure Food and Drug Act",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/milestone-documents/pure-food-and-drug-act"
+        },
+        {
+          "title": "Poison Squad",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/the-poison-squad-180955074/"
+        },
+        {
+          "title": "Wiley and food regulation",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/collections/food-and-drug-administration/"
+        },
+        {
+          "title": "USDA history",
+          "publisher": "U.S. Department of Agriculture",
+          "url": "https://www.usda.gov/about-usda/general-information/history"
+        }
+      ],
+      "imageSearchTerms": [
+        "Poison Squad Harvey Wiley food testing 1902"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "osage-murders-reign-of-terror",
+      "title": "The Osage Murders: When Oil Wealth Made Native Headrights Worth Killing For",
+      "hook": "Dozens of Osage citizens died under suspicious circumstances in 1920s Oklahoma — a conspiracy for oil money.",
+      "category": "Crime",
+      "angle": "The Reign of Terror, the FBI’s birth as a detective bureau, and the Killers of the Flower Moon case.",
+      "keywords": [
+        "Osage",
+        "Oklahoma",
+        "oil",
+        "FBI"
+      ],
+      "requiredSources": [
+        {
+          "title": "Osage Murders",
+          "publisher": "FBI",
+          "url": "https://www.fbi.gov/history/famous-cases/osage-murders"
+        },
+        {
+          "title": "Osage Nation",
+          "publisher": "Osage Nation",
+          "url": "https://www.osagenation-nsn.gov/who-we-are/history"
+        },
+        {
+          "title": "Osage Indian Murders",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/research/native-americans/osage"
+        },
+        {
+          "title": "Reign of Terror",
+          "publisher": "Oklahoma Historical Society",
+          "url": "https://www.okhistory.org/publications/enc/entry?entry=OS001"
+        },
+        {
+          "title": "Osage headrights",
+          "publisher": "Bureau of Indian Affairs",
+          "url": "https://www.bia.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Osage murders Oklahoma oil 1920s"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "wounded-knee-1973",
+      "title": "Wounded Knee 1973: The 71-Day Siege That Put Native Rights on National TV",
+      "hook": "AIM activists seized a town; the FBI surrounded them; and two federal agents died in the standoff’s aftermath.",
+      "category": "Military",
+      "angle": "The occupation, treaty violations cited by protesters, and the controversial trials that followed.",
+      "keywords": [
+        "Wounded Knee",
+        "1973",
+        "AIM",
+        "Pine Ridge"
+      ],
+      "requiredSources": [
+        {
+          "title": "Wounded Knee occupation",
+          "publisher": "FBI",
+          "url": "https://www.fbi.gov/history/famous-cases/wounded-knee"
+        },
+        {
+          "title": "Wounded Knee",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/wica/learn/historyculture/wounded-knee.htm"
+        },
+        {
+          "title": "1973 occupation",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/today-in-history/february-27/"
+        },
+        {
+          "title": "American Indian Movement",
+          "publisher": "National Museum of the American Indian",
+          "url": "https://americanindian.si.edu/"
+        },
+        {
+          "title": "Wounded Knee siege",
+          "publisher": "U.S. Marshals Service",
+          "url": "https://www.usmarshals.gov/history/wounded-knee"
+        }
+      ],
+      "imageSearchTerms": [
+        "Wounded Knee 1973 occupation AIM"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "business-plot-1934",
+      "title": "The Business Plot: Did Wall Street Try to Install a Fascist Dictator in 1934?",
+      "hook": "A retired general told Congress that financiers asked him to lead 500,000 veterans against FDR.",
+      "category": "Scandal",
+      "angle": "Smedley Butler’s testimony, the McCormack–Dickstein Committee, and why no one was prosecuted.",
+      "keywords": [
+        "Business Plot",
+        "Smedley Butler",
+        "1934",
+        "FDR"
+      ],
+      "requiredSources": [
+        {
+          "title": "House Un-American Activities Committee origins",
+          "publisher": "U.S. House",
+          "url": "https://history.house.gov/Institution/Origins/HAUC/"
+        },
+        {
+          "title": "Smedley Butler",
+          "publisher": "U.S. Marine Corps",
+          "url": "https://www.marines.mil/News/News-Display/Article/6434/smedley-butler/"
+        },
+        {
+          "title": "Business Plot",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Butler testimony",
+          "publisher": "Senate",
+          "url": "https://www.senate.gov/about/reports-publications.htm"
+        },
+        {
+          "title": "1930s political extremism",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/collections/united-states-congressional-documents/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Business Plot Smedley Butler 1934 fascist"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "operation-northwoods-1962",
+      "title": "Operation Northwoods: The Pentagon Plan to Stage Attacks on Americans",
+      "hook": "Declassified proposals included sinking refugee boats and faking hijackings to justify war with Cuba.",
+      "category": "Military",
+      "angle": "The 1962 JCS memoranda, Kennedy’s rejection, and what the documents reveal about Cold War thinking.",
+      "keywords": [
+        "Northwoods",
+        "Cuba",
+        "Pentagon",
+        "1962"
+      ],
+      "requiredSources": [
+        {
+          "title": "Northwoods documents",
+          "publisher": "National Security Archive",
+          "url": "https://nsarchive.gwu.edu/posting/northwoods"
+        },
+        {
+          "title": "Operation Northwoods",
+          "publisher": "U.S. National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Joint Chiefs proposals",
+          "publisher": "Department of Defense",
+          "url": "https://www.defense.gov/"
+        },
+        {
+          "title": "Cuban Missile Crisis context",
+          "publisher": "John F. Kennedy Presidential Library",
+          "url": "https://www.jfklibrary.org/learn/about-jfk/jfk-in-history/cuban-missile-crisis"
+        },
+        {
+          "title": "Northwoods",
+          "publisher": "U.S. Army Center of Military History",
+          "url": "https://history.army.mil/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Operation Northwoods Pentagon Cuba 1962"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "operation-paperclip",
+      "title": "Operation Paperclip: How Nazi Scientists Became American Cold War Heroes",
+      "hook": "The U.S. brought V-2 engineers to Huntsville — sanitizing records and overlooking war crimes.",
+      "category": "Military",
+      "angle": "Von Braun, Fort Bliss, Huntsville rocketry, and the moral compromise behind the moon program’s roots.",
+      "keywords": [
+        "Paperclip",
+        "von Braun",
+        "NASA",
+        "Nazi scientists"
+      ],
+      "requiredSources": [
+        {
+          "title": "Operation Paperclip",
+          "publisher": "NASA",
+          "url": "https://www.nasa.gov/history/operation-paperclip/"
+        },
+        {
+          "title": "Paperclip scientists",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/research/holocaust/finding-aid/military/records.html"
+        },
+        {
+          "title": "Wernher von Braun",
+          "publisher": "Smithsonian National Air and Space Museum",
+          "url": "https://airandspace.si.edu/stories/editorial/von-braun"
+        },
+        {
+          "title": "Joint Intelligence Objectives Agency",
+          "publisher": "Department of Defense",
+          "url": "https://www.defense.gov/"
+        },
+        {
+          "title": "Huntsville rocketry",
+          "publisher": "U.S. Space & Rocket Center",
+          "url": "https://www.rocketcenter.com/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Operation Paperclip von Braun Huntsville"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "japanese-balloon-bomb-oregon-1945",
+      "title": "The Oregon Balloon Bomb: When WWII Reached the Continental U.S. and Killed Civilians",
+      "hook": "Japan launched thousands of fire balloons; one killed a pastor’s wife and five children on a church picnic.",
+      "category": "Military",
+      "angle": "Fu-Go weapons, censorship of U.S. press, and the only WWII combat deaths on the American mainland.",
+      "keywords": [
+        "balloon bomb",
+        "Oregon",
+        "1945",
+        "WWII"
+      ],
+      "requiredSources": [
+        {
+          "title": "Japanese balloon bombs",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/publications/prologue/2005/winter/balloon-bombs.html"
+        },
+        {
+          "title": "Fu-Go balloons",
+          "publisher": "Smithsonian National Air and Space Museum",
+          "url": "https://airandspace.si.edu/stories/editorial/japanese-balloon-bombs"
+        },
+        {
+          "title": "Mitchell Monument",
+          "publisher": "Forest Service",
+          "url": "https://www.fs.usda.gov/detail/fremontwinema/specialplaces/"
+        },
+        {
+          "title": "Bly Oregon incident",
+          "publisher": "Oregon Historical Society",
+          "url": "https://www.oregonhistory.org/"
+        },
+        {
+          "title": "WWII homeland defense",
+          "publisher": "U.S. Army",
+          "url": "https://history.army.mil/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Japanese balloon bomb Oregon 1945 Bly"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "greenbrier-bunker",
+      "title": "The Greenbrier Bunker: Congress’s Secret Cold War Hideaway Under a Resort",
+      "hook": "For decades, a luxury hotel concealed an underground chamber meant for the entire U.S. legislature.",
+      "category": "Politics",
+      "angle": "Project Greek Island, fallout protection, exposure in 1992, and the tourism tours that followed.",
+      "keywords": [
+        "Greenbrier",
+        "bunker",
+        "Congress",
+        "Cold War"
+      ],
+      "requiredSources": [
+        {
+          "title": "The Greenbrier",
+          "publisher": "Greenbrier Resort",
+          "url": "https://www.greenbrier.com/the-bunker"
+        },
+        {
+          "title": "Continuity of government",
+          "publisher": "Congressional Research Service",
+          "url": "https://crsreports.congress.gov/"
+        },
+        {
+          "title": "Cold War shelters",
+          "publisher": "Department of Homeland Security",
+          "url": "https://www.dhs.gov/"
+        },
+        {
+          "title": "Greenbrier exposure",
+          "publisher": "Washington Post",
+          "url": "https://www.washingtonpost.com/archive/"
+        },
+        {
+          "title": "Civil defense",
+          "publisher": "FEMA",
+          "url": "https://www.fema.gov/about/history"
+        }
+      ],
+      "imageSearchTerms": [
+        "Greenbrier bunker West Virginia Congress Cold War"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "hanford-radiation-releases",
+      "title": "Hanford: The Secret Plutonium Plant That Poisoned the Pacific Northwest",
+      "hook": "Downwinders later learned the government knew about radioactive releases — and said little for decades.",
+      "category": "Scandal",
+      "angle": "Manhattan Project production, Green Run, declassified documents, and the largest environmental cleanup in U.S. history.",
+      "keywords": [
+        "Hanford",
+        "plutonium",
+        "downwinders",
+        "Washington"
+      ],
+      "requiredSources": [
+        {
+          "title": "Hanford Site",
+          "publisher": "U.S. Department of Energy",
+          "url": "https://www.energy.gov/em/hanford-site"
+        },
+        {
+          "title": "Hanford history",
+          "publisher": "Environmental Protection Agency",
+          "url": "https://www.epa.gov/hanford"
+        },
+        {
+          "title": "Hanford downwinders",
+          "publisher": "Washington State Department of Health",
+          "url": "https://doh.wa.gov/community-and-environment/radiation/hanford"
+        },
+        {
+          "title": "Manhattan Project",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/mapr/"
+        },
+        {
+          "title": "Hanford releases",
+          "publisher": "Centers for Disease Control and Prevention",
+          "url": "https://www.cdc.gov/nceh/radiation/hanford/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Hanford Washington plutonium Manhattan Project"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "love-canal-1978",
+      "title": "Love Canal: When a Suburb Was Built on 20,000 Tons of Toxic Waste",
+      "hook": "Families reported burns and birth defects; President Carter ordered an emergency evacuation.",
+      "category": "Scandal",
+      "angle": "Hooker Chemical, Niagara Falls, Lois Gibbs, and the law that created Superfund.",
+      "keywords": [
+        "Love Canal",
+        "toxic waste",
+        "Superfund",
+        "1978"
+      ],
+      "requiredSources": [
+        {
+          "title": "Love Canal",
+          "publisher": "Environmental Protection Agency",
+          "url": "https://www.epa.gov/superfund/love-canal"
+        },
+        {
+          "title": "Love Canal disaster",
+          "publisher": "Agency for Toxic Substances and Disease Registry",
+          "url": "https://www.atsdr.cdc.gov/hac/pha/lovecanal/lovecanal_p1.html"
+        },
+        {
+          "title": "Superfund history",
+          "publisher": "EPA",
+          "url": "https://www.epa.gov/superfund/superfund-history"
+        },
+        {
+          "title": "Love Canal",
+          "publisher": "New York State Department of Health",
+          "url": "https://www.health.ny.gov/environmental/investigations/love_canal/"
+        },
+        {
+          "title": "Love Canal",
+          "publisher": "National Institutes of Health",
+          "url": "https://www.nih.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Love Canal Niagara Falls toxic waste 1978"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "centralia-mine-fire-1962",
+      "title": "Centralia: The Pennsylvania Town That Has Burned Underground Since 1962",
+      "hook": "A coal seam fire still smolders beneath empty streets — most residents left decades ago.",
+      "category": "Weird America",
+      "angle": "The dump fire that ignited the vein, failed containment, eminent domain, and the ghost town left behind.",
+      "keywords": [
+        "Centralia",
+        "mine fire",
+        "Pennsylvania",
+        "coal"
+      ],
+      "requiredSources": [
+        {
+          "title": "Centralia mine fire",
+          "publisher": "Pennsylvania Department of Environmental Protection",
+          "url": "https://www.dep.pa.gov/Business/Land/Mining/BAIMining/Pages/Centralia.aspx"
+        },
+        {
+          "title": "Centralia",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/travel/centralia-pennsylvania-mine-fire-180951991/"
+        },
+        {
+          "title": "Mine fires",
+          "publisher": "Office of Surface Mining Reclamation and Enforcement",
+          "url": "https://www.osmre.gov/"
+        },
+        {
+          "title": "Centralia",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Abandoned mine lands",
+          "publisher": "U.S. Department of the Interior",
+          "url": "https://www.doi.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Centralia Pennsylvania mine fire 1962"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "peshtigo-fire-1871",
+      "title": "The Peshtigo Fire: The Deadliest Wildfire in American History — Overshadowed by Chicago",
+      "hook": "On the same night as the Great Chicago Fire, Wisconsin burned — killing an estimated 1,500 people.",
+      "category": "Weird America",
+      "angle": "The fire tornado, logging towns erased, and why the Midwest disaster vanished from national memory.",
+      "keywords": [
+        "Peshtigo",
+        "1871",
+        "wildfire",
+        "Wisconsin"
+      ],
+      "requiredSources": [
+        {
+          "title": "Peshtigo Fire",
+          "publisher": "National Weather Service",
+          "url": "https://www.weather.gov/grb/peshtigo"
+        },
+        {
+          "title": "Peshtigo Fire Museum",
+          "publisher": "Wisconsin Historical Society",
+          "url": "https://www.wisconsinhistory.org/Records/Article/CS3720"
+        },
+        {
+          "title": "1871 fires",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/today-in-history/october-08/"
+        },
+        {
+          "title": "Great fires of 1871",
+          "publisher": "U.S. Forest Service",
+          "url": "https://www.fs.usda.gov/"
+        },
+        {
+          "title": "Peshtigo",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Peshtigo fire 1871 Wisconsin"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "cocoanut-grove-fire-1942",
+      "title": "The Cocoanut Grove Fire: 492 Dead in Boston’s Deadliest Nightclub Disaster",
+      "hook": "Revolving doors jammed, decorations ignited in seconds, and fire codes changed nationwide.",
+      "category": "Weird America",
+      "angle": "The 1942 Boston blaze, illegal occupancy, heroism and panic, and the medical advances in burn care that followed.",
+      "keywords": [
+        "Cocoanut Grove",
+        "Boston",
+        "1942",
+        "nightclub fire"
+      ],
+      "requiredSources": [
+        {
+          "title": "Cocoanut Grove fire",
+          "publisher": "Boston Fire Department",
+          "url": "https://www.boston.gov/departments/fire"
+        },
+        {
+          "title": "Cocoanut Grove",
+          "publisher": "National Fire Protection Association",
+          "url": "https://www.nfpa.org/News-and-Research/Publications-and-media/NFPA-Journal/2012/November-December-2012/Cocoanut-Grove"
+        },
+        {
+          "title": "Cocoanut Grove",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/cocoanut-grove-fire-180978445/"
+        },
+        {
+          "title": "Fire safety codes",
+          "publisher": "U.S. Fire Administration",
+          "url": "https://www.usfa.fema.gov/"
+        },
+        {
+          "title": "Cocoanut Grove",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Cocoanut Grove fire Boston 1942 nightclub"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "hartford-circus-fire-1944",
+      "title": "The Hartford Circus Fire: When the Big Top Became a Death Trap in Minutes",
+      "hook": "A waterproofed tent burned in minutes; 167 died — many unidentified for decades.",
+      "category": "Weird America",
+      "angle": "The 1944 Ringling show, the ‘Little Miss 1565’ mystery, and circus safety reforms.",
+      "keywords": [
+        "Hartford",
+        "circus fire",
+        "1944",
+        "Connecticut"
+      ],
+      "requiredSources": [
+        {
+          "title": "Hartford circus fire",
+          "publisher": "Connecticut State Library",
+          "url": "https://libguides.ctstatelibrary.org/hartfordcircusfire"
+        },
+        {
+          "title": "Circus fire",
+          "publisher": "National Fire Protection Association",
+          "url": "https://www.nfpa.org/"
+        },
+        {
+          "title": "Hartford 1944",
+          "publisher": "U.S. Fire Administration",
+          "url": "https://www.usfa.fema.gov/"
+        },
+        {
+          "title": "Hartford circus fire",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/hartford-circus-fire-180978446/"
+        },
+        {
+          "title": "Hartford",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Hartford circus fire 1944 Connecticut"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "sultana-disaster-1865",
+      "title": "The Sultana: America’s Worst Maritime Disaster — and Almost Nobody Remembers It",
+      "hook": "An overcrowded Mississippi steamboat boiler exploded, killing 1,100+ — mostly freed Union POWs.",
+      "category": "Military",
+      "angle": "The 1865 tragedy buried by Lincoln’s assassination news, bribery of inspectors, and legal impunity.",
+      "keywords": [
+        "Sultana",
+        "1865",
+        "steamboat",
+        "Mississippi River"
+      ],
+      "requiredSources": [
+        {
+          "title": "Sultana disaster",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/articles/sultana-disaster.htm"
+        },
+        {
+          "title": "Sultana",
+          "publisher": "U.S. Army",
+          "url": "https://history.army.mil/"
+        },
+        {
+          "title": "Sultana explosion",
+          "publisher": "Smithsonian National Museum of American History",
+          "url": "https://americanhistory.si.edu/"
+        },
+        {
+          "title": "Sultana",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/today-in-history/april-27/"
+        },
+        {
+          "title": "Maritime disasters",
+          "publisher": "U.S. Coast Guard",
+          "url": "https://www.history.uscg.mil/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Sultana steamboat disaster 1865 Mississippi"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "eastland-disaster-1915",
+      "title": "The SS Eastland: 844 Dead When a Pleasure Boat Capsized in Chicago Harbor",
+      "hook": "Western Electric workers boarded for a picnic — the ship rolled over in 20 feet of water.",
+      "category": "Weird America",
+      "angle": "The 1915 Chicago disaster, design instability, trapped passengers, and reforms in load limits.",
+      "keywords": [
+        "Eastland",
+        "Chicago",
+        "1915",
+        "maritime"
+      ],
+      "requiredSources": [
+        {
+          "title": "Eastland disaster",
+          "publisher": "Chicago Historical Society",
+          "url": "https://www.chicagohistory.org/eastland/"
+        },
+        {
+          "title": "SS Eastland",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Eastland",
+          "publisher": "National Transportation Safety Board",
+          "url": "https://www.ntsb.gov/"
+        },
+        {
+          "title": "Eastland disaster",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/eastland-disaster-180978447/"
+        },
+        {
+          "title": "Maritime safety",
+          "publisher": "U.S. Coast Guard",
+          "url": "https://www.history.uscg.mil/"
+        }
+      ],
+      "imageSearchTerms": [
+        "SS Eastland disaster Chicago 1915"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "bath-school-disaster-1927",
+      "title": "The Bath School Disaster: When a Board Treasurer Bombed Michigan Children",
+      "hook": "Andrew Kehoe killed 38 elementary students and six adults — America’s deadliest school attack for decades.",
+      "category": "Crime",
+      "angle": "The 1927 bombing, financial motives, the dynamite-rigged building, and Kehoe’s final explosion.",
+      "keywords": [
+        "Bath School",
+        "Michigan",
+        "1927",
+        "bombing"
+      ],
+      "requiredSources": [
+        {
+          "title": "Bath School disaster",
+          "publisher": "Michigan State Police",
+          "url": "https://www.michigan.gov/msp"
+        },
+        {
+          "title": "Bath Consolidated School",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Bath School",
+          "publisher": "FBI",
+          "url": "https://www.fbi.gov/history/famous-cases"
+        },
+        {
+          "title": "Bath disaster",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Bath Michigan",
+          "publisher": "Michigan Historical Center",
+          "url": "https://www.michigan.gov/mhc"
+        }
+      ],
+      "imageSearchTerms": [
+        "Bath school bombing Michigan 1927 Kehoe"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "triangle-shirtwaist-fire-1911",
+      "title": "The Triangle Shirtwaist Fire: 146 Garment Workers Locked Inside a Burning Factory",
+      "hook": "Young women jumped from windows; the tragedy sparked labor law and fire exit reforms.",
+      "category": "Crime",
+      "angle": "The 1911 New York blaze, locked doors, the trial that acquitted owners, and the unions’ response.",
+      "keywords": [
+        "Triangle Shirtwaist",
+        "1911",
+        "labor",
+        "New York"
+      ],
+      "requiredSources": [
+        {
+          "title": "Triangle Shirtwaist Factory fire",
+          "publisher": "U.S. Department of Labor",
+          "url": "https://www.dol.gov/general/aboutdol/history/triangle"
+        },
+        {
+          "title": "Triangle fire",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/today-in-history/march-25/"
+        },
+        {
+          "title": "Triangle Shirtwaist",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Triangle fire",
+          "publisher": "Cornell University ILR School",
+          "url": "https://trianglefire.ilr.cornell.edu/"
+        },
+        {
+          "title": "Occupational safety",
+          "publisher": "Occupational Safety and Health Administration",
+          "url": "https://www.osha.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Triangle Shirtwaist fire 1911 New York factory"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "castle-bravo-fallout-1954",
+      "title": "Castle Bravo: When America’s Biggest H-Bomb Test Poisoned Pacific Islanders and Japanese Fishermen",
+      "hook": "The 1954 Bikini test was twice as powerful as predicted — radioactive ash rained on Rongelap and the Lucky Dragon.",
+      "category": "Military",
+      "angle": "U.S. Pacific testing, the 15-megaton miscalculation, downwind compensation fights, and nuclear diplomacy fallout.",
+      "keywords": [
+        "Castle Bravo",
+        "Bikini",
+        "1954",
+        "nuclear test"
+      ],
+      "requiredSources": [
+        {
+          "title": "Castle Bravo",
+          "publisher": "U.S. Department of Energy",
+          "url": "https://www.energy.gov/nnsa/nuclear-weapons-history"
+        },
+        {
+          "title": "Nuclear testing in the Pacific",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/research/military/nuclear-test"
+        },
+        {
+          "title": "Bikini Atoll",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/articles/bikini.htm"
+        },
+        {
+          "title": "Radiation exposure compensation",
+          "publisher": "Department of Justice",
+          "url": "https://www.justice.gov/civil/division/compensation-programs"
+        },
+        {
+          "title": "Castle Bravo",
+          "publisher": "Centers for Disease Control and Prevention",
+          "url": "https://www.cdc.gov/nceh/radiation/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Castle Bravo hydrogen bomb test Bikini 1954"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "haymarket-affair-1886",
+      "title": "The Haymarket Affair: A Bomb, a Riot, and the Labor Martyrs Who Shaped May Day",
+      "hook": "Chicago’s 1886 rally for the eight-hour day ended in police deaths, show trials, and international labor memory.",
+      "category": "Politics",
+      "angle": "The bomb thrower never identified, anarchist defendants, pardons, and why May 1 became a global workers’ day.",
+      "keywords": [
+        "Haymarket",
+        "1886",
+        "Chicago",
+        "labor"
+      ],
+      "requiredSources": [
+        {
+          "title": "Haymarket affair",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/today-in-history/may-04/"
+        },
+        {
+          "title": "Haymarket",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/articles/haymarket-affair.htm"
+        },
+        {
+          "title": "Haymarket martyrs",
+          "publisher": "Illinois State Archives",
+          "url": "https://www.ilsos.gov/archives/"
+        },
+        {
+          "title": "Labor history",
+          "publisher": "U.S. Department of Labor",
+          "url": "https://www.dol.gov/general/aboutdol/history"
+        },
+        {
+          "title": "Haymarket",
+          "publisher": "Chicago History Museum",
+          "url": "https://www.chicagohistory.org/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Haymarket affair 1886 Chicago labor bomb"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "whiskey-rebellion-1794",
+      "title": "The Whiskey Rebellion: When George Washington Led an Army Against Tax Protesters",
+      "hook": "Frontier distillers resisted Hamilton’s tax — and the President marched 13,000 troops into Pennsylvania.",
+      "category": "Revolution",
+      "angle": "The 1794 insurrection, federal authority tested, and how the crisis ended without major bloodshed.",
+      "keywords": [
+        "Whiskey Rebellion",
+        "1794",
+        "Washington",
+        "Pennsylvania"
+      ],
+      "requiredSources": [
+        {
+          "title": "Whiskey Rebellion",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/milestone-documents/whiskey-rebellion"
+        },
+        {
+          "title": "Whiskey Rebellion",
+          "publisher": "Mount Vernon",
+          "url": "https://www.mountvernon.org/library/digitalhistory/digital-encyclopedia/article/whiskey-rebellion"
+        },
+        {
+          "title": "Whiskey Rebellion",
+          "publisher": "U.S. Senate",
+          "url": "https://www.senate.gov/about/powers-procedures/investigations/whiskey-rebellion.htm"
+        },
+        {
+          "title": "Whiskey Rebellion",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/today-in-history/august-07/"
+        },
+        {
+          "title": "Early republic",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/fone/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Whiskey Rebellion 1794 Pennsylvania Washington"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    }
+  ]
 }

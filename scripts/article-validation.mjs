@@ -20,6 +20,15 @@ const CREDIBLE_PATTERNS = [
 
 const PLACEHOLDER_URL = [/example\.com/i, /placeholder/i, /lorem/i, /localhost/i];
 
+export function normalizeUrl(url) {
+  try {
+    const u = new URL(url.trim());
+    return `${u.protocol}//${u.hostname.replace(/^www\./, "")}${u.pathname.replace(/\/$/, "")}`.toLowerCase();
+  } catch {
+    return (url || "").trim().toLowerCase();
+  }
+}
+
 export function countWords(text) {
   return (text || "").split(/\s+/).filter(Boolean).length;
 }
@@ -40,7 +49,7 @@ export function countCredibleRefs(refs) {
   }).length;
 }
 
-export function validateStory(story) {
+export function validateStory(story, { allowedSources } = {}) {
   const errors = [];
   const content = story.content || "";
   const refs = story.references || [];
@@ -68,10 +77,47 @@ export function validateStory(story) {
     if (!r.publisher || r.publisher.length < 2) errors.push("Reference with missing publisher");
   }
 
+  if (allowedSources?.length) {
+    const allowed = new Set(allowedSources.map((s) => normalizeUrl(s.url)));
+    if (refs.length !== allowedSources.length) {
+      errors.push(`Expected ${allowedSources.length} curated references, got ${refs.length}`);
+    }
+    for (const r of refs) {
+      if (!allowed.has(normalizeUrl(r.url))) {
+        errors.push(`Reference URL not in curated list: ${r.url}`);
+      }
+    }
+  }
+
   return {
     ok: errors.length === 0,
     errors,
     stats: { words, refs: refs.length, credible, citations },
+  };
+}
+
+/** Replace model references with curated list; rebuild ## Sources in body. */
+export function enforceCuratedReferences(story, requiredSources) {
+  const references = requiredSources.map((s) => ({
+    title: s.title,
+    publisher: s.publisher,
+    url: s.url,
+    ...(s.year ? { year: s.year } : {}),
+  }));
+
+  let content = (story.content || "").trim();
+  content = content.replace(/\n##\s*Sources[\s\S]*$/i, "").trim();
+
+  const sourcesBlock = references
+    .map((r, i) => `${i + 1}. ${r.title} — *${r.publisher}*. [Link](${r.url})`)
+    .join("\n");
+
+  content = `${content}\n\n## Sources\n\n${sourcesBlock}`;
+
+  return {
+    ...story,
+    content,
+    references,
   };
 }
 

@@ -1,19 +1,41 @@
 # Daily Story Publishing — SeeStew
 
-SeeStew automatically generates and publishes one new 1500+ word factual U.S. history story every day via **GitHub Actions**. No manual labor required.
+SeeStew publishes one new 1500+ word factual U.S. history story daily via **GitHub Actions**, using a **curated topic/source queue**. The model writes the article; **sources are fixed in the queue** — the model cannot invent URLs.
 
 ---
 
 ## How It Works
 
-1. A GitHub Actions cron workflow runs daily at **10:00 UTC** (5:00 AM Eastern).
-2. It checks out the repo and runs `node scripts/generate-daily-story.mjs`.
-3. The script calls **OpenRouter** with `response_format: { type: "json_object" }` for structured output.
-4. It validates: 1500+ words, 4+ references (2+ credible .gov/.edu), inline citations, `## Sources` section.
-5. It searches the **Library of Congress** for a public-domain image (or saves `imagePrompt`).
-6. It saves `content/articles/<slug>.json` only if validation passes.
-7. The workflow commits and pushes the new file.
-8. **Hostinger auto-deploys** from `main`.
+1. GitHub Actions runs daily at **10:00 UTC** (5:00 AM Eastern).
+2. `npm run validate:queue` checks the queue file.
+3. `node scripts/generate-daily-story.mjs` picks the **first pending** topic from `content/story-queue.json`.
+4. OpenRouter writes the article using **only** the queue item’s `requiredSources` (4–6 HTTPS URLs).
+5. The script **replaces** any model references with the curated list and rebuilds `## Sources`.
+6. If under 1500 words, an **expansion call** targets 1800–2200 words (same sources).
+7. Validates word count, citations, and curated URLs.
+8. LOC image search uses `imageSearchTerms`; otherwise saves `imagePrompt`.
+9. Saves `content/articles/<slug>.json` and marks the queue item `published`.
+10. Commits **both** the article and `content/story-queue.json`.
+11. Hostinger auto-deploys from `main`.
+
+---
+
+## Story Queue (`content/story-queue.json`)
+
+Each item includes:
+
+| Field | Purpose |
+|-------|---------|
+| `id` | Slug / unique id |
+| `title`, `hook`, `category`, `angle`, `keywords` | Editorial brief |
+| `requiredSources` | 4–6 credible HTTPS sources (fixed) |
+| `imageSearchTerms` | LOC search query |
+| `status` | `pending` / `published` / `skipped` |
+| `publishedSlug`, `publishedAt` | Set after publish |
+
+**32 topics** are seeded (Black Sox, Teapot Dome, Bonus Army, Tulsa, MOVE, Ludlow, Wilmington coup, Lake Peigneur, Titan II, Tuskegee, Osage murders, Love Canal, Bath School, etc.).
+
+Add more items to the queue file anytime. Run `npm run init:queue` to merge new seed topics into an existing file.
 
 ---
 
@@ -21,133 +43,67 @@ SeeStew automatically generates and publishes one new 1500+ word factual U.S. hi
 
 | Secret | Value | Required |
 |--------|-------|----------|
-| `OPENROUTER_API_KEY` | Your OpenRouter API key | **Yes** |
-| `OPENROUTER_MODEL` | Recommended: `openai/gpt-4o-mini` | Recommended |
+| `OPENROUTER_API_KEY` | OpenRouter API key | **Yes** |
+| `OPENROUTER_MODEL` | `openai/gpt-4o-mini` (recommended) | Recommended |
 
-The workflow uses the built-in `GITHUB_TOKEN` for commits — no PAT needed.
-
-### Model Fallback Order
-
-If the primary model fails, the script tries (in order):
-
-1. `openai/gpt-4o-mini`
-2. `anthropic/claude-3.5-haiku`
-3. `google/gemini-2.0-flash-001` (last — can produce invalid JSON)
-
-Each model gets up to **2 attempts** (JSON repair or validation retry before switching).
+Fallback model in script: `anthropic/claude-3.5-haiku` (Gemini not used for daily JSON).
 
 ---
 
-## Troubleshooting Failed Actions
+## Troubleshooting
 
-### Malformed JSON (`Unterminated string`, `Bad control character`)
+### Malformed JSON
 
-- **Cause**: Model returned truncated or invalid JSON (often from output length limits or Gemini).
-- **Fix**: Set `OPENROUTER_MODEL=openai/gpt-4o-mini` in GitHub secrets.
-- The script now strips fences, extracts `{…}`, removes control characters, and can run a JSON repair pass.
+- Script strips fences, extracts `{…}`, removes control characters.
+- Expansion/retry uses `response_format: { type: "json_object" }`.
+- Set `OPENROUTER_MODEL=openai/gpt-4o-mini`.
 
-### Model too short (`Content is 848 words`)
+### Model too short / 0 references
 
-- **Cause**: Model stopped early or truncated inside the JSON string.
-- **Fix**: Script targets **1800+ words** in the prompt; retries with explicit failure reasons. Ensure OpenRouter credits allow full `max_tokens` (16384).
+- Sources come from the queue — **not** from the model.
+- `enforceCuratedReferences()` always injects the curated list before validation.
+- Expansion call runs if draft is under 1500 words.
 
-### Insufficient references (`Only 0 references`)
+### Insufficient credible sources
 
-- **Cause**: Truncated JSON before the `references` array, or model ignored schema.
-- **Fix**: Retry uses validation errors in the prompt. Do not save partial stories.
+- Queue items are validated with `npm run validate:queue` (2+ credible domains per item).
+- Fix sources in `content/story-queue.json`, not in the model prompt.
 
-### Provider / credits error
+### OpenRouter credits
 
-1. https://openrouter.ai/credits — add billing/credits
-2. https://openrouter.ai/models — confirm model availability
-3. Verify `OPENROUTER_API_KEY` in GitHub Actions secrets
+- https://openrouter.ai/credits
 
-### Validate existing articles locally
+### No story created (Action fails at commit)
 
-```bash
-npm run validate:articles
-```
-
-Prints per-article: slug, word count, reference count, citation count, pass/fail.
+- All pending topics may already have matching article files.
+- Queue empty or validation failed — read Action logs for the exact error.
 
 ---
 
-## Required Hostinger Env Vars
-
-| Variable | Purpose |
-|----------|---------|
-| `YOUTUBE_CHANNEL_ID` | YouTube data |
-| `YOUTUBE_API_KEY` | YouTube data |
-| `OPENROUTER_API_KEY` | Runtime API route fallback |
-| `OPENROUTER_MODEL` | `openai/gpt-4o-mini` recommended |
-| `CRON_SECRET` | Protects `/api/cron/publish` |
-| `PIPELINE_MAX_STORIES` | `1` for daily automation |
-| `NEXT_PUBLIC_ADSENSE_PUBLISHER_ID` | AdSense |
-| `NEXT_PUBLIC_ADSENSE_ENABLED` | AdSense |
-
----
-
-## How to Confirm Yesterday's Story Published
-
-1. GitHub → Actions → "Daily Story Generator" → green check
-2. New file in `content/articles/` with recent `createdAt`
-3. After Hostinger deploy: https://seestew.com/articles
-
----
-
-## What Happens If Validation Fails
-
-- Up to **2 attempts per model** across **3 models** (6 total attempts max).
-- JSON parse failure → repair pass or stricter JSON-only retry.
-- Validation failure → retry with explicit error list (word count, refs, citations).
-- **No bad JSON is committed** — workflow fails and exits 1.
-- Next scheduled run tries a new topic.
-
----
-
-## How Duplicates Are Avoided
-
-1. All existing titles passed to the model as "do NOT repeat".
-2. Slug checked before save.
-3. Duplicate slug → exit 1, no commit.
-
----
-
-## Running Locally
+## Local Commands
 
 ```bash
 export OPENROUTER_API_KEY="sk-or-..."
 export OPENROUTER_MODEL="openai/gpt-4o-mini"
 
-npm run publish:story
-npm run validate:articles
+npm run validate:queue      # check queue sources
+npm run publish:story       # generate next pending story
+npm run validate:articles   # check all saved articles
+npm run init:queue          # merge seed topics into queue file
 ```
 
 ---
 
-## Manual Trigger
+## Hostinger Env Vars
 
-Actions → "Daily Story Generator" → "Run workflow"
-
----
-
-## Why Not Hostinger Web Cron?
-
-Hostinger nginx times out (~30–60s) while AI generation takes longer → **504 Gateway Timeout**. GitHub Actions runs the script directly with no HTTP limit.
+Same as before: `YOUTUBE_*`, `OPENROUTER_*`, `CRON_SECRET`, `PIPELINE_MAX_STORIES=1`, AdSense vars. Daily automation is **GitHub Actions**, not Hostinger cron.
 
 ---
 
-## Deployment Flow
+## Deployment
 
 ```
-GitHub Actions (daily)
-  → generate + validate story JSON
-  → commit to main
-  → push
-
-Hostinger (auto-deploy)
-  → npm run build && npm start
-  → story live at /articles/[slug]
+GitHub Actions → article JSON + story-queue.json → push main → Hostinger deploy
 ```
 
 Stories in Git survive all redeploys.
