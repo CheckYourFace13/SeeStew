@@ -68,5 +68,5 @@ export const pipelineConfig = {
   openRouterApiKey: process.env.OPENROUTER_API_KEY ?? "",
   openRouterModel:
     process.env.OPENROUTER_MODEL ?? "deepseek/deepseek-chat",
-  maxStoriesPerRun: Number(process.env.PIPELINE_MAX_STORIES ?? "2"),
+  maxStoriesPerRun: Number(process.env.PIPELINE_MAX_STORIES ?? "1"),
 } as const;

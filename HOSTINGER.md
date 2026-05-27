@@ -59,7 +59,7 @@ Supports `npm start`, API cron, and server features.
    OPENROUTER_API_KEY
    OPENROUTER_MODEL=deepseek/deepseek-chat
    CRON_SECRET
-   PIPELINE_MAX_STORIES=2
+   PIPELINE_MAX_STORIES=1
    ```
 
 5. **Turn off Website Builder** for seestew.com  
@@ -68,12 +68,11 @@ Supports `npm start`, API cron, and server features.
 
 6. **SSL** — enable free SSL for seestew.com in hPanel (Let’s Encrypt).
 
-7. **Cron** (new stories twice daily)  
-   - hPanel → **Cron Jobs** (or use cron-job.org):  
-   ```
-   curl -s "https://seestew.com/api/cron/publish?secret=YOUR_CRON_SECRET"
-   ```
-   - New story pages use **ISR** (`revalidate` ~10 minutes) — they should appear **without a full rebuild**. If a new slug 404s after 15 minutes, run `npm run build && npm start` once on the server.
+7. **Daily Story Automation**  
+   - Primary method: **GitHub Actions** (see `DAILY-PUBLISHING.md`)  
+   - Stories are generated, committed to `main`, and Hostinger auto-deploys.  
+   - The Hostinger web cron (`/api/cron/publish`) is unreliable for AI generation due to nginx 504 timeout — use GitHub Actions instead.  
+   - New story pages use **ISR** (`revalidate` ~10 minutes) — they appear without a full rebuild after deploy.
 
 8. **Search Console**  
    - Submit sitemap: `https://seestew.com/sitemap.xml`  

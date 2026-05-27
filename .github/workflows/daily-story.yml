@@ -1,0 +1,46 @@
+name: Daily Story Generator
+
+on:
+  schedule:
+    # 10:00 UTC daily (5:00 AM Eastern)
+    - cron: "0 10 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate daily story
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ secrets.OPENROUTER_MODEL || 'deepseek/deepseek-chat' }}
+        run: node scripts/generate-daily-story.mjs
+
+      - name: Check for new story
+        id: check
+        run: |
+          if git diff --quiet content/articles/; then
+            echo "new_story=false" >> $GITHUB_OUTPUT
+          else
+            echo "new_story=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push
+        if: steps.check.outputs.new_story == 'true'
+        run: |
+          git config user.name "SeeStew Bot"
+          git config user.email "bot@seestew.com"
+          git add content/articles/
+          git commit -m "feat(stories): add daily auto-generated story [skip ci]"
+          git push
