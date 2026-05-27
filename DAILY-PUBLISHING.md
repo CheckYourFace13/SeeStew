@@ -23,10 +23,27 @@ Set these in your repo → Settings → Secrets and variables → Actions:
 
 | Secret | Value | Required |
 |--------|-------|----------|
-| `OPENROUTER_API_KEY` | Your OpenRouter API key | Yes |
-| `OPENROUTER_MODEL` | AI model (default: `deepseek/deepseek-chat`) | No |
+| `OPENROUTER_API_KEY` | Your OpenRouter API key | **Yes** |
+| `OPENROUTER_MODEL` | AI model (default: `openai/gpt-4o-mini`) | Recommended |
+
+**Recommended model**: `openai/gpt-4o-mini` — reliable, fast, and affordable.
 
 The workflow uses the built-in `GITHUB_TOKEN` for committing — no PAT needed.
+
+### Model Fallback
+
+If the primary model fails (provider error, out of credits, unavailable), the script automatically tries fallback models in order:
+
+1. `openai/gpt-4o-mini`
+2. `google/gemini-2.0-flash-001`
+3. `anthropic/claude-3.5-haiku`
+
+### If the Action Fails with "Provider returned error"
+
+1. Check OpenRouter credits: https://openrouter.ai/credits
+2. Verify model availability: https://openrouter.ai/models
+3. Ensure your API key has billing enabled
+4. Try setting `OPENROUTER_MODEL` to a different model in GitHub secrets
 
 ---
 

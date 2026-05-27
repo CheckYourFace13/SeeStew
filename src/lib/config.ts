@@ -64,9 +64,8 @@ export const youtubeConfig = {
 
 export const pipelineConfig = {
   cronSecret: process.env.CRON_SECRET ?? "",
-  /** https://openrouter.ai — default: DeepSeek (strong + low cost) */
   openRouterApiKey: process.env.OPENROUTER_API_KEY ?? "",
   openRouterModel:
-    process.env.OPENROUTER_MODEL ?? "deepseek/deepseek-chat",
+    process.env.OPENROUTER_MODEL ?? "openai/gpt-4o-mini",
   maxStoriesPerRun: Number(process.env.PIPELINE_MAX_STORIES ?? "1"),
 } as const;
