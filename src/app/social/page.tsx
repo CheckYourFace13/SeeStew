@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 
 export default function SocialPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-10 md:px-6">
+    <div className="page-shell">
       <JsonLd data={buildFaqJsonLd(socialFaqs)} />
 
       <header className="mb-10 max-w-2xl">

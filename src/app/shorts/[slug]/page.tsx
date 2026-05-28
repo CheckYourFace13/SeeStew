@@ -53,7 +53,7 @@ export default async function ShortWatchPage({ params }: Props) {
     .slice(0, 4);
 
   return (
-    <article className="mx-auto max-w-4xl px-4 py-10 md:px-6">
+    <article className="page-shell max-w-4xl">
       <JsonLd
         data={[
           buildBreadcrumbJsonLd([

@@ -3,7 +3,7 @@ import { siteConfig } from "@/lib/config";
 
 export default function NotFound() {
   return (
-    <div className="mx-auto max-w-lg px-4 py-20 text-center">
+    <div className="page-shell mx-auto max-w-lg py-20 text-center">
       <h1 className="font-heading text-4xl font-bold text-ink">Page not found</h1>
       <p className="mt-4 text-ink-muted">
         That URL may be from an older version of {siteConfig.name}. Try one of these:

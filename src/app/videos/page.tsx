@@ -20,7 +20,7 @@ export default async function VideosPage() {
   const videos = await getLongFormVideos();
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-10 md:px-6">
+    <div className="page-shell">
       <JsonLd
         data={buildBreadcrumbJsonLd([
           { name: "Home", url: siteConfig.url },

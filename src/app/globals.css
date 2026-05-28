@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+@source "../components/**/*.{js,ts,jsx,tsx}";
+@source "../app/**/*.{js,ts,jsx,tsx}";
+
 @theme {
   /* Hostinger / Zyro design tokens */
   --color-brand-dark: #1f1346;
@@ -80,7 +83,15 @@ h6,
 }
 
 .container-page {
-  @apply mx-auto max-w-6xl px-4 md:px-6;
+  @apply mx-auto w-full max-w-6xl px-4 md:px-6;
+}
+
+.page-shell {
+  @apply mx-auto w-full max-w-6xl px-4 py-10 md:px-6 md:py-12;
+}
+
+.page-shell-narrow {
+  @apply mx-auto w-full max-w-3xl px-4 py-10 md:px-6 md:py-12;
 }
 
 .prose-history {

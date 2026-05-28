@@ -49,7 +49,7 @@ export default async function VideoWatchPage({ params }: Props) {
     .slice(0, 3);
 
   return (
-    <article className="mx-auto max-w-6xl px-4 py-10 md:px-6">
+    <article className="page-shell">
       <JsonLd
         data={[
           buildBreadcrumbJsonLd([

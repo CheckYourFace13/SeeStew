@@ -10,6 +10,7 @@ import { RelatedContent } from "@/components/RelatedContent";
 import { StoryHero } from "@/components/StoryHero";
 import { VideoPlayer } from "@/components/VideoPlayer";
 import { getAllArticles, getArticle, getArticlesByCategory } from "@/lib/articles";
+import { stripMarkdownSourcesSection } from "@/lib/article-content";
 import { siteConfig } from "@/lib/config";
 import {
   buildArticleJsonLd,
@@ -66,8 +67,13 @@ export default async function ArticlePage({ params }: Props) {
   const relatedStories = getArticlesByCategory(article.category);
   const relatedVideos = (await getLongFormVideos()).slice(0, 4);
 
+  const bodyContent =
+    article.references?.length
+      ? stripMarkdownSourcesSection(article.content)
+      : article.content;
+
   return (
-    <article className="mx-auto max-w-3xl px-4 py-10 md:px-6" itemScope itemType="https://schema.org/Article">
+    <article className="page-shell-narrow" itemScope itemType="https://schema.org/Article">
       <JsonLd
         data={[
           buildBreadcrumbJsonLd([
@@ -133,7 +139,7 @@ export default async function ArticlePage({ params }: Props) {
       )}
 
       <div className="mt-10" itemProp="articleBody">
-        <ArticleBody content={article.content} />
+        <ArticleBody content={bodyContent} />
       </div>
 
       {article.references && article.references.length > 0 && (

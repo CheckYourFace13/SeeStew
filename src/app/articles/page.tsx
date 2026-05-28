@@ -21,7 +21,7 @@ export default async function ArticlesPage() {
   const thumbByVideoId = new Map(videos.map((v) => [v.id, v.thumbnail]));
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-10 md:px-6">
+    <div className="page-shell">
       <header className="mb-10 max-w-3xl">
         <h1 className="font-heading text-4xl font-bold text-ink md:text-5xl">
           Unbelievable True Stories from American History

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-10 md:px-6">
+    <div className="page-shell-narrow">
       <h1 className="font-heading text-4xl font-bold text-ink">About SeeStew</h1>
       <div className="prose-history mt-8">
         <p>

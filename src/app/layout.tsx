@@ -104,7 +104,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://i.ytimg.com" />
         <link rel="dns-prefetch" href="https://www.youtube.com" />
       </head>
-      <body className="flex min-h-screen flex-col">
+      <body className={`${outfit.variable} ${inter.variable} flex min-h-screen flex-col bg-surface text-ink antialiased`}>
         <JsonLd data={[buildWebSiteJsonLd(), buildOrganizationJsonLd()]} />
         <GoogleAnalytics />
         <AdSenseScript />

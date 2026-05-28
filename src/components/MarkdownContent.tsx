@@ -53,7 +53,7 @@ export function MarkdownContent({ content }: { content: string }) {
   const blocks = content.trim().split(/\n\n+/);
 
   return (
-    <div className="prose-history">
+    <>
       {blocks.map((block, i) => {
         const trimmed = block.trim();
         if (!trimmed) return null;
@@ -81,7 +81,7 @@ export function MarkdownContent({ content }: { content: string }) {
         if (trimmed.startsWith("- ")) {
           const items = trimmed.split("\n").map((l) => l.replace(/^-\s+/, ""));
           return (
-            <ul key={i}>
+            <ul key={i} className="list-disc pl-6">
               {items.map((item, j) => (
                 <li key={j}>{parseInline(item)}</li>
               ))}
@@ -91,6 +91,6 @@ export function MarkdownContent({ content }: { content: string }) {
 
         return <p key={i}>{parseInline(trimmed)}</p>;
       })}
-    </div>
+    </>
   );
 }
