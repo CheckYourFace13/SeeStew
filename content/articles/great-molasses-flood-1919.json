@@ -28,9 +28,9 @@
     }
   ],
   "image": {
-    "card": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/67500/67584v.jpg",
-    "hero": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/67500/67584v.jpg",
-    "alt": "Aftermath of the Great Molasses Flood in Boston's North End, January 1919",
+    "card": "/stories/great-molasses-flood-1919/card.jpg",
+    "hero": "/stories/great-molasses-flood-1919/card.jpg",
+    "alt": "Flooded streets and wreckage after the Great Molasses Flood in Boston, January 1919",
     "credit": "Library of Congress",
     "sourcePageUrl": "https://www.loc.gov/pictures/item/2017658191/"
   },

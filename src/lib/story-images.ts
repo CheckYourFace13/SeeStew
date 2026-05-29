@@ -47,9 +47,19 @@ export const STORY_IMAGE_HOSTS = [
   "catalog.archives.gov",
 ];
 
+const BLOCKED_STORY_IMAGE_HOSTS = ["guides.loc.gov"];
+
+export function isPlaceholderStoryImage(path: string): boolean {
+  return path.includes("/stories/defaults/") || path.endsWith(".svg");
+}
+
 export function isAllowedStoryImageUrl(url: string): boolean {
   try {
     const host = new URL(url).hostname.replace(/^www\./, "");
+    if (BLOCKED_STORY_IMAGE_HOSTS.some((h) => host === h || host.endsWith(`.${h}`))) {
+      return false;
+    }
+    if (url.includes("guides.loc.gov") || url.includes("/ndnp:")) return false;
     return STORY_IMAGE_HOSTS.some((h) => host === h || host.endsWith(`.${h}`));
   } catch {
     return false;
@@ -128,13 +138,28 @@ export function resolveStoryImage(
     };
   }
 
-  if (img?.card && img.card.startsWith("https://") && isAllowedStoryImageUrl(img.card)) {
+  if (
+    img?.card &&
+    img.card.startsWith("https://") &&
+    !isPlaceholderStoryImage(img.card) &&
+    isAllowedStoryImageUrl(img.card)
+  ) {
     return {
       src: img.card,
       alt,
       credit: img.credit ?? "Library of Congress",
       sourcePageUrl: img.sourcePageUrl,
       isRemote: true,
+    };
+  }
+
+  if (img?.hero && localCardExists(img.hero)) {
+    return {
+      src: img.hero,
+      alt,
+      credit: img.credit,
+      sourcePageUrl: img.sourcePageUrl,
+      isRemote: false,
     };
   }
 

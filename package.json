@@ -11,7 +11,8 @@
     "publish:story": "node scripts/generate-daily-story.mjs",
     "validate:articles": "node scripts/validate-articles.mjs",
     "validate:queue": "node scripts/validate-queue.mjs",
-    "init:queue": "node scripts/init-story-queue.mjs"
+    "init:queue": "node scripts/init-story-queue.mjs",
+    "check:story-images": "npx --yes tsx scripts/check-story-images.ts"
   },
   "dependencies": {
     "next": "^15.3.2",

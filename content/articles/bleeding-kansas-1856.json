@@ -28,9 +28,9 @@
     }
   ],
   "image": {
-    "card": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/19400/19468v.jpg",
-    "hero": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/19400/19468v.jpg",
-    "alt": "Political cartoon depicting the caning of Senator Charles Sumner by Preston Brooks, 1856",
+    "card": "/stories/bleeding-kansas-1856/card.jpg",
+    "hero": "/stories/bleeding-kansas-1856/card.jpg",
+    "alt": "Political cartoon of the caning of Senator Charles Sumner, a flashpoint in Bleeding Kansas",
     "credit": "Library of Congress",
     "sourcePageUrl": "https://www.loc.gov/pictures/item/2008661769/"
   },

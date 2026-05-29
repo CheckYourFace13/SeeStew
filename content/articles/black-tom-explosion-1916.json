@@ -28,9 +28,9 @@
     }
   ],
   "image": {
-    "card": "https://tile.loc.gov/storage-services/service/pnp/ggbain/21500/21527v.jpg",
-    "hero": "https://tile.loc.gov/storage-services/service/pnp/ggbain/21500/21527v.jpg",
-    "alt": "Black Tom explosion aftermath — Jersey City waterfront, 1916",
+    "card": "/stories/black-tom-explosion-1916/card.jpg",
+    "hero": "/stories/black-tom-explosion-1916/card.jpg",
+    "alt": "Aftermath of the Black Tom Island munitions explosion in New York Harbor, July 1916",
     "credit": "Library of Congress",
     "sourcePageUrl": "https://www.loc.gov/pictures/item/2014698379/"
   },

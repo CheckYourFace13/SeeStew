@@ -28,9 +28,9 @@
     }
   ],
   "image": {
-    "card": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/75200/75243v.jpg",
-    "hero": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/75200/75243v.jpg",
-    "alt": "Searchlights over Los Angeles during the Battle of Los Angeles, February 1942",
+    "card": "/stories/battle-of-los-angeles-1942/card.jpg",
+    "hero": "/stories/battle-of-los-angeles-1942/card.jpg",
+    "alt": "Searchlights and anti-aircraft guns firing over Los Angeles during the February 1942 air-raid scare",
     "credit": "Library of Congress",
     "sourcePageUrl": "https://www.loc.gov/pictures/item/2017645604/"
   },

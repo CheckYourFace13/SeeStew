@@ -28,9 +28,9 @@
     }
   ],
   "image": {
-    "card": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/18700/18794v.jpg",
-    "hero": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/18700/18794v.jpg",
-    "alt": "Aftermath of the Johnstown Flood, 1889 — debris field and destroyed buildings",
+    "card": "/stories/johnstown-flood-1889/card.jpg",
+    "hero": "/stories/johnstown-flood-1889/card.jpg",
+    "alt": "Debris and destruction in Johnstown, Pennsylvania, after the 1889 dam collapse flood",
     "credit": "Library of Congress",
     "sourcePageUrl": "https://www.loc.gov/pictures/item/2017660546/"
   },
