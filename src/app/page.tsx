@@ -5,6 +5,7 @@ import { InstagramFeed } from "@/components/InstagramFeed";
 import { JsonLd } from "@/components/JsonLd";
 import { Logo } from "@/components/Logo";
 import { SocialLinks } from "@/components/SocialLinks";
+import { PlatformIcon, SocialInlineLink } from "@/components/SocialIcons";
 import { VideoCard } from "@/components/VideoCard";
 import { getAllArticles } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
@@ -40,12 +41,14 @@ export default async function HomePage() {
               Watch videos
             </Link>
             <a
-              href={siteConfig.social.youtubeSubscribe}
+              href={siteConfig.social.youtubeSubscribeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-outline"
+              aria-label="SeeStew on YouTube"
+              className="btn-outline inline-flex items-center gap-2"
             >
-              Subscribe on YouTube
+              <PlatformIcon platform="youtube" className="h-5 w-5" />
+              <span>@SeeStew</span>
             </a>
           </div>
         </div>
@@ -60,14 +63,9 @@ export default async function HomePage() {
           </h2>
           <p className="mt-2 max-w-2xl text-ink-muted">
             Long-form episodes from{" "}
-            <a
-              href={siteConfig.social.youtube}
-              className="link-nav font-medium"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              @SeeStew on YouTube
-            </a>
+            <SocialInlineLink platform="youtube" className="link-nav !font-medium">
+              @SeeStew
+            </SocialInlineLink>
             . Watch here or on the channel.
           </p>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -91,14 +89,13 @@ export default async function HomePage() {
             </h2>
             <p className="mt-2 text-ink-muted">
               From{" "}
-              <a
-                href={siteConfig.social.youtubeShorts}
-                className="link-nav font-medium"
-                target="_blank"
-                rel="noopener noreferrer"
+              <SocialInlineLink
+                platform="youtube"
+                href={siteConfig.social.youtubeShortsUrl}
+                className="link-nav !font-medium"
               >
                 YouTube Shorts
-              </a>
+              </SocialInlineLink>
             </p>
             <div className="mt-8 flex gap-4 overflow-x-auto pb-2">
               {shorts.map((video) => (

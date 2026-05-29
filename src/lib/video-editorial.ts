@@ -12,13 +12,13 @@ The film above walks through TR's ranch years, his fights with trusts, and the f
 
 In 1565 Pedro Menéndez destroyed the French post and founded St. Augustine. The clash was about religion, empire, and who controlled the Atlantic coast.
 
-If you want more on early colonial rivalry, subscribe on [YouTube](${siteConfig.social.youtubeSubscribe}) or catch the short version on [@see.stew](${siteConfig.social.instagram}).`,
+If you want more on early colonial rivalry, subscribe on [YouTube](${siteConfig.social.youtubeSubscribeUrl}) or catch the short version on [@see.stew](${siteConfig.social.instagramUrl}).`,
 
   HCzHfSU_95E: `Antonio Pigafetta sailed with Magellan and lived to write one of the only eyewitness accounts of the first voyage around the world. His notes describe islands, rulers, and shipboard discipline in detail most officials never bothered to record.
 
 Magellan died in the Philippines. Pigafetta made it home to Italy and finished the journal that historians still cite.
 
-The full piece runs above. Clips from the same story run on [Instagram](${siteConfig.social.instagram}) and [TikTok](${siteConfig.social.tiktok}).`,
+The full piece runs above. Clips from the same story run on [Instagram](${siteConfig.social.instagramUrl}) and [TikTok](${siteConfig.social.tiktokUrl}).`,
 };
 
 function paragraphsFromDescription(description: string): string {
@@ -43,8 +43,8 @@ function defaultEditorial(video: YouTubeVideo): string {
   const fromDesc = paragraphsFromDescription(video.description);
   const lead =
     video.format === "short"
-      ? `This is a SeeStew short on **${video.title}**. It is pulled straight from our [YouTube channel](${siteConfig.social.youtube}) and plays here so you can watch without switching apps.`
-      : `**${video.title}** is a SeeStew documentary on American history. We host it here with notes and links; the upload also lives on [YouTube](${siteConfig.social.youtubeSubscribe}) where you can subscribe for the next release.`;
+      ? `This is a SeeStew short on **${video.title}**. It is pulled straight from our [YouTube channel](${siteConfig.social.youtubeUrl}) and plays here so you can watch without switching apps.`
+      : `**${video.title}** is a SeeStew documentary on American history. We host it here with notes and links; the upload also lives on [YouTube](${siteConfig.social.youtubeSubscribeUrl}) where you can subscribe for the next release.`;
 
   const body =
     fromDesc ||
@@ -52,7 +52,7 @@ function defaultEditorial(video: YouTubeVideo): string {
       ? "We post these when a story needs a quick hook before the full episode goes up. Check the long-form section on this site or the main channel feed for the complete version."
       : "The episode covers the people, laws, and fights involved, with sources called out in the video description on YouTube.");
 
-  const footer = `More on this period is in our [articles](/articles). Follow [@see.stew](${siteConfig.social.instagram}) on Instagram and [TikTok](${siteConfig.social.tiktok}) for daily clips.`;
+  const footer = `More on this period is in our [articles](/articles). Follow [@see.stew](${siteConfig.social.instagramUrl}) on Instagram and [TikTok](${siteConfig.social.tiktokUrl}) for daily clips.`;
 
   return `${lead}\n\n${body}\n\n${footer}`;
 }

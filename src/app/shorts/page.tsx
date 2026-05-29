@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { SocialInlineLink } from "@/components/SocialIcons";
 import { VideoCard } from "@/components/VideoCard";
 import { siteConfig } from "@/lib/config";
 import { getShortFormVideos } from "@/lib/youtube";
@@ -22,34 +23,14 @@ export default async function ShortsPage() {
       <header className="mb-10 max-w-2xl">
         <h1 className="font-heading text-4xl font-bold text-ink">Shorts</h1>
         <p className="mt-3 text-lg text-ink-muted">
-          Quick clips pulled from{" "}
-          <a
-            href={siteConfig.social.youtubeShorts}
-            className="text-brand-mid underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          Quick clips from{" "}
+          <SocialInlineLink platform="youtube" href={siteConfig.social.youtubeShortsUrl}>
             @SeeStew Shorts
-          </a>
-          . Same stories also post on{" "}
-          <a
-            href={siteConfig.social.instagram}
-            className="text-brand-mid underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Instagram
-          </a>{" "}
-          and{" "}
-          <a
-            href={siteConfig.social.tiktok}
-            className="text-brand-mid underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            TikTok
-          </a>
-          .
+          </SocialInlineLink>
+          . Same stories
+          also post on{" "}
+          <SocialInlineLink platform="instagram">Instagram</SocialInlineLink> and{" "}
+          <SocialInlineLink platform="tiktok">TikTok</SocialInlineLink>.
         </p>
       </header>
 
@@ -57,16 +38,12 @@ export default async function ShortsPage() {
 
       {shorts.length === 0 ? (
         <p className="mt-10 text-ink-muted">
-          No shorts in the feed yet. Add <code className="text-brand-mid">YOUTUBE_CHANNEL_ID</code> and{" "}
-          <code className="text-brand-mid">YOUTUBE_API_KEY</code> to pull them automatically, or check{" "}
-          <a
-            href={siteConfig.social.youtubeShorts}
-            className="underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            YouTube
-          </a>
+          No shorts in the feed yet. Add <code className="text-brand-mid">YOUTUBE_CHANNEL_ID</code>{" "}
+          and <code className="text-brand-mid">YOUTUBE_API_KEY</code> to pull them automatically, or
+          check{" "}
+          <SocialInlineLink platform="youtube" href={siteConfig.social.youtubeShortsUrl}>
+            YouTube Shorts
+          </SocialInlineLink>
           .
         </p>
       ) : (

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { JsonLd } from "@/components/JsonLd";
+import { SocialInlineLink } from "@/components/SocialIcons";
 import { VideoCard } from "@/components/VideoCard";
 import { siteConfig } from "@/lib/config";
 import { buildBreadcrumbJsonLd } from "@/lib/seo";
@@ -35,15 +36,7 @@ export default async function VideosPage() {
           The wild, weird, and unforgettable side of the American past — told in full episodes you
           can watch right here. Bizarre disasters, political meltdowns, near-misses, and moments
           that sound like fiction until you hear the whole story. Also on{" "}
-          <a
-            href={siteConfig.social.youtubeVideos}
-            className="font-semibold text-brand-mid underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @SeeStew
-          </a>
-          .
+          <SocialInlineLink platform="youtube">@SeeStew</SocialInlineLink>.
         </p>
       </header>
 
@@ -52,15 +45,8 @@ export default async function VideosPage() {
       {videos.length === 0 ? (
         <p className="mt-10 text-ink-muted">
           Videos are loading — visit{" "}
-          <a
-            href={siteConfig.social.youtubeVideos}
-            className="font-semibold text-brand-mid underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            YouTube @SeeStew
-          </a>{" "}
-          in the meantime.
+          <SocialInlineLink platform="youtube">@SeeStew on YouTube</SocialInlineLink> in the
+          meantime.
         </p>
       ) : (
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

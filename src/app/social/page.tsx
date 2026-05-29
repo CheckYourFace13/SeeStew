@@ -5,6 +5,7 @@ import { FaqSection } from "@/components/FaqSection";
 import { InstagramFeed } from "@/components/InstagramFeed";
 import { JsonLd } from "@/components/JsonLd";
 import { SocialLinks } from "@/components/SocialLinks";
+import { SocialInlineLink } from "@/components/SocialIcons";
 import { siteConfig } from "@/lib/config";
 import { buildFaqJsonLd } from "@/lib/seo";
 
@@ -49,14 +50,12 @@ export default function SocialPage() {
         <ul className="mt-6 space-y-4 text-ink-muted">
           <li>
             <strong className="text-ink">YouTube</strong> —{" "}
-            <a
-              href={siteConfig.social.youtubeSubscribe}
-              className="text-brand-mid underline"
-              target="_blank"
-              rel="noopener noreferrer"
+            <SocialInlineLink
+              platform="youtube"
+              href={siteConfig.social.youtubeSubscribeUrl}
             >
-              Subscribe @SeeStew
-            </a>{" "}
+              @SeeStew
+            </SocialInlineLink>{" "}
             for full episodes.
           </li>
           <li>

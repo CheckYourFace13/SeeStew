@@ -1,4 +1,5 @@
-import { siteConfig } from "@/lib/config";
+import { SocialIconLinks } from "@/components/SocialIcons";
+import { youtubeEmbedUrl, youtubeWatchUrlFromId } from "@/lib/youtube-id";
 import { youtubeWatchUrl } from "@/lib/youtube";
 
 type VideoPlayerProps = {
@@ -7,8 +8,29 @@ type VideoPlayerProps = {
 };
 
 export function VideoPlayer({ videoId, title }: VideoPlayerProps) {
-  const embedUrl = `https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1`;
-  const watchUrl = youtubeWatchUrl(videoId);
+  const embedUrl = youtubeEmbedUrl(videoId);
+  const watchUrl = youtubeWatchUrlFromId(videoId) ?? youtubeWatchUrl(videoId);
+
+  if (!embedUrl) {
+    return (
+      <div className="space-y-4">
+        <div className="rounded-xl border border-brand-wash bg-brand-wash/50 p-8 text-center">
+          <p className="text-ink-muted">
+            This video could not be embedded. Open it on YouTube instead.
+          </p>
+          <a
+            href={watchUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary mt-4 inline-flex"
+          >
+            Open on YouTube
+          </a>
+        </div>
+        <SocialIconLinks variant="inline" />
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-4">
@@ -22,7 +44,7 @@ export function VideoPlayer({ videoId, title }: VideoPlayerProps) {
           loading="lazy"
         />
       </div>
-      <div className="flex flex-wrap gap-3">
+      <div className="flex flex-wrap items-center gap-3">
         <a
           href={watchUrl}
           target="_blank"
@@ -31,30 +53,7 @@ export function VideoPlayer({ videoId, title }: VideoPlayerProps) {
         >
           Open on YouTube
         </a>
-        <a
-          href={siteConfig.social.youtubeSubscribe}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center rounded-lg border border-brand-wash px-4 py-2 text-sm font-semibold text-brand-primary hover:bg-brand-wash"
-        >
-          Subscribe
-        </a>
-        <a
-          href={siteConfig.social.instagram}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center rounded-lg border border-brand-wash px-4 py-2 text-sm font-semibold text-brand-primary hover:bg-brand-wash"
-        >
-          Instagram
-        </a>
-        <a
-          href={siteConfig.social.tiktok}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center rounded-lg border border-brand-wash px-4 py-2 text-sm font-semibold text-brand-primary hover:bg-brand-wash"
-        >
-          TikTok
-        </a>
+        <SocialIconLinks variant="inline" />
       </div>
     </div>
   );

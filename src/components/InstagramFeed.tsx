@@ -1,4 +1,4 @@
-import { siteConfig } from "@/lib/config";
+import { SocialInlineLink } from "@/components/SocialIcons";
 
 const INSTAGRAM_REELS = [
   {
@@ -36,14 +36,9 @@ export function InstagramFeed() {
       </h2>
       <p className="mt-2 text-ink-muted">
         Reels on{" "}
-        <a
-          href={siteConfig.social.instagram}
-          className="link-nav font-medium"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <SocialInlineLink platform="instagram" className="link-nav !font-medium">
           @see.stew
-        </a>
+        </SocialInlineLink>
       </p>
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

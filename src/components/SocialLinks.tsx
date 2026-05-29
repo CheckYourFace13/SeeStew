@@ -1,66 +1,68 @@
+import { SocialIconLinks } from "@/components/SocialIcons";
 import { siteConfig } from "@/lib/config";
 
-const platforms = [
+type PlatformCard = {
+  id: "youtube" | "instagram" | "tiktok";
+  href: string;
+  name: string;
+  description: string;
+};
+
+const cards: PlatformCard[] = [
   {
+    id: "youtube",
+    href: siteConfig.social.youtubeSubscribeUrl,
     name: "YouTube",
-    href: siteConfig.social.youtubeSubscribe,
     description: "Full documentaries and weekly uploads",
-    cta: "Subscribe on YouTube",
   },
   {
+    id: "instagram",
+    href: siteConfig.social.instagramUrl,
     name: "Instagram",
-    href: siteConfig.social.instagram,
     description: "Daily reels on American history",
-    cta: "Follow @see.stew",
   },
   {
+    id: "tiktok",
+    href: siteConfig.social.tiktokUrl,
     name: "TikTok",
-    href: siteConfig.social.tiktok,
     description: "Quick history clips",
-    cta: "Follow @see.stew",
-  },
-  {
-    name: "Facebook",
-    href: siteConfig.social.facebook,
-    description: "Updates and community",
-    cta: "Follow on Facebook",
   },
 ];
 
 export function SocialLinks({ compact = false }: { compact?: boolean }) {
   if (compact) {
-    return (
-      <div className="flex flex-wrap gap-2">
-        {platforms.map((p) => (
-          <a
-            key={p.name}
-            href={p.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-lg bg-brand-bright px-4 py-2 text-sm font-medium text-white hover:bg-brand-mid"
-          >
-            {p.name}
-          </a>
-        ))}
-      </div>
-    );
+    return <SocialIconLinks variant="card" />;
   }
 
   return (
-    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      {platforms.map((p) => (
+    <div className="grid gap-6 sm:grid-cols-3">
+      {cards.map((p) => (
         <a
-          key={p.name}
+          key={p.id}
           href={p.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col rounded-xl border border-surface-muted bg-surface p-6 text-center shadow-sm transition hover:border-brand-bright hover:shadow-md"
+          aria-label={`SeeStew on ${p.name}`}
+          className="flex flex-col items-center rounded-xl border border-surface-muted bg-surface p-6 text-center shadow-sm transition hover:border-brand-bright hover:shadow-md"
         >
-          <p className="font-heading text-lg font-semibold text-brand-primary">{p.name}</p>
-          <p className="mt-2 flex-1 text-sm text-ink-muted">{p.description}</p>
-          <span className="mt-4 text-sm font-medium text-brand-bright">{p.cta} →</span>
+          <SocialIconLinks variant="card" include={[p.id]} className="pointer-events-none" />
+          <p className="mt-3 font-heading text-lg font-semibold text-brand-primary">{p.name}</p>
+          <p className="mt-2 text-sm text-ink-muted">{p.description}</p>
         </a>
       ))}
+      <a
+        href={siteConfig.social.facebookUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="SeeStew on Facebook"
+        className="flex flex-col items-center rounded-xl border border-surface-muted bg-surface p-6 text-center shadow-sm transition hover:border-brand-bright hover:shadow-md"
+      >
+        <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-bright text-lg font-bold text-white">
+          f
+        </span>
+        <p className="mt-3 font-heading text-lg font-semibold text-brand-primary">Facebook</p>
+        <p className="mt-2 text-sm text-ink-muted">Updates and community</p>
+      </a>
     </div>
   );
 }

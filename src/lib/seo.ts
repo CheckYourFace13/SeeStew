@@ -78,9 +78,9 @@ export function buildOrganizationJsonLd() {
       "US historical documentaries",
     ],
     sameAs: [
-      siteConfig.social.youtube,
-      siteConfig.social.instagram,
-      siteConfig.social.tiktok,
+      siteConfig.social.youtubeUrl,
+      siteConfig.social.instagramUrl,
+      siteConfig.social.tiktokUrl,
     ],
   };
 }

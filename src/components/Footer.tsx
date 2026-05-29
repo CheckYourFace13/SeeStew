@@ -1,14 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FooterNewsletter } from "@/components/FooterNewsletter";
+import { SocialIconLinks } from "@/components/SocialIcons";
 import { siteConfig } from "@/lib/config";
-
-const socials = [
-  { name: "YouTube", href: siteConfig.social.youtube },
-  { name: "Instagram", href: siteConfig.social.instagram },
-  { name: "TikTok", href: siteConfig.social.tiktok },
-  { name: "Facebook", href: siteConfig.social.facebook },
-];
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -49,20 +43,12 @@ export function Footer() {
           <p className="mt-3 text-sm text-brand-meteorite-light/90">
             Follow SeeStew for new history videos and daily clips.
           </p>
-          <ul className="mt-4 flex flex-wrap gap-3">
-            {socials.map((s) => (
-              <li key={s.name}>
-                <a
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-lg bg-white/10 px-3 py-2 text-sm font-medium transition hover:bg-brand-bright"
-                >
-                  {s.name}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div className="mt-4">
+            <SocialIconLinks
+              variant="header"
+              className="[&_a]:text-brand-meteorite-light [&_a:hover]:bg-white/10 [&_a:hover]:text-white"
+            />
+          </div>
         </div>
 
         <div id="subscribe">
@@ -70,7 +56,7 @@ export function Footer() {
             Engage
           </p>
           <p className="mt-3 text-sm text-brand-meteorite-light/90">
-            Subscribe for interesting content
+            Get new videos on YouTube
           </p>
           <FooterNewsletter />
           <p className="mt-4 text-sm">

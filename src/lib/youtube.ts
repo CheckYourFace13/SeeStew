@@ -1,9 +1,10 @@
 import { youtubeConfig } from "./config";
+import { isValidYouTubeVideoId, parseYouTubeVideoId } from "./youtube-id";
 
 export type VideoFormat = "long" | "short";
 
-/** Minimum seconds for /videos (2 minutes). */
-export const LONG_VIDEO_MIN_SECONDS = 120;
+/** Shorts are at most 60 seconds. */
+export const SHORT_MAX_SECONDS = 60;
 
 export type YouTubeVideo = {
   id: string;
@@ -68,43 +69,57 @@ function parseIsoDuration(iso: string): number {
   );
 }
 
+function normalizeVideoId(raw: string): string | null {
+  return parseYouTubeVideoId(raw) ?? (isValidYouTubeVideoId(raw.trim()) ? raw.trim() : null);
+}
+
+/** True when a feed/API URL path is a YouTube Short. */
+export function urlLooksLikeShort(url?: string): boolean {
+  if (!url) return false;
+  return /youtube\.com\/shorts\//i.test(url) || /youtu\.be\/shorts\//i.test(url);
+}
+
+/** Signals for full episodes (used when duration is unavailable). */
+export function looksLikeLongForm(title: string, description = ""): boolean {
+  const text = `${title} ${description}`.toLowerCase();
+  return (
+    /\b(documentary|full episode|episode \d|part \d|\d+\s*min(ute)?s?|\d+\s*hour)\b/i.test(
+      text
+    ) || text.includes("watch the full")
+  );
+}
+
 /** Title/description signals for YouTube Shorts. */
 export function looksLikeShort(title: string, description = ""): boolean {
   const text = `${title} ${description}`.toLowerCase();
   return (
     text.includes("#shorts") ||
     text.includes("youtube short") ||
-    (/\bshorts?\b/i.test(title) && title.length < 72)
+    /\bshorts?\b/i.test(text) ||
+    (title.length > 0 && title.length < 95 && !looksLikeLongForm(title, description))
   );
 }
 
-/** True when video belongs on /videos (≥2 min, not a Short). */
-export function isLongFormVideo(video: YouTubeVideo): boolean {
-  if (looksLikeShort(video.title, video.description)) return false;
-  if (video.durationSeconds >= LONG_VIDEO_MIN_SECONDS) return true;
-  // Unknown duration: never place on /videos (prevents Shorts leaking via RSS)
-  return false;
-}
-
-/** True when video belongs on /shorts. Catches everything that isn't long-form. */
-export function isShortFormVideo(video: YouTubeVideo): boolean {
-  if (looksLikeShort(video.title, video.description)) return true;
-  if (video.durationSeconds > 0 && video.durationSeconds < LONG_VIDEO_MIN_SECONDS) return true;
-  // Unknown duration (0) without Short signals — put on /shorts as safe fallback
-  // rather than losing it entirely. This prevents orphaned videos.
-  if (video.durationSeconds === 0) return true;
-  return false;
-}
-
-function classifyFormat(
+export function classifyFormat(
   durationSeconds: number,
   title: string,
-  description: string
+  description: string,
+  sourceUrl?: string
 ): VideoFormat {
+  if (urlLooksLikeShort(sourceUrl)) return "short";
   if (looksLikeShort(title, description)) return "short";
-  if (durationSeconds >= LONG_VIDEO_MIN_SECONDS) return "long";
-  if (durationSeconds > 0 && durationSeconds < LONG_VIDEO_MIN_SECONDS) return "short";
-  return "short";
+  if (durationSeconds > 0 && durationSeconds <= SHORT_MAX_SECONDS) return "short";
+  if (durationSeconds > SHORT_MAX_SECONDS) return "long";
+  if (looksLikeLongForm(title, description)) return "long";
+  return "long";
+}
+
+export function isLongFormVideo(video: YouTubeVideo): boolean {
+  return video.format === "long";
+}
+
+export function isShortFormVideo(video: YouTubeVideo): boolean {
+  return video.format === "short";
 }
 
 async function getUploadsPlaylistId(
@@ -192,8 +207,8 @@ async function fetchFromYouTubeApi(
   };
 
   const ids = (playlistData.items ?? [])
-    .map((i) => i.snippet.resourceId.videoId)
-    .filter(Boolean);
+    .map((i) => normalizeVideoId(i.snippet.resourceId.videoId))
+    .filter((id): id is string => id !== null);
 
   if (ids.length === 0) return [];
 
@@ -220,33 +235,56 @@ async function fetchFromYouTubeApi(
     }>;
   };
 
-  return (videoData.items ?? []).map((item) => {
-    const durationSeconds = parseIsoDuration(item.contentDetails.duration);
-    const title = item.snippet.title.replace(/\s*#\s*shorts\s*/gi, "").trim();
-    const format = classifyFormat(
-      durationSeconds,
-      item.snippet.title,
-      item.snippet.description
-    );
-    return {
-      id: item.id,
-      title,
-      description: item.snippet.description.slice(0, 800),
-      thumbnail:
-        item.snippet.thumbnails.high?.url ??
-        item.snippet.thumbnails.medium?.url ??
-        `https://i.ytimg.com/vi/${item.id}/hqdefault.jpg`,
-      slug: slugify(title, item.id),
-      format,
-      durationSeconds,
-    };
-  });
+  return (videoData.items ?? [])
+    .map((item) => {
+      const id = normalizeVideoId(item.id);
+      if (!id) return null;
+
+      const durationSeconds = parseIsoDuration(item.contentDetails.duration);
+      const title = item.snippet.title.replace(/\s*#\s*shorts\s*/gi, "").trim();
+      const format = classifyFormat(
+        durationSeconds,
+        item.snippet.title,
+        item.snippet.description
+      );
+      return {
+        id,
+        title,
+        description: item.snippet.description.slice(0, 800),
+        thumbnail:
+          item.snippet.thumbnails.high?.url ??
+          item.snippet.thumbnails.medium?.url ??
+          `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
+        slug: slugify(title, id),
+        format,
+        durationSeconds,
+      };
+    })
+    .filter((v): v is YouTubeVideo => v !== null);
+}
+
+function extractRssLink(entry: string): string | undefined {
+  const href =
+    entry.match(/<link[^>]+rel="alternate"[^>]+href="([^"]+)"/i)?.[1] ??
+    entry.match(/<link[^>]+href="([^"]+)"[^>]*rel="alternate"/i)?.[1] ??
+    entry.match(/<link>([^<]+)<\/link>/)?.[1] ??
+    entry.match(/<media:content[^>]+url="([^"]+)"/i)?.[1];
+  return href?.trim();
+}
+
+function extractRssDurationSeconds(entry: string): number {
+  const mediaSeconds = entry.match(/<media:content[^>]+duration="(\d+)"/i)?.[1];
+  if (mediaSeconds) return parseInt(mediaSeconds, 10);
+  return 0;
 }
 
 function parseRssItem(item: string): YouTubeVideo | null {
-  const id =
+  const rawId =
     item.match(/<yt:videoId>([^<]+)<\/yt:videoId>/)?.[1] ??
     item.match(/watch\?v=([^"&]+)/)?.[1];
+  const link = extractRssLink(item);
+  const id = rawId ? normalizeVideoId(rawId) : link ? normalizeVideoId(link) : null;
+
   const title = item.match(/<title>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?<\/title>/)?.[1];
   const description =
     item.match(/<media:description>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?<\/media:description>/)?.[1] ??
@@ -255,7 +293,8 @@ function parseRssItem(item: string): YouTubeVideo | null {
   if (!id || !title) return null;
 
   const cleanTitle = title.replace(/^[^-]+-\s*/, "").trim();
-  const format = classifyFormat(0, cleanTitle, description);
+  const durationSeconds = extractRssDurationSeconds(item);
+  const format = classifyFormat(durationSeconds, cleanTitle, description, link);
 
   return {
     id,
@@ -264,7 +303,7 @@ function parseRssItem(item: string): YouTubeVideo | null {
     thumbnail: `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
     slug: slugify(cleanTitle, id),
     format,
-    durationSeconds: 0,
+    durationSeconds,
   };
 }
 
@@ -295,18 +334,19 @@ async function enrichMissingDurations(
   if (stillMissing.length > 0 && !_durationWarnLogged) {
     _durationWarnLogged = true;
     console.warn(
-      `[youtube] API returned no duration for ${stillMissing.length} video(s): ${stillMissing.slice(0, 5).join(", ")}${stillMissing.length > 5 ? "..." : ""}. Routed to /shorts as safe fallback.`
+      `[youtube] API returned no duration for ${stillMissing.length} video(s): ${stillMissing.slice(0, 5).join(", ")}${stillMissing.length > 5 ? "..." : ""}. Classified using title/URL heuristics only.`
     );
   }
 
   return videos.map((v) => {
     if (v.durationSeconds > 0) return v;
     const seconds = durations.get(v.id) ?? 0;
-    if (seconds === 0) return v;
+    const durationSeconds = seconds;
+    const format = classifyFormat(durationSeconds, v.title, v.description);
     return {
       ...v,
-      durationSeconds: seconds,
-      format: classifyFormat(seconds, v.title, v.description),
+      durationSeconds,
+      format,
     };
   });
 }
@@ -350,10 +390,12 @@ export async function getVideoBySlug(slug: string): Promise<YouTubeVideo | undef
 }
 
 export async function getVideoById(id: string): Promise<YouTubeVideo | undefined> {
+  const parsed = normalizeVideoId(id);
   const videos = await getYouTubeVideos();
-  return videos.find((v) => v.id === id);
+  return videos.find((v) => v.id === parsed || v.slug === id);
 }
 
 export function youtubeWatchUrl(id: string, source = "seestew"): string {
-  return `https://www.youtube.com/watch?v=${id}&utm_source=${source}&utm_medium=website&utm_campaign=embed`;
+  const videoId = normalizeVideoId(id) ?? id;
+  return `https://www.youtube.com/watch?v=${videoId}&utm_source=${source}&utm_medium=website&utm_campaign=embed`;
 }

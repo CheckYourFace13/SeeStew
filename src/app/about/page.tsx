@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SocialLinks } from "@/components/SocialLinks";
+import { SocialInlineLink } from "@/components/SocialIcons";
 import { siteConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
@@ -18,42 +19,22 @@ export default function AboutPage() {
         <p>
           SeeStew is a history channel built around American politics and the stories that get
           skipped in survey courses. We put out long documentaries on{" "}
-          <a
-            href={siteConfig.social.youtube}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            YouTube
-          </a>
-          , shorter clips on{" "}
-          <a
-            href={siteConfig.social.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Instagram
-          </a>{" "}
-          and{" "}
-          <a
-            href={siteConfig.social.tiktok}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            TikTok
-          </a>
-          , and written pieces here on seestew.com.
+          <SocialInlineLink platform="youtube">YouTube</SocialInlineLink>, shorter clips on{" "}
+          <SocialInlineLink platform="instagram">Instagram</SocialInlineLink> and{" "}
+          <SocialInlineLink platform="tiktok">TikTok</SocialInlineLink>, and written pieces here on
+          seestew.com.
         </p>
         <h2>What we cover</h2>
         <p>
-          Presidents, wars, colonial fights, scandals, reformers, and odd corners of the archive.
-          The goal is simple: name the people involved, show the sequence of events, and say why it
-          still gets argued about.
+          Presidents, scandals, wars, riots, spies, and the strange corners of the American past.
+          If it sounds made up but is documented, we are interested.
         </p>
         <h2>Watch here or on YouTube</h2>
         <p>
           Videos on this site use the same uploads as the channel. If you want the algorithm to
-          pick up the next release, subscribe on YouTube. If you want the write-up, read the{" "}
-          <Link href="/articles">stories</Link> or the notes under each{" "}
+          pick up the next release, follow us on{" "}
+          <SocialInlineLink platform="youtube">YouTube</SocialInlineLink>. If you want the
+          write-up, read the <Link href="/articles">stories</Link> or the notes under each{" "}
           <Link href="/videos">documentary</Link>.
         </p>
         <h2>Contact</h2>

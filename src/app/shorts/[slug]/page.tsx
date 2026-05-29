@@ -13,6 +13,7 @@ import { getVideoEditorial } from "@/lib/video-editorial";
 import {
   getShortFormVideos,
   getVideoBySlug,
+  isShortFormVideo,
   youtubeWatchUrl,
 } from "@/lib/youtube";
 
@@ -26,7 +27,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const video = await getVideoBySlug(slug);
-  if (!video || video.format !== "short") return { title: "Short not found" };
+  if (!video || !isShortFormVideo(video)) return { title: "Short not found" };
 
   return {
     title: video.title,
@@ -45,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ShortWatchPage({ params }: Props) {
   const { slug } = await params;
   const video = await getVideoBySlug(slug);
-  if (!video || video.format !== "short") notFound();
+  if (!video || !isShortFormVideo(video)) notFound();
 
   const editorial = getVideoEditorial(video);
   const related = (await getShortFormVideos())

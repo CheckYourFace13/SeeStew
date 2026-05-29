@@ -7,6 +7,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { ReferencesList } from "@/components/ReferencesList";
 import { RelatedContent } from "@/components/RelatedContent";
+import { SocialIconLinks } from "@/components/SocialIcons";
 import { StoryHero } from "@/components/StoryHero";
 import { VideoPlayer } from "@/components/VideoPlayer";
 import { getAllArticles, getArticle, getArticlesByCategory } from "@/lib/articles";
@@ -157,12 +158,10 @@ export default async function ArticlePage({ params }: Props) {
 
       <nav className="mt-12 rounded-xl bg-brand-wash p-6 text-sm" aria-label="SeeStew channels">
         <p className="font-semibold text-ink">SeeStew elsewhere</p>
-        <ul className="mt-3 space-y-2 text-ink-muted">
-          <li>
-            <a href={siteConfig.social.youtubeSubscribe} className="text-brand-mid underline" target="_blank" rel="noopener noreferrer">
-              Subscribe on YouTube
-            </a>
-          </li>
+        <div className="mt-3">
+          <SocialIconLinks variant="inline" />
+        </div>
+        <ul className="mt-4 space-y-2 text-ink-muted">
           <li>
             <Link href="/shorts" className="text-brand-mid underline">
               History shorts

@@ -27,14 +27,14 @@ export const siteConfig = {
   locale: "en-US",
   region: "US",
   social: {
-    youtube: "https://www.youtube.com/@SeeStew",
-    youtubeSubscribe:
+    youtubeUrl: "https://www.youtube.com/@SeeStew",
+    youtubeSubscribeUrl:
       "https://www.youtube.com/@SeeStew?sub_confirmation=1",
-    youtubeVideos: "https://www.youtube.com/@SeeStew/videos",
-    youtubeShorts: "https://www.youtube.com/@SeeStew/shorts",
-    instagram: "https://www.instagram.com/see.stew/",
-    tiktok: "https://www.tiktok.com/@see.stew",
-    facebook:
+    youtubeVideosUrl: "https://www.youtube.com/@SeeStew/videos",
+    youtubeShortsUrl: "https://www.youtube.com/@SeeStew/shorts",
+    instagramUrl: "https://www.instagram.com/see.stew/",
+    tiktokUrl: "https://www.tiktok.com/@see.stew",
+    facebookUrl:
       "https://www.facebook.com/profile.php?id=61568343514187",
   },
 } as const;
@@ -55,10 +55,9 @@ export const youtubeConfig = {
   channelId: process.env.YOUTUBE_CHANNEL_ID ?? "",
   apiKey: process.env.YOUTUBE_API_KEY ?? "",
   handle: "SeeStew",
-  /** /videos requires duration >= this (seconds) — 2 minutes */
-  longFormMinSeconds: 120,
-  /** Used for heuristic Short detection when duration is ambiguous */
-  shortFormMaxSeconds: 119,
+  /** Full-length videos are longer than 60 seconds (see SHORT_MAX_SECONDS in youtube.ts). */
+  longFormMinSeconds: 61,
+  shortFormMaxSeconds: 60,
 } as const;
 
 export const pipelineConfig = {
