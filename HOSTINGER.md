@@ -10,7 +10,7 @@ Use this when replacing the old **Hostinger Website Builder** site at seestew.co
 |------|--------|
 | AdSense publisher `ca-pub-9572509189594279` | In `.env.local` + `public/ads.txt` |
 | `ads.txt` at `/ads.txt` | `public/ads.txt` |
-| Contact form | `/contact` + `RESEND_API_KEY`, `EMAIL_FROM`, `CONTACT_TO_EMAIL` in env (no public inbox) |
+| Contact form | `/contact` + SMTP env vars (`CONTACT_TO_EMAIL`, `SMTP_*`) — no public inbox on the site |
 | Old blog URLs | 301 redirects in `next.config.ts` |
 
 ### Copy from Google dashboards (add to Hostinger env)

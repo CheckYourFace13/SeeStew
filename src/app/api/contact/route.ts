@@ -57,7 +57,7 @@ export async function POST(request: Request) {
   }
 
   if (!isEmailConfigured()) {
-    console.error("[contact] Missing RESEND_API_KEY, EMAIL_FROM, or CONTACT_TO_EMAIL");
+    console.error("[contact] Missing SMTP or CONTACT_TO_EMAIL environment variables");
     return genericError(503);
   }
 
