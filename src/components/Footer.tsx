@@ -74,12 +74,12 @@ export function Footer() {
           </p>
           <FooterNewsletter />
           <p className="mt-4 text-sm">
-            <a
-              href={`mailto:${siteConfig.email}`}
+            <Link
+              href="/contact"
               className="text-brand-meteorite-light underline hover:text-white"
             >
-              {siteConfig.email}
-            </a>
+              Contact form
+            </Link>
           </p>
         </div>
       </div>

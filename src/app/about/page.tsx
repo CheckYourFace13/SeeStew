@@ -58,7 +58,11 @@ export default function AboutPage() {
         </p>
         <h2>Contact</h2>
         <p>
-          <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+          Use the{" "}
+          <Link href="/contact" className="text-brand-mid underline">
+            contact form
+          </Link>{" "}
+          for press, corrections, and partnerships. We do not publish a public inbox.
         </p>
       </div>
       <div className="mt-12">

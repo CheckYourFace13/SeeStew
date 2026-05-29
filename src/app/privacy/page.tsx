@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { siteConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
@@ -30,8 +31,8 @@ export default function PrivacyPage() {
               approximate location via analytics tools.
             </li>
             <li>
-              <strong>Email</strong> — only if you contact us or subscribe via
-              our newsletter form.
+              <strong>Contact details</strong> — name and email only if you submit
+              our contact form (we do not publish a public inbox).
             </li>
             <li>
               <strong>Cookies</strong> — small files stored on your device for
@@ -86,15 +87,22 @@ export default function PrivacyPage() {
           <h2>Your rights</h2>
           <p>
             Depending on your location, you may have rights to access, correct,
-            or delete personal data. Contact us at {siteConfig.email}.
+            or delete personal data. Use our{" "}
+            <Link href="/contact" className="text-brand-mid underline">
+              contact form
+            </Link>
+            .
           </p>
         </section>
 
         <section>
           <h2>Contact</h2>
           <p>
-            Questions about this policy:{" "}
-            <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+            Questions about this policy: use the{" "}
+            <Link href="/contact" className="text-brand-mid underline">
+              contact form
+            </Link>
+            .
           </p>
         </section>
       </div>

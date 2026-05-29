@@ -22,7 +22,6 @@ export const siteConfig = {
   description:
     "SeeStew — unbelievable true stories from American history. Watch long-form videos, read shocking hidden history, and follow daily clips on YouTube, Instagram, and TikTok.",
   url: "https://seestew.com",
-  email: "info@seestew.com",
   logo: "/logo.png",
   logoLight: "/logo-light.png",
   locale: "en-US",

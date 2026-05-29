@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { siteConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
@@ -52,7 +53,11 @@ export default function TermsPage() {
         <section>
           <h2>Contact</h2>
           <p>
-            <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+            Use the{" "}
+            <Link href="/contact" className="text-brand-mid underline">
+              contact form
+            </Link>
+            .
           </p>
         </section>
       </div>

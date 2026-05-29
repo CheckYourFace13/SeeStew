@@ -64,7 +64,11 @@ export function buildOrganizationJsonLd() {
     url: siteConfig.url,
     logo: `${siteConfig.url}${siteConfig.logo}`,
     description: siteConfig.description,
-    email: siteConfig.email,
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      url: `${siteConfig.url}/contact`,
+    },
     areaServed: { "@type": "Country", name: "United States" },
     knowsAbout: [
       "American history",
