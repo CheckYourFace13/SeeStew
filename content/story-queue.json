@@ -227,9 +227,9 @@
       "imageSearchTerms": [
         "MOVE bombing Philadelphia 1985 Osage Avenue"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "move-bombing-1985",
+      "publishedAt": "2026-06-01T16:11:09.921Z"
     },
     {
       "id": "ludlow-massacre-1914",
