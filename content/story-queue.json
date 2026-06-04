@@ -365,9 +365,9 @@
       "imageSearchTerms": [
         "Lake Peigneur Louisiana 1980 whirlpool drill"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "lake-peigneur-1980",
+      "publishedAt": "2026-06-04T12:47:59.611Z"
     },
     {
       "id": "titan-ii-damascus-1980",
