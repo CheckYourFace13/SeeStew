@@ -411,9 +411,9 @@
       "imageSearchTerms": [
         "Titan II missile explosion Damascus Arkansas 1980"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "titan-ii-damascus-1980",
+      "publishedAt": "2026-06-05T12:43:05.088Z"
     },
     {
       "id": "minuteman-missile-accidents",
