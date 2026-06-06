@@ -457,9 +457,9 @@
       "imageSearchTerms": [
         "Minuteman missile silo accident Cold War"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "minuteman-missile-accidents",
+      "publishedAt": "2026-06-06T11:38:18.545Z"
     },
     {
       "id": "tuskegee-syphilis-study",
