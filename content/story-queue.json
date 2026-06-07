@@ -503,9 +503,9 @@
       "imageSearchTerms": [
         "Tuskegee syphilis study Alabama 1932"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "tuskegee-syphilis-study",
+      "publishedAt": "2026-06-07T11:53:18.746Z"
     },
     {
       "id": "poison-squad-wiley",
