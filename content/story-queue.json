@@ -733,9 +733,9 @@
       "imageSearchTerms": [
         "Operation Northwoods Pentagon Cuba 1962"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "operation-northwoods-1962",
+      "publishedAt": "2026-06-12T12:58:44.527Z"
     },
     {
       "id": "operation-paperclip",
