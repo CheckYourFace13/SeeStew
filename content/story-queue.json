@@ -779,9 +779,9 @@
       "imageSearchTerms": [
         "Operation Paperclip von Braun Huntsville"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "operation-paperclip",
+      "publishedAt": "2026-06-13T11:57:20.891Z"
     },
     {
       "id": "japanese-balloon-bomb-oregon-1945",
