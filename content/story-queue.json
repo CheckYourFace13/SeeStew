@@ -871,9 +871,9 @@
       "imageSearchTerms": [
         "Greenbrier bunker West Virginia Congress Cold War"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "greenbrier-bunker",
+      "publishedAt": "2026-06-15T15:51:17.075Z"
     },
     {
       "id": "hanford-radiation-releases",
