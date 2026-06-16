@@ -917,9 +917,9 @@
       "imageSearchTerms": [
         "Hanford Washington plutonium Manhattan Project"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "hanford-radiation-releases",
+      "publishedAt": "2026-06-16T15:14:29.595Z"
     },
     {
       "id": "love-canal-1978",
