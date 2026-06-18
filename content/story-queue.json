@@ -1009,9 +1009,9 @@
       "imageSearchTerms": [
         "Centralia Pennsylvania mine fire 1962"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "centralia-mine-fire-1962",
+      "publishedAt": "2026-06-18T13:32:50.760Z"
     },
     {
       "id": "peshtigo-fire-1871",
