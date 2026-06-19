@@ -1055,9 +1055,9 @@
       "imageSearchTerms": [
         "Peshtigo fire 1871 Wisconsin"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "peshtigo-fire-1871",
+      "publishedAt": "2026-06-19T13:38:48.177Z"
     },
     {
       "id": "cocoanut-grove-fire-1942",
