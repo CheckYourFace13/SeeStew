@@ -1101,9 +1101,9 @@
       "imageSearchTerms": [
         "Cocoanut Grove fire Boston 1942 nightclub"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "cocoanut-grove-fire-1942",
+      "publishedAt": "2026-06-20T12:02:30.274Z"
     },
     {
       "id": "hartford-circus-fire-1944",
