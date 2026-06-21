@@ -1147,9 +1147,9 @@
       "imageSearchTerms": [
         "Hartford circus fire 1944 Connecticut"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "hartford-circus-fire-1944",
+      "publishedAt": "2026-06-21T12:13:47.165Z"
     },
     {
       "id": "sultana-disaster-1865",
