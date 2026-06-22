@@ -1193,9 +1193,9 @@
       "imageSearchTerms": [
         "Sultana steamboat disaster 1865 Mississippi"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "sultana-disaster-1865",
+      "publishedAt": "2026-06-22T15:27:31.753Z"
     },
     {
       "id": "eastland-disaster-1915",
