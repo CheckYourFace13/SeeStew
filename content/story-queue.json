@@ -1239,9 +1239,9 @@
       "imageSearchTerms": [
         "SS Eastland disaster Chicago 1915"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "eastland-disaster-1915",
+      "publishedAt": "2026-06-23T12:38:31.453Z"
     },
     {
       "id": "bath-school-disaster-1927",
