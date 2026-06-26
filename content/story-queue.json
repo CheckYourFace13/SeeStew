@@ -1331,9 +1331,9 @@
       "imageSearchTerms": [
         "Triangle Shirtwaist fire 1911 New York factory"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "triangle-shirtwaist-fire-1911",
+      "publishedAt": "2026-06-26T12:15:39.382Z"
     },
     {
       "id": "castle-bravo-fallout-1954",
