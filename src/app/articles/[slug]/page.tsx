@@ -11,7 +11,7 @@ import { SocialIconLinks } from "@/components/SocialIcons";
 import { StoryHero } from "@/components/StoryHero";
 import { VideoPlayer } from "@/components/VideoPlayer";
 import { getAllArticles, getArticle, getArticlesByCategory } from "@/lib/articles";
-import { stripMarkdownSourcesSection } from "@/lib/article-content";
+import { prepareArticleBodyForDisplay } from "@/lib/article-content";
 import { siteConfig } from "@/lib/config";
 import {
   buildArticleJsonLd,
@@ -68,10 +68,17 @@ export default async function ArticlePage({ params }: Props) {
   const relatedStories = getArticlesByCategory(article.category);
   const relatedVideos = (await getLongFormVideos()).slice(0, 4);
 
-  const bodyContent =
-    article.references?.length
-      ? stripMarkdownSourcesSection(article.content)
-      : article.content;
+  const bodyContent = prepareArticleBodyForDisplay(article.content, {
+    stripSources: Boolean(article.references?.length),
+  });
+  const publishedDate = article.createdAt
+    ? new Date(article.createdAt).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        timeZone: "UTC",
+      })
+    : null;
 
   return (
     <article className="page-shell-narrow" itemScope itemType="https://schema.org/Article">
@@ -117,6 +124,21 @@ export default async function ArticlePage({ params }: Props) {
         </h1>
         <p className="mt-3 text-ink-muted" itemProp="description">
           {article.excerpt}
+        </p>
+        <p className="mt-4 text-sm text-ink-muted">
+          {publishedDate && (
+            <>
+              <time dateTime={article.createdAt} itemProp="datePublished">
+                {publishedDate}
+              </time>
+              {" · "}
+            </>
+          )}
+          By {siteConfig.name}
+          {" · "}
+          <Link href="/editorial" className="text-brand-mid underline">
+            Editorial standards
+          </Link>
         </p>
       </header>
 

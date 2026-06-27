@@ -44,14 +44,6 @@ export function buildWebSiteJsonLd() {
       url: siteConfig.url,
       logo: `${siteConfig.url}${siteConfig.logo}`,
     },
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${siteConfig.url}/topics?q={search_term_string}`,
-      },
-      "query-input": "required name=search_term_string",
-    },
   };
 }
 
@@ -115,6 +107,7 @@ export function buildVideoObjectJsonLd(video: {
 
 export function buildArticleJsonLd(article: Article, url: string) {
   const citations = (article.references ?? []).map((r) => r.url);
+  const published = article.createdAt?.split("T")[0];
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -125,6 +118,7 @@ export function buildArticleJsonLd(article: Article, url: string) {
     wordCount: article.content.split(/\s+/).length,
     inLanguage: siteConfig.locale,
     isAccessibleForFree: true,
+    ...(published ? { datePublished: published, dateModified: published } : {}),
     author: { "@type": "Organization", name: siteConfig.name, url: siteConfig.url },
     publisher: {
       "@type": "Organization",

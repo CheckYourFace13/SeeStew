@@ -33,6 +33,16 @@ export function Footer() {
                 Topics
               </Link>
             </li>
+            <li>
+              <Link href="/about" className="hover:text-white">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link href="/editorial" className="hover:text-white">
+                Editorial
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -88,6 +98,9 @@ export function Footer() {
             </Link>
             <Link href="/terms" className="hover:text-white">
               Terms
+            </Link>
+            <Link href="/about" className="hover:text-white">
+              About
             </Link>
             <Link href="/contact" className="hover:text-white">
               Contact

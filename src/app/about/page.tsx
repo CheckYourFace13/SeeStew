@@ -45,6 +45,14 @@ export default function AboutPage() {
           </Link>{" "}
           for press, corrections, and partnerships. We do not publish a public inbox.
         </p>
+        <h2>Editorial standards</h2>
+        <p>
+          Every story lists named sources and is reviewed before publication. Read our{" "}
+          <Link href="/editorial" className="text-brand-mid underline">
+            editorial standards
+          </Link>{" "}
+          for sourcing, corrections, and how we handle ads.
+        </p>
       </div>
       <div className="mt-12">
         <SocialLinks compact />

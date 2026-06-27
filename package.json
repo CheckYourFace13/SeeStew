@@ -12,7 +12,10 @@
     "validate:articles": "node scripts/validate-articles.mjs",
     "validate:queue": "node scripts/validate-queue.mjs",
     "init:queue": "node scripts/init-story-queue.mjs",
-    "check:story-images": "npx --yes tsx scripts/check-story-images.ts"
+    "check:story-images": "npx --yes tsx scripts/check-story-images.ts",
+    "fetch:story-images": "node scripts/fetch-all-story-images.mjs",
+    "sanitize:articles": "node scripts/sanitize-article-metadata.mjs",
+    "check:ads-txt": "node scripts/check-ads-txt.mjs"
   },
   "dependencies": {
     "next": "^15.3.2",

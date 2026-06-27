@@ -11,7 +11,7 @@ export default function TermsPage() {
   return (
     <div className="page-shell-narrow">
       <h1 className="font-heading text-4xl font-bold text-ink">Terms of Use</h1>
-      <p className="mt-2 text-sm text-ink-muted">Last updated: May 17, 2025</p>
+      <p className="mt-2 text-sm text-ink-muted">Last updated: May 26, 2026</p>
 
       <div className="prose-history mt-8 space-y-6">
         <section>
