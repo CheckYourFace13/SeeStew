@@ -1377,9 +1377,9 @@
       "imageSearchTerms": [
         "Castle Bravo hydrogen bomb test Bikini 1954"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "castle-bravo-fallout-1954",
+      "publishedAt": "2026-06-27T11:40:12.323Z"
     },
     {
       "id": "haymarket-affair-1886",
