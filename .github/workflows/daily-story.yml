@@ -32,14 +32,17 @@ jobs:
       - name: Validate new article
         run: npm run validate:articles
 
-      - name: Commit article and queue
+      - name: Check story images
+        run: npm run check:story-images
+
+      - name: Commit article, images, and queue
         run: |
           git config user.name "SeeStew Bot"
           git config user.email "bot@seestew.com"
-          git add content/articles/ content/story-queue.json
+          git add content/articles/ content/story-queue.json public/stories/
           if git diff --cached --quiet; then
-            echo "::error::No story file or queue update was created."
+            echo "::error::No story file, image, or queue update was created."
             exit 1
           fi
-          git commit -m "feat(stories): add daily auto-generated story [skip ci]"
+          git commit -m "feat(stories): add daily story"
           git push

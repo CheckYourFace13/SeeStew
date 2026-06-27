@@ -36,7 +36,39 @@ After pipeline runs, **rebuild/redeploy** so new `content/articles/*.json` files
 - Article **Sources** blocks + schema `citation`
 - `manifest.webmanifest`, security.txt
 
-## Hostinger deploy
+## Auto-deploy (Hostinger + GitHub)
+
+**Every push to `main` deploys to seestew.com.** You do not need to deploy manually.
+
+```
+git push origin main  →  Hostinger Git pull + npm install + npm run build + npm start
+```
+
+### One-time setup (already done if the site updates after push)
+
+1. **hPanel** → **Websites** → seestew.com → **Git** (or Node.js app → Git)
+2. Connect repo `CheckYourFace13/SeeStew`, branch **`main`**
+3. Build: `npm install && npm run build` · Start: `npm start` · Node **20**
+4. Enable **Auto deployment**
+5. Copy the **Webhook URL** → GitHub repo → **Settings → Webhooks → Add webhook**
+   - Payload URL: paste Hostinger URL
+   - Content type: `application/x-www-form-urlencoded`
+   - Events: **Just the push event**
+
+Optional: add the same webhook URL as GitHub Actions secret **`HOSTINGER_WEBHOOK_URL`** so the Deploy workflow can re-trigger Hostinger after CI passes.
+
+### GitHub Actions
+
+| Workflow | When | What |
+|----------|------|------|
+| **Deploy** | Every push to `main` | Validates build, then triggers Hostinger webhook (if secret set) |
+| **Daily Story Generator** | Daily 10:00 UTC | Writes story + image → commits → push → auto-deploy |
+
+Manual redeploy: **hPanel → Git → Redeploy**, or **Actions → Deploy → Run workflow**.
+
+---
+
+## Hostinger deploy (manual reference)
 
 **Option A — Node.js app (recommended)**  
 Supports cron API + pipeline.

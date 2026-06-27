@@ -70,9 +70,17 @@ Supports `npm start`, API cron, and server features.
 
 7. **Daily Story Automation**  
    - Primary method: **GitHub Actions** (see `DAILY-PUBLISHING.md`)  
-   - Stories are generated, committed to `main`, and Hostinger auto-deploys.  
+   - Stories are generated, committed to `main`, and **Hostinger auto-deploys on every push**.  
    - The Hostinger web cron (`/api/cron/publish`) is unreliable for AI generation due to nginx 504 timeout — use GitHub Actions instead.  
    - New story pages use **ISR** (`revalidate` ~10 minutes) — they appear without a full rebuild after deploy.
+
+### Auto-deploy checklist
+
+- [ ] Git connected to `CheckYourFace13/SeeStew` on branch `main`
+- [ ] Auto deployment **enabled** in hPanel Git settings
+- [ ] GitHub **webhook** added (push events) using Hostinger webhook URL
+- [ ] Optional: `HOSTINGER_WEBHOOK_URL` secret in GitHub Actions (same URL)
+- [ ] `.github/workflows/deploy.yml` runs on every push (build gate + optional webhook)
 
 8. **Search Console**  
    - Submit sitemap: `https://seestew.com/sitemap.xml`  

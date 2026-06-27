@@ -106,7 +106,10 @@ Same as before: `YOUTUBE_*`, `OPENROUTER_*`, `CRON_SECRET`, `PIPELINE_MAX_STORIE
 ## Deployment
 
 ```
-GitHub Actions → article JSON + story-queue.json → push main → Hostinger deploy
+GitHub Actions → story + images → push main → Hostinger auto-deploy
+Deploy workflow → validate build → optional Hostinger webhook
 ```
+
+Every push to `main` should deploy automatically. See `README.md` and `HOSTINGER.md` for webhook setup.
 
 Stories in Git survive all redeploys.
