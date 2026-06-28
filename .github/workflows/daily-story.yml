@@ -29,6 +29,9 @@ jobs:
           OPENROUTER_MODEL: ${{ secrets.OPENROUTER_MODEL }}
         run: node scripts/generate-daily-story.mjs
 
+      - name: Download story card image
+        run: node scripts/fetch-all-story-images.mjs
+
       - name: Validate new article
         run: npm run validate:articles
 

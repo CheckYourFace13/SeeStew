@@ -424,7 +424,7 @@ async function main() {
   console.log(`\nFinal: ${stats.words} words, ${stats.citations} citations, ${stats.refs} refs`);
 
   const image = await attachImage(queueItem, draft.title, draft.slug);
-  console.log(`Image: ${image.card?.startsWith("/stories/") ? "local LOC" : image.card ? "remote LOC" : "imagePrompt"}`);
+  console.log(`Image: ${image.card?.startsWith("/stories/") ? "local LOC" : image.card ? "remote LOC (fetch step will localize)" : "no match (fetch step will search LOC)"}`);
 
   const article = {
     slug: draft.slug,
