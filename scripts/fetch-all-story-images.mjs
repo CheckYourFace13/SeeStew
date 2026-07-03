@@ -145,19 +145,114 @@ async function tryDownload(url) {
   return null;
 }
 
+function stripHtml(value) {
+  return String(value || "")
+    .replace(/<[^>]*>/g, "")
+    .replace(/&amp;/g, "&")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+// Only reuse images that are clearly public domain or permissively licensed.
+const ALLOWED_LICENSE = /(public domain|^pd|cc0|cc[ -]?by)/i;
+
+/**
+ * Wikimedia Commons fallback — huge, reliable public-domain historical archive.
+ * Returns candidate images with proper attribution + license metadata.
+ */
+async function searchWikimedia(query) {
+  const params = new URLSearchParams({
+    action: "query",
+    generator: "search",
+    gsrsearch: `filetype:bitmap ${query.slice(0, 200)}`,
+    gsrnamespace: "6",
+    gsrlimit: "12",
+    prop: "imageinfo",
+    iiprop: "url|size|mime|extmetadata",
+    iiurlwidth: "1600",
+    format: "json",
+    origin: "*",
+  });
+  const res = await fetch(`https://commons.wikimedia.org/w/api.php?${params}`, {
+    headers: { "User-Agent": "SeeStew/1.0 (https://seestew.com; contact@seestew.com)" },
+  });
+  if (!res.ok) return [];
+  const data = await res.json();
+  const pages = data?.query?.pages ? Object.values(data.query.pages) : [];
+  const hits = [];
+  for (const p of pages) {
+    const ii = p.imageinfo?.[0];
+    if (!ii) continue;
+    if (!/^image\/(jpeg|png)$/.test(ii.mime || "")) continue;
+    if ((ii.width || 0) < 640) continue;
+    const meta = ii.extmetadata || {};
+    const licenseShort = stripHtml(meta.LicenseShortName?.value);
+    const usageTerms = stripHtml(meta.UsageTerms?.value);
+    if (!ALLOWED_LICENSE.test(`${licenseShort} ${usageTerms}`)) continue;
+    const artist = stripHtml(meta.Artist?.value) || stripHtml(meta.Credit?.value);
+    const credit =
+      [artist, "Wikimedia Commons", licenseShort].filter(Boolean).join(" / ").slice(0, 160) ||
+      "Wikimedia Commons";
+    hits.push({
+      u: ii.thumburl || ii.url,
+      page: `https://commons.wikimedia.org/wiki/${encodeURIComponent(p.title)}`,
+      title: stripHtml(meta.ObjectName?.value) || p.title.replace(/^File:/, "").replace(/\.[a-z]+$/i, ""),
+      credit,
+      score: ii.width || 0,
+    });
+  }
+  return hits.sort((a, b) => b.score - a.score);
+}
+
+async function downloadDirect(url) {
+  try {
+    const res = await fetch(url, {
+      headers: { "User-Agent": "SeeStew/1.0 (https://seestew.com; contact@seestew.com)" },
+    });
+    if (!res.ok) return null;
+    const buf = Buffer.from(await res.arrayBuffer());
+    if (buf.length < MIN_BYTES) return null;
+    return { buf, url };
+  } catch {
+    return null;
+  }
+}
+
 async function fetchForSlug(slug, queries) {
+  // Primary: Library of Congress.
   for (const query of queries) {
     await sleep(1200);
-    const hits = await searchLoc(query);
+    let hits = [];
+    try {
+      hits = await searchLoc(query);
+    } catch {
+      /* fall through to next query / Wikimedia */
+    }
     for (const hit of hits) {
       try {
         const got = await tryDownload(hit.u);
-        if (got) return { ...got, page: hit.page, title: hit.title };
+        if (got) return { ...got, page: hit.page, title: hit.title, credit: "Library of Congress" };
       } catch {
         /* try next hit */
       }
     }
   }
+
+  // Fallback: Wikimedia Commons (public-domain / CC historical images).
+  for (const query of queries) {
+    await sleep(700);
+    let hits = [];
+    try {
+      hits = await searchWikimedia(query);
+    } catch {
+      /* try next query */
+    }
+    for (const hit of hits) {
+      const got = await downloadDirect(hit.u);
+      if (got) return { ...got, page: hit.page, title: hit.title, credit: hit.credit };
+    }
+  }
+
   return null;
 }
 
@@ -207,12 +302,12 @@ async function main() {
       card: `/stories/${slug}/card.jpg`,
       hero: `/stories/${slug}/card.jpg`,
       alt: ALT_TEXT[slug] || art.title,
-      credit: "Library of Congress",
+      credit: result.credit || "Library of Congress",
       sourcePageUrl: result.page,
     };
     delete art.image.imagePrompt;
     writeFileSync(artPath, JSON.stringify(art, null, 2));
-    console.log(`  OK ${result.buf.length} bytes\n`);
+    console.log(`  OK ${result.buf.length} bytes — ${result.credit}\n`);
   }
 
   console.log("---");

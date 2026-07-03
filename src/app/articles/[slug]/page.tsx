@@ -139,6 +139,14 @@ export default async function ArticlePage({ params }: Props) {
           <Link href="/editorial" className="text-brand-mid underline">
             Editorial standards
           </Link>
+          {article.references && article.references.length > 0 && (
+            <>
+              {" · "}
+              <a href="#refs-heading" className="text-brand-mid underline">
+                {article.references.length} sources
+              </a>
+            </>
+          )}
         </p>
       </header>
 

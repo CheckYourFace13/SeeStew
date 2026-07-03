@@ -122,8 +122,18 @@ OUTPUT RULES (strict):
 - Return ONLY Markdown article text. No JSON. No YAML. No metadata block.
 - Do not wrap output in code fences.
 - Use ## for section headings (H2). Use specific, descriptive titles — never "Introduction" or "Conclusion".
+- Do NOT open with a heading that just restates the article title; start the first section with a concrete scene or fact.
 - Short paragraphs. Vivid but accurate prose.
-- U.S. history only. No invented quotes or facts.
+- U.S. history only.
+
+FACTUAL ACCURACY (critical — this is a nonfiction history site):
+- Never invent names of people, newspapers, organizations, court cases, dates, dollar amounts, casualty counts, or quotations.
+- Only state specific names, numbers, and quotes that are well-established historical fact and consistent with the listed sources. If you are not certain of an exact figure or name, describe it qualitatively ("dozens", "a Senate investigation") rather than fabricating a specific.
+- Do not attribute the "breaking" of a story to a specific journalist or outlet unless it is a firmly established, verifiable fact.
+- When in doubt, leave it out. A shorter, accurate sentence is always better than a confident-sounding invented one.
+
+STYLE — write like a human historian, not an AI. Do NOT use these clichés:
+"stands as a (dark) chapter", "serves as a (chilling/stark/poignant/cautionary) reminder", "this article delves/explores into", "would forever alter/change the landscape", "left an indelible mark", "testament to", "in the annals of", "rich tapestry", "plays a pivotal role", "not only... but also...". Vary sentence structure; prefer plain, specific language.
 
 CITATIONS:
 - Use inline markers [1], [2], [3], etc. after factual claims in the body.
