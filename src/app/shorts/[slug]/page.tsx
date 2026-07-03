@@ -35,6 +35,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       video.description?.slice(0, 155) ||
       `Watch ${video.title} — a SeeStew history short.`,
     alternates: { canonical: `${siteConfig.url}/shorts/${slug}` },
+    // Thin syndicated clip page — keep out of the index to avoid low-value signals.
+    robots: { index: false, follow: true },
     openGraph: {
       type: "video.other",
       title: video.title,

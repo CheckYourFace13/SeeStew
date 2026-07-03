@@ -351,12 +351,12 @@ async function enrichMissingDurations(
   });
 }
 
-export async function getYouTubeVideos(): Promise<YouTubeVideo[]> {
+async function loadYouTubeVideos(): Promise<{ videos: YouTubeVideo[]; live: boolean }> {
   const { channelId, apiKey } = youtubeConfig;
 
   if (channelId && apiKey) {
     const fromApi = await fetchFromYouTubeApi(channelId, apiKey);
-    if (fromApi.length > 0) return fromApi;
+    if (fromApi.length > 0) return { videos: fromApi, live: true };
   }
 
   if (channelId) {
@@ -364,10 +364,40 @@ export async function getYouTubeVideos(): Promise<YouTubeVideo[]> {
     if (fromRss.length > 0 && apiKey) {
       fromRss = await enrichMissingDurations(fromRss, apiKey);
     }
-    if (fromRss.length > 0) return fromRss;
+    if (fromRss.length > 0) return { videos: fromRss, live: true };
   }
 
-  return FALLBACK_VIDEOS;
+  return { videos: FALLBACK_VIDEOS, live: false };
+}
+
+/**
+ * Module-level cache so every caller (list pages, detail pages, sitemap) sees
+ * the SAME feed within a window. Without this, list and detail routes could hit
+ * different sources (API vs RSS) and generate mismatched slugs → 404s.
+ */
+let _videoCache: { at: number; ttl: number; videos: YouTubeVideo[] } | null = null;
+const LIVE_TTL_MS = 30 * 60 * 1000;
+const FALLBACK_TTL_MS = 60 * 1000;
+
+export async function getYouTubeVideos(): Promise<YouTubeVideo[]> {
+  const now = Date.now();
+  if (_videoCache && now - _videoCache.at < _videoCache.ttl) {
+    return _videoCache.videos;
+  }
+
+  const { videos, live } = await loadYouTubeVideos();
+  _videoCache = { at: now, ttl: live ? LIVE_TTL_MS : FALLBACK_TTL_MS, videos };
+  return videos;
+}
+
+/** Every video the site may link to, including curated fallbacks (deduped by id). */
+async function getAllResolvableVideos(): Promise<YouTubeVideo[]> {
+  const live = await getYouTubeVideos();
+  const byId = new Map<string, YouTubeVideo>();
+  for (const v of [...live, ...FALLBACK_VIDEOS]) {
+    if (!byId.has(v.id)) byId.set(v.id, v);
+  }
+  return [...byId.values()];
 }
 
 const LONG_FALLBACK = FALLBACK_VIDEOS.filter((v) => isLongFormVideo(v));
@@ -385,13 +415,13 @@ export async function getShortFormVideos(): Promise<YouTubeVideo[]> {
 }
 
 export async function getVideoBySlug(slug: string): Promise<YouTubeVideo | undefined> {
-  const videos = await getYouTubeVideos();
+  const videos = await getAllResolvableVideos();
   return videos.find((v) => v.slug === slug || v.id === slug);
 }
 
 export async function getVideoById(id: string): Promise<YouTubeVideo | undefined> {
   const parsed = normalizeVideoId(id);
-  const videos = await getYouTubeVideos();
+  const videos = await getAllResolvableVideos();
   return videos.find((v) => v.id === parsed || v.slug === id);
 }
 
