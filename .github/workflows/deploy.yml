@@ -37,6 +37,9 @@ jobs:
       - name: Check ads.txt
         run: npm run check:ads-txt
 
+      - name: Check source links resolve
+        run: npm run check:source-links
+
       - name: Production build
         run: npm run build
 

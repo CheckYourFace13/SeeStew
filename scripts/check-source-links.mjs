@@ -26,10 +26,10 @@ function collectUrls() {
   return map;
 }
 
-async function checkUrl(url) {
+async function fetchOnce(url) {
   try {
     const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), 12000);
+    const timer = setTimeout(() => controller.abort(), 15000);
     const res = await fetch(url, {
       method: "GET",
       redirect: "follow",
@@ -41,6 +41,17 @@ async function checkUrl(url) {
   } catch (e) {
     return e.name === "AbortError" ? "TIMEOUT" : "ERROR";
   }
+}
+
+// Retry transient failures (network/TLS quirks on .mil, si.edu, etc.) before
+// deciding. Only 404/410 count as "dead" — the sole CI failure condition.
+async function checkUrl(url) {
+  let status = await fetchOnce(url);
+  if (status === "ERROR" || status === "TIMEOUT") {
+    await new Promise((r) => setTimeout(r, 1500));
+    status = await fetchOnce(url);
+  }
+  return status;
 }
 
 async function run(entries, concurrency = 6) {
@@ -64,22 +75,28 @@ async function main() {
   console.log(`Checking ${entries.length} unique source URLs...\n`);
 
   const results = await run(entries);
-  const dead = results.filter((r) => r.status === 404 || r.status === 410 || r.status === "ERROR");
-  const timeout = results.filter((r) => r.status === "TIMEOUT");
+  // Only 404/410 are treated as failures. 403/429 = bot-blocked (real page),
+  // ERROR/TIMEOUT = network/TLS quirks (common on .mil and si.edu from CI).
+  const dead = results.filter((r) => r.status === 404 || r.status === 410);
+  const unreachable = results.filter((r) => r.status === "ERROR" || r.status === "TIMEOUT");
   const blocked = results.filter((r) => r.status === 403 || r.status === 429);
   const ok = results.filter((r) => typeof r.status === "number" && r.status >= 200 && r.status < 400);
 
   const fmt = (r) => `  [${r.status}] ${r.url}\n        used by: ${r.slugs.join(", ")}`;
 
-  console.log(`=== DEAD (${dead.length}) ===`);
+  console.log(`=== DEAD — 404/410 (${dead.length}) ===`);
   dead.forEach((r) => console.log(fmt(r)));
-  console.log(`\n=== TIMEOUT (${timeout.length}) ===`);
-  timeout.forEach((r) => console.log(fmt(r)));
-  console.log(`\n=== BOT-BLOCKED, likely OK in browser (${blocked.length}) ===`);
+  console.log(`\n=== UNREACHABLE from CI, not a hard failure (${unreachable.length}) ===`);
+  unreachable.forEach((r) => console.log(fmt(r)));
+  console.log(`\n=== BOT-BLOCKED, real page (${blocked.length}) ===`);
   blocked.forEach((r) => console.log(fmt(r)));
   console.log(`\n=== OK: ${ok.length} ===`);
 
-  if (dead.length) process.exit(1);
+  if (dead.length) {
+    console.error(`\nFAIL: ${dead.length} dead source link(s) found (404/410). Fix before shipping.`);
+    process.exit(1);
+  }
+  console.log(`\nPASS: no dead source links.`);
 }
 
 main().catch((e) => {

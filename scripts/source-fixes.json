@@ -1,117 +1,404 @@
 {
-  "https://www.afhistory.af.mil/FAQs/Fact-Sheets/Article/458990/the-battle-of-los-angeles/": {
-    "url": "https://www.smithsonianmag.com/history/great-los-angeles-air-raid-terrified-citizenseven-though-no-bombs-were-dropped-180967890/",
-    "title": "The Great Los Angeles Air Raid Terrified Citizens Even Though No Bombs Were Dropped",
-    "publisher": "Smithsonian Magazine"
+  "great-molasses-flood-1919": {
+    "https://www.smithsonianmag.com/history/great-molasses-flood-180967399/": {
+      "url": "https://www.npr.org/2019/01/15/685154620/a-deadly-tsunami-of-molasses-in-bostons-north-end",
+      "title": "A Deadly Tsunami of Molasses in Boston's North End",
+      "publisher": "NPR"
+    }
   },
-  "https://www.archives.gov/research/military/ww2/western-defense": {
-    "url": "https://celebratecalifornia.library.ca.gov/february-24-1942-the-battle-of-los-angeles-2/",
-    "title": "The Battle of Los Angeles",
-    "publisher": "California State Library"
+  "uss-indianapolis-1945": {
+    "https://www.smithsonianmag.com/history/the-harrowing-story-of-uss-indianapolis-180960981/": {
+      "url": "https://www.usni.org/magazines/naval-history-magazine/2016/june/indianapolis-sailors-legacy-and-lessons",
+      "title": "Indianapolis Sailors' Legacy and Lessons",
+      "publisher": "U.S. Naval Institute"
+    }
   },
-  "https://www.history.navy.mil/browse-by-topic/wars-conflicts-and-operations/world-war-ii.html": {
-    "url": "https://www.history.com/articles/world-war-iis-bizarre-battle-of-los-angeles",
-    "title": "World War II's Bizarre 'Battle of Los Angeles'",
-    "publisher": "HISTORY"
+  "black-tom-explosion-1916": {
+    "https://www.smithsonianmag.com/history/serving-serving-serving-sabotage-new-york-harbor-180975368/": {
+      "url": "https://www.nytimes.com/2016/07/25/nyregion/an-attack-that-turned-out-to-be-german-terrorism-has-a-modest-legacy-100-years-later.html",
+      "title": "An Attack That Turned Out to Be German Terrorism Has a Modest Legacy 100 Years Later",
+      "publisher": "The New York Times"
+    }
   },
-  "https://www.nps.gov/stli/learn/historyculture/black-tom-explosion.htm": {
-    "url": "https://www.fbi.gov/history/cases-and-criminals/black-tom-1916-bombing",
-    "title": "Black Tom 1916 Bombing",
-    "publisher": "Federal Bureau of Investigation"
+  "black-sox-scandal-1919": {
+    "https://www.archives.gov/magazine/publications/prologue/2013/fall/black-sox": {
+      "url": "https://www.britannica.com/event/Black-Sox-Scandal",
+      "title": "Black Sox Scandal of 1919",
+      "publisher": "Encyclopaedia Britannica"
+    },
+    "https://www.pbs.org/wgbh/americanexperience/features/eight-men-out/": {
+      "url": "https://sabr.org/journal/article/the-black-sox-scandal/",
+      "title": "The Black Sox Scandal",
+      "publisher": "Society for American Baseball Research"
+    },
+    "https://www.chicagohistory.org/black-sox/": {
+      "url": "https://baseballhall.org/discover-more/digital-collection/ba-mss-16",
+      "title": "Guide to the Black Sox Scandal",
+      "publisher": "National Baseball Hall of Fame"
+    }
   },
-  "https://www.lanl.gov/publications/index.php": {
-    "url": "https://www.osti.gov/manhattan-project-history/Science/Radioactivity/rad-accidents.html",
-    "title": "Manhattan Project: Radiation Accidents",
-    "publisher": "U.S. Department of Energy, Office of History"
+  "bonus-army-1932": {
+    "https://www.archives.gov/publications/prologue/2006/spring/bonus-army.html": {
+      "url": "https://www.britannica.com/event/Bonus-Army",
+      "title": "Bonus Army",
+      "publisher": "Encyclopaedia Britannica"
+    },
+    "https://history.army.mil/html/reference/bonus/index.html": {
+      "url": "https://www.nps.gov/articles/bonus-expeditionary-forces-march-on-washington.htm",
+      "title": "Bonus Expeditionary Forces March on Washington",
+      "publisher": "National Park Service"
+    },
+    "https://www.smithsonianmag.com/history/the-bonus-army-130075741/": {
+      "url": "https://www.presidency.ucsb.edu/documents/letter-the-commissioners-the-district-columbia-providing-federal-troops-deal-with-the",
+      "title": "Letter Providing Federal Troops To Deal With the Bonus Marchers (1932)",
+      "publisher": "The American Presidency Project, UC Santa Barbara"
+    }
   },
-  "https://ahf.nuclearmuseum.org/ahf/history/demon-core/": {
-    "url": "https://ahf.nuclearmuseum.org/ahf/history/atomic-accidents/",
-    "title": "Atomic Accidents",
-    "publisher": "Atomic Heritage Foundation"
+  "castle-bravo-fallout-1954": {
+    "https://www.energy.gov/nnsa/nuclear-weapons-history": {
+      "url": "https://nsarchive.gwu.edu/briefing-book/nuclear-vault/2024-02-29/castle-bravo-70-worst-nuclear-test-us-history",
+      "title": "Castle BRAVO at 70: The Worst Nuclear Test in U.S. History",
+      "publisher": "National Security Archive, George Washington University"
+    },
+    "https://www.archives.gov/research/military/nuclear-test": {
+      "url": "https://www.nuclearweaponarchive.org/Usa/Tests/Castle.html",
+      "title": "Operation Castle",
+      "publisher": "The Nuclear Weapon Archive"
+    },
+    "https://www.nps.gov/articles/bikini.htm": {
+      "url": "https://ahf.nuclearmuseum.org/ahf/history/castle-bravo/",
+      "title": "Castle Bravo",
+      "publisher": "Atomic Heritage Foundation"
+    },
+    "https://www.justice.gov/civil/division/compensation-programs": {
+      "url": "https://www.justice.gov/civil/common/reca",
+      "title": "Radiation Exposure Compensation Act",
+      "publisher": "U.S. Department of Justice"
+    }
   },
-  "https://www.energy.gov/ehss/articles/criticality-safety": {
-    "url": "https://ahf.nuclearmuseum.org/ahf/profile/harry-daghlian/",
-    "title": "Harry Daghlian",
-    "publisher": "Atomic Heritage Foundation"
+  "cocoanut-grove-fire-1942": {
+    "https://www.nfpa.org/News-and-Research/Publications-and-media/NFPA-Journal/2012/November-December-2012/Cocoanut-Grove": {
+      "url": "https://www.archives.gov/publications/prologue/2017/fall/cocoanut-grove",
+      "title": "The Cocoanut Grove Revisited",
+      "publisher": "National Archives"
+    },
+    "https://www.smithsonianmag.com/history/cocoanut-grove-fire-180978445/": {
+      "url": "https://www.britannica.com/event/Cocoanut-Grove-Fire",
+      "title": "Cocoanut Grove Fire (1942)",
+      "publisher": "Encyclopaedia Britannica"
+    }
   },
-  "https://www.energy.gov/nnsa/nuclear-criticality-safety": {
-    "url": "https://ahf.nuclearmuseum.org/ahf/profile/louis-slotin/",
-    "title": "Louis Slotin",
-    "publisher": "Atomic Heritage Foundation"
+  "eastland-disaster-1915": {
+    "https://www.chicagohistory.org/eastland/": {
+      "url": "https://www.britannica.com/event/Eastland-disaster",
+      "title": "Eastland disaster",
+      "publisher": "Encyclopaedia Britannica"
+    },
+    "https://www.smithsonianmag.com/history/eastland-disaster-180978447/": {
+      "url": "https://www.smithsonianmag.com/history/eastland-disaster-killed-more-passengers-titanic-and-lusitania-why-has-it-been-forgotten-180953146/",
+      "title": "The Eastland Disaster Killed More Passengers Than the Titanic and the Lusitania",
+      "publisher": "Smithsonian Magazine"
+    }
   },
-  "https://www.archives.gov/research/military/ww2/23rd-headquarters": {
-    "url": "https://www.smithsonianmag.com/history/how-the-ghost-army-of-wwii-used-art-to-deceive-the-nazis-180980336/",
-    "title": "The Ghost Army of World War II Used Art to Deceive the Nazis",
-    "publisher": "Smithsonian Magazine"
+  "hanford-radiation-releases": {
+    "https://www.epa.gov/hanford": {
+      "url": "https://www.nps.gov/articles/000/the-green-run.htm",
+      "title": "The Green Run",
+      "publisher": "National Park Service"
+    },
+    "https://doh.wa.gov/community-and-environment/radiation/hanford": {
+      "url": "https://www.osti.gov/opennet/servlets/purl/16006547.pdf",
+      "title": "The Green Run (Hanford Environmental Dose Reconstruction fact sheet)",
+      "publisher": "U.S. Department of Energy (OSTI)"
+    },
+    "https://www.cdc.gov/nceh/radiation/hanford/": {
+      "url": "https://ehss.energy.gov/ohre/roadmap/achre/chap11_2.html",
+      "title": "Advisory Committee on Human Radiation Experiments: The Green Run",
+      "publisher": "U.S. Department of Energy (EHSS)"
+    }
   },
-  "https://www.nationalww2museum.org/war/articles/ghost-army": {
-    "url": "https://www.nationalww2museum.org/war/articles/ghost-army-canvas-and-camouflage",
-    "title": "The Ghost Army: Canvas and Camouflage",
-    "publisher": "The National WWII Museum"
+  "love-canal-1978": {
+    "https://www.atsdr.cdc.gov/hac/pha/lovecanal/lovecanal_p1.html": {
+      "url": "https://www.britannica.com/place/Love-Canal",
+      "title": "Love Canal",
+      "publisher": "Encyclopaedia Britannica"
+    }
   },
-  "https://www.dod.gov/pubs/foi/Reading_Room/NCB/fromdod.pdf": {
-    "url": "https://www.dncr.nc.gov/blog/2023/12/18/nuclear-mishap-f-70",
-    "title": "Nuclear Mishap (F-70): The 1961 Goldsboro B-52 Crash",
-    "publisher": "North Carolina Department of Natural and Cultural Resources"
+  "tuskegee-syphilis-study": {
+    "https://www.cdc.gov/tuskegee/index.html": {
+      "url": "https://www.cdc.gov/tuskegee/about/index.html",
+      "title": "About the Untreated Syphilis Study at Tuskegee",
+      "publisher": "Centers for Disease Control and Prevention"
+    },
+    "https://www.archives.gov/research/african-american/tuskegee": {
+      "url": "https://www.britannica.com/event/Tuskegee-syphilis-study",
+      "title": "Tuskegee syphilis study",
+      "publisher": "Encyclopaedia Britannica"
+    },
+    "https://www.hhs.gov/ohrp/education-and-outreach/about-research-involving-human-subjects/tuskegee/index.html": {
+      "url": "https://www.cdc.gov/museum/online/story-of-cdc/tuskegee/index.html",
+      "title": "PHS Study of Untreated Syphilis at Tuskegee (David J. Sencer CDC Museum)",
+      "publisher": "Centers for Disease Control and Prevention"
+    }
   },
-  "https://nsarchive.gwu.edu/briefing-book/nuclear-vault/2020-03-13/nuclear-weapons-accidents": {
-    "url": "https://nsarchive.gwu.edu/briefing-book/nuclear-vault/2022-11-18/new-declassifications-nuclear-weapons-safety-and-security",
-    "title": "New Declassifications on Nuclear Weapons Safety and Security",
-    "publisher": "National Security Archive, George Washington University"
+  "greenbrier-bunker": {
+    "https://www.greenbrier.com/the-bunker": {
+      "url": "https://ahf.nuclearmuseum.org/ahf/history/greenbrier-bunker/",
+      "title": "Greenbrier Bunker",
+      "publisher": "Atomic Heritage Foundation"
+    },
+    "https://www.washingtonpost.com/archive/": {
+      "url": "https://www.smithsonianmag.com/history/the-town-that-kept-its-nuclear-bunker-a-secret-for-three-decades-180984107/",
+      "title": "The Town That Kept Its Nuclear Bunker a Secret for Three Decades",
+      "publisher": "Smithsonian Magazine"
+    }
   },
-  "https://www.masshist.org/objects/2019january": {
-    "url": "https://www.masshist.org/events/great-boston-molasses-flood-1919",
-    "title": "The Great Boston Molasses Flood of 1919",
-    "publisher": "Massachusetts Historical Society"
+  "hartford-circus-fire-1944": {
+    "https://libguides.ctstatelibrary.org/hartfordcircusfire": {
+      "url": "https://connecticuthistory.org/the-hartford-circus-fire/",
+      "title": "The Hartford Circus Fire",
+      "publisher": "Connecticut History (CT Humanities)"
+    },
+    "https://www.smithsonianmag.com/history/hartford-circus-fire-180978446/": {
+      "url": "https://www.smithsonianmag.com/history/how-a-deadly-circus-fire-on-the-day-the-clowns-cried-traumatized-a-community-and-led-to-lasting-safety-reforms-180986888/",
+      "title": "How a Deadly Circus Fire on the 'Day the Clowns Cried' Led to Lasting Safety Reforms",
+      "publisher": "Smithsonian Magazine"
+    }
   },
-  "https://guides.bpl.org/molasses-flood": {
-    "url": "https://www.britannica.com/topic/Great-Molasses-Flood",
-    "title": "Great Molasses Flood",
-    "publisher": "Encyclopaedia Britannica"
+  "japanese-balloon-bomb-oregon-1945": {
+    "https://www.archives.gov/publications/prologue/2005/winter/balloon-bombs.html": {
+      "url": "https://ahf.nuclearmuseum.org/ahf/history/japanese-balloon-bombs-fu-go/",
+      "title": "Japanese Balloon Bombs 'Fu-Go'",
+      "publisher": "Atomic Heritage Foundation"
+    },
+    "https://airandspace.si.edu/stories/editorial/japanese-balloon-bombs": {
+      "url": "https://www.oregonencyclopedia.org/articles/balloon_bombs/",
+      "title": "Balloon Bombs",
+      "publisher": "The Oregon Encyclopedia"
+    },
+    "https://www.fs.usda.gov/detail/fremontwinema/specialplaces/": {
+      "url": "https://www.smithsonianmag.com/history/1945-japanese-balloon-bomb-killed-six-americansfive-them-children-oregon-180972259/",
+      "title": "In 1945, a Japanese Balloon Bomb Killed Six Americans, Five of Them Children, in Oregon",
+      "publisher": "Smithsonian Magazine"
+    }
   },
-  "https://airandspace.si.edu/stories/editorial/great-moon-hoax": {
-    "url": "https://www.smithsonianmag.com/smithsonian-institution/great-moon-hoax-was-simply-sign-its-time-180955761/",
-    "title": "The Great Moon Hoax Was Simply a Sign of Its Time",
-    "publisher": "Smithsonian Magazine"
+  "ludlow-massacre-1914": {
+    "https://www.nps.gov/places/ludlow-tent-colony-site.htm": {
+      "url": "https://www.nps.gov/articles/000/war-in-the-coalfields-the-ludlow-massacre-and-its-impact-on-the-eight-hour-workday.htm",
+      "title": "War in the Coalfields: The Ludlow Massacre",
+      "publisher": "National Park Service"
+    },
+    "https://umwa.org/ludlow/": {
+      "url": "https://www.britannica.com/event/Ludlow-Massacre",
+      "title": "Ludlow Massacre",
+      "publisher": "Encyclopaedia Britannica"
+    }
   },
-  "https://www.smithsonianmag.com/history/the-johnstown-flood-of-1889-108986555/": {
-    "url": "https://www.britannica.com/event/Johnstown-flood",
-    "title": "Johnstown flood",
-    "publisher": "Encyclopaedia Britannica"
+  "move-bombing-1985": {
+    "https://www.phila.gov/programs/move-commission/": {
+      "url": "https://philadelphiaencyclopedia.org/essays/move/",
+      "title": "MOVE",
+      "publisher": "Encyclopedia of Greater Philadelphia"
+    },
+    "https://www.pbs.org/wgbh/americanexperience/features/philadelphia-move-bombing/": {
+      "url": "https://www.pbs.org/newshour/show/the-largely-forgotten-history-of-philadelphias-police-bombing-of-black-organization-move",
+      "title": "The Largely Forgotten History of Philadelphia's Police Bombing of MOVE",
+      "publisher": "PBS NewsHour"
+    },
+    "https://www.npr.org/series/103537450/move": {
+      "url": "https://collaborativehistory.gse.upenn.edu/stories/move-osage-avenue",
+      "title": "MOVE on Osage Avenue",
+      "publisher": "West Philadelphia Collaborative History (University of Pennsylvania)"
+    },
+    "https://www.smithsonianmag.com/history/philadelphia-move-bombing-180975647/": {
+      "url": "https://digitalcommons.wku.edu/theses/3650",
+      "title": "The 1985 MOVE Bombing: A Study in Perspectives",
+      "publisher": "Western Kentucky University"
+    }
   },
-  "https://www.smithsonianmag.com/history/the-1937-new-london-texas-school-explosion-152012041/": {
-    "url": "https://response.restoration.noaa.gov/about/media/todays-responders-1937-texas-tragedy-still-carries-lessons-avoiding-disaster.html",
-    "title": "For Today's Responders, 1937 Texas Tragedy Still Carries Lessons for Avoiding Disaster",
-    "publisher": "NOAA Office of Response and Restoration"
+  "teapot-dome-scandal-1920s": {
+    "https://www.archives.gov/milestone-documents/teapot-dome-scandal": {
+      "url": "https://www.fjc.gov/sites/default/files/trials/Teapot%20Dome%20Student%20Handout.pdf",
+      "title": "Teapot Dome (case materials)",
+      "publisher": "Federal Judicial Center"
+    },
+    "https://www.doi.gov/heritage/teapot-dome": {
+      "url": "https://www.history.com/articles/teapot-dome-scandal",
+      "title": "Teapot Dome Scandal: Definition, Dates & Effects",
+      "publisher": "HISTORY"
+    }
   },
-  "https://nsarchive.gwu.edu/briefing-book/intelligence/2019-06-11/cias-house-horrors": {
-    "url": "https://www.britannica.com/topic/MKUltra",
-    "title": "MKUltra",
-    "publisher": "Encyclopaedia Britannica"
+  "tulsa-race-massacre-1921": {
+    "https://www.okhistory.org/learn/tulsa-race-massacre": {
+      "url": "https://www.okhistory.org/learn/tulsaracemassacre",
+      "title": "The Tulsa Race Massacre",
+      "publisher": "Oklahoma Historical Society"
+    },
+    "https://www.justice.gov/crt/tulsa-race-massacre": {
+      "url": "https://www.okhistory.org/publications/enc/entry.php?entry=TU013",
+      "title": "Tulsa Race Massacre (Encyclopedia of Oklahoma History and Culture)",
+      "publisher": "Oklahoma Historical Society"
+    },
+    "https://www.archives.gov/research/african-american/tulsa": {
+      "url": "https://www.tulsahistory.org/exhibit/1921-tulsa-race-massacre/",
+      "title": "1921 Tulsa Race Massacre",
+      "publisher": "Tulsa Historical Society & Museum"
+    }
   },
-  "https://www.history.navy.mil/browse-by-topic/wars-conflicts-and-operations/world-war-ii/1944/port-chicago.html": {
-    "url": "https://www.navy.mil/Press-Office/Press-Releases/display-pressreleases/Article/3841792/the-secretary-of-the-navy-exonerates-256-defendants-from-1944-port-chicago-gene/",
-    "title": "Secretary of the Navy Exonerates 256 Defendants from 1944 Port Chicago Courts-Martial",
-    "publisher": "U.S. Navy"
+  "poison-squad-wiley": {
+    "https://www.fda.gov/about-fda/histories-fda/harvey-washington-wiley": {
+      "url": "https://www.britannica.com/biography/Harvey-W-Wiley",
+      "title": "Harvey W. Wiley",
+      "publisher": "Encyclopaedia Britannica"
+    },
+    "https://www.archives.gov/milestone-documents/pure-food-and-drug-act": {
+      "url": "https://www.pbs.org/wgbh/americanexperience/features/poison-squad-dr-harvey-wiley-father-pure-food/",
+      "title": "Dr. Harvey Wiley: Father of Pure Food",
+      "publisher": "PBS American Experience"
+    },
+    "https://www.smithsonianmag.com/history/the-poison-squad-180955074/": {
+      "url": "https://cen.acs.org/articles/84/i38/Poison-SquadsTested-Chemical-Preservatives.html",
+      "title": "'Poison Squads' Tested Chemical Preservatives",
+      "publisher": "Chemical & Engineering News (American Chemical Society)"
+    },
+    "https://www.usda.gov/about-usda/general-information/history": {
+      "url": "https://www.fda.gov/about-fda/fda-history",
+      "title": "FDA History",
+      "publisher": "U.S. Food and Drug Administration"
+    }
   },
-  "https://www.archives.gov/research/african-americans/ww2/port-chicago": {
-    "url": "https://www.nps.gov/poch/learn/historyculture/the-mutiny-trial.htm",
-    "title": "The Mutiny Trial",
-    "publisher": "National Park Service"
+  "lake-peigneur-1980": {
+    "https://www.smithsonianmag.com/smart-news/the-day-a-louisiana-lake-disappeared-180949899/": {
+      "url": "https://www.cntraveler.com/stories/2016-07-11/how-louisianas-lake-peigneur-became-200-feet-deep-in-an-instant",
+      "title": "How Louisiana's Lake Peigneur Became 200 Feet Deep in an Instant",
+      "publisher": "Condé Nast Traveler"
+    },
+    "https://www.nationalgeographic.com/science/article/lake-peigneur-disaster": {
+      "url": "https://www.upi.com/Archives/1980/11/21/Salt-company-sues-over-drained-lake-ruined-saltmine/2980343630800/",
+      "title": "Salt Company Sues Over Drained Lake, Ruined Salt Mine",
+      "publisher": "United Press International (Archives)"
+    }
   },
-  "https://www.nps.gov/subjects/geology/dam-failures.htm": {
-    "url": "https://damfailures.org/case-study/st-francis-dam-california-1928",
-    "title": "St. Francis Dam (California, 1928): Failures and Lessons Learned",
-    "publisher": "Association of State Dam Safety Officials"
+  "sultana-disaster-1865": {
+    "https://www.nps.gov/articles/sultana-disaster.htm": {
+      "url": "https://tennesseeencyclopedia.net/entries/sultana-disaster-of-1865/",
+      "title": "Sultana Disaster of 1865",
+      "publisher": "Tennessee Encyclopedia"
+    }
   },
-  "https://www.history.navy.mil/content/history/nhhc/research/histories/ship-histories/danfs/i/indianapolis-ca-35.html": {
-    "url": "https://www.defense.gov/News/Feature-Stories/Story/Article/4251122/worst-navy-disaster-at-sea-led-to-safety-changes/",
-    "title": "Worst Navy Disaster at Sea Led to Safety Changes",
-    "publisher": "U.S. Department of Defense"
+  "triangle-shirtwaist-fire-1911": {
+    "https://www.dol.gov/general/aboutdol/history/triangle": {
+      "url": "https://www.osha.gov/aboutosha/40-years/trianglefactoryfireaccount",
+      "title": "The Triangle Shirtwaist Factory Fire Account",
+      "publisher": "Occupational Safety and Health Administration"
+    }
   },
-  "https://www.nationalww2museum.org/war/articles/uss-indianapolis": {
-    "url": "https://www.pacificwarmuseum.org/learn/articles/indianapolis",
-    "title": "The Life and Death of the USS Indianapolis",
-    "publisher": "National Museum of the Pacific War"
+  "wilmington-coup-1898": {
+    "https://www.dncr.nc.gov/1898-wilmington": {
+      "url": "https://www.dncr.nc.gov/1898-wilmington-coup",
+      "title": "1898 Wilmington Coup",
+      "publisher": "North Carolina Department of Natural and Cultural Resources"
+    }
+  },
+  "operation-northwoods-1962": {
+    "https://nsarchive.gwu.edu/posting/northwoods": {
+      "url": "https://nsarchive2.gwu.edu/news/20010430/",
+      "title": "Pentagon Proposed Pretexts for Cuba Invasion in 1962",
+      "publisher": "National Security Archive, George Washington University"
+    }
+  },
+  "osage-murders-reign-of-terror": {
+    "https://www.fbi.gov/history/famous-cases/osage-murders": {
+      "url": "https://www.fbi.gov/history/cases-and-criminals/osage-murders-case",
+      "title": "Osage Murders Case",
+      "publisher": "Federal Bureau of Investigation"
+    },
+    "https://www.osagenation-nsn.gov/who-we-are/history": {
+      "url": "https://digitalprairieok.net/osage-murders/",
+      "title": "Reign of Terror: The Osage Murders",
+      "publisher": "Oklahoma Digital Prairie (Oklahoma Department of Libraries)"
+    },
+    "https://www.archives.gov/research/native-americans/osage": {
+      "url": "https://www.pbs.org/newshour/arts/the-forgotten-murders-of-the-osage-people-for-the-oil-beneath-their-land",
+      "title": "The Forgotten Murders of the Osage People for the Oil Beneath Their Land",
+      "publisher": "PBS NewsHour"
+    }
+  },
+  "wounded-knee-1973": {
+    "https://www.fbi.gov/history/famous-cases/wounded-knee": {
+      "url": "https://www.fbi.gov/history/field-office-histories/minneapolis",
+      "title": "FBI Minneapolis History (Wounded Knee and Pine Ridge)",
+      "publisher": "Federal Bureau of Investigation"
+    },
+    "https://www.nps.gov/wica/learn/historyculture/wounded-knee.htm": {
+      "url": "https://www.sdhspress.com/journal/south-dakota-history-29-3/spontaneous-combustion-prelude-to-wounded-knee-1973/vol-29-no-3-spontaneous-combustion.pdf",
+      "title": "Spontaneous Combustion: Prelude to Wounded Knee 1973",
+      "publisher": "South Dakota Historical Society Press"
+    },
+    "https://www.usmarshals.gov/history/wounded-knee": {
+      "url": "https://www.usmarshals.gov/who-we-are/history/historical-reading-room/incident-wounded-knee",
+      "title": "Incident at Wounded Knee",
+      "publisher": "U.S. Marshals Service"
+    }
+  },
+  "bonus-army-1932": {
+    "https://www.nps.gov/articles/bonus-army.htm": {
+      "url": "https://www.history.com/this-day-in-history/july-28/bonus-marchers-evicted-by-u-s-army",
+      "title": "Bonus Marchers Evicted by U.S. Army (July 28, 1932)",
+      "publisher": "HISTORY"
+    }
+  },
+  "minuteman-missile-accidents": {
+    "https://nsarchive.gwu.edu/briefing-book/nuclear-vault": {
+      "url": "https://www.britannica.com/technology/Minuteman-missile",
+      "title": "Minuteman missile",
+      "publisher": "Encyclopaedia Britannica"
+    }
+  },
+  "peshtigo-fire-1871": {
+    "https://www.weather.gov/grb/peshtigo": {
+      "url": "https://www.weather.gov/grb/peshtigofire",
+      "title": "The Peshtigo Fire",
+      "publisher": "National Weather Service (Green Bay)"
+    },
+    "https://www.wisconsinhistory.org/Records/Article/CS3720": {
+      "url": "https://climatology.nelson.wisc.edu/wisconsin-peshtigo-fire/",
+      "title": "The Peshtigo Fire: America's Deadliest Wildfire",
+      "publisher": "Wisconsin State Climatology Office (University of Wisconsin–Madison)"
+    }
+  },
+  "titan-ii-damascus-1980": {
+    "https://www.energy.gov/nnsa/nuclear-weapons-history": {
+      "url": "https://encyclopediaofarkansas.net/entries/titan-ii-missile-explosion-2543/",
+      "title": "Titan II Missile Explosion (1980)",
+      "publisher": "Encyclopedia of Arkansas"
+    },
+    "https://www.pbs.org/wgbh/americanexperience/features/command-and-control/": {
+      "url": "https://www.pbs.org/wgbh/americanexperience/films/command-and-control/",
+      "title": "Command and Control",
+      "publisher": "PBS American Experience"
+    },
+    "https://www.nps.gov/tiup/": {
+      "url": "https://encyclopediaofarkansas.net/entries/titan-ii-missiles-2266/",
+      "title": "Titan II Missiles",
+      "publisher": "Encyclopedia of Arkansas"
+    }
+  },
+  "operation-paperclip": {
+    "https://www.nasa.gov/history/operation-paperclip/": {
+      "url": "https://www.britannica.com/event/Project-Paperclip",
+      "title": "Project Paperclip",
+      "publisher": "Encyclopaedia Britannica"
+    },
+    "https://www.archives.gov/research/holocaust/finding-aid/military/records.html": {
+      "url": "https://www.nationalgeographic.com/history/article/operation-paperclip",
+      "title": "How Operation Paperclip Brought Nazi Scientists to the U.S.",
+      "publisher": "National Geographic"
+    },
+    "https://airandspace.si.edu/stories/editorial/von-braun": {
+      "url": "https://history.nasa.gov/monograph10/vonbraun.html",
+      "title": "Wernher von Braun",
+      "publisher": "NASA History Office"
+    }
   }
 }
