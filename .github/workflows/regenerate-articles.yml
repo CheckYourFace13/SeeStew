@@ -1,0 +1,53 @@
+name: Regenerate Articles
+
+# Manually re-run existing articles through the hardened generation pipeline
+# (source-grounded, anti-hallucination prompt). Runs in CI where the OpenRouter
+# secret lives, then commits the results so the deploy workflow ships them.
+
+on:
+  workflow_dispatch:
+    inputs:
+      slugs:
+        description: "Comma-separated slugs, or 'all-template' for the full AI-template set"
+        required: true
+        default: "all-template"
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Regenerate articles
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ secrets.OPENROUTER_MODEL }}
+          REGEN_SLUGS: ${{ github.event.inputs.slugs }}
+        run: node scripts/regenerate-articles.mjs
+
+      - name: Validate articles
+        run: npm run validate:articles
+
+      - name: Check story images
+        run: npm run check:story-images
+
+      - name: Commit regenerated articles
+        run: |
+          git config user.name "SeeStew Bot"
+          git config user.email "bot@seestew.com"
+          git add content/articles/
+          if git diff --cached --quiet; then
+            echo "No article changes to commit."
+            exit 0
+          fi
+          git commit -m "Regenerate articles through hardened, source-grounded pipeline"
+          git push
