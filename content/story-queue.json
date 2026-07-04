@@ -1423,9 +1423,9 @@
       "imageSearchTerms": [
         "Haymarket affair 1886 Chicago labor bomb"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "haymarket-affair-1886",
+      "publishedAt": "2026-07-04T11:38:15.135Z"
     },
     {
       "id": "whiskey-rebellion-1794",
