@@ -13,15 +13,16 @@ export default function EditorialPage() {
   return (
     <div className="page-shell-narrow">
       <h1 className="font-heading text-4xl font-bold text-ink">Editorial Standards</h1>
-      <p className="mt-2 text-sm text-ink-muted">Last updated: May 26, 2026</p>
+      <p className="mt-2 text-sm text-ink-muted">Last updated: July 12, 2026</p>
 
       <div className="prose-history mt-8 space-y-6">
         <section>
           <h2>What we publish</h2>
           <p>
-            SeeStew publishes researched articles and video documentaries about documented events in
-            American history and politics. Every story on {siteConfig.url} is written for a general
-            audience and grounded in named, linked sources.
+            SeeStew publishes hard-to-believe true stories from American history — researched
+            articles first, with companion video when available. Every story on {siteConfig.url} is
+            written for a general audience and grounded in named, linked sources. We aim to publish
+            new documented stories regularly so readers always have fresh, original content.
           </p>
         </section>
 
@@ -47,8 +48,8 @@ export default function EditorialPage() {
           <h2>Human review</h2>
           <p>
             Stories are drafted, expanded, and checked against our source list before publication.
-            Topics are chosen for historical significance and documented evidence, not for
-            clickbait alone.
+            Topics are chosen for historical significance and documented evidence — strange enough
+            to surprise you, solid enough to defend.
           </p>
         </section>
 
@@ -67,8 +68,9 @@ export default function EditorialPage() {
         <section>
           <h2>Advertising</h2>
           <p>
-            SeeStew displays ads through Google AdSense. Advertising does not influence which
-            stories we publish or how we report them. See our{" "}
+            SeeStew may display ads through Google AdSense on full story pages. Advertising does not
+            influence which stories we publish or how we report them. Ads are not placed on thin
+            listing or embed-only screens. See our{" "}
             <Link href="/privacy" className="text-brand-mid underline">
               Privacy Policy
             </Link>{" "}
@@ -77,13 +79,17 @@ export default function EditorialPage() {
         </section>
 
         <section>
-          <h2>About the channel</h2>
+          <h2>About the project</h2>
           <p>
             Learn more on our{" "}
             <Link href="/about" className="text-brand-mid underline">
               About
             </Link>{" "}
-            page and watch long-form episodes on{" "}
+            page, start with{" "}
+            <Link href="/articles" className="text-brand-mid underline">
+              Stories
+            </Link>
+            , or watch companion episodes on{" "}
             <Link href="/videos" className="text-brand-mid underline">
               Videos
             </Link>

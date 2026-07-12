@@ -17,7 +17,10 @@
     "fetch:story-images": "node scripts/fetch-all-story-images.mjs",
     "regenerate:articles": "node scripts/regenerate-articles.mjs",
     "sanitize:articles": "node scripts/sanitize-article-metadata.mjs",
-    "check:ads-txt": "node scripts/check-ads-txt.mjs"
+    "check:ads-txt": "node scripts/check-ads-txt.mjs",
+    "opusclip:daily": "node scripts/opusclip-daily-post.mjs",
+    "opusclip:accounts": "node scripts/opusclip-daily-post.mjs --list-accounts",
+    "opusclip:dry-run": "node scripts/opusclip-daily-post.mjs --dry-run"
   },
   "dependencies": {
     "next": "^15.3.2",

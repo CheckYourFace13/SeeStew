@@ -31,7 +31,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `Explore American History & Politics on ${siteConfig.name}`,
+    default: `Hard-to-Believe True American History Stories | ${siteConfig.name}`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `Explore American History & Politics on ${siteConfig.name}`,
+    title: `Hard-to-Believe True American History Stories | ${siteConfig.name}`,
     description: siteConfig.description,
     images: [
       {

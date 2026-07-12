@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
 import { StoryCard } from "@/components/StoryCard";
 import { getArticlesForStoriesPage } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
@@ -27,21 +26,11 @@ export default async function ArticlesPage() {
           Unbelievable True Stories from American History
         </h1>
         <p className="mt-4 text-lg text-ink-muted">
-          Strange, shocking, and fascinating moments from America&apos;s past — forgotten disasters,
+          Hard-to-believe, fully documented moments from America&apos;s past — forgotten disasters,
           political twists, presidential oddities, and hidden history that sounds made up (but
-          isn&apos;t). Watch the full story on{" "}
-          <Link href="/videos" className="text-brand-mid underline">
-            our videos
-          </Link>{" "}
-          or grab a quick hit on{" "}
-          <Link href="/shorts" className="text-brand-mid underline">
-            Shorts
-          </Link>
-          .
+          isn&apos;t). Every story lists named sources. New articles publish regularly.
         </p>
       </header>
-
-      <AdSlot format="horizontal" label="Advertisement" />
 
       {articles.length === 0 ? (
         <p className="mt-10 text-ink-muted">

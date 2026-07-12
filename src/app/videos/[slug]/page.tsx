@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { AdSlot } from "@/components/AdSlot";
 import { JsonLd } from "@/components/JsonLd";
 import { MarkdownContent } from "@/components/MarkdownContent";
 import { SocialLinks } from "@/components/SocialLinks";
@@ -76,15 +75,18 @@ export default async function VideoWatchPage({ params }: Props) {
       <div className="mt-8 grid gap-10 lg:grid-cols-[1fr_300px]">
         <div>
           <VideoPlayer videoId={video.id} title={video.title} />
-          <AdSlot className="mt-8" format="rectangle" />
           <div className="prose-history mt-10">
             <h2 className="!mt-0 font-heading text-2xl font-bold">Notes</h2>
             <MarkdownContent content={editorial} />
+            <p className="mt-6">
+              <Link href="/articles" className="text-brand-mid underline">
+                Prefer the full researched article? Browse Stories →
+              </Link>
+            </p>
           </div>
         </div>
 
         <aside className="space-y-8">
-          <AdSlot format="vertical" label="Advertisement" />
           {related.length > 0 && (
             <div>
               <h2 className="font-heading text-lg font-bold text-ink">More episodes</h2>

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
 import { FaqSection } from "@/components/FaqSection";
 import { InstagramFeed } from "@/components/InstagramFeed";
 import { JsonLd } from "@/components/JsonLd";
@@ -82,7 +81,11 @@ export default function SocialPage() {
 
       <FaqSection faqs={socialFaqs} title="Quick answers" />
 
-      <AdSlot className="mt-16" />
+      <p className="mt-12 text-center">
+        <Link href="/articles" className="btn-primary">
+          Read hard-to-believe true stories →
+        </Link>
+      </p>
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { AdSlot } from "@/components/AdSlot";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { getAllArticles, getArticlesByCategory } from "@/lib/articles";
@@ -80,16 +79,14 @@ export default async function TopicCategoryPage({ params }: Props) {
         </p>
       )}
 
-      <AdSlot className="mt-8" format="horizontal" label="Advertisement" />
-
       <p className="mt-6 text-ink-muted">
         {articles.length} stor{articles.length === 1 ? "y" : "ies"} with citations.{" "}
-        <Link href="/videos" className="text-brand-mid underline">
-          Watch videos
+        <Link href="/articles" className="text-brand-mid underline">
+          All stories
         </Link>{" "}
         ·{" "}
-        <Link href="/shorts" className="text-brand-mid underline">
-          Shorts
+        <Link href="/videos" className="text-brand-mid underline">
+          Watch videos
         </Link>
       </p>
 

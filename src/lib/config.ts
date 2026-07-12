@@ -20,7 +20,7 @@ export const siteConfig = {
   name: "SeeStew",
   tagline: "American History & Politics",
   description:
-    "SeeStew — unbelievable true stories from American history. Watch long-form videos, read shocking hidden history, and follow daily clips on YouTube, Instagram, and TikTok.",
+    "SeeStew publishes hard-to-believe true stories from American history — researched daily articles with named sources, plus documentaries and short clips for the deeper cut.",
   url: "https://seestew.com",
   logo: "/logo.png",
   logoLight: "/logo-light.png",

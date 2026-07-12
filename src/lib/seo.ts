@@ -147,27 +147,27 @@ export const homeFaqs: FaqItem[] = [
   {
     question: "What is SeeStew?",
     answer:
-      "SeeStew tells unbelievable true stories from American history. Full videos are on YouTube at youtube.com/@SeeStew. Short clips are on Instagram and TikTok at @see.stew.",
+      "SeeStew is a daily American history site for hard-to-believe true stories — disasters, scandals, and forgotten events that sound fictional but are documented. Read researched articles on seestew.com; watch companion videos on YouTube at youtube.com/@SeeStew.",
   },
   {
-    question: "Where can I watch SeeStew for free?",
+    question: "Are the stories real?",
     answer:
-      "On seestew.com, youtube.com/@SeeStew, instagram.com/see.stew, and tiktok.com/@see.stew.",
+      "Yes. Every article is grounded in named, linked sources — archives, museums, academic publishers, and established news organizations — listed at the bottom of each story.",
+  },
+  {
+    question: "How often do new stories publish?",
+    answer:
+      "SeeStew publishes new researched history articles regularly, aiming for daily updates. Browse the latest at seestew.com/articles.",
   },
   {
     question: "What topics does SeeStew cover?",
     answer:
-      "US presidents, wars, scandals, colonial history, political fights, crime, exploration, and shocking forgotten events — read and watch on seestew.com.",
-  },
-  {
-    question: "Does SeeStew cite sources?",
-    answer:
-      "SeeStew stories cover strange disasters, political scandals, presidential oddities, and hidden U.S. history with named sources at the bottom of each article.",
+      "US presidents, wars, scandals, colonial history, political fights, crime, exploration, and shocking forgotten events — with full written stories and optional video on seestew.com.",
   },
   {
     question: "Where can I read strange American history facts?",
     answer:
-      "Browse unbelievable American history stories and strange U.S. history facts at seestew.com/articles and seestew.com/topics.",
+      "Start at seestew.com/articles for unbelievable American history stories, or browse by subject at seestew.com/topics.",
   },
 ];
 

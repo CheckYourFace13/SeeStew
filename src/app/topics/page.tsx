@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
 import { JsonLd } from "@/components/JsonLd";
 import { getAllArticles, getAllCategories } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
@@ -35,12 +34,10 @@ export default function TopicsPage() {
       <JsonLd data={itemList} />
       <h1 className="font-heading text-4xl font-bold text-ink">American History Topics</h1>
       <p className="mt-3 max-w-3xl text-lg text-ink-muted">
-        Explore unbelievable American history by subject — forgotten disasters, presidential
+        Explore hard-to-believe American history by subject — forgotten disasters, presidential
         drama, Revolutionary War twists, and shocking political history. Strange facts and true
-        stories you will want to share.
+        stories with named sources.
       </p>
-
-      <AdSlot className="mt-8" format="horizontal" label="Advertisement" />
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {topicHubs.map((hub) => {

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { AdSlot } from "@/components/AdSlot";
 import { JsonLd } from "@/components/JsonLd";
 import { MarkdownContent } from "@/components/MarkdownContent";
 import { SocialLinks } from "@/components/SocialLinks";
@@ -97,10 +96,13 @@ export default async function ShortWatchPage({ params }: Props) {
         <VideoPlayer videoId={video.id} title={video.title} />
       </div>
 
-      <AdSlot className="mt-8" format="rectangle" />
-
       <div className="prose-history mt-10">
         <MarkdownContent content={editorial} />
+        <p className="mt-6">
+          <Link href="/articles" className="text-brand-mid underline">
+            Read the full researched stories →
+          </Link>
+        </p>
       </div>
 
       {related.length > 0 && (

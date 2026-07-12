@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
 import { JsonLd } from "@/components/JsonLd";
 import { SocialInlineLink } from "@/components/SocialIcons";
 import { VideoCard } from "@/components/VideoCard";
@@ -33,14 +32,15 @@ export default async function VideosPage() {
           Interesting Stories from American History
         </h1>
         <p className="mt-4 text-lg text-ink-muted">
-          The wild, weird, and unforgettable side of the American past — told in full episodes you
-          can watch right here. Bizarre disasters, political meltdowns, near-misses, and moments
-          that sound like fiction until you hear the whole story. Also on{" "}
+          Companion documentaries for the same hard-to-believe true stories we publish in writing.
+          Prefer the researched article? Start with{" "}
+          <Link href="/articles" className="text-brand-mid underline">
+            Stories
+          </Link>
+          . Also on{" "}
           <SocialInlineLink platform="youtube">@SeeStew</SocialInlineLink>.
         </p>
       </header>
-
-      <AdSlot format="horizontal" label="Advertisement" />
 
       {videos.length === 0 ? (
         <p className="mt-10 text-ink-muted">

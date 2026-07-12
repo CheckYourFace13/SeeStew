@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
 import { SocialInlineLink } from "@/components/SocialIcons";
 import { VideoCard } from "@/components/VideoCard";
 import { siteConfig } from "@/lib/config";
@@ -11,7 +10,7 @@ export const revalidate = 1800;
 export const metadata: Metadata = {
   title: "American History Shorts — SeeStew",
   description:
-    "Quick American history clips and facts from SeeStew — YouTube Shorts synced here, plus @see.stew on Instagram and TikTok.",
+    "Quick American history clips from SeeStew — companion shorts for our researched hard-to-believe true stories.",
   alternates: { canonical: `${siteConfig.url}/shorts` },
 };
 
@@ -27,14 +26,13 @@ export default async function ShortsPage() {
           <SocialInlineLink platform="youtube" href={siteConfig.social.youtubeShortsUrl}>
             @SeeStew Shorts
           </SocialInlineLink>
-          . Same stories
-          also post on{" "}
-          <SocialInlineLink platform="instagram">Instagram</SocialInlineLink> and{" "}
-          <SocialInlineLink platform="tiktok">TikTok</SocialInlineLink>.
+          . For the full researched write-up, read our{" "}
+          <Link href="/articles" className="text-brand-mid underline">
+            Stories
+          </Link>
+          .
         </p>
       </header>
-
-      <AdSlot format="horizontal" />
 
       {shorts.length === 0 ? (
         <p className="mt-10 text-ink-muted">
