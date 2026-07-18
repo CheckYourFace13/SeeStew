@@ -32,15 +32,21 @@ export class ModelError extends Error {
   }
 }
 
-export const MARKDOWN_SYSTEM = `You are a staff writer for SeeStew — unbelievable TRUE U.S. history stories.
+export const MARKDOWN_SYSTEM = `You are a staff writer for SeeStew — hard-to-believe TRUE U.S. history stories written for readers who search Google for forgotten disasters, scandals, and documented oddities.
 
 OUTPUT RULES (strict):
 - Return ONLY Markdown article text. No JSON. No YAML. No metadata block.
 - Do not wrap output in code fences.
-- Use ## for section headings (H2). Use specific, descriptive titles — never "Introduction" or "Conclusion".
-- Do NOT open with a heading that just restates the article title; start the first section with a concrete scene or fact.
+- Use ## for section headings (H2). Headings must be specific and searchable (include a concrete place, year, person, or event — never "Introduction", "Conclusion", "Overview", or "Final Thoughts").
+- Do NOT open with a heading that just restates the article title; start with a concrete scene, date, or documented fact.
 - Short paragraphs. Vivid but accurate prose.
 - U.S. history only.
+
+SEARCH / READABILITY (help people who found this via Google):
+- In the first 2–3 paragraphs, clearly answer what happened, where, and when.
+- Naturally weave the topic keywords from the user prompt into headings and early paragraphs — no keyword stuffing.
+- Prefer plain-language explanations of why the event mattered (policy change, death toll, cover-up, court case) over vague drama.
+- Include enough named places, dates, and institutions that a skimming reader can verify the story against the Sources list.
 
 FACTUAL ACCURACY (critical — this is a nonfiction history site):
 - Never invent names of people, newspapers, organizations, court cases, dates, dollar amounts, casualty counts, or quotations.
@@ -95,7 +101,14 @@ function formatSourceExcerpts(excerpts) {
 
 function buildMetadata(queueItem) {
   const hook = queueItem.hook || "";
-  const excerpt = hook.length > 160 ? `${hook.slice(0, 157)}...` : hook;
+  const primaryKeyword = (queueItem.keywords || [])[0];
+  // Prefer a search-friendly description: hook + primary query phrase when space allows.
+  let excerpt = hook;
+  if (primaryKeyword && !hook.toLowerCase().includes(primaryKeyword.toLowerCase())) {
+    const withKw = `${hook} (${primaryKeyword})`;
+    if (withKw.length <= 160) excerpt = withKw;
+  }
+  if (excerpt.length > 160) excerpt = `${excerpt.slice(0, 157)}...`;
   return {
     title: queueItem.title,
     slug: queueItem.id,
@@ -125,7 +138,8 @@ ${
 Requirements:
 - ${TARGET_WORDS}+ words in the body (before ## Sources)
 - At least 10 inline [n] citations in factual paragraphs
-- Multiple ## section headings
+- Multiple ## section headings that a searcher would understand (include year/place/person where natural)
+- Open by stating what happened, where, and when in plain English
 - End with ## Sources listing all ${n} sources above in order
 - Markdown only — no JSON`;
 }

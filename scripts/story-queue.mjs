@@ -1,22 +1,38 @@
 import { readFileSync, writeFileSync, existsSync } from "fs";
 import { join } from "path";
 import { QUEUE_SEED } from "./story-queue-seed.mjs";
+import { QUEUE_BATCH_2 } from "./story-queue-batch-2.mjs";
 
 export const QUEUE_PATH = join(process.cwd(), "content", "story-queue.json");
 
+/** All curated seed batches — merge by id so new batches refill an exhausted queue. */
+export const ALL_QUEUE_SEEDS = [...QUEUE_SEED, ...QUEUE_BATCH_2];
+
 export function loadQueue() {
   if (!existsSync(QUEUE_PATH)) {
-    return { version: 1, items: [...QUEUE_SEED] };
+    return { version: 1, items: ALL_QUEUE_SEEDS.map((i) => ({ ...i })) };
   }
   const data = JSON.parse(readFileSync(QUEUE_PATH, "utf-8"));
   if (!data.items?.length) {
-    data.items = [...QUEUE_SEED];
+    data.items = ALL_QUEUE_SEEDS.map((i) => ({ ...i }));
   }
   return data;
 }
 
 export function saveQueue(queue) {
   writeFileSync(QUEUE_PATH, JSON.stringify(queue, null, 2), "utf-8");
+}
+
+export function mergeMissingSeedItems(queue) {
+  const ids = new Set(queue.items.map((i) => i.id));
+  let added = 0;
+  for (const seed of ALL_QUEUE_SEEDS) {
+    if (ids.has(seed.id)) continue;
+    queue.items.push({ ...seed });
+    ids.add(seed.id);
+    added += 1;
+  }
+  return added;
 }
 
 export function pickNextQueueItem(queue, existingSlugs) {
@@ -44,17 +60,12 @@ export function markQueueItemPublished(queue, itemId, slug) {
 
 export function initQueueFileIfNeeded() {
   if (!existsSync(QUEUE_PATH)) {
-    const queue = { version: 1, items: [...QUEUE_SEED] };
+    const queue = { version: 1, items: ALL_QUEUE_SEEDS.map((i) => ({ ...i })) };
     saveQueue(queue);
     return queue;
   }
   const queue = loadQueue();
-  if (queue.items.length < QUEUE_SEED.length) {
-    const ids = new Set(queue.items.map((i) => i.id));
-    for (const seed of QUEUE_SEED) {
-      if (!ids.has(seed.id)) queue.items.push({ ...seed });
-    }
-    saveQueue(queue);
-  }
+  const added = mergeMissingSeedItems(queue);
+  if (added > 0) saveQueue(queue);
   return queue;
 }

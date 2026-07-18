@@ -11,14 +11,15 @@ permissions:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: "20"
+          node-version: "22"
+          package-manager-cache: false
 
       - name: Validate story queue
         run: npm run validate:queue
@@ -47,5 +48,6 @@ jobs:
             echo "::error::No story file, image, or queue update was created."
             exit 1
           fi
-          git commit -m "feat(stories): add daily story"
+          TITLE=$(node -e "const {readdirSync,readFileSync}=require('fs');const files=readdirSync('content/articles').filter(f=>f.endsWith('.json')).sort();const latest=files[files.length-1];const a=JSON.parse(readFileSync('content/articles/'+latest,'utf8'));process.stdout.write(a.title||latest);")
+          git commit -m "feat(stories): add $(echo "$TITLE" | head -c 72)"
           git push

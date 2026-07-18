@@ -14,6 +14,7 @@ import {
   saveQueue,
   pickNextQueueItem,
   markQueueItemPublished,
+  mergeMissingSeedItems,
 } from "./story-queue.mjs";
 import { createGenerator } from "./story-generator.mjs";
 
@@ -109,12 +110,32 @@ async function main() {
   initQueueFileIfNeeded();
 
   const queue = loadQueue();
+  const added = mergeMissingSeedItems(queue);
+  if (added > 0) {
+    saveQueue(queue);
+    console.log(`Merged ${added} new curated topic(s) into the story queue.`);
+  }
+
   const existingSlugs = getExistingSlugs();
+  // Skip topics that already have article JSON even if status was left pending
+  for (const item of queue.items) {
+    if (item.status === "pending" && existingSlugs.has(item.id)) {
+      item.status = "published";
+      item.publishedSlug = item.id;
+      item.publishedAt = item.publishedAt || new Date().toISOString();
+    }
+  }
+  saveQueue(queue);
+
   const queueItem = pickNextQueueItem(queue, existingSlugs);
 
   if (!queueItem) {
-    console.error("No pending queue topics available.");
-    console.error(`  Pending: ${queue.items.filter((i) => i.status === "pending").length}`);
+    const pending = queue.items.filter((i) => i.status === "pending").length;
+    console.error("ERROR: No pending queue topics available to generate.");
+    console.error(`  Pending after merge: ${pending}`);
+    console.error(
+      "  Add topics in scripts/story-queue-batch-*.mjs (or story-queue-seed.mjs), then re-run."
+    );
     process.exit(1);
   }
 
