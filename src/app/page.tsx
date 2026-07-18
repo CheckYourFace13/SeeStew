@@ -12,6 +12,9 @@ import { siteConfig } from "@/lib/config";
 import { buildFaqJsonLd, homeFaqs } from "@/lib/seo";
 import { getLongFormVideos, getShortFormVideos, getYouTubeVideos } from "@/lib/youtube";
 
+/** Avoid year-long CDN HTML cache (Hostinger) that can serve broken/stale homepages after deploy. */
+export const revalidate = 60;
+
 export default async function HomePage() {
   const articles = getAllArticles().slice(0, 9);
   const longForm = (await getLongFormVideos()).slice(0, 3);

@@ -74,6 +74,13 @@ Supports `npm start`, API cron, and server features.
    - The Hostinger web cron (`/api/cron/publish`) is unreliable for AI generation due to nginx 504 timeout — use GitHub Actions instead.  
    - New story pages use **ISR** (`revalidate` ~10 minutes) — they appear without a full rebuild after deploy.
 
+### If the homepage looks wrong (old copy, blank, or a stuck video)
+
+1. Hard refresh: `Ctrl+Shift+R` (or open an Incognito window).
+2. hPanel → your Node.js app → **Clear cache / Purge CDN** if available, then **Redeploy**.
+3. Confirm **Website Builder is stopped** for `seestew.com` so only the Node.js app serves the domain.
+4. Homepage HTML is intentionally short-cached (`revalidate = 60`) so deploys are not stuck behind a year-long CDN TTL.
+
 ### Auto-deploy checklist
 
 - [ ] Git connected to `CheckYourFace13/SeeStew` on branch `main`

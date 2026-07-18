@@ -25,6 +25,16 @@ const nextConfig: NextConfig = {
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
         ],
       },
+      // Keep HTML documents short-lived at the CDN so deploys are not stuck for months.
+      {
+        source: "/",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=0, s-maxage=60, stale-while-revalidate=300",
+          },
+        ],
+      },
       {
         source: "/ads.txt",
         headers: [

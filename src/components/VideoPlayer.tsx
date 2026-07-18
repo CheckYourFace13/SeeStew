@@ -38,7 +38,7 @@ export function VideoPlayer({ videoId, title }: VideoPlayerProps) {
         <iframe
           src={embedUrl}
           title={title}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
           className="absolute inset-0 h-full w-full border-0"
           loading="lazy"

@@ -1,4 +1,7 @@
+"use client";
+
 import Script from "next/script";
+import { useEffect, useState } from "react";
 import { adsConfig } from "@/lib/config";
 
 type AdSlotProps = {
@@ -15,6 +18,11 @@ export function AdSlot({
   label = "Advertisement",
 }: AdSlotProps) {
   const { enabled, publisherId } = adsConfig;
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    setReady(true);
+  }, []);
 
   if (!enabled || !publisherId) {
     return (
@@ -33,31 +41,43 @@ export function AdSlot({
       <p className="mb-1 text-center text-xs uppercase tracking-wide text-ink-muted">
         {label}
       </p>
-      <ins
-        className="adsbygoogle block"
-        style={{ display: "block" }}
-        data-ad-client={publisherId}
-        data-ad-slot={slot}
-        data-ad-format={format}
-        data-full-width-responsive="true"
-      />
-      <Script id={`adsense-push-${slot ?? "auto"}`} strategy="afterInteractive">
-        {`(adsbygoogle = window.adsbygoogle || []).push({});`}
-      </Script>
+      {ready ? (
+        <>
+          <ins
+            className="adsbygoogle block"
+            style={{ display: "block" }}
+            data-ad-client={publisherId}
+            data-ad-slot={slot}
+            data-ad-format={format}
+            data-full-width-responsive="true"
+          />
+          <Script id={`adsense-push-${slot ?? "auto"}`} strategy="afterInteractive">
+            {`(adsbygoogle = window.adsbygoogle || []).push({});`}
+          </Script>
+        </>
+      ) : (
+        <div className="min-h-[90px]" aria-hidden />
+      )}
     </aside>
   );
 }
 
 export function AdSenseScript() {
   const { enabled, publisherId } = adsConfig;
-  if (!enabled || !publisherId) return null;
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    setReady(true);
+  }, []);
+
+  if (!enabled || !publisherId || !ready) return null;
 
   return (
     <Script
       async
       src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${publisherId}`}
       crossOrigin="anonymous"
-      strategy="afterInteractive"
+      strategy="lazyOnload"
     />
   );
 }

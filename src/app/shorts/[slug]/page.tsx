@@ -18,6 +18,8 @@ import {
 
 type Props = { params: Promise<{ slug: string }> };
 
+export const revalidate = 1800;
+
 export async function generateStaticParams() {
   const videos = await getShortFormVideos();
   return videos.map((v) => ({ slug: v.slug }));

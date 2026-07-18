@@ -11,6 +11,8 @@ import { buildBreadcrumbJsonLd, buildVideoObjectJsonLd } from "@/lib/seo";
 import { getVideoEditorial } from "@/lib/video-editorial";
 import { getLongFormVideos, getVideoBySlug, isLongFormVideo } from "@/lib/youtube";
 
+export const revalidate = 1800;
+
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
