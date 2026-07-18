@@ -14,7 +14,8 @@ import {
   saveQueue,
   pickNextQueueItem,
   markQueueItemPublished,
-  mergeMissingSeedItems,
+  ensureQueueDepth,
+  MIN_PENDING_TOPICS,
 } from "./story-queue.mjs";
 import { createGenerator } from "./story-generator.mjs";
 
@@ -110,10 +111,16 @@ async function main() {
   initQueueFileIfNeeded();
 
   const queue = loadQueue();
-  const added = mergeMissingSeedItems(queue);
-  if (added > 0) {
+  const depth = ensureQueueDepth(queue);
+  if (depth.added > 0) {
     saveQueue(queue);
-    console.log(`Merged ${added} new curated topic(s) into the story queue.`);
+    console.log(`Merged ${depth.added} new curated topic(s) into the story queue.`);
+  }
+  console.log(`Queue depth: ${depth.pending} pending (target ≥ ${MIN_PENDING_TOPICS}).`);
+  if (!depth.ok) {
+    console.warn(
+      `::warning::Story queue is low (${depth.pending} pending). Add another scripts/story-queue-batch-*.mjs with SEO U.S. history topics.`
+    );
   }
 
   const existingSlugs = getExistingSlugs();
@@ -134,7 +141,7 @@ async function main() {
     console.error("ERROR: No pending queue topics available to generate.");
     console.error(`  Pending after merge: ${pending}`);
     console.error(
-      "  Add topics in scripts/story-queue-batch-*.mjs (or story-queue-seed.mjs), then re-run."
+      "  Add topics in scripts/story-queue-batch-*.mjs (register in story-queue.mjs ALL_QUEUE_SEEDS), then re-run."
     );
     process.exit(1);
   }

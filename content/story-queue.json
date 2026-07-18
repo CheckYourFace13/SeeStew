@@ -2714,6 +2714,1386 @@
       "status": "pending",
       "publishedSlug": null,
       "publishedAt": null
+    },
+    {
+      "id": "johnstown-flood-1889",
+      "title": "The Johnstown Flood of 1889: How a Broken Dam Killed Over 2,000 People",
+      "hook": "A private club’s neglected lake wall gave way after days of rain — and a wall of water erased a Pennsylvania valley town.",
+      "category": "Weird America",
+      "angle": "The South Fork Fishing Club dam, the flood wave that hit Johnstown, the death toll, and how the disaster reshaped American dam safety and liability debates.",
+      "keywords": [
+        "Johnstown Flood 1889",
+        "Johnstown Flood",
+        "South Fork Dam collapse",
+        "deadliest floods in US history"
+      ],
+      "requiredSources": [
+        {
+          "title": "Johnstown Flood",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/jofl/index.htm"
+        },
+        {
+          "title": "Johnstown Flood National Memorial",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/jofl/learn/historyculture/index.htm"
+        },
+        {
+          "title": "1889 disasters",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Dam safety history",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Johnstown Flood of 1889",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Johnstown Flood 1889 Pennsylvania"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "great-molasses-flood-1919",
+      "title": "The Great Molasses Flood of 1919: When a Sticky Wave Killed 21 in Boston",
+      "hook": "A towering tank of molasses burst in the North End — and a 25-foot wave of syrup crushed buildings and people.",
+      "category": "Weird America",
+      "angle": "Why the Purity Distilling tank failed, what investigators found about construction shortcuts, and how the disaster entered American industrial-safety lore.",
+      "keywords": [
+        "Great Molasses Flood",
+        "Boston Molasses Flood 1919",
+        "molasses flood Boston",
+        "North End molasses disaster"
+      ],
+      "requiredSources": [
+        {
+          "title": "Great Molasses Flood",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Boston disasters",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Industrial accidents history",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/"
+        },
+        {
+          "title": "Engineering failures",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/"
+        },
+        {
+          "title": "Molasses Flood",
+          "publisher": "PBS",
+          "url": "https://www.pbs.org/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Boston Molasses Flood 1919"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "great-chicago-fire-1871",
+      "title": "The Great Chicago Fire of 1871: How a City Burned — and Rebuilt Itself",
+      "hook": "Dry wind, wooden buildings, and a fire that raced for miles turned Chicago into a national symbol of disaster and reinvention.",
+      "category": "Weird America",
+      "angle": "What is known (and mythologized) about how the fire started, the destruction path, and how building codes and urban planning changed afterward.",
+      "keywords": [
+        "Great Chicago Fire 1871",
+        "Chicago Fire 1871",
+        "Great Chicago Fire",
+        "Mrs O'Leary cow myth"
+      ],
+      "requiredSources": [
+        {
+          "title": "Great Chicago Fire",
+          "publisher": "Chicago History Museum",
+          "url": "https://www.chicagohistory.org/"
+        },
+        {
+          "title": "Chicago Fire of 1871",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Fire history",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Urban fire disasters",
+          "publisher": "National Fire Protection Association",
+          "url": "https://www.nfpa.org/"
+        },
+        {
+          "title": "Chicago Fire",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Great Chicago Fire 1871"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "san-francisco-earthquake-1906",
+      "title": "The 1906 San Francisco Earthquake: Quake, Fire, and a City Remade",
+      "hook": "The ground shook for less than a minute — then fires finished what the earthquake started.",
+      "category": "Weird America",
+      "angle": "The April 18 quake, the firestorm that followed, the death and displacement toll, and how San Francisco’s recovery became a national story.",
+      "keywords": [
+        "1906 San Francisco earthquake",
+        "San Francisco earthquake 1906",
+        "1906 earthquake fire",
+        "deadliest earthquakes US"
+      ],
+      "requiredSources": [
+        {
+          "title": "1906 San Francisco Earthquake",
+          "publisher": "USGS",
+          "url": "https://earthquake.usgs.gov/earthquakes/events/1906calif/"
+        },
+        {
+          "title": "San Francisco Earthquake and Fire",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "1906 earthquake",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Earthquake history",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/"
+        },
+        {
+          "title": "1906 disaster",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/"
+        }
+      ],
+      "imageSearchTerms": [
+        "San Francisco earthquake 1906"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "monongah-mining-disaster-1907",
+      "title": "The Monongah Mining Disaster of 1907: America’s Deadliest Coal Mine Explosion",
+      "hook": "An underground blast in West Virginia killed hundreds of miners in minutes — and pushed mine safety into national politics.",
+      "category": "Weird America",
+      "angle": "What caused the explosion, who died, and how Monongah helped drive federal mine-safety legislation.",
+      "keywords": [
+        "Monongah mining disaster",
+        "Monongah mine explosion 1907",
+        "deadliest mining disaster US",
+        "West Virginia mine disaster"
+      ],
+      "requiredSources": [
+        {
+          "title": "Mine disasters",
+          "publisher": "MSHA",
+          "url": "https://www.msha.gov/"
+        },
+        {
+          "title": "Monongah Mine Disaster",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Coal mining history",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Mine safety",
+          "publisher": "CDC NIOSH",
+          "url": "https://www.cdc.gov/niosh/"
+        },
+        {
+          "title": "West Virginia mining",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Monongah mining disaster 1907"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "donner-party-1846",
+      "title": "The Donner Party: How a Shortcut Turned Into America’s Most Infamous Survival Story",
+      "hook": "A delayed Sierra Nevada crossing left emigrants trapped by snow — and forced choices that still shock readers.",
+      "category": "Weird America",
+      "angle": "The Hastings Cutoff decision, the winter encampments, rescue attempts, and what primary accounts actually document about cannibalism and survival.",
+      "keywords": [
+        "Donner Party",
+        "Donner Party 1846",
+        "Donner Party cannibalism",
+        "Sierra Nevada wagon train"
+      ],
+      "requiredSources": [
+        {
+          "title": "Donner Party",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/places/000/donner-party.htm"
+        },
+        {
+          "title": "Donner Memorial",
+          "publisher": "California State Parks",
+          "url": "https://www.parks.ca.gov/"
+        },
+        {
+          "title": "Overland migration",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Western expansion",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Donner Party history",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Donner Party 1846 Sierra Nevada"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "lost-colony-roanoke",
+      "title": "The Lost Colony of Roanoke: What Happened to England’s First Attempt at America?",
+      "hook": "A settlement vanished. The word CROATOAN was carved into a post. Centuries later, the mystery still draws searches.",
+      "category": "Weird America",
+      "angle": "John White’s delayed return, the archaeological and documentary evidence, and the leading historical theories — without inventing a neat ending.",
+      "keywords": [
+        "Lost Colony of Roanoke",
+        "Roanoke Colony mystery",
+        "CROATOAN Roanoke",
+        "what happened to Roanoke"
+      ],
+      "requiredSources": [
+        {
+          "title": "Roanoke Colonies",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/fora/learn/historyculture/roanoke.htm"
+        },
+        {
+          "title": "Roanoke",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Colonial America",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Lost Colony",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/"
+        },
+        {
+          "title": "Fort Raleigh",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/fora/index.htm"
+        }
+      ],
+      "imageSearchTerms": [
+        "Lost Colony Roanoke CROATOAN"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "trail-of-tears",
+      "title": "The Trail of Tears: Forced Removal of the Cherokee and the Human Cost of Indian Removal",
+      "hook": "Thousands of Cherokee were marched west under federal policy — and thousands died along the way.",
+      "category": "Weird America",
+      "angle": "The Indian Removal Act, Worcester v. Georgia, Treaty of New Echota controversies, and the documented death toll of the forced marches.",
+      "keywords": [
+        "Trail of Tears",
+        "Trail of Tears Cherokee",
+        "Indian Removal Act",
+        "Cherokee removal history"
+      ],
+      "requiredSources": [
+        {
+          "title": "Trail of Tears",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/trte/index.htm"
+        },
+        {
+          "title": "Indian Removal",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/research/native-americans/indian-removal"
+        },
+        {
+          "title": "Cherokee Nation history",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Indian Removal Act",
+          "publisher": "U.S. Congress",
+          "url": "https://www.congress.gov/"
+        },
+        {
+          "title": "Trail of Tears",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Trail of Tears Cherokee removal"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "wounded-knee-massacre-1890",
+      "title": "The Wounded Knee Massacre of 1890: How a Disarmament Ended in Mass Killing",
+      "hook": "On the Pine Ridge Reservation, a confrontation over weapons became one of the darkest days in U.S.–Native American history.",
+      "category": "Weird America",
+      "angle": "The Ghost Dance context, the killing of Sitting Bull, the December 29 massacre, Medal of Honor controversies, and later remembrance.",
+      "keywords": [
+        "Wounded Knee Massacre 1890",
+        "Wounded Knee 1890",
+        "Pine Ridge massacre",
+        "Ghost Dance Wounded Knee"
+      ],
+      "requiredSources": [
+        {
+          "title": "Wounded Knee",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/"
+        },
+        {
+          "title": "Wounded Knee Massacre",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Native American history",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Pine Ridge history",
+          "publisher": "Smithsonian National Museum of the American Indian",
+          "url": "https://americanindian.si.edu/"
+        },
+        {
+          "title": "Wounded Knee 1890",
+          "publisher": "PBS",
+          "url": "https://www.pbs.org/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Wounded Knee Massacre 1890"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "little-bighorn-1876",
+      "title": "Custer’s Last Stand at Little Bighorn: What Really Happened in 1876",
+      "hook": "George Armstrong Custer rode into a Lakota, Northern Cheyenne, and Arapaho alliance — and his command was wiped out.",
+      "category": "Weird America",
+      "angle": "The campaign that led to the battle, how Native coalitions fought, and what archaeology and Native accounts add beyond the myth of “Last Stand.”",
+      "keywords": [
+        "Battle of Little Bighorn",
+        "Custer's Last Stand",
+        "Little Bighorn 1876",
+        "what happened at Little Bighorn"
+      ],
+      "requiredSources": [
+        {
+          "title": "Little Bighorn Battlefield",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/libi/index.htm"
+        },
+        {
+          "title": "Battle of the Little Bighorn",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Great Sioux War",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Little Bighorn",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/"
+        },
+        {
+          "title": "Custer battlefield",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/libi/learn/historyculture/index.htm"
+        }
+      ],
+      "imageSearchTerms": [
+        "Little Bighorn Custer 1876"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "boston-massacre-1770",
+      "title": "The Boston Massacre of 1770: How Five Deaths Became Revolutionary Propaganda",
+      "hook": "British soldiers fired into a crowd on King Street — and Paul Revere’s engraving turned the killings into a cause.",
+      "category": "Weird America",
+      "angle": "What witnesses said happened, the trials defended by John Adams, and how the event became a recruiting tool for independence.",
+      "keywords": [
+        "Boston Massacre 1770",
+        "Boston Massacre",
+        "Paul Revere Boston Massacre",
+        "King Street shooting"
+      ],
+      "requiredSources": [
+        {
+          "title": "Boston Massacre",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/bost/learn/historyculture/massacre.htm"
+        },
+        {
+          "title": "Boston Massacre",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Revolutionary era",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "John Adams and the Boston Massacre",
+          "publisher": "Massachusetts Historical Society",
+          "url": "https://www.masshist.org/"
+        },
+        {
+          "title": "Boston Massacre",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Boston Massacre 1770"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "kent-state-shootings-1970",
+      "title": "The Kent State Shootings of 1970: When the National Guard Fired on Students",
+      "hook": "Four students died on an Ohio campus — and a photograph of a screaming teenager became the face of Vietnam-era protest.",
+      "category": "Weird America",
+      "angle": "Why Guard troops were on campus, what investigations concluded about the shootings, and how Kent State changed American politics and campus life.",
+      "keywords": [
+        "Kent State shooting 1970",
+        "Kent State massacre",
+        "May 4 Kent State",
+        "National Guard Kent State"
+      ],
+      "requiredSources": [
+        {
+          "title": "Kent State Shootings",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Kent State",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "May 4 Collection",
+          "publisher": "Kent State University",
+          "url": "https://www.kent.edu/"
+        },
+        {
+          "title": "Vietnam War protests",
+          "publisher": "PBS",
+          "url": "https://www.pbs.org/"
+        },
+        {
+          "title": "Kent State 1970",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Kent State shootings 1970"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "my-lai-massacre-1968",
+      "title": "The My Lai Massacre: The Vietnam Atrocity America Tried to Bury",
+      "hook": "U.S. soldiers killed hundreds of Vietnamese civilians — and a cover-up delayed the truth for more than a year.",
+      "category": "Weird America",
+      "angle": "What happened in Son My, how Ronald Ridenhour and journalists exposed it, the courts-martial, and why My Lai still defines debates about the war.",
+      "keywords": [
+        "My Lai Massacre",
+        "My Lai Massacre 1968",
+        "Vietnam My Lai",
+        "William Calley My Lai"
+      ],
+      "requiredSources": [
+        {
+          "title": "My Lai Massacre",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Vietnam War",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "My Lai",
+          "publisher": "U.S. Army Center of Military History",
+          "url": "https://history.army.mil/"
+        },
+        {
+          "title": "My Lai investigation",
+          "publisher": "PBS",
+          "url": "https://www.pbs.org/"
+        },
+        {
+          "title": "My Lai Massacre",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/"
+        }
+      ],
+      "imageSearchTerms": [
+        "My Lai Massacre 1968 Vietnam"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "stonewall-riots-1969",
+      "title": "The Stonewall Riots of 1969: How a Police Raid Sparked a Movement",
+      "hook": "A raid on a Greenwich Village bar met unexpected resistance — and LGBTQ activism in America entered a new phase.",
+      "category": "Weird America",
+      "angle": "What led to the raid, what happened over those nights, and how Stonewall became a national (and global) landmark of protest history.",
+      "keywords": [
+        "Stonewall Riots 1969",
+        "Stonewall uprising",
+        "Stonewall Inn raid",
+        "LGBTQ rights Stonewall"
+      ],
+      "requiredSources": [
+        {
+          "title": "Stonewall National Monument",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/ston/index.htm"
+        },
+        {
+          "title": "Stonewall",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "LGBTQ history",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Stonewall Riots",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/"
+        },
+        {
+          "title": "Stonewall",
+          "publisher": "PBS",
+          "url": "https://www.pbs.org/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Stonewall Riots 1969 New York"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "montgomery-bus-boycott-1955",
+      "title": "The Montgomery Bus Boycott: How 381 Days of Walking Changed America",
+      "hook": "Rosa Parks’s arrest was the spark — but a year-long boycott and a Supreme Court ruling ended bus segregation in Montgomery.",
+      "category": "Weird America",
+      "angle": "The Women’s Political Council groundwork, Martin Luther King Jr.’s leadership role, car pools and church organizing, and Browder v. Gayle.",
+      "keywords": [
+        "Montgomery Bus Boycott",
+        "Montgomery Bus Boycott 1955",
+        "Rosa Parks bus",
+        "Browder v Gayle"
+      ],
+      "requiredSources": [
+        {
+          "title": "Montgomery Bus Boycott",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/"
+        },
+        {
+          "title": "Civil Rights Movement",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Rosa Parks",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Montgomery Bus Boycott",
+          "publisher": "PBS",
+          "url": "https://www.pbs.org/"
+        },
+        {
+          "title": "Civil rights history",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Montgomery Bus Boycott 1955 Rosa Parks"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "scottsboro-boys",
+      "title": "The Scottsboro Boys: Nine Black Teens, False Accusations, and a Supreme Court Fight",
+      "hook": "A freight-train encounter in Alabama became one of the most infamous wrongful-prosecution cases in U.S. history.",
+      "category": "Weird America",
+      "angle": "The 1931 arrests, the rushed trials, international protests, and the Supreme Court decisions that reshaped criminal due process.",
+      "keywords": [
+        "Scottsboro Boys",
+        "Scottsboro Boys case",
+        "Scottsboro Boys trial",
+        "Powell v Alabama"
+      ],
+      "requiredSources": [
+        {
+          "title": "Scottsboro Boys",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Scottsboro",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Powell v. Alabama",
+          "publisher": "U.S. Courts",
+          "url": "https://www.uscourts.gov/"
+        },
+        {
+          "title": "Scottsboro Boys",
+          "publisher": "PBS",
+          "url": "https://www.pbs.org/"
+        },
+        {
+          "title": "Scottsboro case",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Scottsboro Boys 1931 Alabama"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "sacco-vanzetti-trial",
+      "title": "Sacco and Vanzetti: The Trial That Divided America Over Justice and Fear",
+      "hook": "Two Italian anarchists were convicted of murder — and millions worldwide believed the verdict was about politics, not evidence.",
+      "category": "Weird America",
+      "angle": "The Braintree robbery, the courtroom atmosphere of the Red Scare era, appeals and clemency fights, and why the case still matters to American legal history.",
+      "keywords": [
+        "Sacco and Vanzetti",
+        "Sacco Vanzetti trial",
+        "Sacco and Vanzetti execution",
+        "Red Scare trial"
+      ],
+      "requiredSources": [
+        {
+          "title": "Sacco and Vanzetti",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Sacco-Vanzetti case",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Massachusetts history",
+          "publisher": "Massachusetts Historical Society",
+          "url": "https://www.masshist.org/"
+        },
+        {
+          "title": "Sacco and Vanzetti",
+          "publisher": "PBS",
+          "url": "https://www.pbs.org/"
+        },
+        {
+          "title": "Sacco Vanzetti",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Sacco and Vanzetti trial"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "lindbergh-kidnapping-1932",
+      "title": "The Lindbergh Kidnapping: The “Crime of the Century” That Changed American Law",
+      "hook": "Charles Lindbergh’s infant son was taken from a New Jersey nursery — and the investigation became a national obsession.",
+      "category": "Weird America",
+      "angle": "The ransom notes, Bruno Richard Hauptmann’s trial, media frenzy, and how the case led to the Federal Kidnapping Act (“Lindbergh Law”).",
+      "keywords": [
+        "Lindbergh kidnapping",
+        "Lindbergh baby kidnapping 1932",
+        "Bruno Hauptmann",
+        "Lindbergh Law"
+      ],
+      "requiredSources": [
+        {
+          "title": "Lindbergh Kidnapping",
+          "publisher": "FBI",
+          "url": "https://www.fbi.gov/history/famous-cases/the-lindbergh-kidnapping"
+        },
+        {
+          "title": "Lindbergh case",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Lindbergh kidnapping",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Crime of the century",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/"
+        },
+        {
+          "title": "Lindbergh",
+          "publisher": "PBS",
+          "url": "https://www.pbs.org/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Lindbergh kidnapping 1932"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "pentagon-papers-1971",
+      "title": "The Pentagon Papers: The Secret Vietnam History That Reached the Front Page",
+      "hook": "A classified Defense Department study leaked — and the Supreme Court backed the press against prior restraint.",
+      "category": "Weird America",
+      "angle": "Daniel Ellsberg’s leak, the New York Times and Washington Post fight, New York Times Co. v. United States, and what the papers revealed about Vietnam decision-making.",
+      "keywords": [
+        "Pentagon Papers",
+        "Pentagon Papers 1971",
+        "Daniel Ellsberg",
+        "New York Times v United States"
+      ],
+      "requiredSources": [
+        {
+          "title": "Pentagon Papers",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Pentagon Papers",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "New York Times Co. v. United States",
+          "publisher": "U.S. Courts",
+          "url": "https://www.uscourts.gov/"
+        },
+        {
+          "title": "Pentagon Papers",
+          "publisher": "National Security Archive / GWU (edu)",
+          "url": "https://nsarchive.gwu.edu/"
+        },
+        {
+          "title": "Pentagon Papers",
+          "publisher": "PBS",
+          "url": "https://www.pbs.org/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Pentagon Papers 1971 Ellsberg"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "manhattan-project",
+      "title": "The Manhattan Project: How America Built the Atomic Bomb in Secret",
+      "hook": "Across Los Alamos, Oak Ridge, and Hanford, a wartime project remade physics — and the world — before most Americans knew it existed.",
+      "category": "Weird America",
+      "angle": "Why the project started, how the sites worked, Trinity, and the decision to use the bomb — grounded in declassified history, not myth.",
+      "keywords": [
+        "Manhattan Project",
+        "Manhattan Project atomic bomb",
+        "Los Alamos Manhattan Project",
+        "Trinity test 1945"
+      ],
+      "requiredSources": [
+        {
+          "title": "Manhattan Project",
+          "publisher": "Department of Energy",
+          "url": "https://www.energy.gov/lm/doe-history/manhattan-project"
+        },
+        {
+          "title": "Manhattan Project National Historical Park",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/mapr/index.htm"
+        },
+        {
+          "title": "Atomic bomb history",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Manhattan Project",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Los Alamos history",
+          "publisher": "Los Alamos National Laboratory",
+          "url": "https://www.lanl.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Manhattan Project Los Alamos"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "roswell-incident-1947",
+      "title": "The Roswell Incident of 1947: Balloon Debris, a Retracted Story, and a UFO Legend",
+      "hook": "The Army first said it recovered a “flying disc.” Then it said weather balloon. Decades of secrecy (and Project Mogul) fueled a myth.",
+      "category": "Weird America",
+      "angle": "What the 1947 press releases actually said, what later Air Force reports concluded about Project Mogul, and how Roswell became America’s most searched UFO story — without claiming aliens.",
+      "keywords": [
+        "Roswell incident 1947",
+        "Roswell UFO",
+        "Project Mogul Roswell",
+        "what happened at Roswell"
+      ],
+      "requiredSources": [
+        {
+          "title": "Roswell Report",
+          "publisher": "U.S. Air Force",
+          "url": "https://www.af.mil/"
+        },
+        {
+          "title": "Project Mogul",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "UFO investigations",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Roswell history",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/"
+        },
+        {
+          "title": "Cold War balloon projects",
+          "publisher": "NASA",
+          "url": "https://www.nasa.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Roswell incident 1947 Project Mogul"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "homestead-strike-1892",
+      "title": "The Homestead Strike of 1892: Carnegie Steel, Pinkertons, and a Bloody Lockout",
+      "hook": "Workers fought a private army on the Monongahela — and the battle became a defining clash of the Gilded Age.",
+      "category": "Weird America",
+      "angle": "Why Homestead locked out the Amalgamated Association, the Pinkerton landing fight, the Pennsylvania militia, and the strike’s long aftermath for labor.",
+      "keywords": [
+        "Homestead Strike 1892",
+        "Homestead Strike",
+        "Carnegie Homestead",
+        "Pinkerton Homestead"
+      ],
+      "requiredSources": [
+        {
+          "title": "Homestead Strike",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Labor history",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Homestead",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/"
+        },
+        {
+          "title": "Homestead Strike",
+          "publisher": "PBS",
+          "url": "https://www.pbs.org/"
+        },
+        {
+          "title": "Gilded Age labor",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Homestead Strike 1892"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "pullman-strike-1894",
+      "title": "The Pullman Strike of 1894: When a Railroad Boycott Brought in Federal Troops",
+      "hook": "A company-town wage cut sparked a national rail shutdown — and President Cleveland sent troops into Chicago.",
+      "category": "Weird America",
+      "angle": "George Pullman’s town, Eugene Debs and the ARU, the injunction that crushed the strike, and how Labor Day politics intersected with the crisis.",
+      "keywords": [
+        "Pullman Strike 1894",
+        "Pullman Strike",
+        "Eugene Debs Pullman",
+        "Pullman railroad strike"
+      ],
+      "requiredSources": [
+        {
+          "title": "Pullman Strike",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Pullman Strike",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Labor Day history",
+          "publisher": "U.S. Department of Labor",
+          "url": "https://www.dol.gov/"
+        },
+        {
+          "title": "Pullman",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/pull/index.htm"
+        },
+        {
+          "title": "Pullman Strike",
+          "publisher": "PBS",
+          "url": "https://www.pbs.org/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Pullman Strike 1894 Chicago"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "attica-prison-riot-1971",
+      "title": "The Attica Prison Uprising of 1971: Four Days That Ended in a Storm of Gunfire",
+      "hook": "Inmates took control of a New York prison demanding basic rights — then state forces retook Attica in a bloody assault.",
+      "category": "Weird America",
+      "angle": "What prisoners demanded, the negotiations, the September 13 retaking, the death toll, and later investigations into state responsibility.",
+      "keywords": [
+        "Attica prison riot 1971",
+        "Attica uprising",
+        "Attica prison massacre",
+        "Attica 1971"
+      ],
+      "requiredSources": [
+        {
+          "title": "Attica uprising",
+          "publisher": "New York State Archives",
+          "url": "https://www.archives.nysed.gov/"
+        },
+        {
+          "title": "Attica",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Prison reform history",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Attica",
+          "publisher": "PBS",
+          "url": "https://www.pbs.org/"
+        },
+        {
+          "title": "Attica 1971",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Attica prison riot 1971"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "waco-siege-1993",
+      "title": "The Waco Siege of 1993: How a 51-Day Standoff Ended in Fire",
+      "hook": "Federal agents tried to serve a warrant at Mount Carmel — and the confrontation with the Branch Davidians ended with dozens dead.",
+      "category": "Weird America",
+      "angle": "The ATF raid, the FBI siege, the April 19 fire, official death counts, and how later investigations framed failures on all sides — without conspiracy invention.",
+      "keywords": [
+        "Waco siege 1993",
+        "Waco Branch Davidians",
+        "Mount Carmel Waco",
+        "Waco fire 1993"
+      ],
+      "requiredSources": [
+        {
+          "title": "Waco investigation",
+          "publisher": "Department of Justice",
+          "url": "https://www.justice.gov/"
+        },
+        {
+          "title": "Waco",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Waco siege",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Branch Davidians Waco",
+          "publisher": "FBI",
+          "url": "https://www.fbi.gov/"
+        },
+        {
+          "title": "Waco 1993",
+          "publisher": "PBS",
+          "url": "https://www.pbs.org/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Waco siege 1993 Branch Davidians"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "oklahoma-city-bombing-1995",
+      "title": "The Oklahoma City Bombing: The Domestic Terror Attack That Shook 1995 America",
+      "hook": "A truck bomb destroyed the Alfred P. Murrah Federal Building — killing 168 people in the deadliest act of domestic terrorism in U.S. history.",
+      "category": "Weird America",
+      "angle": "Timothy McVeigh and Terry Nichols, the investigation, the victims (including children in the daycare), and how the attack changed domestic security.",
+      "keywords": [
+        "Oklahoma City bombing",
+        "Oklahoma City bombing 1995",
+        "Murrah Building bombing",
+        "Timothy McVeigh"
+      ],
+      "requiredSources": [
+        {
+          "title": "Oklahoma City Bombing",
+          "publisher": "FBI",
+          "url": "https://www.fbi.gov/history/famous-cases/oklahoma-city-bombing"
+        },
+        {
+          "title": "Oklahoma City National Memorial",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/okci/index.htm"
+        },
+        {
+          "title": "Oklahoma City bombing",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Domestic terrorism",
+          "publisher": "Department of Justice",
+          "url": "https://www.justice.gov/"
+        },
+        {
+          "title": "Oklahoma City",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Oklahoma City bombing 1995"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "hurricane-katrina-2005",
+      "title": "Hurricane Katrina: How the Levees Failed New Orleans",
+      "hook": "The storm was deadly — but the failed floodwalls and the slow response turned Katrina into a national reckoning.",
+      "category": "Weird America",
+      "angle": "What the hurricane did, why the levees failed, the Superdome and evacuation crisis, and what federal investigations concluded about preparedness.",
+      "keywords": [
+        "Hurricane Katrina",
+        "Hurricane Katrina 2005",
+        "New Orleans levee failure",
+        "Katrina flooding"
+      ],
+      "requiredSources": [
+        {
+          "title": "Hurricane Katrina",
+          "publisher": "NOAA",
+          "url": "https://www.noaa.gov/"
+        },
+        {
+          "title": "Katrina levee failures",
+          "publisher": "U.S. Army Corps of Engineers",
+          "url": "https://www.usace.army.mil/"
+        },
+        {
+          "title": "Hurricane Katrina",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Katrina",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Katrina response",
+          "publisher": "PBS",
+          "url": "https://www.pbs.org/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Hurricane Katrina 2005 New Orleans"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "flint-water-crisis",
+      "title": "The Flint Water Crisis: How a City’s Drinking Water Became a National Scandal",
+      "hook": "A cost-cutting switch of water sources exposed residents — including thousands of children — to lead contamination.",
+      "category": "Weird America",
+      "angle": "The 2014 switch to the Flint River, corrosion control failures, Legionella concerns, state and federal responses, and why the crisis became a symbol of environmental injustice.",
+      "keywords": [
+        "Flint water crisis",
+        "Flint Michigan lead water",
+        "Flint River water switch",
+        "lead in Flint water"
+      ],
+      "requiredSources": [
+        {
+          "title": "Flint Water Crisis",
+          "publisher": "EPA",
+          "url": "https://www.epa.gov/"
+        },
+        {
+          "title": "Flint lead exposure",
+          "publisher": "CDC",
+          "url": "https://www.cdc.gov/"
+        },
+        {
+          "title": "Flint water",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Environmental justice",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Flint water crisis",
+          "publisher": "NPR",
+          "url": "https://www.npr.org/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Flint water crisis lead"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "deepwater-horizon-2010",
+      "title": "Deepwater Horizon: The Oil Spill That Gushed for 87 Days",
+      "hook": "An explosion on a BP drilling rig killed 11 workers — then crude poured into the Gulf of Mexico for nearly three months.",
+      "category": "Weird America",
+      "angle": "What failed on the Macondo well, the human and environmental toll, and how the disaster changed offshore drilling oversight.",
+      "keywords": [
+        "Deepwater Horizon",
+        "Deepwater Horizon oil spill",
+        "BP oil spill 2010",
+        "Macondo well blowout"
+      ],
+      "requiredSources": [
+        {
+          "title": "Deepwater Horizon",
+          "publisher": "NOAA",
+          "url": "https://www.noaa.gov/"
+        },
+        {
+          "title": "Oil spill response",
+          "publisher": "EPA",
+          "url": "https://www.epa.gov/"
+        },
+        {
+          "title": "Deepwater Horizon",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Offshore drilling",
+          "publisher": "Bureau of Ocean Energy Management",
+          "url": "https://www.boem.gov/"
+        },
+        {
+          "title": "Deepwater Horizon",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Deepwater Horizon oil spill 2010"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "great-baltimore-fire-1904",
+      "title": "The Great Baltimore Fire of 1904: 30 Hours That Remade a City",
+      "hook": "A warehouse blaze jumped firebreaks and burned downtown Baltimore for more than a day — exposing how poorly American cities were prepared to help each other.",
+      "category": "Weird America",
+      "angle": "How the fire spread, why visiting fire companies’ hoses didn’t fit Baltimore hydrants, and how the disaster pushed national firefighting standards.",
+      "keywords": [
+        "Great Baltimore Fire 1904",
+        "Baltimore Fire 1904",
+        "Baltimore downtown fire",
+        "fire hose coupling standards"
+      ],
+      "requiredSources": [
+        {
+          "title": "Baltimore Fire of 1904",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Great Baltimore Fire",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Fire standards history",
+          "publisher": "National Fire Protection Association",
+          "url": "https://www.nfpa.org/"
+        },
+        {
+          "title": "Baltimore history",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/"
+        },
+        {
+          "title": "Urban fires",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Great Baltimore Fire 1904"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
     }
   ]
 }

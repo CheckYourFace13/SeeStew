@@ -5,7 +5,14 @@
  */
 
 import { existsSync } from "fs";
-import { QUEUE_PATH, loadQueue, initQueueFileIfNeeded } from "./story-queue.mjs";
+import {
+  QUEUE_PATH,
+  loadQueue,
+  initQueueFileIfNeeded,
+  mergeMissingSeedItems,
+  saveQueue,
+  MIN_PENDING_TOPICS,
+} from "./story-queue.mjs";
 import { countCredibleRefs, normalizeUrl } from "./article-validation.mjs";
 
 const NON_US_PATTERNS = [
@@ -21,6 +28,12 @@ if (!existsSync(QUEUE_PATH)) {
 }
 
 const queue = loadQueue();
+const merged = mergeMissingSeedItems(queue);
+if (merged > 0) {
+  saveQueue(queue);
+  console.log(`Merged ${merged} new curated topic(s) into story-queue.json before validate.\n`);
+}
+
 const ids = new Set();
 const slugs = new Set();
 let failed = 0;
@@ -78,5 +91,10 @@ for (const item of queue.items) {
 const pending = queue.items.filter((i) => i.status === "pending").length;
 console.log("-".repeat(80));
 console.log(`Checked ${queue.items.length} queue items (${pending} pending). ${queue.items.length - failed} passed, ${failed} failed.`);
+if (pending < MIN_PENDING_TOPICS) {
+  console.warn(
+    `WARNING: only ${pending} pending topics (want ≥ ${MIN_PENDING_TOPICS}). Add scripts/story-queue-batch-*.mjs and register it in story-queue.mjs.`
+  );
+}
 
 process.exit(failed > 0 ? 1 : 0);

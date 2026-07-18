@@ -2,11 +2,18 @@ import { readFileSync, writeFileSync, existsSync } from "fs";
 import { join } from "path";
 import { QUEUE_SEED } from "./story-queue-seed.mjs";
 import { QUEUE_BATCH_2 } from "./story-queue-batch-2.mjs";
+import { QUEUE_BATCH_3 } from "./story-queue-batch-3.mjs";
 
 export const QUEUE_PATH = join(process.cwd(), "content", "story-queue.json");
 
+/**
+ * Keep at least this many pending topics so the daily generator never starves.
+ * When pending drops below this, merge any new curated batches (and warn in CI).
+ */
+export const MIN_PENDING_TOPICS = 14;
+
 /** All curated seed batches — merge by id so new batches refill an exhausted queue. */
-export const ALL_QUEUE_SEEDS = [...QUEUE_SEED, ...QUEUE_BATCH_2];
+export const ALL_QUEUE_SEEDS = [...QUEUE_SEED, ...QUEUE_BATCH_2, ...QUEUE_BATCH_3];
 
 export function loadQueue() {
   if (!existsSync(QUEUE_PATH)) {
@@ -23,6 +30,10 @@ export function saveQueue(queue) {
   writeFileSync(QUEUE_PATH, JSON.stringify(queue, null, 2), "utf-8");
 }
 
+export function countPending(queue) {
+  return queue.items.filter((item) => item.status === "pending").length;
+}
+
 export function mergeMissingSeedItems(queue) {
   const ids = new Set(queue.items.map((i) => i.id));
   let added = 0;
@@ -33,6 +44,21 @@ export function mergeMissingSeedItems(queue) {
     added += 1;
   }
   return added;
+}
+
+/**
+ * Merge curated batches and report whether pending depth is healthy.
+ * Call this at the start of every daily generate run.
+ */
+export function ensureQueueDepth(queue, { minPending = MIN_PENDING_TOPICS } = {}) {
+  const added = mergeMissingSeedItems(queue);
+  const pending = countPending(queue);
+  return {
+    added,
+    pending,
+    ok: pending >= minPending,
+    minPending,
+  };
 }
 
 export function pickNextQueueItem(queue, existingSlugs) {
