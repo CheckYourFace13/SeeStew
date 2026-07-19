@@ -1515,9 +1515,9 @@
       "imageSearchTerms": [
         "Donora Pennsylvania 1948 smog industrial fog"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "donora-smog-1948",
+      "publishedAt": "2026-07-19T11:13:18.657Z"
     },
     {
       "id": "galveston-hurricane-1900",
@@ -2757,9 +2757,9 @@
       "imageSearchTerms": [
         "Johnstown Flood 1889 Pennsylvania"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "johnstown-flood-1889",
+      "publishedAt": "2026-07-19T11:12:17.658Z"
     },
     {
       "id": "great-molasses-flood-1919",
@@ -2803,9 +2803,9 @@
       "imageSearchTerms": [
         "Boston Molasses Flood 1919"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "great-molasses-flood-1919",
+      "publishedAt": "2026-07-19T11:12:17.658Z"
     },
     {
       "id": "great-chicago-fire-1871",
