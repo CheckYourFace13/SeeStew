@@ -1561,9 +1561,9 @@
       "imageSearchTerms": [
         "Galveston hurricane 1900 Texas storm damage"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "galveston-hurricane-1900",
+      "publishedAt": "2026-07-20T12:20:46.494Z"
     },
     {
       "id": "three-mile-island-1979",
