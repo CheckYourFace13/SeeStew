@@ -1607,9 +1607,9 @@
       "imageSearchTerms": [
         "Three Mile Island 1979 nuclear plant Pennsylvania"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "three-mile-island-1979",
+      "publishedAt": "2026-07-21T11:51:00.583Z"
     },
     {
       "id": "challenger-disaster-1986",
