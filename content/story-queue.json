@@ -1653,9 +1653,9 @@
       "imageSearchTerms": [
         "Challenger space shuttle disaster 1986 NASA"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "challenger-disaster-1986",
+      "publishedAt": "2026-07-22T11:51:34.943Z"
     },
     {
       "id": "apollo-1-fire-1967",
