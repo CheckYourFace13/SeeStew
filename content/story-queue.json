@@ -1699,9 +1699,9 @@
       "imageSearchTerms": [
         "Apollo 1 fire 1967 NASA capsule"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "apollo-1-fire-1967",
+      "publishedAt": "2026-07-23T11:54:40.360Z"
     },
     {
       "id": "hyatt-regency-walkway-collapse-1981",
