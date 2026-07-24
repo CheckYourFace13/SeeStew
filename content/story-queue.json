@@ -1745,9 +1745,9 @@
       "imageSearchTerms": [
         "Hyatt Regency Kansas City walkway collapse 1981"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "hyatt-regency-walkway-collapse-1981",
+      "publishedAt": "2026-07-24T11:45:22.702Z"
     },
     {
       "id": "silver-bridge-collapse-1967",
