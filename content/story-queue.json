@@ -1837,9 +1837,9 @@
       "imageSearchTerms": [
         "Texas City disaster 1947 ammonium nitrate explosion"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "texas-city-disaster-1947",
+      "publishedAt": "2026-07-26T11:23:34.236Z"
     },
     {
       "id": "iroquois-theatre-fire-1903",
