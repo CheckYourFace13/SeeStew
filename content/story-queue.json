@@ -1883,9 +1883,9 @@
       "imageSearchTerms": [
         "Iroquois Theatre fire 1903 Chicago"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "iroquois-theatre-fire-1903",
+      "publishedAt": "2026-07-27T12:58:25.215Z"
     },
     {
       "id": "our-lady-of-the-angels-fire-1958",
