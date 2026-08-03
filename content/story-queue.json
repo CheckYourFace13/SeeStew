@@ -2159,9 +2159,9 @@
       "imageSearchTerms": [
         "Gulf of Tonkin 1964 USS Maddox"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "gulf-of-tonkin-1964",
+      "publishedAt": "2026-08-03T12:57:30.395Z"
     },
     {
       "id": "operation-ajax-1953",
