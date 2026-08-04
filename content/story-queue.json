@@ -2205,9 +2205,9 @@
       "imageSearchTerms": [
         "Operation Ajax 1953 Iran CIA coup"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "operation-ajax-1953",
+      "publishedAt": "2026-08-04T12:04:44.139Z"
     },
     {
       "id": "project-mkultra",
