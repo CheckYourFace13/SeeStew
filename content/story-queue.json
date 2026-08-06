@@ -2297,9 +2297,9 @@
       "imageSearchTerms": [
         "Little Rock Nine 1957 Central High"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "little-rock-nine-1957",
+      "publishedAt": "2026-08-06T12:06:18.856Z"
     },
     {
       "id": "emmett-till-1955",
