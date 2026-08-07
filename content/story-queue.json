@@ -2343,9 +2343,9 @@
       "imageSearchTerms": [
         "Emmett Till 1955 civil rights"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "emmett-till-1955",
+      "publishedAt": "2026-08-07T10:58:29.902Z"
     },
     {
       "id": "salem-witch-trials-1692",
