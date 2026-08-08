@@ -2389,9 +2389,9 @@
       "imageSearchTerms": [
         "Salem witch trials 1692 Massachusetts"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "salem-witch-trials-1692",
+      "publishedAt": "2026-08-08T10:39:15.040Z"
     },
     {
       "id": "amistad-revolt-1839",
