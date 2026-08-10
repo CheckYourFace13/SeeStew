@@ -2481,9 +2481,9 @@
       "imageSearchTerms": [
         "Philadelphia yellow fever epidemic 1793"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "philadelphia-yellow-fever-1793",
+      "publishedAt": "2026-08-10T11:12:57.722Z"
     },
     {
       "id": "spanish-flu-1918-america",
