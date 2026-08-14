@@ -2665,9 +2665,9 @@
       "imageSearchTerms": [
         "Iran Contra affair Reagan Oliver North"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "iran-contra-affair",
+      "publishedAt": "2026-08-14T11:00:54.655Z"
     },
     {
       "id": "watergate-break-in-1972",
