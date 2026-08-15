@@ -2711,9 +2711,9 @@
       "imageSearchTerms": [
         "Watergate 1972 Nixon resignation"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "watergate-break-in-1972",
+      "publishedAt": "2026-08-15T10:27:55.734Z"
     },
     {
       "id": "johnstown-flood-1889",
