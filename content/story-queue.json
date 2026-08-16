@@ -2849,9 +2849,9 @@
       "imageSearchTerms": [
         "Great Chicago Fire 1871"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "great-chicago-fire-1871",
+      "publishedAt": "2026-08-16T10:27:56.068Z"
     },
     {
       "id": "san-francisco-earthquake-1906",
