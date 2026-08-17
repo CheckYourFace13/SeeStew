@@ -2895,9 +2895,9 @@
       "imageSearchTerms": [
         "San Francisco earthquake 1906"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "san-francisco-earthquake-1906",
+      "publishedAt": "2026-08-17T10:36:33.883Z"
     },
     {
       "id": "monongah-mining-disaster-1907",
