@@ -1,5 +1,17 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/config";
+
+export const metadata: Metadata = {
+  title: "Page not found",
+  description: `That URL was not found on ${siteConfig.name}. Browse stories, videos, or shorts instead.`,
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: { index: false, follow: false },
+  },
+  alternates: { canonical: undefined },
+};
 
 export default function NotFound() {
   return (
@@ -15,6 +27,11 @@ export default function NotFound() {
           </Link>
         </li>
         <li>
+          <Link href="/articles" className="underline">
+            Stories
+          </Link>
+        </li>
+        <li>
           <Link href="/videos" className="underline">
             Videos
           </Link>
@@ -22,11 +39,6 @@ export default function NotFound() {
         <li>
           <Link href="/shorts" className="underline">
             Shorts
-          </Link>
-        </li>
-        <li>
-          <Link href="/articles" className="underline">
-            Stories
           </Link>
         </li>
       </ul>

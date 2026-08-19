@@ -15,7 +15,7 @@ export function Footer() {
             Explore
           </p>
           <p className="mt-3 text-sm leading-relaxed text-brand-meteorite-light/90">
-            Discover untold stories of American history and politics.
+            Discover hard-to-believe true stories from American history — researched and sourced.
           </p>
           <ul className="mt-4 space-y-2 text-sm">
             <li>

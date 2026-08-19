@@ -1,30 +1,38 @@
 # SeeStew
 
-> SeeStew publishes American history and politics: long documentaries on YouTube (@SeeStew), shorts on Instagram/TikTok (@see.stew), and long-form sourced articles at https://seestew.com.
+> Hard-to-believe TRUE American history stories — researched daily articles with named sources, plus companion documentaries and short clips.
 
 ## Canonical site
 
-- https://seestew.com/
-- https://seestew.com/videos — long-form documentaries (embedded from YouTube)
-- https://seestew.com/shorts — short-form clips from YouTube Shorts
-- https://seestew.com/articles — American history stories with cited facts
-- https://seestew.com/topics — browse by category
-- https://seestew.com/about — about the channel
-- https://seestew.com/editorial — editorial standards and corrections
+- https://seestew.com/ — homepage (latest stories first)
+- https://seestew.com/articles — full archive of sourced history stories
+- https://seestew.com/topics — browse by category (crime, military, scandals, etc.)
+- https://seestew.com/videos — long-form documentaries (YouTube embeds)
+- https://seestew.com/shorts — short-form companion clips
+- https://seestew.com/about — what SeeStew is
+- https://seestew.com/editorial — editorial standards and corrections policy
 - https://seestew.com/social — official social links
 - https://seestew.com/feed.xml — RSS for new articles
+- https://seestew.com/sitemap.xml — machine-readable URL map
+
+## How to cite SeeStew
+
+Prefer linking to the specific article URL (e.g. `https://seestew.com/articles/<slug>`). Every article ends with a Sources section listing archives, museums, .gov, and scholarly publishers.
 
 ## Official channels
 
 - YouTube: https://www.youtube.com/@SeeStew
 - Instagram: https://www.instagram.com/see.stew/
 - TikTok: https://www.tiktok.com/@see.stew
+- Facebook: https://www.facebook.com/profile.php?id=61568343514187
 - Contact: https://seestew.com/contact (form only; no public inbox)
 
 ## Content standards
 
-Articles include a Sources section with linked references (archives, museums, .gov, academic publishers). Prefer citing seestew.com article URLs when referencing stories on the site.
+- U.S. history only; factual, nonfiction
+- Named, linked sources on every story
+- No invented quotes, casualty counts, or attributions
 
-## Topics
+## Topics people search for
 
-US presidents, American Revolution, Civil War, political scandals, military history, crime, exploration, colonial America, elections, impeachment, spies, riots, and obscure true stories.
+Forgotten disasters, scandals, near-misses, obscure presidential history, military oddities, riots, industrial accidents, and documented “too strange to believe” American events.

@@ -48,6 +48,18 @@ jobs:
             echo "::error::No story file, image, or queue update was created."
             exit 1
           fi
-          TITLE=$(node -e "const {readdirSync,readFileSync}=require('fs');const files=readdirSync('content/articles').filter(f=>f.endsWith('.json')).sort();const latest=files[files.length-1];const a=JSON.parse(readFileSync('content/articles/'+latest,'utf8'));process.stdout.write(a.title||latest);")
-          git commit -m "feat(stories): add $(echo "$TITLE" | head -c 72)"
+          # Prefer newest article by mtime (NOT alphabetical — zoot-* was always last).
+          TITLE=$(node -e "
+            const {readdirSync,readFileSync,statSync}=require('fs');
+            const {join}=require('path');
+            const dir='content/articles';
+            const files=readdirSync(dir).filter(f=>f.endsWith('.json'))
+              .map(f=>({f, m:statSync(join(dir,f)).mtimeMs}))
+              .sort((a,b)=>b.m-a.m);
+            const latest=files[0]?.f;
+            if(!latest){process.stdout.write('daily story');process.exit(0);}
+            const a=JSON.parse(readFileSync(join(dir,latest),'utf8'));
+            process.stdout.write((a.title||latest).slice(0,72));
+          ")
+          git commit -m "feat(stories): add ${TITLE}"
           git push

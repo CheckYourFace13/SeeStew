@@ -62,16 +62,8 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [siteConfig.logoLight],
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
+  // Do not set robots here — root robots:index conflicts with Next's automatic
+  // noindex on 404 pages (GSC "duplicate robots" / soft indexing issues).
   alternates: {
     canonical: siteConfig.url,
     languages: { "en-US": siteConfig.url },

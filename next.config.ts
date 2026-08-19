@@ -13,7 +13,15 @@ const nextConfig: NextConfig = {
     ],
   },
   async redirects() {
-    return [...legacyRedirects];
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.seestew.com" }],
+        destination: "https://seestew.com/:path*",
+        permanent: true,
+      },
+      ...legacyRedirects,
+    ];
   },
   async headers() {
     return [
@@ -23,9 +31,16 @@ const nextConfig: NextConfig = {
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "X-Frame-Options", value: "SAMEORIGIN" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=63072000; includeSubDomains; preload",
+          },
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=()",
+          },
         ],
       },
-      // Keep HTML documents short-lived at the CDN so deploys are not stuck for months.
       {
         source: "/",
         headers: [
