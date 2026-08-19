@@ -2987,9 +2987,9 @@
       "imageSearchTerms": [
         "Donner Party 1846 Sierra Nevada"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "donner-party-1846",
+      "publishedAt": "2026-08-19T10:33:41.983Z"
     },
     {
       "id": "lost-colony-roanoke",
