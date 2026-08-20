@@ -181,6 +181,8 @@ async function main() {
     slug: draft.slug,
     title: draft.title,
     excerpt: draft.excerpt,
+    ...(draft.seoTitle ? { seoTitle: draft.seoTitle } : {}),
+    ...(draft.seoDescription ? { seoDescription: draft.seoDescription } : {}),
     readMinutes: Math.max(5, Math.ceil(stats.words / 220)),
     category: draft.category,
     content: draft.content,

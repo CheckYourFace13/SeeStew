@@ -26,6 +26,10 @@ export type Article = {
   slug: string;
   title: string;
   excerpt: string;
+  /** Optional shorter SERP title (without brand). Falls back to title. */
+  seoTitle?: string;
+  /** Optional meta description optimized for CTR. Falls back to excerpt. */
+  seoDescription?: string;
   readMinutes: number;
   category: string;
   content: string;

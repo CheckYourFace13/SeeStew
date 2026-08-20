@@ -15,6 +15,8 @@ import { prepareArticleBodyForDisplay } from "@/lib/article-content";
 import { siteConfig } from "@/lib/config";
 import {
   buildArticleJsonLd,
+  buildArticleMetaDescription,
+  buildArticleSerpTitle,
   buildBreadcrumbJsonLd,
   referencesToCitationSchema,
 } from "@/lib/seo";
@@ -35,22 +37,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = getArticle(slug);
   if (!article) return { title: "Story not found" };
   const url = `${siteConfig.url}/articles/${slug}`;
+  const title = buildArticleSerpTitle(article);
+  const description = buildArticleMetaDescription(article);
   return {
-    title: article.title,
-    description: `${article.excerpt} — unbelievable true stories from American history on SeeStew.`,
+    title: { absolute: title },
+    description,
     keywords: [
       article.category,
       "American history facts",
       "American history stories",
-      article.title,
+      article.seoTitle || article.title,
       "SeeStew",
     ],
     alternates: { canonical: url },
     openGraph: {
       type: "article",
       url,
-      title: article.title,
-      description: article.excerpt,
+      title,
+      description,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
     },
   };
 }

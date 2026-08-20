@@ -143,6 +143,36 @@ export function referencesToCitationSchema(refs: ArticleReference[]) {
   }));
 }
 
+/** Google typically shows ~50–60 characters of title. Include brand once, keep it short. */
+export function buildArticleSerpTitle(article: {
+  title: string;
+  seoTitle?: string;
+}): string {
+  const brand = ` | ${siteConfig.name}`;
+  const max = 60;
+  let base = (article.seoTitle || article.title).trim();
+  if (base.length + brand.length <= max) return `${base}${brand}`;
+  const budget = max - brand.length;
+  base = base.slice(0, budget).replace(/\s+\S*$/, "").replace(/[,:;—\-–]\s*$/, "");
+  return `${base}${brand}`;
+}
+
+/** Meta description aimed at CTR — no wasted brand fluff; ~150–155 chars. */
+export function buildArticleMetaDescription(article: {
+  title: string;
+  excerpt: string;
+  seoDescription?: string;
+}): string {
+  let d = (article.seoDescription || article.excerpt || article.title).trim();
+  if (d.length < 110) {
+    d = `${d} Documented American history with named sources.`;
+  }
+  if (d.length > 155) {
+    d = `${d.slice(0, 152).replace(/\s+\S*$/, "")}...`;
+  }
+  return d;
+}
+
 export const homeFaqs: FaqItem[] = [
   {
     question: "What is SeeStew?",

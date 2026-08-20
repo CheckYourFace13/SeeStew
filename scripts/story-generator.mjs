@@ -109,10 +109,27 @@ function buildMetadata(queueItem) {
     if (withKw.length <= 160) excerpt = withKw;
   }
   if (excerpt.length > 160) excerpt = `${excerpt.slice(0, 157)}...`;
+
+  // SERP title: lead with the #1 search phrase / short event name (≤ ~48 chars before brand).
+  let seoTitle = primaryKeyword || queueItem.title;
+  if (seoTitle.length > 48) {
+    seoTitle = seoTitle.slice(0, 48).replace(/\s+\S*$/, "");
+  }
+
+  let seoDescription = excerpt;
+  if (seoDescription.length < 110) {
+    seoDescription = `${seoDescription} Documented American history with named sources.`;
+  }
+  if (seoDescription.length > 155) {
+    seoDescription = `${seoDescription.slice(0, 152).replace(/\s+\S*$/, "")}...`;
+  }
+
   return {
     title: queueItem.title,
     slug: queueItem.id,
     excerpt,
+    seoTitle,
+    seoDescription,
     category: queueItem.category,
   };
 }
