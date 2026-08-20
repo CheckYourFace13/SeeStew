@@ -3033,9 +3033,9 @@
       "imageSearchTerms": [
         "Lost Colony Roanoke CROATOAN"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "lost-colony-roanoke",
+      "publishedAt": "2026-08-20T10:35:47.552Z"
     },
     {
       "id": "trail-of-tears",
