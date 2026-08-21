@@ -3079,9 +3079,9 @@
       "imageSearchTerms": [
         "Trail of Tears Cherokee removal"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "trail-of-tears",
+      "publishedAt": "2026-08-21T10:34:57.921Z"
     },
     {
       "id": "wounded-knee-massacre-1890",
