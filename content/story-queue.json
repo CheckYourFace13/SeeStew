@@ -3125,9 +3125,9 @@
       "imageSearchTerms": [
         "Wounded Knee Massacre 1890"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "wounded-knee-massacre-1890",
+      "publishedAt": "2026-08-22T10:29:12.064Z"
     },
     {
       "id": "little-bighorn-1876",
