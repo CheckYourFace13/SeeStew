@@ -3171,9 +3171,9 @@
       "imageSearchTerms": [
         "Little Bighorn Custer 1876"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "little-bighorn-1876",
+      "publishedAt": "2026-08-23T10:29:07.636Z"
     },
     {
       "id": "boston-massacre-1770",
