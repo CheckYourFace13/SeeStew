@@ -3217,9 +3217,9 @@
       "imageSearchTerms": [
         "Boston Massacre 1770"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "boston-massacre-1770",
+      "publishedAt": "2026-08-24T10:41:34.117Z"
     },
     {
       "id": "kent-state-shootings-1970",
