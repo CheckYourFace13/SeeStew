@@ -76,6 +76,22 @@ async function submit(urlList) {
     process.exit(1);
   }
 
+  // Preflight: Bing must be able to fetch the ownership key
+  try {
+    const keyRes = await fetch(KEY_LOCATION, { redirect: "follow" });
+    const keyText = (await keyRes.text()).trim();
+    if (!keyRes.ok || keyText !== KEY) {
+      console.error(
+        `FAIL: Key URL ${KEY_LOCATION} returned ${keyRes.status} (body must be exactly the key).`,
+      );
+      process.exit(1);
+    }
+    console.log(`Key OK: ${KEY_LOCATION}`);
+  } catch (err) {
+    console.error(`FAIL: Could not fetch key URL ${KEY_LOCATION}: ${err.message}`);
+    process.exit(1);
+  }
+
   console.log(`IndexNow: submitting ${urlList.length} URL(s) for ${HOST}`);
   for (const u of urlList.slice(0, 10)) console.log(`  - ${u}`);
   if (urlList.length > 10) console.log(`  … +${urlList.length - 10} more`);
@@ -92,10 +108,18 @@ async function submit(urlList) {
   });
 
   const text = await res.text().catch(() => "");
-  // 200/202 = accepted; 422 = invalid URL set; 403 = key validation failed
+  // 200/202 = accepted; 422 = invalid URL set; 403 = Bing has not bound the site yet
   if (res.status === 200 || res.status === 202) {
     console.log(`OK: IndexNow accepted (${res.status})`);
     return;
+  }
+
+  if (res.status === 403) {
+    console.error(`FAIL: IndexNow HTTP 403 — key file is live, but Bing has not authorized this host yet.`);
+    console.error(`  Fix: In Bing Webmaster Tools, verify seestew.com with XML or meta tag (not Google import only),`);
+    console.error(`  then open IndexNow → Implementation and retry. Daily workflow will keep pinging.`);
+    if (text) console.error(`  ${text.slice(0, 300)}`);
+    process.exit(1);
   }
 
   console.error(`FAIL: IndexNow HTTP ${res.status}${text ? ` — ${text.slice(0, 300)}` : ""}`);
