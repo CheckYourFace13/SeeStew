@@ -63,3 +63,10 @@ jobs:
           ")
           git commit -m "feat(stories): add ${TITLE}"
           git push
+
+      - name: Notify IndexNow (Bing + partners)
+        continue-on-error: true
+        run: |
+          # Hostinger usually picks up the push within a minute; brief wait helps key/URL be live.
+          sleep 45
+          node scripts/submit-indexnow.mjs --latest

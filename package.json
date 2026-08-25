@@ -18,6 +18,8 @@
     "regenerate:articles": "node scripts/regenerate-articles.mjs",
     "sanitize:articles": "node scripts/sanitize-article-metadata.mjs",
     "check:ads-txt": "node scripts/check-ads-txt.mjs",
+    "indexnow": "node scripts/submit-indexnow.mjs --latest",
+    "indexnow:all": "node scripts/submit-indexnow.mjs --all",
     "opusclip:daily": "node scripts/opusclip-daily-post.mjs",
     "opusclip:accounts": "node scripts/opusclip-daily-post.mjs --list-accounts",
     "opusclip:dry-run": "node scripts/opusclip-daily-post.mjs --dry-run"
