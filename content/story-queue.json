@@ -3263,9 +3263,9 @@
       "imageSearchTerms": [
         "Kent State shootings 1970"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "kent-state-shootings-1970",
+      "publishedAt": "2026-08-26T10:39:59.407Z"
     },
     {
       "id": "my-lai-massacre-1968",
