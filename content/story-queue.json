@@ -3309,9 +3309,9 @@
       "imageSearchTerms": [
         "My Lai Massacre 1968 Vietnam"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "my-lai-massacre-1968",
+      "publishedAt": "2026-08-27T20:14:29.075Z"
     },
     {
       "id": "stonewall-riots-1969",
