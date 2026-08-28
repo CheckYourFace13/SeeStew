@@ -3355,9 +3355,9 @@
       "imageSearchTerms": [
         "Stonewall Riots 1969 New York"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "stonewall-riots-1969",
+      "publishedAt": "2026-08-28T21:09:48.297Z"
     },
     {
       "id": "montgomery-bus-boycott-1955",
