@@ -3401,9 +3401,9 @@
       "imageSearchTerms": [
         "Montgomery Bus Boycott 1955 Rosa Parks"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "montgomery-bus-boycott-1955",
+      "publishedAt": "2026-08-29T14:58:58.519Z"
     },
     {
       "id": "scottsboro-boys",
