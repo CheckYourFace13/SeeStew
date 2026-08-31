@@ -3493,9 +3493,9 @@
       "imageSearchTerms": [
         "Sacco and Vanzetti trial"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "sacco-vanzetti-trial",
+      "publishedAt": "2026-08-31T17:29:06.912Z"
     },
     {
       "id": "lindbergh-kidnapping-1932",
