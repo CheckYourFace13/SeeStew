@@ -3539,9 +3539,9 @@
       "imageSearchTerms": [
         "Lindbergh kidnapping 1932"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "lindbergh-kidnapping-1932",
+      "publishedAt": "2026-09-01T14:40:21.765Z"
     },
     {
       "id": "pentagon-papers-1971",
