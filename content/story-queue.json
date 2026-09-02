@@ -3585,9 +3585,9 @@
       "imageSearchTerms": [
         "Pentagon Papers 1971 Ellsberg"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "pentagon-papers-1971",
+      "publishedAt": "2026-09-02T14:13:22.246Z"
     },
     {
       "id": "manhattan-project",
