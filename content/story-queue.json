@@ -3631,9 +3631,9 @@
       "imageSearchTerms": [
         "Manhattan Project Los Alamos"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "manhattan-project",
+      "publishedAt": "2026-09-03T14:17:19.545Z"
     },
     {
       "id": "roswell-incident-1947",
