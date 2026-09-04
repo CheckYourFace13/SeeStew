@@ -3677,9 +3677,9 @@
       "imageSearchTerms": [
         "Roswell incident 1947 Project Mogul"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "roswell-incident-1947",
+      "publishedAt": "2026-09-04T14:07:05.577Z"
     },
     {
       "id": "homestead-strike-1892",
