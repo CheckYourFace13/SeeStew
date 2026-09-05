@@ -3723,9 +3723,9 @@
       "imageSearchTerms": [
         "Homestead Strike 1892"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "homestead-strike-1892",
+      "publishedAt": "2026-09-05T13:20:21.199Z"
     },
     {
       "id": "pullman-strike-1894",
