@@ -3769,9 +3769,9 @@
       "imageSearchTerms": [
         "Pullman Strike 1894 Chicago"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "pullman-strike-1894",
+      "publishedAt": "2026-09-06T13:29:43.097Z"
     },
     {
       "id": "attica-prison-riot-1971",
