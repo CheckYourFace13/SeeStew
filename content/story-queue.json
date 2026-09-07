@@ -3815,9 +3815,9 @@
       "imageSearchTerms": [
         "Attica prison riot 1971"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "attica-prison-riot-1971",
+      "publishedAt": "2026-09-07T15:39:42.285Z"
     },
     {
       "id": "waco-siege-1993",
