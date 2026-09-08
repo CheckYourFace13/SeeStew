@@ -3861,9 +3861,9 @@
       "imageSearchTerms": [
         "Waco siege 1993 Branch Davidians"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "waco-siege-1993",
+      "publishedAt": "2026-09-08T14:16:50.071Z"
     },
     {
       "id": "oklahoma-city-bombing-1995",
