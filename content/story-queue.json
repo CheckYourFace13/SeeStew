@@ -3907,9 +3907,9 @@
       "imageSearchTerms": [
         "Oklahoma City bombing 1995"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "oklahoma-city-bombing-1995",
+      "publishedAt": "2026-09-09T14:17:39.851Z"
     },
     {
       "id": "hurricane-katrina-2005",
