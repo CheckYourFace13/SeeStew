@@ -3953,9 +3953,9 @@
       "imageSearchTerms": [
         "Hurricane Katrina 2005 New Orleans"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "hurricane-katrina-2005",
+      "publishedAt": "2026-09-10T14:10:37.978Z"
     },
     {
       "id": "flint-water-crisis",
