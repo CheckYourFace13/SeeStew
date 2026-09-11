@@ -3999,9 +3999,9 @@
       "imageSearchTerms": [
         "Flint water crisis lead"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "flint-water-crisis",
+      "publishedAt": "2026-09-11T14:10:05.441Z"
     },
     {
       "id": "deepwater-horizon-2010",
