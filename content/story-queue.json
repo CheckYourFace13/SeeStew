@@ -4045,9 +4045,9 @@
       "imageSearchTerms": [
         "Deepwater Horizon oil spill 2010"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "deepwater-horizon-2010",
+      "publishedAt": "2026-09-12T13:28:37.690Z"
     },
     {
       "id": "great-baltimore-fire-1904",
