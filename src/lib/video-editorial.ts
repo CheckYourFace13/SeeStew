@@ -61,8 +61,19 @@ export function getVideoEditorial(video: YouTubeVideo): string {
   return EDITORIAL[video.id] ?? defaultEditorial(video);
 }
 
+const UNIQUE_SUMMARIES: Record<string, string> = {
+  BrNGqid8_tY:
+    "Theodore Roosevelt took office in 1901 and used a strong navy — Big Stick diplomacy — to back American talks abroad.",
+  mLuyPuMyVMc:
+    "Before Jamestown dominated the story, France tried to hold Fort Caroline near today's Jacksonville; Spain destroyed it in 1565.",
+  HCzHfSU_95E:
+    "Antonio Pigafetta sailed with Magellan and wrote one of the only eyewitness accounts of the first voyage around the world.",
+};
+
 /** One or two sentences from the video's own description — never invented facts. */
 export function getVideoSummary(video: YouTubeVideo): string {
+  if (UNIQUE_SUMMARIES[video.id]) return UNIQUE_SUMMARIES[video.id];
+
   const cleaned = video.description
     .replace(/#\w+/g, "")
     .replace(/https?:\/\/\S+/g, "")

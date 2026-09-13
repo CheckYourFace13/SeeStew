@@ -2,22 +2,25 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { SocialInlineLink } from "@/components/SocialIcons";
-import { VideoCard } from "@/components/VideoCard";
+import { VideoIndexCard } from "@/components/VideoIndexCard";
+import { getAllArticles } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
+import { relatedArticlesForVideo } from "@/lib/related";
 import { buildBreadcrumbJsonLd } from "@/lib/seo";
 import { getLongFormVideos } from "@/lib/youtube";
 
 export const revalidate = 1800;
 
 export const metadata: Metadata = {
-  title: "Interesting Stories from American History — SeeStew Videos",
+  title: "American History Documentaries",
   description:
-    "Watch unbelievable true stories from American history on SeeStew. Long-form episodes on scandals, presidents, wars, and forgotten moments — free on seestew.com and YouTube.",
+    "Companion long-form SeeStew episodes — full-length YouTube videos that expand the researched stories. Prefer a clip? Use Shorts. Prefer to read? Start with Stories.",
   alternates: { canonical: `${siteConfig.url}/videos` },
 };
 
 export default async function VideosPage() {
   const videos = await getLongFormVideos();
+  const articles = getAllArticles();
 
   return (
     <div className="page-shell">
@@ -29,49 +32,45 @@ export default async function VideosPage() {
       />
       <header className="mb-10 max-w-3xl">
         <h1 className="font-heading text-4xl font-bold text-ink md:text-5xl">
-          Interesting Stories from American History
+          Companion long-form episodes
         </h1>
         <p className="mt-4 text-lg text-ink-muted">
-          Companion documentaries for the same hard-to-believe true stories we publish in writing.
-          Play an episode below, or start with the researched{" "}
-          <Link href="/articles" className="text-brand-mid underline">
-            Stories
-          </Link>
-          . Also on{" "}
-          <SocialInlineLink platform="youtube">@SeeStew</SocialInlineLink>. This page lists
-          full-length YouTube videos only — shorts live on{" "}
-          <Link href="/shorts" className="text-brand-mid underline">
-            Shorts
-          </Link>
-          .
+          These are full-length SeeStew documentaries, not shorts. Each episode sits next to the
+          written archive: play one here, then read the sourced story when a match exists. Also on{" "}
+          <SocialInlineLink platform="youtube">@SeeStew</SocialInlineLink>.
+        </p>
+        <p className="mt-3 text-ink-muted">
+          <Link href="/shorts" className="font-semibold text-brand-mid underline">
+            Prefer quick clips?
+          </Link>{" "}
+          Go to Shorts.{" "}
+          <Link href="/articles" className="font-semibold text-brand-mid underline">
+            Prefer to read?
+          </Link>{" "}
+          Open Stories.
         </p>
       </header>
 
       {videos.length === 0 ? (
         <p className="mt-10 text-ink-muted">
           Videos are loading — visit{" "}
-          <SocialInlineLink platform="youtube">@SeeStew on YouTube</SocialInlineLink> in the
-          meantime.
+          <SocialInlineLink platform="youtube">@SeeStew</SocialInlineLink> in the meantime, or{" "}
+          <Link href="/articles" className="text-brand-mid underline">
+            read the stories
+          </Link>
+          .
         </p>
       ) : (
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {videos.map((video) => (
-            <VideoCard key={video.id} video={video} />
+            <VideoIndexCard
+              key={video.id}
+              video={video}
+              relatedArticle={relatedArticlesForVideo(video, articles)[0]}
+            />
           ))}
         </div>
       )}
-
-      <p className="mt-12 text-center text-sm text-ink-muted">
-        Want the fast version?{" "}
-        <Link href="/shorts" className="font-semibold text-brand-mid underline">
-          Shorts
-        </Link>
-        . Prefer to read?{" "}
-        <Link href="/articles" className="font-semibold text-brand-mid underline">
-          History stories
-        </Link>
-        .
-      </p>
     </div>
   );
 }

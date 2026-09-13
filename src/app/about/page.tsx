@@ -32,9 +32,10 @@ export default function AboutPage() {
         </p>
         <h2>What we publish</h2>
         <p>
-          Presidents, scandals, wars, riots, spies, industrial disasters, and the strange corners
-          of the American past. If it sounds made up but is documented, we are interested. New
-          stories land regularly — often daily — so the archive keeps growing.
+          Weird American history, forgotten disasters, military history, political scandals, crime,
+          Revolutionary War episodes, and other documented corners of the American past. If it
+          sounds made up but is documented, we are interested. New stories land regularly — often
+          daily — so the archive keeps growing.
         </p>
         <h2>How we work</h2>
         <p>

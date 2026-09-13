@@ -1,4 +1,4 @@
-import { SocialInlineLink } from "@/components/SocialIcons";
+import { PlatformIcon, SocialInlineLink } from "@/components/SocialIcons";
 
 const INSTAGRAM_REELS = [
   {
@@ -14,7 +14,7 @@ const INSTAGRAM_REELS = [
   {
     title: "Truman Assassination Attempt at Blair House",
     href: "https://www.instagram.com/see.stew/reel/DE2ikTPJX7h/",
-    topic: "Presidents",
+    topic: "1950",
   },
   {
     title: "Boss Tweed & Tammany Hall",
@@ -24,7 +24,7 @@ const INSTAGRAM_REELS = [
   {
     title: "John Tyler's Presidency",
     href: "https://www.instagram.com/see.stew/reel/DCPRWvMq8Fw/",
-    topic: "Antebellum",
+    topic: "1841",
   },
 ];
 
@@ -32,7 +32,7 @@ export function InstagramFeed() {
   return (
     <section>
       <h2 className="font-heading text-3xl font-semibold text-brand-primary md:text-4xl">
-        American Insights Through Instagram
+        Clips from the same history
       </h2>
       <p className="mt-2 text-ink-muted">
         Reels on{" "}
@@ -48,6 +48,7 @@ export function InstagramFeed() {
             href={reel.href}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`${reel.title} on Instagram`}
             className="group rounded-xl border border-surface-muted bg-surface p-5 transition hover:border-brand-bright hover:shadow-md"
           >
             <span className="text-xs font-medium uppercase tracking-wide text-brand-bright">
@@ -56,8 +57,9 @@ export function InstagramFeed() {
             <h3 className="mt-2 font-heading text-lg font-semibold leading-snug text-brand-primary group-hover:text-nav-hover">
               {reel.title}
             </h3>
-            <span className="mt-3 inline-block text-sm font-medium text-ink-soft group-hover:text-brand-bright">
-              Watch on Instagram →
+            <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-ink-soft group-hover:text-brand-bright">
+              <PlatformIcon platform="instagram" className="h-4 w-4" />
+              <span className="sr-only">Watch on Instagram</span>
             </span>
           </a>
         ))}

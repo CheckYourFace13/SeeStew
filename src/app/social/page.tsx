@@ -15,7 +15,7 @@ const socialFaqs = [
   },
   {
     question: "What is the Instagram handle?",
-    answer: "instagram.com/see.stew — short reels on presidents, scandals, and major events.",
+    answer: "instagram.com/see.stew — short reels on disasters, scandals, and forgotten American history.",
   },
   {
     question: "What is the TikTok handle?",

@@ -29,8 +29,9 @@ export default async function ArticlesPage() {
         </h1>
         <p className="mt-4 text-lg text-ink-muted">
           Hard-to-believe, fully documented moments from America&apos;s past — forgotten disasters,
-          political twists, presidential oddities, and hidden history that sounds made up (but
-          isn&apos;t). Every story lists named sources. New articles publish regularly.
+          military near-misses, political scandals, crime, Revolutionary War episodes, and weird
+          American history that sounds made up (but isn&apos;t). Every story lists named sources.
+          New articles publish regularly.
         </p>
         {topics.length > 0 && (
           <nav className="mt-6 flex flex-wrap gap-2" aria-label="Story topics">

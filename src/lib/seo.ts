@@ -192,7 +192,7 @@ export const homeFaqs: FaqItem[] = [
   {
     question: "What topics does SeeStew cover?",
     answer:
-      "US presidents, wars, scandals, colonial history, political fights, crime, exploration, and shocking forgotten events — with full written stories and optional video on seestew.com.",
+      "SeeStew covers weird American history, forgotten disasters, military history, political scandals, crime, and Revolutionary War stories — each with named sources. Browse by subject at seestew.com/topics.",
   },
   {
     question: "Where can I read strange American history facts?",
@@ -206,7 +206,7 @@ export const defaultKeywords = [
   "hard to believe US history",
   "strange American history facts",
   "forgotten American history",
-  "weird presidential history",
+  "forgotten disasters American history",
   "shocking US history stories",
   "true stories from American history",
   "obscure US history",

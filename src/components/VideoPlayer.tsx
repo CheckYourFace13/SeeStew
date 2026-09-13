@@ -1,4 +1,4 @@
-import { SocialIconLinks } from "@/components/SocialIcons";
+import { SocialIconLinks, PlatformIcon } from "@/components/SocialIcons";
 import { youtubeEmbedUrl, youtubeWatchUrlFromId } from "@/lib/youtube-id";
 import { youtubeWatchUrl } from "@/lib/youtube";
 
@@ -22,9 +22,11 @@ export function VideoPlayer({ videoId, title }: VideoPlayerProps) {
             href={watchUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary mt-4 inline-flex"
+            className="btn-primary mt-4 inline-flex items-center gap-2"
+            aria-label="Watch on YouTube"
           >
-            Open on YouTube
+            <PlatformIcon platform="youtube" className="h-5 w-5" />
+            <span className="sr-only">Watch on YouTube</span>
           </a>
         </div>
         <SocialIconLinks variant="inline" />
@@ -49,9 +51,10 @@ export function VideoPlayer({ videoId, title }: VideoPlayerProps) {
           href={watchUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center rounded-lg bg-[#ff0000] px-4 py-2 text-sm font-semibold text-white hover:opacity-90"
+          className="inline-flex items-center justify-center rounded-lg bg-[#ff0000] px-3 py-2 text-white hover:opacity-90"
+          aria-label="Watch on YouTube"
         >
-          Open on YouTube
+          <PlatformIcon platform="youtube" className="h-5 w-5" />
         </a>
         <SocialIconLinks variant="inline" />
       </div>

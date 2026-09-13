@@ -4,19 +4,22 @@ import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { Logo } from "@/components/Logo";
 import { SocialLinks } from "@/components/SocialLinks";
-import { PlatformIcon, SocialInlineLink } from "@/components/SocialIcons";
+import { SocialInlineLink } from "@/components/SocialIcons";
 import { StoryCard } from "@/components/StoryCard";
 import { VideoCard } from "@/components/VideoCard";
 import { getAllArticles } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
 import { buildFaqJsonLd, homeFaqs } from "@/lib/seo";
+import { getPopulatedTopics } from "@/lib/topic-seo";
 import { getLongFormVideos, getShortFormVideos, getYouTubeVideos } from "@/lib/youtube";
 
 /** Avoid year-long CDN HTML cache (Hostinger) that can serve broken/stale homepages after deploy. */
 export const revalidate = 60;
 
 export default async function HomePage() {
-  const articles = getAllArticles().slice(0, 9);
+  const allArticles = getAllArticles();
+  const articles = allArticles.slice(0, 9);
+  const topics = getPopulatedTopics(allArticles);
   const longForm = (await getLongFormVideos()).slice(0, 3);
   const shorts = (await getShortFormVideos()).slice(0, 4);
   const videos = await getYouTubeVideos();
@@ -40,7 +43,8 @@ export default async function HomePage() {
             True American stories that sound made up
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base text-ink-muted md:text-lg">
-            {siteConfig.description}
+            {siteConfig.description} Every article lists named sources. Companion videos and shorts
+            are the same stories in motion — not a separate, unsourced feed.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link href="/articles" className="btn-primary">
@@ -50,6 +54,22 @@ export default async function HomePage() {
               Browse by topic
             </Link>
           </div>
+          {topics.length > 0 && (
+            <nav
+              className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-2"
+              aria-label="Published topics"
+            >
+              {topics.map((topic) => (
+                <Link
+                  key={topic.slug}
+                  href={`/topics/${topic.slug}`}
+                  className="rounded-full border border-brand-wash bg-white px-3 py-1 text-sm text-brand-mid hover:border-brand-bright"
+                >
+                  {topic.title}
+                </Link>
+              ))}
+            </nav>
+          )}
         </div>
       </section>
 
@@ -127,6 +147,54 @@ export default async function HomePage() {
       {/* Ads only after substantial original story content */}
       <AdSlot className="container-page" format="horizontal" />
 
+      <section className="section-pad">
+        <div className="container-page">
+          <h2 className="font-heading text-3xl font-semibold text-brand-primary">
+            How the library connects
+          </h2>
+          <p className="mt-2 max-w-3xl text-ink-muted">
+            SeeStew is one archive in three formats. Start with the article if you want sources.
+            Use video when we have a full episode. Use a short only as the hook — then come back
+            to the write-up.
+          </p>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            <div className="rounded-xl border border-surface-muted bg-surface p-6">
+              <h3 className="font-heading text-xl font-semibold text-brand-primary">Stories</h3>
+              <p className="mt-2 text-sm text-ink-muted">
+                Researched articles with named, linked sources. This is the record.
+              </p>
+              <p className="mt-4">
+                <Link href="/articles" className="text-sm font-medium text-brand-mid underline">
+                  Read stories →
+                </Link>
+              </p>
+            </div>
+            <div className="rounded-xl border border-surface-muted bg-surface p-6">
+              <h3 className="font-heading text-xl font-semibold text-brand-primary">Videos</h3>
+              <p className="mt-2 text-sm text-ink-muted">
+                Full-length companion episodes for the same history — not a dump of unrelated clips.
+              </p>
+              <p className="mt-4">
+                <Link href="/videos" className="text-sm font-medium text-brand-mid underline">
+                  Watch videos →
+                </Link>
+              </p>
+            </div>
+            <div className="rounded-xl border border-surface-muted bg-surface p-6">
+              <h3 className="font-heading text-xl font-semibold text-brand-primary">Shorts</h3>
+              <p className="mt-2 text-sm text-ink-muted">
+                Quick hits under a minute. Useful as a lead-in, then the article does the proving.
+              </p>
+              <p className="mt-4">
+                <Link href="/shorts" className="text-sm font-medium text-brand-mid underline">
+                  Watch shorts →
+                </Link>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section-pad section-muted">
         <div className="container-page">
           <h2 className="font-heading text-3xl font-semibold text-brand-primary">
@@ -189,17 +257,6 @@ export default async function HomePage() {
           <div className="mt-10">
             <SocialLinks />
           </div>
-          <p className="mt-8 flex flex-wrap justify-center gap-4 text-sm">
-            <a
-              href={siteConfig.social.youtubeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-outline inline-flex items-center gap-2"
-            >
-              <PlatformIcon platform="youtube" className="h-5 w-5" />
-              <span>@SeeStew on YouTube</span>
-            </a>
-          </p>
         </div>
       </section>
 

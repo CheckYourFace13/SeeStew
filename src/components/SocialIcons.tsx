@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { siteConfig } from "@/lib/config";
 
-export type SocialPlatform = "youtube" | "instagram" | "tiktok";
+export type SocialPlatform = "youtube" | "instagram" | "tiktok" | "facebook";
 
 const platforms: Array<{
   id: SocialPlatform;
@@ -22,6 +22,11 @@ const platforms: Array<{
     id: "tiktok",
     href: siteConfig.social.tiktokUrl,
     label: "SeeStew on TikTok",
+  },
+  {
+    id: "facebook",
+    href: siteConfig.social.facebookUrl,
+    label: "SeeStew on Facebook",
   },
 ];
 
@@ -58,10 +63,22 @@ function TikTokIcon({ className }: { className?: string }) {
   );
 }
 
+function FacebookIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        fill="currentColor"
+        d="M22 12.07C22 6.5 17.52 2 12 2S2 6.5 2 12.07C2 17.1 5.66 21.24 10.44 22v-7.03H7.9v-2.9h2.54V9.84c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.9h-2.34V22C18.34 21.24 22 17.1 22 12.07Z"
+      />
+    </svg>
+  );
+}
+
 const iconMap = {
   youtube: YouTubeIcon,
   instagram: InstagramIcon,
   tiktok: TikTokIcon,
+  facebook: FacebookIcon,
 } as const;
 
 export function PlatformIcon({
