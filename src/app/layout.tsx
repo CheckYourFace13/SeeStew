@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
-import { AdSenseScript } from "@/components/AdSlot";
+import Script from "next/script";
 import { CookieConsent } from "@/components/CookieConsent";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { JsonLd } from "@/components/JsonLd";
-import { analyticsConfig, siteConfig } from "@/lib/config";
+import { ADSENSE_CLIENT_ID } from "@/lib/ads-txt";
+import { adsConfig, analyticsConfig, siteConfig } from "@/lib/config";
 import {
   buildOrganizationJsonLd,
   buildWebSiteJsonLd,
@@ -76,6 +77,7 @@ export const metadata: Metadata = {
     "geo.region": "US",
     "geo.placename": "United States",
     "content-language": "en-US",
+    "google-adsense-account": ADSENSE_CLIENT_ID,
     ...(analyticsConfig.googleSiteVerification
       ? { "google-site-verification": analyticsConfig.googleSiteVerification }
       : {}),
@@ -88,6 +90,7 @@ export default function RootLayout({
   return (
     <html lang="en-US" className={`${outfit.variable} ${inter.variable}`}>
       <head>
+        <meta name="google-adsense-account" content={ADSENSE_CLIENT_ID} />
         <link rel="icon" href="/logo.png" />
         <link rel="apple-touch-icon" href="/logo-light.png" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="SeeStew Stories" />
@@ -97,8 +100,16 @@ export default function RootLayout({
       </head>
       <body className={`${outfit.variable} ${inter.variable} flex min-h-screen flex-col bg-surface text-ink antialiased`}>
         <JsonLd data={[buildWebSiteJsonLd(), buildOrganizationJsonLd()]} />
+        {adsConfig.enabled && adsConfig.publisherId ? (
+          <Script
+            id="google-adsense"
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsConfig.publisherId}`}
+            crossOrigin="anonymous"
+            strategy="beforeInteractive"
+          />
+        ) : null}
         <GoogleAnalytics />
-        <AdSenseScript />
         <Header />
         <main id="main-content" className="flex-1">
           {children}

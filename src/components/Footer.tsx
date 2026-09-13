@@ -61,12 +61,12 @@ export function Footer() {
           </div>
         </div>
 
-        <div id="subscribe">
+        <div id="follow">
           <p className="font-heading text-sm font-semibold uppercase tracking-wide text-brand-meteorite-light">
-            Engage
+            Follow SeeStew
           </p>
           <p className="mt-3 text-sm text-brand-meteorite-light/90">
-            Get new videos on YouTube
+            Latest stories and clips
           </p>
           <FooterNewsletter />
           <p className="mt-4 text-sm">
@@ -91,6 +91,17 @@ export function Footer() {
           />
           <p>
             © {year} {siteConfig.name}. All rights reserved.
+          </p>
+          <p>
+            Built by{" "}
+            <a
+              href="https://iscreamstudio.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-white"
+            >
+              iScream Studio
+            </a>
           </p>
           <div className="flex gap-4">
             <Link href="/privacy" className="hover:text-white">

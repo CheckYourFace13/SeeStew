@@ -83,6 +83,18 @@ export const topicHubs: TopicHub[] = [
       "American war stories documented",
     ],
   },
+  {
+    slug: "crime",
+    title: "Crime",
+    description:
+      "Documented American crime stories — industrial disasters with criminal negligence, massacres, and cases that changed U.S. law.",
+    intro:
+      "True crime from the American past: cover-ups, workplace catastrophes, and violence that left a paper trail. Every story names its sources.",
+    searchAngles: [
+      "American true crime history",
+      "forgotten U.S. crime stories",
+    ],
+  },
 ];
 
 export function getTopicHub(slug: string): TopicHub | undefined {
@@ -90,6 +102,47 @@ export function getTopicHub(slug: string): TopicHub | undefined {
 }
 
 export function getTopicHubForCategory(category: string): TopicHub | undefined {
-  const slug = category.toLowerCase().replace(/\s+/g, "-");
+  const slug = categoryToSlug(category);
   return getTopicHub(slug);
+}
+
+export function categoryToSlug(category: string): string {
+  return category.toLowerCase().replace(/\s+/g, "-");
+}
+
+export type PopulatedTopic = {
+  slug: string;
+  title: string;
+  description: string;
+  intro?: string;
+  count: number;
+  hub?: TopicHub;
+};
+
+/** Topics that actually have published stories — never zero-count hubs. */
+export function getPopulatedTopics(
+  articles: Array<{ category: string }>
+): PopulatedTopic[] {
+  const bySlug = new Map<string, { name: string; count: number }>();
+  for (const article of articles) {
+    const slug = categoryToSlug(article.category);
+    const prev = bySlug.get(slug);
+    if (prev) prev.count += 1;
+    else bySlug.set(slug, { name: article.category, count: 1 });
+  }
+
+  return [...bySlug.entries()]
+    .map(([slug, { name, count }]) => {
+      const hub = getTopicHub(slug);
+      return {
+        slug,
+        title: hub?.title ?? name,
+        description: hub?.description ?? `Documented ${name} stories from American history.`,
+        intro: hub?.intro,
+        count,
+        hub,
+      };
+    })
+    .filter((topic) => topic.count > 0)
+    .sort((a, b) => b.count - a.count || a.title.localeCompare(b.title));
 }

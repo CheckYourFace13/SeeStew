@@ -3,13 +3,21 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
 import { MarkdownContent } from "@/components/MarkdownContent";
+import { MediaCrossLinks } from "@/components/MediaCrossLinks";
 import { SocialLinks } from "@/components/SocialLinks";
 import { VideoCard } from "@/components/VideoCard";
 import { VideoPlayer } from "@/components/VideoPlayer";
+import { getAllArticles } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
+import { relatedArticlesForVideo, relatedVideosForVideo } from "@/lib/related";
 import { buildBreadcrumbJsonLd, buildVideoObjectJsonLd } from "@/lib/seo";
-import { getVideoEditorial } from "@/lib/video-editorial";
-import { getLongFormVideos, getVideoBySlug, isLongFormVideo } from "@/lib/youtube";
+import { getVideoEditorial, getVideoSummary } from "@/lib/video-editorial";
+import {
+  getLongFormVideos,
+  getShortFormVideos,
+  getVideoBySlug,
+  isLongFormVideo,
+} from "@/lib/youtube";
 
 export const revalidate = 1800;
 
@@ -45,7 +53,10 @@ export default async function VideoWatchPage({ params }: Props) {
   if (!video || !isLongFormVideo(video)) notFound();
 
   const editorial = getVideoEditorial(video);
-  const related = (await getLongFormVideos())
+  const summary = getVideoSummary(video);
+  const relatedStories = relatedArticlesForVideo(video, getAllArticles());
+  const relatedShorts = relatedVideosForVideo(video, await getShortFormVideos(), "short");
+  const moreEpisodes = (await getLongFormVideos())
     .filter((v) => v.id !== video.id)
     .slice(0, 3);
 
@@ -73,27 +84,28 @@ export default async function VideoWatchPage({ params }: Props) {
       <h1 className="max-w-3xl font-heading text-3xl font-bold text-ink md:text-4xl">
         {video.title}
       </h1>
+      <p className="mt-4 max-w-3xl text-lg text-ink-muted">{summary}</p>
 
       <div className="mt-8 grid gap-10 lg:grid-cols-[1fr_300px]">
         <div>
           <VideoPlayer videoId={video.id} title={video.title} />
+          <MediaCrossLinks
+            kind="video"
+            relatedArticles={relatedStories}
+            relatedShorts={relatedShorts}
+          />
           <div className="prose-history mt-10">
             <h2 className="!mt-0 font-heading text-2xl font-bold">Notes</h2>
             <MarkdownContent content={editorial} />
-            <p className="mt-6">
-              <Link href="/articles" className="text-brand-mid underline">
-                Prefer the full researched article? Browse Stories →
-              </Link>
-            </p>
           </div>
         </div>
 
         <aside className="space-y-8">
-          {related.length > 0 && (
+          {moreEpisodes.length > 0 && (
             <div>
               <h2 className="font-heading text-lg font-bold text-ink">More episodes</h2>
               <div className="mt-4 space-y-4">
-                {related.map((v) => (
+                {moreEpisodes.map((v) => (
                   <VideoCard key={v.id} video={v} />
                 ))}
               </div>

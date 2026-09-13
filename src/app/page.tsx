@@ -191,7 +191,7 @@ export default async function HomePage() {
           </div>
           <p className="mt-8 flex flex-wrap justify-center gap-4 text-sm">
             <a
-              href={siteConfig.social.youtubeSubscribeUrl}
+              href={siteConfig.social.youtubeUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline inline-flex items-center gap-2"

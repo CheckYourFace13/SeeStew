@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { StoryCard } from "@/components/StoryCard";
-import { getArticlesForStoriesPage } from "@/lib/articles";
+import { getAllArticles, getArticlesForStoriesPage } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
+import { getPopulatedTopics } from "@/lib/topic-seo";
 import { getYouTubeVideos } from "@/lib/youtube";
 
 export const revalidate = 300;
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
 
 export default async function ArticlesPage() {
   const articles = getArticlesForStoriesPage();
+  const topics = getPopulatedTopics(getAllArticles());
   const videos = await getYouTubeVideos();
   const thumbByVideoId = new Map(videos.map((v) => [v.id, v.thumbnail]));
 
@@ -30,6 +32,19 @@ export default async function ArticlesPage() {
           political twists, presidential oddities, and hidden history that sounds made up (but
           isn&apos;t). Every story lists named sources. New articles publish regularly.
         </p>
+        {topics.length > 0 && (
+          <nav className="mt-6 flex flex-wrap gap-2" aria-label="Story topics">
+            {topics.map((topic) => (
+              <Link
+                key={topic.slug}
+                href={`/topics/${topic.slug}`}
+                className="rounded-full border border-brand-wash bg-white px-3 py-1 text-sm text-brand-mid hover:border-brand-bright"
+              >
+                {topic.title}
+              </Link>
+            ))}
+          </nav>
+        )}
       </header>
 
       {articles.length === 0 ? (

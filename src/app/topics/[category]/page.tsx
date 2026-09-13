@@ -3,24 +3,29 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
+import { VideoCard } from "@/components/VideoCard";
 import { getAllArticles, getArticlesByCategory } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
+import { videosRelatedToArticles } from "@/lib/related";
 import { buildBreadcrumbJsonLd } from "@/lib/seo";
-import { getTopicHub, getTopicHubForCategory } from "@/lib/topic-seo";
+import {
+  categoryToSlug,
+  getPopulatedTopics,
+  getTopicHub,
+  getTopicHubForCategory,
+} from "@/lib/topic-seo";
+import { getYouTubeVideos } from "@/lib/youtube";
 
 type Props = { params: Promise<{ category: string }> };
 
 function slugToCategory(slug: string): string | undefined {
   const articles = getAllArticles();
-  return articles.find(
-    (a) => a.category.toLowerCase().replace(/\s+/g, "-") === slug
-  )?.category;
+  return articles.find((a) => categoryToSlug(a.category) === slug)?.category;
 }
 
 export async function generateStaticParams() {
-  const cats = new Set(getAllArticles().map((a) => a.category));
-  return [...cats].map((c) => ({
-    category: c.toLowerCase().replace(/\s+/g, "-"),
+  return getPopulatedTopics(getAllArticles()).map((topic) => ({
+    category: topic.slug,
   }));
 }
 
@@ -28,12 +33,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category: slug } = await params;
   const hub = getTopicHub(slug);
   const name = slugToCategory(slug) ?? hub?.title;
-  if (!name) return { title: "Topic not found" };
+  const articles = name ? getArticlesByCategory(name) : [];
+  if (!name || articles.length === 0) return { title: "Topic not found" };
+  const titles = articles
+    .slice(0, 3)
+    .map((a) => a.title)
+    .join(", ");
   return {
     title: hub?.title ?? `${name} — American History Stories`,
     description:
       hub?.description ??
-      `Unbelievable ${name} stories and strange American history facts — shocking true tales on SeeStew.`,
+      `${articles.length} documented ${name} stories on SeeStew, including ${titles}.`,
     alternates: { canonical: `${siteConfig.url}/topics/${slug}` },
   };
 }
@@ -47,7 +57,11 @@ export default async function TopicCategoryPage({ params }: Props) {
 
   const displayName = categoryName ?? hub!.title;
   const articles = categoryName ? getArticlesByCategory(categoryName) : [];
+  if (articles.length === 0) notFound();
+
+  const videos = videosRelatedToArticles(articles, await getYouTubeVideos());
   const url = `${siteConfig.url}/topics/${slug}`;
+  const featuredTitles = articles.slice(0, 3).map((a) => a.title);
 
   return (
     <div className="page-shell">
@@ -69,8 +83,10 @@ export default async function TopicCategoryPage({ params }: Props) {
         {hub?.title ?? displayName}
       </h1>
       <p className="mt-3 max-w-3xl text-lg text-ink-muted">
-        {hub?.intro ??
-          `Shocking and forgotten ${displayName} stories from American history.`}
+        {hub?.intro ?? `Shocking and forgotten ${displayName} stories from American history.`}{" "}
+        This hub currently includes {articles.length} documented{" "}
+        {articles.length === 1 ? "story" : "stories"}
+        {featuredTitles.length > 0 ? `, including ${featuredTitles.join("; ")}` : ""}.
       </p>
 
       {hub?.searchAngles && hub.searchAngles.length > 0 && (
@@ -87,6 +103,10 @@ export default async function TopicCategoryPage({ params }: Props) {
         ·{" "}
         <Link href="/videos" className="text-brand-mid underline">
           Watch videos
+        </Link>{" "}
+        ·{" "}
+        <Link href="/shorts" className="text-brand-mid underline">
+          Shorts
         </Link>
       </p>
 
@@ -104,14 +124,18 @@ export default async function TopicCategoryPage({ params }: Props) {
         ))}
       </ul>
 
-      {articles.length === 0 && (
-        <p className="mt-10 text-ink-muted">
-          Stories for this topic are coming soon. Browse{" "}
-          <Link href="/articles" className="underline">
-            all stories
-          </Link>
-          .
-        </p>
+      {videos.length > 0 && (
+        <section className="mt-14">
+          <h2 className="font-heading text-2xl font-bold text-ink">Watch next</h2>
+          <p className="mt-2 text-ink-muted">
+            Matching SeeStew videos and shorts for these {displayName} stories.
+          </p>
+          <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {videos.slice(0, 6).map((video) => (
+              <VideoCard key={video.id} video={video} />
+            ))}
+          </div>
+        </section>
       )}
     </div>
   );

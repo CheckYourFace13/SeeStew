@@ -3,13 +3,18 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
 import { MarkdownContent } from "@/components/MarkdownContent";
+import { MediaCrossLinks } from "@/components/MediaCrossLinks";
 import { SocialLinks } from "@/components/SocialLinks";
 import { VideoCard } from "@/components/VideoCard";
 import { VideoPlayer } from "@/components/VideoPlayer";
+import { getAllArticles } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
+import { relatedArticlesForVideo, relatedVideosForVideo } from "@/lib/related";
 import { buildBreadcrumbJsonLd } from "@/lib/seo";
-import { getVideoEditorial } from "@/lib/video-editorial";
+import { getVideoEditorial, getVideoSummary } from "@/lib/video-editorial";
+import { youtubeEmbedUrl } from "@/lib/youtube-id";
 import {
+  getLongFormVideos,
   getShortFormVideos,
   getVideoBySlug,
   isShortFormVideo,
@@ -36,7 +41,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       video.description?.slice(0, 155) ||
       `Watch ${video.title} — a SeeStew history short.`,
     alternates: { canonical: `${siteConfig.url}/shorts/${slug}` },
-    // Thin syndicated clip page — keep out of the index to avoid low-value signals.
     robots: { index: false, follow: true },
     openGraph: {
       type: "video.other",
@@ -52,9 +56,13 @@ export default async function ShortWatchPage({ params }: Props) {
   if (!video || !isShortFormVideo(video)) notFound();
 
   const editorial = getVideoEditorial(video);
+  const summary = getVideoSummary(video);
+  const relatedStories = relatedArticlesForVideo(video, getAllArticles());
+  const relatedLong = relatedVideosForVideo(video, await getLongFormVideos(), "long");
   const related = (await getShortFormVideos())
     .filter((v) => v.id !== video.id)
     .slice(0, 4);
+  const embedUrl = youtubeEmbedUrl(video.id) ?? `https://www.youtube.com/embed/${video.id}`;
 
   return (
     <article className="page-shell max-w-4xl">
@@ -71,7 +79,7 @@ export default async function ShortWatchPage({ params }: Props) {
             name: video.title,
             description: video.description,
             thumbnailUrl: video.thumbnail,
-            embedUrl: `https://www.youtube.com/embed/${video.id}`,
+            embedUrl,
             contentUrl: youtubeWatchUrl(video.id),
             publisher: {
               "@type": "Organization",
@@ -93,18 +101,20 @@ export default async function ShortWatchPage({ params }: Props) {
       <h1 className="font-heading text-3xl font-bold text-ink md:text-4xl">
         {video.title}
       </h1>
+      <p className="mt-4 text-lg text-ink-muted">{summary}</p>
 
       <div className="mt-8">
         <VideoPlayer videoId={video.id} title={video.title} />
       </div>
 
+      <MediaCrossLinks
+        kind="short"
+        relatedArticles={relatedStories}
+        relatedLongVideos={relatedLong}
+      />
+
       <div className="prose-history mt-10">
         <MarkdownContent content={editorial} />
-        <p className="mt-6">
-          <Link href="/articles" className="text-brand-mid underline">
-            Read the full researched stories →
-          </Link>
-        </p>
       </div>
 
       {related.length > 0 && (

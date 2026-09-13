@@ -12,7 +12,7 @@ The film above walks through TR's ranch years, his fights with trusts, and the f
 
 In 1565 Pedro Menéndez destroyed the French post and founded St. Augustine. The clash was about religion, empire, and who controlled the Atlantic coast.
 
-If you want more on early colonial rivalry, subscribe on [YouTube](${siteConfig.social.youtubeSubscribeUrl}) or catch the short version on [@see.stew](${siteConfig.social.instagramUrl}).`,
+If you want more on early colonial rivalry, follow SeeStew on [YouTube](${siteConfig.social.youtubeUrl}) or catch the short version on [@see.stew](${siteConfig.social.instagramUrl}).`,
 
   HCzHfSU_95E: `Antonio Pigafetta sailed with Magellan and lived to write one of the only eyewitness accounts of the first voyage around the world. His notes describe islands, rulers, and shipboard discipline in detail most officials never bothered to record.
 
@@ -44,7 +44,7 @@ function defaultEditorial(video: YouTubeVideo): string {
   const lead =
     video.format === "short"
       ? `This is a SeeStew short on **${video.title}**. It is pulled straight from our [YouTube channel](${siteConfig.social.youtubeUrl}) and plays here so you can watch without switching apps.`
-      : `**${video.title}** is a SeeStew documentary on American history. We host it here with notes and links; the upload also lives on [YouTube](${siteConfig.social.youtubeSubscribeUrl}) where you can subscribe for the next release.`;
+      : `**${video.title}** is a SeeStew documentary on American history. We host it here with notes and links; the upload also lives on [YouTube](${siteConfig.social.youtubeUrl}).`;
 
   const body =
     fromDesc ||
@@ -59,4 +59,22 @@ function defaultEditorial(video: YouTubeVideo): string {
 
 export function getVideoEditorial(video: YouTubeVideo): string {
   return EDITORIAL[video.id] ?? defaultEditorial(video);
+}
+
+/** One or two sentences from the video's own description — never invented facts. */
+export function getVideoSummary(video: YouTubeVideo): string {
+  const cleaned = video.description
+    .replace(/#\w+/g, "")
+    .replace(/https?:\/\/\S+/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  if (cleaned.length >= 40) {
+    const first = cleaned.split(/(?<=[.!?])\s+/)[0] ?? cleaned;
+    return first.length > 280 ? `${first.slice(0, 277).replace(/\s+\S*$/, "")}…` : first;
+  }
+
+  return video.format === "short"
+    ? `A SeeStew history short on ${video.title}.`
+    : `A SeeStew documentary on ${video.title}.`;
 }

@@ -51,7 +51,7 @@ export default function SocialPage() {
             <strong className="text-ink">YouTube</strong> —{" "}
             <SocialInlineLink
               platform="youtube"
-              href={siteConfig.social.youtubeSubscribeUrl}
+              href={siteConfig.social.youtubeUrl}
             >
               @SeeStew
             </SocialInlineLink>{" "}

@@ -13,6 +13,7 @@ import { VideoPlayer } from "@/components/VideoPlayer";
 import { getAllArticles, getArticle, getArticlesByCategory } from "@/lib/articles";
 import { prepareArticleBodyForDisplay } from "@/lib/article-content";
 import { siteConfig } from "@/lib/config";
+import { relatedVideosForArticle } from "@/lib/related";
 import {
   buildArticleJsonLd,
   buildArticleMetaDescription,
@@ -20,7 +21,7 @@ import {
   buildBreadcrumbJsonLd,
   referencesToCitationSchema,
 } from "@/lib/seo";
-import { getLongFormVideos, getVideoById } from "@/lib/youtube";
+import { getVideoById, getYouTubeVideos } from "@/lib/youtube";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -75,7 +76,7 @@ export default async function ArticlePage({ params }: Props) {
     : undefined;
   const topicSlug = article.category.toLowerCase().replace(/\s+/g, "-");
   const relatedStories = getArticlesByCategory(article.category);
-  const relatedVideos = (await getLongFormVideos()).slice(0, 4);
+  const relatedVideos = relatedVideosForArticle(article, await getYouTubeVideos());
 
   const bodyContent = prepareArticleBodyForDisplay(article.content, {
     stripSources: Boolean(article.references?.length),
@@ -168,10 +169,19 @@ export default async function ArticlePage({ params }: Props) {
 
       {relatedVideo && (
         <section className="my-10">
-          <h2 className="mb-4 font-heading text-xl font-bold">Watch the full video</h2>
+          <h2 className="mb-4 font-heading text-xl font-bold">
+            {relatedVideo.format === "short" ? "Watch the short" : "Watch next"}
+          </h2>
           <VideoPlayer videoId={relatedVideo.id} title={relatedVideo.title} />
           <p className="mt-3 text-sm text-ink-muted">
-            <Link href={`/videos/${relatedVideo.slug}`} className="text-brand-mid underline">
+            <Link
+              href={
+                relatedVideo.format === "short"
+                  ? `/shorts/${relatedVideo.slug}`
+                  : `/videos/${relatedVideo.slug}`
+              }
+              className="text-brand-mid underline"
+            >
               More notes on this episode →
             </Link>
           </p>

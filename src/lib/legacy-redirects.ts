@@ -1,5 +1,7 @@
 /** 301 redirects from the old Hostinger Website Builder URLs (seestew.com sitemap) */
 export const legacyRedirects = [
+  { source: "/blog", destination: "/articles", permanent: true },
+  { source: "/blog/", destination: "/articles", permanent: true },
   {
     source: "/blog-post3",
     destination: "/articles/george-washington-timelines-legacies",

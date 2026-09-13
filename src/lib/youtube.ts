@@ -14,6 +14,8 @@ export type YouTubeVideo = {
   slug: string;
   format: VideoFormat;
   durationSeconds: number;
+  /** Original feed/watch/shorts URL when known — used to classify Shorts. */
+  sourceUrl?: string;
 };
 
 const FALLBACK_VIDEOS: YouTubeVideo[] = [
@@ -89,17 +91,27 @@ export function looksLikeLongForm(title: string, description = ""): boolean {
   );
 }
 
-/** Title/description signals for YouTube Shorts. */
-export function looksLikeShort(title: string, description = ""): boolean {
+/** Title/description metadata that explicitly marks a YouTube Short. */
+export function metadataSaysShort(title: string, description = ""): boolean {
   const text = `${title} ${description}`.toLowerCase();
   return (
     text.includes("#shorts") ||
+    text.includes("#short") ||
     text.includes("youtube short") ||
-    /\bshorts?\b/i.test(text) ||
-    (title.length > 0 && title.length < 95 && !looksLikeLongForm(title, description))
+    /\byoutube shorts\b/i.test(text)
   );
 }
 
+/** @deprecated Use metadataSaysShort — kept so older imports keep working. */
+export function looksLikeShort(title: string, description = ""): boolean {
+  return metadataSaysShort(title, description);
+}
+
+/**
+ * Classify long-form vs Short.
+ * Order: /shorts/ URL → explicit short metadata → duration ≤ 60s → otherwise long.
+ * Missing duration is not treated as a short (YouTube API often omits it).
+ */
 export function classifyFormat(
   durationSeconds: number,
   title: string,
@@ -107,10 +119,8 @@ export function classifyFormat(
   sourceUrl?: string
 ): VideoFormat {
   if (urlLooksLikeShort(sourceUrl)) return "short";
-  if (looksLikeShort(title, description)) return "short";
+  if (metadataSaysShort(title, description)) return "short";
   if (durationSeconds > 0 && durationSeconds <= SHORT_MAX_SECONDS) return "short";
-  if (durationSeconds > SHORT_MAX_SECONDS) return "long";
-  if (looksLikeLongForm(title, description)) return "long";
   return "long";
 }
 
@@ -236,7 +246,7 @@ async function fetchFromYouTubeApi(
   };
 
   return (videoData.items ?? [])
-    .map((item) => {
+    .map((item): YouTubeVideo | null => {
       const id = normalizeVideoId(item.id);
       if (!id) return null;
 
@@ -245,7 +255,8 @@ async function fetchFromYouTubeApi(
       const format = classifyFormat(
         durationSeconds,
         item.snippet.title,
-        item.snippet.description
+        item.snippet.description,
+        `https://www.youtube.com/watch?v=${id}`
       );
       return {
         id,
@@ -258,6 +269,7 @@ async function fetchFromYouTubeApi(
         slug: slugify(title, id),
         format,
         durationSeconds,
+        sourceUrl: `https://www.youtube.com/watch?v=${id}`,
       };
     })
     .filter((v): v is YouTubeVideo => v !== null);
@@ -304,6 +316,7 @@ function parseRssItem(item: string): YouTubeVideo | null {
     slug: slugify(cleanTitle, id),
     format,
     durationSeconds,
+    sourceUrl: link,
   };
 }
 
@@ -342,7 +355,7 @@ async function enrichMissingDurations(
     if (v.durationSeconds > 0) return v;
     const seconds = durations.get(v.id) ?? 0;
     const durationSeconds = seconds;
-    const format = classifyFormat(durationSeconds, v.title, v.description);
+    const format = classifyFormat(durationSeconds, v.title, v.description, v.sourceUrl);
     return {
       ...v,
       durationSeconds,

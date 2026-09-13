@@ -26,9 +26,14 @@ export default async function ShortsPage() {
           <SocialInlineLink platform="youtube" href={siteConfig.social.youtubeShortsUrl}>
             @SeeStew Shorts
           </SocialInlineLink>
-          . For the full researched write-up, read our{" "}
+          . These are companion clips for the researched stories — play a short here, then read the
+          full write-up in{" "}
           <Link href="/articles" className="text-brand-mid underline">
             Stories
+          </Link>{" "}
+          or watch a longer episode in{" "}
+          <Link href="/videos" className="text-brand-mid underline">
+            Videos
           </Link>
           .
         </p>
@@ -36,13 +41,11 @@ export default async function ShortsPage() {
 
       {shorts.length === 0 ? (
         <p className="mt-10 text-ink-muted">
-          No shorts in the feed yet. Add <code className="text-brand-mid">YOUTUBE_CHANNEL_ID</code>{" "}
-          and <code className="text-brand-mid">YOUTUBE_API_KEY</code> to pull them automatically, or
-          check{" "}
+          Shorts are loading from the SeeStew YouTube channel. Watch them on{" "}
           <SocialInlineLink platform="youtube" href={siteConfig.social.youtubeShortsUrl}>
             YouTube Shorts
-          </SocialInlineLink>
-          .
+          </SocialInlineLink>{" "}
+          in the meantime.
         </p>
       ) : (
         <div className="mt-10 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">

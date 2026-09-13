@@ -1,3 +1,5 @@
+import { ADSENSE_CLIENT_ID } from "./ads-txt";
+
 export const brand = {
   purple: {
     dark: "#1F1346",
@@ -40,9 +42,10 @@ export const siteConfig = {
 } as const;
 
 export const adsConfig = {
-  /** Same as live site: ca-pub-9572509189594279 */
-  publisherId: process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID ?? "",
-  enabled: process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true",
+  /** Public publisher ID — required in HTML for AdSense ownership checks. */
+  publisherId: process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID || ADSENSE_CLIENT_ID,
+  /** Set NEXT_PUBLIC_ADSENSE_ENABLED=false to disable slots locally. */
+  enabled: process.env.NEXT_PUBLIC_ADSENSE_ENABLED !== "false",
 } as const;
 
 /** Google Search Console HTML tag + Analytics 4 */

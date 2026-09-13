@@ -33,12 +33,17 @@ export default async function VideosPage() {
         </h1>
         <p className="mt-4 text-lg text-ink-muted">
           Companion documentaries for the same hard-to-believe true stories we publish in writing.
-          Prefer the researched article? Start with{" "}
+          Play an episode below, or start with the researched{" "}
           <Link href="/articles" className="text-brand-mid underline">
             Stories
           </Link>
           . Also on{" "}
-          <SocialInlineLink platform="youtube">@SeeStew</SocialInlineLink>.
+          <SocialInlineLink platform="youtube">@SeeStew</SocialInlineLink>. This page lists
+          full-length YouTube videos only — shorts live on{" "}
+          <Link href="/shorts" className="text-brand-mid underline">
+            Shorts
+          </Link>
+          .
         </p>
       </header>
 

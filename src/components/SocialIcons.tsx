@@ -146,14 +146,14 @@ export function SocialInlineLink({
   );
 }
 
-/** Subscribe CTA with YouTube icon (not the word “Subscribe” in nav). */
+/** YouTube channel link with icon (header/footer never use the word Subscribe). */
 export function YouTubeSubscribeLink({ className = "" }: { className?: string }) {
   return (
     <a
-      href={siteConfig.social.youtubeSubscribeUrl}
+      href={siteConfig.social.youtubeUrl}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Subscribe to SeeStew on YouTube"
+      aria-label="SeeStew on YouTube"
       className={className}
     >
       <YouTubeIcon className="h-5 w-5" />

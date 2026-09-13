@@ -11,7 +11,7 @@ type PlatformCard = {
 const cards: PlatformCard[] = [
   {
     id: "youtube",
-    href: siteConfig.social.youtubeSubscribeUrl,
+    href: siteConfig.social.youtubeUrl,
     name: "YouTube",
     description: "Full documentaries and weekly uploads",
   },
@@ -57,8 +57,13 @@ export function SocialLinks({ compact = false }: { compact?: boolean }) {
         aria-label="SeeStew on Facebook"
         className="flex flex-col items-center rounded-xl border border-surface-muted bg-surface p-6 text-center shadow-sm transition hover:border-brand-bright hover:shadow-md"
       >
-        <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-bright text-lg font-bold text-white">
-          f
+        <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-bright text-white">
+          <svg className="h-5 w-5" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M22 12.07C22 6.5 17.52 2 12 2S2 6.5 2 12.07C2 17.1 5.66 21.24 10.44 22v-7.03H7.9v-2.9h2.54V9.84c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.9h-2.34V22C18.34 21.24 22 17.1 22 12.07Z"
+            />
+          </svg>
         </span>
         <p className="mt-3 font-heading text-lg font-semibold text-brand-primary">Facebook</p>
         <p className="mt-2 text-sm text-ink-muted">Updates and community</p>

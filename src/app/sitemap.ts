@@ -1,13 +1,14 @@
 import type { MetadataRoute } from "next";
-import { getAllArticles, getAllCategories } from "@/lib/articles";
+import { getAllArticles } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
+import { getPopulatedTopics } from "@/lib/topic-seo";
 import { getLongFormVideos } from "@/lib/youtube";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = siteConfig.url;
   const longForm = await getLongFormVideos();
   const articles = getAllArticles();
-  const categories = getAllCategories();
+  const topics = getPopulatedTopics(articles);
 
   const staticPages: MetadataRoute.Sitemap = [
     "",
@@ -28,8 +29,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: path === "" ? 1 : 0.9,
   }));
 
-  const topicPages = categories.map((cat) => ({
-    url: `${base}/topics/${cat.toLowerCase().replace(/\s+/g, "-")}`,
+  const topicPages = topics.map((topic) => ({
+    url: `${base}/topics/${topic.slug}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.85,
