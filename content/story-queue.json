@@ -4091,9 +4091,9 @@
       "imageSearchTerms": [
         "Great Baltimore Fire 1904"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "great-baltimore-fire-1904",
+      "publishedAt": "2026-09-13T14:12:21.805Z"
     }
   ]
 }
