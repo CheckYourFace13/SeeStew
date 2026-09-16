@@ -16,11 +16,24 @@ import { join } from "path";
 
 const HOST = "seestew.com";
 const BASE = `https://${HOST}`;
-const DEFAULT_KEY = "d3dc290bb6904d4d865801bbc64929ec";
+const DEFAULT_KEY = "39f4a09627794f9d938e051350d8169e";
 const KEY = process.env.INDEXNOW_KEY || DEFAULT_KEY;
 const KEY_LOCATION = `${BASE}/${KEY}.txt`;
 const ENDPOINT = "https://api.indexnow.org/indexnow";
 const CONTENT_DIR = join(process.cwd(), "content", "articles");
+
+function toApex(url) {
+  try {
+    const u = new URL(url);
+    if (u.hostname === `www.${HOST}`) {
+      u.hostname = HOST;
+      return u.toString().replace(/\/$/, "") === `${BASE}` ? `${BASE}/` : u.toString();
+    }
+  } catch {
+    /* ignore */
+  }
+  return url;
+}
 
 function articleUrlsByMtime() {
   if (!existsSync(CONTENT_DIR)) return [];
@@ -53,15 +66,21 @@ function collectUrls(argv) {
   }
 
   for (const arg of argv) {
-    if (arg.startsWith("http://") || arg.startsWith("https://")) urls.add(arg);
+    if (arg.startsWith("http://") || arg.startsWith("https://")) urls.add(toApex(arg));
   }
 
-  return [...urls];
+  return [...urls].map(toApex);
 }
 
 async function submit(urlList) {
   if (!urlList.length) {
     console.error("No URLs to submit. Use --latest, --all, or pass absolute URLs.");
+    process.exit(1);
+  }
+
+  const wwwLeak = urlList.find((u) => u.includes(`://www.${HOST}`));
+  if (wwwLeak) {
+    console.error(`FAIL: Refusing www URL (use apex): ${wwwLeak}`);
     process.exit(1);
   }
 
@@ -93,6 +112,8 @@ async function submit(urlList) {
   }
 
   console.log(`IndexNow: submitting ${urlList.length} URL(s) for ${HOST}`);
+  console.log(`  key=${KEY}`);
+  console.log(`  keyLocation=${KEY_LOCATION}`);
   for (const u of urlList.slice(0, 10)) console.log(`  - ${u}`);
   if (urlList.length > 10) console.log(`  … +${urlList.length - 10} more`);
 
