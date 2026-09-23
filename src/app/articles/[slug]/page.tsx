@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { applyManagedMetadata } from "@/lib/gravyblock-managed";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/AdSlot";
@@ -40,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const url = `${siteConfig.url}/articles/${slug}`;
   const title = buildArticleSerpTitle(article);
   const description = buildArticleMetaDescription(article);
-  return {
+  return applyManagedMetadata(`/articles/${slug}`, {
     title: { absolute: title },
     description,
     keywords: [
@@ -62,7 +63,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
     },
-  };
+  });
 }
 
 export default async function ArticlePage({ params }: Props) {

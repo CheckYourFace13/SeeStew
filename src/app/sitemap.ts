@@ -3,6 +3,7 @@ import { getAllArticles } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
 import { getPopulatedTopics } from "@/lib/topic-seo";
 import { getLongFormVideos } from "@/lib/youtube";
+import { getManagedFeed } from "@/lib/gravyblock-managed";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = siteConfig.url;
@@ -50,7 +51,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.85,
   }));
 
+  const managedItems = (await getManagedFeed())?.items ?? [];
+  const managedPages: MetadataRoute.Sitemap = managedItems.length
+    ? [
+        { url: `${base}/insights`, changeFrequency: "weekly" as const, priority: 0.5 },
+        ...managedItems.map((i) => ({ url: `${base}/insights/${i.slug}`, lastModified: new Date(i.publishedAt), changeFrequency: "monthly" as const, priority: 0.5 })),
+      ]
+    : [];
+
   // Short detail pages are thin syndicated clips — kept accessible via /shorts
   // but excluded from the sitemap and noindexed to avoid low-value-content signals.
-  return [...staticPages, ...topicPages, ...videoPages, ...articlePages];
+  return [...staticPages, ...topicPages, ...videoPages, ...articlePages, ...managedPages];
 }
