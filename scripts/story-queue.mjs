@@ -3,6 +3,7 @@ import { join } from "path";
 import { QUEUE_SEED } from "./story-queue-seed.mjs";
 import { QUEUE_BATCH_2 } from "./story-queue-batch-2.mjs";
 import { QUEUE_BATCH_3 } from "./story-queue-batch-3.mjs";
+import { QUEUE_BATCH_4 } from "./story-queue-batch-4.mjs";
 
 export const QUEUE_PATH = join(process.cwd(), "content", "story-queue.json");
 
@@ -13,7 +14,12 @@ export const QUEUE_PATH = join(process.cwd(), "content", "story-queue.json");
 export const MIN_PENDING_TOPICS = 14;
 
 /** All curated seed batches — merge by id so new batches refill an exhausted queue. */
-export const ALL_QUEUE_SEEDS = [...QUEUE_SEED, ...QUEUE_BATCH_2, ...QUEUE_BATCH_3];
+export const ALL_QUEUE_SEEDS = [
+  ...QUEUE_SEED,
+  ...QUEUE_BATCH_2,
+  ...QUEUE_BATCH_3,
+  ...QUEUE_BATCH_4,
+];
 
 export function loadQueue() {
   if (!existsSync(QUEUE_PATH)) {

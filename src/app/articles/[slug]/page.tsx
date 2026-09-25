@@ -159,14 +159,19 @@ export default async function ArticlePage({ params }: Props) {
             </>
           )}
         </p>
+        <p className="mt-2 text-sm text-ink-muted">
+          Corrections?{" "}
+          <Link href="/contact" className="text-brand-mid underline">
+            Contact us
+          </Link>
+          .
+        </p>
       </header>
 
       <StoryHero
         article={article}
         youtubeThumbnail={relatedVideo?.thumbnail}
       />
-
-      <AdSlot className="mt-8" format="horizontal" label="Advertisement" />
 
       {relatedVideo && (
         <section className="my-10">

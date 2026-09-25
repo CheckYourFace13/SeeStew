@@ -31,6 +31,9 @@ jobs:
       - name: Validate articles
         run: npm run validate:articles
 
+      - name: Check article quality
+        run: npm run check:article-quality
+
       - name: Check story images
         run: npm run check:story-images
 

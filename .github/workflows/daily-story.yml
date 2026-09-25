@@ -24,6 +24,15 @@ jobs:
       - name: Validate story queue
         run: npm run validate:queue
 
+      - name: Confirm OpenRouter secret
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          if [ -z "$OPENROUTER_API_KEY" ]; then
+            echo "::error::OPENROUTER_API_KEY is not set. Add it under GitHub repo Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+
       - name: Generate daily story
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
@@ -35,6 +44,9 @@ jobs:
 
       - name: Validate new article
         run: npm run validate:articles
+
+      - name: Check article quality
+        run: npm run check:article-quality
 
       - name: Check story images
         run: npm run check:story-images

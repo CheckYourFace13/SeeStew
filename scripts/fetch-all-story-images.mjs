@@ -174,7 +174,7 @@ async function searchWikimedia(query) {
     origin: "*",
   });
   const res = await fetch(`https://commons.wikimedia.org/w/api.php?${params}`, {
-    headers: { "User-Agent": "SeeStew/1.0 (https://seestew.com; contact@seestew.com)" },
+    headers: { "User-Agent": "SeeStew/1.0 (https://seestew.com)" },
   });
   if (!res.ok) return [];
   const data = await res.json();
@@ -207,7 +207,7 @@ async function searchWikimedia(query) {
 async function downloadDirect(url) {
   try {
     const res = await fetch(url, {
-      headers: { "User-Agent": "SeeStew/1.0 (https://seestew.com; contact@seestew.com)" },
+      headers: { "User-Agent": "SeeStew/1.0 (https://seestew.com)" },
     });
     if (!res.ok) return null;
     const buf = Buffer.from(await res.arrayBuffer());

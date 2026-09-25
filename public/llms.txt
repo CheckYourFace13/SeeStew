@@ -11,6 +11,7 @@
 - https://seestew.com/shorts — short-form companion clips
 - https://seestew.com/about — what SeeStew is
 - https://seestew.com/editorial — editorial standards and corrections policy
+- https://seestew.com/faq — answers about stories, sources, and corrections
 - https://seestew.com/social — official social links
 - https://seestew.com/feed.xml — RSS for new articles
 - https://seestew.com/sitemap.xml — machine-readable URL map

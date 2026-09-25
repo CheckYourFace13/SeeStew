@@ -19,13 +19,18 @@ export function Footer() {
           </p>
           <ul className="mt-4 space-y-2 text-sm">
             <li>
+              <Link href="/articles" className="hover:text-white">
+                Stories
+              </Link>
+            </li>
+            <li>
               <Link href="/videos" className="hover:text-white">
                 Videos
               </Link>
             </li>
             <li>
-              <Link href="/articles" className="hover:text-white">
-                Stories
+              <Link href="/shorts" className="hover:text-white">
+                Shorts
               </Link>
             </li>
             <li>
@@ -33,6 +38,14 @@ export function Footer() {
                 Topics
               </Link>
             </li>
+          </ul>
+        </div>
+
+        <div>
+          <p className="font-heading text-sm font-semibold uppercase tracking-wide text-brand-meteorite-light">
+            About this site
+          </p>
+          <ul className="mt-4 space-y-2 text-sm">
             <li>
               <Link href="/about" className="hover:text-white">
                 About
@@ -43,13 +56,17 @@ export function Footer() {
                 Editorial
               </Link>
             </li>
+            <li>
+              <Link href="/faq" className="hover:text-white">
+                FAQ
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-white">
+                Contact
+              </Link>
+            </li>
           </ul>
-        </div>
-
-        <div>
-          <p className="font-heading text-sm font-semibold uppercase tracking-wide text-brand-meteorite-light">
-            Connect
-          </p>
           <p className="mt-3 text-sm text-brand-meteorite-light/90">
             Follow SeeStew for new history videos and daily clips.
           </p>
@@ -110,8 +127,8 @@ export function Footer() {
             <Link href="/terms" className="hover:text-white">
               Terms
             </Link>
-            <Link href="/about" className="hover:text-white">
-              About
+            <Link href="/faq" className="hover:text-white">
+              FAQ
             </Link>
             <Link href="/contact" className="hover:text-white">
               Contact

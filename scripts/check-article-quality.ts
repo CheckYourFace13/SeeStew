@@ -11,6 +11,15 @@ import { join } from "path";
 const ROOT = process.cwd();
 const ARTICLES_DIR = join(ROOT, "content", "articles");
 const PLACEHOLDER = "/stories/defaults/";
+const MIN_PROSE_WORDS = 800;
+
+/** Slugs under the prose minimum, with a written reason. Keep this list short. */
+const WORD_ALLOWLIST: Record<string, string> = {};
+
+const PROMPT_LEFTOVER =
+  /\b(image prompt|as an ai|as a language model|chatgpt|you are a historian|historic editorial illustration)\b/i;
+const EMAIL_LEAK = /mailto:|info@seestew\.com|@seestew\.com/i;
+const BLOG_CANONICAL = /https?:\/\/(?:www\.)?seestew\.com\/blog\b|\]\(\/blog(?:\/|["')\s])|canonical[^<\n]{0,80}\/blog\b/i;
 
 type Article = {
   slug?: string;
@@ -19,8 +28,18 @@ type Article = {
   content?: string;
   category?: string;
   references?: Array<{ title?: string; url?: string }>;
-  image?: { card?: string };
+  image?: { card?: string; imagePrompt?: string };
 };
+
+function proseWordCount(content: string): number {
+  const body = content.split(/^##\s*Sources\b/im)[0] ?? content;
+  const plain = body
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/!\[[^\]]*]\([^)]*\)/g, " ")
+    .replace(/\[([^\]]+)]\([^)]*\)/g, "$1")
+    .replace(/[#>*_`]/g, " ");
+  return plain.split(/\s+/).filter(Boolean).length;
+}
 
 function main(): void {
   const files = readdirSync(ARTICLES_DIR)
@@ -53,7 +72,14 @@ function main(): void {
 
     if (!title) errors.push("empty title");
     if (!excerpt) errors.push("empty description/excerpt");
-    if (!content || content.split(/\s+/).length < 200) errors.push("empty or too-short body");
+    if (!content) errors.push("empty body");
+    else {
+      const words = proseWordCount(content);
+      const exempt = WORD_ALLOWLIST[slug];
+      if (words < MIN_PROSE_WORDS && !exempt) {
+        errors.push(`body below ${MIN_PROSE_WORDS} prose words (${words})`);
+      }
+    }
     if (!category) errors.push("empty category");
 
     const key = title.toLowerCase();
@@ -78,6 +104,17 @@ function main(): void {
     if (!card) errors.push("missing image.card");
     else if (card.includes(PLACEHOLDER) || card.endsWith(".svg")) {
       errors.push(`placeholder image: ${card}`);
+    }
+
+    const blob = `${title}\n${excerpt}\n${content}`;
+    if (PROMPT_LEFTOVER.test(blob) || article.image?.imagePrompt) {
+      errors.push("leftover AI or image prompt");
+    }
+    if (BLOG_CANONICAL.test(blob)) {
+      errors.push("/blog URL instead of /articles canonical");
+    }
+    if (EMAIL_LEAK.test(blob)) {
+      errors.push("public email or mailto link");
     }
 
     const status = errors.length === 0 ? "PASS" : `FAIL: ${errors.join("; ")}`;

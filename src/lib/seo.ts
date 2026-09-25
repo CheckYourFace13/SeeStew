@@ -173,7 +173,8 @@ export function buildArticleMetaDescription(article: {
   return d;
 }
 
-export const homeFaqs: FaqItem[] = [
+/** Canonical FAQ copy. Visible /faq text and FAQPage JSON-LD must use this list only. */
+export const siteFaqs: FaqItem[] = [
   {
     question: "What is SeeStew?",
     answer:
@@ -199,7 +200,25 @@ export const homeFaqs: FaqItem[] = [
     answer:
       "Start at seestew.com/articles for unbelievable American history stories, or browse by subject at seestew.com/topics.",
   },
+  {
+    question: "How do corrections work?",
+    answer:
+      "If a date, name, or claim is wrong, use the contact form at seestew.com/contact. We review the message against the story’s sources and update the article when a correction is warranted. SeeStew’s editorial standards are at seestew.com/editorial.",
+  },
+  {
+    question: "How are sources chosen?",
+    answer:
+      "Stories cite primary and secondary sources such as federal archives, the Library of Congress, the National Park Service, museums, academic publishers, and established news organizations. Each article lists those sources by name with a link. We do not invent quotes, dates, or statistics.",
+  },
+  {
+    question: "How do articles, videos, and shorts connect?",
+    answer:
+      "SeeStew is one archive in three formats. The article is the sourced write-up. A video is a full companion episode when one exists. A short is only a hook for the same story. Related videos and shorts appear on an article only when a real match exists.",
+  },
 ];
+
+/** Short homepage teaser. The canonical FAQ page is /faq. */
+export const homeFaqs: FaqItem[] = siteFaqs.slice(0, 3);
 
 export const defaultKeywords = [
   "unbelievable American history stories",

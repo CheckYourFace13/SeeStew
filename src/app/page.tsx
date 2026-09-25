@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { FaqSection } from "@/components/FaqSection";
-import { JsonLd } from "@/components/JsonLd";
 import { Logo } from "@/components/Logo";
 import { SocialLinks } from "@/components/SocialLinks";
 import { SocialInlineLink } from "@/components/SocialIcons";
@@ -9,7 +8,7 @@ import { StoryCard } from "@/components/StoryCard";
 import { VideoCard } from "@/components/VideoCard";
 import { getAllArticles } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
-import { buildFaqJsonLd, homeFaqs } from "@/lib/seo";
+import { homeFaqs } from "@/lib/seo";
 import { getPopulatedTopics } from "@/lib/topic-seo";
 import { getLongFormVideos, getShortFormVideos, getYouTubeVideos } from "@/lib/youtube";
 
@@ -29,8 +28,6 @@ export default async function HomePage() {
 
   return (
     <>
-      <JsonLd data={buildFaqJsonLd(homeFaqs)} />
-
       <section className="border-b border-surface-muted bg-surface">
         <div className="container-page py-12 text-center md:py-16">
           <div className="flex justify-center">
@@ -263,6 +260,12 @@ export default async function HomePage() {
       <section className="section-pad">
         <div className="container-page">
           <FaqSection faqs={homeFaqs} title="Common questions" />
+          <p className="mt-6 text-sm text-ink-muted">
+            <Link href="/faq" className="text-brand-mid underline">
+              Read the full FAQ
+            </Link>{" "}
+            for corrections, sources, and how articles, videos, and shorts fit together.
+          </p>
         </div>
       </section>
     </>
