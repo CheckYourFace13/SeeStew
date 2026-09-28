@@ -4226,9 +4226,9 @@
       "imageSearchTerms": [
         "Lewis and Clark expedition journals"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "lewis-and-clark-expedition",
+      "publishedAt": "2026-09-28T18:01:28.040Z"
     },
     {
       "id": "erie-canal-1825",
