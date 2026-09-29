@@ -4271,9 +4271,9 @@
       "imageSearchTerms": [
         "Erie Canal 1825 opening"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "erie-canal-1825",
+      "publishedAt": "2026-09-29T16:25:32.118Z"
     },
     {
       "id": "california-gold-rush-1848",
