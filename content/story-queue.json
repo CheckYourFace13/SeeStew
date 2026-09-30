@@ -4316,9 +4316,9 @@
       "imageSearchTerms": [
         "Sutter's Mill California Gold Rush"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "california-gold-rush-1848",
+      "publishedAt": "2026-09-30T16:20:15.028Z"
     },
     {
       "id": "underground-railroad",
