@@ -4361,9 +4361,9 @@
       "imageSearchTerms": [
         "Harriet Tubman Underground Railroad"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "underground-railroad",
+      "publishedAt": "2026-10-01T16:57:14.717Z"
     },
     {
       "id": "nineteenth-amendment-1920",
