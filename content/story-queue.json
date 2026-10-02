@@ -4406,9 +4406,9 @@
       "imageSearchTerms": [
         "19th Amendment ratification 1920"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "nineteenth-amendment-1920",
+      "publishedAt": "2026-10-02T16:10:49.286Z"
     },
     {
       "id": "brown-v-board-1954",
