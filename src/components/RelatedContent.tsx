@@ -8,6 +8,8 @@ type Props = {
   currentSlug: string;
   relatedStories: Article[];
   relatedVideos?: YouTubeVideo[];
+  /** Topic-specific label, e.g. "More military history". Falls back to "All {category} stories". */
+  moreLabel?: string;
 };
 
 export function RelatedContent({
@@ -15,6 +17,7 @@ export function RelatedContent({
   currentSlug,
   relatedStories,
   relatedVideos = [],
+  moreLabel,
 }: Props) {
   const topicSlug = category.toLowerCase().replace(/\s+/g, "-");
   const stories = relatedStories.filter((a) => a.slug !== currentSlug).slice(0, 4);
@@ -42,7 +45,7 @@ export function RelatedContent({
           </li>
           <li>
             <Link href={`/topics/${topicSlug}`} className="text-brand-mid underline">
-              More {category} stories
+              {moreLabel ?? `More ${category} stories`}
             </Link>
           </li>
         </ul>
@@ -70,7 +73,7 @@ export function RelatedContent({
               ))}
               <li>
                 <Link href={`/topics/${topicSlug}`} className="text-brand-mid underline">
-                  All {category} stories →
+                  {moreLabel ?? `All ${category} stories`} →
                 </Link>
               </li>
             </ul>

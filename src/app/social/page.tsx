@@ -2,11 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { FaqSection } from "@/components/FaqSection";
 import { InstagramFeed } from "@/components/InstagramFeed";
-import { JsonLd } from "@/components/JsonLd";
 import { SocialLinks } from "@/components/SocialLinks";
 import { SocialInlineLink } from "@/components/SocialIcons";
 import { siteConfig } from "@/lib/config";
-import { buildFaqJsonLd } from "@/lib/seo";
 
 const socialFaqs = [
   {
@@ -33,7 +31,6 @@ export const metadata: Metadata = {
 export default function SocialPage() {
   return (
     <div className="page-shell">
-      <JsonLd data={buildFaqJsonLd(socialFaqs)} />
 
       <header className="mb-10 max-w-2xl">
         <h1 className="font-heading text-4xl font-bold text-ink">Follow SeeStew</h1>

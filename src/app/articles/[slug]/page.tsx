@@ -3,6 +3,7 @@ import { applyManagedMetadata } from "@/lib/gravyblock-managed";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/AdSlot";
+import { AffiliateBlock } from "@/components/AffiliateBlock";
 import { ArticleBody } from "@/components/ArticleBody";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
@@ -11,10 +12,11 @@ import { RelatedContent } from "@/components/RelatedContent";
 import { SocialIconLinks } from "@/components/SocialIcons";
 import { StoryHero } from "@/components/StoryHero";
 import { VideoPlayer } from "@/components/VideoPlayer";
-import { getAllArticles, getArticle, getArticlesByCategory } from "@/lib/articles";
+import { getRecommendedReadingForArticle } from "@/data/recommended-reading";
+import { getAllArticles, getArticle } from "@/lib/articles";
 import { prepareArticleBodyForDisplay } from "@/lib/article-content";
 import { siteConfig } from "@/lib/config";
-import { relatedVideosForArticle } from "@/lib/related";
+import { relatedArticlesForArticle, relatedVideosForArticle } from "@/lib/related";
 import {
   buildArticleJsonLd,
   buildArticleMetaDescription,
@@ -22,6 +24,7 @@ import {
   buildBreadcrumbJsonLd,
   referencesToCitationSchema,
 } from "@/lib/seo";
+import { getTopicHub } from "@/lib/topic-seo";
 import { getVideoById, getYouTubeVideos } from "@/lib/youtube";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -76,7 +79,9 @@ export default async function ArticlePage({ params }: Props) {
     ? await getVideoById(article.relatedVideoId)
     : undefined;
   const topicSlug = article.category.toLowerCase().replace(/\s+/g, "-");
-  const relatedStories = getArticlesByCategory(article.category);
+  const relatedStories = relatedArticlesForArticle(article, getAllArticles());
+  const moreLabel = getTopicHub(topicSlug)?.moreLabel;
+  const recommendedReading = getRecommendedReadingForArticle(article.slug);
   const relatedVideos = relatedVideosForArticle(article, await getYouTubeVideos());
 
   const bodyContent = prepareArticleBodyForDisplay(article.content, {
@@ -168,13 +173,44 @@ export default async function ArticlePage({ params }: Props) {
         </p>
       </header>
 
+      <aside
+        className="mt-6 flex flex-wrap gap-x-6 gap-y-2 rounded-xl border border-brand-wash bg-brand-wash/40 px-5 py-4 text-sm text-ink-muted"
+        aria-label="Story at a glance"
+      >
+        <span>
+          <span className="font-semibold text-ink">Topic:</span>{" "}
+          <Link href={`/topics/${topicSlug}`} className="text-brand-mid underline">
+            {article.category}
+          </Link>
+        </span>
+        <span>
+          <span className="font-semibold text-ink">Read:</span> {article.readMinutes} min
+        </span>
+        {article.references && article.references.length > 0 && (
+          <span>
+            <span className="font-semibold text-ink">Sources:</span>{" "}
+            <a href="#refs-heading" className="text-brand-mid underline">
+              {article.references.length} cited
+            </a>
+          </span>
+        )}
+        {relatedVideo && (
+          <span>
+            <span className="font-semibold text-ink">Video:</span>{" "}
+            <a href="#watch-companion" className="text-brand-mid underline">
+              {relatedVideo.format === "short" ? "short available" : "companion episode"}
+            </a>
+          </span>
+        )}
+      </aside>
+
       <StoryHero
         article={article}
         youtubeThumbnail={relatedVideo?.thumbnail}
       />
 
       {relatedVideo && (
-        <section className="my-10">
+        <section className="my-10" id="watch-companion">
           <h2 className="mb-4 font-heading text-xl font-bold">
             {relatedVideo.format === "short" ? "Watch the short" : "Watch next"}
           </h2>
@@ -209,7 +245,11 @@ export default async function ArticlePage({ params }: Props) {
         currentSlug={article.slug}
         relatedStories={relatedStories}
         relatedVideos={relatedVideos}
+        moreLabel={moreLabel}
       />
+
+      {/* After the article, sources, and related links — never above the body. */}
+      <AffiliateBlock heading="Read more about this story" items={recommendedReading} />
 
       <nav className="mt-12 rounded-xl bg-brand-wash p-6 text-sm" aria-label="SeeStew channels">
         <p className="font-semibold text-ink">SeeStew elsewhere</p>

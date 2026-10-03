@@ -11,7 +11,7 @@ export default function PrivacyPage() {
   return (
     <div className="page-shell-narrow">
       <h1 className="font-heading text-4xl font-bold text-ink">Privacy Policy</h1>
-      <p className="mt-2 text-sm text-ink-muted">Last updated: May 26, 2026</p>
+      <p className="mt-2 text-sm text-ink-muted">Last updated: October 3, 2026</p>
 
       <div className="prose-history mt-8 space-y-6">
         <section>
@@ -85,6 +85,30 @@ export default function PrivacyPage() {
             Our ads.txt file at{" "}
             <a href={`${siteConfig.url}/ads.txt`}>{siteConfig.url}/ads.txt</a>{" "}
             authorizes Google as an authorized digital seller for this site.
+          </p>
+        </section>
+
+        <section>
+          <h2>Affiliate links</h2>
+          <p>
+            Some pages include affiliate links, for example to Amazon. If you click one and buy
+            something, the retailer may set cookies or use similar technologies to attribute the
+            sale to SeeStew, and we may earn a commission at no extra cost to you. We do not
+            receive your payment or account details. See our{" "}
+            <Link href="/affiliate-disclosure" className="text-brand-mid underline">
+              affiliate disclosure
+            </Link>
+            .
+          </p>
+        </section>
+
+        <section>
+          <h2>Advertising partners & third-party tracking</h2>
+          <p>
+            Beyond Google AdSense, third parties such as analytics providers, embedded video
+            hosts, and affiliate retailers may use cookies or similar technologies when you
+            interact with their content or links. Their use of that data is governed by their own
+            privacy policies.
           </p>
         </section>
 

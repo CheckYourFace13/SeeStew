@@ -1,4 +1,5 @@
 import { SocialIconLinks, PlatformIcon } from "@/components/SocialIcons";
+import { YouTubeFacade } from "@/components/YouTubeFacade";
 import { youtubeEmbedUrl, youtubeWatchUrlFromId } from "@/lib/youtube-id";
 import { youtubeWatchUrl } from "@/lib/youtube";
 
@@ -37,14 +38,7 @@ export function VideoPlayer({ videoId, title }: VideoPlayerProps) {
   return (
     <div className="space-y-4">
       <div className="relative aspect-video overflow-hidden rounded-xl bg-brand-dark shadow-lg">
-        <iframe
-          src={embedUrl}
-          title={title}
-          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-          className="absolute inset-0 h-full w-full border-0"
-          loading="lazy"
-        />
+        <YouTubeFacade videoId={videoId} title={title} embedUrl={embedUrl} />
       </div>
       <div className="flex flex-wrap items-center gap-3">
         <a

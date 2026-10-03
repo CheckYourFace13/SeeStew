@@ -5,6 +5,52 @@ export type TopicHub = {
   description: string;
   intro: string;
   searchAngles: string[];
+  /** Label for "more in this topic" links, e.g. "More military history". */
+  moreLabel?: string;
+  /** Unique second paragraph for the hub page — what this topic covers and how. */
+  overview?: string;
+  /** Slug of a good first story; only used if it exists and belongs to this topic. */
+  startHereSlug?: string;
+};
+
+/** Hub copy that is unique per topic. Merged into the hubs above by getTopicHub. */
+const topicExtras: Record<string, Pick<TopicHub, "moreLabel" | "overview" | "startHereSlug">> = {
+  "weird-america": {
+    moreLabel: "More weird American history",
+    startHereSlug: "childrens-blizzard-1888",
+    overview:
+      "This is where the odd, the tragic, and the barely believable live: floods, fires, mine fires, hoaxes, and strange public episodes that left a paper trail. Each story is rebuilt from archives, period newspapers, and scholarly histories, and placed in context instead of being played for a punchline.",
+  },
+  military: {
+    moreLabel: "More military history",
+    startHereSlug: "battle-of-los-angeles-1942",
+    overview:
+      "Military stories here range from wartime scares and domestic deployments to weapons tests and space-program disasters tied to government programs. They draw on official histories, agency reports, and archives, and they focus on what the records actually show.",
+  },
+  crime: {
+    moreLabel: "More true crime history",
+    startHereSlug: "radium-girls-1920s",
+    overview:
+      "These are crimes, cover-ups, and cases of corporate negligence that changed how Americans think about law and responsibility. The focus is on documented outcomes: court records, investigations, and the reforms that followed.",
+  },
+  scandal: {
+    moreLabel: "More scandal history",
+    startHereSlug: "great-moon-hoax-1835",
+    overview:
+      "From hoaxes and fixed games to government cover-ups, these stories look at how scandals unfolded, who was involved, and what investigators and historians could later confirm. Claims are kept to what the sources support.",
+  },
+  revolution: {
+    moreLabel: "More Revolutionary-era history",
+    startHereSlug: "whiskey-rebellion-1794",
+    overview:
+      "Stories from the founding era and the early republic, when the new country was still deciding how much authority its government really had. This topic is small for now and grows as more researched stories publish.",
+  },
+  politics: {
+    moreLabel: "More political history",
+    startHereSlug: "bleeding-kansas-1856",
+    overview:
+      "Political history told through specific episodes: violent clashes over slavery and territory, labor and civil rights flashpoints, and the quieter machinery of government. Each one is tied to named sources so you can follow the evidence.",
+  },
 };
 
 export const topicHubs: TopicHub[] = [
@@ -98,7 +144,8 @@ export const topicHubs: TopicHub[] = [
 ];
 
 export function getTopicHub(slug: string): TopicHub | undefined {
-  return topicHubs.find((t) => t.slug === slug);
+  const hub = topicHubs.find((t) => t.slug === slug);
+  return hub ? { ...hub, ...topicExtras[slug] } : undefined;
 }
 
 export function getTopicHubForCategory(category: string): TopicHub | undefined {

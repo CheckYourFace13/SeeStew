@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AffiliateBlock } from "@/components/AffiliateBlock";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { VideoCard } from "@/components/VideoCard";
+import { getRecommendedReadingForTopic } from "@/data/recommended-reading";
 import { getAllArticles, getArticlesByCategory } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
 import { videosRelatedToArticles } from "@/lib/related";
@@ -62,15 +64,32 @@ export default async function TopicCategoryPage({ params }: Props) {
   const videos = videosRelatedToArticles(articles, await getYouTubeVideos());
   const url = `${siteConfig.url}/topics/${slug}`;
   const featuredTitles = articles.slice(0, 3).map((a) => a.title);
+  const startHere = hub?.startHereSlug
+    ? articles.find((a) => a.slug === hub.startHereSlug)
+    : undefined;
+  const recommended = getRecommendedReadingForTopic(slug);
 
   return (
     <div className="page-shell">
       <JsonLd
-        data={buildBreadcrumbJsonLd([
-          { name: "Home", url: siteConfig.url },
-          { name: "Topics", url: `${siteConfig.url}/topics` },
-          { name: displayName, url },
-        ])}
+        data={[
+          buildBreadcrumbJsonLd([
+            { name: "Home", url: siteConfig.url },
+            { name: "Topics", url: `${siteConfig.url}/topics` },
+            { name: displayName, url },
+          ]),
+          {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: `${hub?.title ?? displayName} stories on SeeStew`,
+            itemListElement: articles.map((a, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              name: a.title,
+              url: `${siteConfig.url}/articles/${a.slug}`,
+            })),
+          },
+        ]}
       />
       <Breadcrumbs
         items={[
@@ -89,10 +108,26 @@ export default async function TopicCategoryPage({ params }: Props) {
         {featuredTitles.length > 0 ? `, including ${featuredTitles.join("; ")}` : ""}.
       </p>
 
-      {hub?.searchAngles && hub.searchAngles.length > 0 && (
-        <p className="mt-4 text-sm text-ink-muted">
-          Readers search for: {hub.searchAngles.join(" · ")}.
-        </p>
+      {hub?.overview && (
+        <p className="mt-4 max-w-3xl text-ink-muted">{hub.overview}</p>
+      )}
+
+      {startHere && (
+        <section
+          className="mt-8 max-w-3xl rounded-xl border border-brand-wash bg-brand-wash/40 p-6"
+          aria-label="Start here"
+        >
+          <p className="text-xs font-semibold uppercase tracking-wide text-brand-mid">
+            Start here
+          </p>
+          <Link
+            href={`/articles/${startHere.slug}`}
+            className="mt-1 block font-heading text-xl font-bold text-ink hover:underline"
+          >
+            {startHere.title}
+          </Link>
+          <p className="mt-2 text-sm text-ink-muted">{startHere.excerpt}</p>
+        </section>
       )}
 
       <p className="mt-6 text-ink-muted">
@@ -123,6 +158,8 @@ export default async function TopicCategoryPage({ params }: Props) {
           </li>
         ))}
       </ul>
+
+      <AffiliateBlock heading="Recommended reading" items={recommended} className="max-w-3xl" />
 
       {videos.length > 0 && (
         <section className="mt-14">

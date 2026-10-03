@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
 import { StoryCard } from "@/components/StoryCard";
 import { getAllArticles, getArticlesForStoriesPage } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
@@ -23,6 +24,19 @@ export default async function ArticlesPage() {
 
   return (
     <div className="page-shell">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: "Latest SeeStew history stories",
+          itemListElement: articles.map((a, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            name: a.title,
+            url: `${siteConfig.url}/articles/${a.slug}`,
+          })),
+        }}
+      />
       <header className="mb-10 max-w-3xl">
         <h1 className="font-heading text-4xl font-bold text-ink md:text-5xl">
           Unbelievable True Stories from American History

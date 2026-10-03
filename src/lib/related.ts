@@ -87,6 +87,29 @@ function isStrongMatch(article: Article, video: YouTubeVideo): boolean {
   return overlapScore(articleSearchText(article), videoSearchText(video)) >= 2;
 }
 
+/**
+ * 2–4 related stories for an article: same-topic stories ranked by real title/slug overlap,
+ * plus strong cross-topic matches. Falls back to the newest same-topic stories so there are
+ * always at least two links when the topic has them. Never includes the article itself.
+ */
+export function relatedArticlesForArticle(
+  article: Article,
+  all: Article[],
+  limit = 4
+): Article[] {
+  const pool = all.filter((a) => a.slug !== article.slug);
+  const scored = pool
+    .map((a) => {
+      const sameTopic = a.category === article.category;
+      const overlap = overlapScore(articleSearchText(article), articleSearchText(a));
+      return { a, sameTopic, score: overlap + (sameTopic ? 1 : 0) };
+    })
+    // cross-topic stories need genuine overlap; same-topic ones always qualify
+    .filter((x) => x.sameTopic || x.score >= 3)
+    .sort((x, y) => y.score - x.score || (y.a.createdAt ?? "").localeCompare(x.a.createdAt ?? ""));
+  return scored.slice(0, limit).map((x) => x.a);
+}
+
 export function relatedVideosForArticle(
   article: Article,
   videos: YouTubeVideo[]

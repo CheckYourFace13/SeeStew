@@ -66,6 +66,11 @@ export function Footer() {
                 Contact
               </Link>
             </li>
+            <li>
+              <Link href="/affiliate-disclosure" className="hover:text-white">
+                Affiliate Disclosure
+              </Link>
+            </li>
           </ul>
           <p className="mt-3 text-sm text-brand-meteorite-light/90">
             Follow SeeStew for new history videos and daily clips.
@@ -126,6 +131,9 @@ export function Footer() {
             </Link>
             <Link href="/terms" className="hover:text-white">
               Terms
+            </Link>
+            <Link href="/affiliate-disclosure" className="hover:text-white">
+              Affiliate Disclosure
             </Link>
             <Link href="/faq" className="hover:text-white">
               FAQ
