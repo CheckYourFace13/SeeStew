@@ -14,15 +14,20 @@
 export const AMAZON_ASSOCIATE_TAG = "seestew-20";
 
 /**
- * Bookshop.org affiliate ID — PLACEHOLDER. Chris: fill in after approval at
- * https://bookshop.org/pages/affiliates. Until set, Bookshop links are never generated
- * and book recommendations fall back to Amazon. Never invent a value here.
+ * Bookshop.org affiliate ID — PLACEHOLDER only.
+ * Chris: after approval at https://bookshop.org/pages/affiliates, paste the ID here
+ * (same value you would keep as BOOKSHOP_AFFILIATE_ID in ops notes).
+ * Until non-empty, Bookshop links are never generated; books fall back to Amazon.
+ * Never invent a value. See docs/bookshop-awin-next-steps.md.
  */
 export const BOOKSHOP_AFFILIATE_ID = "";
 
 /**
- * Awin publisher ID — PLACEHOLDER (config support only; no merchants are active).
- * See docs/affiliate-plan.md for the merchant categories worth researching.
+ * Awin publisher ID — PLACEHOLDER only (config support; no merchants wired in UI).
+ * Chris: after Awin publisher approval, paste AWIN_PUBLISHER_ID here.
+ * Do not activate museum/tour/education merchants until this is a real ID and a
+ * manual mapping exists. Avoid unrelated travel/insurance merchants.
+ * See docs/bookshop-awin-next-steps.md.
  */
 export const AWIN_PUBLISHER_ID = "";
 

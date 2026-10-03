@@ -11,45 +11,56 @@ export type TopicHub = {
   overview?: string;
   /** Slug of a good first story; only used if it exists and belongs to this topic. */
   startHereSlug?: string;
+  /** Related populated topic slugs for internal linking (filtered at render time). */
+  relatedSlugs?: string[];
 };
 
 /** Hub copy that is unique per topic. Merged into the hubs above by getTopicHub. */
-const topicExtras: Record<string, Pick<TopicHub, "moreLabel" | "overview" | "startHereSlug">> = {
+const topicExtras: Record<
+  string,
+  Pick<TopicHub, "moreLabel" | "overview" | "startHereSlug"> & { relatedSlugs?: string[] }
+> = {
   "weird-america": {
     moreLabel: "More weird American history",
     startHereSlug: "childrens-blizzard-1888",
+    relatedSlugs: ["military", "scandal", "crime", "politics"],
     overview:
-      "This is where the odd, the tragic, and the barely believable live: floods, fires, mine fires, hoaxes, and strange public episodes that left a paper trail. Each story is rebuilt from archives, period newspapers, and scholarly histories, and placed in context instead of being played for a punchline.",
+      "This is where the odd, the tragic, and the barely believable live: floods of molasses, prairie blizzards that killed schoolchildren, underground mine fires still burning, newspaper hoaxes, and public health disasters that sound invented until you open the archives. Each story is rebuilt from period newspapers, government reports, museum collections, and scholarly histories — not from rumor. We keep the surprise in the facts themselves: what people thought was happening at the time, what the records later proved, and why the episode still shapes American memory. Browse the list below for forgotten disasters and strange true stories, or start with a featured piece and follow the related topics into military scares, scandals, and crime cases that share the same documentary approach.",
   },
   military: {
     moreLabel: "More military history",
     startHereSlug: "battle-of-los-angeles-1942",
+    relatedSlugs: ["weird-america", "scandal", "politics", "revolution"],
     overview:
-      "Military stories here range from wartime scares and domestic deployments to weapons tests and space-program disasters tied to government programs. They draw on official histories, agency reports, and archives, and they focus on what the records actually show.",
+      "Military stories here range from wartime scares over empty skies to weapons tests that poisoned islands, nuclear near-misses, ship disasters, and space-program failures tied to government programs. They draw on official histories, agency reports, Congressional investigations, and archives — and they focus on what the records actually show, not on legend. You will find domestic deployments, Cold War accidents, and Revolution-era force used against civilians when those episodes left a clear paper trail. Use this hub to jump into a specific campaign or accident, then cross into Weird America or Scandal when the same event sits at the edge of secrecy and public panic. Shorts and companion videos, when they exist, point back to the same sourced article so the clip is a hook, not a replacement for the evidence.",
   },
   crime: {
     moreLabel: "More true crime history",
     startHereSlug: "radium-girls-1920s",
+    relatedSlugs: ["scandal", "weird-america", "politics", "military"],
     overview:
-      "These are crimes, cover-ups, and cases of corporate negligence that changed how Americans think about law and responsibility. The focus is on documented outcomes: court records, investigations, and the reforms that followed.",
+      "These are crimes, cover-ups, and cases of corporate negligence that changed how Americans think about law and responsibility. The focus is on documented outcomes: court records, coroners’ reports, federal investigations, and the reforms that followed — not true-crime sensationalism. Factory workers poisoned by radium dial paint, industrial disasters with criminal negligence, and massacres that left a paper trail all belong here when the evidence is strong enough to name. Start with a featured case, then follow related hubs into Scandal and Politics when the wrongdoing was institutional rather than a single perpetrator. New crime stories publish as sources clear; empty hype and unverified folklore stay off the list.",
   },
   scandal: {
     moreLabel: "More scandal history",
     startHereSlug: "great-moon-hoax-1835",
+    relatedSlugs: ["politics", "crime", "weird-america", "military"],
     overview:
-      "From hoaxes and fixed games to government cover-ups, these stories look at how scandals unfolded, who was involved, and what investigators and historians could later confirm. Claims are kept to what the sources support.",
+      "From newspaper hoaxes and fixed World Series games to government cover-ups and medical studies that lied to patients, these stories look at how scandals unfolded, who was involved, and what investigators and historians could later confirm. Claims stay inside what the sources support: hearings, contemporary reporting, and later archival releases. If you came for Teapot Dome, Black Sox, Tuskegee, or the Business Plot, this hub is the index — and Politics or Crime will take you deeper when the scandal was also a structural fight over power or justice. Each article lists named sources at the bottom so readers can check the paper trail themselves.",
   },
   revolution: {
     moreLabel: "More Revolutionary-era history",
     startHereSlug: "whiskey-rebellion-1794",
+    relatedSlugs: ["politics", "military", "weird-america"],
     overview:
-      "Stories from the founding era and the early republic, when the new country was still deciding how much authority its government really had. This topic is small for now and grows as more researched stories publish.",
+      "Stories from the founding era and the early republic, when the new country was still deciding how much authority its government really had — taxes on whiskey, British occupation of the capital, and propaganda battles that began with five deaths on a Boston street. This topic is small for now and grows as more researched stories publish. Each piece stays tied to primary and secondary sources so the Revolution reads as a contested, documented struggle rather than a set of schoolbook myths. Cross-links into Politics and Military cover the same era from other angles. Until more Revolution pieces ship, start with the featured story and use related topics for adjacent early-America history.",
   },
   politics: {
     moreLabel: "More political history",
     startHereSlug: "bleeding-kansas-1856",
+    relatedSlugs: ["scandal", "revolution", "crime", "weird-america"],
     overview:
-      "Political history told through specific episodes: violent clashes over slavery and territory, labor and civil rights flashpoints, and the quieter machinery of government. Each one is tied to named sources so you can follow the evidence.",
+      "Political history told through specific episodes: violent clashes over slavery and territory, labor and civil rights flashpoints, coups against elected city governments, and the quieter machinery of courts and Congress. Each story is tied to named sources — legislative records, newspapers, and later histories — so you can follow the evidence instead of a party line. Use this hub when you want the power story behind a scandal or a crime case, then jump to Scandal, Revolution, or Crime for the adjacent angle. We do not invent vote counts, quotes, or motives; when the record is incomplete, the article says so and points to what historians still debate.",
   },
 };
 
@@ -73,7 +84,7 @@ export const topicHubs: TopicHub[] = [
     description:
       "Revolutionary War stories and American Revolution facts — battles, founders, and colonial resistance with primary-source references.",
     intro:
-      "From Lexington to Yorktown, these stories cover the fight for independence with dates, places, and documented sources — not myths.",
+      "From street clashes in colonial Boston to tax revolts in the early republic, these stories cover independence and the messy decade after — with dates, places, and documented sources instead of founding myths.",
     searchAngles: [
       "Revolutionary War stories",
       "American Revolution facts",
@@ -86,7 +97,7 @@ export const topicHubs: TopicHub[] = [
     description:
       "American political scandals and forgotten controversies — documented with citations from government records and reputable histories.",
     intro:
-      "Real scandals, hearings, and cover-ups from U.S. history. We stick to what records support and name our sources.",
+      "Real scandals, hearings, and cover-ups from U.S. history — the kind that made headlines, then got soft-focused later. We stick to what records support and name our sources on every page.",
     searchAngles: [
       "American political scandals history",
       "forgotten U.S. political controversies",
@@ -98,7 +109,7 @@ export const topicHubs: TopicHub[] = [
     description:
       "Strange American history facts and unbelievable true stories — odd events, forgotten disasters, and overlooked people, all source-backed.",
     intro:
-      "Odd but true: molasses floods, border wars, bizarre elections, and stories your textbook skipped. If we cannot verify a detail, we leave it out.",
+      "Odd but true American history: molasses floods, prairie blizzards, burning towns, and stories most textbooks skip. If we cannot verify a detail against a named source, we leave it out.",
     searchAngles: [
       "strange American history facts",
       "unbelievable American history stories",
@@ -111,7 +122,7 @@ export const topicHubs: TopicHub[] = [
     description:
       "American politics explained through historical episodes — parties, Congress, courts, and reform movements with cited context.",
     intro:
-      "Understand how American politics evolved through real episodes: filibusters, impeachments, redistricting fights, and landmark legislation.",
+      "American politics through concrete episodes — territory fights, civil rights flashpoints, labor showdowns, and court decisions that rewired daily life, each tied to named sources you can check.",
     searchAngles: [
       "American politics explained",
       "U.S. political history facts",
@@ -123,7 +134,7 @@ export const topicHubs: TopicHub[] = [
     description:
       "U.S. military history — wars, campaigns, and service members — with references to official histories and archives.",
     intro:
-      "Battles, regiments, and strategy from the Revolution through the 20th century, tied to documented accounts.",
+      "U.S. military history beyond the parade-ground version: wartime scares, nuclear near-misses, ship disasters, and campaigns where the official record and the public story diverge — always with cited archives.",
     searchAngles: [
       "U.S. military history facts",
       "American war stories documented",
@@ -135,7 +146,7 @@ export const topicHubs: TopicHub[] = [
     description:
       "Documented American crime stories — industrial disasters with criminal negligence, massacres, and cases that changed U.S. law.",
     intro:
-      "True crime from the American past: cover-ups, workplace catastrophes, and violence that left a paper trail. Every story names its sources.",
+      "True crime from the American past — cover-ups, workplace catastrophes, and violence that left a paper trail in courts and Congress. Every story names its sources so you can separate evidence from legend.",
     searchAngles: [
       "American true crime history",
       "forgotten U.S. crime stories",

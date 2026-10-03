@@ -143,7 +143,7 @@ export function referencesToCitationSchema(refs: ArticleReference[]) {
   }));
 }
 
-/** Google typically shows ~50–60 characters of title. Include brand once, keep it short. */
+/** Google typically shows ~50–60 characters of title. Prefer seoTitle; include brand once. */
 export function buildArticleSerpTitle(article: {
   title: string;
   seoTitle?: string;
@@ -157,18 +157,19 @@ export function buildArticleSerpTitle(article: {
   return `${base}${brand}`;
 }
 
-/** Meta description aimed at CTR — no wasted brand fluff; ~150–155 chars. */
+/** Meta description aimed at CTR — what happened, why it matters; ~135–160 chars. */
 export function buildArticleMetaDescription(article: {
   title: string;
   excerpt: string;
   seoDescription?: string;
 }): string {
   let d = (article.seoDescription || article.excerpt || article.title).trim();
-  if (d.length < 110) {
-    d = `${d} Documented American history with named sources.`;
+  d = d.replace(/\s*\([^)]{0,60}\)\s*$/, "").trim();
+  if (d.length < 135) {
+    d = `${d} Documented American history with named sources.`.trim();
   }
-  if (d.length > 155) {
-    d = `${d.slice(0, 152).replace(/\s+\S*$/, "")}...`;
+  if (d.length > 160) {
+    d = `${d.slice(0, 157).replace(/\s+\S*$/, "")}...`;
   }
   return d;
 }

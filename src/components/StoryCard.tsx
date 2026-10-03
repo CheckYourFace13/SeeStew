@@ -36,7 +36,13 @@ export function StoryCard({ article, youtubeThumbnail, priority }: StoryCardProp
           {article.excerpt && (
             <p className="mt-2 line-clamp-3 text-sm text-ink-muted">{article.excerpt}</p>
           )}
-          <p className="mt-3 text-sm font-medium text-brand-mid">Read story →</p>
+          <p className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-xs text-ink-muted">
+            <span>{article.readMinutes} min read</span>
+            {article.references && article.references.length > 0 && (
+              <span>{article.references.length} sources</span>
+            )}
+          </p>
+          <p className="mt-2 text-sm font-medium text-brand-mid">Read story →</p>
         </div>
       </Link>
     </article>

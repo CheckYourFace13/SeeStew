@@ -61,13 +61,27 @@ export default async function TopicCategoryPage({ params }: Props) {
   const articles = categoryName ? getArticlesByCategory(categoryName) : [];
   if (articles.length === 0) notFound();
 
+  const allArticles = getAllArticles();
+  const populated = getPopulatedTopics(allArticles);
+  const populatedSlugs = new Set(populated.map((t) => t.slug));
+  const relatedTopics = (hub?.relatedSlugs ?? [])
+    .filter((s) => s !== slug && populatedSlugs.has(s))
+    .slice(0, 4)
+    .map((s) => populated.find((t) => t.slug === s)!)
+    .filter(Boolean);
+
   const videos = videosRelatedToArticles(articles, await getYouTubeVideos());
   const url = `${siteConfig.url}/topics/${slug}`;
-  const featuredTitles = articles.slice(0, 3).map((a) => a.title);
   const startHere = hub?.startHereSlug
     ? articles.find((a) => a.slug === hub.startHereSlug)
     : undefined;
+  const listArticles = startHere
+    ? [startHere, ...articles.filter((a) => a.slug !== startHere.slug)]
+    : articles;
   const recommended = getRecommendedReadingForTopic(slug);
+
+  // Keep intro + overview in the 150–250 word band for unique hub copy.
+  const introBlock = [hub?.intro, hub?.overview].filter(Boolean).join(" ");
 
   return (
     <div className="page-shell">
@@ -102,15 +116,24 @@ export default async function TopicCategoryPage({ params }: Props) {
         {hub?.title ?? displayName}
       </h1>
       <p className="mt-3 max-w-3xl text-lg text-ink-muted">
-        {hub?.intro ?? `Shocking and forgotten ${displayName} stories from American history.`}{" "}
-        This hub currently includes {articles.length} documented{" "}
-        {articles.length === 1 ? "story" : "stories"}
-        {featuredTitles.length > 0 ? `, including ${featuredTitles.join("; ")}` : ""}.
+        {introBlock ||
+          `Shocking and forgotten ${displayName} stories from American history.`}
       </p>
-
-      {hub?.overview && (
-        <p className="mt-4 max-w-3xl text-ink-muted">{hub.overview}</p>
-      )}
+      <p className="mt-3 text-sm text-ink-muted">
+        {articles.length} documented {articles.length === 1 ? "story" : "stories"} with named
+        sources.{" "}
+        <Link href="/articles" className="text-brand-mid underline">
+          All stories
+        </Link>
+        {" · "}
+        <Link href="/videos" className="text-brand-mid underline">
+          Videos
+        </Link>
+        {" · "}
+        <Link href="/shorts" className="text-brand-mid underline">
+          Shorts
+        </Link>
+      </p>
 
       {startHere && (
         <section
@@ -127,33 +150,62 @@ export default async function TopicCategoryPage({ params }: Props) {
             {startHere.title}
           </Link>
           <p className="mt-2 text-sm text-ink-muted">{startHere.excerpt}</p>
+          <p className="mt-2 text-xs text-ink-muted">
+            {startHere.readMinutes} min read
+            {startHere.references && startHere.references.length > 0
+              ? ` · ${startHere.references.length} sources`
+              : ""}
+          </p>
         </section>
       )}
 
-      <p className="mt-6 text-ink-muted">
-        {articles.length} stor{articles.length === 1 ? "y" : "ies"} with citations.{" "}
-        <Link href="/articles" className="text-brand-mid underline">
-          All stories
-        </Link>{" "}
-        ·{" "}
-        <Link href="/videos" className="text-brand-mid underline">
-          Watch videos
-        </Link>{" "}
-        ·{" "}
-        <Link href="/shorts" className="text-brand-mid underline">
-          Shorts
-        </Link>
-      </p>
+      {relatedTopics.length > 0 && (
+        <nav className="mt-8 max-w-3xl" aria-label="Related topics">
+          <h2 className="font-heading text-lg font-bold text-ink">Related topics</h2>
+          <ul className="mt-3 flex flex-wrap gap-3 text-sm">
+            {relatedTopics.map((t) => (
+              <li key={t.slug}>
+                <Link
+                  href={`/topics/${t.slug}`}
+                  className="rounded-md border border-brand-wash bg-white px-3 py-1.5 text-brand-mid hover:border-brand-mid"
+                >
+                  {t.title} ({t.count})
+                </Link>
+              </li>
+            ))}
+            <li>
+              <Link
+                href="/topics"
+                className="rounded-md border border-brand-wash bg-white px-3 py-1.5 text-brand-mid hover:border-brand-mid"
+              >
+                All topics
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      )}
 
-      <ul className="mt-10 space-y-4">
-        {articles.map((a) => (
+      <h2 className="mt-10 font-heading text-2xl font-bold text-ink">
+        {hub?.moreLabel ?? `${displayName} stories`}
+      </h2>
+      <ul className="mt-6 space-y-4">
+        {listArticles.map((a) => (
           <li key={a.slug}>
             <Link
               href={`/articles/${a.slug}`}
               className="block rounded-xl border border-brand-wash bg-white p-6 hover:shadow-md"
             >
-              <h2 className="font-heading text-xl font-bold text-ink">{a.title}</h2>
+              <p className="text-xs font-medium uppercase tracking-wide text-brand-mid">
+                {a.category}
+              </p>
+              <h3 className="mt-1 font-heading text-xl font-bold text-ink">{a.title}</h3>
               <p className="mt-2 text-ink-muted">{a.excerpt}</p>
+              <p className="mt-3 text-xs text-ink-muted">
+                {a.readMinutes} min read
+                {a.references && a.references.length > 0
+                  ? ` · ${a.references.length} sources`
+                  : ""}
+              </p>
             </Link>
           </li>
         ))}

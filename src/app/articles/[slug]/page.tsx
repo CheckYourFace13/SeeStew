@@ -174,34 +174,42 @@ export default async function ArticlePage({ params }: Props) {
       </header>
 
       <aside
-        className="mt-6 flex flex-wrap gap-x-6 gap-y-2 rounded-xl border border-brand-wash bg-brand-wash/40 px-5 py-4 text-sm text-ink-muted"
+        className="mt-6 rounded-xl border border-brand-wash bg-brand-wash/40 px-5 py-4 text-sm text-ink-muted"
         aria-label="Story at a glance"
       >
-        <span>
-          <span className="font-semibold text-ink">Topic:</span>{" "}
-          <Link href={`/topics/${topicSlug}`} className="text-brand-mid underline">
-            {article.category}
-          </Link>
-        </span>
-        <span>
-          <span className="font-semibold text-ink">Read:</span> {article.readMinutes} min
-        </span>
-        {article.references && article.references.length > 0 && (
+        <p className="text-ink">
+          <span className="font-semibold">What happened:</span>{" "}
+          {(article.seoDescription || article.excerpt)
+            .replace(/\s*\([^)]{0,60}\)\s*$/, "")
+            .trim()}
+        </p>
+        <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
           <span>
-            <span className="font-semibold text-ink">Sources:</span>{" "}
-            <a href="#refs-heading" className="text-brand-mid underline">
-              {article.references.length} cited
-            </a>
+            <span className="font-semibold text-ink">Topic:</span>{" "}
+            <Link href={`/topics/${topicSlug}`} className="text-brand-mid underline">
+              {article.category}
+            </Link>
           </span>
-        )}
-        {relatedVideo && (
           <span>
-            <span className="font-semibold text-ink">Video:</span>{" "}
-            <a href="#watch-companion" className="text-brand-mid underline">
-              {relatedVideo.format === "short" ? "short available" : "companion episode"}
-            </a>
+            <span className="font-semibold text-ink">Read:</span> {article.readMinutes} min
           </span>
-        )}
+          {article.references && article.references.length > 0 && (
+            <span>
+              <span className="font-semibold text-ink">Sources:</span>{" "}
+              <a href="#refs-heading" className="text-brand-mid underline">
+                {article.references.length} cited
+              </a>
+            </span>
+          )}
+          {relatedVideo && (
+            <span>
+              <span className="font-semibold text-ink">Video:</span>{" "}
+              <a href="#watch-companion" className="text-brand-mid underline">
+                {relatedVideo.format === "short" ? "short available" : "companion episode"}
+              </a>
+            </span>
+          )}
+        </div>
       </aside>
 
       <StoryHero
