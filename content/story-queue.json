@@ -4451,9 +4451,9 @@
       "imageSearchTerms": [
         "Brown v Board of Education 1954"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "brown-v-board-1954",
+      "publishedAt": "2026-10-03T14:38:19.190Z"
     },
     {
       "id": "march-on-washington-1963",
