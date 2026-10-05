@@ -4541,9 +4541,9 @@
       "imageSearchTerms": [
         "Manzanar Japanese American incarceration 1942"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "japanese-american-incarceration-wwii",
+      "publishedAt": "2026-10-05T19:09:23.701Z"
     },
     {
       "id": "cuban-missile-crisis-1962",
