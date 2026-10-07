@@ -4631,9 +4631,9 @@
       "imageSearchTerms": [
         "Apollo 11 moon landing 1969"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "apollo-11-moon-landing-1969",
+      "publishedAt": "2026-10-07T17:22:12.648Z"
     },
     {
       "id": "exxon-valdez-oil-spill-1989",
