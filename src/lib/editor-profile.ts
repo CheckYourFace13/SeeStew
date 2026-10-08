@@ -2,17 +2,16 @@ import { siteConfig } from "./config";
 
 /**
  * Named editor for bylines and BlogPosting author schema.
- * Photo: temporary site avatar until Chris supplies a real editor photo.
- * TODO (Chris): replace bio with a final 2–3 sentence personal bio + real photo
- * under public/editor/ (see docs/editor-profile-todo.md).
+ * Public name is first name only. Photo: temporary site avatar (optional later).
+ * See docs/editor-profile-todo.md.
  */
 export const editorProfile = {
-  name: "Chris P.",
+  name: "Chris",
   role: "Editor",
   organization: siteConfig.name,
-  /** Compact byline, e.g. "Chris P., Editor, SeeStew" */
-  byline: "Chris P., Editor, SeeStew",
-  bio: "Chris edits SeeStew, a daily American history site focused on hard-to-believe true stories with named sources. He reviews story framing, source lists, and corrections before publication.",
+  /** Bio-box label, e.g. "Chris, Editor, SeeStew" */
+  byline: "Chris, Editor, SeeStew",
+  bio: "Chris edits SeeStew, a daily American history site focused on hard-to-believe true stories with named sources. Each story is reviewed for clear framing, source links, and corrections before publication.",
   /** Temporary: site logo as editor avatar — not a personal photo. */
   imageSrc: siteConfig.logo,
   imageAlt: "SeeStew editor avatar",

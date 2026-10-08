@@ -1,27 +1,24 @@
-# Editor profile — TODO for Chris
+# Editor profile — optional photo
 
-Named bylines and BlogPosting author schema currently use **Chris P.** with a short placeholder bio and the SeeStew logo as a temporary editor avatar (not a personal photo).
+Public bylines and BlogPosting author schema use first name only: **Chris**.
+Bio is generic (no last initial or personal details). The SeeStew logo is the temporary editor avatar.
 
-## Please provide
+## Optional (not required)
 
-1. **Final bio** — 2–3 sentences in first person or third person (your choice), factual only. No invented credentials, titles, or affiliations.
-2. **Editor photo** — a real headshot you own rights to use. Preferred:
+1. **Editor photo** — only if you want one. A real headshot you own rights to use:
    - Square crop, at least 400×400
-   - Save as `public/editor/chris-p.jpg` (or `.webp`)
-3. Confirm the public byline spelling: **Chris P.** vs full name if you want it.
+   - Save as `public/editor/chris.jpg` (or `.webp`)
+   - Update `imageSrc` in `src/lib/editor-profile.ts` and set `imageIsPlaceholder: false`
+2. **Bio tweak** — keep it generic; do not add a last name/initial or personal details on the public site.
 
 ## Where to update
 
 | Field | File |
 | --- | --- |
 | Name, role, bio, image path | `src/lib/editor-profile.ts` |
-| Temporary logo avatar | `siteConfig.logo` until photo lands |
+| Temporary logo avatar | `siteConfig.logo` until an optional photo lands |
 | About page copy | pulls from `editorProfile` automatically |
-
-After updating:
 
 ```bash
 npm run build
 ```
-
-Then deploy as usual. Set `imageIsPlaceholder: false` once a real photo is live.

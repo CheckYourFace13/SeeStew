@@ -17,6 +17,8 @@
     "check:article-quality": "npx --yes tsx scripts/check-article-quality.ts",
     "check:seo-snippets": "node scripts/check-seo-snippets.mjs",
     "check:internal-links": "node scripts/check-internal-links.mjs",
+    "check:email-signup": "node scripts/check-email-signup.mjs",
+    "digest:draft": "node scripts/draft-weekly-digest.mjs",
     "audit:video-article-links": "npx --yes tsx scripts/run-video-article-audit.ts",
     "improve:seo-snippets": "node scripts/improve-seo-snippets.mjs",
     "check:source-links": "node scripts/check-source-links.mjs",

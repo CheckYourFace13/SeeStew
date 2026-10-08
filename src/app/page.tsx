@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { EmailDigestSignup } from "@/components/EmailDigestSignup";
 import { FaqSection } from "@/components/FaqSection";
 import { Logo } from "@/components/Logo";
 import { SocialLinks } from "@/components/SocialLinks";
@@ -266,6 +267,7 @@ export default async function HomePage() {
             </Link>{" "}
             for corrections, sources, and how articles, videos, and shorts fit together.
           </p>
+          <EmailDigestSignup className="mt-10 max-w-xl" />
         </div>
       </section>
     </>

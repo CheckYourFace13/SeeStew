@@ -6,6 +6,7 @@ import { AdSlot } from "@/components/AdSlot";
 import { AffiliateBlock } from "@/components/AffiliateBlock";
 import { ArticleBody } from "@/components/ArticleBody";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { EmailDigestSignup } from "@/components/EmailDigestSignup";
 import { JsonLd } from "@/components/JsonLd";
 import { ReferencesList } from "@/components/ReferencesList";
 import { RelatedContent } from "@/components/RelatedContent";
@@ -164,7 +165,7 @@ export default async function ArticlePage({ params }: Props) {
           )}
           By{" "}
           <Link href={editorProfile.aboutHref} className="text-brand-mid underline" itemProp="author">
-            {editorProfile.byline}
+            {editorProfile.name}
           </Link>
           {" · "}
           <Link href={editorProfile.editorialHref} className="text-brand-mid underline">
@@ -315,6 +316,8 @@ export default async function ArticlePage({ params }: Props) {
         relatedVideos={relatedVideos}
         moreLabel={moreLabel}
       />
+
+      <EmailDigestSignup className="mt-10" />
 
       {/* After the article, sources, and related links — never above the body. */}
       <AffiliateBlock heading="Read more about this story" items={recommendedReading} />
