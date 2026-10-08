@@ -38,11 +38,20 @@ function parseInline(text: string): ReactNode[] {
       );
       remaining = remaining.slice(footnote[0].length);
     } else {
-      const nextSpecial = remaining.search(/\*\*|\[(\d+)\]|\[/);
-      const chunk =
-        nextSpecial === -1 ? remaining : remaining.slice(0, nextSpecial);
-      parts.push(chunk);
-      remaining = nextSpecial === -1 ? "" : remaining.slice(nextSpecial);
+      // Advance past plain text until the next markdown token. If the next char
+      // is "[" or "*" but not a valid link/footnote/bold (e.g. "[a] man"),
+      // consume one character so we never spin forever on a zero-width chunk.
+      const nextSpecial = remaining.search(/\*\*|\[/);
+      if (nextSpecial === -1) {
+        parts.push(remaining);
+        remaining = "";
+      } else if (nextSpecial === 0) {
+        parts.push(remaining[0]);
+        remaining = remaining.slice(1);
+      } else {
+        parts.push(remaining.slice(0, nextSpecial));
+        remaining = remaining.slice(nextSpecial);
+      }
     }
   }
 
