@@ -16,11 +16,15 @@ import { getRecommendedReadingForArticle } from "@/data/recommended-reading";
 import { getAllArticles, getArticle } from "@/lib/articles";
 import { prepareArticleBodyForDisplay } from "@/lib/article-content";
 import { siteConfig } from "@/lib/config";
+import { getPopulatedHistoryHubs, getArticlesForHub } from "@/lib/history-hubs";
 import { relatedArticlesForArticle, relatedVideosForArticle } from "@/lib/related";
+import { editorProfile } from "@/lib/editor-profile";
+import { linkedVideoForArticle } from "@/lib/video-article-links";
 import {
   buildArticleJsonLd,
   buildArticleMetaDescription,
   buildArticleSerpTitle,
+  buildArticleSocialTitle,
   buildBreadcrumbJsonLd,
   referencesToCitationSchema,
 } from "@/lib/seo";
@@ -43,27 +47,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!article) return { title: "Story not found" };
   const url = `${siteConfig.url}/articles/${slug}`;
   const title = buildArticleSerpTitle(article);
+  const socialTitle = buildArticleSocialTitle(article);
   const description = buildArticleMetaDescription(article);
   return applyManagedMetadata(`/articles/${slug}`, {
     title: { absolute: title },
     description,
+    authors: [{ name: editorProfile.name, url: `${siteConfig.url}${editorProfile.aboutHref}` }],
     keywords: [
       article.category,
       "American history facts",
       "American history stories",
-      article.seoTitle || article.title,
+      article.title,
       "SeeStew",
     ],
     alternates: { canonical: url },
     openGraph: {
       type: "article",
       url,
-      title,
+      title: socialTitle,
       description,
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: socialTitle,
       description,
     },
   });
@@ -75,14 +81,20 @@ export default async function ArticlePage({ params }: Props) {
   if (!article) notFound();
 
   const url = `${siteConfig.url}/articles/${slug}`;
-  const relatedVideo = article.relatedVideoId
-    ? await getVideoById(article.relatedVideoId)
-    : undefined;
+  const allVideos = await getYouTubeVideos();
+  const linked = linkedVideoForArticle(article, allVideos);
+  const relatedVideo =
+    linked?.video ??
+    (article.relatedVideoId ? await getVideoById(article.relatedVideoId) : undefined);
   const topicSlug = article.category.toLowerCase().replace(/\s+/g, "-");
-  const relatedStories = relatedArticlesForArticle(article, getAllArticles());
+  const allArticles = getAllArticles();
+  const relatedStories = relatedArticlesForArticle(article, allArticles);
   const moreLabel = getTopicHub(topicSlug)?.moreLabel;
   const recommendedReading = getRecommendedReadingForArticle(article.slug);
-  const relatedVideos = relatedVideosForArticle(article, await getYouTubeVideos());
+  const relatedVideos = relatedVideosForArticle(article, allVideos);
+  const storyHubs = getPopulatedHistoryHubs(allArticles).filter((hub) =>
+    getArticlesForHub(hub, allArticles).some((a) => a.slug === article.slug)
+  );
 
   const bodyContent = prepareArticleBodyForDisplay(article.content, {
     stripSources: Boolean(article.references?.length),
@@ -150,9 +162,12 @@ export default async function ArticlePage({ params }: Props) {
               {" · "}
             </>
           )}
-          By {siteConfig.name}
+          By{" "}
+          <Link href={editorProfile.aboutHref} className="text-brand-mid underline" itemProp="author">
+            {editorProfile.byline}
+          </Link>
           {" · "}
-          <Link href="/editorial" className="text-brand-mid underline">
+          <Link href={editorProfile.editorialHref} className="text-brand-mid underline">
             Editorial standards
           </Link>
           {article.references && article.references.length > 0 && (
@@ -166,7 +181,7 @@ export default async function ArticlePage({ params }: Props) {
         </p>
         <p className="mt-2 text-sm text-ink-muted">
           Corrections?{" "}
-          <Link href="/contact" className="text-brand-mid underline">
+          <Link href={editorProfile.contactHref} className="text-brand-mid underline">
             Contact us
           </Link>
           .
@@ -210,6 +225,19 @@ export default async function ArticlePage({ params }: Props) {
             </span>
           )}
         </div>
+        {storyHubs.length > 0 && (
+          <p className="mt-3 text-sm">
+            <span className="font-semibold text-ink">Also in:</span>{" "}
+            {storyHubs.slice(0, 4).map((hub, i) => (
+              <span key={hub.slug}>
+                {i > 0 && " · "}
+                <Link href={`/hubs/${hub.slug}`} className="text-brand-mid underline">
+                  {hub.title}
+                </Link>
+              </span>
+            ))}
+          </p>
+        )}
       </aside>
 
       <StoryHero
@@ -245,6 +273,38 @@ export default async function ArticlePage({ params }: Props) {
       {article.references && article.references.length > 0 && (
         <ReferencesList references={article.references} />
       )}
+
+      <aside
+        className="mt-10 flex gap-4 rounded-xl border border-brand-wash bg-white p-5"
+        aria-label="About the editor"
+      >
+        {/* Temporary site avatar — not a personal photo. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={editorProfile.imageSrc}
+          alt={editorProfile.imageAlt}
+          width={56}
+          height={56}
+          className="h-14 w-14 shrink-0 rounded-full border border-brand-wash object-cover bg-brand-wash"
+        />
+        <div className="text-sm">
+          <p className="font-semibold text-ink">{editorProfile.byline}</p>
+          <p className="mt-1 text-ink-muted">{editorProfile.bio}</p>
+          <p className="mt-2 text-ink-muted">
+            <Link href={editorProfile.aboutHref} className="text-brand-mid underline">
+              About
+            </Link>
+            {" · "}
+            <Link href={editorProfile.editorialHref} className="text-brand-mid underline">
+              Editorial standards
+            </Link>
+            {" · "}
+            <Link href={editorProfile.contactHref} className="text-brand-mid underline">
+              Corrections
+            </Link>
+          </p>
+        </div>
+      </aside>
 
       <AdSlot className="mt-10" format="rectangle" label="Advertisement" />
 

@@ -38,6 +38,16 @@ export function Footer() {
                 Topics
               </Link>
             </li>
+            <li>
+              <Link href="/hubs" className="hover:text-white">
+                Hubs
+              </Link>
+            </li>
+            <li>
+              <Link href="/on-this-day" className="hover:text-white">
+                On This Day
+              </Link>
+            </li>
           </ul>
         </div>
 

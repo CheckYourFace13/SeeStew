@@ -121,7 +121,7 @@ Propagation: up to 24–48 hours; usually faster.
 - [ ] https://seestew.com loads with purple SeeStew branding  
 - [ ] https://seestew.com/ads.txt  
 - [ ] https://seestew.com/sitemap.xml  
-- [ ] https://seestew.com/blog-post3 → redirects to George Washington article  
+- [ ] https://seestew.com/blog-post3 → 301 to `/articles/whiskey-rebellion-1794`  
 - [ ] AdSense ads visible (if approved)  
 - [ ] YouTube videos and shorts load  
 - [ ] Search Console: no spike in 404s after a week  

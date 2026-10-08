@@ -16,6 +16,8 @@
     "check:affiliate-links": "npx --yes tsx scripts/check-affiliate-links.ts",
     "check:article-quality": "npx --yes tsx scripts/check-article-quality.ts",
     "check:seo-snippets": "node scripts/check-seo-snippets.mjs",
+    "check:internal-links": "node scripts/check-internal-links.mjs",
+    "audit:video-article-links": "npx --yes tsx scripts/run-video-article-audit.ts",
     "improve:seo-snippets": "node scripts/improve-seo-snippets.mjs",
     "check:source-links": "node scripts/check-source-links.mjs",
     "fetch:story-images": "node scripts/fetch-all-story-images.mjs",

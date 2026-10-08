@@ -22,8 +22,9 @@ const EMAIL_LEAK = /mailto:|info@seestew\.com|@seestew\.com/i;
 const VAGUE_TITLE =
   /\b(the forgotten story of|the untold story of|you won'?t believe|shocking truth about)\b/i;
 
+/** Prefer the strong story headline (matches src/lib/seo.ts buildArticleSerpTitle). */
 function serpTitle(article) {
-  return (article.seoTitle || article.title || "").trim();
+  return (article.title || article.seoTitle || "").trim();
 }
 
 function metaDescription(article) {
@@ -64,10 +65,22 @@ function main() {
 
     if (!title) errors.push("missing title");
     else {
-      if (title.length < TITLE_MIN) soft.push(`title short (${title.length}<${TITLE_MIN})`);
-      if (title.length > TITLE_MAX) soft.push(`title long (${title.length}>${TITLE_MAX})`);
+      // SERP title = story headline; length soft-caps allow "| SeeStew" in runtime.
+      if (title.length < 20) soft.push(`headline very short (${title.length})`);
+      if (title.length > 90) soft.push(`headline long for SERP (${title.length}>90)`);
+      if (title.length < TITLE_MIN || title.length > TITLE_MAX) {
+        soft.push(`headline outside classic SERP band ${TITLE_MIN}-${TITLE_MAX} (${title.length})`);
+      }
       if (VAGUE_TITLE.test(title)) soft.push("vague title pattern");
       if (PLACEHOLDER.test(title)) errors.push("placeholder in title");
+      // Weak "Event Year | SeeStew"-style seoTitle must not override a strong H1.
+      const seo = (article.seoTitle || "").trim();
+      if (seo && article.title && seo.length + 12 < article.title.length) {
+        // ok — seoTitle is shorter; runtime prefers title
+      }
+      if (/^\s*[A-Za-z ].*\b(1[789]\d{2}|20[0-2]\d)\s*$/.test(seo) && article.title) {
+        soft.push("seoTitle looks like Event+Year label; SERP uses headline title");
+      }
       const key = title.toLowerCase();
       if (!titles.has(key)) titles.set(key, []);
       titles.get(key).push(slug);

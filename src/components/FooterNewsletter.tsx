@@ -1,6 +1,11 @@
 import Link from "next/link";
 import { SocialIconLinks } from "@/components/SocialIcons";
 
+/**
+ * Follow CTA only — never a fake email form.
+ * When a real provider is ready, gate a signup field on
+ * NEXT_PUBLIC_EMAIL_SIGNUP_ENABLED (see docs/email-digest-setup.md).
+ */
 export function FooterNewsletter() {
   return (
     <div className="mt-4 space-y-3">

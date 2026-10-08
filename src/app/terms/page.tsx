@@ -5,6 +5,7 @@ import { siteConfig } from "@/lib/config";
 export const metadata: Metadata = {
   title: "Terms of Use",
   description: "Terms of use for SeeStew.com content and services.",
+  alternates: { canonical: `${siteConfig.url}/terms` },
 };
 
 export default function TermsPage() {

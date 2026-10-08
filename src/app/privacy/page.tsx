@@ -5,6 +5,7 @@ import { siteConfig } from "@/lib/config";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "SeeStew privacy policy — cookies, Google AdSense, and how we use your data.",
+  alternates: { canonical: `${siteConfig.url}/privacy` },
 };
 
 export default function PrivacyPage() {

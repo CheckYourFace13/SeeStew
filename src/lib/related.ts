@@ -1,6 +1,10 @@
 import type { Article } from "./articles";
 import type { YouTubeVideo } from "./youtube";
 import { isLongFormVideo, isShortFormVideo } from "./youtube";
+import {
+  linkedArticlesForVideo,
+  linkedVideosForArticle,
+} from "./video-article-links";
 
 const STOPWORDS = new Set([
   "that",
@@ -77,16 +81,6 @@ function videoSearchText(video: YouTubeVideo): string {
   return `${video.title} ${video.slug}`;
 }
 
-function isLinkedPair(article: Article, video: YouTubeVideo): boolean {
-  return article.relatedVideoId === video.id || article.sourceVideoId === video.id;
-}
-
-/** Enough overlap to count as the same story — never a generic channel dump. */
-function isStrongMatch(article: Article, video: YouTubeVideo): boolean {
-  if (isLinkedPair(article, video)) return true;
-  return overlapScore(articleSearchText(article), videoSearchText(video)) >= 2;
-}
-
 /**
  * 2–4 related stories for an article: same-topic stories ranked by real title/slug overlap,
  * plus strong cross-topic matches. Falls back to the newest same-topic stories so there are
@@ -110,18 +104,20 @@ export function relatedArticlesForArticle(
   return scored.slice(0, limit).map((x) => x.a);
 }
 
+/** Deterministic only — explicit IDs/slugs or exact slug match. No fuzzy pairs. */
 export function relatedVideosForArticle(
   article: Article,
   videos: YouTubeVideo[]
 ): YouTubeVideo[] {
-  return videos.filter((v) => isStrongMatch(article, v));
+  return linkedVideosForArticle(article, videos);
 }
 
+/** Deterministic only — explicit IDs/slugs or exact slug match. No fuzzy pairs. */
 export function relatedArticlesForVideo(
   video: YouTubeVideo,
   articles: Article[]
 ): Article[] {
-  return articles.filter((a) => isStrongMatch(a, video));
+  return linkedArticlesForVideo(video, articles);
 }
 
 export function relatedVideosForVideo(

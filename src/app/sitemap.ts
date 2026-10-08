@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { getAllArticles } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
+import { getPopulatedHistoryHubs } from "@/lib/history-hubs";
+import { onThisDayEnabled } from "@/lib/on-this-day";
 import { getPopulatedTopics } from "@/lib/topic-seo";
 import { getLongFormVideos } from "@/lib/youtube";
 import { getManagedFeed } from "@/lib/gravyblock-managed";
@@ -10,6 +12,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const longForm = await getLongFormVideos();
   const articles = getAllArticles();
   const topics = getPopulatedTopics(articles);
+  const hubs = getPopulatedHistoryHubs(articles);
+  const slugSet = new Set(articles.map((a) => a.slug));
+  const includeOnThisDay = onThisDayEnabled(slugSet);
 
   const staticPages: MetadataRoute.Sitemap = [
     "",
@@ -17,6 +22,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/shorts",
     "/articles",
     "/topics",
+    "/hubs",
+    ...(includeOnThisDay ? ["/on-this-day"] : []),
     "/social",
     "/about",
     "/editorial",
@@ -37,6 +44,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.85,
+  }));
+
+  const hubPages = hubs.map((hub) => ({
+    url: `${base}/hubs/${hub.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
   }));
 
   const videoPages = longForm.map((v) => ({
@@ -63,5 +77,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Short detail pages are thin syndicated clips — kept accessible via /shorts
   // but excluded from the sitemap and noindexed to avoid low-value-content signals.
-  return [...staticPages, ...topicPages, ...videoPages, ...articlePages, ...managedPages];
+  return [
+    ...staticPages,
+    ...topicPages,
+    ...hubPages,
+    ...videoPages,
+    ...articlePages,
+    ...managedPages,
+  ];
 }

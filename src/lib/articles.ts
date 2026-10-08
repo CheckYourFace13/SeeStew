@@ -35,7 +35,10 @@ export type Article = {
   content: string;
   references?: ArticleReference[];
   image?: ArticleImage;
+  /** YouTube long-form video id when verified as the companion episode. */
   relatedVideoId?: string | null;
+  /** YouTube Short id when verified as the companion short. */
+  relatedShortId?: string | null;
   sourceVideoId?: string;
   createdAt?: string;
 };

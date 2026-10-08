@@ -3,6 +3,7 @@ import Link from "next/link";
 import { SocialLinks } from "@/components/SocialLinks";
 import { SocialInlineLink } from "@/components/SocialIcons";
 import { siteConfig } from "@/lib/config";
+import { editorProfile } from "@/lib/editor-profile";
 
 export const metadata: Metadata = {
   title: "About SeeStew",
@@ -36,6 +37,10 @@ export default function AboutPage() {
           Revolutionary War episodes, and other documented corners of the American past. If it
           sounds made up but is documented, we are interested. New stories land regularly — often
           daily — so the archive keeps growing.
+        </p>
+        <h2>Editor</h2>
+        <p>
+          <strong>{editorProfile.byline}.</strong> {editorProfile.bio}
         </p>
         <h2>How we work</h2>
         <p>

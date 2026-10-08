@@ -3,8 +3,11 @@ export const legacyRedirects = [
   { source: "/blog", destination: "/articles", permanent: true },
   { source: "/blog/", destination: "/articles", permanent: true },
   {
+    // Old Website Builder post about Washington-era leadership. The original
+    // slug (george-washington-timelines-legacies) was never migrated — send
+    // readers to the live Washington-era story instead of a 404.
     source: "/blog-post3",
-    destination: "/articles/george-washington-timelines-legacies",
+    destination: "/articles/whiskey-rebellion-1794",
     permanent: true,
   },
   { source: "/blog-post1", destination: "/articles", permanent: true },

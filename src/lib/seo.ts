@@ -1,4 +1,5 @@
 import { siteConfig } from "./config";
+import { buildPersonAuthorJsonLd } from "./editor-profile";
 import type { Article, ArticleReference } from "./articles";
 
 export type FaqItem = { question: string; answer: string };
@@ -119,7 +120,7 @@ export function buildArticleJsonLd(article: Article, url: string) {
     inLanguage: siteConfig.locale,
     isAccessibleForFree: true,
     ...(published ? { datePublished: published, dateModified: published } : {}),
-    author: { "@type": "Organization", name: siteConfig.name, url: siteConfig.url },
+    author: buildPersonAuthorJsonLd(),
     publisher: {
       "@type": "Organization",
       name: siteConfig.name,
@@ -143,18 +144,30 @@ export function referencesToCitationSchema(refs: ArticleReference[]) {
   }));
 }
 
-/** Google typically shows ~50–60 characters of title. Prefer seoTitle; include brand once. */
+/**
+ * SERP / OG / Twitter title — use the strong story headline (H1), not a weak
+ * "Event Year" seoTitle. Truncate cleanly; append brand only when it fits.
+ */
 export function buildArticleSerpTitle(article: {
   title: string;
   seoTitle?: string;
 }): string {
   const brand = ` | ${siteConfig.name}`;
-  const max = 60;
-  let base = (article.seoTitle || article.title).trim();
+  const max = 70;
+  // Prefer the full headline. seoTitle is only a fallback when title is empty.
+  let base = (article.title || article.seoTitle || "").trim();
+  if (!base) return siteConfig.name;
   if (base.length + brand.length <= max) return `${base}${brand}`;
-  const budget = max - brand.length;
-  base = base.slice(0, budget).replace(/\s+\S*$/, "").replace(/[,:;—\-–]\s*$/, "");
-  return `${base}${brand}`;
+  if (base.length <= max) return base;
+  return base.slice(0, max).replace(/\s+\S*$/, "").replace(/[,:;—\-–]\s*$/, "");
+}
+
+/** Strong headline for Open Graph / Twitter (brand optional; keep it punchy). */
+export function buildArticleSocialTitle(article: {
+  title: string;
+  seoTitle?: string;
+}): string {
+  return (article.title || article.seoTitle || siteConfig.name).trim();
 }
 
 /** Meta description aimed at CTR — what happened, why it matters; ~135–160 chars. */
