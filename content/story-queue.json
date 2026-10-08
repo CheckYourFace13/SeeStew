@@ -4676,9 +4676,9 @@
       "imageSearchTerms": [
         "Exxon Valdez oil spill Prince William Sound"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "exxon-valdez-oil-spill-1989",
+      "publishedAt": "2026-10-08T17:17:58.860Z"
     },
     {
       "id": "battle-of-the-alamo-1836",
