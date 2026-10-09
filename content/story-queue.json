@@ -4721,9 +4721,9 @@
       "imageSearchTerms": [
         "Battle of the Alamo 1836"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "battle-of-the-alamo-1836",
+      "publishedAt": "2026-10-09T16:54:11.557Z"
     },
     {
       "id": "pony-express-1860",
