@@ -4766,9 +4766,9 @@
       "imageSearchTerms": [
         "Pony Express rider 1860"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "pony-express-1860",
+      "publishedAt": "2026-10-10T15:48:38.649Z"
     },
     {
       "id": "selma-to-montgomery-1965",
