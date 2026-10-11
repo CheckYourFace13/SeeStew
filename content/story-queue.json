@@ -4811,9 +4811,9 @@
       "imageSearchTerms": [
         "Selma Montgomery march 1965 Edmund Pettus Bridge"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null
+      "status": "published",
+      "publishedSlug": "selma-to-montgomery-1965",
+      "publishedAt": "2026-10-11T16:12:47.058Z"
     }
   ]
 }
