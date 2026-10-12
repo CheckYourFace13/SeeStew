@@ -46,13 +46,16 @@ else {
 if (!existsSync(embed)) fail("missing SendFableEmbed.tsx");
 else {
   const c = readFileSync(embed, "utf-8");
-  if (!c.includes('id="sendfable-embed"')) fail("SendFable Script must use stable id sendfable-embed");
-  else pass("SendFable script id is sendfable-embed (single load)");
-  if (!c.includes("afterInteractive") && !c.includes("lazyOnload")) {
-    fail("SendFable script strategy should be afterInteractive or lazyOnload");
-  } else pass("SendFable script strategy is deferred");
+  if (!c.includes("sendfable-embed") && !c.includes("SCRIPT_ID")) {
+    fail("SendFable loader must use stable id sendfable-embed");
+  } else pass("SendFable script id is sendfable-embed (single load)");
+  if (!c.includes("getElementById") || !c.includes("createElement")) {
+    fail("SendFable embed should inject script once via DOM (client loader)");
+  } else pass("SendFable script injected once via client loader");
   if (!c.includes("data-sendfable-form")) fail("missing data-sendfable-form mount");
   else pass("data-sendfable-form mount present");
+  if (!c.includes('"use client"')) fail("SendFableEmbed should be a client component");
+  else pass("SendFableEmbed is a client component");
 }
 
 if (!existsSync(signup)) fail("missing EmailDigestSignup");

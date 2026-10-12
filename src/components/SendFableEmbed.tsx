@@ -1,19 +1,25 @@
-import Script from "next/script";
+"use client";
+
+import { useEffect } from "react";
 import { emailSignupConfig } from "@/lib/email-signup";
 
-/**
- * Loads SendFable form.js once per page (stable Script id).
- * Safe to mount from multiple signup blocks — Next dedupes by id.
- */
+const SCRIPT_ID = "sendfable-embed";
+
+/** Inject SendFable form.js once per page (safe if mounted multiple times). */
 export function SendFableScript() {
-  if (!emailSignupConfig.isReady) return null;
-  return (
-    <Script
-      id="sendfable-embed"
-      src={emailSignupConfig.scriptSrc}
-      strategy="afterInteractive"
-    />
-  );
+  useEffect(() => {
+    if (!emailSignupConfig.isReady) return;
+    if (typeof document === "undefined") return;
+    if (document.getElementById(SCRIPT_ID)) return;
+
+    const s = document.createElement("script");
+    s.id = SCRIPT_ID;
+    s.src = emailSignupConfig.scriptSrc;
+    s.async = true;
+    document.body.appendChild(s);
+  }, []);
+
+  return null;
 }
 
 /** Mount point for the SendFable hosted form (no local email handling). */
