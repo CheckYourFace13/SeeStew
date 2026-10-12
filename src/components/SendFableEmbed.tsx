@@ -11,7 +11,7 @@ export function SendFableScript() {
     <Script
       id="sendfable-embed"
       src={emailSignupConfig.scriptSrc}
-      strategy="lazyOnload"
+      strategy="afterInteractive"
     />
   );
 }

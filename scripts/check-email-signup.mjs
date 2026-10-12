@@ -48,8 +48,8 @@ else {
   const c = readFileSync(embed, "utf-8");
   if (!c.includes('id="sendfable-embed"')) fail("SendFable Script must use stable id sendfable-embed");
   else pass("SendFable script id is sendfable-embed (single load)");
-  if (!c.includes("lazyOnload") && !c.includes("afterInteractive")) {
-    fail("SendFable script strategy should be lazyOnload or afterInteractive");
+  if (!c.includes("afterInteractive") && !c.includes("lazyOnload")) {
+    fail("SendFable script strategy should be afterInteractive or lazyOnload");
   } else pass("SendFable script strategy is deferred");
   if (!c.includes("data-sendfable-form")) fail("missing data-sendfable-form mount");
   else pass("data-sendfable-form mount present");
