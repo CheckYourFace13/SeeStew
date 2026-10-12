@@ -7,7 +7,7 @@ import type { Article } from "./articles";
 
 export const HUB_MIN_ARTICLES = 3;
 
-export type HistoryHubKind = "decade" | "era" | "state";
+export type HistoryHubKind = "decade" | "era" | "state" | "city" | "list";
 
 export type HistoryHub = {
   slug: string;
@@ -17,6 +17,8 @@ export type HistoryHub = {
   intro: string;
   decade?: number;
   stateCode?: string;
+  /** Explicit article slugs for city/list hubs (preferred over fuzzy matching). */
+  articleSlugs?: string[];
 };
 
 const DECADE_COPY: Record<number, { title: string; description: string; intro: string }> = {
@@ -197,6 +199,99 @@ function allHubDefinitions(): HistoryHub[] {
       intro: copy.intro,
     });
   }
+
+  // City hubs — explicit slugs only (never port-chicago as Chicago, etc.)
+  defs.push({
+    slug: "chicago-disasters",
+    kind: "city",
+    title: "Chicago Disasters in American History",
+    description:
+      "Documented Chicago disasters — fires, theater tragedy, and the Eastland — with named sources.",
+    intro:
+      "Chicago left a dense paper trail of industrial and public disasters. These SeeStew stories stick to archives and contemporary reporting — not thin city doorway pages.",
+    articleSlugs: [
+      "great-chicago-fire-1871",
+      "iroquois-theatre-fire-1903",
+      "eastland-disaster-1915",
+      "our-lady-of-the-angels-fire-1958",
+    ],
+  });
+  defs.push({
+    slug: "boston-history",
+    kind: "city",
+    title: "Boston History Stories",
+    description:
+      "Documented Boston history — the Massacre, the Molasses Flood, and the Cocoanut Grove fire — with named sources.",
+    intro:
+      "Boston episodes that remade law, safety codes, and public memory. Each article below cites named sources.",
+    articleSlugs: [
+      "boston-massacre-1770",
+      "great-molasses-flood-1919",
+      "cocoanut-grove-fire-1942",
+    ],
+  });
+
+  // Curated lists — “notable,” not unsourced “deadliest” rankings
+  defs.push({
+    slug: "notable-american-fires",
+    kind: "list",
+    title: "Notable American Fire Disasters",
+    description:
+      "Essential SeeStew stories about major U.S. fires — not a casualty-ranked list. Each piece cites named sources.",
+    intro:
+      "These fires reshaped building codes, labor law, or public memory. We call them notable rather than “deadliest,” because a ranked death toll would need a single sourced methodology we do not invent here.",
+    articleSlugs: [
+      "great-chicago-fire-1871",
+      "peshtigo-fire-1871",
+      "iroquois-theatre-fire-1903",
+      "great-baltimore-fire-1904",
+      "triangle-shirtwaist-fire-1911",
+      "cocoanut-grove-fire-1942",
+      "hartford-circus-fire-1944",
+      "our-lady-of-the-angels-fire-1958",
+    ],
+  });
+  defs.push({
+    slug: "cold-war-close-calls",
+    kind: "list",
+    title: "Cold War Close Calls",
+    description:
+      "Nuclear near-misses, secrecy programs, and crises from Cold War America — curated SeeStew stories with citations.",
+    intro:
+      "A focused list of close calls and secrecy flashpoints (not every Cold War–era article on the site). Each story links to named sources.",
+    articleSlugs: [
+      "roswell-incident-1947",
+      "castle-bravo-fallout-1954",
+      "goldsboro-nuclear-accident-1961",
+      "operation-northwoods-1962",
+      "cuban-missile-crisis-1962",
+      "gulf-of-tonkin-1964",
+      "three-mile-island-1979",
+      "titan-ii-damascus-1980",
+      "minuteman-missile-accidents",
+    ],
+  });
+  defs.push({
+    slug: "forgotten-american-disasters",
+    kind: "list",
+    title: "Forgotten American Disasters",
+    description:
+      "Essential SeeStew disaster stories that often get skipped in survey courses — with named sources.",
+    intro:
+      "Not a ranked casualty list. These are well-documented disasters that still surprise many readers — each article ends with sources.",
+    articleSlugs: [
+      "great-molasses-flood-1919",
+      "johnstown-flood-1889",
+      "eastland-disaster-1915",
+      "black-tom-explosion-1916",
+      "st-francis-dam-disaster-1928",
+      "texas-city-disaster-1947",
+      "donora-smog-1948",
+      "bath-school-disaster-1927",
+      "lake-peigneur-1980",
+    ],
+  });
+
   return defs;
 }
 
@@ -232,6 +327,12 @@ export function getHistoryHub(slug: string): HistoryHub | undefined {
 }
 
 export function getArticlesForHub(hub: HistoryHub, articles: Article[]): Article[] {
+  if (hub.articleSlugs?.length) {
+    const bySlug = new Map(articles.map((a) => [a.slug, a]));
+    return hub.articleSlugs
+      .map((s) => bySlug.get(s))
+      .filter((a): a is Article => a != null);
+  }
   if (hub.kind === "decade" && hub.decade != null) {
     return articles.filter((a) => {
       const y = yearFromArticle(a);

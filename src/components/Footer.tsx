@@ -48,6 +48,11 @@ export function Footer() {
                 On This Day
               </Link>
             </li>
+            <li>
+              <Link href="/newsletter" className="hover:text-white">
+                Newsletter
+              </Link>
+            </li>
           </ul>
         </div>
 

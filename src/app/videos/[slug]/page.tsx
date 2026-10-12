@@ -69,7 +69,7 @@ export default async function VideoWatchPage({ params }: Props) {
             { name: "Videos", url: `${siteConfig.url}/videos` },
             { name: video.title, url: `${siteConfig.url}/videos/${slug}` },
           ]),
-          buildVideoObjectJsonLd(video),
+          buildVideoObjectJsonLd(video, "videos"),
         ]}
       />
 

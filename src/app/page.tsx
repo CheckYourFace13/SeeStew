@@ -7,8 +7,14 @@ import { SocialLinks } from "@/components/SocialLinks";
 import { SocialInlineLink } from "@/components/SocialIcons";
 import { StoryCard } from "@/components/StoryCard";
 import { VideoCard } from "@/components/VideoCard";
-import { getAllArticles } from "@/lib/articles";
+import { getAllArticles, getArticle } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
+import {
+  datePathSlug,
+  monthName,
+  onThisDayEnabled,
+  upcomingAnniversaries,
+} from "@/lib/on-this-day";
 import { homeFaqs } from "@/lib/seo";
 import { getPopulatedTopics } from "@/lib/topic-seo";
 import { getLongFormVideos, getShortFormVideos, getYouTubeVideos } from "@/lib/youtube";
@@ -26,6 +32,10 @@ export default async function HomePage() {
   const thumbByVideoId = new Map(videos.map((v) => [v.id, v.thumbnail]));
   const featured = articles[0];
   const rest = articles.slice(1);
+  const slugSet = new Set(allArticles.map((a) => a.slug));
+  const onThisDayItems = onThisDayEnabled(slugSet)
+    ? upcomingAnniversaries(slugSet, new Date(), 3)
+    : [];
 
   return (
     <>
@@ -238,6 +248,53 @@ export default async function HomePage() {
             <p className="mt-6 text-center">
               <Link href="/shorts" className="link-nav text-sm font-medium">
                 All shorts →
+              </Link>
+            </p>
+          </div>
+        </section>
+      )}
+
+      {onThisDayItems.length > 0 && (
+        <section className="section-pad">
+          <div className="container-page">
+            <h2 className="font-heading text-3xl font-semibold text-brand-primary">
+              On this day
+            </h2>
+            <p className="mt-2 max-w-2xl text-ink-muted">
+              Upcoming anniversaries tied to full sourced SeeStew stories — not thin date stubs.
+            </p>
+            <ul className="mt-8 grid gap-4 md:grid-cols-3">
+              {onThisDayItems.map((ann) => {
+                const article = getArticle(ann.slug);
+                if (!article) return null;
+                return (
+                  <li key={`${ann.slug}-${ann.month}-${ann.day}`}>
+                    <Link
+                      href={`/articles/${article.slug}`}
+                      className="block rounded-xl border border-brand-wash bg-white p-5 hover:shadow-md"
+                    >
+                      <p className="text-xs font-semibold uppercase tracking-wide text-brand-mid">
+                        {monthName(ann.month)} {ann.day}
+                      </p>
+                      <h3 className="mt-2 font-heading text-lg font-bold text-ink">
+                        {article.title}
+                      </h3>
+                    </Link>
+                    <p className="mt-2 text-xs">
+                      <Link
+                        href={`/on-this-day/${datePathSlug(ann.month, ann.day)}`}
+                        className="text-brand-mid underline"
+                      >
+                        Date page →
+                      </Link>
+                    </p>
+                  </li>
+                );
+              })}
+            </ul>
+            <p className="mt-6 text-center">
+              <Link href="/on-this-day" className="link-nav text-sm font-medium">
+                All on-this-day anniversaries →
               </Link>
             </p>
           </div>

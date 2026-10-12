@@ -10,15 +10,13 @@ import { VideoPlayer } from "@/components/VideoPlayer";
 import { getAllArticles } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
 import { relatedArticlesForVideo, relatedVideosForVideo } from "@/lib/related";
-import { buildBreadcrumbJsonLd } from "@/lib/seo";
+import { buildBreadcrumbJsonLd, buildVideoObjectJsonLd } from "@/lib/seo";
 import { getVideoEditorial, getVideoSummary } from "@/lib/video-editorial";
-import { youtubeEmbedUrl } from "@/lib/youtube-id";
 import {
   getLongFormVideos,
   getShortFormVideos,
   getVideoBySlug,
   isShortFormVideo,
-  youtubeWatchUrl,
 } from "@/lib/youtube";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -62,7 +60,6 @@ export default async function ShortWatchPage({ params }: Props) {
   const related = (await getShortFormVideos())
     .filter((v) => v.id !== video.id)
     .slice(0, 4);
-  const embedUrl = youtubeEmbedUrl(video.id) ?? `https://www.youtube.com/embed/${video.id}`;
 
   return (
     <article className="page-shell max-w-4xl">
@@ -73,20 +70,16 @@ export default async function ShortWatchPage({ params }: Props) {
             { name: "Shorts", url: `${siteConfig.url}/shorts` },
             { name: video.title, url: `${siteConfig.url}/shorts/${slug}` },
           ]),
-          {
-            "@context": "https://schema.org",
-            "@type": "VideoObject",
-            name: video.title,
-            description: video.description,
-            thumbnailUrl: video.thumbnail,
-            embedUrl,
-            contentUrl: youtubeWatchUrl(video.id),
-            publisher: {
-              "@type": "Organization",
-              name: siteConfig.name,
-              logo: `${siteConfig.url}${siteConfig.logo}`,
+          buildVideoObjectJsonLd(
+            {
+              id: video.id,
+              title: video.title,
+              description: video.description || summary,
+              thumbnail: video.thumbnail,
+              slug: video.slug,
             },
-          },
+            "shorts"
+          ),
         ]}
       />
 

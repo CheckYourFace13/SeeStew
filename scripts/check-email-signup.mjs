@@ -18,24 +18,6 @@ function pass(msg) {
   console.log(`PASS: ${msg}`);
 }
 
-const flag = process.env.NEXT_PUBLIC_EMAIL_SIGNUP_ENABLED === "true";
-const formUrl = (
-  process.env.NEXT_PUBLIC_SENDFABLE_SIGNUP_FORM_URL ||
-  process.env.SENDFABLE_SIGNUP_FORM_URL ||
-  ""
-).trim();
-const ready = flag && Boolean(formUrl);
-
-if (flag && !ready) {
-  fail(
-    "NEXT_PUBLIC_EMAIL_SIGNUP_ENABLED=true but SENDFABLE signup form URL is empty — would be a fake signup"
-  );
-} else if (!flag) {
-  pass("signup flag off (no public form expected)");
-} else {
-  pass("signup flag on with SendFable hosted form URL");
-}
-
 function walk(dir, fn) {
   if (!existsSync(dir)) return;
   for (const name of readdirSync(dir, { withFileTypes: true })) {
@@ -47,6 +29,43 @@ function walk(dir, fn) {
   }
 }
 
+const emailLib = join(ROOT, "src", "lib", "email-signup.ts");
+const embed = join(ROOT, "src", "components", "SendFableEmbed.tsx");
+const signup = join(ROOT, "src", "components", "EmailDigestSignup.tsx");
+const newsletter = join(ROOT, "src", "app", "newsletter", "page.tsx");
+
+if (!existsSync(emailLib)) fail("missing email-signup.ts");
+else {
+  const lib = readFileSync(emailLib, "utf-8");
+  if (!lib.includes("seestew-newsletter")) fail("missing SendFable form id seestew-newsletter");
+  else pass("SendFable form id seestew-newsletter configured");
+  if (!lib.includes("sendfable.com/embed/form.js")) fail("missing SendFable embed script URL");
+  else pass("SendFable embed script URL present");
+}
+
+if (!existsSync(embed)) fail("missing SendFableEmbed.tsx");
+else {
+  const c = readFileSync(embed, "utf-8");
+  if (!c.includes('id="sendfable-embed"')) fail("SendFable Script must use stable id sendfable-embed");
+  else pass("SendFable script id is sendfable-embed (single load)");
+  if (!c.includes("lazyOnload") && !c.includes("afterInteractive")) {
+    fail("SendFable script strategy should be lazyOnload or afterInteractive");
+  } else pass("SendFable script strategy is deferred");
+  if (!c.includes("data-sendfable-form")) fail("missing data-sendfable-form mount");
+  else pass("data-sendfable-form mount present");
+}
+
+if (!existsSync(signup)) fail("missing EmailDigestSignup");
+else {
+  const c = readFileSync(signup, "utf-8");
+  if (!c.includes("emailSignupConfig.isReady")) fail("signup must gate on isReady");
+  else pass("EmailDigestSignup gated on isReady");
+  if (/process\.env\.SENDFABLE_API_KEY/.test(c)) fail("signup must not read API key");
+}
+
+if (!existsSync(newsletter)) fail("missing /newsletter page");
+else pass("/newsletter page exists");
+
 let publicApiKey = false;
 walk(join(ROOT, "src"), (p) => {
   const text = readFileSync(p, "utf-8");
@@ -57,48 +76,11 @@ walk(join(ROOT, "src"), (p) => {
 });
 if (!publicApiKey) pass("no NEXT_PUBLIC_SENDFABLE_API_KEY");
 
-const serverOnly = join(ROOT, "src", "lib", "sendfable-server.ts");
-if (existsSync(serverOnly)) {
-  pass("SendFable API keys isolated in sendfable-server.ts");
-} else {
-  fail("missing src/lib/sendfable-server.ts for server-only keys");
-}
-
-const signupComponent = join(ROOT, "src", "components", "EmailDigestSignup.tsx");
-if (!existsSync(signupComponent)) {
-  fail("missing EmailDigestSignup component");
-} else {
-  const c = readFileSync(signupComponent, "utf-8");
-  if (!c.includes("emailSignupConfig.isReady")) {
-    fail("EmailDigestSignup must gate on emailSignupConfig.isReady");
-  } else {
-    pass("EmailDigestSignup gated on isReady");
-  }
-  if (/process\.env\.SENDFABLE_API_KEY/.test(c)) {
-    fail("EmailDigestSignup must not read SENDFABLE_API_KEY");
-  }
-  if (c.includes("sendfable.com")) {
-    if (!c.includes("noopener noreferrer") && !c.includes("poweredRel")) {
-      fail("Powered by SendFable link missing safe rel");
-    } else {
-      pass("Powered by SendFable uses safe external rel");
-    }
-  }
-}
-
 const privacy = join(ROOT, "src", "app", "privacy", "page.tsx");
 if (existsSync(privacy)) {
   const p = readFileSync(privacy, "utf-8");
-  const mentionsSendFable = /sendfable/i.test(p);
-  if (!flag && mentionsSendFable) {
-    fail("privacy mentions SendFable while signup is disabled");
-  } else if (flag && ready && !mentionsSendFable) {
-    fail("signup enabled but privacy does not mention SendFable");
-  } else if (!flag) {
-    pass("privacy does not claim SendFable list while signup disabled");
-  } else {
-    pass("privacy SendFable mention matches enabled signup");
-  }
+  if (!/sendfable/i.test(p)) fail("privacy must mention SendFable when embed signup is live");
+  else pass("privacy mentions SendFable");
 }
 
 walk(join(ROOT, "src"), (p) => {

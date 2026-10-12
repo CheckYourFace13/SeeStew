@@ -20,6 +20,8 @@ const STATIC_OK = new Set([
   "/shorts",
   "/hubs",
   "/on-this-day",
+  "/newsletter",
+  "/hubs",
   "/social",
   "/about",
   "/editorial",

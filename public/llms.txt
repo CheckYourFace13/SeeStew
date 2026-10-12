@@ -12,6 +12,9 @@
 - https://seestew.com/about — what SeeStew is
 - https://seestew.com/editorial — editorial standards and corrections policy
 - https://seestew.com/faq — answers about stories, sources, and corrections
+- https://seestew.com/newsletter — weekly history digest signup (SendFable)
+- https://seestew.com/on-this-day — curated anniversaries linked to full articles
+- https://seestew.com/hubs — content-rich decade, state, city, and list hubs
 - https://seestew.com/affiliate-disclosure — how affiliate links (Amazon Associates) are used and kept separate from editorial
 - https://seestew.com/social — official social links
 - https://seestew.com/feed.xml — RSS for new articles

@@ -6,7 +6,9 @@ import { JsonLd } from "@/components/JsonLd";
 import { getAllArticles, getArticle } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
 import {
+  datePathSlug,
   liveAnniversaries,
+  monthName,
   onThisDayEnabled,
   upcomingAnniversaries,
 } from "@/lib/on-this-day";
@@ -33,12 +35,6 @@ export default function OnThisDayPage() {
   const upcoming = upcomingAnniversaries(slugs, new Date(), 14);
   const all = liveAnniversaries(slugs);
   const url = `${siteConfig.url}/on-this-day`;
-
-  const monthName = (m: number) =>
-    new Date(Date.UTC(2000, m - 1, 1)).toLocaleString("en-US", {
-      month: "long",
-      timeZone: "UTC",
-    });
 
   return (
     <div className="page-shell">
@@ -76,15 +72,20 @@ export default function OnThisDayPage() {
             const article = getArticle(ann.slug);
             if (!article) return null;
             return (
-              <li key={`${ann.slug}-${ann.month}-${ann.day}`}>
-                <Link
-                  href={`/articles/${ann.slug}`}
-                  className="block rounded-xl border border-brand-wash bg-white p-6 hover:shadow-md"
-                >
-                  <p className="text-xs font-semibold uppercase tracking-wide text-brand-mid">
+              <li
+                key={`${ann.slug}-${ann.month}-${ann.day}`}
+                className="rounded-xl border border-brand-wash bg-white p-6 hover:shadow-md"
+              >
+                <p className="text-xs font-semibold uppercase tracking-wide text-brand-mid">
+                  <Link
+                    href={`/on-this-day/${datePathSlug(ann.month, ann.day)}`}
+                    className="hover:underline"
+                  >
                     {monthName(ann.month)} {ann.day}
-                  </p>
-                  <h3 className="mt-1 font-heading text-xl font-bold text-ink">{article.title}</h3>
+                  </Link>
+                </p>
+                <Link href={`/articles/${ann.slug}`} className="mt-1 block">
+                  <h3 className="font-heading text-xl font-bold text-ink">{article.title}</h3>
                   <p className="mt-2 text-ink-muted">{article.excerpt}</p>
                 </Link>
               </li>
@@ -99,8 +100,15 @@ export default function OnThisDayPage() {
         <ul className="mt-6 columns-1 gap-4 sm:columns-2 text-sm">
           {all.map((ann) => (
             <li key={ann.slug} className="mb-2 break-inside-avoid">
-              <Link href={`/articles/${ann.slug}`} className="text-brand-mid underline">
-                {monthName(ann.month)} {ann.day}: {ann.label}
+              <Link
+                href={`/on-this-day/${datePathSlug(ann.month, ann.day)}`}
+                className="text-brand-mid underline"
+              >
+                {monthName(ann.month)} {ann.day}
+              </Link>
+              {": "}
+              <Link href={`/articles/${ann.slug}`} className="text-ink hover:underline">
+                {ann.label}
               </Link>
             </li>
           ))}

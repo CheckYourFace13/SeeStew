@@ -72,3 +72,56 @@ export function upcomingAnniversaries(
   scored.sort((x, y) => x.delta - y.delta);
   return scored.slice(0, limit).map((x) => x.a);
 }
+
+const MONTH_SLUGS = [
+  "january",
+  "february",
+  "march",
+  "april",
+  "may",
+  "june",
+  "july",
+  "august",
+  "september",
+  "october",
+  "november",
+  "december",
+] as const;
+
+export function monthName(month: number): string {
+  return new Date(Date.UTC(2000, month - 1, 1)).toLocaleString("en-US", {
+    month: "long",
+    timeZone: "UTC",
+  });
+}
+
+/** URL segment like october-10 */
+export function datePathSlug(month: number, day: number): string {
+  return `${MONTH_SLUGS[month - 1]}-${day}`;
+}
+
+export function parseDatePathSlug(
+  slug: string
+): { month: number; day: number } | null {
+  const m = slug.toLowerCase().match(
+    /^(january|february|march|april|may|june|july|august|september|october|november|december)-(\d{1,2})$/
+  );
+  if (!m) return null;
+  const month = MONTH_SLUGS.indexOf(m[1] as (typeof MONTH_SLUGS)[number]) + 1;
+  const day = Number(m[2]);
+  if (month < 1 || day < 1 || day > 31) return null;
+  return { month, day };
+}
+
+/** Unique month/day pairs that have at least one live curated anniversary. */
+export function contentRichDateSlugs(existingSlugs: Set<string>): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const a of liveAnniversaries(existingSlugs)) {
+    const path = datePathSlug(a.month, a.day);
+    if (seen.has(path)) continue;
+    seen.add(path);
+    out.push(path);
+  }
+  return out.sort();
+}

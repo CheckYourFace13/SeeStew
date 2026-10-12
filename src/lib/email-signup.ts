@@ -1,31 +1,31 @@
 /**
- * Email digest signup via SendFable (client-safe config).
- * Public UI stays off until NEXT_PUBLIC_EMAIL_SIGNUP_ENABLED=true AND
- * a hosted form URL is present. API keys live only in server modules.
+ * Email digest signup via SendFable embed (client-safe).
+ * Chris provided form id: seestew-newsletter.
+ * Disable with NEXT_PUBLIC_EMAIL_SIGNUP_ENABLED=false.
  * See docs/sendfable-seestew-setup.md.
  */
 
-const flagEnabled = process.env.NEXT_PUBLIC_EMAIL_SIGNUP_ENABLED === "true";
-
-/**
- * Hosted SendFable signup form URL.
- * Prefer NEXT_PUBLIC_ so the client component can link without a server round-trip.
- * Server-only SENDFABLE_SIGNUP_FORM_URL is also accepted at build time when inlined.
- */
-export const sendfableSignupFormUrl = (
-  process.env.NEXT_PUBLIC_SENDFABLE_SIGNUP_FORM_URL ||
-  process.env.SENDFABLE_SIGNUP_FORM_URL ||
-  ""
+/** Real SendFable form id from Chris — not a fake local collector. */
+export const SENDFABLE_FORM_ID = (
+  process.env.NEXT_PUBLIC_SENDFABLE_FORM_ID || "seestew-newsletter"
 ).trim();
 
-const hasHostedForm = Boolean(sendfableSignupFormUrl);
+export const SENDFABLE_EMBED_SCRIPT = "https://sendfable.com/embed/form.js";
+
+/** Explicit opt-out only; default on because the embed id is real. */
+const explicitlyDisabled = process.env.NEXT_PUBLIC_EMAIL_SIGNUP_ENABLED === "false";
+const explicitlyEnabled = process.env.NEXT_PUBLIC_EMAIL_SIGNUP_ENABLED === "true";
+/** Ready when not disabled and form id present. Treat unset as on (embed provided). */
+const flagOn = explicitlyEnabled || (!explicitlyDisabled && Boolean(SENDFABLE_FORM_ID));
 
 export const emailSignupConfig = {
-  enabled: flagEnabled,
+  enabled: flagOn,
   provider: "sendfable" as const,
+  formId: SENDFABLE_FORM_ID,
+  scriptSrc: SENDFABLE_EMBED_SCRIPT,
   poweredByUrl: "https://sendfable.com",
-  hasHostedForm,
-  /** Ready for a real public signup (hosted SendFable form). */
-  isReady: flagEnabled && hasHostedForm,
-  mode: hasHostedForm ? ("hosted" as const) : ("off" as const),
+  newsletterHref: "/newsletter",
+  /** Real public signup via SendFable embed only. */
+  isReady: flagOn && Boolean(SENDFABLE_FORM_ID),
+  mode: "embed" as const,
 } as const;

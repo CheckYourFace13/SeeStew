@@ -78,31 +78,48 @@ export function buildOrganizationJsonLd() {
   };
 }
 
-export function buildVideoObjectJsonLd(video: {
-  id: string;
-  title: string;
-  description: string;
-  thumbnail: string;
-  slug: string;
-}) {
-  const pageUrl = `${siteConfig.url}/videos/${video.slug}`;
+/**
+ * VideoObject only when required fields are real.
+ * Do not invent uploadDate — omit when unknown.
+ */
+export function buildVideoObjectJsonLd(
+  video: {
+    id: string;
+    title: string;
+    description: string;
+    thumbnail: string;
+    slug: string;
+    /** ISO date YYYY-MM-DD when known from YouTube — never invent. */
+    uploadDate?: string | null;
+  },
+  pagePath: "videos" | "shorts" | "articles" = "videos"
+) {
+  if (!video.id || !video.title || !video.thumbnail) return null;
+  const description = (video.description || video.title).trim();
+  if (!description) return null;
+
+  const pageUrl =
+    pagePath === "articles"
+      ? `${siteConfig.url}/articles/${video.slug}`
+      : `${siteConfig.url}/${pagePath}/${video.slug}`;
+
   return {
     "@context": "https://schema.org",
-    "@type": "VideoObject",
+    "@type": "VideoObject" as const,
     name: video.title,
-    description: video.description,
+    description,
     thumbnailUrl: video.thumbnail,
     embedUrl: `https://www.youtube.com/embed/${video.id}`,
     contentUrl: `https://www.youtube.com/watch?v=${video.id}`,
-    uploadDate: new Date().toISOString().split("T")[0],
+    ...(video.uploadDate ? { uploadDate: video.uploadDate } : {}),
     inLanguage: siteConfig.locale,
     isFamilyFriendly: true,
     publisher: {
-      "@type": "Organization",
+      "@type": "Organization" as const,
       name: siteConfig.name,
-      logo: { "@type": "ImageObject", url: `${siteConfig.url}${siteConfig.logo}` },
+      logo: { "@type": "ImageObject" as const, url: `${siteConfig.url}${siteConfig.logo}` },
     },
-    mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
+    mainEntityOfPage: { "@type": "WebPage" as const, "@id": pageUrl },
   };
 }
 

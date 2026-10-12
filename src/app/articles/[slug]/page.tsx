@@ -27,6 +27,7 @@ import {
   buildArticleSerpTitle,
   buildArticleSocialTitle,
   buildBreadcrumbJsonLd,
+  buildVideoObjectJsonLd,
   referencesToCitationSchema,
 } from "@/lib/seo";
 import { getTopicHub } from "@/lib/topic-seo";
@@ -119,6 +120,18 @@ export default async function ArticlePage({ params }: Props) {
             { name: article.title, url },
           ]),
           buildArticleJsonLd(article, url),
+          relatedVideo
+            ? buildVideoObjectJsonLd(
+                {
+                  id: relatedVideo.id,
+                  title: relatedVideo.title,
+                  description: relatedVideo.description || article.excerpt,
+                  thumbnail: relatedVideo.thumbnail,
+                  slug: article.slug,
+                },
+                "articles"
+              )
+            : null,
           ...(article.references?.length
             ? [
                 {
@@ -317,10 +330,10 @@ export default async function ArticlePage({ params }: Props) {
         moreLabel={moreLabel}
       />
 
-      <EmailDigestSignup className="mt-10" />
-
       {/* After the article, sources, and related links — never above the body. */}
       <AffiliateBlock heading="Read more about this story" items={recommendedReading} />
+
+      <EmailDigestSignup className="mt-10" />
 
       <nav className="mt-12 rounded-xl bg-brand-wash p-6 text-sm" aria-label="SeeStew channels">
         <p className="font-semibold text-ink">SeeStew elsewhere</p>

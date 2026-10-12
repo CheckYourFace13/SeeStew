@@ -114,10 +114,30 @@ export default function PrivacyPage() {
         </section>
 
         <section>
+          <h2>Email newsletter (SendFable)</h2>
+          <p>
+            If you join the weekly SeeStew history digest, signup and email delivery are
+            handled by{" "}
+            <a
+              href="https://sendfable.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              SendFable
+            </a>
+            . We do not run a separate local mailing list or store subscriber passwords on
+            this site. Your email is processed by SendFable under their privacy practices;
+            you can unsubscribe from any digest email. The contact form (SMTP) is separate
+            and is not used as a newsletter signup.
+          </p>
+        </section>
+
+        <section>
           <h2>Embedded content</h2>
           <p>
             Pages may embed YouTube videos. YouTube may collect usage data per
-            Google&apos;s privacy policy when you play a video.
+            Google&apos;s privacy policy when you play a video. Newsletter pages may load
+            SendFable&apos;s form script so you can subscribe without leaving SeeStew.
           </p>
         </section>
 

@@ -48,20 +48,12 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: `Hard-to-Believe True American History Stories | ${siteConfig.name}`,
     description: siteConfig.description,
-    images: [
-      {
-        url: siteConfig.logoLight,
-        width: 1440,
-        height: 756,
-        alt: siteConfig.name,
-      },
-    ],
+    // Default share image: src/app/opengraph-image.tsx (branded, not logo-only)
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [siteConfig.logoLight],
   },
   // Do not set robots here — root robots:index conflicts with Next's automatic
   // noindex on 404 pages (GSC "duplicate robots" / soft indexing issues).
