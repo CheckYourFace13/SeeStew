@@ -8,6 +8,7 @@ import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { JsonLd } from "@/components/JsonLd";
 import { ADSENSE_CLIENT_ID } from "@/lib/ads-txt";
 import { adsConfig, analyticsConfig, siteConfig } from "@/lib/config";
+import { emailSignupConfig } from "@/lib/email-signup";
 import {
   buildOrganizationJsonLd,
   buildWebSiteJsonLd,
@@ -89,6 +90,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.youtube.com" />
         <link rel="preconnect" href="https://i.ytimg.com" />
         <link rel="dns-prefetch" href="https://www.youtube.com" />
+        {emailSignupConfig.isReady ? (
+          <link rel="dns-prefetch" href="https://sendfable.com" />
+        ) : null}
       </head>
       <body className={`${outfit.variable} ${inter.variable} flex min-h-screen flex-col bg-surface text-ink antialiased`}>
         <JsonLd data={[buildWebSiteJsonLd(), buildOrganizationJsonLd()]} />
@@ -108,6 +112,18 @@ export default function RootLayout({
         </main>
         <Footer />
         <CookieConsent />
+        {/*
+          Load SendFable once after body content (async, not beforeInteractive).
+          Inline bootstrap runs from SSR HTML so the embed works even if client
+          hydration is delayed; id prevents duplicate injects.
+        */}
+        {emailSignupConfig.isReady ? (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(function(){if(document.getElementById("sendfable-embed"))return;var s=document.createElement("script");s.id="sendfable-embed";s.src=${JSON.stringify(emailSignupConfig.scriptSrc)};s.async=true;document.body.appendChild(s);})();`,
+            }}
+          />
+        ) : null}
       </body>
     </html>
   );

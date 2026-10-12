@@ -33,6 +33,7 @@ const emailLib = join(ROOT, "src", "lib", "email-signup.ts");
 const embed = join(ROOT, "src", "components", "SendFableEmbed.tsx");
 const signup = join(ROOT, "src", "components", "EmailDigestSignup.tsx");
 const newsletter = join(ROOT, "src", "app", "newsletter", "page.tsx");
+const layout = join(ROOT, "src", "app", "layout.tsx");
 
 if (!existsSync(emailLib)) fail("missing email-signup.ts");
 else {
@@ -46,16 +47,24 @@ else {
 if (!existsSync(embed)) fail("missing SendFableEmbed.tsx");
 else {
   const c = readFileSync(embed, "utf-8");
-  if (!c.includes("sendfable-embed") && !c.includes("SCRIPT_ID")) {
-    fail("SendFable loader must use stable id sendfable-embed");
-  } else pass("SendFable script id is sendfable-embed (single load)");
-  if (!c.includes("getElementById") || !c.includes("createElement")) {
-    fail("SendFable embed should inject script once via DOM (client loader)");
-  } else pass("SendFable script injected once via client loader");
   if (!c.includes("data-sendfable-form")) fail("missing data-sendfable-form mount");
   else pass("data-sendfable-form mount present");
   if (!c.includes('"use client"')) fail("SendFableEmbed should be a client component");
   else pass("SendFableEmbed is a client component");
+}
+
+if (!existsSync(layout)) fail("missing root layout");
+else {
+  const c = readFileSync(layout, "utf-8");
+  if (!c.includes("sendfable-embed")) fail("layout must load script id sendfable-embed once");
+  else pass("SendFable script id sendfable-embed in root layout (single load)");
+  if (!c.includes("emailSignupConfig.scriptSrc") && !c.includes("sendfable.com/embed/form.js")) {
+    fail("layout must reference SendFable form.js");
+  } else pass("layout references SendFable form.js");
+  // AdSense may use beforeInteractive; SendFable bootstrap must stay async after body content.
+  const sendfableBlock = c.includes("sendfable-embed") && c.includes("s.async=true");
+  if (!sendfableBlock) fail("SendFable layout bootstrap must inject async script");
+  else pass("SendFable layout bootstrap injects async script once");
 }
 
 if (!existsSync(signup)) fail("missing EmailDigestSignup");
