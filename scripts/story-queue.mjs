@@ -4,14 +4,16 @@ import { QUEUE_SEED } from "./story-queue-seed.mjs";
 import { QUEUE_BATCH_2 } from "./story-queue-batch-2.mjs";
 import { QUEUE_BATCH_3 } from "./story-queue-batch-3.mjs";
 import { QUEUE_BATCH_4 } from "./story-queue-batch-4.mjs";
+import { QUEUE_BATCH_5 } from "./story-queue-batch-5.mjs";
 
 export const QUEUE_PATH = join(process.cwd(), "content", "story-queue.json");
 
 /**
  * Keep at least this many pending topics so the daily generator never starves.
- * When pending drops below this, merge any new curated batches (and warn in CI).
+ * Target reserve: 30. Warn / refill urgently when pending drops below 15.
  */
-export const MIN_PENDING_TOPICS = 14;
+export const MIN_PENDING_TOPICS = 30;
+export const REFILL_PENDING_THRESHOLD = 15;
 
 /** All curated seed batches — merge by id so new batches refill an exhausted queue. */
 export const ALL_QUEUE_SEEDS = [
@@ -19,6 +21,7 @@ export const ALL_QUEUE_SEEDS = [
   ...QUEUE_BATCH_2,
   ...QUEUE_BATCH_3,
   ...QUEUE_BATCH_4,
+  ...QUEUE_BATCH_5,
 ];
 
 export function loadQueue() {

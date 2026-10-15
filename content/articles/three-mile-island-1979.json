@@ -42,5 +42,7 @@
   "relatedVideoId": null,
   "createdAt": "2026-07-21T11:51:00.499Z",
   "seoTitle": "The Partial Meltdown That Terrified America in 1979",
-  "seoDescription": "A stuck valve and confused operators turned a Pennsylvania nuclear plant into a national panic — and stalled U.S. nuclear power for decades."
+  "seoDescription": "A stuck valve and confused operators turned a Pennsylvania nuclear plant into a national panic — and stalled U.S. nuclear power for decades.",
+  "eventYear": 1979,
+  "historicalEra": "postwar-cold-war"
 }

@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { getAllArticles } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
+import { HISTORICAL_ERAS } from "@/lib/historical-eras";
 import { getPopulatedHistoryHubs } from "@/lib/history-hubs";
 import {
   datePathSlug,
@@ -13,6 +14,7 @@ import {
 } from "@/lib/on-this-day";
 import { buildBreadcrumbJsonLd } from "@/lib/seo";
 import { getPopulatedTopics } from "@/lib/topic-seo";
+import { getQuickReads } from "@/lib/articles";
 
 export const metadata: Metadata = {
   title: "Browse the SeeStew archive",
@@ -27,11 +29,20 @@ export default function ArchivePage() {
   const hubs = getPopulatedHistoryHubs(articles);
   const decades = hubs.filter((h) => h.kind === "decade");
   const states = hubs.filter((h) => h.kind === "state");
-  const lists = hubs.filter((h) => h.kind === "city" || h.kind === "list" || h.kind === "era");
+  const historicalEras = hubs.filter((h) =>
+    HISTORICAL_ERAS.some((e) => e.slug === h.slug)
+  );
+  const lists = hubs.filter(
+    (h) =>
+      h.kind === "city" ||
+      h.kind === "list" ||
+      (h.kind === "era" && !HISTORICAL_ERAS.some((e) => e.slug === h.slug))
+  );
   const slugSet = new Set(articles.map((a) => a.slug));
   const showOnThisDay = onThisDayEnabled(slugSet);
   const anniversaries = showOnThisDay ? liveAnniversaries(slugSet).slice(0, 12) : [];
   const recent = articles.slice(0, 12);
+  const quickReads = getQuickReads(6);
   const url = `${siteConfig.url}/archive`;
 
   return (
@@ -77,6 +88,57 @@ export default function ArchivePage() {
           </Link>
         </p>
       </section>
+
+      {quickReads.length > 0 && (
+        <section className="mt-12" aria-labelledby="archive-quick">
+          <h2 id="archive-quick" className="font-heading text-2xl font-bold text-ink">
+            Quick Reads
+          </h2>
+          <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+            {quickReads.map((a) => (
+              <li key={a.slug}>
+                <Link
+                  href={`/articles/${a.slug}`}
+                  className="text-brand-mid underline hover:text-brand-bright"
+                >
+                  {a.title}
+                </Link>
+                <span className="ml-2 text-xs text-ink-muted">{a.readMinutes} min</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-4 text-sm">
+            <Link href="/articles?format=quick-read" className="text-brand-mid underline">
+              All Quick Reads →
+            </Link>
+          </p>
+        </section>
+      )}
+
+      {historicalEras.length > 0 && (
+        <section className="mt-12" aria-labelledby="archive-eras">
+          <h2 id="archive-eras" className="font-heading text-2xl font-bold text-ink">
+            Browse by era
+          </h2>
+          <p className="mt-2 max-w-2xl text-sm text-ink-muted">
+            Historical eras use event dates, not publish dates. Only eras with enough sourced
+            stories are listed.
+          </p>
+          <ul className="mt-4 flex flex-wrap gap-3">
+            {historicalEras.map((h) => (
+              <li key={h.slug}>
+                <Link
+                  href={`/hubs/${h.slug}`}
+                  className="inline-flex rounded-md border border-brand-wash bg-white px-3 py-1.5 text-sm font-medium text-ink hover:border-brand-mid"
+                >
+                  {h.title}
+                  <span className="ml-2 text-ink-muted">({h.count})</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {topics.length > 0 && (
         <section className="mt-12" aria-labelledby="archive-topics">

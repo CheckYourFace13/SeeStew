@@ -12,6 +12,7 @@ import {
   mergeMissingSeedItems,
   saveQueue,
   MIN_PENDING_TOPICS,
+  REFILL_PENDING_THRESHOLD,
 } from "./story-queue.mjs";
 import { countCredibleRefs, normalizeUrl } from "./article-validation.mjs";
 
@@ -95,6 +96,15 @@ if (pending < MIN_PENDING_TOPICS) {
   console.warn(
     `WARNING: only ${pending} pending topics (want ≥ ${MIN_PENDING_TOPICS}). Add scripts/story-queue-batch-*.mjs and register it in story-queue.mjs.`
   );
+}
+if (pending < REFILL_PENDING_THRESHOLD) {
+  console.warn(
+    `URGENT: pending (${pending}) below refill threshold ${REFILL_PENDING_THRESHOLD}. Daily publishing will fail when the queue is empty.`
+  );
+}
+if (pending === 0) {
+  console.error("FAIL: zero pending topics — daily generator cannot publish.");
+  process.exit(1);
 }
 
 process.exit(failed > 0 ? 1 : 0);

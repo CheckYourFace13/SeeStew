@@ -177,6 +177,14 @@ async function main() {
     }`
   );
 
+  const eventYear =
+    queueItem.eventYear ??
+    (() => {
+      const m = `${draft.slug} ${draft.title}`.match(/\b((?:1[6-9]\d{2}|20[0-2]\d))\b/);
+      return m ? Number(m[1]) : undefined;
+    })();
+  const historicalEra = queueItem.historicalEra || undefined;
+
   const article = {
     slug: draft.slug,
     title: draft.title,
@@ -185,6 +193,9 @@ async function main() {
     ...(draft.seoDescription ? { seoDescription: draft.seoDescription } : {}),
     readMinutes: Math.max(5, Math.ceil(stats.words / 220)),
     category: draft.category,
+    format: "full",
+    ...(eventYear ? { eventYear } : {}),
+    ...(historicalEra ? { historicalEra } : {}),
     content: draft.content,
     references: draft.references,
     image,

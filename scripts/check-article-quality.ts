@@ -12,6 +12,9 @@ const ROOT = process.cwd();
 const ARTICLES_DIR = join(ROOT, "content", "articles");
 const PLACEHOLDER = "/stories/defaults/";
 const MIN_PROSE_WORDS = 800;
+/** Quick Reads: ~300–500 words target; allow a band for validation. */
+const QUICK_READ_MIN_WORDS = 250;
+const QUICK_READ_MAX_WORDS = 650;
 
 /** Slugs under the prose minimum, with a written reason. Keep this list short. */
 const WORD_ALLOWLIST: Record<string, string> = {};
@@ -27,6 +30,9 @@ type Article = {
   excerpt?: string;
   content?: string;
   category?: string;
+  format?: string;
+  eventYear?: number;
+  historicalEra?: string;
   references?: Array<{ title?: string; url?: string }>;
   image?: { card?: string; imagePrompt?: string };
 };
@@ -70,13 +76,22 @@ function main(): void {
     const content = (article.content ?? "").trim();
     const category = (article.category ?? "").trim();
 
+    const isQuick = article.format === "quick-read";
+
     if (!title) errors.push("empty title");
     if (!excerpt) errors.push("empty description/excerpt");
     if (!content) errors.push("empty body");
     else {
       const words = proseWordCount(content);
       const exempt = WORD_ALLOWLIST[slug];
-      if (words < MIN_PROSE_WORDS && !exempt) {
+      if (isQuick) {
+        if (words < QUICK_READ_MIN_WORDS) {
+          errors.push(`Quick Read below ${QUICK_READ_MIN_WORDS} prose words (${words})`);
+        }
+        if (words > QUICK_READ_MAX_WORDS) {
+          errors.push(`Quick Read above ${QUICK_READ_MAX_WORDS} prose words (${words}) — use a full article`);
+        }
+      } else if (words < MIN_PROSE_WORDS && !exempt) {
         errors.push(`body below ${MIN_PROSE_WORDS} prose words (${words})`);
       }
     }
@@ -91,8 +106,16 @@ function main(): void {
 
     const refs = article.references ?? [];
     const hasSourcesHeading = /^##\s*Sources\b/im.test(content);
-    if (refs.length === 0 && !hasSourcesHeading) {
-      errors.push("missing named sources/references");
+    const minRefs = isQuick ? 2 : 1;
+    if (refs.length < minRefs && !hasSourcesHeading) {
+      errors.push(
+        isQuick
+          ? `Quick Read needs ≥${minRefs} named sources/references`
+          : "missing named sources/references"
+      );
+    }
+    if (isQuick && refs.length > 0 && refs.length < 2) {
+      errors.push("Quick Read needs ≥2 named sources");
     }
 
     const sourceHeadings = content.match(/^##\s*Sources\b/gim) ?? [];

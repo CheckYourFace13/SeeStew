@@ -22,6 +22,9 @@ export type ArticleImage = {
   imagePrompt?: string;
 };
 
+/** Editorial length/format — full daily stories vs Quick Reads. */
+export type ArticleFormat = "full" | "quick-read";
+
 export type Article = {
   slug: string;
   title: string;
@@ -32,6 +35,19 @@ export type Article = {
   seoDescription?: string;
   readMinutes: number;
   category: string;
+  /**
+   * Reading format. Default/omitted = full researched article.
+   * quick-read ≈ 300–500 words / 1–3 min — separate quality profile.
+   */
+  format?: ArticleFormat;
+  /** Primary historical event year (not publish date). */
+  eventYear?: number;
+  /** Primary Historical Era slug (see historical-eras.ts). */
+  historicalEra?: string;
+  /** Optional additional era slugs when an event spans eras. */
+  historicalEras?: string[];
+  /** Related full-article slugs (useful for Quick Reads). */
+  relatedArticleSlugs?: string[];
   content: string;
   references?: ArticleReference[];
   image?: ArticleImage;
@@ -86,6 +102,28 @@ export function getAllCategories(): string[] {
 
 export function getArticlesForStoriesPage(limit = STORIES_PAGE_SIZE): Article[] {
   return getAllArticles().slice(0, limit);
+}
+
+export function isQuickRead(article: Article): boolean {
+  return article.format === "quick-read";
+}
+
+export function getQuickReads(limit?: number): Article[] {
+  const list = getAllArticles().filter(isQuickRead);
+  return limit != null ? list.slice(0, limit) : list;
+}
+
+export function getFullArticles(limit?: number): Article[] {
+  const list = getAllArticles().filter((a) => !isQuickRead(a));
+  return limit != null ? list.slice(0, limit) : list;
+}
+
+export function getArticlesByEra(eraSlug: string): Article[] {
+  return getAllArticles().filter(
+    (a) =>
+      a.historicalEra === eraSlug ||
+      (a.historicalEras?.includes(eraSlug) ?? false)
+  );
 }
 
 export function saveArticle(article: Article): void {

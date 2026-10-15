@@ -17,9 +17,10 @@ import { StoryHero } from "@/components/StoryHero";
 import { VideoPlayer } from "@/components/VideoPlayer";
 import { placementsForArticle } from "@/data/affiliate-placements";
 import { getRecommendedReadingForArticle } from "@/data/recommended-reading";
-import { getAllArticles, getArticle } from "@/lib/articles";
+import { getAllArticles, getArticle, isQuickRead } from "@/lib/articles";
 import { prepareArticleBodyForDisplay } from "@/lib/article-content";
 import { siteConfig } from "@/lib/config";
+import { getHistoricalEra } from "@/lib/historical-eras";
 import { getPopulatedHistoryHubs, getArticlesForHub } from "@/lib/history-hubs";
 import {
   alsoOnThisDay,
@@ -101,7 +102,19 @@ export default async function ArticlePage({ params }: Props) {
   const allArticles = getAllArticles();
   const relatedStories = relatedArticlesForArticle(article, allArticles);
   const moreLabel = getTopicHub(topicSlug)?.moreLabel;
-  const recommendedReading = getRecommendedReadingForArticle(article.slug);
+  const quick = isQuickRead(article);
+  const eraMeta = article.historicalEra
+    ? getHistoricalEra(article.historicalEra)
+    : undefined;
+  const recommendedReading = quick
+    ? []
+    : getRecommendedReadingForArticle(article.slug);
+  const relatedFull =
+    quick && article.relatedArticleSlugs?.length
+      ? article.relatedArticleSlugs
+          .map((s) => getArticle(s))
+          .filter((a): a is NonNullable<typeof a> => a != null)
+      : [];
   const networkPlacements = placementsForArticle(article.slug);
   const relatedVideos = relatedVideosForArticle(article, allVideos);
   const storyHubs = getPopulatedHistoryHubs(allArticles).filter((hub) =>
@@ -237,8 +250,22 @@ export default async function ArticlePage({ params }: Props) {
               {article.category}
             </Link>
           </span>
+          {eraMeta && (
+            <span>
+              <span className="font-semibold text-ink">Era:</span>{" "}
+              <Link href={`/hubs/${eraMeta.slug}`} className="text-brand-mid underline">
+                {eraMeta.title}
+              </Link>
+            </span>
+          )}
+          {article.eventYear != null && (
+            <span>
+              <span className="font-semibold text-ink">Event year:</span> {article.eventYear}
+            </span>
+          )}
           <span>
-            <span className="font-semibold text-ink">Read:</span> {article.readMinutes} min
+            <span className="font-semibold text-ink">Read:</span>{" "}
+            {quick ? `${article.readMinutes} min Quick Read` : `${article.readMinutes} min`}
           </span>
           {article.references && article.references.length > 0 && (
             <span>
@@ -383,9 +410,35 @@ export default async function ArticlePage({ params }: Props) {
         moreLabel={moreLabel}
       />
 
+      {relatedFull.length > 0 && (
+        <section className="mt-10" aria-labelledby="related-full-heading">
+          <h2 id="related-full-heading" className="font-heading text-xl font-bold text-ink">
+            Dig deeper
+          </h2>
+          <ul className="mt-3 space-y-2">
+            {relatedFull.map((a) => (
+              <li key={a.slug}>
+                <Link
+                  href={`/articles/${a.slug}`}
+                  className="text-brand-mid underline hover:text-brand-bright"
+                >
+                  {a.title}
+                </Link>
+                <span className="ml-2 text-xs text-ink-muted">full article</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       {/* After the article, sources, and related links — never above the body. */}
-      <AffiliateBlock heading="Read more about this story" items={recommendedReading} />
-      <NetworkAffiliateBlock items={networkPlacements} />
+      {/* Quick Reads skip affiliate blocks to stay light and editorial-first. */}
+      {!quick && (
+        <>
+          <AffiliateBlock heading="Read more about this story" items={recommendedReading} />
+          <NetworkAffiliateBlock items={networkPlacements} />
+        </>
+      )}
 
       <EmailDigestSignup className="mt-10" />
 

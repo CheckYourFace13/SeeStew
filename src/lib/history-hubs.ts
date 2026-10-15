@@ -1,9 +1,14 @@
 /**
  * Content-rich decade / era / state hubs. Hubs only surface when ≥ MIN articles match.
- * Years come from slug/title. State tags only from title/slug (not body) to cut false hits.
+ * Years come from eventYear / slug/title. State tags only from title/slug (not body).
  */
 
 import type { Article } from "./articles";
+import {
+  HISTORICAL_ERAS,
+  eraForYear,
+  resolveEventYear,
+} from "./historical-eras";
 
 export const HUB_MIN_ARTICLES = 3;
 
@@ -180,6 +185,17 @@ function allHubDefinitions(): HistoryHub[] {
       intro: copy.intro,
     });
   }
+  // Named Historical Eras (browse axis) — same /hubs/[slug] routes, only when populated.
+  for (const era of HISTORICAL_ERAS) {
+    defs.push({
+      slug: era.slug,
+      kind: "era",
+      title: era.title,
+      description: era.description,
+      intro: era.intro,
+    });
+  }
+  // Legacy cold-war hub kept as a list-style era alias (1947–1991 subset).
   defs.push({
     slug: "cold-war",
     kind: "era",
@@ -296,9 +312,15 @@ function allHubDefinitions(): HistoryHub[] {
 }
 
 export function yearFromArticle(article: Article): number | null {
-  const blob = `${article.slug} ${article.title}`;
-  const m = blob.match(/\b(1[789]\d{2}|20[0-2]\d)\b/);
-  return m ? Number(m[1]) : null;
+  return resolveEventYear(article.slug, article.title, article.eventYear);
+}
+
+/** Primary historical-era slug for an article (metadata or year-derived). */
+export function primaryEraSlug(article: Article): string | null {
+  if (article.historicalEra) return article.historicalEra;
+  const y = yearFromArticle(article);
+  if (y == null) return null;
+  return eraForYear(y)?.slug ?? null;
 }
 
 export function decadeFromYear(year: number): number {
@@ -343,6 +365,17 @@ export function getArticlesForHub(hub: HistoryHub, articles: Article[]): Article
     return articles.filter((a) => {
       const y = yearFromArticle(a);
       return y != null && isColdWarYear(y);
+    });
+  }
+  if (hub.kind === "era") {
+    const era = HISTORICAL_ERAS.find((e) => e.slug === hub.slug);
+    if (!era) return [];
+    return articles.filter((a) => {
+      if (a.historicalEra === hub.slug || a.historicalEras?.includes(hub.slug)) {
+        return true;
+      }
+      const y = yearFromArticle(a);
+      return y != null && y >= era.startYear && y <= era.endYear;
     });
   }
   if (hub.kind === "state" && hub.stateCode) {

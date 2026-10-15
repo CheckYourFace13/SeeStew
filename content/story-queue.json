@@ -4814,6 +4814,1604 @@
       "status": "published",
       "publishedSlug": "selma-to-montgomery-1965",
       "publishedAt": "2026-10-11T16:12:47.058Z"
+    },
+    {
+      "id": "gaspee-affair-1772",
+      "title": "The Gaspee Affair of 1772: Colonists Burned a British Customs Ship",
+      "hook": "Rhode Island colonists boarded and burned HMS Gaspee — an early flashpoint before Lexington.",
+      "category": "Revolution",
+      "angle": "Why the schooner ran aground, who led the raid, how Britain investigated, and why it mattered for independence.",
+      "keywords": [
+        "Gaspee Affair",
+        "HMS Gaspee Rhode Island",
+        "Burning of the Gaspee"
+      ],
+      "requiredSources": [
+        {
+          "title": "The Gaspee Affair",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/articles/000/the-gaspee-affair.htm"
+        },
+        {
+          "title": "Gaspee Days",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/today-in-history/june-09/"
+        },
+        {
+          "title": "The Burning of the Gaspee",
+          "publisher": "Rhode Island Historical Society",
+          "url": "https://www.rihs.org/"
+        },
+        {
+          "title": "Gaspee Affair",
+          "publisher": "U.S. Naval Institute",
+          "url": "https://www.usni.org/"
+        },
+        {
+          "title": "Prelude to Revolution",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/research/american-revolution"
+        }
+      ],
+      "imageSearchTerms": [
+        "Gaspee Affair HMS Gaspee burning 1772"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1772,
+      "historicalEra": "colonial-america"
+    },
+    {
+      "id": "newburgh-conspiracy-1783",
+      "title": "The Newburgh Conspiracy: When Continental Officers Nearly Mutinied",
+      "hook": "Unpaid officers circulated a call to defy Congress — until Washington’s speech stopped them.",
+      "category": "Revolution",
+      "angle": "What the anonymous letters proposed, Washington’s Newburgh address, and how Congress settled pay.",
+      "keywords": [
+        "Newburgh Conspiracy",
+        "Washington Newburgh address",
+        "Continental Army mutiny"
+      ],
+      "requiredSources": [
+        {
+          "title": "Newburgh Address",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/today-in-history/march-15/"
+        },
+        {
+          "title": "Washington and the Newburgh Conspiracy",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/founding-docs"
+        },
+        {
+          "title": "Newburgh Conspiracy",
+          "publisher": "Mount Vernon",
+          "url": "https://www.mountvernon.org/library/digitalhistory/digital-encyclopedia/article/newburgh-conspiracy"
+        },
+        {
+          "title": "Continental Army",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/articles/continental-army.htm"
+        },
+        {
+          "title": "Founders Online",
+          "publisher": "National Archives",
+          "url": "https://founders.archives.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Washington Newburgh Conspiracy 1783"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1783,
+      "historicalEra": "revolution-early-republic"
+    },
+    {
+      "id": "benedict-arnold-west-point-1780",
+      "title": "Benedict Arnold’s West Point Plot: What He Tried to Sell the British",
+      "hook": "America’s most famous traitor tried to hand West Point to the British — and nearly got away with it.",
+      "category": "Revolution",
+      "angle": "Arnold’s grievances, the André capture, what papers proved, and how the plot collapsed.",
+      "keywords": [
+        "Benedict Arnold West Point",
+        "John André spy",
+        "Arnold treason 1780"
+      ],
+      "requiredSources": [
+        {
+          "title": "Benedict Arnold",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/articles/benedict-arnold.htm"
+        },
+        {
+          "title": "West Point and Arnold",
+          "publisher": "U.S. Military Academy",
+          "url": "https://www.westpoint.edu/"
+        },
+        {
+          "title": "John André",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Revolutionary War spies",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/research/american-revolution"
+        },
+        {
+          "title": "Arnold treason",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Benedict Arnold West Point plot 1780"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1780,
+      "historicalEra": "revolution-early-republic"
+    },
+    {
+      "id": "paxton-boys-1763",
+      "title": "The Paxton Boys: Frontier Massacre and a March on Philadelphia",
+      "hook": "After killing Conestoga people in Lancaster, armed settlers marched on Philadelphia — and nearly sparked civil war in Pennsylvania.",
+      "category": "Revolution",
+      "angle": "The Conestoga killings, Franklin’s defense of Philadelphia, and what the crisis revealed about colonial politics.",
+      "keywords": [
+        "Paxton Boys",
+        "Conestoga massacre",
+        "Paxton Boys Philadelphia"
+      ],
+      "requiredSources": [
+        {
+          "title": "Paxton Boys",
+          "publisher": "Encyclopedia of Greater Philadelphia",
+          "url": "https://philadelphiaencyclopedia.org/archive/paxton-boys/"
+        },
+        {
+          "title": "Conestoga Indian Town",
+          "publisher": "Pennsylvania Historical & Museum Commission",
+          "url": "https://www.phmc.pa.gov/"
+        },
+        {
+          "title": "Benjamin Franklin and the Paxton Boys",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Colonial Pennsylvania",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/"
+        },
+        {
+          "title": "Frontier violence",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Paxton Boys Conestoga 1763"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1763,
+      "historicalEra": "colonial-america"
+    },
+    {
+      "id": "able-archer-83",
+      "title": "Able Archer 83: The NATO Exercise That Nearly Looked Like Nuclear War",
+      "hook": "A realistic 1983 NATO command exercise rattled U.S.–Warsaw Pact intelligence channels during a tense nuclear scare year.",
+      "category": "Military",
+      "angle": "What Able Archer simulated, why opposing analysts misread the drill, and what declassified U.S. files show about the scare.",
+      "keywords": [
+        "Able Archer 83",
+        "Able Archer nuclear scare",
+        "NATO exercise 1983"
+      ],
+      "requiredSources": [
+        {
+          "title": "Able Archer 83",
+          "publisher": "National Security Archive",
+          "url": "https://nsarchive.gwu.edu/briefing-book/aa83"
+        },
+        {
+          "title": "The 1983 War Scare",
+          "publisher": "CIA FOIA Reading Room",
+          "url": "https://www.cia.gov/readingroom/"
+        },
+        {
+          "title": "Cold War nuclear crises",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Able Archer",
+          "publisher": "U.S. Department of State Office of the Historian",
+          "url": "https://history.state.gov/"
+        },
+        {
+          "title": "Nuclear close calls",
+          "publisher": "Bulletin of the Atomic Scientists",
+          "url": "https://thebulletin.org/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Able Archer 83 NATO exercise"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1983,
+      "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "palomares-incident-1966",
+      "title": "Palomares 1966: When a U.S. Bomber Lost Hydrogen Bombs Over Spain",
+      "hook": "A midair collision dumped nuclear weapons near a Spanish fishing village — one bomb vanished into the Mediterranean for months.",
+      "category": "Military",
+      "angle": "The B-52/KC-135 collision, the land recovery, the underwater search, and what the U.S. admitted.",
+      "keywords": [
+        "Palomares hydrogen bomb",
+        "Palomares 1966",
+        "B-52 Spain nuclear accident"
+      ],
+      "requiredSources": [
+        {
+          "title": "Palomares Nuclear Weapons Accident",
+          "publisher": "U.S. Air Force",
+          "url": "https://www.af.mil/"
+        },
+        {
+          "title": "Broken Arrow incidents",
+          "publisher": "Department of Defense",
+          "url": "https://www.defense.gov/"
+        },
+        {
+          "title": "Palomares",
+          "publisher": "National Security Archive",
+          "url": "https://nsarchive.gwu.edu/"
+        },
+        {
+          "title": "Nuclear weapons accidents",
+          "publisher": "Federation of American Scientists",
+          "url": "https://fas.org/"
+        },
+        {
+          "title": "Cold War nuclear accidents",
+          "publisher": "Atomic Heritage Foundation",
+          "url": "https://ahf.nuclearmuseum.org/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Palomares Spain hydrogen bomb 1966"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1966,
+      "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "thule-b52-crash-1968",
+      "title": "The Thule B-52 Crash: A Nuclear Bomber Went Down on Greenland Ice",
+      "hook": "In 1968 a B-52 carrying nuclear weapons crashed near Thule Air Base — contaminating ice and forcing a massive cleanup.",
+      "category": "Military",
+      "angle": "Why the bomber was airborne, what burned, the cleanup deal with Denmark, and declassified aftermath.",
+      "keywords": [
+        "Thule B-52 crash",
+        "Thule nuclear accident 1968",
+        "Broken Arrow Greenland"
+      ],
+      "requiredSources": [
+        {
+          "title": "Thule Accident",
+          "publisher": "U.S. Air Force Historical Research",
+          "url": "https://www.af.mil/"
+        },
+        {
+          "title": "Broken Arrow",
+          "publisher": "Department of Defense",
+          "url": "https://www.defense.gov/"
+        },
+        {
+          "title": "Thule crash",
+          "publisher": "National Security Archive",
+          "url": "https://nsarchive.gwu.edu/"
+        },
+        {
+          "title": "Nuclear weapons accidents",
+          "publisher": "Atomic Heritage Foundation",
+          "url": "https://ahf.nuclearmuseum.org/"
+        },
+        {
+          "title": "Greenland cleanup",
+          "publisher": "State Department historical materials",
+          "url": "https://history.state.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Thule B-52 crash Greenland 1968"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1968,
+      "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "uss-forrestal-fire-1967",
+      "title": "The USS Forrestal Fire: A Carrier Deck Inferno That Killed 134",
+      "hook": "A Zuni rocket misfire on Yankee Station started a chain of explosions that nearly destroyed a supercarrier.",
+      "category": "Military",
+      "angle": "How the fire started, why bombs cooked off, damage-control lessons, and the Navy’s official investigation.",
+      "keywords": [
+        "USS Forrestal fire",
+        "Forrestal fire 1967",
+        "carrier deck fire Vietnam"
+      ],
+      "requiredSources": [
+        {
+          "title": "USS Forrestal (CVA-59)",
+          "publisher": "Naval History and Heritage Command",
+          "url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/f/forrestal-cva-59.html"
+        },
+        {
+          "title": "Forrestal fire",
+          "publisher": "U.S. Navy",
+          "url": "https://www.navy.mil/"
+        },
+        {
+          "title": "Carrier fires",
+          "publisher": "Naval History and Heritage Command",
+          "url": "https://www.history.navy.mil/"
+        },
+        {
+          "title": "Vietnam War naval operations",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Forrestal disaster",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/"
+        }
+      ],
+      "imageSearchTerms": [
+        "USS Forrestal fire 1967"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1967,
+      "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "great-seattle-fire-1889",
+      "title": "The Great Seattle Fire of 1889: How a City Burned and Rebuilt in Brick",
+      "hook": "A glue pot in a cabinet shop ignited a blaze that leveled Seattle’s business district — and forced a rebuild above the ashes.",
+      "category": "Weird America",
+      "angle": "How the fire spread, why wooden sidewalks doomed the city, and how Seattle raised its streets afterward.",
+      "keywords": [
+        "Seattle fire 1889",
+        "Great Seattle Fire",
+        "Seattle rebuilt brick"
+      ],
+      "requiredSources": [
+        {
+          "title": "Great Seattle Fire",
+          "publisher": "Seattle Municipal Archives",
+          "url": "https://www.seattle.gov/cityarchives"
+        },
+        {
+          "title": "Seattle Fire of 1889",
+          "publisher": "HistoryLink",
+          "url": "https://www.historylink.org/"
+        },
+        {
+          "title": "Urban fires",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/"
+        },
+        {
+          "title": "Pacific Northwest history",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Seattle rebuild",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Great Seattle Fire 1889"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1889,
+      "historicalEra": "reconstruction-gilded-age"
+    },
+    {
+      "id": "hinckley-fire-1894",
+      "title": "The Hinckley Firestorm of 1894: A Train Escape Through a Burning Forest",
+      "hook": "A Minnesota firestorm killed hundreds — and a train engineer raced survivors through flames to safety.",
+      "category": "Weird America",
+      "angle": "Drought conditions, the fire’s path, the train escape, and how communities recorded the dead.",
+      "keywords": [
+        "Hinckley fire 1894",
+        "Hinckley firestorm Minnesota",
+        "Great Hinckley Fire"
+      ],
+      "requiredSources": [
+        {
+          "title": "Great Hinckley Fire",
+          "publisher": "Minnesota Historical Society",
+          "url": "https://www.mnhs.org/"
+        },
+        {
+          "title": "Hinckley Fire",
+          "publisher": "National Weather Service",
+          "url": "https://www.weather.gov/"
+        },
+        {
+          "title": "Forest fire history",
+          "publisher": "U.S. Forest Service",
+          "url": "https://www.fs.usda.gov/"
+        },
+        {
+          "title": "Minnesota disasters",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Hinckley firestorm",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Hinckley Fire Minnesota 1894"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1894,
+      "historicalEra": "reconstruction-gilded-age"
+    },
+    {
+      "id": "winecoff-hotel-fire-1946",
+      "title": "The Winecoff Hotel Fire: America’s Deadliest Hotel Blaze",
+      "hook": "Atlanta’s “fireproof” Winecoff Hotel burned in 1946, killing 119 people and rewriting hotel safety codes.",
+      "category": "Weird America",
+      "angle": "Why exits failed, how guests jumped, the death toll, and the code changes that followed.",
+      "keywords": [
+        "Winecoff Hotel fire",
+        "Winecoff fire Atlanta 1946",
+        "deadliest hotel fire"
+      ],
+      "requiredSources": [
+        {
+          "title": "Winecoff Hotel Fire",
+          "publisher": "Atlanta History Center",
+          "url": "https://www.atlantahistorycenter.com/"
+        },
+        {
+          "title": "Hotel fire safety",
+          "publisher": "National Fire Protection Association",
+          "url": "https://www.nfpa.org/"
+        },
+        {
+          "title": "Winecoff fire",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Atlanta disasters",
+          "publisher": "Georgia Historical Society",
+          "url": "https://georgiahistory.com/"
+        },
+        {
+          "title": "Winecoff Hotel",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Winecoff Hotel fire Atlanta 1946"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1946,
+      "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "tri-state-tornado-1925",
+      "title": "The Tri-State Tornado of 1925: The Longest Tracked Tornado Path in U.S. History",
+      "hook": "One supercell carved a death path across Missouri, Illinois, and Indiana — still unmatched in tracked length.",
+      "category": "Weird America",
+      "angle": "The storm’s track, town destruction, death toll estimates, and how modern meteorology remembers it.",
+      "keywords": [
+        "Tri-State Tornado 1925",
+        "longest tornado path",
+        "1925 tornado Missouri Illinois"
+      ],
+      "requiredSources": [
+        {
+          "title": "Tri-State Tornado",
+          "publisher": "National Weather Service",
+          "url": "https://www.weather.gov/"
+        },
+        {
+          "title": "Tornado history",
+          "publisher": "NOAA",
+          "url": "https://www.noaa.gov/"
+        },
+        {
+          "title": "1925 tornado",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Midwest disasters",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Tri-State Tornado",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Tri-State Tornado 1925"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1925,
+      "historicalEra": "twenties-depression"
+    },
+    {
+      "id": "collinwood-school-fire-1908",
+      "title": "The Collinwood School Fire: Nearly 200 Children Died in a Cleveland School",
+      "hook": "In 1908, Lake View School in Collinwood burned during class — locked exits and panic trapped students.",
+      "category": "Weird America",
+      "angle": "How the fire started, why exits failed, the death toll, and school-safety reforms that followed.",
+      "keywords": [
+        "Collinwood school fire",
+        "Lake View School fire 1908",
+        "Collinwood Cleveland fire"
+      ],
+      "requiredSources": [
+        {
+          "title": "Collinwood School Fire",
+          "publisher": "Cleveland Memory Project",
+          "url": "https://www.clevelandmemory.org/"
+        },
+        {
+          "title": "Ohio school disasters",
+          "publisher": "Ohio History Connection",
+          "url": "https://www.ohiohistory.org/"
+        },
+        {
+          "title": "School fire safety",
+          "publisher": "National Fire Protection Association",
+          "url": "https://www.nfpa.org/"
+        },
+        {
+          "title": "Collinwood fire",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "American school fires",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Collinwood school fire 1908"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1908,
+      "historicalEra": "progressive-wwi"
+    },
+    {
+      "id": "credit-mobilier-scandal",
+      "title": "The Credit Mobilier Scandal: Railroad Bribes That Reached Congress",
+      "hook": "Union Pacific insiders used Credit Mobilier stock to buy political protection — until a newspaper exposed the scheme.",
+      "category": "Scandal",
+      "angle": "How the construction company skimmed profits, which politicians were implicated, and what Congress did afterward.",
+      "keywords": [
+        "Credit Mobilier scandal",
+        "Credit Mobilier Grant",
+        "Union Pacific bribery"
+      ],
+      "requiredSources": [
+        {
+          "title": "Credit Mobilier Scandal",
+          "publisher": "U.S. Senate",
+          "url": "https://www.senate.gov/about/powers-procedures/investigations/credit-mobilier.htm"
+        },
+        {
+          "title": "Credit Mobilier",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Gilded Age corruption",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Union Pacific history",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/"
+        },
+        {
+          "title": "Credit Mobilier",
+          "publisher": "House History, Art & Archives",
+          "url": "https://history.house.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Credit Mobilier scandal Congress"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1872,
+      "historicalEra": "reconstruction-gilded-age"
+    },
+    {
+      "id": "whiskey-ring-scandal",
+      "title": "The Whiskey Ring: Tax Fraud Inside Grant’s Treasury",
+      "hook": "Distillers and revenue agents skimmed liquor taxes — and the conspiracy reached the White House’s inner circle.",
+      "category": "Scandal",
+      "angle": "How the ring worked, Grant’s response, who was convicted, and what it meant for Reconstruction-era politics.",
+      "keywords": [
+        "Whiskey Ring",
+        "Whiskey Ring Grant",
+        "Treasury tax fraud 1870s"
+      ],
+      "requiredSources": [
+        {
+          "title": "Whiskey Ring",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Grant administration scandals",
+          "publisher": "Ulysses S. Grant Presidential Library",
+          "url": "https://www.usgrantlibrary.org/"
+        },
+        {
+          "title": "Revenue fraud",
+          "publisher": "U.S. Department of the Treasury",
+          "url": "https://home.treasury.gov/"
+        },
+        {
+          "title": "Whiskey Ring",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Gilded Age scandals",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Whiskey Ring scandal Grant"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1875,
+      "historicalEra": "reconstruction-gilded-age"
+    },
+    {
+      "id": "operation-pastorius-1942",
+      "title": "Operation Pastorius: Nazi Saboteurs Landed on U.S. Beaches",
+      "hook": "In 1942, U-boats put German saboteurs ashore in New York and Florida — most were caught within days.",
+      "category": "Military",
+      "angle": "The mission plan, how one saboteur turned himself in, the military tribunal, and what the FBI files show.",
+      "keywords": [
+        "Operation Pastorius",
+        "Nazi saboteurs 1942",
+        "German saboteurs America"
+      ],
+      "requiredSources": [
+        {
+          "title": "Nazi Saboteurs and George Dasch",
+          "publisher": "FBI",
+          "url": "https://www.fbi.gov/history/famous-cases/nazi-saboteurs-and-george-john-dasch"
+        },
+        {
+          "title": "Operation Pastorius",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Ex parte Quirin",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Coast Guard WWII",
+          "publisher": "U.S. Coast Guard Historian",
+          "url": "https://www.history.uscg.mil/"
+        },
+        {
+          "title": "Nazi saboteurs",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Operation Pastorius Nazi saboteurs 1942"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1942,
+      "historicalEra": "world-war-ii"
+    },
+    {
+      "id": "duquesne-spy-ring",
+      "title": "The Duquesne Spy Ring: The Largest Espionage Ring Convicted in U.S. History",
+      "hook": "FBI counterintelligence rolled up a Nazi spy network in New York — thirty-three convictions in one case.",
+      "category": "Crime",
+      "angle": "How William Sebold became a double agent, what the ring targeted, and how the FBI filmed the evidence.",
+      "keywords": [
+        "Duquesne Spy Ring",
+        "Duquesne FBI",
+        "Nazi spies New York"
+      ],
+      "requiredSources": [
+        {
+          "title": "Duquesne Spy Ring",
+          "publisher": "FBI",
+          "url": "https://www.fbi.gov/history/famous-cases/duquesne-spy-ring"
+        },
+        {
+          "title": "World War II espionage",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Counterintelligence",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Sebold case",
+          "publisher": "National WWII Museum",
+          "url": "https://www.nationalww2museum.org/"
+        },
+        {
+          "title": "Duquesne ring",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Duquesne Spy Ring FBI"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1941,
+      "historicalEra": "world-war-ii"
+    },
+    {
+      "id": "fu-go-balloon-bombs",
+      "title": "Fu-Go Balloon Bombs: Japan’s Balloons Reached the American Mainland",
+      "hook": "Japan launched thousands of bomb-carrying balloons across the Pacific — one killed six people in Oregon.",
+      "category": "Military",
+      "angle": "How the balloons worked, where they landed, the Oregon deaths, and wartime press secrecy.",
+      "keywords": [
+        "Fu-Go balloon bombs",
+        "Japanese balloon bombs Oregon",
+        "WWII balloon bombs US"
+      ],
+      "requiredSources": [
+        {
+          "title": "Japanese Balloon Bombs",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/"
+        },
+        {
+          "title": "Fu-Go",
+          "publisher": "Atomic Heritage Foundation",
+          "url": "https://ahf.nuclearmuseum.org/"
+        },
+        {
+          "title": "Balloon bombs",
+          "publisher": "Oregon Encyclopedia",
+          "url": "https://www.oregonencyclopedia.org/"
+        },
+        {
+          "title": "WWII home front",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Japanese balloon bombs",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Japanese Fu-Go balloon bombs Oregon"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1945,
+      "historicalEra": "world-war-ii"
+    },
+    {
+      "id": "kingsland-explosion-1917",
+      "title": "The Kingsland Explosion: A New Jersey Munitions Plant Fire Tied to Sabotage",
+      "hook": "In 1917, shells cooked off for hours at a Kingsland munitions plant — investigators blamed German agents.",
+      "category": "Military",
+      "angle": "What burned, the sabotage theory, Black Tom connections, and how the case entered U.S.–German claims.",
+      "keywords": [
+        "Kingsland explosion 1917",
+        "Kingsland munitions fire",
+        "WWI sabotage New Jersey"
+      ],
+      "requiredSources": [
+        {
+          "title": "Kingsland Explosion",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "German sabotage WWI",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/articles/black-tom.htm"
+        },
+        {
+          "title": "Munitions plants",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "New Jersey WWI",
+          "publisher": "New Jersey Historical Society",
+          "url": "https://jerseyhistory.org/"
+        },
+        {
+          "title": "Black Tom and Kingsland",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Kingsland explosion 1917 New Jersey"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1917,
+      "historicalEra": "progressive-wwi"
+    },
+    {
+      "id": "scopes-trial-1925",
+      "title": "The Scopes Trial: What Actually Happened in Dayton Beyond the Myth",
+      "hook": "The 1925 “monkey trial” was courtroom theatre, a publicity stunt, and a real fight over teaching evolution.",
+      "category": "Politics",
+      "angle": "Why Dayton hosted the case, what the law said, Bryan vs. Darrow, and how Hollywood reshaped memory.",
+      "keywords": [
+        "Scopes Trial",
+        "Scopes monkey trial",
+        "Dayton Tennessee evolution"
+      ],
+      "requiredSources": [
+        {
+          "title": "Scopes Trial",
+          "publisher": "Tennessee State Library and Archives",
+          "url": "https://sos.tn.gov/tsla"
+        },
+        {
+          "title": "Scopes Trial",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Evolution and education",
+          "publisher": "Smithsonian National Museum of Natural History",
+          "url": "https://naturalhistory.si.edu/"
+        },
+        {
+          "title": "Bryan and Darrow",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Scopes Trial",
+          "publisher": "American Experience / PBS",
+          "url": "https://www.pbs.org/wgbh/americanexperience/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Scopes Trial Dayton 1925"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1925,
+      "historicalEra": "twenties-depression"
+    },
+    {
+      "id": "loving-v-virginia-1967",
+      "title": "Loving v. Virginia: The Couple Who Beat Anti-Miscegenation Law",
+      "hook": "Richard and Mildred Loving’s fight against Virginia’s marriage ban reached the Supreme Court in 1967.",
+      "category": "Politics",
+      "angle": "Their arrest, exile deal, legal strategy, and what the unanimous ruling changed.",
+      "keywords": [
+        "Loving v Virginia",
+        "Loving decision 1967",
+        "interracial marriage Supreme Court"
+      ],
+      "requiredSources": [
+        {
+          "title": "Loving v. Virginia",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Loving decision",
+          "publisher": "U.S. Supreme Court",
+          "url": "https://www.supremecourt.gov/"
+        },
+        {
+          "title": "Civil rights marriage cases",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Loving story",
+          "publisher": "Smithsonian National Museum of African American History",
+          "url": "https://nmaahc.si.edu/"
+        },
+        {
+          "title": "Loving v. Virginia",
+          "publisher": "Oyez",
+          "url": "https://www.oyez.org/cases/1966/395"
+        }
+      ],
+      "imageSearchTerms": [
+        "Loving v Virginia 1967"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1967,
+      "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "abscam-1980",
+      "title": "ABSCAM: The FBI Sting That Caught Members of Congress on Camera",
+      "hook": "Undercover agents posing as Arab sheikhs filmed politicians taking bribes — and Congress reeled.",
+      "category": "Scandal",
+      "angle": "How the sting worked, who was convicted, civil-liberties criticism, and what the tapes showed.",
+      "keywords": [
+        "ABSCAM",
+        "ABSCAM FBI",
+        "Congress bribery sting"
+      ],
+      "requiredSources": [
+        {
+          "title": "ABSCAM",
+          "publisher": "FBI",
+          "url": "https://www.fbi.gov/history/famous-cases/abscam"
+        },
+        {
+          "title": "ABSCAM prosecutions",
+          "publisher": "Department of Justice",
+          "url": "https://www.justice.gov/"
+        },
+        {
+          "title": "Congressional ethics",
+          "publisher": "U.S. Senate",
+          "url": "https://www.senate.gov/"
+        },
+        {
+          "title": "ABSCAM",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "FBI undercover operations",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "ABSCAM FBI sting Congress"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1980,
+      "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "quiz-show-scandals-1950s",
+      "title": "The Quiz Show Scandals: When Primetime Contests Were Rigged",
+      "hook": "Fixed answers on Twenty-One and other shows shattered TV’s early credibility — and led to congressional hearings.",
+      "category": "Scandal",
+      "angle": "How producers coached contestants, the Charles Van Doren case, and what Congress forced networks to change.",
+      "keywords": [
+        "Quiz show scandal",
+        "Twenty-One scandal",
+        "Charles Van Doren"
+      ],
+      "requiredSources": [
+        {
+          "title": "Quiz Show Scandals",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Television hearings",
+          "publisher": "U.S. House History",
+          "url": "https://history.house.gov/"
+        },
+        {
+          "title": "Broadcast regulation",
+          "publisher": "FCC historical materials",
+          "url": "https://www.fcc.gov/"
+        },
+        {
+          "title": "Quiz shows",
+          "publisher": "Paley Center for Media",
+          "url": "https://www.paleycenter.org/"
+        },
+        {
+          "title": "Van Doren scandal",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Quiz show scandal Twenty-One 1950s"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1958,
+      "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "st-valentines-day-massacre-1929",
+      "title": "The St. Valentine’s Day Massacre: Capone-Era Murder in a Chicago Garage",
+      "hook": "Seven men were lined up and machine-gunned on February 14, 1929 — a crime that defined Prohibition violence.",
+      "category": "Crime",
+      "angle": "Who was killed, why Capone was suspected, the police response, and what evidence never stuck.",
+      "keywords": [
+        "St Valentine's Day Massacre",
+        "Capone garage shooting",
+        "1929 Chicago massacre"
+      ],
+      "requiredSources": [
+        {
+          "title": "St. Valentine's Day Massacre",
+          "publisher": "Chicago History Museum",
+          "url": "https://www.chicagohistory.org/"
+        },
+        {
+          "title": "Prohibition crime",
+          "publisher": "FBI",
+          "url": "https://www.fbi.gov/history"
+        },
+        {
+          "title": "Capone era",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Chicago crime",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Valentine's Day Massacre",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/"
+        }
+      ],
+      "imageSearchTerms": [
+        "St Valentines Day Massacre 1929 Chicago"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1929,
+      "historicalEra": "twenties-depression"
+    },
+    {
+      "id": "brinks-robbery-1950",
+      "title": "The Brinks Robbery: The Nearly Perfect Heist That Unraveled Years Later",
+      "hook": "In 1950, thieves took more than a million dollars from a Boston Brinks vault — then mistakes caught up with them.",
+      "category": "Crime",
+      "angle": "The planning, the take, the years of silence, and how the FBI finally broke the case.",
+      "keywords": [
+        "Brinks robbery Boston",
+        "Brinks heist 1950",
+        "Great Brinks Robbery"
+      ],
+      "requiredSources": [
+        {
+          "title": "Brinks Robbery",
+          "publisher": "FBI",
+          "url": "https://www.fbi.gov/history/famous-cases/brinks-robbery"
+        },
+        {
+          "title": "Boston crime history",
+          "publisher": "Boston Public Library",
+          "url": "https://www.bpl.org/"
+        },
+        {
+          "title": "Brinks case",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Famous heists",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Brinks robbery",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Brinks robbery Boston 1950"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1950,
+      "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "willowbrook-hepatitis-studies",
+      "title": "The Willowbrook Hepatitis Studies: Children Used in Medical Research",
+      "hook": "At Staten Island’s Willowbrook State School, researchers deliberately exposed children to hepatitis — and called it science.",
+      "category": "Scandal",
+      "angle": "What the studies did, how consent failed, public exposure, and the ethics rules that followed.",
+      "keywords": [
+        "Willowbrook hepatitis",
+        "Willowbrook State School",
+        "hepatitis experiments children"
+      ],
+      "requiredSources": [
+        {
+          "title": "Willowbrook State School",
+          "publisher": "New York State Archives",
+          "url": "https://www.archives.nysed.gov/"
+        },
+        {
+          "title": "Human subjects research",
+          "publisher": "NIH / OHRP",
+          "url": "https://www.hhs.gov/ohrp/"
+        },
+        {
+          "title": "Willowbrook",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Medical ethics history",
+          "publisher": "National Library of Medicine",
+          "url": "https://www.nlm.nih.gov/"
+        },
+        {
+          "title": "Willowbrook expose",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Willowbrook hepatitis studies"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1965,
+      "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "great-alaska-earthquake-1964",
+      "title": "The Great Alaska Earthquake of 1964: Quake, Tsunami, and Towns Washed Away",
+      "hook": "The strongest quake in U.S. history triggered tsunamis that erased coastal towns from Alaska to California.",
+      "category": "Weird America",
+      "angle": "Magnitude and rupture, tsunami deaths, Valdez and Chenega, and how USGS/NOAA documented the event.",
+      "keywords": [
+        "1964 Alaska earthquake",
+        "Good Friday earthquake",
+        "Alaska tsunami 1964"
+      ],
+      "requiredSources": [
+        {
+          "title": "The Great Alaska Earthquake of 1964",
+          "publisher": "USGS",
+          "url": "https://www.usgs.gov/programs/earthquake-hazards"
+        },
+        {
+          "title": "1964 tsunami",
+          "publisher": "NOAA",
+          "url": "https://www.noaa.gov/"
+        },
+        {
+          "title": "Alaska earthquake",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Good Friday Earthquake",
+          "publisher": "Alaska State Library",
+          "url": "https://library.alaska.gov/"
+        },
+        {
+          "title": "1964 Alaska quake",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Great Alaska Earthquake 1964"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1964,
+      "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "rhythm-club-fire-1940",
+      "title": "The Rhythm Club Fire: A Jim Crow Dance Hall Became a Trap",
+      "hook": "In Natchez in 1940, a packed dance hall fire killed about 200 people — mostly Black patrons blocked by barred windows.",
+      "category": "Weird America",
+      "angle": "Why exits failed, segregation-era venue design, the death toll, and how memorials preserved the story.",
+      "keywords": [
+        "Rhythm Club fire",
+        "Natchez Rhythm Club fire 1940",
+        "Natchez dance hall fire"
+      ],
+      "requiredSources": [
+        {
+          "title": "Rhythm Club Fire",
+          "publisher": "Mississippi Department of Archives and History",
+          "url": "https://www.mdah.ms.gov/"
+        },
+        {
+          "title": "Natchez fire",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Fire disasters",
+          "publisher": "National Fire Protection Association",
+          "url": "https://www.nfpa.org/"
+        },
+        {
+          "title": "Jim Crow era disasters",
+          "publisher": "National Museum of African American History",
+          "url": "https://nmaahc.si.edu/"
+        },
+        {
+          "title": "Rhythm Club",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Rhythm Club fire Natchez 1940"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1940,
+      "historicalEra": "world-war-ii"
+    },
+    {
+      "id": "keating-five",
+      "title": "The Keating Five: Senators, a Thrift Collapse, and Soft Corruption",
+      "hook": "Five U.S. senators intervened for Charles Keating’s failing S&L — and ethics investigators called it a national scandal.",
+      "category": "Scandal",
+      "angle": "What Lincoln Savings did, how the meetings worked, the Senate ethics report, and the savings-and-loan crisis context.",
+      "keywords": [
+        "Keating Five",
+        "Keating Five scandal",
+        "Lincoln Savings Charles Keating"
+      ],
+      "requiredSources": [
+        {
+          "title": "Keating Five",
+          "publisher": "U.S. Senate Ethics",
+          "url": "https://www.ethics.senate.gov/"
+        },
+        {
+          "title": "Savings and Loan Crisis",
+          "publisher": "FDIC",
+          "url": "https://www.fdic.gov/history/"
+        },
+        {
+          "title": "Lincoln Savings",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "S&L crisis",
+          "publisher": "Federal Reserve History",
+          "url": "https://www.federalreservehistory.org/"
+        },
+        {
+          "title": "Keating Five",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Keating Five Lincoln Savings"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1989,
+      "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "leopold-loeb-1924",
+      "title": "Leopold and Loeb: The “Perfect Crime” Murder That Gripped 1920s America",
+      "hook": "Two wealthy Chicago students kidnapped and killed a boy to prove they could commit the perfect crime.",
+      "category": "Crime",
+      "angle": "The murder plan, the glasses clue, Darrow’s defense, and why the case obsessed the Jazz Age press.",
+      "keywords": [
+        "Leopold and Loeb",
+        "Leopold Loeb trial",
+        "perfect crime Chicago 1924"
+      ],
+      "requiredSources": [
+        {
+          "title": "Leopold and Loeb",
+          "publisher": "Chicago History Museum",
+          "url": "https://www.chicagohistory.org/"
+        },
+        {
+          "title": "Crime of the century",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Clarence Darrow",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "1920s crime",
+          "publisher": "FBI history",
+          "url": "https://www.fbi.gov/history"
+        },
+        {
+          "title": "Leopold Loeb",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Leopold and Loeb trial 1924"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1924,
+      "historicalEra": "twenties-depression"
+    },
+    {
+      "id": "massie-affair-1932",
+      "title": "The Massie Affair: Race, Revenge, and a Famous Defense in Territorial Hawaii",
+      "hook": "After a Navy wife alleged assault in Honolulu, a kidnapping and killing ignited a racial and political crisis.",
+      "category": "Crime",
+      "angle": "The Ala Moana case, the murder of Joseph Kahahawai, Clarence Darrow’s defense, and territorial politics.",
+      "keywords": [
+        "Massie Affair",
+        "Massie case Hawaii",
+        "Kahahawai murder"
+      ],
+      "requiredSources": [
+        {
+          "title": "Massie Affair",
+          "publisher": "Hawaii State Archives",
+          "url": "https://ags.hawaii.gov/archives/"
+        },
+        {
+          "title": "Territorial Hawaii",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Massie case",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Navy and Hawaii",
+          "publisher": "Naval History and Heritage Command",
+          "url": "https://www.history.navy.mil/"
+        },
+        {
+          "title": "Massie Affair",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Massie Affair Hawaii 1932"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1932,
+      "historicalEra": "twenties-depression"
+    },
+    {
+      "id": "des-drug-tragedy",
+      "title": "DES: The Prenatal Drug Later Linked to Cancers in Daughters",
+      "hook": "Doctors prescribed DES to prevent miscarriage — decades later, daughters developed rare cancers tied to the drug.",
+      "category": "Weird America",
+      "angle": "Why DES was prescribed, the clear-cell adenocarcinoma link, FDA response, and litigation aftermath.",
+      "keywords": [
+        "DES daughters",
+        "diethylstilbestrol history",
+        "DES cancer"
+      ],
+      "requiredSources": [
+        {
+          "title": "Diethylstilbestrol (DES)",
+          "publisher": "CDC",
+          "url": "https://www.cdc.gov/des/"
+        },
+        {
+          "title": "DES drug history",
+          "publisher": "FDA",
+          "url": "https://www.fda.gov/"
+        },
+        {
+          "title": "DES research",
+          "publisher": "National Cancer Institute",
+          "url": "https://www.cancer.gov/"
+        },
+        {
+          "title": "DES research records",
+          "publisher": "National Library of Medicine",
+          "url": "https://www.nlm.nih.gov/"
+        },
+        {
+          "title": "DES public health history",
+          "publisher": "NIH",
+          "url": "https://www.nih.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "DES diethylstilbestrol daughters"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1971,
+      "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "dalkon-shield-scandal",
+      "title": "The Dalkon Shield: An IUD, Injuries, and a Corporate Liability Fight",
+      "hook": "A popular IUD left a trail of infections and lawsuits — becoming a landmark product-liability scandal.",
+      "category": "Scandal",
+      "angle": "Design flaws alleged in court, FDA action, bankruptcy strategy, and what victims documented.",
+      "keywords": [
+        "Dalkon Shield",
+        "Dalkon Shield lawsuit",
+        "IUD scandal A.H. Robins"
+      ],
+      "requiredSources": [
+        {
+          "title": "Dalkon Shield",
+          "publisher": "FDA historical materials",
+          "url": "https://www.fda.gov/"
+        },
+        {
+          "title": "Medical device liability",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Dalkon Shield cases",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Women's health history",
+          "publisher": "National Library of Medicine",
+          "url": "https://www.nlm.nih.gov/"
+        },
+        {
+          "title": "IUD controversies",
+          "publisher": "CDC",
+          "url": "https://www.cdc.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Dalkon Shield IUD scandal"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1974,
+      "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "rosenberg-trial-1951",
+      "title": "The Rosenberg Trial: Espionage Convictions That Still Divide Historians",
+      "hook": "Julius and Ethel Rosenberg were executed for atomic espionage — a case still argued over evidence and justice.",
+      "category": "Scandal",
+      "angle": "What the government proved, Venona context, the trial atmosphere, and why debates persist.",
+      "keywords": [
+        "Rosenberg trial",
+        "Julius Ethel Rosenberg",
+        "atomic espionage trial"
+      ],
+      "requiredSources": [
+        {
+          "title": "Rosenberg case",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Venona",
+          "publisher": "National Security Agency",
+          "url": "https://www.nsa.gov/"
+        },
+        {
+          "title": "Rosenberg trial",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Cold War espionage",
+          "publisher": "FBI",
+          "url": "https://www.fbi.gov/history"
+        },
+        {
+          "title": "Rosenbergs",
+          "publisher": "Atomic Heritage Foundation",
+          "url": "https://ahf.nuclearmuseum.org/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Rosenberg trial espionage 1951"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1951,
+      "historicalEra": "postwar-cold-war"
     }
   ]
 }

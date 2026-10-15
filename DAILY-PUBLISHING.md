@@ -37,9 +37,13 @@ Each item includes:
 | `status` | `pending` / `published` / `skipped` |
 | `publishedSlug`, `publishedAt` | Set after publish |
 
-**32 topics** are seeded (Black Sox, Teapot Dome, Bonus Army, Tulsa, MOVE, Ludlow, Wilmington coup, Lake Peigneur, Titan II, Tuskegee, Osage murders, Love Canal, Bath School, etc.).
+Curated batches live in `scripts/story-queue-batch-*.mjs` and merge into `content/story-queue.json` by id.
 
-Add more items to the queue file anytime. Run `npm run init:queue` to merge new seed topics into an existing file.
+**Reserve:** keep ≥ **30** pending topics (`MIN_PENDING_TOPICS`). When pending drops below **15**, add another batch urgently. `npm run validate:queue` **fails** if pending is 0 (this caused the Oct 12–15, 2026 publishing gap).
+
+Add more items anytime. Run `npm run validate:queue` (or `npm run init:queue`) to merge new seed topics into an existing file.
+
+**Quick Reads** use a separate pending list in `content/quick-read-queue.json` (2–3/week target). Do not force Quick Reads into the daily full-article workflow.
 
 ---
 

@@ -62,6 +62,23 @@ export default async function HomePage() {
               Browse by topic
             </Link>
           </div>
+          <nav
+            className="mx-auto mt-6 flex max-w-2xl flex-wrap justify-center gap-x-4 gap-y-2 text-sm text-brand-mid"
+            aria-label="Discover stories"
+          >
+            <Link href="/articles" className="underline hover:text-brand-bright">
+              Latest Stories
+            </Link>
+            <Link href="/articles?format=quick-read" className="underline hover:text-brand-bright">
+              Quick Reads
+            </Link>
+            <Link href="/archive#archive-eras" className="underline hover:text-brand-bright">
+              Browse by Era
+            </Link>
+            <Link href="/on-this-day" className="underline hover:text-brand-bright">
+              On This Day
+            </Link>
+          </nav>
           {topics.length > 0 && (
             <nav
               className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-2"
