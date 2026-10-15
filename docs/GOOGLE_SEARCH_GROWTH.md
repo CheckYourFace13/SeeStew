@@ -1,7 +1,7 @@
 # Google Search growth — SeeStew
 
 Date: 2026-10-15  
-Production commit: *(filled at deploy)*
+Production commit: `04b7660ecf7652508859fd1cb50dbaa6461c3174`
 
 ## GSC data availability
 
