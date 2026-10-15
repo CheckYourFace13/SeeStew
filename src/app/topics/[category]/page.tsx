@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AffiliateBlock } from "@/components/AffiliateBlock";
+import { NetworkAffiliateBlock } from "@/components/NetworkAffiliateBlock";
+import { placementsForTopic } from "@/data/affiliate-placements";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { VideoCard } from "@/components/VideoCard";
@@ -79,6 +81,7 @@ export default async function TopicCategoryPage({ params }: Props) {
     ? [startHere, ...articles.filter((a) => a.slug !== startHere.slug)]
     : articles;
   const recommended = getRecommendedReadingForTopic(slug);
+  const networkPlacements = placementsForTopic(slug);
 
   // Keep intro + overview in the 150–250 word band for unique hub copy.
   const introBlock = [hub?.intro, hub?.overview].filter(Boolean).join(" ");
@@ -212,6 +215,7 @@ export default async function TopicCategoryPage({ params }: Props) {
       </ul>
 
       <AffiliateBlock heading="Recommended reading" items={recommended} className="max-w-3xl" />
+      <NetworkAffiliateBlock items={networkPlacements} className="max-w-3xl" />
 
       {videos.length > 0 && (
         <section className="mt-14">

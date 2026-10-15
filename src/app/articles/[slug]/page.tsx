@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/AdSlot";
 import { AffiliateBlock } from "@/components/AffiliateBlock";
+import { NetworkAffiliateBlock } from "@/components/NetworkAffiliateBlock";
 import { ArticleBody } from "@/components/ArticleBody";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { EmailDigestSignup } from "@/components/EmailDigestSignup";
@@ -14,6 +15,7 @@ import { SocialIconLinks } from "@/components/SocialIcons";
 import { SourceInstitutionBadges } from "@/components/SourceInstitutionBadges";
 import { StoryHero } from "@/components/StoryHero";
 import { VideoPlayer } from "@/components/VideoPlayer";
+import { placementsForArticle } from "@/data/affiliate-placements";
 import { getRecommendedReadingForArticle } from "@/data/recommended-reading";
 import { getAllArticles, getArticle } from "@/lib/articles";
 import { prepareArticleBodyForDisplay } from "@/lib/article-content";
@@ -100,6 +102,7 @@ export default async function ArticlePage({ params }: Props) {
   const relatedStories = relatedArticlesForArticle(article, allArticles);
   const moreLabel = getTopicHub(topicSlug)?.moreLabel;
   const recommendedReading = getRecommendedReadingForArticle(article.slug);
+  const networkPlacements = placementsForArticle(article.slug);
   const relatedVideos = relatedVideosForArticle(article, allVideos);
   const storyHubs = getPopulatedHistoryHubs(allArticles).filter((hub) =>
     getArticlesForHub(hub, allArticles).some((a) => a.slug === article.slug)
@@ -382,6 +385,7 @@ export default async function ArticlePage({ params }: Props) {
 
       {/* After the article, sources, and related links — never above the body. */}
       <AffiliateBlock heading="Read more about this story" items={recommendedReading} />
+      <NetworkAffiliateBlock items={networkPlacements} />
 
       <EmailDigestSignup className="mt-10" />
 

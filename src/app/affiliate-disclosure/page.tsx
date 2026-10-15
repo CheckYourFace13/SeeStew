@@ -28,10 +28,11 @@ export default function AffiliateDisclosurePage() {
             <strong>{AMAZON_ASSOCIATE_STATEMENT}</strong>
           </p>
           <p>
-            {siteConfig.name} may also participate in other affiliate networks (for example Awin)
-            for history-relevant tours, museums, or educational products. Those links appear only
-            when a merchant is approved and a recommendation is editorially relevant. No affiliate
-            network scripts are loaded sitewide solely for tracking.
+            {siteConfig.name} may also participate in other affiliate networks (Commission Junction /
+            CJ and Awin) for history-relevant books, tours, museums, or educational products. Those
+            links appear only when a merchant is approved for the SeeStew property and a
+            recommendation is editorially relevant. No affiliate network scripts are loaded sitewide
+            solely for tracking.
           </p>
         </section>
 

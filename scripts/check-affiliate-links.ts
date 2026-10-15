@@ -143,7 +143,7 @@ for (const file of publicFiles) {
 
 // 6. Homepage must stay content-first: no affiliate components, links, or data.
 const home = read(join(ROOT, "src/app/page.tsx"));
-if (/AffiliateBlock|recommended-reading|affiliate-config|amazon\.com|bookshop\.org/i.test(home)) {
+if (/AffiliateBlock|NetworkAffiliateBlock|recommended-reading|affiliate-config|affiliate-placements|amazon\.com|bookshop\.org/i.test(home)) {
   fail("homepage (src/app/page.tsx) must not contain affiliate blocks or links");
 }
 

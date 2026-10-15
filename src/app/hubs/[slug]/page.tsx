@@ -3,6 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
+import { NetworkAffiliateBlock } from "@/components/NetworkAffiliateBlock";
+import { placementsForHub } from "@/data/affiliate-placements";
 import { getAllArticles } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
 import {
@@ -44,6 +46,7 @@ export default async function HistoryHubPage({ params }: Props) {
   const relatedHubs = getPopulatedHistoryHubs(getAllArticles())
     .filter((h) => h.slug !== slug)
     .slice(0, 4);
+  const networkPlacements = placementsForHub(slug);
 
   return (
     <div className="page-shell">
@@ -103,6 +106,8 @@ export default async function HistoryHubPage({ params }: Props) {
           </li>
         ))}
       </ul>
+
+      <NetworkAffiliateBlock items={networkPlacements} className="mt-10" />
 
       {relatedHubs.length > 0 && (
         <nav className="mt-12" aria-label="Related hubs">

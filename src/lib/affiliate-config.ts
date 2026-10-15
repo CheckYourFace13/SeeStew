@@ -1,8 +1,8 @@
 /**
  * Affiliate configuration — the single place affiliate IDs live.
  *
- * Rules (see docs/affiliate-plan.md and /affiliate-disclosure):
- * - Only relevant, manually mapped recommendations (src/data/recommended-reading.ts).
+ * Rules (see docs/affiliate-plan.md, docs/CJ_SEESTEW_SETUP.md, /affiliate-disclosure):
+ * - Only relevant, manually mapped recommendations (recommended-reading + affiliate-placements).
  * - No Amazon prices, star ratings, or reviews (not allowed without the Product Advertising API).
  * - Every affiliate link: rel="sponsored nofollow noopener noreferrer", new tab, visible disclosure.
  * - Never above the article body; never on the homepage.
@@ -15,27 +15,32 @@ export const AMAZON_ASSOCIATE_TAG = "seestew-20";
 
 /**
  * Bookshop.org affiliate ID — PLACEHOLDER only.
- * Chris: after approval at https://bookshop.org/pages/affiliates, paste the ID here
- * (same value you would keep as BOOKSHOP_AFFILIATE_ID in ops notes).
  * Until non-empty, Bookshop links are never generated; books fall back to Amazon.
- * Never invent a value. See docs/bookshop-awin-next-steps.md.
  */
 export const BOOKSHOP_AFFILIATE_ID = "";
 
 /**
- * Awin publisher ID for SeeStew (provided by Chris: 3112962).
+ * Awin publisher ID for SeeStew.
  * Merchants stay off until each program is approved and a real tracking URL
- * is mapped manually. Do not invent deep links. Prefer history tours / museums /
- * education — never cookware, gadgets, or unrelated consumer merchants.
- * See docs/bookshop-awin-next-steps.md and docs/SEESTEW_GROWTH_AUDIT.md.
+ * is mapped in src/data/affiliate-placements.ts.
  */
 export const AWIN_PUBLISHER_ID = "3112962";
 
-/** CJ Affiliate Network — DEFERRED until SeeStew’s own website PID + PAT exist. */
-export const CJ_WEBSITE_PID = "";
-export const CJ_ENABLED = false;
+/**
+ * CJ Promotional Property ID for SeeStew (American History Stories & Videos).
+ * Confirmed by Chris as Active Website / Content-Blog-Media property.
+ * Used as website-id for Link Search when CJ_PERSONAL_ACCESS_TOKEN is available
+ * server-side. Do not commit the token.
+ */
+export const CJ_WEBSITE_PID = "101904039";
 
-/** Audible links go through Amazon Associates (same tag). No separate setup, and none are active. */
+/**
+ * CJ is “ready” only when the property PID is set. Live placements still require
+ * verified tracking URLs in affiliate-placements.ts (active: true).
+ */
+export const CJ_PROPERTY_CONFIGURED = Boolean(CJ_WEBSITE_PID);
+
+/** Audible links go through Amazon Associates (same tag). No separate setup. */
 export const AUDIBLE_VIA_AMAZON = true;
 
 /** Exact link rel for every affiliate link. */
@@ -49,9 +54,9 @@ export const AFFILIATE_DISCLOSURE_SHORT =
 export const AMAZON_ASSOCIATE_STATEMENT =
   "As an Amazon Associate, SeeStew earns from qualifying purchases.";
 
-export type AffiliateProvider = "amazon" | "bookshop" | "audible" | "awin";
+export type AffiliateProvider = "amazon" | "bookshop" | "audible" | "awin" | "cj";
 
-/** Amazon search URL carrying the tracking tag. Search links need no ASIN, so none are guessed. */
+/** Amazon search URL carrying the tracking tag. Search links need no ASIN. */
 export function amazonSearchUrl(query: string): string {
   const params = new URLSearchParams({
     k: query,

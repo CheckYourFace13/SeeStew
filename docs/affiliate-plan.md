@@ -10,8 +10,10 @@ trust. Content first; affiliate links are a small extra at the bottom of pages w
 | Amazon Associates (`seestew-20`) | **Active** | "Recommended reading" on mapped articles and topics (tagged search links) |
 | Bookshop.org | **Placeholder only** | Needs `BOOKSHOP_AFFILIATE_ID` + per-book ISBN-13 |
 | Awin (`3112962`) | **Publisher ID set; merchants off** | No tracking links until each merchant is verified |
-| CJ Affiliate | **Not connected** | Needs SeeStew website PID + PAT — do not reuse other sites |
+| CJ Affiliate (`101904039`) | **PID set; PAT missing; 0 active links** | See `docs/CJ_SEESTEW_SETUP.md` |
 | Audible | **Not active** | Would use the Amazon tag; no audiobook CTAs exist yet |
+
+Network placements (CJ/Awin) live in `src/data/affiliate-placements.ts` (max 3 active).
 
 Nothing here is injected on the homepage, video pages, or shorts pages.
 
