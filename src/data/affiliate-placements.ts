@@ -39,26 +39,12 @@ export type AffiliatePlacement = {
 /**
  * Registry — keep inactive until each tracking URL is confirmed for SeeStew’s
  * CJ property 101904039 or Awin publisher 3112962.
+ *
+ * 2026-10-15: Authenticated Link Search for website-id 101904039 listed 13 joined
+ * programs (coffee, LawDepot, Adrenaline adventures, AliExpress, etc.). None were
+ * history books / museums / educational tours — leave empty until a real match.
  */
-export const affiliatePlacements: AffiliatePlacement[] = [
-  // Example shape only — inactive until PAT + Link Search confirm a real URL.
-  // {
-  //   id: "cj-example-history-book",
-  //   network: "cj",
-  //   merchant: "Example History Publisher",
-  //   programId: "",
-  //   linkId: "",
-  //   trackingUrl: "https://www.anrdoezrs.net/...",
-  //   destinationHost: "example.com",
-  //   title: "…",
-  //   reason: "…",
-  //   articleSlug: "boston-massacre-1770",
-  //   placementType: "further-reading",
-  //   active: false,
-  //   lastVerified: "2026-10-15",
-  //   notes: "Awaiting CJ Link Search for SeeStew PID 101904039",
-  // },
-];
+export const affiliatePlacements: AffiliatePlacement[] = [];
 
 /** Hard cap on active CJ/Awin (non-Amazon) placements sitewide. */
 export const MAX_ACTIVE_NETWORK_PLACEMENTS = 3;

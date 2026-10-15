@@ -15,6 +15,7 @@
     "check:story-images": "npx --yes tsx scripts/check-story-images.ts",
     "check:affiliate-links": "npx --yes tsx scripts/check-affiliate-links.ts",
     "check:affiliate-placements": "node scripts/check-affiliate-placements.mjs",
+    "check:cj-api": "node scripts/check-cj-api.mjs",
     "check:article-quality": "npx --yes tsx scripts/check-article-quality.ts",
     "check:seo-snippets": "node scripts/check-seo-snippets.mjs",
     "check:internal-links": "node scripts/check-internal-links.mjs",

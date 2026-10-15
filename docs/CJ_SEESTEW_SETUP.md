@@ -6,79 +6,57 @@
 |---|---|
 | Property name | SeeStew — American History Stories & Videos |
 | **CJ Promotional Property ID** | **101904039** |
-| Status | Active (per Chris) |
+| Status | Active |
 | Type | Website |
-| Category | Content/Blog/Media |
 | Code constant | `CJ_WEBSITE_PID` in `src/lib/affiliate-config.ts` |
 
-This ID is treated as the **website-id** for CJ Link Search / deep-link generation. Final API confirmation still requires a Personal Access Token (below).
+This ID is the **website-id** for CJ Link Search. Authenticated Link Search with `website-id=101904039` succeeds with SeeStew’s PAT.
 
 ## API access status (2026-10-15)
 
 | Item | Status |
 |---|---|
 | Property PID in repo | **PASS** — `101904039` |
-| `CJ_PERSONAL_ACCESS_TOKEN` in SeeStew Hostinger env | **MISSING** |
-| Token found on sibling Hostinger Node apps (key names checked) | **NOT FOUND** |
-| Token found in local SeeStew `.env.local` | **NOT FOUND** |
-| Authenticated Advertiser Lookup / Link Search | **BLOCKED** — no PAT |
-| Active CJ placements on site | **0** (registry empty / inactive) |
+| `CJ_PERSONAL_ACCESS_TOKEN` in local `.env.local` | **SET** (gitignored; never print) |
+| `CJ_PERSONAL_ACCESS_TOKEN` on Hostinger Node env | **MANUAL** — add single key in hPanel (do not full-replace via API; SMTP/AdSense keys would be wiped) |
+| Link Search `Authorization: Bearer` + `website-id=101904039` | **PASS** |
+| Advertiser Lookup | **NEEDS** publisher **company CID** as `requestor-cid` (website PID `101904039` is rejected) |
+| Joined advertisers (via Link Search `advertiser-ids=joined`) | **13 programs** — none history/books/museums/education |
+| Active CJ placements on site | **0** (correct — no tasteful relevant matches) |
 
-**Do not** copy another site’s PID or token. Do not commit tokens. Do not print tokens in logs.
+### Joined advertisers audited (not activated)
 
-### Exact credentials still needed
+Coffee/gourmet (Adagio, Peet’s), LawDepot, Adrenaline (skydiving/helicopter gifts), DailySteals, AliExpress, electronics, betting (Legendz), visas, garden kits, kitchen, music AI. Keyword scans for museum / smithsonian / bookstore / civil war / history returned **no** relevant joined inventory (false positives only: coffee “press”, adventure “tours”).
 
-1. **`CJ_PERSONAL_ACCESS_TOKEN`** — CJ Publisher personal access token with permission to call:
-   - Advertiser Lookup
-   - Link Search  
-   scoped to property **101904039**
-2. Store it only in **Hostinger → seestew.com → Node.js environment variables** (or local `.env.local` for ops scripts). Never `NEXT_PUBLIC_*`.
+**Rule applied:** leave placements inactive until a real history/museum/book/education merchant is joined and a verified tracking URL exists.
 
-After the PAT is set, run a read-only lookup (ops script / curl against `https://advertiser-lookup.api.cj.com/...` and Link Search) and paste **verified** tracking URLs into `src/data/affiliate-placements.ts` with `active: true`.
+## Ops check (no credential leakage)
 
-## Merchant priorities (when API works)
+```bash
+npm run check:cj-api
+```
 
-Approve / select only:
-
-1. American history books & publishers  
-2. Historical tours & museum experiences  
-3. Documentaries / educational media  
-4. Learning resources tied to U.S. history  
-
-Reject: insurance, generic travel, electronics, unrelated shopping.
+Optional: set `CJ_REQUESTOR_CID` (publisher company CID from CJ Members → Account) to also exercise Advertiser Lookup.
 
 ## Awin (parallel)
 
 | Field | Value |
 |---|---|
 | Publisher ID | `3112962` |
-| Verified history-merchant tracking URLs in repo | **NONE** |
 | Active Awin placements | **0** |
-
-Missing for activation: approved merchant tracking link(s) (e.g. GoWithGuide US historical tours) pasted into `affiliate-placements.ts`.
 
 ## Placement rules
 
-- Config registry: `src/data/affiliate-placements.ts`
-- Render: `NetworkAffiliateBlock` (articles, topics, hubs) — after body / reading lists
-- Cap: **max 3** active CJ/Awin placements sitewide (`MAX_ACTIVE_NETWORK_PLACEMENTS`)
+- Registry: `src/data/affiliate-placements.ts`
+- Render: `NetworkAffiliateBlock` — max **3** active CJ/Awin
 - `rel="sponsored nofollow noopener noreferrer"`
-- No homepage affiliates
-- No sitewide CJ/Awin JS
-- Amazon `seestew-20` remains in `recommended-reading.ts`
+- Amazon `seestew-20` stays in `recommended-reading.ts`
+- Never commit tokens; never `NEXT_PUBLIC_CJ_*`
 
-## Validator
+## Hostinger secret (manual)
 
-```bash
-npm run check:affiliate-placements
-npm run check:affiliate-links
-```
+In **hPanel → seestew.com → Node.js → Environment variables**, add:
 
-## Activation checklist
+`CJ_PERSONAL_ACCESS_TOKEN` = *(your PAT)*
 
-1. Add `CJ_PERSONAL_ACCESS_TOKEN` to Hostinger (SeeStew only).  
-2. Confirm Link Search accepts `website-id=101904039`.  
-3. Export ≤3 history-relevant approved links.  
-4. Add rows to `affiliate-placements.ts` with real `trackingUrl`, `lastVerified`, `active: true`.  
-5. Run validators + build + deploy.  
-6. Spot-check disclosure + `rel` on production.
+Do **not** use the Hostinger “replace all env vars” API unless you have the full unmasked set (SMTP, AdSense, YouTube, OpusClip, etc.).

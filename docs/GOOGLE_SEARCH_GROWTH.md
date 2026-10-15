@@ -1,143 +1,75 @@
 # Google Search growth — SeeStew
 
 Date: 2026-10-15  
-Production commit: `04b7660ecf7652508859fd1cb50dbaa6461c3174`
+Source: GSC export `seestew.com-Performance-on-Search-2026-10-15.zip` (last ~3 months)
 
-## GSC data availability
+## Headline metrics
 
-**GSC performance data: UNAVAILABLE** in this session.
-
-- No Search Console MCP / export in the workspace
-- No GSC CSV or API credentials in SeeStew Hostinger env
-- Site verification meta key exists as `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` (optional)
-
-Therefore: **no invented clicks, impressions, CTR, or positions.**  
-Evidence below is technical + editorial opportunity analysis only.
-
-### Manual action to unlock measured SEO
-
-1. Export GSC Performance (28d / prior 28d / 3mo) for `seestew.com` as CSV, or  
-2. Grant API access / paste exports into the repo’s ops notes (not public).  
-Then re-run title/CTR and position 5–20 work with real queries.
-
----
-
-## Technical visibility / indexing (verified)
-
-| Check | Result |
+| Metric | Value |
 |---|---|
-| `robots.txt` Allow `/`, Disallow `/api/` | PASS |
-| Sitemap includes articles, hubs, topics, `/archive`, content-rich `/on-this-day/*` | PASS |
-| `/today` noindex redirect | PASS (not in sitemap) |
-| Empty calendar dates not indexed | PASS |
-| Article BlogPosting + CreativeWork citations | PASS |
-| Breadcrumbs JSON-LD on articles/hubs | PASS |
-| IndexNow (Bing) | PASS — separate from Google |
-| Soft/thin doorway pages | Not added |
-| Public mailto | Absent |
+| Impressions | 4,871 |
+| Clicks | 4 |
+| CTR | ~0.1% |
+| Avg position | 70.5 |
 
----
+### Devices
 
-## Performance baseline (live TTFB, curl 2026-10-15)
-
-Lab field CWV (CrUX/PSI): **NOT VERIFIED** this session.
-
-| Route | HTTP | TTFB | Total | Bytes |
+| Device | Clicks | Impressions | CTR | Position |
 |---|---|---|---|---|
-| `/` | 200 | 0.46s | 0.62s | 150 KB |
-| `/articles` | 200 | 0.39s | 0.55s | 110 KB |
-| `/articles/johnstown-flood-1889` | 200 | 0.47s | 0.61s | 130 KB |
-| `/topics/weird-america` | 200 | 0.35s | 0.55s | 171 KB |
-| `/on-this-day` | 200 | 0.32s | 0.46s | 87 KB |
-| `/videos` | 200 | 0.31s | 0.41s | 61 KB |
-| `/newsletter` | 200 | 0.37s | 0.51s | 48 KB |
-| `/archive` | 200 | 0.31s | 0.53s | 80 KB |
-| `/hubs/cold-war-close-calls` | 200 | 0.33s | 0.44s | 67 KB |
+| Desktop | 3 | 4,765 | 0.06% | 70.83 |
+| Mobile | 1 | 104 | 0.96% | 54 |
+| Tablet | 0 | 2 | — | 48.5 |
 
-No heavy new third-party scripts added in this pass. Affiliate UI remains text-only.
+**Desktop finding:** Almost all impressions are desktop at deep average position (~71). Low CTR is primarily ranking depth, not a mobile-layout bug. The exception is pages that already rank high but still get zero clicks (snippet/CTR problem).
 
----
+### Ignore operator noise
 
-## Top 10 opportunities (technical / editorial — not GSC-ranked)
+Top “queries” include `site.osha.gov "the triangle shirtwaist factory fire account"` etc. These are **search-operator** impressions, not ordinary keyword opportunities. Do not optimize for them.
 
-Until GSC exports exist, prioritize these **hypothesis queues** (validate against Search Console before mass title edits):
+## Top pages (real GSC)
 
-1. **Cold War close calls hub** (`/hubs/cold-war-close-calls`, 9 stories) — strong cluster; deepen internal links + FAQ-style intros on near-miss articles.  
-2. **Forgotten American disasters hub** (9) — place-name queries; ensure city/state hubs cross-link.  
-3. **Notable American fires hub** (8) — evergreen disaster intent.  
-4. **Weird America topic** — largest topic; watch cannibalization; prefer unique angles per story.  
-5. **Chicago / Boston city hubs** — local history intent; tour affiliates later if Awin/CJ approve.  
-6. **Remove Event+Year `seoTitle` stubs** — done for 6 articles so SERP helpers don’t lean on weak labels.  
-7. **Revolution topic under-built** — backlog founding-era stories (Gaspee, Newburgh, etc.).  
-8. **Presidents topic empty** — keep unindexed until ≥2 sourced stories.  
-9. **Video↔article matching** — still thin; explicit IDs needed (see `docs/video-matching-next-steps.md`).  
-10. **High-impression low-CTR titles** — **DEFERRED** pending GSC export.
+| Page | Imp | Pos | Clicks | Note |
+|---|---|---|---|---|
+| Triangle Shirtwaist Fire 1911 | 508 | 40.84 | 0 | Volume leader; mid-pack |
+| San Francisco Earthquake 1906 | 398 | 89.42 | 0 | Deep; year + cause angles |
+| Gulf of Tonkin 1964 | 394 | 87.80 | 0 | Deep; “incident / never happened” intent |
+| Zoot Suit Riots 1943 | 251 | 80.26 | 0 | Deep |
+| Tuskegee syphilis study | 197 | 83.48 | 0 | Deep |
+| **Great Molasses Flood 1919** | **180** | **5.77** | **0** | **High rank, zero clicks — CTR priority** |
+| Lake Peigneur 1980 | 31 | 12.26 | 0 | Near page 1–2; entity in title |
+| Radium Girls 1920s | 30 | 13.5 | 0 | Near page 2; CTR title |
 
----
+Also: `www.seestew.com` and apex both appear in Pages.csv. Apex canonical + www→apex 301 already configured in `next.config.ts` / `siteConfig.url`.
 
-## Selected content clusters (3)
+## Molasses audit (priority #1)
 
-Chosen from existing inventory density + editorial fit (not claimed search volume):
+- Content is substantive (tank, victims, lawsuit, sources) — **not** a thin page.
+- Live SERP title used the long H1 (~81 chars), truncated by `buildArticleSerpTitle` (~70) **before** “Killed 21…Boston” — the CTR hook was cut off.
+- Meta `seoDescription` ended with a hard `...` mid-sentence.
+- Query rows naming molasses are sparse/deep; page-level position 5.77 still implies the URL appears for related SERPs where the snippet failed to earn a click.
 
-| Priority | Cluster | Existing proof | Next move |
+**Deployed fix:** shortened H1/seoTitle to keep Boston + 1919 + deaths in the first ~60 chars; wrote a complete ~155-char meta description.
+
+## Prioritized plan (10) — evidence-based
+
+| # | Action | Evidence | Status |
 |---|---|---|---|
-| 1 | **Cold War close calls / secrecy** | Hub + era hub (37 cold-war tagged) | Fill Able Archer, Palomares, Thule, Forrestal |
-| 2 | **American disasters (fires/floods/industrial)** | Fires + forgotten disasters hubs | Collinwood, Winecoff, Hinckley, Seattle Fire |
-| 3 | **Historical scandals / hoaxes** | Scandal topic + Teapot Dome / Moon Hoax / Black Sox | Credit Mobilier, Whiskey Ring, Quiz Show, ABSCAM |
+| 1 | Fix Molasses SERP title + description CTR | Pos 5.77 / 180 imp / 0 clicks | **DONE** |
+| 2 | Lake Peigneur title ≤70 chars + complete meta | Pos 12.26 | **DONE** |
+| 3 | Radium Girls shorter entity-forward title + meta | Pos 13.5 | **DONE** |
+| 4 | Zoot Suit H1 shorten so “1943 / L.A.” survive truncation | 251 imp @ ~80 | **DONE** |
+| 5 | Triangle Shirtwaist: keep strong title; deepen internal links from labor/fire hubs; watch OSHA operator noise | 508 imp @ 40.8 | Plan — no mass rewrite |
+| 6 | Gulf of Tonkin / SF Earthquake: unique “what actually happened / primary-source” intros; avoid duplicate encyclopedia tone | ~390 imp each @ ~88 | Plan |
+| 7 | Confirm www→apex indexing consolidation in GSC (Remove obsolete www URLs over time) | Dual host rows in Pages.csv | Config already live |
+| 8 | Near-page-1 watchlist (pos ≤20): Molasses, Lake Peigneur, Radium Girls — re-check CTR in 28 days | Devices + Pages | Monitor |
+| 9 | Do **not** chase `site:osha.gov` queries | Queries.csv | Explicit ignore |
+| 10 | Join real CJ history/museum/book advertisers before any network placements | CJ joined list = 0 relevant | Affiliate deferred |
 
----
+## SEO fixes actually deployed this pass
 
-## Proposed backlog (18 sourceable stories)
+1. `great-molasses-flood-1919` — title + seoTitle + seoDescription  
+2. `lake-peigneur-1980` — title + seoTitle + seoDescription  
+3. `radium-girls-1920s` — title + seoTitle + seoDescription  
+4. `zoot-suit-riots-1943` — title + seoTitle + seoDescription  
 
-Do **not** auto-publish — each must pass research / quality gates.
-
-1. Able Archer 83 nuclear scare  
-2. Palomares hydrogen bomb incident (1966)  
-3. Thule B-52 crash (1968)  
-4. USS Forrestal fire (1967)  
-5. Collinwood School Fire (1908)  
-6. Winecoff Hotel Fire (1946)  
-7. Hinckley Firestorm (1894)  
-8. Great Seattle Fire (1889)  
-9. Tri-State Tornado (1925)  
-10. Credit Mobilier Scandal  
-11. Whiskey Ring (Grant era)  
-12. 1950s Quiz Show scandals  
-13. ABSCAM  
-14. Operation Pastorius (1942 saboteurs)  
-15. Gaspee Affair (1772)  
-16. Newburgh Conspiracy  
-17. Kingsland Explosion (1917)  
-18. Duquesne Spy Ring  
-
-Research starting points listed in `docs/search-growth-plan.md`.
-
----
-
-## Changes implemented this pass
-
-- CJ property ID `101904039` coded; PAT documented as missing  
-- Config-driven `affiliate-placements.ts` + `NetworkAffiliateBlock` (0 active links)  
-- Affiliate placement validator  
-- Cleared 6 weak Event+Year `seoTitle` fields  
-- Docs: `CJ_SEESTEW_SETUP.md`, this file  
-- No GSC-invented title mass rewrite  
-- No new thin pages  
-
----
-
-## Remaining manual work
-
-1. Provide GSC exports or API access.  
-2. Add `CJ_PERSONAL_ACCESS_TOKEN` to Hostinger SeeStew env.  
-3. Confirm AdSense “Ready” in Google UI.  
-4. Paste ≤3 verified CJ/Awin tracking URLs into the registry.  
-5. After GSC: implement top-10 CTR title/description edits with real queries.
-
----
-
-## Next three highest-impact traffic actions
-
-1. **Import GSC 28-day query/page export** → edit titles/descriptions for high-impression low-CTR URLs only.  
-2. **Publish 2–3 Cold War close-call stories** into the existing hub (Able Archer / Palomares / Thule).  
-3. **Unlock CJ Link Search** with PAT → add at most one history-book + one tour placement on matching articles/hubs.
+No speculative mass rewrites of Triangle / Tonkin / SF Earthquake bodies.
