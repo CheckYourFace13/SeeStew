@@ -23,6 +23,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/videos",
     "/shorts",
     "/articles",
+    "/archive",
     "/topics",
     "/hubs",
     ...(includeOnThisDay ? ["/on-this-day"] : []),

@@ -14,7 +14,7 @@ export default function AffiliateDisclosurePage() {
   return (
     <div className="page-shell-narrow">
       <h1 className="font-heading text-4xl font-bold text-ink">Affiliate Disclosure</h1>
-      <p className="mt-2 text-sm text-ink-muted">Last updated: October 3, 2026</p>
+      <p className="mt-2 text-sm text-ink-muted">Last updated: October 15, 2026</p>
 
       <div className="prose-history mt-8 space-y-6">
         <section>
@@ -26,6 +26,12 @@ export default function AffiliateDisclosurePage() {
           </p>
           <p>
             <strong>{AMAZON_ASSOCIATE_STATEMENT}</strong>
+          </p>
+          <p>
+            {siteConfig.name} may also participate in other affiliate networks (for example Awin)
+            for history-relevant tours, museums, or educational products. Those links appear only
+            when a merchant is approved and a recommendation is editorially relevant. No affiliate
+            network scripts are loaded sitewide solely for tracking.
           </p>
         </section>
 

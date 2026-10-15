@@ -15,11 +15,14 @@ const LIVE = process.argv.includes("--live");
 const STATIC_OK = new Set([
   "/",
   "/articles",
+  "/archive",
   "/topics",
   "/videos",
   "/shorts",
   "/hubs",
   "/on-this-day",
+  "/today",
+  "/this-day",
   "/newsletter",
   "/hubs",
   "/social",
@@ -169,6 +172,9 @@ async function main() {
       "/blog",
       "/blog-post3",
       "/on-this-day",
+      "/today",
+      "/archive",
+      "/newsletter",
       "/hubs",
     ];
     for (const r of routes) {

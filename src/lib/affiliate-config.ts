@@ -23,13 +23,17 @@ export const AMAZON_ASSOCIATE_TAG = "seestew-20";
 export const BOOKSHOP_AFFILIATE_ID = "";
 
 /**
- * Awin publisher ID — PLACEHOLDER only (config support; no merchants wired in UI).
- * Chris: after Awin publisher approval, paste AWIN_PUBLISHER_ID here.
- * Do not activate museum/tour/education merchants until this is a real ID and a
- * manual mapping exists. Avoid unrelated travel/insurance merchants.
- * See docs/bookshop-awin-next-steps.md.
+ * Awin publisher ID for SeeStew (provided by Chris: 3112962).
+ * Merchants stay off until each program is approved and a real tracking URL
+ * is mapped manually. Do not invent deep links. Prefer history tours / museums /
+ * education — never cookware, gadgets, or unrelated consumer merchants.
+ * See docs/bookshop-awin-next-steps.md and docs/SEESTEW_GROWTH_AUDIT.md.
  */
-export const AWIN_PUBLISHER_ID = "";
+export const AWIN_PUBLISHER_ID = "3112962";
+
+/** CJ Affiliate Network — DEFERRED until SeeStew’s own website PID + PAT exist. */
+export const CJ_WEBSITE_PID = "";
+export const CJ_ENABLED = false;
 
 /** Audible links go through Amazon Associates (same tag). No separate setup, and none are active. */
 export const AUDIBLE_VIA_AMAZON = true;

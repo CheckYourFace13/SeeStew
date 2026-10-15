@@ -12,11 +12,11 @@ export function ReferencesList({ references }: { references: ArticleReference[] 
         Sources &amp; further reading
       </h2>
       <p className="mt-2 text-sm text-ink-muted">
-        This story is built from the {references.length} primary and archival
+        This story cites {references.length} named
         {references.length === 1 ? " source" : " sources"} below — government records,
-        museums, universities, and established news archives. Each numbered marker in the
-        article (e.g. [1]) points to the matching entry here so you can check any claim
-        against the original.
+        museums, universities, and established news archives when available. Each numbered
+        marker in the article (e.g. [1]) points to the matching entry so you can check
+        claims against the originals. We do not label every citation as a primary source.
       </p>
       <ol className="mt-4 list-decimal space-y-3 pl-5 text-sm text-ink-muted">
         {references.map((ref, i) => (

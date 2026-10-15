@@ -62,7 +62,16 @@ export default function OnThisDayPage() {
       <p className="mt-3 max-w-3xl text-lg text-ink-muted">
         Anniversaries tied to full SeeStew articles — not thin date stubs. Each link opens a sourced
         story. Dates are curated from well-established historical calendars for stories we already
-        publish.
+        publish. Calendar “today” uses America/New_York.
+      </p>
+      <p className="mt-3 text-sm">
+        <Link href="/today" className="text-brand-mid underline">
+          Jump to today&apos;s anniversaries
+        </Link>
+        {" · "}
+        <Link href="/archive" className="text-brand-mid underline">
+          Browse the archive
+        </Link>
       </p>
 
       <section className="mt-10">

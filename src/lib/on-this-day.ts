@@ -2,9 +2,15 @@
  * Curated anniversary dates for existing articles only.
  * Month/day must be historically established — do not invent dates.
  * /on-this-day ships only when ANNIVERSARIES.length >= MIN_ANNIVERSARIES.
+ *
+ * Calendar display /today use America/New_York so U.S. readers share one “today.”
+ * Never treat article createdAt as an event anniversary.
  */
 
 export const MIN_ANNIVERSARIES = 8;
+
+/** Consistent site calendar timezone for /today and anniversary “now.” */
+export const SITE_CALENDAR_TZ = "America/New_York";
 
 export type Anniversary = {
   slug: string;
@@ -63,7 +69,8 @@ export function upcomingAnniversaries(
   limit = 12
 ): Anniversary[] {
   const live = liveAnniversaries(existingSlugs);
-  const start = from.getUTCMonth() * 100 + from.getUTCDate();
+  const { month, day } = todayPartsInSiteTz(from);
+  const start = (month - 1) * 100 + day;
   const scored = live.map((a) => {
     const key = (a.month - 1) * 100 + a.day;
     const delta = key >= start ? key - start : key + 1300 - start;
@@ -100,6 +107,12 @@ export function datePathSlug(month: number, day: number): string {
   return `${MONTH_SLUGS[month - 1]}-${day}`;
 }
 
+/** Days in month; Feb uses 29 so february-29 is parseable (leap-day anniversaries). */
+export function daysInMonth(month: number): number {
+  if (month < 1 || month > 12) return 0;
+  return [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month - 1]!;
+}
+
 export function parseDatePathSlug(
   slug: string
 ): { month: number; day: number } | null {
@@ -109,7 +122,7 @@ export function parseDatePathSlug(
   if (!m) return null;
   const month = MONTH_SLUGS.indexOf(m[1] as (typeof MONTH_SLUGS)[number]) + 1;
   const day = Number(m[2]);
-  if (month < 1 || day < 1 || day > 31) return null;
+  if (month < 1 || day < 1 || day > daysInMonth(month)) return null;
   return { month, day };
 }
 
@@ -123,5 +136,80 @@ export function contentRichDateSlugs(existingSlugs: Set<string>): string[] {
     seen.add(path);
     out.push(path);
   }
-  return out.sort();
+  return out.sort((a, b) => {
+    const pa = parseDatePathSlug(a)!;
+    const pb = parseDatePathSlug(b)!;
+    return pa.month - pb.month || pa.day - pb.day;
+  });
+}
+
+/** Month/day in SITE_CALENDAR_TZ (not UTC, not server local). */
+export function todayPartsInSiteTz(now: Date = new Date()): {
+  month: number;
+  day: number;
+} {
+  const fmt = new Intl.DateTimeFormat("en-US", {
+    timeZone: SITE_CALENDAR_TZ,
+    month: "numeric",
+    day: "numeric",
+  });
+  const parts = fmt.formatToParts(now);
+  const month = Number(parts.find((p) => p.type === "month")?.value);
+  const day = Number(parts.find((p) => p.type === "day")?.value);
+  return { month, day };
+}
+
+/** Prev/next among content-rich dates only (wraps the year). */
+export function adjacentContentRichDates(
+  month: number,
+  day: number,
+  existingSlugs: Set<string>
+): { prev: string | null; next: string | null } {
+  const list = contentRichDateSlugs(existingSlugs);
+  if (list.length === 0) return { prev: null, next: null };
+  const current = datePathSlug(month, day);
+  const idx = list.indexOf(current);
+  if (idx < 0) {
+    // Nearest previous/next by calendar order among curated dates
+    const key = (month - 1) * 100 + day;
+    let prev: string | null = null;
+    let next: string | null = null;
+    for (const slug of list) {
+      const p = parseDatePathSlug(slug)!;
+      const k = (p.month - 1) * 100 + p.day;
+      if (k < key) prev = slug;
+      if (k > key && !next) next = slug;
+    }
+    return {
+      prev: prev ?? list[list.length - 1]!,
+      next: next ?? list[0]!,
+    };
+  }
+  return {
+    prev: list[(idx - 1 + list.length) % list.length]!,
+    next: list[(idx + 1) % list.length]!,
+  };
+}
+
+/** Curated anniversary row for an article slug, if any. */
+export function anniversaryForSlug(
+  slug: string,
+  existingSlugs: Set<string>
+): Anniversary | undefined {
+  return liveAnniversaries(existingSlugs).find((a) => a.slug === slug);
+}
+
+/**
+ * Other curated stories sharing this article’s anniversary calendar date.
+ * Uses curated ANNIVERSARIES only — never article publication date.
+ */
+export function alsoOnThisDay(
+  articleSlug: string,
+  existingSlugs: Set<string>
+): Anniversary[] {
+  const self = anniversaryForSlug(articleSlug, existingSlugs);
+  if (!self) return [];
+  return anniversariesForDate(self.month, self.day, existingSlugs).filter(
+    (a) => a.slug !== articleSlug
+  );
 }

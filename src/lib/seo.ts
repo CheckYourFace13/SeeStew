@@ -124,7 +124,18 @@ export function buildVideoObjectJsonLd(
 }
 
 export function buildArticleJsonLd(article: Article, url: string) {
-  const citations = (article.references ?? []).map((r) => r.url);
+  const refs = article.references ?? [];
+  /** CreativeWork citations with real URLs only — never invent sources. */
+  const citations = refs
+    .filter((r) => Boolean(r.url?.trim()))
+    .map((r) => ({
+      "@type": "CreativeWork" as const,
+      name: r.title,
+      url: r.url,
+      ...(r.publisher
+        ? { publisher: { "@type": "Organization" as const, name: r.publisher } }
+        : {}),
+    }));
   const published = article.createdAt?.split("T")[0];
   return {
     "@context": "https://schema.org",
@@ -144,7 +155,7 @@ export function buildArticleJsonLd(article: Article, url: string) {
       logo: { "@type": "ImageObject", url: `${siteConfig.url}${siteConfig.logo}` },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
-    citation: citations,
+    ...(citations.length ? { citation: citations } : {}),
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: [".prose-history p", ".prose-history h2"],
@@ -153,12 +164,16 @@ export function buildArticleJsonLd(article: Article, url: string) {
 }
 
 export function referencesToCitationSchema(refs: ArticleReference[]) {
-  return refs.map((r) => ({
-    "@type": "CreativeWork",
-    name: r.title,
-    url: r.url,
-    publisher: { "@type": "Organization", name: r.publisher },
-  }));
+  return refs
+    .filter((r) => Boolean(r.url?.trim()))
+    .map((r) => ({
+      "@type": "CreativeWork",
+      name: r.title,
+      url: r.url,
+      ...(r.publisher
+        ? { publisher: { "@type": "Organization", name: r.publisher } }
+        : {}),
+    }));
 }
 
 /**

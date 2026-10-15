@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { getAllArticles, getArticle } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
 import {
+  adjacentContentRichDates,
   anniversariesForDate,
   contentRichDateSlugs,
   monthName,
@@ -48,7 +49,8 @@ export default async function OnThisDayDatePage({ params }: Props) {
   if (!parsed || !onThisDayEnabled(articleSlugs)) notFound();
 
   const items = anniversariesForDate(parsed.month, parsed.day, articleSlugs);
-  if (items.length === 0) notFound();
+  // Valid calendar slug with no curated content → friendly archive, not thin 404.
+  if (items.length === 0) redirect("/on-this-day");
 
   const label = `${monthName(parsed.month)} ${parsed.day}`;
   const url = `${siteConfig.url}/on-this-day/${date}`;
@@ -58,7 +60,13 @@ export default async function OnThisDayDatePage({ params }: Props) {
       Boolean(x.article)
     );
 
-  if (stories.length === 0) notFound();
+  if (stories.length === 0) redirect("/on-this-day");
+
+  const { prev, next } = adjacentContentRichDates(
+    parsed.month,
+    parsed.day,
+    articleSlugs
+  );
 
   return (
     <div className="page-shell">
@@ -96,6 +104,27 @@ export default async function OnThisDayDatePage({ params }: Props) {
         Curated American history anniversaries for {label}, each linked to a full
         SeeStew article with named sources. Empty calendar stubs are not published.
       </p>
+
+      {(prev || next) && (
+        <nav
+          className="mt-6 flex flex-wrap items-center justify-between gap-3 text-sm"
+          aria-label="Adjacent anniversary dates"
+        >
+          {prev ? (
+            <Link href={`/on-this-day/${prev}`} className="text-brand-mid underline">
+              ← {formatDateSlugLabel(prev)}
+            </Link>
+          ) : (
+            <span />
+          )}
+          {next ? (
+            <Link href={`/on-this-day/${next}`} className="text-brand-mid underline">
+              {formatDateSlugLabel(next)} →
+            </Link>
+          ) : null}
+        </nav>
+      )}
+
       <ul className="mt-10 space-y-4">
         {stories.map(({ ann, article }) => (
           <li key={ann.slug}>
@@ -116,7 +145,17 @@ export default async function OnThisDayDatePage({ params }: Props) {
         <Link href="/on-this-day" className="text-brand-mid underline">
           ← All curated anniversaries
         </Link>
+        {" · "}
+        <Link href="/today" className="text-brand-mid underline">
+          Today&apos;s anniversaries
+        </Link>
       </p>
     </div>
   );
+}
+
+function formatDateSlugLabel(slug: string): string {
+  const parsed = parseDatePathSlug(slug);
+  if (!parsed) return slug;
+  return `${monthName(parsed.month)} ${parsed.day}`;
 }

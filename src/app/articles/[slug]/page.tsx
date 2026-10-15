@@ -11,6 +11,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { ReferencesList } from "@/components/ReferencesList";
 import { RelatedContent } from "@/components/RelatedContent";
 import { SocialIconLinks } from "@/components/SocialIcons";
+import { SourceInstitutionBadges } from "@/components/SourceInstitutionBadges";
 import { StoryHero } from "@/components/StoryHero";
 import { VideoPlayer } from "@/components/VideoPlayer";
 import { getRecommendedReadingForArticle } from "@/data/recommended-reading";
@@ -18,6 +19,12 @@ import { getAllArticles, getArticle } from "@/lib/articles";
 import { prepareArticleBodyForDisplay } from "@/lib/article-content";
 import { siteConfig } from "@/lib/config";
 import { getPopulatedHistoryHubs, getArticlesForHub } from "@/lib/history-hubs";
+import {
+  alsoOnThisDay,
+  anniversaryForSlug,
+  datePathSlug,
+  monthName,
+} from "@/lib/on-this-day";
 import { relatedArticlesForArticle, relatedVideosForArticle } from "@/lib/related";
 import { editorProfile } from "@/lib/editor-profile";
 import { linkedVideoForArticle } from "@/lib/video-article-links";
@@ -97,6 +104,13 @@ export default async function ArticlePage({ params }: Props) {
   const storyHubs = getPopulatedHistoryHubs(allArticles).filter((hub) =>
     getArticlesForHub(hub, allArticles).some((a) => a.slug === article.slug)
   );
+  const articleSlugSet = new Set(allArticles.map((a) => a.slug));
+  const selfAnniversary = anniversaryForSlug(article.slug, articleSlugSet);
+  const sameDayAnniversaries = alsoOnThisDay(article.slug, articleSlugSet)
+    .map((ann) => ({ ann, peer: getArticle(ann.slug) }))
+    .filter((x): x is { ann: (typeof x)["ann"]; peer: NonNullable<ReturnType<typeof getArticle>> } =>
+      Boolean(x.peer)
+    );
 
   const bodyContent = prepareArticleBodyForDisplay(article.content, {
     stripSources: Boolean(article.references?.length),
@@ -193,6 +207,7 @@ export default async function ArticlePage({ params }: Props) {
             </>
           )}
         </p>
+        <SourceInstitutionBadges references={article.references} />
         <p className="mt-2 text-sm text-ink-muted">
           Corrections?{" "}
           <Link href={editorProfile.contactHref} className="text-brand-mid underline">
@@ -286,6 +301,41 @@ export default async function ArticlePage({ params }: Props) {
 
       {article.references && article.references.length > 0 && (
         <ReferencesList references={article.references} />
+      )}
+
+      {sameDayAnniversaries.length > 0 && selfAnniversary && (
+        <aside
+          className="mt-10 rounded-xl border border-brand-wash bg-brand-wash/30 px-5 py-5"
+          aria-label="Also on this day"
+        >
+          <h2 className="font-heading text-xl font-bold text-ink">Also on this day</h2>
+          <p className="mt-1 text-sm text-ink-muted">
+            Other curated SeeStew stories that share the{" "}
+            {monthName(selfAnniversary.month)} {selfAnniversary.day} anniversary — not
+            based on publish date.
+          </p>
+          <ul className="mt-3 space-y-2 text-sm">
+            {sameDayAnniversaries.map(({ ann, peer }) => (
+              <li key={ann.slug}>
+                <Link
+                  href={`/articles/${peer.slug}`}
+                  className="text-brand-mid underline"
+                >
+                  {ann.label}
+                </Link>
+                <span className="text-ink-muted"> — {peer.title}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-3 text-sm">
+            <Link
+              href={`/on-this-day/${datePathSlug(selfAnniversary.month, selfAnniversary.day)}`}
+              className="text-brand-mid underline"
+            >
+              All stories for {monthName(selfAnniversary.month)} {selfAnniversary.day} →
+            </Link>
+          </p>
+        </aside>
       )}
 
       <aside

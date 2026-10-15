@@ -44,10 +44,13 @@ Until this string is non-empty, `bookshopUrl()` returns `null` and `bookLink()` 
 In `src/lib/affiliate-config.ts`:
 
 ```ts
-export const AWIN_PUBLISHER_ID = ""; // paste publisher ID here
+export const AWIN_PUBLISHER_ID = "3112962"; // SeeStew publisher ID
 ```
 
-Config support exists; **no Awin merchants are wired in the UI yet**. Do not add deep links until a merchant is approved and a manual mapping is written (same style as `recommended-reading.ts`).
+Publisher ID is set. **No Awin merchants are wired in the UI yet** — do not add deep links until a merchant is approved, a real tracking URL is confirmed, and a manual mapping is written (same style as `recommended-reading.ts`).
+
+### CJ Affiliate Network
+SeeStew has **no** CJ website PID or personal access token in Hostinger env. Do not reuse another site’s PID. Until Chris supplies SeeStew’s CJ website PID + PAT, CJ stays off.
 
 ### Merchant categories worth researching
 - Museums and historic-site ticket / membership programs

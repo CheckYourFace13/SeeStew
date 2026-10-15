@@ -24,6 +24,11 @@ export function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/archive" className="hover:text-white">
+                Archive
+              </Link>
+            </li>
+            <li>
               <Link href="/videos" className="hover:text-white">
                 Videos
               </Link>
