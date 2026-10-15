@@ -2,8 +2,8 @@
 
 Full health / SEO / affiliate / ads / performance pass. Grokbot items treated as hypotheses; only verified changes shipped.
 
-**Git commit:** *(filled at deploy)*  
-**Production SHA:** *(filled after Hostinger build)*
+**Git commit:** `9e876462caefd3494ba5f390ad28241adbb4adea`  
+**Production SHA:** `9e876462caefd3494ba5f390ad28241adbb4adea` (Hostinger build completed 2026-10-15T05:20:58Z)
 
 ---
 
@@ -179,6 +179,22 @@ Full health / SEO / affiliate / ads / performance pass. Grokbot items treated as
 | `validate:indexnow -- --live` | PASS |
 | `npm audit --omit=dev` | 3 vulns remain (`sharp`, `source-map-js`) |
 | `npm run build` | PASS (211 pages) |
+
+## Production verification (post-deploy)
+
+| URL / check | Result |
+|---|---|
+| `/archive` | 200 PASS |
+| `/today` (2026-10-15, no curated items) | 307 → `/on-this-day` PASS |
+| `/this-day` | 307 → `/today` PASS |
+| `/on-this-day/may-31` | 200 PASS |
+| `/on-this-day/october-10` (empty) | 307 → `/on-this-day` PASS |
+| `/newsletter` | 200 PASS |
+| ads.txt | Unchanged PASS |
+| Johnstown “Also on this day” + Tulsa peer | PASS |
+| Article CreativeWork citations | PASS |
+| Sitemap includes `/archive`, excludes `/today` | PASS |
+| IndexNow submit archive + on-this-day + newsletter | 200 PASS |
 
 ---
 
