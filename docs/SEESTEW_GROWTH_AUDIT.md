@@ -45,7 +45,12 @@ Full health / SEO / affiliate / ads / performance pass. Grokbot items treated as
 | Placements added | None |
 | Other sites’ PIDs reused | No — explicitly refused |
 
-**Manual action:** Chris must supply SeeStew’s own CJ website PID + PAT (never RentalNoodle / DrinkKnird / VenueSprocket). Then re-run advertiser lookup for books, museums, tours, education.
+**Manual action — exact inputs needed (do not reuse other sites):**
+1. SeeStew’s **CJ website PID** (numeric ID for the seestew.com property in CJ Publisher).
+2. A **CJ Personal Access Token** with read access to Advertiser Lookup + Link Search for that PID only.
+3. Optional: confirm approved advertiser IDs for history books / museums / tours / education.
+
+Hostinger SeeStew env currently has **no** `CJ_*` keys. Other projects’ PIDs were not inspected or copied.
 
 ---
 
