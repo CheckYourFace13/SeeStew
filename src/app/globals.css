@@ -129,6 +129,3 @@ h6,
 .ad-slot {
   @apply my-6 flex min-h-[90px] items-center justify-center rounded-lg border border-dashed border-brand-meteorite-light bg-surface-muted text-sm text-ink-soft;
 }
-
-.brand-period { color: var(--color-brand-pink-bright, #ff4d8d); font-weight: inherit; }
-
