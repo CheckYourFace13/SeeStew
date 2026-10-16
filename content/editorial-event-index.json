@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-16T03:00:55.328Z",
-  "publishedCount": 118,
-  "queueCount": 40,
+  "generatedAt": "2026-10-16T14:41:32.349Z",
+  "publishedCount": 119,
+  "queueCount": 39,
   "entries": [
     {
       "slug": "amistad-revolt-1839",
@@ -3326,33 +3326,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "gaspee-affair-1772",
-      "title": "The Gaspee Affair of 1772: Colonists Burned a British Customs Ship",
-      "excerpt": "Rhode Island colonists boarded and burned HMS Gaspee — an early flashpoint before Lexington.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1772,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "Why the schooner ran aground, who led the raid, how Britain investigated, and why it mattered for independence.",
-      "canonicalEventId": "gaspee-affair::1772",
-      "titleEventKey": "gaspee-affair-colonists-burned-british-customs-ship::1772",
-      "places": [
-        "rhode island"
-      ],
-      "namedHints": [
-        "gaspee",
-        "affair",
-        "colonists",
-        "burned",
-        "british",
-        "customs",
-        "ship"
-      ],
-      "opening": "Rhode Island colonists boarded and burned HMS Gaspee — an early flashpoint before Lexington. Why the schooner ran aground, who led the raid, how Britain investigated, and why it mattered for independence.",
-      "contentChars": 264
-    },
-    {
       "slug": "newburgh-conspiracy-1783",
       "title": "The Newburgh Conspiracy: When Continental Officers Nearly Mutinied",
       "excerpt": "Unpaid officers circulated a call to defy Congress — until Washington’s speech stopped them.",
@@ -4377,6 +4350,33 @@
       ],
       "opening": "A single misfired rocket on the USS Forrestal’s deck began the 1967 fire that killed 134 sailors. One mechanical failure and the cook-off chain that followed — not the full carrier narrative.",
       "contentChars": 238
+    },
+    {
+      "slug": "gaspee-affair-1772",
+      "title": "The Gaspee Affair of 1772: Colonists Burned a British Customs Ship",
+      "excerpt": "Rhode Island colonists boarded and burned HMS Gaspee — an early flashpoint before Lexington. (Gaspee Affair)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1772,
+      "publishedAt": "2026-10-16T14:41:32.180Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "gaspee-affair::1772",
+      "titleEventKey": "gaspee-affair-colonists-burned-british-customs-ship::1772",
+      "places": [
+        "rhode island"
+      ],
+      "namedHints": [
+        "gaspee",
+        "affair",
+        "colonists",
+        "burned",
+        "british",
+        "customs",
+        "ship"
+      ],
+      "opening": "In the early morning hours of June 10, 1772, a group of Rhode Island colonists boarded and burned the HMS Gaspee, a British customs schooner. This act of defiance occurred in Narragansett Bay, just off the coast of Providence, and marked one of the first significant acts of rebellion against British authority in the American colonies [1].",
+      "contentChars": 11190
     }
   ]
 }

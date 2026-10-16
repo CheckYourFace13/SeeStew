@@ -4856,9 +4856,9 @@
       "imageSearchTerms": [
         "Gaspee Affair HMS Gaspee burning 1772"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "gaspee-affair-1772",
+      "publishedAt": "2026-10-16T14:41:32.289Z",
       "eventYear": 1772,
       "historicalEra": "colonial-america"
     },
