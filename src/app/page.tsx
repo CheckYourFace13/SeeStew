@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { BrandPeriod } from "@/components/BrandPeriod";
 import { EmailDigestSignup } from "@/components/EmailDigestSignup";
 import { FaqSection } from "@/components/FaqSection";
 import { Logo } from "@/components/Logo";
@@ -49,6 +50,7 @@ export default async function HomePage() {
           </p>
           <h1 className="mt-4 font-heading text-4xl font-semibold text-brand-primary md:text-5xl lg:text-6xl">
             True American stories that sound made up
+            <BrandPeriod />
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base text-ink-muted md:text-lg">
             {siteConfig.description} Every article lists named sources. Companion videos and shorts
