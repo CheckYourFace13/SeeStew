@@ -145,30 +145,56 @@ export function buildEventIndex({ includeQueues = true } = {}) {
   };
 }
 
+/** Persist metadata only — rebuild token/shingle sets from articles on load. */
 export function saveEventIndex(index, filePath = INDEX_PATH) {
   const dir = path.dirname(filePath);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   const compact = {
-    ...index,
-    entries: index.entries.map((e) => ({
-      ...e,
-      tokenSet: e.tokenSet?.slice(0, 200) || [],
-      shingleSet: e.shingleSet?.slice(0, 250) || [],
+    version: index.version || 1,
+    generatedAt: index.generatedAt || new Date().toISOString(),
+    publishedCount: index.publishedCount,
+    queueCount: index.queueCount,
+    entries: (index.entries || []).map((e) => ({
+      slug: e.slug,
+      title: e.title,
+      excerpt: e.excerpt,
+      format: e.format,
+      source: e.source,
+      eventYear: e.eventYear,
+      publishedAt: e.publishedAt,
+      parentArticleSlug: e.parentArticleSlug,
+      editorialAngle: e.editorialAngle,
+      canonicalEventId: e.canonicalEventId,
+      titleEventKey: e.titleEventKey,
+      places: e.places || [],
+      namedHints: e.namedHints || [],
+      opening: e.opening || "",
+      contentChars: e.contentChars || 0,
     })),
   };
   fs.writeFileSync(filePath, JSON.stringify(compact, null, 2) + "\n", "utf8");
   return filePath;
 }
 
+/**
+ * Load index. For the production path, rebuild from articles/queues so
+ * token/shingle sets are fresh without storing them in git.
+ * Custom paths (tests) return the compact file as written.
+ */
 export function loadEventIndex(filePath = INDEX_PATH) {
   if (!fs.existsSync(filePath)) return null;
+  if (path.resolve(filePath) === path.resolve(INDEX_PATH)) {
+    return buildEventIndex({ includeQueues: true });
+  }
   return loadJson(filePath, null);
 }
 
 /** Upsert one published entry and rewrite index (incremental after publish). */
 export function upsertPublishedEntry(entry, filePath = INDEX_PATH) {
-  let index = loadEventIndex(filePath);
-  if (!index) index = buildEventIndex({ includeQueues: true });
+  const isProd = path.resolve(filePath) === path.resolve(INDEX_PATH);
+  let index = isProd
+    ? buildEventIndex({ includeQueues: true })
+    : loadEventIndex(filePath) || { version: 1, entries: [] };
   const others = (index.entries || []).filter((e) => e.slug !== entry.slug);
   entry.source = "published";
   others.push(entry);
@@ -177,6 +203,7 @@ export function upsertPublishedEntry(entry, filePath = INDEX_PATH) {
   index.queueCount = others.filter((e) => String(e.source).startsWith("queue")).length;
   index.generatedAt = new Date().toISOString();
   saveEventIndex(index, filePath);
+  // Return in-memory index (with tokens) for callers/tests
   return index;
 }
 
