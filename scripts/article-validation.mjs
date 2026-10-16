@@ -4,6 +4,7 @@
 
 const CREDIBLE_PATTERNS = [
   /\.gov$/i,
+  /\.mil$/i,
   /\.edu$/i,
   /loc\.gov/i,
   /archives\.gov/i,
@@ -16,6 +17,8 @@ const CREDIBLE_PATTERNS = [
   /npr\.org/i,
   /nytimes\.com/i,
   /washingtonpost\.com/i,
+  /britannica\.com/i,
+  /masshist\.org/i,
 ];
 
 const PLACEHOLDER_URL = [/example\.com/i, /placeholder/i, /lorem/i, /localhost/i];
@@ -81,22 +84,38 @@ export function finalizeMarkdownContent(markdownBody, requiredSources) {
   return { content, references };
 }
 
-export function validateStory(story, { allowedSources } = {}) {
+/**
+ * @param {object} story
+ * @param {{ allowedSources?: Array, format?: 'full'|'quick-read' }} [opts]
+ */
+export function validateStory(story, { allowedSources, format = "full" } = {}) {
   const errors = [];
   const content = story.content || "";
   const refs = story.references || [];
   const words = countWords(content);
   const bodyWords = countWords(getArticleBody(content));
+  const isQuick = format === "quick-read" || story.format === "quick-read";
 
-  if (words < 1500) errors.push(`Content is ${words} words (need 1500+)`);
-  if (bodyWords < 1200) errors.push(`Article body (excl. Sources) is ${bodyWords} words — likely too short`);
-  if (refs.length < 4) errors.push(`Only ${refs.length} references (need 4+)`);
+  if (isQuick) {
+    if (bodyWords < 250) errors.push(`Quick Read body is ${bodyWords} words (need 250–600)`);
+    if (bodyWords > 650) errors.push(`Quick Read body is ${bodyWords} words (max ~650 — use a full article)`);
+    if (refs.length < 2) errors.push(`Only ${refs.length} references (Quick Read needs 2+)`);
+  } else {
+    if (words < 1500) errors.push(`Content is ${words} words (need 1500+)`);
+    if (bodyWords < 1200) {
+      errors.push(`Article body (excl. Sources) is ${bodyWords} words — likely too short`);
+    }
+    if (refs.length < 4) errors.push(`Only ${refs.length} references (need 4+)`);
+  }
 
   const credible = countCredibleRefs(refs);
   if (credible < 2) errors.push(`Only ${credible} credible sources (need 2+)`);
 
   const citations = countInlineCitations(content);
-  if (citations < 4) errors.push(`Only ${citations} inline citations in body (need 4+)`);
+  const minCitations = isQuick ? 2 : 4;
+  if (citations < minCitations) {
+    errors.push(`Only ${citations} inline citations in body (need ${minCitations}+)`);
+  }
 
   if (!/##\s*Sources/i.test(content)) errors.push("Missing ## Sources section");
 

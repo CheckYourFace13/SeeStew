@@ -2,11 +2,18 @@ name: Daily Story Generator
 
 on:
   schedule:
+    # 10:00 UTC daily = 05:00 America/Chicago (CDT)
     - cron: "0 10 * * *"
   workflow_dispatch: {}
 
 permissions:
   contents: write
+  actions: read
+
+concurrency:
+  # Queue behind / with Quick Reads; do not cancel in-flight publishes
+  group: seestew-publishing
+  cancel-in-progress: false
 
 jobs:
   generate:
@@ -15,14 +22,26 @@ jobs:
 
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-node@v5
         with:
           node-version: "22"
           package-manager-cache: false
 
+      - name: Publishing health (pre)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          ALLOW_PUBLIC_ACTIONS_API: "1"
+        run: node scripts/publishing-health-report.mjs >> "$GITHUB_STEP_SUMMARY"
+
       - name: Validate story queue
         run: npm run validate:queue
+
+      - name: Dry-run select next full story
+        run: node scripts/dry-run-publish.mjs --full
 
       - name: Confirm OpenRouter secret
         env:
@@ -51,16 +70,11 @@ jobs:
       - name: Check story images
         run: npm run check:story-images
 
-      - name: Commit article, images, and queue
+      - name: Commit and push (rebase-safe)
+        env:
+          COMMIT_MESSAGE: "feat(stories): add daily full story"
         run: |
-          git config user.name "SeeStew Bot"
-          git config user.email "bot@seestew.com"
           git add content/articles/ content/story-queue.json public/stories/
-          if git diff --cached --quiet; then
-            echo "::error::No story file, image, or queue update was created."
-            exit 1
-          fi
-          # Prefer newest article by mtime (NOT alphabetical — zoot-* was always last).
           TITLE=$(node -e "
             const {readdirSync,readFileSync,statSync}=require('fs');
             const {join}=require('path');
@@ -73,12 +87,19 @@ jobs:
             const a=JSON.parse(readFileSync(join(dir,latest),'utf8'));
             process.stdout.write((a.title||latest).slice(0,72));
           ")
-          git commit -m "feat(stories): add ${TITLE}"
-          git push
+          export COMMIT_MESSAGE="feat(stories): add ${TITLE}"
+          node scripts/git-push-with-rebase.mjs
 
       - name: Notify IndexNow (Bing + partners)
         continue-on-error: true
         run: |
-          # Hostinger usually picks up the push within a minute; brief wait helps key/URL be live.
           sleep 45
           node scripts/submit-indexnow.mjs --latest
+
+      - name: Publishing health (post)
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          ALLOW_PUBLIC_ACTIONS_API: "1"
+        run: node scripts/publishing-health-report.mjs >> "$GITHUB_STEP_SUMMARY"

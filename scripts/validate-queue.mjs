@@ -96,14 +96,23 @@ if (pending < MIN_PENDING_TOPICS) {
   console.warn(
     `WARNING: only ${pending} pending topics (want ≥ ${MIN_PENDING_TOPICS}). Add scripts/story-queue-batch-*.mjs and register it in story-queue.mjs.`
   );
+  console.warn(
+    `::warning::Full-story queue below reserve (${pending} < ${MIN_PENDING_TOPICS})`
+  );
 }
 if (pending < REFILL_PENDING_THRESHOLD) {
   console.warn(
     `URGENT: pending (${pending}) below refill threshold ${REFILL_PENDING_THRESHOLD}. Daily publishing will fail when the queue is empty.`
   );
+  console.warn(
+    `::warning::Full-story queue below refill threshold (${pending} < ${REFILL_PENDING_THRESHOLD})`
+  );
 }
 if (pending === 0) {
   console.error("FAIL: zero pending topics — daily generator cannot publish.");
+  console.error(
+    "::error::Story queue EMPTY — scheduled daily run must fail (no filler publish)."
+  );
   process.exit(1);
 }
 

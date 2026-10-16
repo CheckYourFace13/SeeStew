@@ -21,6 +21,10 @@ import {
 export const MIN_WORDS = 1500;
 export const TARGET_WORDS = 2200;
 export const MIN_CITATIONS = 4;
+export const QR_MIN_WORDS = 280;
+export const QR_TARGET_WORDS = 400;
+export const QR_MAX_WORDS = 550;
+export const QR_MIN_CITATIONS = 2;
 const MAX_TOKENS = 16384;
 const DEFAULT_FALLBACK_MODEL = "anthropic/claude-3.5-haiku";
 
@@ -64,6 +68,29 @@ CITATIONS:
 - End with a ## Sources section listing each provided source in order (title, publisher, link).
 
 LENGTH: Target ${TARGET_WORDS} words in the article body (minimum ${MIN_WORDS} before Sources).`;
+
+export const QUICK_READ_SYSTEM = `You are a staff writer for SeeStew Quick Reads — short, sourced U.S. history pieces (~1–3 minutes).
+
+OUTPUT RULES (strict):
+- Return ONLY Markdown. No JSON. No code fences.
+- About ${QR_TARGET_WORDS} words in the body (hard range roughly ${QR_MIN_WORDS}–${QR_MAX_WORDS} before ## Sources).
+- Open with one concrete, surprising documented fact (date, place, or detail) — no vague teaser.
+- Give enough context that a reader understands what happened and why it mattered.
+- Do NOT summarize or compress an existing full SeeStew article; write an original short piece on one focused angle.
+- Use 1–3 short ## headings with specific names/years (never "Introduction" / "Conclusion").
+- U.S. history only. Named author context: published under Chris on SeeStew.
+
+FACTUAL ACCURACY:
+- Never invent names, quotes, numbers, or sources.
+- Only use the provided source numbers for citations.
+- If unsure of a detail, omit it rather than fabricate.
+
+CITATIONS:
+- Use inline [1], [2], … after factual claims.
+- At least ${QR_MIN_CITATIONS} distinct citation markers in the body.
+- End with ## Sources listing every provided source in order.
+
+STYLE: plain, specific, human. Avoid AI clichés ("dark chapter", "stands as a reminder", "delves into").`;
 
 function stripControlChars(s) {
   return s.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, "");
@@ -342,5 +369,114 @@ export function createGenerator({
     throw new Error(lastError || "All models failed");
   }
 
-  return { generateForQueueItem, callOpenRouter };
+  function buildQuickReadPrompt(queueItem) {
+    const n = queueItem.requiredSources.length;
+    return `Write a SeeStew Quick Read in Markdown only.
+
+TOPIC: ${queueItem.title}
+HOOK: ${queueItem.hook}
+CATEGORY: ${queueItem.category}
+ANGLE (focus — do not expand into a full survey): ${queueItem.angle}
+KEYWORDS: ${(queueItem.keywords || []).join(", ")}
+EVENT YEAR: ${queueItem.eventYear ?? "unknown"}
+ERA: ${queueItem.historicalEra ?? "unknown"}
+
+ALLOWED SOURCES — cite ONLY with [1] through [${n}]:
+${formatSourceList(queueItem.requiredSources)}
+
+Requirements:
+- Body about ${QR_TARGET_WORDS} words (${QR_MIN_WORDS}–${QR_MAX_WORDS})
+- Strong factual opening with what / where / when
+- One surprising documented detail, then brief context
+- At least ${QR_MIN_CITATIONS} inline citations
+- ## Sources with all ${n} sources in order
+- Original prose — not a condensed remake of a longer SeeStew article
+- Markdown only — no JSON`;
+  }
+
+  async function generateQuickReadForQueueItem(queueItem) {
+    const models = [primaryModel];
+    if (!models.includes(fallbackModel)) models.push(fallbackModel);
+    const n = queueItem.requiredSources?.length || 0;
+    if (n < 2) throw new Error("Quick Read queue item needs ≥2 curated sources");
+
+    let lastError = "";
+    for (const model of models) {
+      try {
+        log(`\nGenerating Quick Read [${queueItem.id}] with ${model}...`);
+        const markdown = await callOpenRouter(
+          [
+            { role: "system", content: QUICK_READ_SYSTEM },
+            { role: "user", content: buildQuickReadPrompt(queueItem) },
+          ],
+          { model, temperature: 0.3, maxTokens: 4096 }
+        );
+        let draft = buildArticleDraft(queueItem, markdown);
+        log(
+          `  Draft: ${countWords(getArticleBody(draft.content))} body words, ${countInlineCitations(draft.content)} citations`
+        );
+
+        let bodyWords = countWords(getArticleBody(draft.content));
+        if (bodyWords < QR_MIN_WORDS) {
+          log(`  Under ${QR_MIN_WORDS} words — brief expand...`);
+          const expanded = await callOpenRouter(
+            [
+              { role: "system", content: QUICK_READ_SYSTEM },
+              {
+                role: "user",
+                content: `Expand this Quick Read to about ${QR_TARGET_WORDS} words. Do not invent facts. Keep ## Sources. Markdown only.\n\n${getArticleBody(draft.content).slice(0, 20000)}`,
+              },
+            ],
+            { model, temperature: 0.25, maxTokens: 4096 }
+          );
+          draft = buildArticleDraft(queueItem, expanded);
+          bodyWords = countWords(getArticleBody(draft.content));
+        }
+
+        if (bodyWords > QR_MAX_WORDS + 80) {
+          lastError = `Quick Read too long (${bodyWords} words)`;
+          log(`  ${lastError}`);
+          continue;
+        }
+
+        let citations = countInlineCitations(draft.content);
+        if (citations < QR_MIN_CITATIONS) {
+          log(`  Only ${citations} citations — repair...`);
+          const repaired = await callOpenRouter(
+            [
+              {
+                role: "system",
+                content:
+                  "Add inline [n] citations to this Quick Read. Use only the listed sources. Markdown only. Do not invent facts.",
+              },
+              {
+                role: "user",
+                content: `SOURCES:\n${formatSourceList(queueItem.requiredSources)}\n\nARTICLE:\n${getArticleBody(draft.content).slice(0, 20000)}`,
+              },
+            ],
+            { model, temperature: 0.2, maxTokens: 4096 }
+          );
+          draft = buildArticleDraft(queueItem, repaired);
+        }
+
+        const validation = validateStory(draft, {
+          allowedSources: queueItem.requiredSources,
+          format: "quick-read",
+        });
+        if (!validation.ok) {
+          lastError = validation.errors.join("; ");
+          log(`  Validation failed: ${lastError}`);
+          continue;
+        }
+        return draft;
+      } catch (e) {
+        lastError = e.message;
+        log(`  Error: ${lastError}`);
+        if (e instanceof ModelError && [402, 403, 404].includes(e.status)) break;
+      }
+    }
+    throw new Error(lastError || "All models failed for Quick Read");
+  }
+
+  return { generateForQueueItem, generateQuickReadForQueueItem, callOpenRouter };
 }

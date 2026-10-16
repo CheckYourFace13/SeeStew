@@ -1,0 +1,103 @@
+name: Quick Reads Publisher
+
+on:
+  schedule:
+    # Tue / Thu / Sat 14:00 UTC = 09:00 America/Chicago (CDT)
+    # Separated from daily full-story job at 10:00 UTC
+    - cron: "0 14 * * 2,4,6"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: seestew-publishing
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+          package-manager-cache: false
+
+      - name: Publishing health (pre)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          ALLOW_PUBLIC_ACTIONS_API: "1"
+        run: node scripts/publishing-health-report.mjs >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Validate Quick Read queue
+        run: npm run validate:quick-read-queue
+
+      - name: Dry-run select next Quick Read
+        run: node scripts/dry-run-publish.mjs --quick-read
+
+      - name: Confirm OpenRouter secret
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          if [ -z "$OPENROUTER_API_KEY" ]; then
+            echo "::error::OPENROUTER_API_KEY is not set. Add it under GitHub repo Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+
+      - name: Generate Quick Read
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ secrets.OPENROUTER_MODEL }}
+        run: node scripts/generate-quick-read.mjs
+
+      - name: Download story card image
+        run: node scripts/fetch-all-story-images.mjs
+
+      - name: Validate articles
+        run: npm run validate:articles
+
+      - name: Check article quality
+        run: npm run check:article-quality
+
+      - name: Check story images
+        run: npm run check:story-images
+
+      - name: Commit and push (rebase-safe)
+        run: |
+          git add content/articles/ content/quick-read-queue.json public/stories/
+          TITLE=$(node -e "
+            const {readdirSync,readFileSync,statSync}=require('fs');
+            const {join}=require('path');
+            const dir='content/articles';
+            const files=readdirSync(dir).filter(f=>f.endsWith('.json'))
+              .map(f=>({f, m:statSync(join(dir,f)).mtimeMs}))
+              .sort((a,b)=>b.m-a.m);
+            const latest=files[0]?.f;
+            if(!latest){process.stdout.write('quick read');process.exit(0);}
+            const a=JSON.parse(readFileSync(join(dir,latest),'utf8'));
+            process.stdout.write((a.title||latest).slice(0,72));
+          ")
+          export COMMIT_MESSAGE="feat(quick-reads): add ${TITLE}"
+          node scripts/git-push-with-rebase.mjs
+
+      - name: Notify IndexNow (Bing + partners)
+        continue-on-error: true
+        run: |
+          sleep 45
+          node scripts/submit-indexnow.mjs --latest
+
+      - name: Publishing health (post)
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          ALLOW_PUBLIC_ACTIONS_API: "1"
+        run: node scripts/publishing-health-report.mjs >> "$GITHUB_STEP_SUMMARY"

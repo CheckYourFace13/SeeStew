@@ -36,7 +36,7 @@
     {
       "id": "qr-able-archer-one-detail",
       "title": "Why Able Archer Used Real Nuclear Release Procedures",
-      "hook": "The 1983 NATO exercise’s realism — not just its name — is what spooked Soviet watchers.",
+      "hook": "The 1983 NATO exercise’s realism — not just its name — is what rattled opposing intelligence watchers.",
       "category": "Military",
       "angle": "One sourced detail: how Able Archer’s command procedures differed from routine drills.",
       "relatedArticleSlugs": [],
@@ -174,14 +174,14 @@
           "url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/f/forrestal-cva-59.html"
         },
         {
-          "title": "Naval History",
-          "publisher": "Naval History and Heritage Command",
-          "url": "https://www.history.navy.mil/"
-        },
-        {
           "title": "Vietnam War records",
           "publisher": "National Archives",
-          "url": "https://www.archives.gov/"
+          "url": "https://www.archives.gov/research/military/vietnam-war"
+        },
+        {
+          "title": "Naval History and Heritage Command",
+          "publisher": "U.S. Navy",
+          "url": "https://www.history.navy.mil/"
         }
       ],
       "imageSearchTerms": ["USS Forrestal fire 1967"],
