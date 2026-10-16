@@ -116,4 +116,27 @@ if (pending === 0) {
   process.exit(1);
 }
 
+// Editorial overlap scan (pending vs published library) — warn; publish gate still fail-closed
+try {
+  const { buildEventIndex } = await import("./editorial/event-index.mjs");
+  const { findOverlaps, classifyOverlap } = await import("./editorial/overlap.mjs");
+  const index = buildEventIndex({ includeQueues: true });
+  let overlapFlags = 0;
+  for (const item of queue.items.filter((i) => i.status === "pending")) {
+    const entry = index.entries.find((e) => e.slug === item.id && e.source === "queue-full");
+    if (!entry) continue;
+    const best = findOverlaps(entry, index.entries)[0];
+    const verdict = classifyOverlap(best, { format: "full" });
+    if (verdict.action !== "allow") {
+      overlapFlags++;
+      console.warn(
+        `::warning::Editorial overlap ${verdict.action} for pending ${item.id} vs ${verdict.conflict?.slug} (${verdict.reason})`
+      );
+    }
+  }
+  console.log(`Editorial overlap scan: ${overlapFlags} pending topic(s) flagged (gate runs again at publish).`);
+} catch (e) {
+  console.warn(`::warning::Editorial overlap scan skipped: ${e.message}`);
+}
+
 process.exit(failed > 0 ? 1 : 0);

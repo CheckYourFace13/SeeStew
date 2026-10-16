@@ -48,6 +48,15 @@ export type Article = {
   historicalEras?: string[];
   /** Related full-article slugs (useful for Quick Reads). */
   relatedArticleSlugs?: string[];
+  /**
+   * Primary parent full article when this Quick Read is a companion
+   * (distinct angle on an existing story). Prefer over relatedArticleSlugs[0].
+   */
+  parentArticleSlug?: string;
+  /** Distinct editorial angle for companions / Quick Reads. */
+  editorialAngle?: string;
+  /** Stable event identity for duplicate detection (slug-stem::year). */
+  canonicalEventId?: string;
   content: string;
   references?: ArticleReference[];
   image?: ArticleImage;

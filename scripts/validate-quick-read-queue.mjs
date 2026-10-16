@@ -72,6 +72,19 @@ for (const item of queue.items || []) {
     }
   }
 
+  const parent = item.parentArticleSlug || item.relatedArticleSlugs?.[0];
+  if (parent && !articleSlugs.has(parent)) {
+    issues.push(`parentArticleSlug missing on site: ${parent}`);
+  }
+  if (parent && !(item.editorialAngle || item.angle)) {
+    issues.push("companion Quick Read needs editorialAngle (or angle)");
+  }
+  if (item.parentArticleSlug && item.relatedArticleSlugs?.length) {
+    if (!item.relatedArticleSlugs.includes(item.parentArticleSlug)) {
+      issues.push("relatedArticleSlugs should include parentArticleSlug");
+    }
+  }
+
   if (item.status === "pending" && articleSlugs.has(item.id)) {
     issues.push("pending but article file already exists");
   }
@@ -96,6 +109,33 @@ if (pending < MIN_QR_PENDING) {
 if (pending === 0) {
   console.error("::error::Zero pending Quick Reads — scheduled QR publish will fail-closed.");
   process.exit(1);
+}
+
+try {
+  const { buildEventIndex } = await import("./editorial/event-index.mjs");
+  const { findOverlaps, classifyOverlap } = await import("./editorial/overlap.mjs");
+  const index = buildEventIndex({ includeQueues: true });
+  let overlapFlags = 0;
+  for (const item of (queue.items || []).filter((i) => i.status === "pending")) {
+    const entry = index.entries.find(
+      (e) => e.slug === item.id && e.source === "queue-quick-read"
+    );
+    if (!entry) continue;
+    const best = findOverlaps(entry, index.entries)[0];
+    const verdict = classifyOverlap(best, {
+      format: "quick-read",
+      parentArticleSlug: item.parentArticleSlug || item.relatedArticleSlugs?.[0],
+    });
+    if (verdict.action === "block") {
+      overlapFlags++;
+      console.warn(
+        `::warning::Editorial overlap BLOCK risk for QR ${item.id} vs ${verdict.conflict?.slug} (${verdict.reason})`
+      );
+    }
+  }
+  console.log(`Editorial overlap scan: ${overlapFlags} Quick Read(s) at block risk.`);
+} catch (e) {
+  console.warn(`::warning::Editorial overlap scan skipped: ${e.message}`);
 }
 
 process.exit(failed > 0 ? 1 : 0);

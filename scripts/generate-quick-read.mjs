@@ -23,6 +23,13 @@ import {
   MIN_QR_PENDING,
   REFILL_QR_THRESHOLD,
 } from "./quick-read-queue.mjs";
+import {
+  runPrepublishGate,
+  recordSuccessfulPublication,
+  isHeld,
+  markHeldForReview,
+} from "./editorial/prepublish-gate.mjs";
+import { canonicalEventIdFromSlug } from "./editorial/normalize.mjs";
 
 const CONTENT_DIR = join(process.cwd(), "content", "articles");
 const DRY_RUN =
@@ -66,10 +73,21 @@ async function main() {
   }
   if (!DRY_RUN) saveQuickReadQueue(queue);
 
-  const queueItem = pickNextQuickRead(queue, existingSlugs);
+  const skipHeld = new Set(
+    (queue.items || [])
+      .filter((i) => i.status === "editorial_review" || isHeld(i.id))
+      .map((i) => i.id)
+  );
+  const queueItem = pickNextQuickRead(
+    {
+      ...queue,
+      items: (queue.items || []).filter((i) => !skipHeld.has(i.id)),
+    },
+    existingSlugs
+  );
   if (!queueItem) {
     const msg =
-      "No pending Quick Read topics available. Refill content/quick-read-queue.json — will not publish filler.";
+      "No pending Quick Read topics available (or all held for review). Refill content/quick-read-queue.json — will not publish filler.";
     console.error(`ERROR: ${msg}`);
     console.error(`::error::${msg}`);
     process.exit(1);
@@ -110,6 +128,59 @@ async function main() {
     process.exit(1);
   }
 
+  const parentArticleSlug =
+    queueItem.parentArticleSlug ||
+    (queueItem.relatedArticleSlugs && queueItem.relatedArticleSlugs[0]) ||
+    null;
+  const editorialAngle = queueItem.editorialAngle || queueItem.angle || null;
+  const eventYear = queueItem.eventYear;
+  const canonicalEventId =
+    queueItem.canonicalEventId || canonicalEventIdFromSlug(draft.slug, eventYear);
+
+  const gate = runPrepublishGate({
+    slug: draft.slug,
+    title: draft.title,
+    excerpt: draft.excerpt,
+    body: draft.content,
+    eventYear,
+    format: "quick-read",
+    parentArticleSlug,
+    editorialAngle,
+    canonicalEventId,
+    references: draft.references,
+  });
+  if (!gate.ok) {
+    console.error(`\nEditorial gate: ${gate.action.toUpperCase()}`);
+    console.error(JSON.stringify(gate.report.blocks.concat(gate.report.holds), null, 2));
+    const qi = (queue.items || []).find((i) => i.id === queueItem.id);
+    if (qi) {
+      qi.status = "editorial_review";
+      qi.editorialHold = {
+        action: gate.action,
+        at: new Date().toISOString(),
+        blocks: gate.report.blocks,
+        holds: gate.report.holds,
+        conflictSlug:
+          gate.report.blocks[0]?.conflictSlug || gate.report.holds[0]?.conflictSlug || null,
+      };
+      saveQuickReadQueue(queue);
+    }
+    markHeldForReview({
+      slug: draft.slug,
+      title: draft.title,
+      format: "quick-read",
+      action: gate.action,
+      queueId: queueItem.id,
+      blocks: gate.report.blocks,
+      holds: gate.report.holds,
+    });
+    console.error(
+      `::error::Quick Read editorial originality/fact gate — ${gate.action}; not publishing; marked for review`
+    );
+    process.exit(1);
+  }
+  console.log("Editorial originality + fact gate: PASS");
+
   const stats = validation.stats;
   console.log(`\nFinal: ${stats.bodyWords} body words, ${stats.citations} citations, ${stats.refs} refs`);
 
@@ -122,6 +193,7 @@ async function main() {
 
   const bodyWords = stats.bodyWords;
   const readMinutes = Math.max(1, Math.min(3, Math.ceil(bodyWords / 200)));
+  const now = new Date().toISOString();
 
   const article = {
     slug: draft.slug,
@@ -132,24 +204,42 @@ async function main() {
     readMinutes,
     category: draft.category,
     format: "quick-read",
-    ...(queueItem.eventYear ? { eventYear: queueItem.eventYear } : {}),
+    ...(eventYear ? { eventYear } : {}),
     ...(queueItem.historicalEra ? { historicalEra: queueItem.historicalEra } : {}),
+    ...(parentArticleSlug ? { parentArticleSlug } : {}),
+    ...(editorialAngle ? { editorialAngle } : {}),
+    canonicalEventId,
     ...(queueItem.relatedArticleSlugs?.length
       ? { relatedArticleSlugs: queueItem.relatedArticleSlugs }
-      : {}),
+      : parentArticleSlug
+        ? { relatedArticleSlugs: [parentArticleSlug] }
+        : {}),
     content: draft.content,
     references: draft.references,
     image,
     relatedVideoId: null,
-    createdAt: new Date().toISOString(),
+    createdAt: now,
   };
 
   writeFileSync(join(CONTENT_DIR, `${draft.slug}.json`), JSON.stringify(article, null, 2) + "\n", "utf-8");
   markQuickReadPublished(queue, queueItem.id, draft.slug);
   saveQuickReadQueue(queue);
+  recordSuccessfulPublication({
+    slug: article.slug,
+    title: article.title,
+    excerpt: article.excerpt,
+    body: article.content,
+    eventYear,
+    format: "quick-read",
+    publishedAt: now,
+    parentArticleSlug,
+    editorialAngle,
+    canonicalEventId,
+  });
 
   console.log(`\nSaved: content/articles/${draft.slug}.json`);
   console.log(`Updated: content/quick-read-queue.json`);
+  console.log("Updated: content/editorial-event-index.json");
   console.log("Done.");
 }
 

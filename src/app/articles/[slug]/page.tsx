@@ -109,12 +109,24 @@ export default async function ArticlePage({ params }: Props) {
   const recommendedReading = quick
     ? []
     : getRecommendedReadingForArticle(article.slug);
+  const parentSlug =
+    article.parentArticleSlug || article.relatedArticleSlugs?.[0] || null;
   const relatedFull =
-    quick && article.relatedArticleSlugs?.length
-      ? article.relatedArticleSlugs
+    quick && parentSlug
+      ? [parentSlug, ...(article.relatedArticleSlugs || [])]
+          .filter((s, i, arr) => arr.indexOf(s) === i)
           .map((s) => getArticle(s))
           .filter((a): a is NonNullable<typeof a> => a != null)
       : [];
+  /** Reciprocal companions: Quick Reads that declare this full article as parent. */
+  const companionQuickReads = !quick
+    ? allArticles.filter(
+        (a) =>
+          isQuickRead(a) &&
+          (a.parentArticleSlug === article.slug ||
+            a.relatedArticleSlugs?.includes(article.slug))
+      )
+    : [];
   const networkPlacements = placementsForArticle(article.slug);
   const relatedVideos = relatedVideosForArticle(article, allVideos);
   const storyHubs = getPopulatedHistoryHubs(allArticles).filter((hub) =>
@@ -425,6 +437,31 @@ export default async function ArticlePage({ params }: Props) {
                   {a.title}
                 </Link>
                 <span className="ml-2 text-xs text-ink-muted">full article</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {companionQuickReads.length > 0 && (
+        <section className="mt-10" aria-labelledby="companion-qr-heading">
+          <h2 id="companion-qr-heading" className="font-heading text-xl font-bold text-ink">
+            Quick Reads on this story
+          </h2>
+          <ul className="mt-3 space-y-2">
+            {companionQuickReads.map((a) => (
+              <li key={a.slug}>
+                <Link
+                  href={`/articles/${a.slug}`}
+                  className="text-brand-mid underline hover:text-brand-bright"
+                >
+                  {a.title}
+                </Link>
+                {a.editorialAngle ? (
+                  <span className="ml-2 text-xs text-ink-muted">{a.editorialAngle}</span>
+                ) : (
+                  <span className="ml-2 text-xs text-ink-muted">Quick Read</span>
+                )}
               </li>
             ))}
           </ul>

@@ -40,6 +40,9 @@ jobs:
       - name: Validate story queue
         run: npm run validate:queue
 
+      - name: Editorial originality regressions
+        run: npm run check:editorial-originality
+
       - name: Dry-run select next full story
         run: node scripts/dry-run-publish.mjs --full
 
@@ -53,28 +56,58 @@ jobs:
           fi
 
       - name: Generate daily story
+        id: generate
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENROUTER_MODEL: ${{ secrets.OPENROUTER_MODEL }}
         run: node scripts/generate-daily-story.mjs
 
+      - name: Persist editorial hold (if gated)
+        if: failure() && steps.generate.outcome == 'failure'
+        env:
+          COMMIT_MESSAGE: "chore(editorial): hold blocked daily-story candidate for review"
+        run: |
+          git add content/story-queue.json content/story-queue/ content/editorial-event-index.json || true
+          if git diff --cached --quiet; then
+            echo "No hold state to persist."
+            exit 0
+          fi
+          node scripts/git-push-with-rebase.mjs
+
       - name: Download story card image
+        if: success()
         run: node scripts/fetch-all-story-images.mjs
 
       - name: Validate new article
+        if: success()
         run: npm run validate:articles
 
       - name: Check article quality
+        if: success()
         run: npm run check:article-quality
 
       - name: Check story images
+        if: success()
         run: npm run check:story-images
 
+      - name: Check SEO snippets
+        if: success()
+        run: npm run check:seo-snippets
+
+      - name: Check internal links
+        if: success()
+        run: npm run check:internal-links
+
+      - name: Check affiliate placements
+        if: success()
+        run: npm run check:affiliate-placements
+
       - name: Commit and push (rebase-safe)
+        if: success()
         env:
           COMMIT_MESSAGE: "feat(stories): add daily full story"
         run: |
-          git add content/articles/ content/story-queue.json public/stories/
+          git add content/articles/ content/story-queue.json content/editorial-event-index.json content/story-queue/ public/stories/
           TITLE=$(node -e "
             const {readdirSync,readFileSync,statSync}=require('fs');
             const {join}=require('path');
