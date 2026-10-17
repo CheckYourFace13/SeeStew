@@ -10,11 +10,16 @@
       "angle": "Why the flood was treated as a curiosity for decades, and what the centennial memorial finally recorded.",
       "editorialAngle": "centennial plaque delay and Langone Park memorial wording",
       "parentArticleSlug": "great-molasses-flood-1919",
-      "relatedArticleSlugs": ["great-molasses-flood-1919"],
+      "relatedArticleSlugs": [
+        "great-molasses-flood-1919"
+      ],
       "canonicalEventId": "molasses-flood-plaque::2019",
       "eventYear": 2019,
       "historicalEra": "modern-america",
-      "keywords": ["molasses flood plaque", "Langone Park molasses"],
+      "keywords": [
+        "molasses flood plaque",
+        "Langone Park molasses"
+      ],
       "requiredSources": [
         {
           "title": "Great Molasses Flood",
@@ -32,7 +37,9 @@
           "url": "https://www.masshist.org/events/great-boston-molasses-flood-1919"
         }
       ],
-      "imageSearchTerms": ["Boston molasses flood memorial plaque"],
+      "imageSearchTerms": [
+        "Boston molasses flood memorial plaque"
+      ],
       "status": "pending",
       "format": "quick-read"
     },
@@ -47,7 +54,10 @@
       "canonicalEventId": "able-archer-procedures::1983",
       "eventYear": 1983,
       "historicalEra": "postwar-cold-war",
-      "keywords": ["Able Archer 83 procedures", "Able Archer nuclear scare"],
+      "keywords": [
+        "Able Archer 83 procedures",
+        "Able Archer nuclear scare"
+      ],
       "requiredSources": [
         {
           "title": "Able Archer 83",
@@ -65,7 +75,9 @@
           "url": "https://www.archives.gov/"
         }
       ],
-      "imageSearchTerms": ["Able Archer 83 NATO Cold War"],
+      "imageSearchTerms": [
+        "Able Archer 83 NATO Cold War"
+      ],
       "status": "pending",
       "format": "quick-read"
     },
@@ -80,7 +92,10 @@
       "canonicalEventId": "gaspee-sandbar::1772",
       "eventYear": 1772,
       "historicalEra": "colonial-america",
-      "keywords": ["Gaspee sandbar", "HMS Gaspee grounding"],
+      "keywords": [
+        "Gaspee sandbar",
+        "HMS Gaspee grounding"
+      ],
       "requiredSources": [
         {
           "title": "The Gaspee Affair",
@@ -98,7 +113,9 @@
           "url": "https://www.archives.gov/research/american-revolution"
         }
       ],
-      "imageSearchTerms": ["HMS Gaspee Rhode Island 1772"],
+      "imageSearchTerms": [
+        "HMS Gaspee Rhode Island 1772"
+      ],
       "status": "pending",
       "format": "quick-read"
     },
@@ -110,11 +127,16 @@
       "angle": "One decisive detail of the 1911 fire: the Washington Place exit and how testimony described it.",
       "editorialAngle": "Washington Place exit lock and contemporary testimony",
       "parentArticleSlug": "triangle-shirtwaist-fire-1911",
-      "relatedArticleSlugs": ["triangle-shirtwaist-fire-1911"],
+      "relatedArticleSlugs": [
+        "triangle-shirtwaist-fire-1911"
+      ],
       "canonicalEventId": "triangle-locked-exit::1911",
       "eventYear": 1911,
       "historicalEra": "progressive-wwi",
-      "keywords": ["Triangle Shirtwaist locked door", "Triangle fire exit"],
+      "keywords": [
+        "Triangle Shirtwaist locked door",
+        "Triangle fire exit"
+      ],
       "requiredSources": [
         {
           "title": "Triangle Factory Fire",
@@ -132,7 +154,9 @@
           "url": "https://www.loc.gov/"
         }
       ],
-      "imageSearchTerms": ["Triangle Shirtwaist Factory fire 1911"],
+      "imageSearchTerms": [
+        "Triangle Shirtwaist Factory fire 1911"
+      ],
       "status": "pending",
       "format": "quick-read"
     },
@@ -144,11 +168,16 @@
       "angle": "Explain lip-pointing as a workplace technique and why male lab staff used different precautions.",
       "editorialAngle": "lip-pointing workplace technique vs lab precautions",
       "parentArticleSlug": "radium-girls-1920s",
-      "relatedArticleSlugs": ["radium-girls-1920s"],
+      "relatedArticleSlugs": [
+        "radium-girls-1920s"
+      ],
       "canonicalEventId": "radium-lip-pointing::1922",
       "eventYear": 1922,
       "historicalEra": "twenties-depression",
-      "keywords": ["radium girls lip pointing", "dial painters radium"],
+      "keywords": [
+        "radium girls lip pointing",
+        "dial painters radium"
+      ],
       "requiredSources": [
         {
           "title": "The Radium Dial Workers",
@@ -166,7 +195,9 @@
           "url": "https://www.nj.gov/health/"
         }
       ],
-      "imageSearchTerms": ["radium dial painters 1920s"],
+      "imageSearchTerms": [
+        "radium dial painters 1920s"
+      ],
       "status": "pending",
       "format": "quick-read"
     },
@@ -181,7 +212,10 @@
       "canonicalEventId": "forrestal-zuni::1967",
       "eventYear": 1967,
       "historicalEra": "postwar-cold-war",
-      "keywords": ["Forrestal Zuni rocket", "USS Forrestal fire cause"],
+      "keywords": [
+        "Forrestal Zuni rocket",
+        "USS Forrestal fire cause"
+      ],
       "requiredSources": [
         {
           "title": "USS Forrestal (CVA-59)",
@@ -199,7 +233,9 @@
           "url": "https://www.history.navy.mil/"
         }
       ],
-      "imageSearchTerms": ["USS Forrestal fire 1967"],
+      "imageSearchTerms": [
+        "USS Forrestal fire 1967"
+      ],
       "status": "pending",
       "format": "quick-read"
     }
