@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-16T14:41:32.349Z",
-  "publishedCount": 119,
-  "queueCount": 39,
+  "generatedAt": "2026-10-17T13:33:00.269Z",
+  "publishedCount": 120,
+  "queueCount": 38,
   "entries": [
     {
       "slug": "amistad-revolt-1839",
@@ -971,6 +971,33 @@
       ],
       "opening": "On September 8, 1900, a catastrophic hurricane struck Galveston, Texas, leaving a trail of destruction that would claim the lives of an estimated 8,000 to 12,000 people. This storm, known as the Great Galveston Hurricane, remains the deadliest natural disaster in U.S.",
       "contentChars": 11177
+    },
+    {
+      "slug": "gaspee-affair-1772",
+      "title": "The Gaspee Affair of 1772: Colonists Burned a British Customs Ship",
+      "excerpt": "Rhode Island colonists boarded and burned HMS Gaspee — an early flashpoint before Lexington. (Gaspee Affair)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1772,
+      "publishedAt": "2026-10-16T14:41:32.180Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "gaspee-affair::1772",
+      "titleEventKey": "gaspee-affair-colonists-burned-british-customs-ship::1772",
+      "places": [
+        "rhode island"
+      ],
+      "namedHints": [
+        "gaspee",
+        "affair",
+        "colonists",
+        "burned",
+        "british",
+        "customs",
+        "ship"
+      ],
+      "opening": "In the early morning hours of June 10, 1772, a group of Rhode Island colonists boarded and burned the HMS Gaspee, a British customs schooner. This act of defiance occurred in Narragansett Bay, just off the coast of Providence, and marked one of the first significant acts of rebellion against British authority in the American colonies [1].",
+      "contentChars": 11190
     },
     {
       "slug": "ghost-army-wwii",
@@ -3326,32 +3353,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "newburgh-conspiracy-1783",
-      "title": "The Newburgh Conspiracy: When Continental Officers Nearly Mutinied",
-      "excerpt": "Unpaid officers circulated a call to defy Congress — until Washington’s speech stopped them.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1783,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "What the anonymous letters proposed, Washington’s Newburgh address, and how Congress settled pay.",
-      "canonicalEventId": "newburgh-conspiracy::1783",
-      "titleEventKey": "newburgh-conspiracy-continental-officers-nearly-mutinied::1783",
-      "places": [
-        "washington"
-      ],
-      "namedHints": [
-        "newburgh",
-        "conspiracy",
-        "continental",
-        "officers",
-        "nearly",
-        "mutinied"
-      ],
-      "opening": "Unpaid officers circulated a call to defy Congress — until Washington’s speech stopped them. What the anonymous letters proposed, Washington’s Newburgh address, and how Congress settled pay.",
-      "contentChars": 262
-    },
-    {
       "slug": "benedict-arnold-west-point-1780",
       "title": "Benedict Arnold’s West Point Plot: What He Tried to Sell the British",
       "excerpt": "America’s most famous traitor tried to hand West Point to the British — and nearly got away with it.",
@@ -4352,31 +4353,31 @@
       "contentChars": 238
     },
     {
-      "slug": "gaspee-affair-1772",
-      "title": "The Gaspee Affair of 1772: Colonists Burned a British Customs Ship",
-      "excerpt": "Rhode Island colonists boarded and burned HMS Gaspee — an early flashpoint before Lexington. (Gaspee Affair)",
+      "slug": "newburgh-conspiracy-1783",
+      "title": "The Newburgh Conspiracy: When Continental Officers Nearly Mutinied",
+      "excerpt": "Unpaid officers circulated a call to defy Congress — until Washington’s speech stopped them. (Newburgh Conspiracy)",
       "format": "full",
       "source": "published",
-      "eventYear": 1772,
-      "publishedAt": "2026-10-16T14:41:32.180Z",
+      "eventYear": 1783,
+      "publishedAt": "2026-10-17T13:33:00.131Z",
       "parentArticleSlug": null,
       "editorialAngle": null,
-      "canonicalEventId": "gaspee-affair::1772",
-      "titleEventKey": "gaspee-affair-colonists-burned-british-customs-ship::1772",
+      "canonicalEventId": "newburgh-conspiracy::1783",
+      "titleEventKey": "newburgh-conspiracy-continental-officers-nearly-mutinied::1783",
       "places": [
-        "rhode island"
+        "washington",
+        "new york"
       ],
       "namedHints": [
-        "gaspee",
-        "affair",
-        "colonists",
-        "burned",
-        "british",
-        "customs",
-        "ship"
+        "newburgh",
+        "conspiracy",
+        "continental",
+        "officers",
+        "nearly",
+        "mutinied"
       ],
-      "opening": "In the early morning hours of June 10, 1772, a group of Rhode Island colonists boarded and burned the HMS Gaspee, a British customs schooner. This act of defiance occurred in Narragansett Bay, just off the coast of Providence, and marked one of the first significant acts of rebellion against British authority in the American colonies [1].",
-      "contentChars": 11190
+      "opening": "The Newburgh Conspiracy: A Near Mutiny in 1783 In the spring of 1783, the Continental Army faced a crisis that threatened to unravel the very fabric of the fledgling United States. Officers stationed in Newburgh, New York, were on the brink of mutiny due to unpaid wages and a lack of support from Congress.",
+      "contentChars": 10480
     }
   ]
 }

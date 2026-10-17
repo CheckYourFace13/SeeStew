@@ -4903,9 +4903,9 @@
       "imageSearchTerms": [
         "Washington Newburgh Conspiracy 1783"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "newburgh-conspiracy-1783",
+      "publishedAt": "2026-10-17T13:33:00.165Z",
       "eventYear": 1783,
       "historicalEra": "revolution-early-republic"
     },
