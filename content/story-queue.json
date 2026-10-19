@@ -4950,9 +4950,9 @@
       "imageSearchTerms": [
         "Benedict Arnold West Point plot 1780"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "benedict-arnold-west-point-1780",
+      "publishedAt": "2026-10-19T16:52:54.358Z",
       "eventYear": 1780,
       "historicalEra": "revolution-early-republic"
     },
