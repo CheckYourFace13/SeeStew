@@ -4997,9 +4997,9 @@
       "imageSearchTerms": [
         "Paxton Boys Conestoga 1763"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "paxton-boys-1763",
+      "publishedAt": "2026-10-20T14:52:03.419Z",
       "eventYear": 1763,
       "historicalEra": "colonial-america"
     },

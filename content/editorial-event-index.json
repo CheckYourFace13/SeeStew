@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-19T16:52:54.456Z",
-  "publishedCount": 121,
-  "queueCount": 37,
+  "generatedAt": "2026-10-20T14:52:03.499Z",
+  "publishedCount": 122,
+  "queueCount": 36,
   "entries": [
     {
       "slug": "amistad-revolt-1839",
@@ -194,6 +194,36 @@
       ],
       "opening": "The Siege of the Alamo: A Closer Look at the 1836 Battle In February 1836, a small force of Texian defenders occupied the Alamo, a former Spanish mission in San Antonio, Texas. This group, numbering around 180 to 250 men, faced a much larger Mexican army led by General Antonio López de Santa Anna.",
       "contentChars": 11617
+    },
+    {
+      "slug": "benedict-arnold-west-point-1780",
+      "title": "Benedict Arnold’s West Point Plot: What He Tried to Sell the British",
+      "excerpt": "America’s most famous traitor tried to hand West Point to the British — and nearly got away with it. (Benedict Arnold West Point)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1780,
+      "publishedAt": "2026-10-19T16:52:54.278Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "benedict-arnold-west-point::1780",
+      "titleEventKey": "benedict-arnold-west-point-plot-tried-sell-british::1780",
+      "places": [
+        "west point",
+        "connecticut",
+        "new york"
+      ],
+      "namedHints": [
+        "benedict",
+        "arnolds",
+        "west",
+        "point",
+        "plot",
+        "tried",
+        "sell",
+        "british"
+      ],
+      "opening": "Benedict Arnold's Treasonous Plot at West Point in 1780 In the fall of 1780, Benedict Arnold, once a celebrated American general, plotted to betray his country by handing over the strategic military stronghold of West Point to the British. This treasonous scheme involved a clandestine alliance with British Major John André, who served as a spy for the British Army.",
+      "contentChars": 14654
     },
     {
       "slug": "black-sox-scandal-1919",
@@ -3380,33 +3410,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "paxton-boys-1763",
-      "title": "The Paxton Boys: Frontier Massacre and a March on Philadelphia",
-      "excerpt": "After killing Conestoga people in Lancaster, armed settlers marched on Philadelphia — and nearly sparked civil war in Pennsylvania.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1763,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "The Conestoga killings, Franklin’s defense of Philadelphia, and what the crisis revealed about colonial politics.",
-      "canonicalEventId": "paxton-boys::1763",
-      "titleEventKey": "paxton-boys-frontier-massacre-march-philadelphia::1763",
-      "places": [
-        "philadelphia",
-        "pennsylvania"
-      ],
-      "namedHints": [
-        "paxton",
-        "boys",
-        "frontier",
-        "massacre",
-        "march",
-        "philadelphia"
-      ],
-      "opening": "After killing Conestoga people in Lancaster, armed settlers marched on Philadelphia — and nearly sparked civil war in Pennsylvania. The Conestoga killings, Franklin’s defense of Philadelphia, and what the crisis revealed about colonial politics.",
-      "contentChars": 301
-    },
-    {
       "slug": "able-archer-83",
       "title": "Able Archer 83: The NATO Exercise That Nearly Looked Like Nuclear War",
       "excerpt": "A realistic 1983 NATO command exercise rattled U.S.–Warsaw Pact intelligence channels during a tense nuclear scare year.",
@@ -4352,34 +4355,31 @@
       "contentChars": 238
     },
     {
-      "slug": "benedict-arnold-west-point-1780",
-      "title": "Benedict Arnold’s West Point Plot: What He Tried to Sell the British",
-      "excerpt": "America’s most famous traitor tried to hand West Point to the British — and nearly got away with it. (Benedict Arnold West Point)",
+      "slug": "paxton-boys-1763",
+      "title": "The Paxton Boys: Frontier Massacre and a March on Philadelphia",
+      "excerpt": "After killing Conestoga people in Lancaster, armed settlers marched on Philadelphia — and nearly sparked civil war in Pennsylvania. (Paxton Boys)",
       "format": "full",
       "source": "published",
-      "eventYear": 1780,
-      "publishedAt": "2026-10-19T16:52:54.278Z",
+      "eventYear": 1763,
+      "publishedAt": "2026-10-20T14:52:03.078Z",
       "parentArticleSlug": null,
       "editorialAngle": null,
-      "canonicalEventId": "benedict-arnold-west-point::1780",
-      "titleEventKey": "benedict-arnold-west-point-plot-tried-sell-british::1780",
+      "canonicalEventId": "paxton-boys::1763",
+      "titleEventKey": "paxton-boys-frontier-massacre-march-philadelphia::1763",
       "places": [
-        "west point",
-        "connecticut",
-        "new york"
+        "philadelphia",
+        "pennsylvania"
       ],
       "namedHints": [
-        "benedict",
-        "arnolds",
-        "west",
-        "point",
-        "plot",
-        "tried",
-        "sell",
-        "british"
+        "paxton",
+        "boys",
+        "frontier",
+        "massacre",
+        "march",
+        "philadelphia"
       ],
-      "opening": "Benedict Arnold's Treasonous Plot at West Point in 1780 In the fall of 1780, Benedict Arnold, once a celebrated American general, plotted to betray his country by handing over the strategic military stronghold of West Point to the British. This treasonous scheme involved a clandestine alliance with British Major John André, who served as a spy for the British Army.",
-      "contentChars": 14654
+      "opening": "The Conestoga Massacre: A Prelude to the Paxton Boys' March on Philadelphia In December 1763, a group of armed settlers known as the Paxton Boys descended upon the Conestoga Indian Town in Lancaster County, Pennsylvania. Their mission was brutal: to kill the remaining Conestoga people, a small group of Native Americans who had sought refuge and protection from colonial violence.",
+      "contentChars": 9991
     }
   ]
 }
