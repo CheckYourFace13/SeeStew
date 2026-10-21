@@ -5044,9 +5044,9 @@
       "imageSearchTerms": [
         "Able Archer 83 NATO exercise"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "able-archer-83",
+      "publishedAt": "2026-10-21T14:59:56.980Z",
       "eventYear": 1983,
       "historicalEra": "postwar-cold-war"
     },
