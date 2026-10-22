@@ -1,9 +1,36 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-21T14:59:57.039Z",
-  "publishedCount": 123,
-  "queueCount": 35,
+  "generatedAt": "2026-10-22T15:00:11.303Z",
+  "publishedCount": 124,
+  "queueCount": 34,
   "entries": [
+    {
+      "slug": "able-archer-83",
+      "title": "Able Archer 83: The NATO Exercise That Nearly Looked Like Nuclear War",
+      "excerpt": "A realistic 1983 NATO command exercise rattled U.S.–Warsaw Pact intelligence channels during a tense nuclear scare year. (Able Archer 83)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1983,
+      "publishedAt": "2026-10-21T14:59:56.883Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "able-archer-83::1983",
+      "titleEventKey": "able-archer-nato-exercise-nearly-looked-like-nuclear::1983",
+      "places": [],
+      "namedHints": [
+        "able",
+        "archer",
+        "nato",
+        "exercise",
+        "nearly",
+        "looked",
+        "like",
+        "nuclear",
+        "war"
+      ],
+      "opening": "The NATO Exercise That Nearly Triggered Nuclear War: Able Archer 83 In November 1983, a NATO command exercise known as Able Archer 83 took place, simulating a nuclear conflict scenario that inadvertently escalated tensions between the West and the Soviet Union. The exercise, conducted from November 2 to November 11, involved a series of war games that included the deployment of nuclear weapons and the mobilization of NATO forces.",
+      "contentChars": 12112
+    },
     {
       "slug": "amistad-revolt-1839",
       "title": "The Amistad: When Enslaved Africans Seized a Ship and Forced America into Court",
@@ -3437,32 +3464,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "palomares-incident-1966",
-      "title": "Palomares 1966: When a U.S. Bomber Lost Hydrogen Bombs Over Spain",
-      "excerpt": "A midair collision dumped nuclear weapons near a Spanish fishing village — one bomb vanished into the Mediterranean for months.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1966,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "The B-52/KC-135 collision, the land recovery, the underwater search, and what the U.S. admitted.",
-      "canonicalEventId": "palomares-incident::1966",
-      "titleEventKey": "palomares-bomber-lost-hydrogen-bombs-spain::1966",
-      "places": [
-        "palomares"
-      ],
-      "namedHints": [
-        "palomares",
-        "bomber",
-        "lost",
-        "hydrogen",
-        "bombs",
-        "spain"
-      ],
-      "opening": "A midair collision dumped nuclear weapons near a Spanish fishing village — one bomb vanished into the Mediterranean for months. The B-52/KC-135 collision, the land recovery, the underwater search, and what the U.S.",
-      "contentChars": 291
-    },
-    {
       "slug": "thule-b52-crash-1968",
       "title": "The Thule B-52 Crash: A Nuclear Bomber Went Down on Greenland Ice",
       "excerpt": "In 1968 a B-52 carrying nuclear weapons crashed near Thule Air Base — contaminating ice and forcing a massive cleanup.",
@@ -4355,31 +4356,30 @@
       "contentChars": 238
     },
     {
-      "slug": "able-archer-83",
-      "title": "Able Archer 83: The NATO Exercise That Nearly Looked Like Nuclear War",
-      "excerpt": "A realistic 1983 NATO command exercise rattled U.S.–Warsaw Pact intelligence channels during a tense nuclear scare year. (Able Archer 83)",
+      "slug": "palomares-incident-1966",
+      "title": "Palomares 1966: When a U.S. Bomber Lost Hydrogen Bombs Over Spain",
+      "excerpt": "A midair collision dumped nuclear weapons near a Spanish fishing village — one bomb vanished into the Mediterranean for months. (Palomares hydrogen bomb)",
       "format": "full",
       "source": "published",
-      "eventYear": 1983,
-      "publishedAt": "2026-10-21T14:59:56.883Z",
+      "eventYear": 1966,
+      "publishedAt": "2026-10-22T15:00:11.095Z",
       "parentArticleSlug": null,
       "editorialAngle": null,
-      "canonicalEventId": "able-archer-83::1983",
-      "titleEventKey": "able-archer-nato-exercise-nearly-looked-like-nuclear::1983",
-      "places": [],
-      "namedHints": [
-        "able",
-        "archer",
-        "nato",
-        "exercise",
-        "nearly",
-        "looked",
-        "like",
-        "nuclear",
-        "war"
+      "canonicalEventId": "palomares-incident::1966",
+      "titleEventKey": "palomares-bomber-lost-hydrogen-bombs-spain::1966",
+      "places": [
+        "palomares"
       ],
-      "opening": "The NATO Exercise That Nearly Triggered Nuclear War: Able Archer 83 In November 1983, a NATO command exercise known as Able Archer 83 took place, simulating a nuclear conflict scenario that inadvertently escalated tensions between the West and the Soviet Union. The exercise, conducted from November 2 to November 11, involved a series of war games that included the deployment of nuclear weapons and the mobilization of NATO forces.",
-      "contentChars": 12112
+      "namedHints": [
+        "palomares",
+        "bomber",
+        "lost",
+        "hydrogen",
+        "bombs",
+        "spain"
+      ],
+      "opening": "On January 17, 1966, a U.S. Air Force B-52 bomber collided with a KC-135 Stratotanker over the small fishing village of Palomares, Spain.",
+      "contentChars": 12054
     }
   ]
 }

@@ -5091,9 +5091,9 @@
       "imageSearchTerms": [
         "Palomares Spain hydrogen bomb 1966"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "palomares-incident-1966",
+      "publishedAt": "2026-10-22T15:00:11.197Z",
       "eventYear": 1966,
       "historicalEra": "postwar-cold-war"
     },

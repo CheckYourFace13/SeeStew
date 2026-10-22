@@ -22,6 +22,24 @@
       "conflictSlug": "amistad-revolt-1839",
       "heldAt": "2026-10-16T14:40:17.025Z",
       "status": "editorial_review"
+    },
+    {
+      "slug": "able-archer-83-redux",
+      "title": "Able Archer 83: The NATO Exercise That Nearly Looked Like Nuclear War",
+      "format": "full",
+      "action": "block",
+      "blocks": [
+        {
+          "code": "substantial_overlap",
+          "message": "Overlaps able-archer-83: exact_title, same_title_event_key, year_and_title_or_entities, title_overlap:1.000",
+          "conflictSlug": "able-archer-83",
+          "recommend": "Choose a truly different story, or publish a Quick Read linked to the existing article."
+        }
+      ],
+      "holds": [],
+      "conflictSlug": "able-archer-83",
+      "heldAt": "2026-10-22T14:58:21.753Z",
+      "status": "editorial_review"
     }
   ]
 }
