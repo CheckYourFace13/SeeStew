@@ -5138,9 +5138,9 @@
       "imageSearchTerms": [
         "Thule B-52 crash Greenland 1968"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "thule-b52-crash-1968",
+      "publishedAt": "2026-10-24T13:54:48.982Z",
       "eventYear": 1968,
       "historicalEra": "postwar-cold-war"
     },

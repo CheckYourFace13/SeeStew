@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-22T15:00:11.303Z",
-  "publishedCount": 124,
-  "queueCount": 34,
+  "generatedAt": "2026-10-24T13:54:49.087Z",
+  "publishedCount": 125,
+  "queueCount": 33,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -2360,6 +2360,32 @@
       "contentChars": 14355
     },
     {
+      "slug": "palomares-incident-1966",
+      "title": "Palomares 1966: When a U.S. Bomber Lost Hydrogen Bombs Over Spain",
+      "excerpt": "A midair collision dumped nuclear weapons near a Spanish fishing village — one bomb vanished into the Mediterranean for months. (Palomares hydrogen bomb)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1966,
+      "publishedAt": "2026-10-22T15:00:11.095Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "palomares-incident::1966",
+      "titleEventKey": "palomares-bomber-lost-hydrogen-bombs-spain::1966",
+      "places": [
+        "palomares"
+      ],
+      "namedHints": [
+        "palomares",
+        "bomber",
+        "lost",
+        "hydrogen",
+        "bombs",
+        "spain"
+      ],
+      "opening": "On January 17, 1966, a U.S. Air Force B-52 bomber collided with a KC-135 Stratotanker over the small fishing village of Palomares, Spain.",
+      "contentChars": 12054
+    },
+    {
       "slug": "paxton-boys-1763",
       "title": "The Paxton Boys: Frontier Massacre and a March on Philadelphia",
       "excerpt": "After killing Conestoga people in Lancaster, armed settlers marched on Philadelphia — and nearly sparked civil war in Pennsylvania. (Paxton Boys)",
@@ -3464,34 +3490,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "thule-b52-crash-1968",
-      "title": "The Thule B-52 Crash: A Nuclear Bomber Went Down on Greenland Ice",
-      "excerpt": "In 1968 a B-52 carrying nuclear weapons crashed near Thule Air Base — contaminating ice and forcing a massive cleanup.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1968,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "Why the bomber was airborne, what burned, the cleanup deal with Denmark, and declassified aftermath.",
-      "canonicalEventId": "thule-b52-crash::1968",
-      "titleEventKey": "thule-b-52-crash-nuclear-bomber-went-down-greenland::1968",
-      "places": [
-        "thule"
-      ],
-      "namedHints": [
-        "thule",
-        "crash",
-        "nuclear",
-        "bomber",
-        "went",
-        "down",
-        "greenland",
-        "ice"
-      ],
-      "opening": "In 1968 a B-52 carrying nuclear weapons crashed near Thule Air Base — contaminating ice and forcing a massive cleanup. Why the bomber was airborne, what burned, the cleanup deal with Denmark, and declassified aftermath.",
-      "contentChars": 287
-    },
-    {
       "slug": "uss-forrestal-fire-1967",
       "title": "The USS Forrestal Fire: A Carrier Deck Inferno That Killed 134",
       "excerpt": "A Zuni rocket misfire on Yankee Station started a chain of explosions that nearly destroyed a supercarrier.",
@@ -4356,30 +4354,32 @@
       "contentChars": 238
     },
     {
-      "slug": "palomares-incident-1966",
-      "title": "Palomares 1966: When a U.S. Bomber Lost Hydrogen Bombs Over Spain",
-      "excerpt": "A midair collision dumped nuclear weapons near a Spanish fishing village — one bomb vanished into the Mediterranean for months. (Palomares hydrogen bomb)",
+      "slug": "thule-b52-crash-1968",
+      "title": "The Thule B-52 Crash: A Nuclear Bomber Went Down on Greenland Ice",
+      "excerpt": "In 1968 a B-52 carrying nuclear weapons crashed near Thule Air Base — contaminating ice and forcing a massive cleanup. (Thule B-52 crash)",
       "format": "full",
       "source": "published",
-      "eventYear": 1966,
-      "publishedAt": "2026-10-22T15:00:11.095Z",
+      "eventYear": 1968,
+      "publishedAt": "2026-10-24T13:54:48.945Z",
       "parentArticleSlug": null,
       "editorialAngle": null,
-      "canonicalEventId": "palomares-incident::1966",
-      "titleEventKey": "palomares-bomber-lost-hydrogen-bombs-spain::1966",
+      "canonicalEventId": "thule-b52-crash::1968",
+      "titleEventKey": "thule-b-52-crash-nuclear-bomber-went-down-greenland::1968",
       "places": [
-        "palomares"
+        "thule"
       ],
       "namedHints": [
-        "palomares",
+        "thule",
+        "crash",
+        "nuclear",
         "bomber",
-        "lost",
-        "hydrogen",
-        "bombs",
-        "spain"
+        "went",
+        "down",
+        "greenland",
+        "ice"
       ],
-      "opening": "On January 17, 1966, a U.S. Air Force B-52 bomber collided with a KC-135 Stratotanker over the small fishing village of Palomares, Spain.",
-      "contentChars": 12054
+      "opening": "The Thule B-52 Crash: A Nuclear Bomber Went Down on Greenland Ice in 1968 On January 21, 1968, a B-52 Stratofortress bomber crashed near Thule Air Base in Greenland, resulting in a significant nuclear accident. The aircraft was carrying four hydrogen bombs when it went down, leading to contamination of the ice and a complex international cleanup effort [1].",
+      "contentChars": 11387
     }
   ]
 }
