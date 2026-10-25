@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-24T13:54:49.087Z",
-  "publishedCount": 125,
-  "queueCount": 33,
+  "generatedAt": "2026-10-25T14:12:02.470Z",
+  "publishedCount": 126,
+  "queueCount": 32,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -3071,6 +3071,34 @@
       "contentChars": 13098
     },
     {
+      "slug": "thule-b52-crash-1968",
+      "title": "The Thule B-52 Crash: A Nuclear Bomber Went Down on Greenland Ice",
+      "excerpt": "In 1968 a B-52 carrying nuclear weapons crashed near Thule Air Base — contaminating ice and forcing a massive cleanup. (Thule B-52 crash)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1968,
+      "publishedAt": "2026-10-24T13:54:48.945Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "thule-b52-crash::1968",
+      "titleEventKey": "thule-b-52-crash-nuclear-bomber-went-down-greenland::1968",
+      "places": [
+        "thule"
+      ],
+      "namedHints": [
+        "thule",
+        "crash",
+        "nuclear",
+        "bomber",
+        "went",
+        "down",
+        "greenland",
+        "ice"
+      ],
+      "opening": "The Thule B-52 Crash: A Nuclear Bomber Went Down on Greenland Ice in 1968 On January 21, 1968, a B-52 Stratofortress bomber crashed near Thule Air Base in Greenland, resulting in a significant nuclear accident. The aircraft was carrying four hydrogen bombs when it went down, leading to contamination of the ice and a complex international cleanup effort [1].",
+      "contentChars": 11387
+    },
+    {
       "slug": "titan-ii-damascus-1980",
       "title": "The Titan II Missile Explosion: When a Wrench Dropped on Arkansas",
       "excerpt": "A maintenance mishap vented fuel, exploded a nuclear missile silo, and killed one airman in 1980.",
@@ -3488,31 +3516,6 @@
       ],
       "opening": "The Zoot Suit Riots: A Clash of Cultures in Wartime Los Angeles In June 1943, Los Angeles became the epicenter of racial violence as servicemen clashed with Mexican American youths, known for their distinctive zoot suits. Over several days, these sailors and soldiers roamed the streets, targeting young men dressed in flashy attire, resulting in a series of brutal assaults.",
       "contentChars": 10085
-    },
-    {
-      "slug": "uss-forrestal-fire-1967",
-      "title": "The USS Forrestal Fire: A Carrier Deck Inferno That Killed 134",
-      "excerpt": "A Zuni rocket misfire on Yankee Station started a chain of explosions that nearly destroyed a supercarrier.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1967,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "How the fire started, why bombs cooked off, damage-control lessons, and the Navy’s official investigation.",
-      "canonicalEventId": "uss-forrestal-fire::1967",
-      "titleEventKey": "uss-forrestal-fire-carrier-deck-inferno-killed-134::1967",
-      "places": [],
-      "namedHints": [
-        "uss",
-        "forrestal",
-        "fire",
-        "carrier",
-        "deck",
-        "inferno",
-        "killed"
-      ],
-      "opening": "A Zuni rocket misfire on Yankee Station started a chain of explosions that nearly destroyed a supercarrier. How the fire started, why bombs cooked off, damage-control lessons, and the Navy’s official investigation.",
-      "contentChars": 279
     },
     {
       "slug": "great-seattle-fire-1889",
@@ -4354,32 +4357,29 @@
       "contentChars": 238
     },
     {
-      "slug": "thule-b52-crash-1968",
-      "title": "The Thule B-52 Crash: A Nuclear Bomber Went Down on Greenland Ice",
-      "excerpt": "In 1968 a B-52 carrying nuclear weapons crashed near Thule Air Base — contaminating ice and forcing a massive cleanup. (Thule B-52 crash)",
+      "slug": "uss-forrestal-fire-1967",
+      "title": "The USS Forrestal Fire: A Carrier Deck Inferno That Killed 134",
+      "excerpt": "A Zuni rocket misfire on Yankee Station started a chain of explosions that nearly destroyed a supercarrier. (USS Forrestal fire)",
       "format": "full",
       "source": "published",
-      "eventYear": 1968,
-      "publishedAt": "2026-10-24T13:54:48.945Z",
+      "eventYear": 1967,
+      "publishedAt": "2026-10-25T14:12:02.328Z",
       "parentArticleSlug": null,
       "editorialAngle": null,
-      "canonicalEventId": "thule-b52-crash::1968",
-      "titleEventKey": "thule-b-52-crash-nuclear-bomber-went-down-greenland::1968",
-      "places": [
-        "thule"
-      ],
+      "canonicalEventId": "uss-forrestal-fire::1967",
+      "titleEventKey": "uss-forrestal-fire-carrier-deck-inferno-killed-134::1967",
+      "places": [],
       "namedHints": [
-        "thule",
-        "crash",
-        "nuclear",
-        "bomber",
-        "went",
-        "down",
-        "greenland",
-        "ice"
+        "uss",
+        "forrestal",
+        "fire",
+        "carrier",
+        "deck",
+        "inferno",
+        "killed"
       ],
-      "opening": "The Thule B-52 Crash: A Nuclear Bomber Went Down on Greenland Ice in 1968 On January 21, 1968, a B-52 Stratofortress bomber crashed near Thule Air Base in Greenland, resulting in a significant nuclear accident. The aircraft was carrying four hydrogen bombs when it went down, leading to contamination of the ice and a complex international cleanup effort [1].",
-      "contentChars": 11387
+      "opening": "On July 29, 1967, the USS Forrestal (CVA-59), a supercarrier stationed off the coast of Vietnam, became the scene of one of the deadliest fires in U.S. naval history.",
+      "contentChars": 10655
     }
   ]
 }

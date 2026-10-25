@@ -5185,9 +5185,9 @@
       "imageSearchTerms": [
         "USS Forrestal fire 1967"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "uss-forrestal-fire-1967",
+      "publishedAt": "2026-10-25T14:12:02.407Z",
       "eventYear": 1967,
       "historicalEra": "postwar-cold-war"
     },
