@@ -5232,9 +5232,9 @@
       "imageSearchTerms": [
         "Great Seattle Fire 1889"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "great-seattle-fire-1889",
+      "publishedAt": "2026-10-26T16:40:52.533Z",
       "eventYear": 1889,
       "historicalEra": "reconstruction-gilded-age"
     },

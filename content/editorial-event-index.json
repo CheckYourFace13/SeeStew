@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-25T14:12:02.470Z",
-  "publishedCount": 126,
-  "queueCount": 32,
+  "generatedAt": "2026-10-26T16:40:52.642Z",
+  "publishedCount": 127,
+  "queueCount": 31,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -3267,6 +3267,31 @@
       "contentChars": 12067
     },
     {
+      "slug": "uss-forrestal-fire-1967",
+      "title": "The USS Forrestal Fire: A Carrier Deck Inferno That Killed 134",
+      "excerpt": "A Zuni rocket misfire on Yankee Station started a chain of explosions that nearly destroyed a supercarrier. (USS Forrestal fire)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1967,
+      "publishedAt": "2026-10-25T14:12:02.328Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "uss-forrestal-fire::1967",
+      "titleEventKey": "uss-forrestal-fire-carrier-deck-inferno-killed-134::1967",
+      "places": [],
+      "namedHints": [
+        "uss",
+        "forrestal",
+        "fire",
+        "carrier",
+        "deck",
+        "inferno",
+        "killed"
+      ],
+      "opening": "On July 29, 1967, the USS Forrestal (CVA-59), a supercarrier stationed off the coast of Vietnam, became the scene of one of the deadliest fires in U.S. naval history.",
+      "contentChars": 10655
+    },
+    {
       "slug": "uss-indianapolis-1945",
       "title": "USS Indianapolis: The Navy's Worst Disaster and the Captain They Blamed for It",
       "excerpt": "After delivering the Hiroshima bomb's uranium core, the USS Indianapolis was torpedoed. 900 men went into the water. Only 316 survived — and the Navy court-martialed the captain.",
@@ -3516,33 +3541,6 @@
       ],
       "opening": "The Zoot Suit Riots: A Clash of Cultures in Wartime Los Angeles In June 1943, Los Angeles became the epicenter of racial violence as servicemen clashed with Mexican American youths, known for their distinctive zoot suits. Over several days, these sailors and soldiers roamed the streets, targeting young men dressed in flashy attire, resulting in a series of brutal assaults.",
       "contentChars": 10085
-    },
-    {
-      "slug": "great-seattle-fire-1889",
-      "title": "The Great Seattle Fire of 1889: How a City Burned and Rebuilt in Brick",
-      "excerpt": "A glue pot in a cabinet shop ignited a blaze that leveled Seattle’s business district — and forced a rebuild above the ashes.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1889,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "How the fire spread, why wooden sidewalks doomed the city, and how Seattle raised its streets afterward.",
-      "canonicalEventId": "great-seattle-fire::1889",
-      "titleEventKey": "great-seattle-fire-city-burned-rebuilt-brick::1889",
-      "places": [
-        "seattle"
-      ],
-      "namedHints": [
-        "great",
-        "seattle",
-        "fire",
-        "city",
-        "burned",
-        "rebuilt",
-        "brick"
-      ],
-      "opening": "A glue pot in a cabinet shop ignited a blaze that leveled Seattle’s business district — and forced a rebuild above the ashes. How the fire spread, why wooden sidewalks doomed the city, and how Seattle raised its streets afterward.",
-      "contentChars": 289
     },
     {
       "slug": "hinckley-fire-1894",
@@ -4357,29 +4355,31 @@
       "contentChars": 238
     },
     {
-      "slug": "uss-forrestal-fire-1967",
-      "title": "The USS Forrestal Fire: A Carrier Deck Inferno That Killed 134",
-      "excerpt": "A Zuni rocket misfire on Yankee Station started a chain of explosions that nearly destroyed a supercarrier. (USS Forrestal fire)",
+      "slug": "great-seattle-fire-1889",
+      "title": "The Great Seattle Fire of 1889: How a City Burned and Rebuilt in Brick",
+      "excerpt": "A glue pot in a cabinet shop ignited a blaze that leveled Seattle’s business district — and forced a rebuild above the ashes. (Seattle fire 1889)",
       "format": "full",
       "source": "published",
-      "eventYear": 1967,
-      "publishedAt": "2026-10-25T14:12:02.328Z",
+      "eventYear": 1889,
+      "publishedAt": "2026-10-26T16:40:52.479Z",
       "parentArticleSlug": null,
       "editorialAngle": null,
-      "canonicalEventId": "uss-forrestal-fire::1967",
-      "titleEventKey": "uss-forrestal-fire-carrier-deck-inferno-killed-134::1967",
-      "places": [],
-      "namedHints": [
-        "uss",
-        "forrestal",
-        "fire",
-        "carrier",
-        "deck",
-        "inferno",
-        "killed"
+      "canonicalEventId": "great-seattle-fire::1889",
+      "titleEventKey": "great-seattle-fire-city-burned-rebuilt-brick::1889",
+      "places": [
+        "seattle"
       ],
-      "opening": "On July 29, 1967, the USS Forrestal (CVA-59), a supercarrier stationed off the coast of Vietnam, became the scene of one of the deadliest fires in U.S. naval history.",
-      "contentChars": 10655
+      "namedHints": [
+        "great",
+        "seattle",
+        "fire",
+        "city",
+        "burned",
+        "rebuilt",
+        "brick"
+      ],
+      "opening": "The Great Seattle Fire of 1889: A Blaze That Reshaped a City On June 6, 1889, a small fire in a cabinet shop on Front Street ignited a catastrophic blaze that would engulf much of Seattle's business district. The Great Seattle Fire, fueled by the city's wooden structures and sidewalks, quickly spread, destroying over 25 city blocks and leaving thousands homeless [1].",
+      "contentChars": 9931
     }
   ]
 }
