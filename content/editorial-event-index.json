@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-26T16:40:52.642Z",
-  "publishedCount": 127,
-  "queueCount": 31,
+  "generatedAt": "2026-10-27T15:48:40.424Z",
+  "publishedCount": 128,
+  "queueCount": 30,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -1220,6 +1220,33 @@
       ],
       "opening": "The Penny Press and the New York Sun To understand how the Great Moon Hoax succeeded, you have to understand the media environment that produced it. In the early 1830s, New York City's newspaper market was undergoing a revolution.",
       "contentChars": 14822
+    },
+    {
+      "slug": "great-seattle-fire-1889",
+      "title": "The Great Seattle Fire of 1889: How a City Burned and Rebuilt in Brick",
+      "excerpt": "A glue pot in a cabinet shop ignited a blaze that leveled Seattle’s business district — and forced a rebuild above the ashes. (Seattle fire 1889)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1889,
+      "publishedAt": "2026-10-26T16:40:52.479Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "great-seattle-fire::1889",
+      "titleEventKey": "great-seattle-fire-city-burned-rebuilt-brick::1889",
+      "places": [
+        "seattle"
+      ],
+      "namedHints": [
+        "great",
+        "seattle",
+        "fire",
+        "city",
+        "burned",
+        "rebuilt",
+        "brick"
+      ],
+      "opening": "The Great Seattle Fire of 1889: A Blaze That Reshaped a City On June 6, 1889, a small fire in a cabinet shop on Front Street ignited a catastrophic blaze that would engulf much of Seattle's business district. The Great Seattle Fire, fueled by the city's wooden structures and sidewalks, quickly spread, destroying over 25 city blocks and leaving thousands homeless [1].",
+      "contentChars": 9931
     },
     {
       "slug": "greenbrier-bunker",
@@ -3543,33 +3570,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "hinckley-fire-1894",
-      "title": "The Hinckley Firestorm of 1894: A Train Escape Through a Burning Forest",
-      "excerpt": "A Minnesota firestorm killed hundreds — and a train engineer raced survivors through flames to safety.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1894,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "Drought conditions, the fire’s path, the train escape, and how communities recorded the dead.",
-      "canonicalEventId": "hinckley-fire::1894",
-      "titleEventKey": "hinckley-firestorm-train-escape-burning-forest::1894",
-      "places": [
-        "hinckley",
-        "minnesota"
-      ],
-      "namedHints": [
-        "hinckley",
-        "firestorm",
-        "train",
-        "escape",
-        "burning",
-        "forest"
-      ],
-      "opening": "A Minnesota firestorm killed hundreds — and a train engineer raced survivors through flames to safety. Drought conditions, the fire’s path, the train escape, and how communities recorded the dead.",
-      "contentChars": 264
-    },
-    {
       "slug": "winecoff-hotel-fire-1946",
       "title": "The Winecoff Hotel Fire: America’s Deadliest Hotel Blaze",
       "excerpt": "Atlanta’s “fireproof” Winecoff Hotel burned in 1946, killing 119 people and rewriting hotel safety codes.",
@@ -4355,31 +4355,31 @@
       "contentChars": 238
     },
     {
-      "slug": "great-seattle-fire-1889",
-      "title": "The Great Seattle Fire of 1889: How a City Burned and Rebuilt in Brick",
-      "excerpt": "A glue pot in a cabinet shop ignited a blaze that leveled Seattle’s business district — and forced a rebuild above the ashes. (Seattle fire 1889)",
+      "slug": "hinckley-fire-1894",
+      "title": "The Hinckley Firestorm of 1894: A Train Escape Through a Burning Forest",
+      "excerpt": "A Minnesota firestorm killed hundreds — and a train engineer raced survivors through flames to safety. (Hinckley fire 1894)",
       "format": "full",
       "source": "published",
-      "eventYear": 1889,
-      "publishedAt": "2026-10-26T16:40:52.479Z",
+      "eventYear": 1894,
+      "publishedAt": "2026-10-27T15:48:40.074Z",
       "parentArticleSlug": null,
       "editorialAngle": null,
-      "canonicalEventId": "great-seattle-fire::1889",
-      "titleEventKey": "great-seattle-fire-city-burned-rebuilt-brick::1889",
+      "canonicalEventId": "hinckley-fire::1894",
+      "titleEventKey": "hinckley-firestorm-train-escape-burning-forest::1894",
       "places": [
-        "seattle"
+        "hinckley",
+        "minnesota"
       ],
       "namedHints": [
-        "great",
-        "seattle",
-        "fire",
-        "city",
-        "burned",
-        "rebuilt",
-        "brick"
+        "hinckley",
+        "firestorm",
+        "train",
+        "escape",
+        "burning",
+        "forest"
       ],
-      "opening": "The Great Seattle Fire of 1889: A Blaze That Reshaped a City On June 6, 1889, a small fire in a cabinet shop on Front Street ignited a catastrophic blaze that would engulf much of Seattle's business district. The Great Seattle Fire, fueled by the city's wooden structures and sidewalks, quickly spread, destroying over 25 city blocks and leaving thousands homeless [1].",
-      "contentChars": 9931
+      "opening": "The Hinckley Firestorm of 1894: A Deadly Inferno in Minnesota On September 1, 1894, a catastrophic firestorm swept through the small town of Hinckley, Minnesota, claiming the lives of hundreds and leaving a lasting scar on the community. The Great Hinckley Fire, fueled by severe drought conditions and high winds, engulfed the surrounding forests and towns, creating a wall of flames that threatened to consume everything in its path.",
+      "contentChars": 10496
     }
   ]
 }

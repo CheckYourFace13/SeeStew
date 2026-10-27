@@ -5279,9 +5279,9 @@
       "imageSearchTerms": [
         "Hinckley Fire Minnesota 1894"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "hinckley-fire-1894",
+      "publishedAt": "2026-10-27T15:48:40.316Z",
       "eventYear": 1894,
       "historicalEra": "reconstruction-gilded-age"
     },
