@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 /**
  * Regression tests for editorial originality / fact / hook gates.
+ * Does not write production editorial-hold.json.
  */
+process.env.SEESTEW_EDITORIAL_TEST = "1";
 
 import fs from "fs";
 import path from "path";

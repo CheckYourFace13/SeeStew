@@ -9,9 +9,11 @@ type StoryCardProps = {
   article: Article;
   youtubeThumbnail?: string;
   priority?: boolean;
+  /** Override sizes when the card is featured / larger than the grid. */
+  sizes?: string;
 };
 
-export function StoryCard({ article, youtubeThumbnail, priority }: StoryCardProps) {
+export function StoryCard({ article, youtubeThumbnail, priority, sizes }: StoryCardProps) {
   const image = resolveStoryImage(article, { youtubeThumbnail });
   const quick = isQuickRead(article);
   const era = article.historicalEra ? getHistoricalEra(article.historicalEra) : undefined;
@@ -25,7 +27,10 @@ export function StoryCard({ article, youtubeThumbnail, priority }: StoryCardProp
             alt={image.alt}
             fill
             className="object-cover transition duration-300 group-hover:scale-[1.03]"
-            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+            sizes={
+              sizes ??
+              "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
+            }
             priority={priority}
             unoptimized={image.isRemote && image.src.includes("loc.gov")}
           />

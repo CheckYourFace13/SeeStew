@@ -30,9 +30,9 @@ const DECADE_COPY: Record<number, { title: string; description: string; intro: s
   1870: {
     title: "1870s American History",
     description:
-      "Documented American history from the 1870s — fires, floods, and flashpoints with named sources.",
+      "Documented American history from the 1870s — the Chicago and Peshtigo fires, Little Bighorn, and other sourced flashpoints.",
     intro:
-      "The 1870s brought industrial disasters, prairie fires, and political violence that left a paper trail. These SeeStew stories stick to archives and contemporary reporting.",
+      "October 8, 1871, linked two of the decade’s defining disasters: Chicago’s fire and the Peshtigo firestorm, both documented in contemporary reports. Later in the decade, Little Bighorn (1876) entered the military record. These SeeStew stories stay with those archives — they are not a survey of every 1870s headline.",
   },
   1880: {
     title: "1880s American History",
@@ -239,7 +239,7 @@ function allHubDefinitions(): HistoryHub[] {
     description:
       "Documented Boston history — the Massacre, the Molasses Flood, and the Cocoanut Grove fire — with named sources.",
     intro:
-      "Boston episodes that remade law, safety codes, and public memory. Each article below cites named sources.",
+      "Three Boston events on SeeStew left a legal or regulatory paper trail: the 1770 Massacre (trial records), the 1919 Molasses Flood (the Ogden auditor’s report), and the 1942 Cocoanut Grove fire (building-code aftermath). This hub is a city index to those full articles — not a second encyclopedia page.",
     articleSlugs: [
       "boston-massacre-1770",
       "great-molasses-flood-1919",

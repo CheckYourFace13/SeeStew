@@ -50,6 +50,9 @@ function saveHold(doc) {
 }
 
 export function markHeldForReview(item) {
+  if (process.env.SEESTEW_EDITORIAL_TEST === "1") {
+    return { version: 1, items: [] };
+  }
   const doc = loadHold();
   const slug = item.slug;
   doc.items = (doc.items || []).filter((x) => x.slug !== slug);

@@ -23,6 +23,8 @@ export function Logo({
         ? "h-12 w-auto"
         : "h-11 w-auto";
 
+  const px = variant === "hero" ? { w: 160, h: 160, sizes: "128px" } : { w: 56, h: 56, sizes: "48px" };
+
   return (
     <Link
       href="/"
@@ -31,8 +33,9 @@ export function Logo({
       <Image
         src={src}
         alt={`${siteConfig.name} logo`}
-        width={variant === "hero" ? 280 : 120}
-        height={variant === "hero" ? 120 : 48}
+        width={px.w}
+        height={px.h}
+        sizes={px.sizes}
         className={`${imageSize} object-contain`}
         priority={variant === "hero" || variant === "header"}
       />

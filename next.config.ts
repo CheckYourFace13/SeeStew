@@ -3,6 +3,11 @@ import { legacyRedirects } from "./src/lib/legacy-redirects";
 
 const nextConfig: NextConfig = {
   images: {
+    // Cap srcset so the fallback `src` is never w=3840. Cards display ~200–720px;
+    // 1200 covers 2x desktop without asking Hostinger Sharp to rasterize 4K.
+    deviceSizes: [640, 750, 828, 1080, 1200],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 60 * 60 * 24 * 30,
     remotePatterns: [
       { protocol: "https", hostname: "i.ytimg.com" },
       { protocol: "https", hostname: "img.youtube.com" },

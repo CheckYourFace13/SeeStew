@@ -10,9 +10,11 @@ import { VideoCard } from "@/components/VideoCard";
 import { getAllArticles, getArticle } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
 import {
+  anniversariesForDate,
   datePathSlug,
   monthName,
   onThisDayEnabled,
+  todayPartsInSiteTz,
   upcomingAnniversaries,
 } from "@/lib/on-this-day";
 import { homeFaqs } from "@/lib/seo";
@@ -33,8 +35,15 @@ export default async function HomePage() {
   const featured = articles[0];
   const rest = articles.slice(1);
   const slugSet = new Set(allArticles.map((a) => a.slug));
+  const today = todayPartsInSiteTz();
+  const todayAnniversaries = onThisDayEnabled(slugSet)
+    ? anniversariesForDate(today.month, today.day, slugSet)
+    : [];
+  const hasTodayEvent = todayAnniversaries.length > 0;
   const onThisDayItems = onThisDayEnabled(slugSet)
-    ? upcomingAnniversaries(slugSet, new Date(), 3)
+    ? hasTodayEvent
+      ? todayAnniversaries.slice(0, 3)
+      : upcomingAnniversaries(slugSet, new Date(), 3)
     : [];
 
   return (
@@ -121,6 +130,7 @@ export default async function HomePage() {
                       : undefined
                   }
                   priority
+                  sizes="(max-width: 1024px) 100vw, 720px"
                 />
                 <div className="flex flex-col justify-center rounded-xl border border-surface-muted bg-brand-wash/40 p-6 md:p-8">
                   <h3 className="font-heading text-2xl font-semibold text-brand-primary">
@@ -275,10 +285,12 @@ export default async function HomePage() {
         <section className="section-pad">
           <div className="container-page">
             <h2 className="font-heading text-3xl font-semibold text-brand-primary">
-              On this day
+              {hasTodayEvent ? "On this day" : "Upcoming anniversaries"}
             </h2>
             <p className="mt-2 max-w-2xl text-ink-muted">
-              Upcoming anniversaries tied to full sourced SeeStew stories — not thin date stubs.
+              {hasTodayEvent
+                ? `Sourced SeeStew stories for ${monthName(today.month)} ${today.day} — not a thin date stub.`
+                : `No curated anniversary is verified for ${monthName(today.month)} ${today.day}. Nearby dates below are real events from the library, not “today.”`}
             </p>
             <ul className="mt-8 grid gap-4 md:grid-cols-3">
               {onThisDayItems.map((ann) => {

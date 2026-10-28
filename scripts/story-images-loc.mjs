@@ -2,7 +2,7 @@
  * Shared LOC image search + local card download for full stories and Quick Reads.
  */
 
-import { mkdirSync, writeFileSync } from "fs";
+import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
 import { join } from "path";
 
 const PUBLIC_STORIES = join(process.cwd(), "public", "stories");
@@ -55,8 +55,35 @@ export async function downloadLocalCard(slug, remoteUrl) {
   return null;
 }
 
+function copyParentCard(parentSlug, slug) {
+  if (!parentSlug || parentSlug === slug) return null;
+  const parentFile = join(PUBLIC_STORIES, parentSlug, "card.jpg");
+  if (!existsSync(parentFile)) return null;
+  const dir = join(PUBLIC_STORIES, slug);
+  mkdirSync(dir, { recursive: true });
+  copyFileSync(parentFile, join(dir, "card.jpg"));
+  return `/stories/${slug}/card.jpg`;
+}
+
+function parentArticleImage(parentSlug) {
+  if (!parentSlug) return null;
+  try {
+    const raw = readFileSync(join(process.cwd(), "content", "articles", `${parentSlug}.json`), "utf8");
+    const a = JSON.parse(raw);
+    return a.image || null;
+  } catch {
+    return null;
+  }
+}
+
 export async function attachLocImage(queueItem, title, slug) {
-  const loc = await searchLocImage(queueItem.imageSearchTerms);
+  const terms = [
+    ...(queueItem.imageSearchTerms || []),
+    title,
+    queueItem.title,
+  ].filter(Boolean);
+
+  const loc = await searchLocImage(terms);
   if (loc?.imageUrl) {
     const localPath = await downloadLocalCard(slug, loc.imageUrl);
     const card = localPath || loc.imageUrl;
@@ -68,6 +95,24 @@ export async function attachLocImage(queueItem, title, slug) {
       sourcePageUrl: loc.pageUrl,
     };
   }
+
+  // Companion Quick Reads may reuse the parent's archival card (same credit).
+  const parentSlug =
+    queueItem.parentArticleSlug ||
+    (queueItem.relatedArticleSlugs && queueItem.relatedArticleSlugs[0]) ||
+    null;
+  const copied = copyParentCard(parentSlug, slug);
+  if (copied) {
+    const parentImg = parentArticleImage(parentSlug);
+    return {
+      card: copied,
+      hero: copied,
+      alt: title,
+      credit: parentImg?.credit || "Library of Congress",
+      sourcePageUrl: parentImg?.sourcePageUrl,
+    };
+  }
+
   return {
     imagePrompt: `Historic editorial illustration: ${queueItem.title}. ${queueItem.angle || ""}. Period-accurate, muted tones, no text, no logos.`,
     alt: title,

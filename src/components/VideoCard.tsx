@@ -35,7 +35,7 @@ export function VideoCard({ video }: { video: YouTubeVideo }) {
               alt={video.title}
               fill
               className="object-cover transition group-hover:scale-[1.02]"
-              sizes="(max-width: 768px) 100vw, 33vw"
+              sizes="(max-width: 768px) 100vw, 400px"
             />
             <span className="absolute left-2 top-2 rounded-md bg-brand-bright px-2 py-0.5 text-xs font-medium text-white">
               {video.format === "short" ? "Short" : "Video"}

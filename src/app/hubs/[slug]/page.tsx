@@ -43,9 +43,15 @@ export default async function HistoryHubPage({ params }: Props) {
   if (articles.length < HUB_MIN_ARTICLES) notFound();
 
   const url = `${siteConfig.url}/hubs/${slug}`;
-  const relatedHubs = getPopulatedHistoryHubs(getAllArticles())
+  const allHubs = getPopulatedHistoryHubs(getAllArticles());
+  const relatedHubs = allHubs
     .filter((h) => h.slug !== slug)
-    .slice(0, 4);
+    .sort((a, b) => {
+      const aSame = a.kind === hub.kind ? 0 : 1;
+      const bSame = b.kind === hub.kind ? 0 : 1;
+      return aSame - bSame || b.count - a.count;
+    })
+    .slice(0, 6);
   const networkPlacements = placementsForHub(slug);
 
   return (
