@@ -5326,9 +5326,9 @@
       "imageSearchTerms": [
         "Winecoff Hotel fire Atlanta 1946"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "winecoff-hotel-fire-1946",
+      "publishedAt": "2026-10-28T16:31:49.167Z",
       "eventYear": 1946,
       "historicalEra": "postwar-cold-war"
     },

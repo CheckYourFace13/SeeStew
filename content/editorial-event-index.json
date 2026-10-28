@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-27T15:48:40.424Z",
-  "publishedCount": 128,
-  "queueCount": 30,
+  "generatedAt": "2026-10-28T16:31:49.281Z",
+  "publishedCount": 129,
+  "queueCount": 29,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -1386,6 +1386,33 @@
       ],
       "opening": "The Chicago Rally That Changed Labor History On May 1, 1886, Chicago became the epicenter of a burgeoning labor movement advocating for the eight-hour workday. Thousands gathered in Haymarket Square, a site that would soon become synonymous with tragedy and injustice [1].",
       "contentChars": 10444
+    },
+    {
+      "slug": "hinckley-fire-1894",
+      "title": "The Hinckley Firestorm of 1894: A Train Escape Through a Burning Forest",
+      "excerpt": "A Minnesota firestorm killed hundreds — and a train engineer raced survivors through flames to safety. (Hinckley fire 1894)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1894,
+      "publishedAt": "2026-10-27T15:48:40.074Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "hinckley-fire::1894",
+      "titleEventKey": "hinckley-firestorm-train-escape-burning-forest::1894",
+      "places": [
+        "hinckley",
+        "minnesota"
+      ],
+      "namedHints": [
+        "hinckley",
+        "firestorm",
+        "train",
+        "escape",
+        "burning",
+        "forest"
+      ],
+      "opening": "The Hinckley Firestorm of 1894: A Deadly Inferno in Minnesota On September 1, 1894, a catastrophic firestorm swept through the small town of Hinckley, Minnesota, claiming the lives of hundreds and leaving a lasting scar on the community. The Great Hinckley Fire, fueled by severe drought conditions and high winds, engulfed the surrounding forests and towns, creating a wall of flames that threatened to consume everything in its path.",
+      "contentChars": 10496
     },
     {
       "slug": "homestead-strike-1892",
@@ -3570,32 +3597,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "winecoff-hotel-fire-1946",
-      "title": "The Winecoff Hotel Fire: America’s Deadliest Hotel Blaze",
-      "excerpt": "Atlanta’s “fireproof” Winecoff Hotel burned in 1946, killing 119 people and rewriting hotel safety codes.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1946,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "Why exits failed, how guests jumped, the death toll, and the code changes that followed.",
-      "canonicalEventId": "winecoff-hotel-fire::1946",
-      "titleEventKey": "winecoff-hotel-fire-america-deadliest-hotel-blaze::1946",
-      "places": [
-        "atlanta"
-      ],
-      "namedHints": [
-        "winecoff",
-        "hotel",
-        "fire",
-        "americas",
-        "deadliest",
-        "blaze"
-      ],
-      "opening": "Atlanta’s “fireproof” Winecoff Hotel burned in 1946, killing 119 people and rewriting hotel safety codes. Why exits failed, how guests jumped, the death toll, and the code changes that followed.",
-      "contentChars": 262
-    },
-    {
       "slug": "tri-state-tornado-1925",
       "title": "The Tri-State Tornado of 1925: The Longest Tracked Tornado Path in U.S. History",
       "excerpt": "One supercell carved a death path across Missouri, Illinois, and Indiana — still unmatched in tracked length.",
@@ -4355,31 +4356,31 @@
       "contentChars": 238
     },
     {
-      "slug": "hinckley-fire-1894",
-      "title": "The Hinckley Firestorm of 1894: A Train Escape Through a Burning Forest",
-      "excerpt": "A Minnesota firestorm killed hundreds — and a train engineer raced survivors through flames to safety. (Hinckley fire 1894)",
+      "slug": "winecoff-hotel-fire-1946",
+      "title": "The Winecoff Hotel Fire: America’s Deadliest Hotel Blaze",
+      "excerpt": "Atlanta’s “fireproof” Winecoff Hotel burned in 1946, killing 119 people and rewriting hotel safety codes. (Winecoff Hotel fire)",
       "format": "full",
       "source": "published",
-      "eventYear": 1894,
-      "publishedAt": "2026-10-27T15:48:40.074Z",
+      "eventYear": 1946,
+      "publishedAt": "2026-10-28T16:31:49.107Z",
       "parentArticleSlug": null,
       "editorialAngle": null,
-      "canonicalEventId": "hinckley-fire::1894",
-      "titleEventKey": "hinckley-firestorm-train-escape-burning-forest::1894",
+      "canonicalEventId": "winecoff-hotel-fire::1946",
+      "titleEventKey": "winecoff-hotel-fire-america-deadliest-hotel-blaze::1946",
       "places": [
-        "hinckley",
-        "minnesota"
+        "atlanta",
+        "georgia"
       ],
       "namedHints": [
-        "hinckley",
-        "firestorm",
-        "train",
-        "escape",
-        "burning",
-        "forest"
+        "winecoff",
+        "hotel",
+        "fire",
+        "americas",
+        "deadliest",
+        "blaze"
       ],
-      "opening": "The Hinckley Firestorm of 1894: A Deadly Inferno in Minnesota On September 1, 1894, a catastrophic firestorm swept through the small town of Hinckley, Minnesota, claiming the lives of hundreds and leaving a lasting scar on the community. The Great Hinckley Fire, fueled by severe drought conditions and high winds, engulfed the surrounding forests and towns, creating a wall of flames that threatened to consume everything in its path.",
-      "contentChars": 10496
+      "opening": "The Tragic Winecoff Hotel Fire of 1946 in Atlanta On December 7, 1946, the Winecoff Hotel in Atlanta, Georgia, became the site of one of the deadliest hotel fires in U.S. history.",
+      "contentChars": 10161
     }
   ]
 }
