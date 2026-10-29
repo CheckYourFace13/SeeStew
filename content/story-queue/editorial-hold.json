@@ -1,4 +1,14 @@
 {
   "version": 1,
-  "items": []
+  "items": [
+    {
+      "slug": "qr-molasses-plaque-2019",
+      "title": "The Molasses Flood Plaque Came a Century Late",
+      "format": "quick-read",
+      "action": "hold_for_review",
+      "queueId": "qr-molasses-plaque-2019",
+      "at": "2026-10-29T23:45:42.272Z",
+      "reason": "Queue hook claims the first permanent plaque arrived in 2019. The Bostonian Society marker at Langone Park dates to the mid-1990s; 2019 coverage described that existing plaque as inadequate. Do not publish the century-late-first-plaque claim."
+    }
+  ]
 }

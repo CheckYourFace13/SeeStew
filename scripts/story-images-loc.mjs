@@ -76,6 +76,38 @@ function parentArticleImage(parentSlug) {
   }
 }
 
+const LOC_IRRELEVANT =
+  /etymolog|pronouncing dictionary|dictionary of the english language|book of general reference/i;
+const LOC_STOP = new Set([
+  "from",
+  "that",
+  "this",
+  "with",
+  "what",
+  "when",
+  "where",
+  "used",
+  "real",
+  "why",
+  "how",
+  "the",
+  "and",
+  "for",
+]);
+
+function locResultRelevant(locTitle, terms) {
+  const title = String(locTitle || "");
+  if (LOC_IRRELEVANT.test(title)) return false;
+  const tokens = terms
+    .join(" ")
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .filter((w) => w.length >= 4 && !LOC_STOP.has(w));
+  if (!tokens.length) return true;
+  const hay = title.toLowerCase();
+  return tokens.some((tok) => hay.includes(tok));
+}
+
 export async function attachLocImage(queueItem, title, slug) {
   const terms = [
     ...(queueItem.imageSearchTerms || []),
@@ -84,7 +116,12 @@ export async function attachLocImage(queueItem, title, slug) {
   ].filter(Boolean);
 
   const loc = await searchLocImage(terms);
-  if (loc?.imageUrl) {
+  if (loc?.imageUrl && !locResultRelevant(loc.title, terms)) {
+    console.warn(
+      `LOC hit for ${slug} looks unrelated (${loc.title}). Will try parent card.`
+    );
+  }
+  if (loc?.imageUrl && locResultRelevant(loc.title, terms)) {
     const localPath = await downloadLocalCard(slug, loc.imageUrl);
     if (localPath) {
       return {

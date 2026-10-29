@@ -1,0 +1,45 @@
+{
+  "slug": "qr-able-archer-one-detail",
+  "title": "Why Able Archer Used Real Nuclear Release Procedures",
+  "excerpt": "The 1983 NATO exercise’s realism — not just its name — is what rattled opposing intelligence watchers. (Able Archer 83 procedures)",
+  "seoTitle": "Able Archer 83 procedures",
+  "seoDescription": "The 1983 NATO exercise’s realism — not just its name — is what rattled opposing intelligence watchers. (Able Archer 83 procedures)",
+  "readMinutes": 2,
+  "category": "Military",
+  "format": "quick-read",
+  "eventYear": 1983,
+  "historicalEra": "postwar-cold-war",
+  "parentArticleSlug": "able-archer-83",
+  "editorialAngle": "Able Archer command procedures vs routine drills",
+  "canonicalEventId": "able-archer-procedures::1983",
+  "relatedArticleSlugs": [
+    "able-archer-83"
+  ],
+  "content": "Able Archer 83 was not a field maneuver. It was NATO’s annual Allied Command Europe command-post exercise: headquarters practicing the paperwork and message traffic for moving from conventional operations into nuclear release. A SHAPE historical summary and a Strategic Air Command after-action report date the exercise itself to 7–11 November 1983 — three days of conventional “low-spectrum” play, then two days of nuclear-warfare simulation. A March 1984 British intelligence note described related communications from 2–11 November, including pre-exercise traffic that notionally moved forces through alert phases to General Alert [1].\n\nThe detail that mattered to opposing watchers was procedural, not theatrical. In 1983 the detailed NATO procedures and message formats for the transition from conventional to nuclear war were substantially changed. Able Archer practiced those revised nuclear-release procedures. It did not fire weapons, put troops on the ground, or bring national political leaders into the play — SHAPE later emphasized that directing staff simulated NATO political authorities. What the traffic looked like, from outside, was the real release sequence rather than a simplified drill script [1].\n\nThat distinction was easy to lose in 1983. U.S. Pershing II and cruise-missile deployments in Europe were already a live political fact, and Soviet intelligence was watching NATO command channels for signs of a surprise attack. When an annual CPX used realistic release procedures and stepped through alert phases, the same messages that trained NATO staffs could be read as cover for a first strike [2].\n\nLater declassified U.S. and NATO records treat Able Archer as a procedures scare for that reason. The danger was not that NATO had begun a war. It was that the command sequence for authorizing nuclear use, practiced in real formats, was hard to tell from the opening moves of one [3].\n\n## Sources\n\n1. Able Archer 83 — *National Security Archive*. [Link](https://nsarchive.gwu.edu/briefing-book/aa83)\n2. CIA Reading Room — *CIA*. [Link](https://www.cia.gov/readingroom/)\n3. Cold War crises — *National Archives*. [Link](https://www.archives.gov/)",
+  "references": [
+    {
+      "title": "Able Archer 83",
+      "publisher": "National Security Archive",
+      "url": "https://nsarchive.gwu.edu/briefing-book/aa83"
+    },
+    {
+      "title": "CIA Reading Room",
+      "publisher": "CIA",
+      "url": "https://www.cia.gov/readingroom/"
+    },
+    {
+      "title": "Cold War crises",
+      "publisher": "National Archives",
+      "url": "https://www.archives.gov/"
+    }
+  ],
+  "image": {
+    "card": "/stories/qr-able-archer-one-detail/card.jpg",
+    "hero": "/stories/qr-able-archer-one-detail/card.jpg",
+    "alt": "Why Able Archer Used Real Nuclear Release Procedures",
+    "credit": "Library of Congress",
+    "sourcePageUrl": "https://www.loc.gov/item/a18001635/"
+  },
+  "relatedVideoId": null,
+  "createdAt": "2026-10-29T23:47:27.791Z"
+}

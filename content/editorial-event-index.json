@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-29T16:47:58.225Z",
-  "publishedCount": 130,
-  "queueCount": 28,
+  "generatedAt": "2026-10-29T23:47:28.179Z",
+  "publishedCount": 131,
+  "queueCount": 26,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -3211,6 +3211,34 @@
       "contentChars": 12967
     },
     {
+      "slug": "tri-state-tornado-1925",
+      "title": "The Tri-State Tornado of 1925: The Longest Tracked Tornado Path in U.S. History",
+      "excerpt": "One supercell carved a death path across Missouri, Illinois, and Indiana — still unmatched in tracked length. (Tri-State Tornado 1925)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1925,
+      "publishedAt": "2026-10-29T16:47:57.970Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "tri-state-tornado::1925",
+      "titleEventKey": "tri-state-tornado-longest-tracked-tornado-path-history::1925",
+      "places": [
+        "missouri",
+        "illinois",
+        "indiana"
+      ],
+      "namedHints": [
+        "tri-state",
+        "tornado",
+        "longest",
+        "tracked",
+        "path",
+        "history"
+      ],
+      "opening": "The Tri-State Tornado of 1925: A Devastating Path Across America On March 18, 1925, a single supercell thunderstorm unleashed a catastrophic tornado that carved a path of destruction across three states: Missouri, Illinois, and Indiana. Known as the Tri-State Tornado, this event holds the record for the longest tornado path in U.S.",
+      "contentChars": 15039
+    },
+    {
       "slug": "triangle-shirtwaist-fire-1911",
       "title": "The Triangle Shirtwaist Fire: 146 Garment Workers Locked Inside a Burning Factory",
       "excerpt": "Young women jumped from windows; the tragedy sparked labor law and fire exit reforms.",
@@ -4209,57 +4237,6 @@
       "contentChars": 263
     },
     {
-      "slug": "qr-molasses-plaque-2019",
-      "title": "The Molasses Flood Plaque Came a Century Late",
-      "excerpt": "Boston’s North End waited until 2019 for a permanent plaque marking the 1919 disaster.",
-      "format": "quick-read",
-      "source": "queue-quick-read",
-      "eventYear": 2019,
-      "publishedAt": null,
-      "parentArticleSlug": "great-molasses-flood-1919",
-      "editorialAngle": "centennial plaque delay and Langone Park memorial wording",
-      "canonicalEventId": "molasses-flood-plaque::2019",
-      "titleEventKey": "molasses-flood-plaque-came-century-late::2019",
-      "places": [
-        "boston"
-      ],
-      "namedHints": [
-        "molasses",
-        "flood",
-        "plaque",
-        "came",
-        "century",
-        "late"
-      ],
-      "opening": "Boston’s North End waited until 2019 for a permanent plaque marking the 1919 disaster. Why the flood was treated as a curiosity for decades, and what the centennial memorial finally recorded.",
-      "contentChars": 235
-    },
-    {
-      "slug": "qr-able-archer-one-detail",
-      "title": "Why Able Archer Used Real Nuclear Release Procedures",
-      "excerpt": "The 1983 NATO exercise’s realism — not just its name — is what rattled opposing intelligence watchers.",
-      "format": "quick-read",
-      "source": "queue-quick-read",
-      "eventYear": 1983,
-      "publishedAt": null,
-      "parentArticleSlug": "able-archer-83",
-      "editorialAngle": "Able Archer command procedures vs routine drills",
-      "canonicalEventId": "able-archer-procedures::1983",
-      "titleEventKey": "able-archer-used-real-nuclear-release-procedures::1983",
-      "places": [],
-      "namedHints": [
-        "able",
-        "archer",
-        "used",
-        "real",
-        "nuclear",
-        "release",
-        "procedures"
-      ],
-      "opening": "The 1983 NATO exercise’s realism — not just its name — is what rattled opposing intelligence watchers. One sourced detail: how Able Archer’s command procedures differed from routine drills.",
-      "contentChars": 241
-    },
-    {
       "slug": "qr-gaspee-aground",
       "title": "How a Sandbar Doomed HMS Gaspee",
       "excerpt": "The British customs schooner only became vulnerable after she chased a packet onto a Rhode Island sandbar.",
@@ -4355,32 +4332,29 @@
       "contentChars": 238
     },
     {
-      "slug": "tri-state-tornado-1925",
-      "title": "The Tri-State Tornado of 1925: The Longest Tracked Tornado Path in U.S. History",
-      "excerpt": "One supercell carved a death path across Missouri, Illinois, and Indiana — still unmatched in tracked length. (Tri-State Tornado 1925)",
-      "format": "full",
+      "slug": "qr-able-archer-one-detail",
+      "title": "Why Able Archer Used Real Nuclear Release Procedures",
+      "excerpt": "The 1983 NATO exercise’s realism — not just its name — is what rattled opposing intelligence watchers. (Able Archer 83 procedures)",
+      "format": "quick-read",
       "source": "published",
-      "eventYear": 1925,
-      "publishedAt": "2026-10-29T16:47:57.970Z",
-      "parentArticleSlug": null,
-      "editorialAngle": null,
-      "canonicalEventId": "tri-state-tornado::1925",
-      "titleEventKey": "tri-state-tornado-longest-tracked-tornado-path-history::1925",
-      "places": [
-        "missouri",
-        "illinois",
-        "indiana"
-      ],
+      "eventYear": 1983,
+      "publishedAt": "2026-10-29T23:47:27.791Z",
+      "parentArticleSlug": "able-archer-83",
+      "editorialAngle": "Able Archer command procedures vs routine drills",
+      "canonicalEventId": "able-archer-procedures::1983",
+      "titleEventKey": "able-archer-used-real-nuclear-release-procedures::1983",
+      "places": [],
       "namedHints": [
-        "tri-state",
-        "tornado",
-        "longest",
-        "tracked",
-        "path",
-        "history"
+        "able",
+        "archer",
+        "used",
+        "real",
+        "nuclear",
+        "release",
+        "procedures"
       ],
-      "opening": "The Tri-State Tornado of 1925: A Devastating Path Across America On March 18, 1925, a single supercell thunderstorm unleashed a catastrophic tornado that carved a path of destruction across three states: Missouri, Illinois, and Indiana. Known as the Tri-State Tornado, this event holds the record for the longest tornado path in U.S.",
-      "contentChars": 15039
+      "opening": "In November 1983, NATO conducted a military exercise called Able Archer 83, which alarmed Soviet intelligence to the point that they believed a real nuclear strike was imminent. This exercise, held from November 2 to November 11, was notable not just for its scale but also for the unprecedented realism of its command procedures.",
+      "contentChars": 2347
     }
   ]
 }

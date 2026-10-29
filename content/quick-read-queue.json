@@ -40,8 +40,13 @@
       "imageSearchTerms": [
         "Boston molasses flood memorial plaque"
       ],
-      "status": "pending",
-      "format": "quick-read"
+      "status": "editorial_review",
+      "format": "quick-read",
+      "editorialHold": {
+        "action": "hold_for_review",
+        "at": "2026-10-29T23:45:42.272Z",
+        "reason": "Queue hook claims the first permanent plaque arrived in 2019. The Bostonian Society marker at Langone Park dates to the mid-1990s; 2019 coverage described that existing plaque as inadequate. Do not publish the century-late-first-plaque claim."
+      }
     },
     {
       "id": "qr-able-archer-one-detail",
@@ -51,7 +56,9 @@
       "angle": "One sourced detail: how Able Archer’s command procedures differed from routine drills.",
       "editorialAngle": "Able Archer command procedures vs routine drills",
       "parentArticleSlug": "able-archer-83",
-      "relatedArticleSlugs": ["able-archer-83"],
+      "relatedArticleSlugs": [
+        "able-archer-83"
+      ],
       "canonicalEventId": "able-archer-procedures::1983",
       "eventYear": 1983,
       "historicalEra": "postwar-cold-war",
@@ -79,8 +86,10 @@
       "imageSearchTerms": [
         "Able Archer 83 NATO Cold War"
       ],
-      "status": "pending",
-      "format": "quick-read"
+      "status": "published",
+      "format": "quick-read",
+      "publishedSlug": "qr-able-archer-one-detail",
+      "publishedAt": "2026-10-29T23:47:27.795Z"
     },
     {
       "id": "qr-gaspee-aground",
@@ -90,7 +99,9 @@
       "angle": "The grounding that made the 1772 burning possible — one concrete episode, not a full war narrative.",
       "editorialAngle": "Gaspee grounding on Rhode Island sandbar before the burning",
       "parentArticleSlug": "gaspee-affair-1772",
-      "relatedArticleSlugs": ["gaspee-affair-1772"],
+      "relatedArticleSlugs": [
+        "gaspee-affair-1772"
+      ],
       "canonicalEventId": "gaspee-sandbar::1772",
       "eventYear": 1772,
       "historicalEra": "colonial-america",
@@ -211,7 +222,9 @@
       "angle": "One mechanical failure and the cook-off chain that followed — not the full carrier narrative.",
       "editorialAngle": "Zuni rocket misfire as the Forrestal fire ignition point",
       "parentArticleSlug": "uss-forrestal-fire-1967",
-      "relatedArticleSlugs": ["uss-forrestal-fire-1967"],
+      "relatedArticleSlugs": [
+        "uss-forrestal-fire-1967"
+      ],
       "canonicalEventId": "forrestal-zuni::1967",
       "eventYear": 1967,
       "historicalEra": "postwar-cold-war",
