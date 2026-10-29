@@ -18,11 +18,13 @@
     "init:queue": "node scripts/init-story-queue.mjs",
     "backfill:eras": "node scripts/backfill-historical-eras.mjs",
     "check:story-images": "npx --yes tsx scripts/check-story-images.ts",
+    "check:quick-read-assets": "node scripts/check-quick-read-assets.mjs",
     "check:affiliate-links": "npx --yes tsx scripts/check-affiliate-links.ts",
     "check:affiliate-placements": "node scripts/check-affiliate-placements.mjs",
     "check:cj-api": "node scripts/check-cj-api.mjs",
     "check:article-quality": "npx --yes tsx scripts/check-article-quality.ts",
     "check:editorial-originality": "node scripts/test-editorial-originality.mjs",
+    "check:qr-file-validation": "node scripts/test-qr-file-validation.mjs",
     "audit:editorial-duplicates": "node scripts/editorial-duplicate-audit.mjs",
     "check:seo-snippets": "node scripts/check-seo-snippets.mjs",
     "check:internal-links": "node scripts/check-internal-links.mjs",
@@ -44,7 +46,7 @@
   },
   "dependencies": {
     "next": "^15.5.28",
-    "nodemailer": "^10.0.14",
+    "nodemailer": "^10.1.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },

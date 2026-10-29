@@ -9,11 +9,11 @@
  *   DRY_RUN=1 or --dry-run — select next topic only, write nothing
  */
 
-import { readdirSync, existsSync, mkdirSync, writeFileSync } from "fs";
+import { readdirSync, existsSync, mkdirSync, rmSync, writeFileSync } from "fs";
 import { join } from "path";
-import { validateStory } from "./article-validation.mjs";
+import { validateStory, validateArticleFile } from "./article-validation.mjs";
 import { createGenerator } from "./story-generator.mjs";
-import { attachLocImage } from "./story-images-loc.mjs";
+import { attachLocImage, assertLocalStoryCard } from "./story-images-loc.mjs";
 import {
   loadQuickReadQueue,
   saveQuickReadQueue,
@@ -34,6 +34,9 @@ import { canonicalEventIdFromSlug } from "./editorial/normalize.mjs";
 const CONTENT_DIR = join(process.cwd(), "content", "articles");
 const DRY_RUN =
   process.env.DRY_RUN === "1" || process.argv.includes("--dry-run");
+const TEST_MODE =
+  process.env.SEESTEW_QR_TEST === "1" || process.argv.includes("--test");
+if (TEST_MODE) process.env.SEESTEW_EDITORIAL_TEST = "1";
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
 const PRIMARY_MODEL = process.env.OPENROUTER_MODEL || "openai/gpt-4o-mini";
 
@@ -71,7 +74,7 @@ async function main() {
       item.publishedAt = item.publishedAt || new Date().toISOString();
     }
   }
-  if (!DRY_RUN) saveQuickReadQueue(queue);
+  if (!DRY_RUN && !TEST_MODE) saveQuickReadQueue(queue);
 
   const skipHeld = new Set(
     (queue.items || [])
@@ -100,6 +103,10 @@ async function main() {
   if (DRY_RUN) {
     console.log("\nDRY_RUN=1 — selected topic only; no LLM call, no files written.");
     process.exit(0);
+  }
+
+  if (TEST_MODE) {
+    console.log("\nTEST_MODE — full generation, no queue/index publish, artifacts cleaned up.");
   }
 
   if (!OPENROUTER_API_KEY) {
@@ -153,7 +160,7 @@ async function main() {
     console.error(`\nEditorial gate: ${gate.action.toUpperCase()}`);
     console.error(JSON.stringify(gate.report.blocks.concat(gate.report.holds), null, 2));
     const qi = (queue.items || []).find((i) => i.id === queueItem.id);
-    if (qi) {
+    if (qi && !TEST_MODE) {
       qi.status = "editorial_review";
       qi.editorialHold = {
         action: gate.action,
@@ -165,7 +172,7 @@ async function main() {
       };
       saveQuickReadQueue(queue);
     }
-    markHeldForReview({
+    if (!TEST_MODE) markHeldForReview({
       slug: draft.slug,
       title: draft.title,
       format: "quick-read",
@@ -185,11 +192,13 @@ async function main() {
   console.log(`\nFinal: ${stats.bodyWords} body words, ${stats.citations} citations, ${stats.refs} refs`);
 
   const image = await attachLocImage(queueItem, draft.title, draft.slug);
-  if (!image.card) {
-    console.error("ERROR: No story image available — refusing to publish Quick Read without image.");
-    console.error("::error::Quick Read missing image");
+  const asset = assertLocalStoryCard(draft.slug, image);
+  if (!asset.ok) {
+    console.error(`ERROR: No local story image — ${asset.errors.join("; ")}`);
+    console.error(`::error::Quick Read missing image — ${asset.errors.join("; ")}`);
     process.exit(1);
   }
+  console.log(`Local card: public/stories/${draft.slug}/card.jpg`);
 
   const bodyWords = stats.bodyWords;
   const readMinutes = Math.max(1, Math.min(3, Math.ceil(bodyWords / 200)));
@@ -220,6 +229,32 @@ async function main() {
     relatedVideoId: null,
     createdAt: now,
   };
+
+  const fileCheck = validateArticleFile(article);
+  if (!fileCheck.ok) {
+    console.error(`ERROR: Article file validation failed: ${fileCheck.errors.join("; ")}`);
+    console.error(`::error::Quick Read article validation failed — ${fileCheck.errors.join("; ")}`);
+    process.exit(1);
+  }
+
+  if (TEST_MODE) {
+    const tmpDir = join(process.cwd(), "tmp", "qr-test");
+    mkdirSync(tmpDir, { recursive: true });
+    writeFileSync(join(tmpDir, `${draft.slug}.json`), JSON.stringify(article, null, 2) + "\n", "utf-8");
+    console.log(`\nTEST wrote tmp/qr-test/${draft.slug}.json`);
+    console.log("Would commit:");
+    console.log(`  content/articles/${draft.slug}.json`);
+    console.log(`  public/stories/${draft.slug}/card.jpg`);
+    console.log("  content/quick-read-queue.json");
+    console.log("  content/editorial-event-index.json");
+    const createdCardDir = join(process.cwd(), "public", "stories", draft.slug);
+    if (existsSync(createdCardDir)) {
+      rmSync(createdCardDir, { recursive: true, force: true });
+      console.log(`TEST cleanup: removed ${createdCardDir}`);
+    }
+    console.log("TEST_MODE complete — queue and index unchanged; nothing published.");
+    process.exit(0);
+  }
 
   writeFileSync(join(CONTENT_DIR, `${draft.slug}.json`), JSON.stringify(article, null, 2) + "\n", "utf-8");
   markQuickReadPublished(queue, queueItem.id, draft.slug);

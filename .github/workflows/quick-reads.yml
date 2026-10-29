@@ -78,6 +78,10 @@ jobs:
         if: success()
         run: node scripts/fetch-all-story-images.mjs
 
+      - name: Check Quick Read assets
+        if: success()
+        run: npm run check:quick-read-assets
+
       - name: Validate articles
         if: success()
         run: npm run validate:articles

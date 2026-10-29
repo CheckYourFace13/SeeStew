@@ -2,7 +2,7 @@
  * Shared LOC image search + local card download for full stories and Quick Reads.
  */
 
-import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
+import { copyFileSync, existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from "fs";
 import { join } from "path";
 
 const PUBLIC_STORIES = join(process.cwd(), "public", "stories");
@@ -86,14 +86,18 @@ export async function attachLocImage(queueItem, title, slug) {
   const loc = await searchLocImage(terms);
   if (loc?.imageUrl) {
     const localPath = await downloadLocalCard(slug, loc.imageUrl);
-    const card = localPath || loc.imageUrl;
-    return {
-      card,
-      hero: card,
-      alt: loc.title || title,
-      credit: "Library of Congress",
-      sourcePageUrl: loc.pageUrl,
-    };
+    if (localPath) {
+      return {
+        card: localPath,
+        hero: localPath,
+        alt: loc.title || title,
+        credit: "Library of Congress",
+        sourcePageUrl: loc.pageUrl,
+      };
+    }
+    console.warn(
+      `LOC hit for ${slug} but local download failed (${loc.imageUrl}). Will try parent card.`
+    );
   }
 
   // Companion Quick Reads may reuse the parent's archival card (same credit).
@@ -104,6 +108,7 @@ export async function attachLocImage(queueItem, title, slug) {
   const copied = copyParentCard(parentSlug, slug);
   if (copied) {
     const parentImg = parentArticleImage(parentSlug);
+    console.log(`Using parent card from ${parentSlug} for ${slug}`);
     return {
       card: copied,
       hero: copied,
@@ -117,4 +122,31 @@ export async function attachLocImage(queueItem, title, slug) {
     imagePrompt: `Historic editorial illustration: ${queueItem.title}. ${queueItem.angle || ""}. Period-accurate, muted tones, no text, no logos.`,
     alt: title,
   };
+}
+
+/** Fail closed: published cards must be a local file, never a remote LOC fallback. */
+export function assertLocalStoryCard(slug, image) {
+  const errors = [];
+  const card = image?.card;
+  if (!card) {
+    errors.push("missing image.card");
+    return { ok: false, errors };
+  }
+  if (/^https?:\/\//i.test(card)) {
+    errors.push(`image.card is a remote URL (local /stories/${slug}/card.jpg required)`);
+    return { ok: false, errors };
+  }
+  if (card !== `/stories/${slug}/card.jpg`) {
+    errors.push(`image.card must be /stories/${slug}/card.jpg (got ${card})`);
+  }
+  const file = join(PUBLIC_STORIES, slug, "card.jpg");
+  if (!existsSync(file)) {
+    errors.push(`missing public/stories/${slug}/card.jpg`);
+  } else {
+    const size = statSync(file).size;
+    if (size < MIN_IMAGE_BYTES) {
+      errors.push(`public/stories/${slug}/card.jpg is ${size} bytes (min ${MIN_IMAGE_BYTES})`);
+    }
+  }
+  return { ok: errors.length === 0, errors };
 }

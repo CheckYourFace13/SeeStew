@@ -70,11 +70,15 @@ const ALT_TEXT = {
 };
 
 function loadQueueQueries() {
-  const queue = JSON.parse(readFileSync(join(ROOT, "content", "story-queue.json"), "utf-8"));
   const map = {};
-  for (const item of queue.items ?? []) {
-    const slug = item.publishedSlug || item.id;
-    if (item.imageSearchTerms?.length) map[slug] = item.imageSearchTerms;
+  for (const file of ["story-queue.json", "quick-read-queue.json"]) {
+    const path = join(ROOT, "content", file);
+    if (!existsSync(path)) continue;
+    const queue = JSON.parse(readFileSync(path, "utf-8"));
+    for (const item of queue.items ?? []) {
+      const slug = item.publishedSlug || item.id;
+      if (item.imageSearchTerms?.length) map[slug] = item.imageSearchTerms;
+    }
   }
   return map;
 }

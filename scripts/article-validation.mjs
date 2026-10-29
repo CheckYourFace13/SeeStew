@@ -150,11 +150,15 @@ export function validateStory(story, { allowedSources, format = "full" } = {}) {
 }
 
 export function validateArticleFile(article) {
-  return validateStory({
-    title: article.title,
-    excerpt: article.excerpt,
-    category: article.category,
-    content: article.content,
-    references: article.references,
-  });
+  return validateStory(
+    {
+      title: article.title,
+      excerpt: article.excerpt,
+      category: article.category,
+      content: article.content,
+      references: article.references,
+      format: article.format,
+    },
+    { format: article.format === "quick-read" ? "quick-read" : "full" }
+  );
 }
