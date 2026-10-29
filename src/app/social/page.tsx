@@ -17,7 +17,7 @@ const socialFaqs = [
   },
   {
     question: "What is the TikTok handle?",
-    answer: "tiktok.com/@see.stew — quick history clips, often tied to the same stories on YouTube.",
+    answer: "tiktok.com/@see.stew — quick history clips from the SeeStew TikTok account.",
   },
 ];
 
@@ -66,8 +66,8 @@ export default function SocialPage() {
             play here with written notes.
           </li>
           <li>
-            <strong className="text-ink">Instagram & TikTok</strong> — @see.stew for daily clips that
-            point back to the longer videos.
+            <strong className="text-ink">Instagram & TikTok</strong> — @see.stew for daily history
+            clips.
           </li>
         </ul>
       </section>

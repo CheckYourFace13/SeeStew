@@ -32,7 +32,7 @@ const topicExtras: Record<
     startHereSlug: "battle-of-los-angeles-1942",
     relatedSlugs: ["weird-america", "scandal", "politics", "revolution"],
     overview:
-      "Military stories here range from wartime scares over empty skies to weapons tests that poisoned islands, nuclear near-misses, ship disasters, and space-program failures tied to government programs. They draw on official histories, agency reports, Congressional investigations, and archives — and they focus on what the records actually show, not on legend. You will find domestic deployments, Cold War accidents, and Revolution-era force used against civilians when those episodes left a clear paper trail. Use this hub to jump into a specific campaign or accident, then cross into Weird America or Scandal when the same event sits at the edge of secrecy and public panic. Shorts and companion videos, when they exist, point back to the same sourced article so the clip is a hook, not a replacement for the evidence.",
+      "Military stories here range from wartime scares over empty skies to weapons tests that poisoned islands, nuclear near-misses, ship disasters, and space-program failures tied to government programs. They draw on official histories, agency reports, Congressional investigations, and archives — and they focus on what the records actually show, not on legend. You will find domestic deployments, Cold War accidents, and Revolution-era force used against civilians when those episodes left a clear paper trail. Use this hub to jump into a specific campaign or accident, then cross into Weird America or Scandal when the same event sits at the edge of secrecy and public panic.",
   },
   crime: {
     moreLabel: "More true crime history",

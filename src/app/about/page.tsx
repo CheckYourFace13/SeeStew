@@ -8,7 +8,7 @@ import { editorProfile } from "@/lib/editor-profile";
 export const metadata: Metadata = {
   title: "About SeeStew",
   description:
-    "SeeStew publishes hard-to-believe true American history stories daily — researched articles with named sources, plus companion videos.",
+    "SeeStew publishes hard-to-believe true American history stories daily — researched articles with named sources — plus independent history videos and shorts.",
   alternates: { canonical: `${siteConfig.url}/about` },
 };
 
@@ -24,12 +24,12 @@ export default function AboutPage() {
         </p>
         <p>
           The heart of the site is original researched writing on{" "}
-          <Link href="/articles">Stories</Link> — long articles with named, linked sources. We also
-          publish companion documentaries on{" "}
+          <Link href="/articles">Stories</Link> — long articles and Quick Reads with named, linked
+          sources. SeeStew also publishes independent history videos on{" "}
           <SocialInlineLink platform="youtube">YouTube</SocialInlineLink> and short clips on{" "}
           <SocialInlineLink platform="instagram">Instagram</SocialInlineLink> and{" "}
-          <SocialInlineLink platform="tiktok">TikTok</SocialInlineLink>, so you can read the full
-          account or watch the deeper cut.
+          <SocialInlineLink platform="tiktok">TikTok</SocialInlineLink>. Those films often cover
+          different subjects from the written archive.
         </p>
         <h2>What we publish</h2>
         <p>
@@ -64,7 +64,7 @@ export default function AboutPage() {
             <Link href="/topics">Topics</Link> — browse by subject
           </li>
           <li>
-            <Link href="/videos">Videos</Link> — long-form companion episodes
+            <Link href="/videos">Videos</Link> — longer history films from the YouTube channel
           </li>
         </ul>
       </div>

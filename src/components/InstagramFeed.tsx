@@ -32,7 +32,7 @@ export function InstagramFeed() {
   return (
     <section>
       <h2 className="font-heading text-3xl font-semibold text-brand-primary md:text-4xl">
-        Clips from the same history
+        History reels
       </h2>
       <p className="mt-2 text-ink-muted">
         Reels on{" "}

@@ -14,7 +14,7 @@ export const revalidate = 1800;
 export const metadata: Metadata = {
   title: "American History Documentaries",
   description:
-    "Companion long-form SeeStew episodes — full-length YouTube videos that expand the researched stories. Prefer a clip? Use Shorts. Prefer to read? Start with Stories.",
+    "Longer SeeStew history videos from YouTube — remarkable events, people, and mysteries. They are an independent collection from the written stories. Prefer a clip? Use Shorts.",
   alternates: { canonical: `${siteConfig.url}/videos` },
 };
 
@@ -32,11 +32,12 @@ export default async function VideosPage() {
       />
       <header className="mb-10 max-w-3xl">
         <h1 className="font-heading text-4xl font-bold text-ink md:text-5xl">
-          Companion long-form episodes
+          History videos
         </h1>
         <p className="mt-4 text-lg text-ink-muted">
-          These are full-length SeeStew documentaries, not shorts. Each episode sits next to the
-          written archive: play one here, then read the sourced story when a match exists. Also on{" "}
+          Longer films from the SeeStew YouTube channel. They cover their own historical subjects —
+          not recaps of the written articles — and range from American history to broader world
+          stories. Also on{" "}
           <SocialInlineLink platform="youtube">@SeeStew</SocialInlineLink>.
         </p>
         <p className="mt-3 text-ink-muted">

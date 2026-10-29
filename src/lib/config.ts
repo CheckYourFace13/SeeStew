@@ -22,7 +22,7 @@ export const siteConfig = {
   name: "SeeStew",
   tagline: "American History & Politics",
   description:
-    "SeeStew publishes hard-to-believe true stories from American history — researched daily articles with named sources, plus documentaries and short clips for the deeper cut.",
+    "SeeStew publishes hard-to-believe true stories from American history — researched daily articles with named sources — plus independent history videos and shorts.",
   url: "https://seestew.com",
   logo: "/logo.png",
   logoLight: "/logo-light.png",

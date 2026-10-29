@@ -224,7 +224,7 @@ export const siteFaqs: FaqItem[] = [
   {
     question: "What is SeeStew?",
     answer:
-      "SeeStew is a daily American history site for hard-to-believe true stories — disasters, scandals, and forgotten events that sound fictional but are documented. Read researched articles on seestew.com; watch companion videos on YouTube at youtube.com/@SeeStew.",
+      "SeeStew is a daily American history site for hard-to-believe true stories — disasters, scandals, and forgotten events that sound fictional but are documented. Read researched articles on seestew.com, and explore separate history videos and shorts on YouTube at youtube.com/@SeeStew.",
   },
   {
     question: "Are the stories real?",
@@ -259,7 +259,7 @@ export const siteFaqs: FaqItem[] = [
   {
     question: "How do articles, videos, and shorts connect?",
     answer:
-      "SeeStew is one archive in three formats. The article is the sourced write-up. A video is a full companion episode when one exists. A short is only a hook for the same story. Related videos and shorts appear on an article only when a real match exists.",
+      "They are three independent collections. Stories are original researched articles. Videos are longer YouTube films with their own subjects. Shorts are quick clips that can cover still different history. A related link appears only when the subjects actually match.",
   },
 ];
 

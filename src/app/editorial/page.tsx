@@ -13,16 +13,18 @@ export default function EditorialPage() {
   return (
     <div className="page-shell-narrow">
       <h1 className="font-heading text-4xl font-bold text-ink">Editorial Standards</h1>
-      <p className="mt-2 text-sm text-ink-muted">Last updated: July 12, 2026</p>
+      <p className="mt-2 text-sm text-ink-muted">Last updated: October 29, 2026</p>
 
       <div className="prose-history mt-8 space-y-6">
         <section>
           <h2>What we publish</h2>
           <p>
-            SeeStew publishes hard-to-believe true stories from American history — researched
-            articles first, with companion video when available. Every story on {siteConfig.url} is
-            written for a general audience and grounded in named, linked sources. We aim to publish
-            new documented stories regularly so readers always have fresh, original content.
+            SeeStew publishes hard-to-believe true stories from American history as original
+            researched articles. Videos and shorts from the SeeStew YouTube channel are separate
+            collections and often cover different historical subjects. Every story on{" "}
+            {siteConfig.url} is written for a general audience and grounded in named, linked
+            sources. We aim to publish new documented stories regularly so readers always have
+            fresh, original content.
           </p>
         </section>
 
@@ -89,7 +91,7 @@ export default function EditorialPage() {
             <Link href="/articles" className="text-brand-mid underline">
               Stories
             </Link>
-            , or watch companion episodes on{" "}
+            , or browse independent history films on{" "}
             <Link href="/videos" className="text-brand-mid underline">
               Videos
             </Link>

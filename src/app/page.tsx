@@ -8,7 +8,6 @@ import { SocialInlineLink } from "@/components/SocialIcons";
 import { StoryCard } from "@/components/StoryCard";
 import { VideoCard } from "@/components/VideoCard";
 import { getAllArticles, getArticle } from "@/lib/articles";
-import { siteConfig } from "@/lib/config";
 import {
   anniversariesForDate,
   datePathSlug,
@@ -60,8 +59,10 @@ export default async function HomePage() {
             True American stories that sound made up
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base text-ink-muted md:text-lg">
-            {siteConfig.description} Every article lists named sources. Companion videos and shorts
-            are the same stories in motion — not a separate, unsourced feed.
+            History is full of stories stranger than fiction. Explore remarkable true events,
+            forgotten disasters, mysteries, scandals, and unexpected moments through SeeStew’s
+            original American history articles, longer videos, and quick shorts — three independent
+            collections, not the same library in different packaging.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link href="/articles" className="btn-primary">
@@ -185,44 +186,44 @@ export default async function HomePage() {
       <section className="section-pad">
         <div className="container-page">
           <h2 className="font-heading text-3xl font-semibold text-brand-primary">
-            How the library connects
+            Three ways to explore history
           </h2>
           <p className="mt-2 max-w-3xl text-ink-muted">
-            SeeStew is one archive in three formats. Start with the article if you want sources.
-            Use video when we have a full episode. Use a short only as the hook — then come back
-            to the write-up.
+            Articles, videos, and shorts are independent collections. Subjects overlap only when
+            the history itself matches — most of the time they cover different events.
           </p>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             <div className="rounded-xl border border-surface-muted bg-surface p-6">
               <h3 className="font-heading text-xl font-semibold text-brand-primary">Stories</h3>
               <p className="mt-2 text-sm text-ink-muted">
-                Researched articles with named, linked sources. This is the record.
+                Discover surprising American history through original, sourced articles and
+                fascinating Quick Reads.
               </p>
               <p className="mt-4">
                 <Link href="/articles" className="text-sm font-medium text-brand-mid underline">
-                  Read stories →
+                  Explore Stories
                 </Link>
               </p>
             </div>
             <div className="rounded-xl border border-surface-muted bg-surface p-6">
               <h3 className="font-heading text-xl font-semibold text-brand-primary">Videos</h3>
               <p className="mt-2 text-sm text-ink-muted">
-                Full-length companion episodes for the same history — not a dump of unrelated clips.
+                Watch longer videos exploring remarkable historical events, people, and mysteries.
               </p>
               <p className="mt-4">
                 <Link href="/videos" className="text-sm font-medium text-brand-mid underline">
-                  Watch videos →
+                  Watch Videos
                 </Link>
               </p>
             </div>
             <div className="rounded-xl border border-surface-muted bg-surface p-6">
               <h3 className="font-heading text-xl font-semibold text-brand-primary">Shorts</h3>
               <p className="mt-2 text-sm text-ink-muted">
-                Quick hits under a minute. Useful as a lead-in, then the article does the proving.
+                Enjoy quick, surprising history clips when you only have a minute.
               </p>
               <p className="mt-4">
                 <Link href="/shorts" className="text-sm font-medium text-brand-mid underline">
-                  Watch shorts →
+                  Watch Shorts
                 </Link>
               </p>
             </div>
@@ -233,14 +234,16 @@ export default async function HomePage() {
       <section className="section-pad section-muted">
         <div className="container-page">
           <h2 className="font-heading text-3xl font-semibold text-brand-primary">
-            Watch the deeper cut
+            History on Video
           </h2>
           <p className="mt-2 max-w-2xl text-ink-muted">
-            Prefer video? Long-form documentaries expand the same researched stories on{" "}
+            Longer films from{" "}
             <SocialInlineLink platform="youtube" className="link-nav !font-medium">
               @SeeStew
             </SocialInlineLink>
-            .
+            {" "}
+            covering their own historical subjects — American stories and broader world history,
+            not recaps of the articles above.
           </p>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {longForm.map((video) => (
@@ -259,11 +262,11 @@ export default async function HomePage() {
         <section className="section-pad">
           <div className="container-page">
             <h2 className="font-heading text-3xl font-semibold text-brand-primary">
-              Quick hits
+              History Shorts
             </h2>
             <p className="mt-2 text-ink-muted">
-              Short clips of the same hard-to-believe history — then come back for the full written
-              story.
+              Quick clips from the SeeStew YouTube channel. Their subjects can differ from both
+              the articles and the longer videos.
             </p>
             <div className="mt-8 flex gap-4 overflow-x-auto pb-2">
               {shorts.map((video) => (
@@ -336,7 +339,8 @@ export default async function HomePage() {
             Follow SeeStew
           </h2>
           <p className="mx-auto mt-2 max-w-xl text-center text-ink-muted">
-            Daily stories here. Long episodes and clips on YouTube, Instagram, TikTok, and Facebook.
+            Daily written stories here. Independent videos and shorts on YouTube, with more clips
+            on Instagram, TikTok, and Facebook.
           </p>
           <div className="mt-10">
             <SocialLinks />
@@ -351,7 +355,7 @@ export default async function HomePage() {
             <Link href="/faq" className="text-brand-mid underline">
               Read the full FAQ
             </Link>{" "}
-            for corrections, sources, and how articles, videos, and shorts fit together.
+            for corrections, sources, and how SeeStew works.
           </p>
           <EmailDigestSignup className="mt-10 max-w-xl" />
         </div>

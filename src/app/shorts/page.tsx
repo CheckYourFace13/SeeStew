@@ -12,7 +12,7 @@ export const revalidate = 1800;
 export const metadata: Metadata = {
   title: "American History Shorts",
   description:
-    "SeeStew YouTube Shorts only — quick companion clips for researched American history stories. Watch the full episode or read the article when a match exists.",
+    "SeeStew YouTube Shorts — quick, surprising history clips. Their subjects can differ from both the written articles and the longer videos.",
   alternates: { canonical: `${siteConfig.url}/shorts` },
 };
 
@@ -30,16 +30,16 @@ export default async function ShortsPage() {
           <SocialInlineLink platform="youtube" href={siteConfig.social.youtubeShortsUrl}>
             @SeeStew
           </SocialInlineLink>
-          . This page is clips only — under a minute, not full documentaries. Play a short, then
-          follow a real match to the{" "}
+          . This page is clips only — under a minute, not full documentaries, and not a recap of
+          the written articles. Browse{" "}
           <Link href="/articles" className="text-brand-mid underline">
-            written story
+            Stories
           </Link>{" "}
-          or a{" "}
+          or{" "}
           <Link href="/videos" className="text-brand-mid underline">
-            full-length episode
+            Videos
           </Link>{" "}
-          when one exists.
+          for the other independent collections.
         </p>
       </header>
 

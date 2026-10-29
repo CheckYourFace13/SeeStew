@@ -1,6 +1,6 @@
 # SeeStew growth & speed audit
 
-Date: 2026-10-28  
+Date: 2026-10-28 (updated 2026-10-29)  
 Grokbot items treated as hypotheses. Only verified measurements and justified changes shipped.
 
 **Production target after this pass:** the commit SHA recorded at deploy time (see final report).
@@ -18,7 +18,7 @@ Grokbot items treated as hypotheses. Only verified measurements and justified ch
 
 | Claim | Verdict | Evidence |
 |---|---|---|
-| `/_next/image` returns HTTP 503 | **Not reproduced** | HEAD/GET of logo and story cards at `w=256`, `640`, `1200`, `3840` all returned **200** on 2026-10-28 |
+| `/_next/image` returns HTTP 503 | **Not reproduced 2026-10-28; reproduced 2026-10-29** | 2026-10-28 probes returned 200. 2026-10-29 lab + HTTP: multiple `/_next/image` URLs (logo `w=256`, Hinckley/Forrestal/Seattle `w=828`, Winecoff `w=1200`) returned **503**. Static originals (`/stories/.../card.jpg`) returned **200**. |
 | HTML srcset includes `w=3840` | **Confirmed** | Homepage HTML listed 35 `w=3840` candidates (Next default `deviceSizes`) |
 | Browser actually requests 3840px cards | **Mostly unconfirmed** | Desktop 1440×900 @ 2× DPR selected **`w=750`**. Narrow 491px viewport selected **`w=384`** for above-the-fold cards. Unloaded lazy images exposed 3840 as the fallback `src` attribute (Next default), which can still be requested by crawlers or under memory pressure |
 | Homepage desktop load ~10.5s | **Not reproduced** | Lab, production, 1440×900 @ 2×: TTFB **204 ms**, FCP **424 ms**, `load` **1017 ms**, ~235 KB transfer, 66 requests. Narrow 491px: TTFB **521 ms**, FCP **952 ms**, `load` **1782 ms** |
@@ -33,11 +33,14 @@ Grokbot items treated as hypotheses. Only verified measurements and justified ch
 
 ## Phase 1 — Images & performance
 
-### Root cause (503 risk, not a live 503 today)
+### Root cause
 
-Hostinger Sharp is asked to generate a **3840px** candidate for every `fill` image because Next.js default `deviceSizes` ends at 3840, and that width is the fallback `src`. Combined with several **400 KB–2 MB** local JPEGs (Paxton Boys 1.7 MB, Goldsboro 2.0 MB, Galveston 1.1 MB), optimizer memory spikes can produce intermittent 503s even when a given probe returns 200.
+Two layers:
 
-Lab browsers with correct `sizes` usually pick 384–750. That is not the same as “3840 is never requested.”
+1. **Srcset cap (fixed 2026-10-28):** Next default `deviceSizes` advertised `w=3840` as the fallback `src`. After the cap, HTML no longer contains `w=3840`.
+2. **Hostinger Sharp instability (confirmed 2026-10-29):** `/_next/image` returned **503** for tiny local JPEGs (~16 KB Hinckley/Forrestal) and the logo — not only for 3840px or 2 MB files. Static `/stories/.../card.jpg` stayed **200**. The optimizer process itself is failing under Hostinger memory/CPU, not a single oversized request.
+
+Lab browsers after the size cap requested `w=96/256/828/1200`, never 3840. A large srcset candidate is not the same as a selected request.
 
 ### Fixes
 
@@ -46,7 +49,15 @@ Lab browsers with correct `sizes` usually pick 384–750. That is not the same a
 - Logo `sizes` = 48px / 128px (display usage)
 - Card `sizes` ≈ actual layout; featured card `720px`
 - Video thumbs capped at `400px`
-- Recompressed oversized local `card.jpg` files above 400 KB to max 1200px JPEG q78 (credits/alt unchanged). Goldsboro was **locked on disk** this session and remains large
+- Recompressed oversized local `card.jpg` files above 400 KB to max 1200px JPEG q78 (credits/alt unchanged)
+- Goldsboro card **2.0 MB → 64 KB** (2026-10-29)
+- **`images.unoptimized: true`** so homepage/article images skip Sharp and use the already-small static files. YouTube thumbs load from `i.ytimg.com` directly.
+
+### IndexNow (completed 2026-10-29)
+
+- Key file live; POST to `api.indexnow.org/indexnow` returned **HTTP 200**
+- **64 indexable canonical URLs** submitted: homepage, `/on-this-day`, `/hubs/1870s`, `/hubs/boston-history`, sitemap, and **59** content-rich `/on-this-day/{month}-{day}` URLs from the live sitemap
+- No empty/noindex date stubs submitted (sitemap only lists content-rich dates)
 
 ### Measured before (production, 2026-10-28, pre-deploy)
 
@@ -55,9 +66,17 @@ Lab browsers with correct `sizes` usually pick 384–750. That is not the same a
 | ~491×850 @ 1.25× | 521 ms | 952 ms | 1782 ms | ~813 KB | 68 | 0 | 384 (visible); lazy `src` advertised 3840 |
 | 1440×900 @ 2× | 204 ms | 424 ms | 1017 ms | ~235 KB | 66 | 0 | 750 |
 
-**3-second desktop load target:** already met in this lab **before** code deploy. After deploy, re-measure; do not claim a post-deploy number until the Hostinger build is live.
+**3-second desktop load target:** met in the 2026-10-28 lab **before** image-cap deploy. 2026-10-29 lab at 1440×900 @ 2× (optimizer still on, SHA `26c3a4b`): TTFB **325 ms**, FCP **668 ms**, `load` **2629 ms**, ~425 KB transfer, 53 resources, CLS **0**, **two `/_next/image` 503s** (Hinckley + Forrestal `w=828`). LCP observer empty (installed after first paint). Re-measure after `unoptimized` deploy; do not claim the 503s are gone until that SHA is live.
 
 LCP entries were empty in the CDP sample (LCP observer not installed before first paint). FCP + `load` are the reliable lab numbers here.
+
+---
+
+## Homepage library messaging (2026-10-29)
+
+Public copy had treated Stories, Videos, and Shorts as one archive in three formats. That is false: they are independent collections and often cover different subjects.
+
+Rewrote homepage hero, “Three ways to explore history,” “History on Video,” “History Shorts,” FAQ answers, About, Editorial, Videos/Shorts index metadata, Instagram heading, social FAQ, and the military topic overview. Related article/video links remain only where a real match exists (article `relatedVideoId`, Quick Read parents).
 
 ---
 
@@ -174,21 +193,22 @@ Amazon `seestew-20`, CJ PID 101904039 (no history merchants), Awin 3112962, Send
 
 1. Re-export GSC; if Molasses still pos ≤10 with ~0 CTR, iterate snippet only
 2. Internal links from 1870s / Boston / fire hubs to Triangle, Chicago, Peshtigo (already listed; add in-article links only where historically honest)
-3. Ship first three companion Quick Reads once Thursday’s job can attach parent images
-4. Submit new `/on-this-day/*` URLs via IndexNow after deploy
-5. Compress remaining Goldsboro card when the file is not locked; avoid 2 MB optimizer inputs
+3. Ship first three companion Quick Reads once a scheduled Tuesday/Thursday/Saturday job succeeds with parent images
+4. IndexNow for new `/on-this-day/*` URLs: **done** (HTTP 200, 64 URLs)
+5. Goldsboro card compressed (2.0 MB → 64 KB); Sharp bypassed via `images.unoptimized`
 
 ---
 
 ## Pages changed (this pass)
 
-- `next.config.ts` — image size cap
+- `next.config.ts` — image size cap, then `images.unoptimized` after 503s reproduced
+- Homepage / About / Editorial / FAQ / Videos / Shorts / social copy: independent libraries
 - `src/components/{Logo,StoryCard,VideoCard}.tsx`, `src/app/page.tsx`
 - `src/lib/on-this-day.ts`, `src/lib/history-hubs.ts`, `src/app/hubs/[slug]/page.tsx`
 - `scripts/story-images-loc.mjs`, `scripts/editorial/prepublish-gate.mjs`, tests
 - `content/quick-read-queue.json` — parent slugs
 - `content/articles/operation-paperclip.json` — one verb
-- `public/stories/*/card.jpg` — oversized recompress
+- `public/stories/*/card.jpg` — oversized recompress, including Goldsboro
 - `docs/SEESTEW_GROWTH_SPEED_AUDIT.md`
 
 **Not changed:** published article URLs, canonicals, AdSense slot count, affiliate activation, SendFable, contact SMTP, editor identity.
@@ -197,9 +217,8 @@ Amazon `seestew-20`, CJ PID 101904039 (no history merchants), Awin 3112962, Send
 
 ## Unresolved
 
-- Goldsboro card still ~2 MB (file lock)
-- QR still unpublished until the next scheduled run succeeds
+- QR still unpublished (workflow **active**; GitHub cron often runs hours late). Do not skip quality gates to fill the quota
 - Full-story queue may sit near/below the 30 reserve — refill with a curated batch, not filler
 - AdSense approval unknown
 - GSC not re-exported this session
-- Post-deploy CWV must be re-measured on the new SHA
+- Post-`unoptimized` CWV must be re-measured on the new SHA before claiming 503s are gone in production

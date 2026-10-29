@@ -8,7 +8,7 @@ import { buildFaqJsonLd, siteFaqs } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Answers about SeeStew: whether the stories are real, how often they publish, how sources and corrections work, and how articles, videos, and shorts connect.",
+    "Answers about SeeStew: whether the stories are real, how often they publish, how sources and corrections work, and how articles, videos, and shorts differ.",
   alternates: { canonical: `${siteConfig.url}/faq` },
 };
 

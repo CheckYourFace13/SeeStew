@@ -18,7 +18,7 @@ If you want more on early colonial rivalry, follow SeeStew on [YouTube](${siteCo
 
 Magellan died in the Philippines. Pigafetta made it home to Italy and finished the journal that historians still cite.
 
-The full piece runs above. Clips from the same story run on [Instagram](${siteConfig.social.instagramUrl}) and [TikTok](${siteConfig.social.tiktokUrl}).`,
+The full piece runs above. More history clips live on [Instagram](${siteConfig.social.instagramUrl}) and [TikTok](${siteConfig.social.tiktokUrl}).`,
 };
 
 function paragraphsFromDescription(description: string): string {

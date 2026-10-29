@@ -3,8 +3,11 @@ import { legacyRedirects } from "./src/lib/legacy-redirects";
 
 const nextConfig: NextConfig = {
   images: {
-    // Cap srcset so the fallback `src` is never w=3840. Cards display ~200–720px;
-    // 1200 covers 2x desktop without asking Hostinger Sharp to rasterize 4K.
+    // Hostinger Sharp /_next/image returns intermittent HTTP 503 even for tiny
+    // local JPEGs and the logo (reproduced 2026-10-29). Serve static originals
+    // instead of runtime rasterization. Keep size caps if the optimizer is
+    // ever re-enabled.
+    unoptimized: true,
     deviceSizes: [640, 750, 828, 1080, 1200],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60 * 60 * 24 * 30,
@@ -52,6 +55,24 @@ const nextConfig: NextConfig = {
           {
             key: "Cache-Control",
             value: "public, max-age=0, s-maxage=60, stale-while-revalidate=300",
+          },
+        ],
+      },
+      {
+        source: "/stories/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=604800, stale-while-revalidate=86400",
+          },
+        ],
+      },
+      {
+        source: "/logo-light.png",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=604800, stale-while-revalidate=86400",
           },
         ],
       },
