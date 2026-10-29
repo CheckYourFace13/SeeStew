@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-28T16:31:49.281Z",
-  "publishedCount": 129,
-  "queueCount": 29,
+  "generatedAt": "2026-10-29T16:47:58.225Z",
+  "publishedCount": 130,
+  "queueCount": 28,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -2351,7 +2351,7 @@
         "heroes"
       ],
       "opening": "Operation Paperclip: How Nazi Scientists Became American Cold War Heroes In the shadowy aftermath of World War II, a controversial program emerged that would shape the future of American space exploration and military technology. Operation Paperclip, a covert initiative orchestrated by the United States government, sought to recruit German scientists, engineers, and technicians, many of whom had been integral to the Nazi war machine.",
-      "contentChars": 11741
+      "contentChars": 11738
     },
     {
       "slug": "osage-murders-reign-of-terror",
@@ -3512,6 +3512,33 @@
       "contentChars": 9522
     },
     {
+      "slug": "winecoff-hotel-fire-1946",
+      "title": "The Winecoff Hotel Fire: America’s Deadliest Hotel Blaze",
+      "excerpt": "Atlanta’s “fireproof” Winecoff Hotel burned in 1946, killing 119 people and rewriting hotel safety codes. (Winecoff Hotel fire)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1946,
+      "publishedAt": "2026-10-28T16:31:49.107Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "winecoff-hotel-fire::1946",
+      "titleEventKey": "winecoff-hotel-fire-america-deadliest-hotel-blaze::1946",
+      "places": [
+        "atlanta",
+        "georgia"
+      ],
+      "namedHints": [
+        "winecoff",
+        "hotel",
+        "fire",
+        "americas",
+        "deadliest",
+        "blaze"
+      ],
+      "opening": "The Tragic Winecoff Hotel Fire of 1946 in Atlanta On December 7, 1946, the Winecoff Hotel in Atlanta, Georgia, became the site of one of the deadliest hotel fires in U.S. history.",
+      "contentChars": 10161
+    },
+    {
       "slug": "wounded-knee-1973",
       "title": "Wounded Knee 1973: The 71-Day Siege That Put Native Rights on National TV",
       "excerpt": "AIM activists seized a town; the FBI surrounded them; and two federal agents died in the standoff’s aftermath.",
@@ -3595,34 +3622,6 @@
       ],
       "opening": "The Zoot Suit Riots: A Clash of Cultures in Wartime Los Angeles In June 1943, Los Angeles became the epicenter of racial violence as servicemen clashed with Mexican American youths, known for their distinctive zoot suits. Over several days, these sailors and soldiers roamed the streets, targeting young men dressed in flashy attire, resulting in a series of brutal assaults.",
       "contentChars": 10085
-    },
-    {
-      "slug": "tri-state-tornado-1925",
-      "title": "The Tri-State Tornado of 1925: The Longest Tracked Tornado Path in U.S. History",
-      "excerpt": "One supercell carved a death path across Missouri, Illinois, and Indiana — still unmatched in tracked length.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1925,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "The storm’s track, town destruction, death toll estimates, and how modern meteorology remembers it.",
-      "canonicalEventId": "tri-state-tornado::1925",
-      "titleEventKey": "tri-state-tornado-longest-tracked-tornado-path-history::1925",
-      "places": [
-        "missouri",
-        "illinois",
-        "indiana"
-      ],
-      "namedHints": [
-        "tri-state",
-        "tornado",
-        "longest",
-        "tracked",
-        "path",
-        "history"
-      ],
-      "opening": "One supercell carved a death path across Missouri, Illinois, and Indiana — still unmatched in tracked length. The storm’s track, town destruction, death toll estimates, and how modern meteorology remembers it.",
-      "contentChars": 284
     },
     {
       "slug": "collinwood-school-fire-1908",
@@ -4243,7 +4242,7 @@
       "source": "queue-quick-read",
       "eventYear": 1983,
       "publishedAt": null,
-      "parentArticleSlug": null,
+      "parentArticleSlug": "able-archer-83",
       "editorialAngle": "Able Archer command procedures vs routine drills",
       "canonicalEventId": "able-archer-procedures::1983",
       "titleEventKey": "able-archer-used-real-nuclear-release-procedures::1983",
@@ -4268,7 +4267,7 @@
       "source": "queue-quick-read",
       "eventYear": 1772,
       "publishedAt": null,
-      "parentArticleSlug": null,
+      "parentArticleSlug": "gaspee-affair-1772",
       "editorialAngle": "Gaspee grounding on Rhode Island sandbar before the burning",
       "canonicalEventId": "gaspee-sandbar::1772",
       "titleEventKey": "sandbar-doomed-hms-gaspee::1772",
@@ -4340,7 +4339,7 @@
       "source": "queue-quick-read",
       "eventYear": 1967,
       "publishedAt": null,
-      "parentArticleSlug": null,
+      "parentArticleSlug": "uss-forrestal-fire-1967",
       "editorialAngle": "Zuni rocket misfire as the Forrestal fire ignition point",
       "canonicalEventId": "forrestal-zuni::1967",
       "titleEventKey": "zuni-rocket-started-forrestal-inferno::1967",
@@ -4356,31 +4355,32 @@
       "contentChars": 238
     },
     {
-      "slug": "winecoff-hotel-fire-1946",
-      "title": "The Winecoff Hotel Fire: America’s Deadliest Hotel Blaze",
-      "excerpt": "Atlanta’s “fireproof” Winecoff Hotel burned in 1946, killing 119 people and rewriting hotel safety codes. (Winecoff Hotel fire)",
+      "slug": "tri-state-tornado-1925",
+      "title": "The Tri-State Tornado of 1925: The Longest Tracked Tornado Path in U.S. History",
+      "excerpt": "One supercell carved a death path across Missouri, Illinois, and Indiana — still unmatched in tracked length. (Tri-State Tornado 1925)",
       "format": "full",
       "source": "published",
-      "eventYear": 1946,
-      "publishedAt": "2026-10-28T16:31:49.107Z",
+      "eventYear": 1925,
+      "publishedAt": "2026-10-29T16:47:57.970Z",
       "parentArticleSlug": null,
       "editorialAngle": null,
-      "canonicalEventId": "winecoff-hotel-fire::1946",
-      "titleEventKey": "winecoff-hotel-fire-america-deadliest-hotel-blaze::1946",
+      "canonicalEventId": "tri-state-tornado::1925",
+      "titleEventKey": "tri-state-tornado-longest-tracked-tornado-path-history::1925",
       "places": [
-        "atlanta",
-        "georgia"
+        "missouri",
+        "illinois",
+        "indiana"
       ],
       "namedHints": [
-        "winecoff",
-        "hotel",
-        "fire",
-        "americas",
-        "deadliest",
-        "blaze"
+        "tri-state",
+        "tornado",
+        "longest",
+        "tracked",
+        "path",
+        "history"
       ],
-      "opening": "The Tragic Winecoff Hotel Fire of 1946 in Atlanta On December 7, 1946, the Winecoff Hotel in Atlanta, Georgia, became the site of one of the deadliest hotel fires in U.S. history.",
-      "contentChars": 10161
+      "opening": "The Tri-State Tornado of 1925: A Devastating Path Across America On March 18, 1925, a single supercell thunderstorm unleashed a catastrophic tornado that carved a path of destruction across three states: Missouri, Illinois, and Indiana. Known as the Tri-State Tornado, this event holds the record for the longest tornado path in U.S.",
+      "contentChars": 15039
     }
   ]
 }

@@ -5373,9 +5373,9 @@
       "imageSearchTerms": [
         "Tri-State Tornado 1925"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "tri-state-tornado-1925",
+      "publishedAt": "2026-10-29T16:47:58.111Z",
       "eventYear": 1925,
       "historicalEra": "twenties-depression"
     },
