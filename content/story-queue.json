@@ -5420,9 +5420,9 @@
       "imageSearchTerms": [
         "Collinwood school fire 1908"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "collinwood-school-fire-1908",
+      "publishedAt": "2026-10-30T16:36:44.033Z",
       "eventYear": 1908,
       "historicalEra": "progressive-wwi"
     },

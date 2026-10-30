@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-29T23:47:28.179Z",
-  "publishedCount": 131,
-  "queueCount": 26,
+  "generatedAt": "2026-10-30T16:36:44.148Z",
+  "publishedCount": 132,
+  "queueCount": 25,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -2692,6 +2692,31 @@
       "contentChars": 12509
     },
     {
+      "slug": "qr-able-archer-one-detail",
+      "title": "Why Able Archer Used Real Nuclear Release Procedures",
+      "excerpt": "The 1983 NATO exercise’s realism — not just its name — is what rattled opposing intelligence watchers. (Able Archer 83 procedures)",
+      "format": "quick-read",
+      "source": "published",
+      "eventYear": 1983,
+      "publishedAt": "2026-10-29T23:47:27.791Z",
+      "parentArticleSlug": "able-archer-83",
+      "editorialAngle": "Able Archer command procedures vs routine drills",
+      "canonicalEventId": "able-archer-procedures::1983",
+      "titleEventKey": "able-archer-used-real-nuclear-release-procedures::1983",
+      "places": [],
+      "namedHints": [
+        "able",
+        "archer",
+        "used",
+        "real",
+        "nuclear",
+        "release",
+        "procedures"
+      ],
+      "opening": "Able Archer 83 was not a field maneuver. It was NATO’s annual Allied Command Europe command-post exercise: headquarters practicing the paperwork and message traffic for moving from conventional operations into nuclear release.",
+      "contentChars": 1909
+    },
+    {
       "slug": "radium-girls-1920s",
       "title": "Radium Girls: Dial Painters Poisoned by Glow-in-the-Dark Paint",
       "excerpt": "In the 1920s, young women painting watch dials with radium were told to lick their brushes. Their employer knew the paint was deadly. They found out when their bones started crumbling.",
@@ -3652,34 +3677,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "collinwood-school-fire-1908",
-      "title": "The Collinwood School Fire: Nearly 200 Children Died in a Cleveland School",
-      "excerpt": "In 1908, Lake View School in Collinwood burned during class — locked exits and panic trapped students.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1908,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "How the fire started, why exits failed, the death toll, and school-safety reforms that followed.",
-      "canonicalEventId": "collinwood-school-fire::1908",
-      "titleEventKey": "collinwood-school-fire-nearly-200-children-died-cleveland::1908",
-      "places": [
-        "collinwood",
-        "cleveland"
-      ],
-      "namedHints": [
-        "collinwood",
-        "school",
-        "fire",
-        "nearly",
-        "children",
-        "died",
-        "cleveland"
-      ],
-      "opening": "In 1908, Lake View School in Collinwood burned during class — locked exits and panic trapped students. How the fire started, why exits failed, the death toll, and school-safety reforms that followed.",
-      "contentChars": 275
-    },
-    {
       "slug": "credit-mobilier-scandal",
       "title": "The Credit Mobilier Scandal: Railroad Bribes That Reached Congress",
       "excerpt": "Union Pacific insiders used Credit Mobilier stock to buy political protection — until a newspaper exposed the scheme.",
@@ -4332,29 +4329,33 @@
       "contentChars": 238
     },
     {
-      "slug": "qr-able-archer-one-detail",
-      "title": "Why Able Archer Used Real Nuclear Release Procedures",
-      "excerpt": "The 1983 NATO exercise’s realism — not just its name — is what rattled opposing intelligence watchers. (Able Archer 83 procedures)",
-      "format": "quick-read",
+      "slug": "collinwood-school-fire-1908",
+      "title": "The Collinwood School Fire: Nearly 200 Children Died in a Cleveland School",
+      "excerpt": "In 1908, Lake View School in Collinwood burned during class — locked exits and panic trapped students. (Collinwood school fire)",
+      "format": "full",
       "source": "published",
-      "eventYear": 1983,
-      "publishedAt": "2026-10-29T23:47:27.791Z",
-      "parentArticleSlug": "able-archer-83",
-      "editorialAngle": "Able Archer command procedures vs routine drills",
-      "canonicalEventId": "able-archer-procedures::1983",
-      "titleEventKey": "able-archer-used-real-nuclear-release-procedures::1983",
-      "places": [],
-      "namedHints": [
-        "able",
-        "archer",
-        "used",
-        "real",
-        "nuclear",
-        "release",
-        "procedures"
+      "eventYear": 1908,
+      "publishedAt": "2026-10-30T16:36:43.944Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "collinwood-school-fire::1908",
+      "titleEventKey": "collinwood-school-fire-nearly-200-children-died-cleveland::1908",
+      "places": [
+        "collinwood",
+        "cleveland",
+        "ohio"
       ],
-      "opening": "In November 1983, NATO conducted a military exercise called Able Archer 83, which alarmed Soviet intelligence to the point that they believed a real nuclear strike was imminent. This exercise, held from November 2 to November 11, was notable not just for its scale but also for the unprecedented realism of its command procedures.",
-      "contentChars": 2347
+      "namedHints": [
+        "collinwood",
+        "school",
+        "fire",
+        "nearly",
+        "children",
+        "died",
+        "cleveland"
+      ],
+      "opening": "The Collinwood School Fire: A Tragedy in Cleveland, 1908 On March 4, 1908, a devastating fire erupted at Lake View School in Collinwood, a suburb of Cleveland, Ohio. The blaze broke out during school hours, trapping nearly 300 children inside.",
+      "contentChars": 9938
     }
   ]
 }
