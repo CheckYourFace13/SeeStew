@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-30T16:36:44.148Z",
-  "publishedCount": 132,
-  "queueCount": 25,
+  "generatedAt": "2026-10-31T18:18:05.528Z",
+  "publishedCount": 133,
+  "queueCount": 23,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -656,6 +656,35 @@
       ],
       "opening": "The Cocoanut Grove Fire: 492 Dead in Boston’s Deadliest Nightclub Disaster On the night of November 28, 1942, Boston's Cocoanut Grove nightclub became the site of one of the deadliest fires in American history. This tragic event not only claimed the lives of 492 individuals but also exposed the dire consequences of lax fire safety regulations and illegal occupancy.",
       "contentChars": 11662
+    },
+    {
+      "slug": "collinwood-school-fire-1908",
+      "title": "The Collinwood School Fire: Nearly 200 Children Died in a Cleveland School",
+      "excerpt": "In 1908, Lake View School in Collinwood burned during class — locked exits and panic trapped students. (Collinwood school fire)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1908,
+      "publishedAt": "2026-10-30T16:36:43.944Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "collinwood-school-fire::1908",
+      "titleEventKey": "collinwood-school-fire-nearly-200-children-died-cleveland::1908",
+      "places": [
+        "collinwood",
+        "cleveland",
+        "ohio"
+      ],
+      "namedHints": [
+        "collinwood",
+        "school",
+        "fire",
+        "nearly",
+        "children",
+        "died",
+        "cleveland"
+      ],
+      "opening": "The Collinwood School Fire: A Tragedy in Cleveland, 1908 On March 4, 1908, a devastating fire erupted at Lake View School in Collinwood, a suburb of Cleveland, Ohio. The blaze broke out during school hours, trapping nearly 300 children inside.",
+      "contentChars": 9938
     },
     {
       "slug": "cuban-missile-crisis-1962",
@@ -3677,31 +3706,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "credit-mobilier-scandal",
-      "title": "The Credit Mobilier Scandal: Railroad Bribes That Reached Congress",
-      "excerpt": "Union Pacific insiders used Credit Mobilier stock to buy political protection — until a newspaper exposed the scheme.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1872,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "How the construction company skimmed profits, which politicians were implicated, and what Congress did afterward.",
-      "canonicalEventId": "credit-mobilier-scandal::1872",
-      "titleEventKey": "credit-mobilier-scandal-railroad-bribes-reached-congress::1872",
-      "places": [],
-      "namedHints": [
-        "credit",
-        "mobilier",
-        "scandal",
-        "railroad",
-        "bribes",
-        "reached",
-        "congress"
-      ],
-      "opening": "Union Pacific insiders used Credit Mobilier stock to buy political protection — until a newspaper exposed the scheme. How the construction company skimmed profits, which politicians were implicated, and what Congress did afterward.",
-      "contentChars": 299
-    },
-    {
       "slug": "whiskey-ring-scandal",
       "title": "The Whiskey Ring: Tax Fraud Inside Grant’s Treasury",
       "excerpt": "Distillers and revenue agents skimmed liquor taxes — and the conspiracy reached the White House’s inner circle.",
@@ -4234,30 +4238,6 @@
       "contentChars": 263
     },
     {
-      "slug": "qr-gaspee-aground",
-      "title": "How a Sandbar Doomed HMS Gaspee",
-      "excerpt": "The British customs schooner only became vulnerable after she chased a packet onto a Rhode Island sandbar.",
-      "format": "quick-read",
-      "source": "queue-quick-read",
-      "eventYear": 1772,
-      "publishedAt": null,
-      "parentArticleSlug": "gaspee-affair-1772",
-      "editorialAngle": "Gaspee grounding on Rhode Island sandbar before the burning",
-      "canonicalEventId": "gaspee-sandbar::1772",
-      "titleEventKey": "sandbar-doomed-hms-gaspee::1772",
-      "places": [
-        "rhode island"
-      ],
-      "namedHints": [
-        "sandbar",
-        "doomed",
-        "hms",
-        "gaspee"
-      ],
-      "opening": "The British customs schooner only became vulnerable after she chased a packet onto a Rhode Island sandbar. The grounding that made the 1772 burning possible — one concrete episode, not a full war narrative.",
-      "contentChars": 242
-    },
-    {
       "slug": "qr-triangle-locked-door",
       "title": "Why the Triangle Shirtwaist Exit Was Locked",
       "excerpt": "Managers said theft prevention — survivors and investigators said the lock trapped workers in the fire.",
@@ -4329,33 +4309,28 @@
       "contentChars": 238
     },
     {
-      "slug": "collinwood-school-fire-1908",
-      "title": "The Collinwood School Fire: Nearly 200 Children Died in a Cleveland School",
-      "excerpt": "In 1908, Lake View School in Collinwood burned during class — locked exits and panic trapped students. (Collinwood school fire)",
-      "format": "full",
+      "slug": "qr-gaspee-aground",
+      "title": "How a Sandbar Doomed HMS Gaspee",
+      "excerpt": "The British customs schooner only became vulnerable after she chased a packet onto a Rhode Island sandbar. (Gaspee sandbar)",
+      "format": "quick-read",
       "source": "published",
-      "eventYear": 1908,
-      "publishedAt": "2026-10-30T16:36:43.944Z",
-      "parentArticleSlug": null,
-      "editorialAngle": null,
-      "canonicalEventId": "collinwood-school-fire::1908",
-      "titleEventKey": "collinwood-school-fire-nearly-200-children-died-cleveland::1908",
+      "eventYear": 1772,
+      "publishedAt": "2026-10-31T18:18:05.421Z",
+      "parentArticleSlug": "gaspee-affair-1772",
+      "editorialAngle": "Gaspee grounding on Rhode Island sandbar before the burning",
+      "canonicalEventId": "gaspee-sandbar::1772",
+      "titleEventKey": "sandbar-doomed-hms-gaspee::1772",
       "places": [
-        "collinwood",
-        "cleveland",
-        "ohio"
+        "rhode island"
       ],
       "namedHints": [
-        "collinwood",
-        "school",
-        "fire",
-        "nearly",
-        "children",
-        "died",
-        "cleveland"
+        "sandbar",
+        "doomed",
+        "hms",
+        "gaspee"
       ],
-      "opening": "The Collinwood School Fire: A Tragedy in Cleveland, 1908 On March 4, 1908, a devastating fire erupted at Lake View School in Collinwood, a suburb of Cleveland, Ohio. The blaze broke out during school hours, trapping nearly 300 children inside.",
-      "contentChars": 9938
+      "opening": "On June 9, 1772, the British customs schooner HMS Gaspee ran aground on a sandbar off the coast of Rhode Island while pursuing a suspected smuggler. This grounding not only marked a pivotal moment for the Gaspee but also set the stage for a significant act of rebellion against British authority in the American colonies [1].",
+      "contentChars": 2342
     }
   ]
 }

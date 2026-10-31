@@ -129,8 +129,10 @@
       "imageSearchTerms": [
         "HMS Gaspee Rhode Island 1772"
       ],
-      "status": "pending",
-      "format": "quick-read"
+      "status": "published",
+      "format": "quick-read",
+      "publishedSlug": "qr-gaspee-aground",
+      "publishedAt": "2026-10-31T18:18:05.421Z"
     },
     {
       "id": "qr-triangle-locked-door",
