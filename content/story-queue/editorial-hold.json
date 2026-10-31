@@ -9,6 +9,22 @@
       "queueId": "qr-molasses-plaque-2019",
       "at": "2026-10-29T23:45:42.272Z",
       "reason": "Queue hook claims the first permanent plaque arrived in 2019. The Bostonian Society marker at Langone Park dates to the mid-1990s; 2019 coverage described that existing plaque as inadequate. Do not publish the century-late-first-plaque claim."
+    },
+    {
+      "slug": "credit-mobilier-scandal",
+      "title": "The Credit Mobilier Scandal: Railroad Bribes That Reached Congress",
+      "format": "full",
+      "action": "hold_for_review",
+      "queueId": "credit-mobilier-scandal",
+      "blocks": [],
+      "holds": [
+        {
+          "code": "opening_not_specific",
+          "message": "Opening should include a concrete date, figure, or factual detail unique to this event."
+        }
+      ],
+      "heldAt": "2026-10-31T15:39:44.094Z",
+      "status": "editorial_review"
     }
   ]
 }

@@ -5467,11 +5467,23 @@
       "imageSearchTerms": [
         "Credit Mobilier scandal Congress"
       ],
-      "status": "pending",
+      "status": "editorial_review",
       "publishedSlug": null,
       "publishedAt": null,
       "eventYear": 1872,
-      "historicalEra": "reconstruction-gilded-age"
+      "historicalEra": "reconstruction-gilded-age",
+      "editorialHold": {
+        "action": "hold_for_review",
+        "at": "2026-10-31T15:39:44.092Z",
+        "blocks": [],
+        "holds": [
+          {
+            "code": "opening_not_specific",
+            "message": "Opening should include a concrete date, figure, or factual detail unique to this event."
+          }
+        ],
+        "conflictSlug": null
+      }
     },
     {
       "id": "whiskey-ring-scandal",
