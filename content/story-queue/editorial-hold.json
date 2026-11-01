@@ -25,6 +25,22 @@
       ],
       "heldAt": "2026-10-31T15:39:44.094Z",
       "status": "editorial_review"
+    },
+    {
+      "slug": "whiskey-ring-scandal",
+      "title": "The Whiskey Ring: Tax Fraud Inside Grant’s Treasury",
+      "format": "full",
+      "action": "hold_for_review",
+      "queueId": "whiskey-ring-scandal",
+      "blocks": [],
+      "holds": [
+        {
+          "code": "opening_not_specific",
+          "message": "Opening should include a concrete date, figure, or factual detail unique to this event."
+        }
+      ],
+      "heldAt": "2026-11-01T16:41:29.327Z",
+      "status": "editorial_review"
     }
   ]
 }

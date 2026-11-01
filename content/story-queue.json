@@ -5526,11 +5526,23 @@
       "imageSearchTerms": [
         "Whiskey Ring scandal Grant"
       ],
-      "status": "pending",
+      "status": "editorial_review",
       "publishedSlug": null,
       "publishedAt": null,
       "eventYear": 1875,
-      "historicalEra": "reconstruction-gilded-age"
+      "historicalEra": "reconstruction-gilded-age",
+      "editorialHold": {
+        "action": "hold_for_review",
+        "at": "2026-11-01T16:41:29.325Z",
+        "blocks": [],
+        "holds": [
+          {
+            "code": "opening_not_specific",
+            "message": "Opening should include a concrete date, figure, or factual detail unique to this event."
+          }
+        ],
+        "conflictSlug": null
+      }
     },
     {
       "id": "operation-pastorius-1942",
