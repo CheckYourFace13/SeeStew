@@ -1,0 +1,45 @@
+{
+  "slug": "qr-triangle-locked-door",
+  "title": "Why the Triangle Shirtwaist Exit Was Locked",
+  "excerpt": "Managers said theft prevention — survivors and investigators said the lock trapped workers in the fire. (Triangle Shirtwaist locked door)",
+  "seoTitle": "Triangle Shirtwaist locked door",
+  "seoDescription": "Managers said theft prevention — survivors and investigators said the lock trapped workers in the fire. (Triangle Shirtwaist locked door)",
+  "readMinutes": 2,
+  "category": "Crime",
+  "format": "quick-read",
+  "eventYear": 1911,
+  "historicalEra": "progressive-wwi",
+  "parentArticleSlug": "triangle-shirtwaist-fire-1911",
+  "editorialAngle": "Washington Place exit lock and contemporary testimony",
+  "canonicalEventId": "triangle-locked-exit::1911",
+  "relatedArticleSlugs": [
+    "triangle-shirtwaist-fire-1911"
+  ],
+  "content": "On March 25, 1911, a fire broke out at the Triangle Shirtwaist Factory in New York City, claiming the lives of 146 workers, most of whom were young immigrant women. Among the many tragic details of this disaster was the locked exit door on Washington Place, which became a focal point of investigation and debate. While factory managers claimed the lock was necessary to prevent theft, survivors and investigators argued that it effectively trapped workers inside the burning building, leading to unnecessary loss of life [1][2].\n\nThe Washington Place exit was one of the few means of escape for the workers on the upper floors of the factory. Eyewitness accounts from survivors revealed that the door was locked at the time of the fire, preventing many from escaping the flames and smoke. Testimonies indicated that the lock was a common practice in the garment industry, where employers often sought to minimize theft and maintain control over their workforce. However, this practice had dire consequences during the fire. As the flames spread rapidly, workers found themselves trapped, with the locked door sealing their fate [1][3].\n\nIn the aftermath of the fire, the public outcry was immense. Investigations revealed not only the locked exit but also other safety violations, such as inadequate fire escapes and the absence of sprinklers. The tragedy prompted a wave of reforms in labor laws and workplace safety regulations across the United States. The New York State Legislature established the Factory Investigating Commission, which led to significant changes in labor laws, including fire safety standards and regulations on working conditions [2][3].\n\nThe Triangle Shirtwaist Factory fire became a catalyst for the labor movement, highlighting the need for better protections for workers, particularly in hazardous industries. The locked door on Washington Place symbolized the negligence of factory owners who prioritized profit over the safety of their employees. This incident remains a poignant reminder of the struggles faced by workers and the ongoing fight for labor rights [1][2].\n\nThe legacy of the Triangle Shirtwaist Factory fire continues to resonate today, serving as a crucial chapter in the history of labor reform in the United States. The locked exit door, rather than merely a detail of the tragedy, encapsulated the broader issues of worker safety and corporate responsibility that would shape labor laws for generations to come [3].\n\n## Sources\n\n1. Triangle Factory Fire — *Cornell ILR*. [Link](https://trianglefire.ilr.cornell.edu/)\n2. Triangle Shirtwaist Factory Fire — *OSHA*. [Link](https://www.osha.gov/aboutosha/40-years/trianglefactoryfire)\n3. Triangle Fire — *Library of Congress*. [Link](https://www.loc.gov/)",
+  "references": [
+    {
+      "title": "Triangle Factory Fire",
+      "publisher": "Cornell ILR",
+      "url": "https://trianglefire.ilr.cornell.edu/"
+    },
+    {
+      "title": "Triangle Shirtwaist Factory Fire",
+      "publisher": "OSHA",
+      "url": "https://www.osha.gov/aboutosha/40-years/trianglefactoryfire"
+    },
+    {
+      "title": "Triangle Fire",
+      "publisher": "Library of Congress",
+      "url": "https://www.loc.gov/"
+    }
+  ],
+  "image": {
+    "card": "/stories/qr-triangle-locked-door/card.jpg",
+    "hero": "/stories/qr-triangle-locked-door/card.jpg",
+    "alt": "Why the Triangle Shirtwaist Exit Was Locked",
+    "credit": "Library of Congress",
+    "sourcePageUrl": "https://blogs.loc.gov/teachers/2014/03/the-triangle-shirtwaist-factory-fire-exploring-tragedy-and-reform-with-primary-sources/"
+  },
+  "relatedVideoId": null,
+  "createdAt": "2026-11-03T20:26:28.673Z"
+}

@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-03T17:39:51.713Z",
-  "publishedCount": 134,
-  "queueCount": 21,
+  "generatedAt": "2026-11-03T20:26:28.786Z",
+  "publishedCount": 135,
+  "queueCount": 20,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -2383,6 +2383,35 @@
       "contentChars": 11738
     },
     {
+      "slug": "operation-pastorius-1942",
+      "title": "Operation Pastorius: Nazi Saboteurs Landed on U.S. Beaches",
+      "excerpt": "In 1942, U-boats put German saboteurs ashore in New York and Florida — most were caught within days. (Operation Pastorius)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1942,
+      "publishedAt": "2026-11-03T17:39:51.569Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "operation-pastorius::1942",
+      "titleEventKey": "operation-pastorius-nazi-saboteurs-landed-beaches::1942",
+      "places": [
+        "new york",
+        "florida",
+        "pearl harbor",
+        "pennsylvania"
+      ],
+      "namedHints": [
+        "operation",
+        "pastorius",
+        "nazi",
+        "saboteurs",
+        "landed",
+        "beaches"
+      ],
+      "opening": "Nazi Saboteurs Land on U.S. Shores in 1942 On June 12, 1942, a group of eight Nazi saboteurs made a daring landing on the beaches of Long Island, New York, and Ponte Vedra Beach, Florida.",
+      "contentChars": 11647
+    },
+    {
       "slug": "osage-murders-reign-of-terror",
       "title": "The Osage Murders: When Oil Wealth Made Native Headrights Worth Killing For",
       "excerpt": "Dozens of Osage citizens died under suspicious circumstances in 1920s Oklahoma — a conspiracy for oil money.",
@@ -4210,31 +4239,6 @@
       "contentChars": 263
     },
     {
-      "slug": "qr-triangle-locked-door",
-      "title": "Why the Triangle Shirtwaist Exit Was Locked",
-      "excerpt": "Managers said theft prevention — survivors and investigators said the lock trapped workers in the fire.",
-      "format": "quick-read",
-      "source": "queue-quick-read",
-      "eventYear": 1911,
-      "publishedAt": null,
-      "parentArticleSlug": "triangle-shirtwaist-fire-1911",
-      "editorialAngle": "Washington Place exit lock and contemporary testimony",
-      "canonicalEventId": "triangle-locked-exit::1911",
-      "titleEventKey": "triangle-shirtwaist-exit-locked::1911",
-      "places": [
-        "triangle",
-        "washington"
-      ],
-      "namedHints": [
-        "triangle",
-        "shirtwaist",
-        "exit",
-        "locked"
-      ],
-      "opening": "Managers said theft prevention — survivors and investigators said the lock trapped workers in the fire. One decisive detail of the 1911 fire: the Washington Place exit and how testimony described it.",
-      "contentChars": 250
-    },
-    {
       "slug": "qr-radium-lip-pointing",
       "title": "Lip-Pointing: The Habit That Poisoned the Radium Girls",
       "excerpt": "Dial painters were taught to shape brush tips with their lips — ingesting radium with every stroke.",
@@ -4281,33 +4285,30 @@
       "contentChars": 238
     },
     {
-      "slug": "operation-pastorius-1942",
-      "title": "Operation Pastorius: Nazi Saboteurs Landed on U.S. Beaches",
-      "excerpt": "In 1942, U-boats put German saboteurs ashore in New York and Florida — most were caught within days. (Operation Pastorius)",
-      "format": "full",
+      "slug": "qr-triangle-locked-door",
+      "title": "Why the Triangle Shirtwaist Exit Was Locked",
+      "excerpt": "Managers said theft prevention — survivors and investigators said the lock trapped workers in the fire. (Triangle Shirtwaist locked door)",
+      "format": "quick-read",
       "source": "published",
-      "eventYear": 1942,
-      "publishedAt": "2026-11-03T17:39:51.569Z",
-      "parentArticleSlug": null,
-      "editorialAngle": null,
-      "canonicalEventId": "operation-pastorius::1942",
-      "titleEventKey": "operation-pastorius-nazi-saboteurs-landed-beaches::1942",
+      "eventYear": 1911,
+      "publishedAt": "2026-11-03T20:26:28.673Z",
+      "parentArticleSlug": "triangle-shirtwaist-fire-1911",
+      "editorialAngle": "Washington Place exit lock and contemporary testimony",
+      "canonicalEventId": "triangle-locked-exit::1911",
+      "titleEventKey": "triangle-shirtwaist-exit-locked::1911",
       "places": [
+        "triangle",
         "new york",
-        "florida",
-        "pearl harbor",
-        "pennsylvania"
+        "washington"
       ],
       "namedHints": [
-        "operation",
-        "pastorius",
-        "nazi",
-        "saboteurs",
-        "landed",
-        "beaches"
+        "triangle",
+        "shirtwaist",
+        "exit",
+        "locked"
       ],
-      "opening": "Nazi Saboteurs Land on U.S. Shores in 1942 On June 12, 1942, a group of eight Nazi saboteurs made a daring landing on the beaches of Long Island, New York, and Ponte Vedra Beach, Florida.",
-      "contentChars": 11647
+      "opening": "On March 25, 1911, a fire broke out at the Triangle Shirtwaist Factory in New York City, claiming the lives of 146 workers, most of whom were young immigrant women. Among the many tragic details of this disaster was the locked exit door on Washington Place, which became a focal point of investigation and debate.",
+      "contentChars": 2461
     }
   ]
 }

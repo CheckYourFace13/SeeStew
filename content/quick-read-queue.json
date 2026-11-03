@@ -172,8 +172,10 @@
       "imageSearchTerms": [
         "Triangle Shirtwaist Factory fire 1911"
       ],
-      "status": "pending",
-      "format": "quick-read"
+      "status": "published",
+      "format": "quick-read",
+      "publishedSlug": "qr-triangle-locked-door",
+      "publishedAt": "2026-11-03T20:26:28.674Z"
     },
     {
       "id": "qr-radium-lip-pointing",
