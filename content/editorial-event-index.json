@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-31T18:18:05.528Z",
-  "publishedCount": 133,
-  "queueCount": 23,
+  "generatedAt": "2026-11-03T17:39:51.713Z",
+  "publishedCount": 134,
+  "queueCount": 21,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -2746,6 +2746,30 @@
       "contentChars": 1909
     },
     {
+      "slug": "qr-gaspee-aground",
+      "title": "How a Sandbar Doomed HMS Gaspee",
+      "excerpt": "The British customs schooner only became vulnerable after she chased a packet onto a Rhode Island sandbar. (Gaspee sandbar)",
+      "format": "quick-read",
+      "source": "published",
+      "eventYear": 1772,
+      "publishedAt": "2026-10-31T18:18:05.421Z",
+      "parentArticleSlug": "gaspee-affair-1772",
+      "editorialAngle": "Gaspee grounding on Rhode Island sandbar before the burning",
+      "canonicalEventId": "gaspee-sandbar::1772",
+      "titleEventKey": "sandbar-doomed-hms-gaspee::1772",
+      "places": [
+        "rhode island"
+      ],
+      "namedHints": [
+        "sandbar",
+        "doomed",
+        "hms",
+        "gaspee"
+      ],
+      "opening": "On June 9, 1772, the British customs schooner HMS Gaspee ran aground on a sandbar off the coast of Rhode Island while pursuing a suspected smuggler. This grounding not only marked a pivotal moment for the Gaspee but also set the stage for a significant act of rebellion against British authority in the American colonies [1].",
+      "contentChars": 2342
+    },
+    {
       "slug": "radium-girls-1920s",
       "title": "Radium Girls: Dial Painters Poisoned by Glow-in-the-Dark Paint",
       "excerpt": "In the 1920s, young women painting watch dials with radium were told to lick their brushes. Their employer knew the paint was deadly. They found out when their bones started crumbling.",
@@ -3706,58 +3730,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "whiskey-ring-scandal",
-      "title": "The Whiskey Ring: Tax Fraud Inside Grant’s Treasury",
-      "excerpt": "Distillers and revenue agents skimmed liquor taxes — and the conspiracy reached the White House’s inner circle.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1875,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "How the ring worked, Grant’s response, who was convicted, and what it meant for Reconstruction-era politics.",
-      "canonicalEventId": "whiskey-ring-scandal::1875",
-      "titleEventKey": "whiskey-ring-tax-fraud-inside-grant-treasury::1875",
-      "places": [],
-      "namedHints": [
-        "whiskey",
-        "ring",
-        "tax",
-        "fraud",
-        "inside",
-        "grants",
-        "treasury"
-      ],
-      "opening": "Distillers and revenue agents skimmed liquor taxes — and the conspiracy reached the White House’s inner circle. How the ring worked, Grant’s response, who was convicted, and what it meant for Reconstruction-era politics.",
-      "contentChars": 277
-    },
-    {
-      "slug": "operation-pastorius-1942",
-      "title": "Operation Pastorius: Nazi Saboteurs Landed on U.S. Beaches",
-      "excerpt": "In 1942, U-boats put German saboteurs ashore in New York and Florida — most were caught within days.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1942,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "The mission plan, how one saboteur turned himself in, the military tribunal, and what the FBI files show.",
-      "canonicalEventId": "operation-pastorius::1942",
-      "titleEventKey": "operation-pastorius-nazi-saboteurs-landed-beaches::1942",
-      "places": [
-        "new york",
-        "florida"
-      ],
-      "namedHints": [
-        "operation",
-        "pastorius",
-        "nazi",
-        "saboteurs",
-        "landed",
-        "beaches"
-      ],
-      "opening": "In 1942, U-boats put German saboteurs ashore in New York and Florida — most were caught within days. The mission plan, how one saboteur turned himself in, the military tribunal, and what the FBI files show.",
-      "contentChars": 271
-    },
-    {
       "slug": "duquesne-spy-ring",
       "title": "The Duquesne Spy Ring: The Largest Espionage Ring Convicted in U.S. History",
       "excerpt": "FBI counterintelligence rolled up a Nazi spy network in New York — thirty-three convictions in one case.",
@@ -4309,28 +4281,33 @@
       "contentChars": 238
     },
     {
-      "slug": "qr-gaspee-aground",
-      "title": "How a Sandbar Doomed HMS Gaspee",
-      "excerpt": "The British customs schooner only became vulnerable after she chased a packet onto a Rhode Island sandbar. (Gaspee sandbar)",
-      "format": "quick-read",
+      "slug": "operation-pastorius-1942",
+      "title": "Operation Pastorius: Nazi Saboteurs Landed on U.S. Beaches",
+      "excerpt": "In 1942, U-boats put German saboteurs ashore in New York and Florida — most were caught within days. (Operation Pastorius)",
+      "format": "full",
       "source": "published",
-      "eventYear": 1772,
-      "publishedAt": "2026-10-31T18:18:05.421Z",
-      "parentArticleSlug": "gaspee-affair-1772",
-      "editorialAngle": "Gaspee grounding on Rhode Island sandbar before the burning",
-      "canonicalEventId": "gaspee-sandbar::1772",
-      "titleEventKey": "sandbar-doomed-hms-gaspee::1772",
+      "eventYear": 1942,
+      "publishedAt": "2026-11-03T17:39:51.569Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "operation-pastorius::1942",
+      "titleEventKey": "operation-pastorius-nazi-saboteurs-landed-beaches::1942",
       "places": [
-        "rhode island"
+        "new york",
+        "florida",
+        "pearl harbor",
+        "pennsylvania"
       ],
       "namedHints": [
-        "sandbar",
-        "doomed",
-        "hms",
-        "gaspee"
+        "operation",
+        "pastorius",
+        "nazi",
+        "saboteurs",
+        "landed",
+        "beaches"
       ],
-      "opening": "On June 9, 1772, the British customs schooner HMS Gaspee ran aground on a sandbar off the coast of Rhode Island while pursuing a suspected smuggler. This grounding not only marked a pivotal moment for the Gaspee but also set the stage for a significant act of rebellion against British authority in the American colonies [1].",
-      "contentChars": 2342
+      "opening": "Nazi Saboteurs Land on U.S. Shores in 1942 On June 12, 1942, a group of eight Nazi saboteurs made a daring landing on the beaches of Long Island, New York, and Ponte Vedra Beach, Florida.",
+      "contentChars": 11647
     }
   ]
 }

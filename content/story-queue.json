@@ -5585,9 +5585,9 @@
       "imageSearchTerms": [
         "Operation Pastorius Nazi saboteurs 1942"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "operation-pastorius-1942",
+      "publishedAt": "2026-11-03T17:39:51.605Z",
       "eventYear": 1942,
       "historicalEra": "world-war-ii"
     },
