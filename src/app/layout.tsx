@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
-import Script from "next/script";
+import { AdSenseLoader } from "@/components/AdSenseLoader";
 import { CookieConsent } from "@/components/CookieConsent";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { JsonLd } from "@/components/JsonLd";
 import { ADSENSE_CLIENT_ID } from "@/lib/ads-txt";
-import { adsConfig, analyticsConfig, siteConfig } from "@/lib/config";
+import { analyticsConfig, siteConfig } from "@/lib/config";
 import { emailSignupConfig } from "@/lib/email-signup";
 import {
   buildOrganizationJsonLd,
@@ -96,15 +96,7 @@ export default function RootLayout({
       </head>
       <body className={`${outfit.variable} ${inter.variable} flex min-h-screen flex-col bg-surface text-ink antialiased`}>
         <JsonLd data={[buildWebSiteJsonLd(), buildOrganizationJsonLd()]} />
-        {adsConfig.enabled && adsConfig.publisherId ? (
-          <Script
-            id="google-adsense"
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsConfig.publisherId}`}
-            crossOrigin="anonymous"
-            strategy="beforeInteractive"
-          />
-        ) : null}
+        <AdSenseLoader />
         <GoogleAnalytics />
         <Header />
         <main id="main-content" className="flex-1">

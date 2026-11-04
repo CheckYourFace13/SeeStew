@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Script from "next/script";
 import { adsConfig } from "@/lib/config";
 
@@ -25,8 +26,13 @@ export function AdSlot({
   label = "Advertisement",
 }: AdSlotProps) {
   const { enabled, publisherId } = adsConfig;
+  const [blocked, setBlocked] = useState(false);
 
-  if (!enabled || !publisherId) return null;
+  useEffect(() => {
+    setBlocked(Boolean(document.querySelector("[data-seestew-no-ads]")));
+  }, []);
+
+  if (!enabled || !publisherId || blocked) return null;
 
   // Reserve space before AdSense paints to limit CLS (not a fake inventory claim).
   const minHeight =

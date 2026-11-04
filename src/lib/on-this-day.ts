@@ -192,6 +192,57 @@ export function contentRichDateSlugs(existingSlugs: Set<string>): string[] {
   });
 }
 
+/**
+ * Dates safe to index in the sitemap.
+ * Single-event anniversary pages are useful navigation, but they are thin card
+ * pages — keep them reachable with noindex,follow and out of the sitemap.
+ * Multi-event dates can carry distinct contextual summaries and may be indexed.
+ */
+export const INDEXABLE_ANNIVERSARY_MIN_EVENTS = 2;
+
+export function indexableAnniversaryDateSlugs(
+  existingSlugs: Set<string>
+): string[] {
+  return contentRichDateSlugs(existingSlugs).filter((slug) => {
+    const parsed = parseDatePathSlug(slug);
+    if (!parsed) return false;
+    return (
+      anniversariesForDate(parsed.month, parsed.day, existingSlugs).length >=
+      INDEXABLE_ANNIVERSARY_MIN_EVENTS
+    );
+  });
+}
+
+export function isIndexableAnniversaryDate(
+  month: number,
+  day: number,
+  existingSlugs: Set<string>
+): boolean {
+  return (
+    anniversariesForDate(month, day, existingSlugs).length >=
+    INDEXABLE_ANNIVERSARY_MIN_EVENTS
+  );
+}
+
+/** First 2–3 body sentences from an article for anniversary context — never invented. */
+export function anniversaryContextFromArticle(content: string, maxSentences = 3): string {
+  const body = content
+    .replace(/^#[^\n]*\n+/gm, "")
+    .replace(/^##\s*Sources[\s\S]*$/im, "")
+    .replace(/\[(\d+)\]/g, "")
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/[*_`>#]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!body) return "";
+  const parts = body.match(/[^.!?]+[.!?]+/g) || [body];
+  return parts
+    .slice(0, maxSentences)
+    .map((s) => s.trim())
+    .join(" ")
+    .trim();
+}
+
 /** Month/day in SITE_CALENDAR_TZ (not UTC, not server local). */
 export function todayPartsInSiteTz(now: Date = new Date()): {
   month: number;

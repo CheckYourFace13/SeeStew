@@ -8,7 +8,9 @@ import { siteConfig } from "@/lib/config";
 import {
   adjacentContentRichDates,
   anniversariesForDate,
+  anniversaryContextFromArticle,
   contentRichDateSlugs,
+  isIndexableAnniversaryDate,
   monthName,
   onThisDayEnabled,
   parseDatePathSlug,
@@ -35,10 +37,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "On This Day", robots: { index: false, follow: true } };
   }
   const label = `${monthName(parsed.month)} ${parsed.day}`;
+  const indexable = isIndexableAnniversaryDate(
+    parsed.month,
+    parsed.day,
+    articleSlugs
+  );
   return {
     title: `On This Day — ${label}`,
-    description: `American history on ${label}: sourced SeeStew stories for this anniversary date.`,
+    description: indexable
+      ? `American history on ${label}: ${items.length} sourced SeeStew stories for this anniversary date, with context and links to the full articles.`
+      : `American history on ${label}: a curated SeeStew anniversary link to the full sourced article.`,
     alternates: { canonical: `${siteConfig.url}/on-this-day/${date}` },
+    ...(indexable
+      ? {}
+      : { robots: { index: false, follow: true } }),
   };
 }
 
@@ -62,6 +74,11 @@ export default async function OnThisDayDatePage({ params }: Props) {
 
   if (stories.length === 0) redirect("/on-this-day");
 
+  const indexable = isIndexableAnniversaryDate(
+    parsed.month,
+    parsed.day,
+    articleSlugs
+  );
   const { prev, next } = adjacentContentRichDates(
     parsed.month,
     parsed.day,
@@ -101,8 +118,9 @@ export default async function OnThisDayDatePage({ params }: Props) {
         On this day — {label}
       </h1>
       <p className="mt-3 max-w-3xl text-lg text-ink-muted">
-        Curated American history anniversaries for {label}, each linked to a full
-        SeeStew article with named sources. Empty calendar stubs are not published.
+        {indexable
+          ? `${stories.length} documented American history events share ${label} on SeeStew. Each summary below is drawn from the full sourced article — not filler written for this calendar page.`
+          : `One curated SeeStew anniversary falls on ${label}. The full documented article is linked below; this date page exists for navigation, not as a thin standalone encyclopedia entry.`}
       </p>
 
       {(prev || next) && (
@@ -125,21 +143,49 @@ export default async function OnThisDayDatePage({ params }: Props) {
         </nav>
       )}
 
-      <ul className="mt-10 space-y-4">
-        {stories.map(({ ann, article }) => (
-          <li key={ann.slug}>
-            <Link
-              href={`/articles/${article.slug}`}
-              className="block rounded-xl border border-brand-wash bg-white p-6 hover:shadow-md"
+      <ul className="mt-10 space-y-8">
+        {stories.map(({ ann, article }) => {
+          const context =
+            anniversaryContextFromArticle(article.content, indexable ? 3 : 2) ||
+            article.excerpt;
+          const others = stories
+            .filter((s) => s.ann.slug !== ann.slug)
+            .map((s) => s.ann.label);
+          return (
+            <li
+              key={ann.slug}
+              className="rounded-xl border border-brand-wash bg-white p-6"
             >
               <p className="text-xs font-semibold uppercase tracking-wide text-brand-mid">
                 {ann.label}
               </p>
-              <h2 className="mt-1 font-heading text-xl font-bold text-ink">{article.title}</h2>
-              <p className="mt-2 text-ink-muted">{article.excerpt}</p>
-            </Link>
-          </li>
-        ))}
+              <h2 className="mt-1 font-heading text-xl font-bold text-ink">
+                <Link
+                  href={`/articles/${article.slug}`}
+                  className="hover:text-brand-mid"
+                >
+                  {article.title}
+                </Link>
+              </h2>
+              <p className="mt-3 text-ink-muted">{context}</p>
+              {indexable && others.length > 0 ? (
+                <p className="mt-3 text-sm text-ink-muted">
+                  Also on {label}: {others.join("; ")}. The shared calendar date is
+                  historical coincidence — each event has its own sources and
+                  article.
+                </p>
+              ) : null}
+              <p className="mt-4 text-sm">
+                <Link
+                  href={`/articles/${article.slug}`}
+                  className="font-medium text-brand-mid underline"
+                >
+                  Read the full article →
+                </Link>
+              </p>
+            </li>
+          );
+        })}
       </ul>
       <p className="mt-10 text-sm">
         <Link href="/on-this-day" className="text-brand-mid underline">
@@ -148,6 +194,10 @@ export default async function OnThisDayDatePage({ params }: Props) {
         {" · "}
         <Link href="/today" className="text-brand-mid underline">
           Today&apos;s anniversaries
+        </Link>
+        {" · "}
+        <Link href="/articles" className="text-brand-mid underline">
+          All stories
         </Link>
       </p>
     </div>

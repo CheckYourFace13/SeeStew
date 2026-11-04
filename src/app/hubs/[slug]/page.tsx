@@ -11,7 +11,9 @@ import {
   getArticlesForHub,
   getHistoryHub,
   getPopulatedHistoryHubs,
+  hubSummaryFromArticle,
   HUB_MIN_ARTICLES,
+  isIndexableHistoryHub,
 } from "@/lib/history-hubs";
 import { buildBreadcrumbJsonLd } from "@/lib/seo";
 
@@ -24,14 +26,17 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const hub = getHistoryHub(slug);
-  const articles = hub ? getArticlesForHub(hub, getAllArticles()) : [];
+  const all = getAllArticles();
+  const articles = hub ? getArticlesForHub(hub, all) : [];
   if (!hub || articles.length < HUB_MIN_ARTICLES) {
     return { title: "Hub not found", robots: { index: false, follow: true } };
   }
+  const indexable = isIndexableHistoryHub(hub, all);
   return {
     title: hub.title,
     description: hub.description,
     alternates: { canonical: `${siteConfig.url}/hubs/${slug}` },
+    ...(indexable ? {} : { robots: { index: false, follow: true } }),
   };
 }
 
@@ -39,11 +44,13 @@ export default async function HistoryHubPage({ params }: Props) {
   const { slug } = await params;
   const hub = getHistoryHub(slug);
   if (!hub) notFound();
-  const articles = getArticlesForHub(hub, getAllArticles());
+  const allArticles = getAllArticles();
+  const articles = getArticlesForHub(hub, allArticles);
   if (articles.length < HUB_MIN_ARTICLES) notFound();
 
   const url = `${siteConfig.url}/hubs/${slug}`;
-  const allHubs = getPopulatedHistoryHubs(getAllArticles());
+  const indexable = isIndexableHistoryHub(hub, allArticles);
+  const allHubs = getPopulatedHistoryHubs(allArticles);
   const relatedHubs = allHubs
     .filter((h) => h.slug !== slug)
     .sort((a, b) => {
@@ -85,6 +92,12 @@ export default async function HistoryHubPage({ params }: Props) {
       />
       <h1 className="font-heading text-4xl font-bold text-ink">{hub.title}</h1>
       <p className="mt-3 max-w-3xl text-lg text-ink-muted">{hub.intro}</p>
+      {!indexable ? (
+        <p className="mt-3 text-sm text-ink-muted">
+          This hub currently indexes a small set of related stories for navigation.
+          The full documented articles below are the durable pages.
+        </p>
+      ) : null}
       <p className="mt-3 text-sm text-ink-muted">
         {articles.length} documented stories.{" "}
         <Link href="/articles" className="text-brand-mid underline">
@@ -94,21 +107,32 @@ export default async function HistoryHubPage({ params }: Props) {
         <Link href="/topics" className="text-brand-mid underline">
           Topics
         </Link>
+        {" · "}
+        <Link href="/hubs" className="text-brand-mid underline">
+          All hubs
+        </Link>
       </p>
 
-      <ul className="mt-10 space-y-4">
+      <ul className="mt-10 space-y-6">
         {articles.map((a) => (
-          <li key={a.slug}>
-            <Link
-              href={`/articles/${a.slug}`}
-              className="block rounded-xl border border-brand-wash bg-white p-6 hover:shadow-md"
-            >
-              <p className="text-xs font-medium uppercase tracking-wide text-brand-mid">
-                {a.category}
-              </p>
-              <h2 className="mt-1 font-heading text-xl font-bold text-ink">{a.title}</h2>
-              <p className="mt-2 text-ink-muted">{a.excerpt}</p>
-            </Link>
+          <li key={a.slug} className="rounded-xl border border-brand-wash bg-white p-6">
+            <p className="text-xs font-medium uppercase tracking-wide text-brand-mid">
+              {a.category}
+            </p>
+            <h2 className="mt-1 font-heading text-xl font-bold text-ink">
+              <Link href={`/articles/${a.slug}`} className="hover:text-brand-mid">
+                {a.title}
+              </Link>
+            </h2>
+            <p className="mt-2 text-ink-muted">{hubSummaryFromArticle(a, 2)}</p>
+            <p className="mt-3 text-sm">
+              <Link
+                href={`/articles/${a.slug}`}
+                className="font-medium text-brand-mid underline"
+              >
+                Read the full article →
+              </Link>
+            </p>
           </li>
         ))}
       </ul>

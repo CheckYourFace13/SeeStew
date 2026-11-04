@@ -2,21 +2,31 @@ import type { MetadataRoute } from "next";
 import { getAllArticles } from "@/lib/articles";
 import { siteConfig } from "@/lib/config";
 import { getPopulatedHistoryHubs } from "@/lib/history-hubs";
-import { contentRichDateSlugs, onThisDayEnabled } from "@/lib/on-this-day";
+import {
+  indexableAnniversaryDateSlugs,
+  onThisDayEnabled,
+} from "@/lib/on-this-day";
 import { emailSignupConfig } from "@/lib/email-signup";
 import { getPopulatedTopics } from "@/lib/topic-seo";
 import { getLongFormVideos } from "@/lib/youtube";
 import { getManagedFeed } from "@/lib/gravyblock-managed";
+import { isIndexableHistoryHub } from "@/lib/history-hubs";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = siteConfig.url;
   const longForm = await getLongFormVideos();
   const articles = getAllArticles();
   const topics = getPopulatedTopics(articles);
-  const hubs = getPopulatedHistoryHubs(articles);
+  const hubs = getPopulatedHistoryHubs(articles).filter((hub) =>
+    isIndexableHistoryHub(hub, articles)
+  );
   const slugSet = new Set(articles.map((a) => a.slug));
   const includeOnThisDay = onThisDayEnabled(slugSet);
-  const onThisDayDates = includeOnThisDay ? contentRichDateSlugs(slugSet) : [];
+  // Only multi-event anniversary dates are indexable; single-event dates stay
+  // reachable with noindex,follow and are omitted here.
+  const onThisDayDates = includeOnThisDay
+    ? indexableAnniversaryDateSlugs(slugSet)
+    : [];
 
   const staticPages: MetadataRoute.Sitemap = [
     "",
@@ -31,7 +41,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/social",
     "/about",
     "/editorial",
-    "/contact",
+    // /contact stays linked from the footer but is noindex utility copy.
     "/privacy",
     "/terms",
     "/faq",

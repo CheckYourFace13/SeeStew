@@ -20,7 +20,10 @@ import { homeFaqs } from "@/lib/seo";
 import { getPopulatedTopics } from "@/lib/topic-seo";
 import { getLongFormVideos, getShortFormVideos, getYouTubeVideos } from "@/lib/youtube";
 
-/** Avoid year-long CDN HTML cache (Hostinger) that can serve broken/stale homepages after deploy. */
+/**
+ * Keep homepage anniversary “today” fresh in America/New_York.
+ * A long CDN TTL previously could show yesterday’s date after midnight.
+ */
 export const revalidate = 60;
 
 export default async function HomePage() {

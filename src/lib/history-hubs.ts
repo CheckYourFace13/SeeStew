@@ -32,14 +32,14 @@ const DECADE_COPY: Record<number, { title: string; description: string; intro: s
     description:
       "Documented American history from the 1870s — the Chicago and Peshtigo fires, Little Bighorn, and other sourced flashpoints.",
     intro:
-      "October 8, 1871, linked two of the decade’s defining disasters: Chicago’s fire and the Peshtigo firestorm, both documented in contemporary reports. Later in the decade, Little Bighorn (1876) entered the military record. These SeeStew stories stay with those archives — they are not a survey of every 1870s headline.",
+      "October 8, 1871, linked two of the decade’s defining disasters: Chicago’s fire and the Peshtigo firestorm, both documented in contemporary reports and still argued over for death tolls and causes. Later in the decade, Little Bighorn (1876) entered the military record as a shock to U.S. Army prestige on the Northern Plains. These SeeStew stories stay with those archives — they are not a survey of every 1870s headline, and they are not a second copy of the Chicago-disasters hub (Peshtigo and Little Bighorn sit outside that city list).",
   },
   1880: {
     title: "1880s American History",
     description:
       "American history stories from the 1880s — labor clashes, disasters, and forgotten episodes with citations.",
     intro:
-      "From prairie blizzards to labor showdowns, the 1880s left records that still surprise. Each story below cites named sources.",
+      "The 1880s left hard paper trails: the 1886 Haymarket bombing and trial in Chicago, the Children’s Blizzard of January 1888 across the northern plains, the Great Seattle Fire of 1889, and the Johnstown Flood the same year. Those events remade labor law debates, prairie memory, and urban rebuilding. Each story below cites named sources rather than recycling a generic “Gilded Age disasters” blurb.",
   },
   1890: {
     title: "1890s American History",
@@ -122,7 +122,7 @@ const STATE_COPY: Record<
     description:
       "Documented California history stories — disasters, scandals, and strange true episodes with named sources.",
     intro:
-      "California stories that sound invented until you open the archives: quakes, dam failures, and political flashpoints. Each piece cites sources.",
+      "Three California flashpoints on SeeStew leave especially clear archives: Marshall’s 1848 gold find at Sutter’s Mill that launched the rush, the 1906 San Francisco earthquake and fires, and the February 1942 “Battle of Los Angeles” anti-aircraft scare. This hub indexes those full articles — it is not a statewide encyclopedia and does not invent extra California events to pad the page.",
     patterns: [/\bcalifornia\b/i, /\blos angeles\b/i, /\bsan francisco\b/i],
   },
   "new-york": {
@@ -145,7 +145,7 @@ const STATE_COPY: Record<
     description:
       "Documented Pennsylvania history — mine fires, floods, and industrial disasters with named sources.",
     intro:
-      "Pennsylvania’s industrial past includes mine fires and floods that remade towns. Each story below cites archives and reports.",
+      "Pennsylvania’s industrial and nuclear paper trail on SeeStew currently covers three distinct crises: the 1889 Johnstown Flood after the South Fork Dam failed, the still-burning Centralia mine fire that began in 1962, and the 1979 Three Mile Island partial meltdown. Those are not interchangeable “Pennsylvania disaster” stubs — each article names its own hearings, reports, and archives.",
     patterns: [/\bpennsylvania\b/i, /\bjohnstown\b/i, /\bcentralia\b/i, /\bthree mile island\b/i],
   },
   massachusetts: {
@@ -153,14 +153,14 @@ const STATE_COPY: Record<
     description:
       "Documented Massachusetts history — disasters, trials, and strange true episodes with citations.",
     intro:
-      "Boston fires, molasses floods, and courtroom dramas from Massachusetts — retold from named sources.",
+      "Massachusetts on SeeStew spans the 1692 Salem witch trials, the 1770 Boston Massacre, the 1919 Molasses Flood, and the 1942 Cocoanut Grove fire. The Boston-history hub focuses on the three Boston-set articles; this statewide index also keeps Salem, which is not a Boston city story. Every piece lists named sources.",
     patterns: [/\bmassachusetts\b/i, /\bboston\b/i, /\bsalem\b/i],
   },
   texas: {
     title: "Weird Texas History",
     description: "Documented Texas history — disasters and flashpoints with named sources.",
     intro:
-      "Texas disasters and political flashpoints that left a paper trail. Browse sourced SeeStew stories tied to the state.",
+      "Texas entries on SeeStew currently cover the 1900 Galveston hurricane, the 1947 Texas City ship explosion, and the 1993 Waco siege. Those events sit decades apart and left different kinds of records — weather service and relief reports, industrial accident investigations, and federal law-enforcement documentation. This hub is an index to those full articles, not a short state brochure.",
     patterns: [/\btexas\b/i, /\bgalveston\b/i, /\bwaco\b/i],
   },
   ohio: {
@@ -224,7 +224,7 @@ function allHubDefinitions(): HistoryHub[] {
     description:
       "Documented Chicago disasters — fires, theater tragedy, and the Eastland — with named sources.",
     intro:
-      "Chicago left a dense paper trail of industrial and public disasters. These SeeStew stories stick to archives and contemporary reporting — not thin city doorway pages.",
+      "Four Chicago disasters on SeeStew changed building codes, maritime rules, or public memory: the 1871 fire, the 1903 Iroquois Theatre fire, the 1915 Eastland capsizing in the Chicago River, and the 1958 Our Lady of the Angels school fire. Illinois-wide labor and politics stories live on the Illinois hub; this page is the city disaster index only, drawn from archives and contemporary reporting.",
     articleSlugs: [
       "great-chicago-fire-1871",
       "iroquois-theatre-fire-1903",
@@ -239,7 +239,7 @@ function allHubDefinitions(): HistoryHub[] {
     description:
       "Documented Boston history — the Massacre, the Molasses Flood, and the Cocoanut Grove fire — with named sources.",
     intro:
-      "Three Boston events on SeeStew left a legal or regulatory paper trail: the 1770 Massacre (trial records), the 1919 Molasses Flood (the Ogden auditor’s report), and the 1942 Cocoanut Grove fire (building-code aftermath). This hub is a city index to those full articles — not a second encyclopedia page.",
+      "Three Boston events on SeeStew left a legal or regulatory paper trail: the 1770 Massacre (trial records), the 1919 Molasses Flood (the Ogden auditor’s report), and the 1942 Cocoanut Grove fire (building-code aftermath). Salem’s 1692 trials are Massachusetts history but not Boston city history — they appear on the Massachusetts hub instead. This page is a city index to those three full articles.",
     articleSlugs: [
       "boston-massacre-1770",
       "great-molasses-flood-1919",
@@ -392,4 +392,43 @@ export function getPopulatedHistoryHubs(
     .map((hub) => ({ ...hub, count: getArticlesForHub(hub, articles).length }))
     .filter((h) => h.count >= HUB_MIN_ARTICLES)
     .sort((a, b) => b.count - a.count || a.title.localeCompare(b.title));
+}
+
+/**
+ * Indexable hubs need enough distinct stories that a hub page is more than a
+ * doorway. Populated-but-thin hubs stay navigable with noindex,follow.
+ */
+export const HUB_INDEX_MIN_ARTICLES = 4;
+
+export function isIndexableHistoryHub(
+  hub: HistoryHub,
+  articles: Article[]
+): boolean {
+  const matched = getArticlesForHub(hub, articles);
+  if (matched.length < HUB_INDEX_MIN_ARTICLES) return false;
+  // Curated list/city hubs with explicit slugs are intentional indexes.
+  if (hub.articleSlugs?.length && matched.length >= HUB_MIN_ARTICLES) {
+    return matched.length >= HUB_INDEX_MIN_ARTICLES;
+  }
+  return matched.length >= HUB_INDEX_MIN_ARTICLES;
+}
+
+/** Opening sentences from an article body for hub cards — never invented. */
+export function hubSummaryFromArticle(article: Article, maxSentences = 2): string {
+  const body = (article.content || "")
+    .replace(/^#[^\n]*\n+/gm, "")
+    .replace(/^##\s*Sources[\s\S]*$/im, "")
+    .replace(/\[(\d+)\]/g, "")
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/[*_`>#]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!body) return article.excerpt;
+  const parts = body.match(/[^.!?]+[.!?]+/g) || [body];
+  const summary = parts
+    .slice(0, maxSentences)
+    .map((s) => s.trim())
+    .join(" ")
+    .trim();
+  return summary || article.excerpt;
 }

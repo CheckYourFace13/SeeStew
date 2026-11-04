@@ -25,6 +25,7 @@
     "check:article-quality": "npx --yes tsx scripts/check-article-quality.ts",
     "check:editorial-originality": "node scripts/test-editorial-originality.mjs",
     "check:qr-file-validation": "node scripts/test-qr-file-validation.mjs",
+    "check:indexability": "node scripts/check-indexability.mjs",
     "audit:editorial-duplicates": "node scripts/editorial-duplicate-audit.mjs",
     "check:seo-snippets": "node scripts/check-seo-snippets.mjs",
     "check:internal-links": "node scripts/check-internal-links.mjs",

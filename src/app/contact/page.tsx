@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description:
     "Contact SeeStew with questions, press inquiries, and partnerships using our secure form.",
   alternates: { canonical: `${siteConfig.url}/contact` },
+  robots: { index: false, follow: true },
 };
 
 export default function ContactPage() {
