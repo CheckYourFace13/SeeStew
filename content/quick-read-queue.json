@@ -258,6 +258,744 @@
       ],
       "status": "pending",
       "format": "quick-read"
+    },
+    {
+      "id": "qr-peshtigo-same-day-chicago",
+      "title": "Peshtigo Burned the Same Day as Chicago — and Almost Nobody Noticed",
+      "hook": "America’s deadliest wildfire hit Wisconsin the same day as the Great Chicago Fire — and was overshadowed for generations.",
+      "category": "Weird America",
+      "angle": "Focus only on the coincidence of dates and why Chicago dominated headlines; not a full Peshtigo narrative.",
+      "editorialAngle": "Same-day overshadowing of Peshtigo by Chicago Fire news",
+      "parentArticleSlug": "peshtigo-fire-1871",
+      "relatedArticleSlugs": [
+        "peshtigo-fire-1871"
+      ],
+      "keywords": [
+        "Peshtigo fire same day Chicago",
+        "Peshtigo vs Chicago 1871"
+      ],
+      "requiredSources": [
+        {
+          "title": "Peshtigo Fire",
+          "publisher": "National Weather Service",
+          "url": "https://www.weather.gov/grb/peshtigofire"
+        },
+        {
+          "title": "Great Chicago Fire",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/today-in-history/october-08/"
+        },
+        {
+          "title": "Peshtigo Fire Museum / Wisconsin history",
+          "publisher": "Wisconsin Historical Society",
+          "url": "https://www.wisconsinhistory.org/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Peshtigo fire 1871"
+      ],
+      "status": "pending",
+      "format": "quick-read",
+      "eventYear": 1871,
+      "historicalEra": "reconstruction-gilded-age",
+      "canonicalEventId": "peshtigo-chicago-same-day::1871"
+    },
+    {
+      "id": "qr-challenger-o-ring-cold",
+      "title": "The Cold Morning That Doomed Challenger’s O-Rings",
+      "hook": "Engineers warned that freezing temperatures could fail Challenger’s booster seals — and the January launch went ahead anyway.",
+      "category": "Weird America",
+      "angle": "One technical failure mode and the temperature debate — not the full shuttle program story.",
+      "editorialAngle": "O-ring cold-temperature failure as Challenger ignition cause",
+      "parentArticleSlug": "challenger-disaster-1986",
+      "relatedArticleSlugs": [
+        "challenger-disaster-1986"
+      ],
+      "keywords": [
+        "Challenger O-ring cold",
+        "Challenger Rogers Commission O-ring"
+      ],
+      "requiredSources": [
+        {
+          "title": "Rogers Commission Report",
+          "publisher": "NASA",
+          "url": "https://www.nasa.gov/history/rogersrep/genindex.htm"
+        },
+        {
+          "title": "Challenger",
+          "publisher": "Smithsonian National Air and Space Museum",
+          "url": "https://airandspace.si.edu/"
+        },
+        {
+          "title": "STS-51-L",
+          "publisher": "NASA",
+          "url": "https://www.nasa.gov/mission_pages/shuttle/shuttlemissions/archives/sts-51L.html"
+        }
+      ],
+      "imageSearchTerms": [
+        "Challenger O-ring 1986"
+      ],
+      "status": "pending",
+      "format": "quick-read",
+      "eventYear": 1986,
+      "historicalEra": "postwar-cold-war",
+      "canonicalEventId": "challenger-oring-cold::1986"
+    },
+    {
+      "id": "qr-johnstown-south-fork-club",
+      "title": "The South Fork Club Dam: Privilege Above Johnstown",
+      "hook": "A private resort club altered a dam above Johnstown — then largely escaped liability after the flood.",
+      "category": "Weird America",
+      "angle": "Club ownership, dam modifications, and liability outcome — not the full flood chronology.",
+      "editorialAngle": "South Fork Fishing and Hunting Club dam liability after Johnstown Flood",
+      "parentArticleSlug": "johnstown-flood-1889",
+      "relatedArticleSlugs": [
+        "johnstown-flood-1889"
+      ],
+      "keywords": [
+        "Johnstown Flood South Fork Club",
+        "South Fork dam lawsuit"
+      ],
+      "requiredSources": [
+        {
+          "title": "Johnstown Flood",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/jofl/learn/historyculture/index.htm"
+        },
+        {
+          "title": "Johnstown Flood",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/today-in-history/may-31/"
+        },
+        {
+          "title": "Johnstown Area Heritage Association",
+          "publisher": "JAHA",
+          "url": "https://www.jaha.org/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Johnstown Flood South Fork dam"
+      ],
+      "status": "pending",
+      "format": "quick-read",
+      "eventYear": 1889,
+      "historicalEra": "reconstruction-gilded-age",
+      "canonicalEventId": "johnstown-south-fork-club::1889"
+    },
+    {
+      "id": "qr-cocoanut-grove-exit",
+      "title": "Why Cocoanut Grove’s Exits Failed When Fire Hit",
+      "hook": "A revolving door and blocked exits turned a nightclub blaze into America’s deadliest club fire.",
+      "category": "Weird America",
+      "angle": "Exit design and locked/blocked egress only — not the full victim narrative.",
+      "editorialAngle": "Revolving door and blocked exits at Cocoanut Grove fire",
+      "parentArticleSlug": "cocoanut-grove-fire-1942",
+      "relatedArticleSlugs": [
+        "cocoanut-grove-fire-1942"
+      ],
+      "keywords": [
+        "Cocoanut Grove revolving door",
+        "Cocoanut Grove exits"
+      ],
+      "requiredSources": [
+        {
+          "title": "Cocoanut Grove Fire",
+          "publisher": "National Fire Protection Association",
+          "url": "https://www.nfpa.org/"
+        },
+        {
+          "title": "Cocoanut Grove",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Boston fire history",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Cocoanut Grove fire exits 1942"
+      ],
+      "status": "pending",
+      "format": "quick-read",
+      "eventYear": 1942,
+      "historicalEra": "world-war-ii",
+      "canonicalEventId": "cocoanut-grove-exits::1942"
+    },
+    {
+      "id": "qr-apollo1-hatch",
+      "title": "The Inward Hatch That Trapped Apollo 1’s Crew",
+      "hook": "Apollo 1’s cabin hatch opened inward under pressure — and the crew could not escape the pad fire.",
+      "category": "Weird America",
+      "angle": "Hatch design and escape impossibility during the pad fire — not the full program rebuild.",
+      "editorialAngle": "Inward-opening hatch as Apollo 1 escape barrier",
+      "parentArticleSlug": "apollo-1-fire-1967",
+      "relatedArticleSlugs": [
+        "apollo-1-fire-1967"
+      ],
+      "keywords": [
+        "Apollo 1 hatch",
+        "Apollo 1 cabin fire hatch"
+      ],
+      "requiredSources": [
+        {
+          "title": "Apollo 1",
+          "publisher": "NASA",
+          "url": "https://www.nasa.gov/mission_pages/apollo/missions/apollo1.html"
+        },
+        {
+          "title": "Apollo 1 fire",
+          "publisher": "Smithsonian National Air and Space Museum",
+          "url": "https://airandspace.si.edu/"
+        },
+        {
+          "title": "Apollo program",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Apollo 1 hatch 1967"
+      ],
+      "status": "pending",
+      "format": "quick-read",
+      "eventYear": 1967,
+      "historicalEra": "postwar-cold-war",
+      "canonicalEventId": "apollo1-hatch::1967"
+    },
+    {
+      "id": "qr-goldsboro-one-switch",
+      "title": "The Goldsboro Bomb That Was One Switch From Arming",
+      "hook": "After a B-52 broke up over North Carolina, one nuclear bomb’s arming sequence stopped at a single switch.",
+      "category": "Military",
+      "angle": "The intact switch detail from declassified accounts — not the full Goldsboro narrative.",
+      "editorialAngle": "Single arming switch that prevented Goldsboro bomb detonation",
+      "parentArticleSlug": "goldsboro-nuclear-accident-1961",
+      "relatedArticleSlugs": [
+        "goldsboro-nuclear-accident-1961"
+      ],
+      "keywords": [
+        "Goldsboro nuclear bomb switch",
+        "Goldsboro 1961 arming"
+      ],
+      "requiredSources": [
+        {
+          "title": "Goldsboro broken arrow",
+          "publisher": "U.S. Air Force historical materials",
+          "url": "https://www.afhistory.af.mil/"
+        },
+        {
+          "title": "Nuclear weapons accidents",
+          "publisher": "National Security Archive",
+          "url": "https://nsarchive.gwu.edu/"
+        },
+        {
+          "title": "Broken Arrow",
+          "publisher": "Department of Defense FOIA / National Archives",
+          "url": "https://www.archives.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Goldsboro nuclear accident switch"
+      ],
+      "status": "pending",
+      "format": "quick-read",
+      "eventYear": 1961,
+      "historicalEra": "postwar-cold-war",
+      "canonicalEventId": "goldsboro-switch::1961"
+    },
+    {
+      "id": "qr-palomares-missing-bomb",
+      "title": "The Palomares Bomb That Hid Underwater for Months",
+      "hook": "After a midair collision over Spain, one U.S. hydrogen bomb stayed lost at sea until a Navy search recovered it.",
+      "category": "Military",
+      "angle": "The missing fourth bomb and underwater recovery — not the full Palomares contamination story.",
+      "editorialAngle": "Underwater recovery of the missing Palomares hydrogen bomb",
+      "parentArticleSlug": "palomares-incident-1966",
+      "relatedArticleSlugs": [
+        "palomares-incident-1966"
+      ],
+      "keywords": [
+        "Palomares missing bomb",
+        "Palomares Alvin recovery"
+      ],
+      "requiredSources": [
+        {
+          "title": "Palomares",
+          "publisher": "U.S. Air Force historical materials",
+          "url": "https://www.afhistory.af.mil/"
+        },
+        {
+          "title": "Palomares incident",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Naval History",
+          "publisher": "Naval History and Heritage Command",
+          "url": "https://www.history.navy.mil/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Palomares missing bomb 1966"
+      ],
+      "status": "pending",
+      "format": "quick-read",
+      "eventYear": 1966,
+      "historicalEra": "postwar-cold-war",
+      "canonicalEventId": "palomares-missing-bomb::1966"
+    },
+    {
+      "id": "qr-indianapolis-delayed-rescue",
+      "title": "Why Help Took So Long After Indianapolis Sank",
+      "hook": "Survivors of USS Indianapolis drifted for days — because the Navy did not know the cruiser was overdue.",
+      "category": "Military",
+      "angle": "Radio silence, routing secrecy, and delayed distress recognition — not the shark attacks retelling.",
+      "editorialAngle": "Delayed discovery that USS Indianapolis was overdue after sinking",
+      "parentArticleSlug": "uss-indianapolis-1945",
+      "relatedArticleSlugs": [
+        "uss-indianapolis-1945"
+      ],
+      "keywords": [
+        "USS Indianapolis delayed rescue",
+        "Indianapolis overdue 1945"
+      ],
+      "requiredSources": [
+        {
+          "title": "USS Indianapolis",
+          "publisher": "Naval History and Heritage Command",
+          "url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/i/indianapolis-ca-35.html"
+        },
+        {
+          "title": "USS Indianapolis",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "World War II Navy",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "USS Indianapolis delayed rescue"
+      ],
+      "status": "pending",
+      "format": "quick-read",
+      "eventYear": 1945,
+      "historicalEra": "world-war-ii",
+      "canonicalEventId": "indianapolis-delayed-rescue::1945"
+    },
+    {
+      "id": "qr-three-mile-hydrogen-bubble",
+      "title": "The Hydrogen Bubble Scare Inside Three Mile Island",
+      "hook": "During TMI, engineers feared a hydrogen bubble could explode inside the reactor vessel — a crisis within the crisis.",
+      "category": "Weird America",
+      "angle": "Hydrogen bubble concern and how it was assessed — not the full accident timeline.",
+      "editorialAngle": "Hydrogen bubble concern during Three Mile Island accident",
+      "parentArticleSlug": "three-mile-island-1979",
+      "relatedArticleSlugs": [
+        "three-mile-island-1979"
+      ],
+      "keywords": [
+        "Three Mile Island hydrogen bubble",
+        "TMI hydrogen"
+      ],
+      "requiredSources": [
+        {
+          "title": "Three Mile Island",
+          "publisher": "NRC",
+          "url": "https://www.nrc.gov/reading-rm/doc-collections/fact-sheets/3mile-isle.html"
+        },
+        {
+          "title": "TMI accident",
+          "publisher": "NRC historical",
+          "url": "https://www.nrc.gov/"
+        },
+        {
+          "title": "Three Mile Island",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Three Mile Island hydrogen bubble"
+      ],
+      "status": "pending",
+      "format": "quick-read",
+      "eventYear": 1979,
+      "historicalEra": "postwar-cold-war",
+      "canonicalEventId": "tmi-hydrogen-bubble::1979"
+    },
+    {
+      "id": "qr-exxon-valdez-response-delay",
+      "title": "The Hours That Mattered After Exxon Valdez Grounded",
+      "hook": "After the tanker hit Bligh Reef, critics said containment boom and response came too slowly to limit the oil’s spread.",
+      "category": "Weird America",
+      "angle": "Early response timing and boom deployment debates — not the full spill ecology story.",
+      "editorialAngle": "Delayed containment response after Exxon Valdez grounding",
+      "parentArticleSlug": "exxon-valdez-oil-spill-1989",
+      "relatedArticleSlugs": [
+        "exxon-valdez-oil-spill-1989"
+      ],
+      "keywords": [
+        "Exxon Valdez response delay",
+        "Exxon Valdez boom"
+      ],
+      "requiredSources": [
+        {
+          "title": "Exxon Valdez Oil Spill",
+          "publisher": "NOAA",
+          "url": "https://response.restoration.noaa.gov/oil-and-chemical-spills/significant-incidents/exxon-valdez-oil-spill"
+        },
+        {
+          "title": "Exxon Valdez",
+          "publisher": "EPA",
+          "url": "https://www.epa.gov/"
+        },
+        {
+          "title": "Spill response",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Exxon Valdez response 1989"
+      ],
+      "status": "pending",
+      "format": "quick-read",
+      "eventYear": 1989,
+      "historicalEra": "postwar-cold-war",
+      "canonicalEventId": "exxon-valdez-response::1989"
+    },
+    {
+      "id": "qr-hartford-waterproofing",
+      "title": "The Waterproofing That Helped the Hartford Circus Tent Burn",
+      "hook": "Paraffin and gasoline waterproofing made the big top shed rain — and turned it into fuel when fire started.",
+      "category": "Weird America",
+      "angle": "Tent waterproofing chemistry/practice as fire accelerant — not the full victim list.",
+      "editorialAngle": "Paraffin-gasoline waterproofing of Hartford circus tent",
+      "parentArticleSlug": "hartford-circus-fire-1944",
+      "relatedArticleSlugs": [
+        "hartford-circus-fire-1944"
+      ],
+      "keywords": [
+        "Hartford circus tent waterproofing",
+        "Hartford circus paraffin"
+      ],
+      "requiredSources": [
+        {
+          "title": "Hartford Circus Fire",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/today-in-history/july-06/"
+        },
+        {
+          "title": "Hartford circus fire",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Circus fire disaster history",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Hartford circus fire waterproofing"
+      ],
+      "status": "pending",
+      "format": "quick-read",
+      "eventYear": 1944,
+      "historicalEra": "world-war-ii",
+      "canonicalEventId": "hartford-waterproofing::1944"
+    },
+    {
+      "id": "qr-eastland-stability",
+      "title": "Why Eastland Rolled Over at the Dock",
+      "hook": "SS Eastland capsized in the Chicago River while still tied up — a stability failure, not a storm at sea.",
+      "category": "Weird America",
+      "angle": "Top-heavy stability and dockside listing — not the full passenger tragedy retelling.",
+      "editorialAngle": "Stability design failure that capsized Eastland at dock",
+      "parentArticleSlug": "eastland-disaster-1915",
+      "relatedArticleSlugs": [
+        "eastland-disaster-1915"
+      ],
+      "keywords": [
+        "Eastland stability",
+        "Eastland capsized Chicago River"
+      ],
+      "requiredSources": [
+        {
+          "title": "Eastland Disaster",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Eastland",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Chicago River disaster",
+          "publisher": "Chicago History Museum",
+          "url": "https://www.chicagohistory.org/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Eastland disaster stability 1915"
+      ],
+      "status": "pending",
+      "format": "quick-read",
+      "eventYear": 1915,
+      "historicalEra": "progressive-wwi",
+      "canonicalEventId": "eastland-stability::1915"
+    },
+    {
+      "id": "qr-tulsa-airplanes",
+      "title": "Airplanes Over Greenwood: What Witnesses Reported in 1921",
+      "hook": "During the Tulsa Race Massacre, survivors described aircraft over Greenwood — a detail still debated in scope.",
+      "category": "Crime",
+      "angle": "Aircraft reports from contemporary and later testimony — carefully bounded; not the full massacre narrative.",
+      "editorialAngle": "Aircraft over Greenwood during Tulsa Race Massacre",
+      "parentArticleSlug": "tulsa-race-massacre-1921",
+      "relatedArticleSlugs": [
+        "tulsa-race-massacre-1921"
+      ],
+      "keywords": [
+        "Tulsa Race Massacre airplanes",
+        "Greenwood planes 1921"
+      ],
+      "requiredSources": [
+        {
+          "title": "Tulsa Race Massacre",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/research/african-americans/oklahoma-tulsa-race-massacre"
+        },
+        {
+          "title": "1921 Tulsa Race Massacre",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Tulsa Historical Society",
+          "publisher": "Tulsa Historical Society & Museum",
+          "url": "https://www.tulsahistory.org/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Tulsa Race Massacre airplanes"
+      ],
+      "status": "pending",
+      "format": "quick-read",
+      "eventYear": 1921,
+      "historicalEra": "twenties-depression",
+      "canonicalEventId": "tulsa-airplanes::1921"
+    },
+    {
+      "id": "qr-my-lai-helicopter",
+      "title": "The Helicopter Crew That Interrupted My Lai",
+      "hook": "Warrant Officer Hugh Thompson landed between soldiers and civilians at My Lai — and ordered his crew to protect survivors.",
+      "category": "Military",
+      "angle": "Thompson’s intervention only — not the full massacre investigation.",
+      "editorialAngle": "Hugh Thompson helicopter intervention at My Lai",
+      "parentArticleSlug": "my-lai-massacre-1968",
+      "relatedArticleSlugs": [
+        "my-lai-massacre-1968"
+      ],
+      "keywords": [
+        "Hugh Thompson My Lai",
+        "My Lai helicopter intervention"
+      ],
+      "requiredSources": [
+        {
+          "title": "My Lai",
+          "publisher": "U.S. Army Center of Military History",
+          "url": "https://history.army.mil/"
+        },
+        {
+          "title": "Vietnam War crimes investigations",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/research/military/vietnam-war"
+        },
+        {
+          "title": "My Lai",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Hugh Thompson My Lai"
+      ],
+      "status": "pending",
+      "format": "quick-read",
+      "eventYear": 1968,
+      "historicalEra": "postwar-cold-war",
+      "canonicalEventId": "my-lai-thompson::1968"
+    },
+    {
+      "id": "qr-black-tom-liberty",
+      "title": "Black Tom’s Blast That Scarred the Statue of Liberty",
+      "hook": "The 1916 Black Tom munitions explosion damaged the Statue of Liberty’s skirt and closed her torch to visitors.",
+      "category": "Military",
+      "angle": "Statue of Liberty damage from Black Tom — not the full sabotage investigation.",
+      "editorialAngle": "Statue of Liberty damage from Black Tom explosion",
+      "parentArticleSlug": "black-tom-explosion-1916",
+      "relatedArticleSlugs": [
+        "black-tom-explosion-1916"
+      ],
+      "keywords": [
+        "Black Tom Statue of Liberty",
+        "Black Tom Liberty torch"
+      ],
+      "requiredSources": [
+        {
+          "title": "Black Tom Explosion",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/articles/black-tom.htm"
+        },
+        {
+          "title": "Statue of Liberty",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/stli/"
+        },
+        {
+          "title": "Black Tom",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Black Tom Statue of Liberty damage"
+      ],
+      "status": "pending",
+      "format": "quick-read",
+      "eventYear": 1916,
+      "historicalEra": "progressive-wwi",
+      "canonicalEventId": "black-tom-liberty::1916"
+    },
+    {
+      "id": "qr-donner-forlorn-hope",
+      "title": "The Forlorn Hope: The Donner Party’s Desperate Snowshoe Party",
+      "hook": "Fifteen people left the stranded Donner camps on snowshoes — a desperate breakout that cost most of their lives.",
+      "category": "Weird America",
+      "angle": "The snowshoe party’s departure and losses — not the full Donner winter narrative.",
+      "editorialAngle": "Forlorn Hope snowshoe party from Donner camps",
+      "parentArticleSlug": "donner-party-1846",
+      "relatedArticleSlugs": [
+        "donner-party-1846"
+      ],
+      "keywords": [
+        "Donner Party Forlorn Hope",
+        "Donner snowshoe party"
+      ],
+      "requiredSources": [
+        {
+          "title": "Donner Party",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/articles/000/the-donner-party.htm"
+        },
+        {
+          "title": "Donner Memorial",
+          "publisher": "California State Parks",
+          "url": "https://www.parks.ca.gov/"
+        },
+        {
+          "title": "Donner Party",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Donner Party Forlorn Hope"
+      ],
+      "status": "pending",
+      "format": "quick-read",
+      "eventYear": 1846,
+      "historicalEra": "antebellum-civil-war",
+      "canonicalEventId": "donner-forlorn-hope::1846"
+    },
+    {
+      "id": "qr-triangle-fire-escape",
+      "title": "The Fire Escape That Collapsed at Triangle",
+      "hook": "At Triangle Shirtwaist, a rear fire escape peeled away from the building — dropping workers into the courtyard.",
+      "category": "Crime",
+      "angle": "Fire-escape failure as a distinct mechanical detail — companion to the locked-door Quick Read, not a repeat.",
+      "editorialAngle": "Collapsing rear fire escape during Triangle Shirtwaist fire",
+      "parentArticleSlug": "triangle-shirtwaist-fire-1911",
+      "relatedArticleSlugs": [
+        "triangle-shirtwaist-fire-1911"
+      ],
+      "keywords": [
+        "Triangle fire escape collapse",
+        "Triangle Shirtwaist fire escape"
+      ],
+      "requiredSources": [
+        {
+          "title": "Triangle Shirtwaist Factory Fire",
+          "publisher": "U.S. Department of Labor",
+          "url": "https://www.dol.gov/general/aboutdol/history/trianglefire"
+        },
+        {
+          "title": "Remembering the Triangle Fire",
+          "publisher": "Cornell ILR",
+          "url": "https://trianglefire.ilr.cornell.edu/"
+        },
+        {
+          "title": "Triangle fire",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Triangle Shirtwaist fire escape"
+      ],
+      "status": "pending",
+      "format": "quick-read",
+      "eventYear": 1911,
+      "historicalEra": "progressive-wwi",
+      "canonicalEventId": "triangle-fire-escape::1911"
+    },
+    {
+      "id": "qr-kent-state-guard-orders",
+      "title": "What the Guard Was Ordered to Do at Kent State",
+      "hook": "On May 4, 1970, Ohio National Guard troops on campus opened fire — after orders and a tense advance that still fuels debate.",
+      "category": "Politics",
+      "angle": "Orders and the moments before the volley — not a full campus-politics essay.",
+      "editorialAngle": "National Guard orders and advance before Kent State shootings",
+      "parentArticleSlug": "kent-state-shootings-1970",
+      "relatedArticleSlugs": [
+        "kent-state-shootings-1970"
+      ],
+      "keywords": [
+        "Kent State National Guard orders",
+        "Kent State May 4"
+      ],
+      "requiredSources": [
+        {
+          "title": "Kent State shootings",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Kent State",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "May 4 Collection",
+          "publisher": "Kent State University Libraries",
+          "url": "https://www.library.kent.edu/special-collections-and-archives/may-4-collection"
+        }
+      ],
+      "imageSearchTerms": [
+        "Kent State Guard 1970"
+      ],
+      "status": "pending",
+      "format": "quick-read",
+      "eventYear": 1970,
+      "historicalEra": "postwar-cold-war",
+      "canonicalEventId": "kent-state-orders::1970"
     }
   ]
 }

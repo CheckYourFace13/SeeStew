@@ -14,7 +14,13 @@ import { isIndexableHistoryHub } from "@/lib/history-hubs";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = siteConfig.url;
-  const longForm = await getLongFormVideos();
+  // Soft-fail external feeds so a YouTube/GravyBlock outage cannot 500 the sitemap.
+  let longForm: Awaited<ReturnType<typeof getLongFormVideos>> = [];
+  try {
+    longForm = await getLongFormVideos();
+  } catch {
+    longForm = [];
+  }
   const articles = getAllArticles();
   const topics = getPopulatedTopics(articles);
   const hubs = getPopulatedHistoryHubs(articles).filter((hub) =>
@@ -24,9 +30,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const includeOnThisDay = onThisDayEnabled(slugSet);
   // Only multi-event anniversary dates are indexable; single-event dates stay
   // reachable with noindex,follow and are omitted here.
-  const onThisDayDates = includeOnThisDay
-    ? indexableAnniversaryDateSlugs(slugSet)
-    : [];
+  let onThisDayDates: string[] = [];
+  try {
+    onThisDayDates = includeOnThisDay
+      ? indexableAnniversaryDateSlugs(slugSet)
+      : [];
+  } catch {
+    onThisDayDates = [];
+  }
 
   const staticPages: MetadataRoute.Sitemap = [
     "",
@@ -88,7 +99,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.85,
   }));
 
-  const managedItems = (await getManagedFeed())?.items ?? [];
+  let managedItems: { slug: string; publishedAt: string }[] = [];
+  try {
+    managedItems = (await getManagedFeed())?.items ?? [];
+  } catch {
+    managedItems = [];
+  }
   const managedPages: MetadataRoute.Sitemap = managedItems.length
     ? [
         { url: `${base}/insights`, changeFrequency: "weekly" as const, priority: 0.5 },

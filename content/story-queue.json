@@ -6436,6 +6436,1510 @@
       "publishedAt": null,
       "eventYear": 1951,
       "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "shays-rebellion-1786",
+      "title": "Shays’ Rebellion: When Farmers Closed the Courts of Massachusetts",
+      "hook": "Armed farmers shut down courthouses in 1786–87 — a crisis that pushed the Constitutional Convention.",
+      "category": "Revolution",
+      "angle": "Why veterans and debtors rose, which courts were forced closed, how the state militia responded, and what the rebellion meant for the Constitution.",
+      "keywords": [
+        "Shays Rebellion",
+        "Daniel Shays Massachusetts",
+        "Springfield Arsenal 1787"
+      ],
+      "requiredSources": [
+        {
+          "title": "Shays' Rebellion",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/articles/000/shays-rebellion.htm"
+        },
+        {
+          "title": "Shays’ Rebellion",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/today-in-history/january-25/"
+        },
+        {
+          "title": "Founders Online",
+          "publisher": "National Archives",
+          "url": "https://founders.archives.gov/"
+        },
+        {
+          "title": "Shays' Rebellion and the Constitution",
+          "publisher": "Mount Vernon",
+          "url": "https://www.mountvernon.org/library/digitalhistory/digital-encyclopedia/article/shays-rebellion"
+        },
+        {
+          "title": "Massachusetts Historical Society",
+          "publisher": "Massachusetts Historical Society",
+          "url": "https://www.masshist.org/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Shays Rebellion Massachusetts 1787"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1786,
+      "historicalEra": "revolution-early-republic"
+    },
+    {
+      "id": "alien-and-sedition-acts-1798",
+      "title": "The Alien and Sedition Acts: When Criticizing the Government Became a Crime",
+      "hook": "Federalists passed laws targeting immigrants and newspaper critics — and Jeffersonians called it tyranny.",
+      "category": "Politics",
+      "angle": "What each act did, who was prosecuted under the Sedition Act, how states answered with the Virginia and Kentucky Resolutions, and the 1800 election aftermath.",
+      "keywords": [
+        "Alien and Sedition Acts",
+        "Sedition Act 1798",
+        "Virginia Kentucky Resolutions"
+      ],
+      "requiredSources": [
+        {
+          "title": "Alien and Sedition Acts",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/milestone-documents/alien-and-sedition-acts"
+        },
+        {
+          "title": "Alien and Sedition Acts",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/rr/program/bib/ourdocs/Alien.html"
+        },
+        {
+          "title": "Sedition Act prosecutions",
+          "publisher": "Federal Judicial Center",
+          "url": "https://www.fjc.gov/"
+        },
+        {
+          "title": "Virginia and Kentucky Resolutions",
+          "publisher": "National Archives",
+          "url": "https://founders.archives.gov/"
+        },
+        {
+          "title": "Adams administration",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Alien Sedition Acts 1798"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1798,
+      "historicalEra": "revolution-early-republic"
+    },
+    {
+      "id": "nullification-crisis-1832",
+      "title": "The Nullification Crisis: South Carolina vs. the Tariff — and Jackson’s Force Bill",
+      "hook": "South Carolina declared federal tariffs void — Andrew Jackson threatened force, and a compromise cooled the crisis.",
+      "category": "Politics",
+      "angle": "The tariff fight, the Ordinance of Nullification, Calhoun’s theory, Jackson’s proclamation, and Clay’s compromise.",
+      "keywords": [
+        "Nullification Crisis",
+        "South Carolina nullification",
+        "Force Bill 1833"
+      ],
+      "requiredSources": [
+        {
+          "title": "Nullification Proclamation",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/today-in-history/december-10/"
+        },
+        {
+          "title": "Nullification Crisis",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Andrew Jackson papers",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/collections/andrew-jackson-papers/"
+        },
+        {
+          "title": "Tariff of Abominations",
+          "publisher": "U.S. Senate",
+          "url": "https://www.senate.gov/"
+        },
+        {
+          "title": "South Carolina Historical Society",
+          "publisher": "South Carolina Historical Society",
+          "url": "https://schistory.org/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Nullification Crisis South Carolina 1832"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1832,
+      "historicalEra": "antebellum-civil-war"
+    },
+    {
+      "id": "dred-scott-decision-1857",
+      "title": "Dred Scott v. Sandford: The Supreme Court Decision That Deepened the Crisis",
+      "hook": "The Court ruled Dred Scott remained enslaved and that Congress could not ban slavery in the territories — a political earthquake.",
+      "category": "Politics",
+      "angle": "Scott’s suits for freedom, Taney’s opinion, what the Court claimed about citizenship, and how Republicans answered.",
+      "keywords": [
+        "Dred Scott decision",
+        "Dred Scott v Sandford",
+        "Taney Court slavery"
+      ],
+      "requiredSources": [
+        {
+          "title": "Dred Scott v. Sandford",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/usrep060393/"
+        },
+        {
+          "title": "Dred Scott case",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/milestone-documents/dred-scott-v-sandford"
+        },
+        {
+          "title": "Dred Scott",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/jeff/planyourvisit/dredscott.htm"
+        },
+        {
+          "title": "Supreme Court history",
+          "publisher": "Supreme Court of the United States",
+          "url": "https://www.supremecourt.gov/"
+        },
+        {
+          "title": "Slavery and the Court",
+          "publisher": "Federal Judicial Center",
+          "url": "https://www.fjc.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Dred Scott decision 1857"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1857,
+      "historicalEra": "antebellum-civil-war"
+    },
+    {
+      "id": "john-brown-harpers-ferry-1859",
+      "title": "John Brown at Harpers Ferry: The Raid That Made Civil War Feel Inevitable",
+      "hook": "Brown seized the federal armory in 1859 — a failed uprising that electrified North and South.",
+      "category": "Crime",
+      "angle": "The plan, the armory seizure, Robert E. Lee’s Marines, the trial, and how newspapers framed Brown as martyr or madman.",
+      "keywords": [
+        "John Brown Harpers Ferry",
+        "Harpers Ferry raid 1859",
+        "John Brown trial"
+      ],
+      "requiredSources": [
+        {
+          "title": "John Brown's Raid",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/hafe/learn/historyculture/john-brown.htm"
+        },
+        {
+          "title": "Harpers Ferry",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/today-in-history/october-16/"
+        },
+        {
+          "title": "John Brown papers",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Harpers Ferry National Historical Park",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/hafe/"
+        },
+        {
+          "title": "Antebellum crisis",
+          "publisher": "Smithsonian",
+          "url": "https://www.si.edu/"
+        }
+      ],
+      "imageSearchTerms": [
+        "John Brown Harpers Ferry raid 1859"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1859,
+      "historicalEra": "antebellum-civil-war"
+    },
+    {
+      "id": "sand-creek-massacre-1864",
+      "title": "The Sand Creek Massacre: A Dawn Attack on a Peace Camp in Colorado",
+      "hook": "U.S. volunteers attacked a Cheyenne and Arapaho camp under a U.S. flag — killing mostly women, children, and elders.",
+      "category": "Military",
+      "angle": "Why Black Kettle’s camp flew a flag of truce, Chivington’s orders and assault, the congressional investigations that followed, and how survivors testified.",
+      "keywords": [
+        "Sand Creek Massacre",
+        "Chivington Colorado 1864",
+        "Black Kettle Sand Creek"
+      ],
+      "requiredSources": [
+        {
+          "title": "Sand Creek Massacre",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/sand/learn/historyculture/index.htm"
+        },
+        {
+          "title": "Sand Creek Massacre National Historic Site",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/sand/"
+        },
+        {
+          "title": "Congressional investigation",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Indian Wars records",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/research/native-americans"
+        },
+        {
+          "title": "Colorado history",
+          "publisher": "History Colorado",
+          "url": "https://www.historycolorado.org/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Sand Creek Massacre 1864"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1864,
+      "historicalEra": "antebellum-civil-war"
+    },
+    {
+      "id": "chinese-exclusion-act-1882",
+      "title": "The Chinese Exclusion Act: When Congress Banned Immigration by Race",
+      "hook": "In 1882 Congress barred Chinese laborers for ten years — the first major U.S. law to suspend immigration by nationality.",
+      "category": "Politics",
+      "angle": "West Coast politics, the 1882 Act’s terms, enforcement and paperwork, later extensions, and the 1943 repeal path.",
+      "keywords": [
+        "Chinese Exclusion Act",
+        "Chinese Exclusion 1882",
+        "immigration restriction"
+      ],
+      "requiredSources": [
+        {
+          "title": "Chinese Exclusion Act",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/milestone-documents/chinese-exclusion-act"
+        },
+        {
+          "title": "Chinese Exclusion Act",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/rr/program/bib/ourdocs/chinese.html"
+        },
+        {
+          "title": "Immigration and Naturalization",
+          "publisher": "U.S. Citizenship and Immigration Services",
+          "url": "https://www.uscis.gov/about-us/our-history"
+        },
+        {
+          "title": "Angel Island",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/articles/000/angel-island.htm"
+        },
+        {
+          "title": "Asian American history",
+          "publisher": "Smithsonian",
+          "url": "https://americanhistory.si.edu/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Chinese Exclusion Act 1882"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1882,
+      "historicalEra": "reconstruction-gilded-age"
+    },
+    {
+      "id": "plessy-v-ferguson-1896",
+      "title": "Plessy v. Ferguson: How “Separate but Equal” Became Law",
+      "hook": "Homer Plessy’s challenge to a Louisiana train-car law produced the doctrine that legalized Jim Crow for generations.",
+      "category": "Politics",
+      "angle": "The Comité des Citoyens test case, Justice Brown’s majority, Harlan’s dissent, and how the ruling shaped segregation until Brown.",
+      "keywords": [
+        "Plessy v Ferguson",
+        "separate but equal",
+        "Homer Plessy"
+      ],
+      "requiredSources": [
+        {
+          "title": "Plessy v. Ferguson",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/usrep163537/"
+        },
+        {
+          "title": "Plessy v. Ferguson",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/milestone-documents/plessy-v-ferguson"
+        },
+        {
+          "title": "Jim Crow history",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/articles/jim-crow-laws.htm"
+        },
+        {
+          "title": "Supreme Court opinions",
+          "publisher": "Supreme Court of the United States",
+          "url": "https://www.supremecourt.gov/"
+        },
+        {
+          "title": "Civil rights history",
+          "publisher": "Smithsonian National Museum of African American History and Culture",
+          "url": "https://nmaahc.si.edu/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Plessy v Ferguson 1896"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1896,
+      "historicalEra": "reconstruction-gilded-age"
+    },
+    {
+      "id": "uss-maine-explosion-1898",
+      "title": "The USS Maine Explosion: Havana Harbor, Yellow Press, and a Rush to War",
+      "hook": "The battleship Maine blew up in Havana — and Americans argued sabotage before investigators finished.",
+      "category": "Military",
+      "angle": "What happened the night of Feb. 15, 1898, how Hearst/Pulitzer coverage framed Spain, the Sampson board findings, and later forensic debates — only what sources support.",
+      "keywords": [
+        "USS Maine explosion",
+        "Remember the Maine",
+        "Havana harbor 1898"
+      ],
+      "requiredSources": [
+        {
+          "title": "USS Maine",
+          "publisher": "Naval History and Heritage Command",
+          "url": "https://www.history.navy.mil/research/histories/ship-histories/uss-maine.html"
+        },
+        {
+          "title": "Destruction of the Maine",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/today-in-history/february-15/"
+        },
+        {
+          "title": "Spanish-American War",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/research/military/spanish-american-war"
+        },
+        {
+          "title": "Maine memorial",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/"
+        },
+        {
+          "title": "Spanish-American War",
+          "publisher": "U.S. Army Center of Military History",
+          "url": "https://history.army.mil/"
+        }
+      ],
+      "imageSearchTerms": [
+        "USS Maine Havana explosion 1898"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1898,
+      "historicalEra": "reconstruction-gilded-age"
+    },
+    {
+      "id": "blair-mountain-1921",
+      "title": "The Battle of Blair Mountain: America’s Largest Labor Uprising",
+      "hook": "Thousands of armed miners marched in West Virginia in 1921 — until federal troops ended the largest labor uprising in U.S. history.",
+      "category": "Politics",
+      "angle": "Matewan’s aftermath, the miners’ march, company planes and machine guns, federal intervention, and why the battlefield nearly became strip-mined decades later.",
+      "keywords": [
+        "Battle of Blair Mountain",
+        "West Virginia mine war 1921",
+        "UMWA Blair Mountain"
+      ],
+      "requiredSources": [
+        {
+          "title": "Battle of Blair Mountain",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/articles/000/battle-of-blair-mountain.htm"
+        },
+        {
+          "title": "West Virginia Mine Wars",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Mine Wars Museum",
+          "publisher": "West Virginia Mine Wars Museum",
+          "url": "https://www.wvminewars.com/"
+        },
+        {
+          "title": "Labor history",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/research/labor"
+        },
+        {
+          "title": "UMWA history",
+          "publisher": "United Mine Workers of America",
+          "url": "https://umwa.org/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Battle of Blair Mountain 1921"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1921,
+      "historicalEra": "twenties-depression"
+    },
+    {
+      "id": "chicago-race-riot-1919",
+      "title": "The Chicago Race Riot of 1919: A Beach Line, a Drowning, and a City on Fire",
+      "hook": "A Black teenager drifted across an unofficial beach color line — and Chicago erupted into days of racial violence.",
+      "category": "Crime",
+      "angle": "The 29th Street Beach incident, how mobs and police responded, death and injury counts from contemporary reports, and the Chicago Commission on Race Relations that followed.",
+      "keywords": [
+        "Chicago race riot 1919",
+        "Red Summer Chicago",
+        "Eugene Williams beach"
+      ],
+      "requiredSources": [
+        {
+          "title": "Chicago Race Riot of 1919",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/today-in-history/july-27/"
+        },
+        {
+          "title": "Red Summer",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Chicago Commission on Race Relations",
+          "publisher": "University of Chicago Library",
+          "url": "https://www.lib.uchicago.edu/"
+        },
+        {
+          "title": "1919 race riots",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/"
+        },
+        {
+          "title": "African American history",
+          "publisher": "Smithsonian NMAAHC",
+          "url": "https://nmaahc.si.edu/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Chicago race riot 1919"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1919,
+      "historicalEra": "progressive-wwi"
+    },
+    {
+      "id": "titanic-us-senate-hearings-1912",
+      "title": "The Titanic Senate Hearings: How America Interrogated a Disaster at Sea",
+      "hook": "After Titanic sank, a U.S. Senate inquiry grilled White Star officers — and rewrote safety rules.",
+      "category": "Weird America",
+      "angle": "Senator Smith’s hearings in New York and Washington, key testimony about lifeboats and wireless, and the Seamen’s Act reforms that followed.",
+      "keywords": [
+        "Titanic Senate inquiry",
+        "Titanic hearings 1912",
+        "William Alden Smith Titanic"
+      ],
+      "requiredSources": [
+        {
+          "title": "Titanic Disaster Hearings",
+          "publisher": "U.S. Senate",
+          "url": "https://www.senate.gov/artandhistory/history/common/generic/TitanicDisasterHearings.htm"
+        },
+        {
+          "title": "Titanic hearings",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Titanic investigation",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Maritime safety",
+          "publisher": "U.S. Coast Guard Historian",
+          "url": "https://www.history.uscg.mil/"
+        },
+        {
+          "title": "Titanic",
+          "publisher": "Smithsonian",
+          "url": "https://www.si.edu/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Titanic Senate hearings 1912"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1912,
+      "historicalEra": "progressive-wwi"
+    },
+    {
+      "id": "lusitania-sinking-1915",
+      "title": "The Lusitania Sinking and the American Debate Over War",
+      "hook": "A German U-boat sank Lusitania in 1915 — killing Americans aboard and shifting U.S. opinion toward intervention.",
+      "category": "Military",
+      "angle": "The May 7 attack, passenger and cargo controversies as documented, Wilson’s notes to Germany, and how the sinking shaped neutrality politics — without inventing munitions claims.",
+      "keywords": [
+        "Lusitania sinking",
+        "Lusitania 1915 America",
+        "U-20 Lusitania"
+      ],
+      "requiredSources": [
+        {
+          "title": "Sinking of the Lusitania",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/today-in-history/may-07/"
+        },
+        {
+          "title": "World War I",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/research/military/ww1"
+        },
+        {
+          "title": "Lusitania",
+          "publisher": "Naval History and Heritage Command",
+          "url": "https://www.history.navy.mil/"
+        },
+        {
+          "title": "Wilson and neutrality",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/collections/woodrow-wilson-papers/"
+        },
+        {
+          "title": "U-boat warfare",
+          "publisher": "U.S. Naval Institute",
+          "url": "https://www.usni.org/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Lusitania sinking 1915"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1915,
+      "historicalEra": "progressive-wwi"
+    },
+    {
+      "id": "hindenburg-disaster-1937",
+      "title": "The Hindenburg Disaster at Lakehurst: Live Radio and a Burning Airship",
+      "hook": "The German airship Hindenburg burst into flames docking in New Jersey — captured in newsreels and Herbert Morrison’s radio cry.",
+      "category": "Weird America",
+      "angle": "The May 6, 1937 approach, what investigators documented about ignition theories, American dead and injured, and why the disaster ended passenger zeppelin travel.",
+      "keywords": [
+        "Hindenburg disaster",
+        "Lakehurst Hindenburg 1937",
+        "Herbert Morrison Hindenburg"
+      ],
+      "requiredSources": [
+        {
+          "title": "Hindenburg Disaster",
+          "publisher": "Naval History and Heritage Command",
+          "url": "https://www.history.navy.mil/content/history/nhhc/browse-by-topic/exploration-and-innovation/hindenburg.html"
+        },
+        {
+          "title": "Hindenburg",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/today-in-history/may-06/"
+        },
+        {
+          "title": "Lakehurst Naval Air Station",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Airship history",
+          "publisher": "Smithsonian National Air and Space Museum",
+          "url": "https://airandspace.si.edu/"
+        },
+        {
+          "title": "NTSB predecessor investigations",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/research/transportation"
+        }
+      ],
+      "imageSearchTerms": [
+        "Hindenburg Lakehurst 1937"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1937,
+      "historicalEra": "twenties-depression"
+    },
+    {
+      "id": "executive-order-9981-1948",
+      "title": "Executive Order 9981: Truman’s Order to Desegregate the Armed Forces",
+      "hook": "In 1948 Truman ordered equality of treatment in the military — a landmark step that still took years to implement.",
+      "category": "Politics",
+      "angle": "A. Philip Randolph’s pressure, the order’s text, the Fahy Committee, and how desegregation actually proceeded in Korea-era practice.",
+      "keywords": [
+        "Executive Order 9981",
+        "Truman desegregate military",
+        "armed forces desegregation"
+      ],
+      "requiredSources": [
+        {
+          "title": "Executive Order 9981",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/milestone-documents/executive-order-9981"
+        },
+        {
+          "title": "Desegregation of the Armed Forces",
+          "publisher": "Harry S. Truman Library",
+          "url": "https://www.trumanlibrary.gov/library/online-collections/desegregation-of-armed-forces"
+        },
+        {
+          "title": "Executive Order 9981",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Military integration",
+          "publisher": "U.S. Army Center of Military History",
+          "url": "https://history.army.mil/"
+        },
+        {
+          "title": "Civil rights and the military",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Executive Order 9981 Truman 1948"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1948,
+      "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "bay-of-pigs-1961",
+      "title": "The Bay of Pigs: A CIA Invasion That Collapsed in Three Days",
+      "hook": "CIA-trained Cuban exiles landed at the Bay of Pigs in 1961 — and Castro’s forces crushed the invasion.",
+      "category": "Military",
+      "angle": "Planning under Eisenhower/Kennedy, the landing failure, air cover decisions as declassified, prisoners, and the political fallout.",
+      "keywords": [
+        "Bay of Pigs",
+        "Bay of Pigs invasion 1961",
+        "CIA Cuba invasion"
+      ],
+      "requiredSources": [
+        {
+          "title": "Bay of Pigs",
+          "publisher": "John F. Kennedy Presidential Library",
+          "url": "https://www.jfklibrary.org/learn/about-jfk/jfk-in-history/the-bay-of-pigs"
+        },
+        {
+          "title": "Bay of Pigs release",
+          "publisher": "National Archives / CIA FOIA",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Bay of Pigs",
+          "publisher": "U.S. Department of State Office of the Historian",
+          "url": "https://history.state.gov/milestones/1961-1968/bay-of-pigs"
+        },
+        {
+          "title": "Cold War Cuba",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "CIA historical collections",
+          "publisher": "CIA FOIA Electronic Reading Room",
+          "url": "https://www.cia.gov/readingroom/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Bay of Pigs invasion 1961"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1961,
+      "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "freedom-riders-1961",
+      "title": "The Freedom Rides: Testing Supreme Court Rulings on Interstate Buses",
+      "hook": "Interracial teams rode buses into the Deep South in 1961 — and met firebombs, beatings, and federal intervention.",
+      "category": "Politics",
+      "angle": "CORE’s plan after Boynton, the Anniston firebombing, Birmingham and Montgomery violence, RFK and the Interstate Commerce Commission order.",
+      "keywords": [
+        "Freedom Riders 1961",
+        "Freedom Rides Anniston",
+        "CORE Freedom Ride"
+      ],
+      "requiredSources": [
+        {
+          "title": "Freedom Riders",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/subjects/civilrights/freedom-riders.htm"
+        },
+        {
+          "title": "Freedom Rides",
+          "publisher": "John F. Kennedy Presidential Library",
+          "url": "https://www.jfklibrary.org/learn/about-jfk/jfk-in-history/freedom-rides"
+        },
+        {
+          "title": "Civil rights movement",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/collections/civil-rights-history-project/"
+        },
+        {
+          "title": "Interstate Commerce Commission",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Freedom Riders",
+          "publisher": "Smithsonian NMAAHC",
+          "url": "https://nmaahc.si.edu/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Freedom Riders 1961"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1961,
+      "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "birmingham-church-bombing-1963",
+      "title": "The 16th Street Baptist Church Bombing: Four Girls Murdered in Birmingham",
+      "hook": "A Ku Klux Klan bomb killed four girls in a Birmingham church in 1963 — a atrocity that shocked the nation.",
+      "category": "Crime",
+      "angle": "The September 15 bombing, the victims, FBI investigation timeline, delayed prosecutions, and how the crime shaped the civil rights struggle.",
+      "keywords": [
+        "16th Street Baptist Church bombing",
+        "Birmingham church bombing 1963",
+        "Addie Mae Collins"
+      ],
+      "requiredSources": [
+        {
+          "title": "16th Street Baptist Church Bombing",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/articles/16th-street-baptist-church-bombing.htm"
+        },
+        {
+          "title": "Birmingham church bombing",
+          "publisher": "FBI",
+          "url": "https://www.fbi.gov/history/famous-cases/birmingham-church-bombing"
+        },
+        {
+          "title": "Civil rights history",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Birmingham Civil Rights National Monument",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/bicr/"
+        },
+        {
+          "title": "1963 Birmingham",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "16th Street Baptist Church bombing 1963"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1963,
+      "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "freedom-summer-1964",
+      "title": "Freedom Summer 1964: Voter Registration, Murder, and a National Awakening",
+      "hook": "Volunteers flooded Mississippi to register Black voters — and three civil rights workers were murdered.",
+      "category": "Politics",
+      "angle": "COFO’s plan, the disappearance of Chaney, Goodman, and Schwerner, the FBI investigation, and the Mississippi Freedom Democratic Party challenge.",
+      "keywords": [
+        "Freedom Summer 1964",
+        "Chaney Goodman Schwerner",
+        "Mississippi voter registration"
+      ],
+      "requiredSources": [
+        {
+          "title": "Freedom Summer",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/articles/freedom-summer.htm"
+        },
+        {
+          "title": "Mississippi Burning case",
+          "publisher": "FBI",
+          "url": "https://www.fbi.gov/history/famous-cases/mississippi-burning"
+        },
+        {
+          "title": "Freedom Summer",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Civil rights records",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/research/african-americans/civil-rights"
+        },
+        {
+          "title": "SNCC / COFO",
+          "publisher": "Smithsonian NMAAHC",
+          "url": "https://nmaahc.si.edu/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Freedom Summer Mississippi 1964"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1964,
+      "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "watts-rebellion-1965",
+      "title": "The Watts Rebellion of 1965: Six Days That Shook Los Angeles",
+      "hook": "A traffic stop in Watts ignited six days of uprising — leaving 34 dead and a city transformed.",
+      "category": "Crime",
+      "angle": "The Marquette Frye stop, the scale of the unrest, National Guard deployment, the McCone Commission findings, and what official reports documented about causes.",
+      "keywords": [
+        "Watts riots 1965",
+        "Watts rebellion",
+        "McCone Commission"
+      ],
+      "requiredSources": [
+        {
+          "title": "Watts Rebellion",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "1965 Watts",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "McCone Commission",
+          "publisher": "California State Archives / Governor’s papers",
+          "url": "https://www.sos.ca.gov/archives"
+        },
+        {
+          "title": "Urban unrest 1960s",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/"
+        },
+        {
+          "title": "Civil rights era Los Angeles",
+          "publisher": "Smithsonian",
+          "url": "https://www.si.edu/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Watts rebellion 1965"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1965,
+      "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "detroit-uprising-1967",
+      "title": "The Detroit Uprising of 1967: The Blind Pig Raid That Ignited a City",
+      "hook": "A police raid on an after-hours club sparked days of violence — one of the deadliest urban uprisings in U.S. history.",
+      "category": "Crime",
+      "angle": "The July 23 raid, the death toll and destruction as reported, federal troops, and the Kerner Commission context that followed.",
+      "keywords": [
+        "Detroit riot 1967",
+        "Detroit uprising 1967",
+        "12th Street riot"
+      ],
+      "requiredSources": [
+        {
+          "title": "Detroit Rebellion",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "1967 Detroit",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Kerner Commission",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/research/african-americans/browse/kerner-commission"
+        },
+        {
+          "title": "Detroit historical museum",
+          "publisher": "Detroit Historical Society",
+          "url": "https://detroithistorical.org/"
+        },
+        {
+          "title": "Urban crisis 1967",
+          "publisher": "Smithsonian",
+          "url": "https://www.si.edu/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Detroit uprising 1967"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1967,
+      "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "tet-offensive-1968",
+      "title": "The Tet Offensive and the American Home Front",
+      "hook": "Communist forces struck across South Vietnam in 1968 — and U.S. public confidence in the war cracked.",
+      "category": "Military",
+      "angle": "What Tet was militarily, Saigon and Hue coverage Americans saw, the credibility gap, and Johnson’s decision not to seek reelection — grounded in contemporary reporting and official histories.",
+      "keywords": [
+        "Tet Offensive 1968",
+        "Tet Offensive American opinion",
+        "Vietnam Tet"
+      ],
+      "requiredSources": [
+        {
+          "title": "Tet Offensive",
+          "publisher": "U.S. Army Center of Military History",
+          "url": "https://history.army.mil/"
+        },
+        {
+          "title": "Vietnam War",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/research/military/vietnam-war"
+        },
+        {
+          "title": "Tet Offensive",
+          "publisher": "Naval History and Heritage Command",
+          "url": "https://www.history.navy.mil/"
+        },
+        {
+          "title": "Vietnam War",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/collections/vietnam-war/"
+        },
+        {
+          "title": "LBJ and Vietnam",
+          "publisher": "LBJ Presidential Library",
+          "url": "https://www.lbjlibrary.org/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Tet Offensive 1968"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1968,
+      "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "iran-hostage-crisis-1979",
+      "title": "The Iran Hostage Crisis: 444 Days That Gripped America",
+      "hook": "Militants seized the U.S. Embassy in Tehran in 1979 — holding Americans hostage for 444 days.",
+      "category": "Politics",
+      "angle": "The embassy takeover, failed Desert One rescue, negotiations, and the hostages’ release as Reagan took office — from State and military histories.",
+      "keywords": [
+        "Iran hostage crisis",
+        "Tehran embassy 1979",
+        "Operation Eagle Claw"
+      ],
+      "requiredSources": [
+        {
+          "title": "Iran Hostage Crisis",
+          "publisher": "U.S. Department of State Office of the Historian",
+          "url": "https://history.state.gov/departmenthistory/short-history/iraniancrises"
+        },
+        {
+          "title": "Iran Hostage Crisis",
+          "publisher": "Jimmy Carter Presidential Library",
+          "url": "https://www.jimmycarterlibrary.gov/research/iran_hostage_crisis"
+        },
+        {
+          "title": "Operation Eagle Claw",
+          "publisher": "U.S. Air Force Historical Research",
+          "url": "https://www.afhistory.af.mil/"
+        },
+        {
+          "title": "Hostage crisis",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Diplomatic history",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Iran hostage crisis 1979"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1979,
+      "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "mount-st-helens-1980",
+      "title": "Mount St. Helens 1980: The Eruption That Flattened a Landscape",
+      "hook": "The volcano erupted on May 18, 1980 — killing dozens and blanketing the Northwest in ash.",
+      "category": "Weird America",
+      "angle": "The bulge and warnings, the lateral blast, USGS monitoring, Harry Truman of Spirit Lake, and how ash disrupted aviation and daily life.",
+      "keywords": [
+        "Mount St Helens 1980",
+        "Mount St. Helens eruption",
+        "Spirit Lake volcano"
+      ],
+      "requiredSources": [
+        {
+          "title": "1980 Eruption of Mount St. Helens",
+          "publisher": "USGS",
+          "url": "https://www.usgs.gov/volcanoes/mount-st-helens/1980-cataclysmic-eruption"
+        },
+        {
+          "title": "Mount St. Helens",
+          "publisher": "USGS Cascades Volcano Observatory",
+          "url": "https://www.usgs.gov/observatories/cvo"
+        },
+        {
+          "title": "Mount St. Helens National Volcanic Monument",
+          "publisher": "U.S. Forest Service",
+          "url": "https://www.fs.usda.gov/mountsthelens"
+        },
+        {
+          "title": "1980 eruption",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Disaster response",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Mount St Helens eruption 1980"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1980,
+      "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "hurricane-andrew-1992",
+      "title": "Hurricane Andrew: The Storm That Rewrote Florida Building Codes",
+      "hook": "Andrew smashed South Florida in 1992 — exposing weak construction and forcing tougher codes.",
+      "category": "Weird America",
+      "angle": "Category assessment debates, Homestead damage, FEMA response criticism, and how Florida’s building code changed afterward.",
+      "keywords": [
+        "Hurricane Andrew 1992",
+        "Hurricane Andrew Homestead",
+        "Florida building code Andrew"
+      ],
+      "requiredSources": [
+        {
+          "title": "Hurricane Andrew",
+          "publisher": "NOAA National Hurricane Center",
+          "url": "https://www.nhc.noaa.gov/data/tcr/AL041992_Andrew.pdf"
+        },
+        {
+          "title": "Hurricane Andrew",
+          "publisher": "NOAA",
+          "url": "https://www.noaa.gov/"
+        },
+        {
+          "title": "FEMA and Andrew",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Andrew anniversary",
+          "publisher": "National Weather Service",
+          "url": "https://www.weather.gov/"
+        },
+        {
+          "title": "Disaster housing",
+          "publisher": "HUD historical materials",
+          "url": "https://www.hud.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Hurricane Andrew Florida 1992"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1992,
+      "historicalEra": "modern-america"
+    },
+    {
+      "id": "columbia-shuttle-disaster-2003",
+      "title": "Columbia’s Last Flight: Foam, Heat Shields, and a Broken Shuttle",
+      "hook": "Space Shuttle Columbia broke apart on reentry in 2003 — killing seven astronauts and grounding the fleet.",
+      "category": "Weird America",
+      "angle": "Foam strike on ascent, what engineers knew mid-mission, the CAIB findings, and how NASA returned to flight.",
+      "keywords": [
+        "Columbia disaster 2003",
+        "Space Shuttle Columbia",
+        "CAIB report"
+      ],
+      "requiredSources": [
+        {
+          "title": "Columbia Accident Investigation Board",
+          "publisher": "NASA",
+          "url": "https://www.nasa.gov/columbia/caib/"
+        },
+        {
+          "title": "STS-107",
+          "publisher": "NASA",
+          "url": "https://www.nasa.gov/mission_pages/shuttle/shuttlemissions/sts107/"
+        },
+        {
+          "title": "Columbia",
+          "publisher": "Smithsonian National Air and Space Museum",
+          "url": "https://airandspace.si.edu/"
+        },
+        {
+          "title": "Shuttle program",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Columbia memorial",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Space Shuttle Columbia disaster 2003"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 2003,
+      "historicalEra": "modern-america"
+    },
+    {
+      "id": "french-connection-heroin-bust",
+      "title": "The French Connection: How a Heroin Pipeline Was Broken in New York",
+      "hook": "NYPD and federal agents dismantled a Marseille-to-New York heroin route — a case later mythologized on film.",
+      "category": "Crime",
+      "angle": "The real investigation’s milestones, seizures documented by DEA/NYPD histories, courtroom outcomes, and what Hollywood compressed or invented.",
+      "keywords": [
+        "French Connection heroin",
+        "French Connection New York",
+        "DEA French Connection"
+      ],
+      "requiredSources": [
+        {
+          "title": "DEA History",
+          "publisher": "Drug Enforcement Administration",
+          "url": "https://www.dea.gov/about/history"
+        },
+        {
+          "title": "Narcotics investigations",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Organized crime",
+          "publisher": "FBI",
+          "url": "https://www.fbi.gov/history"
+        },
+        {
+          "title": "New York crime history",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Federal drug enforcement",
+          "publisher": "U.S. Department of Justice",
+          "url": "https://www.justice.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "French Connection heroin New York"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1962,
+      "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "pure-food-act-aftermath-1906",
+      "title": "After The Jungle: How the Pure Food and Drug Act Actually Passed",
+      "hook": "Upton Sinclair wanted workers’ rights — readers wanted clean meat. Congress answered with the 1906 Pure Food and Drug Act.",
+      "category": "Politics",
+      "angle": "Sinclair’s novel’s impact, Roosevelt’s commissioners, the Act’s provisions, Wiley’s enforcement, and limits of the first federal food law.",
+      "keywords": [
+        "Pure Food and Drug Act 1906",
+        "Upton Sinclair Jungle meat",
+        "Harvey Wiley FDA"
+      ],
+      "requiredSources": [
+        {
+          "title": "Pure Food and Drug Act",
+          "publisher": "FDA",
+          "url": "https://www.fda.gov/about-fda/fda-history-exhibits/part-i-1906-food-and-drugs-act-and-its-enforcement"
+        },
+        {
+          "title": "Pure Food and Drug Act",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/milestone-documents/pure-food-and-drug-act"
+        },
+        {
+          "title": "Harvey Wiley",
+          "publisher": "FDA History",
+          "url": "https://www.fda.gov/about-fda/histories-product-regulation/harvey-wiley"
+        },
+        {
+          "title": "Meat Inspection Act",
+          "publisher": "USDA",
+          "url": "https://www.usda.gov/"
+        },
+        {
+          "title": "Progressive Era regulation",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Pure Food and Drug Act 1906"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1906,
+      "historicalEra": "progressive-wwi"
+    },
+    {
+      "id": "factory-investigating-commission-1911",
+      "title": "The Factory Investigating Commission: How Triangle Forced New York to Rewrite Safety Law",
+      "hook": "After Triangle, New York’s Factory Investigating Commission held hearings that remade workplace codes.",
+      "category": "Politics",
+      "angle": "Frances Perkins and Al Smith’s commission, what witnesses revealed about locked doors and fire escapes, and which statutes followed — distinct from the fire narrative itself.",
+      "keywords": [
+        "Factory Investigating Commission",
+        "Triangle fire laws New York",
+        "Frances Perkins factory"
+      ],
+      "requiredSources": [
+        {
+          "title": "Triangle Shirtwaist Factory Fire",
+          "publisher": "U.S. Department of Labor",
+          "url": "https://www.dol.gov/general/aboutdol/history/trianglefire"
+        },
+        {
+          "title": "Remembering the Triangle Fire",
+          "publisher": "Cornell ILR",
+          "url": "https://trianglefire.ilr.cornell.edu/"
+        },
+        {
+          "title": "Factory Investigating Commission",
+          "publisher": "New York State Archives",
+          "url": "https://www.archives.nysed.gov/"
+        },
+        {
+          "title": "OSHA history",
+          "publisher": "OSHA",
+          "url": "https://www.osha.gov/aboutosha/history"
+        },
+        {
+          "title": "Frances Perkins",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Factory Investigating Commission New York 1911"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1911,
+      "historicalEra": "progressive-wwi"
+    },
+    {
+      "id": "oregon-trail-whitman-massacre-1847",
+      "title": "The Whitman Massacre: A Mission, an Epidemic, and a Cascade of Violence",
+      "hook": "In 1847 Cayuse men killed missionaries Marcus and Narcissa Whitman — after a measles epidemic devastated Native communities.",
+      "category": "Weird America",
+      "angle": "The mission’s context, disease and blame, the attack, trials that followed, and how the Cayuse War unfolded — without romanticizing or inventing dialogue.",
+      "keywords": [
+        "Whitman Massacre",
+        "Whitman Mission 1847",
+        "Cayuse War"
+      ],
+      "requiredSources": [
+        {
+          "title": "Whitman Mission",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/whmi/learn/historyculture/index.htm"
+        },
+        {
+          "title": "Whitman Massacre",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/whmi/"
+        },
+        {
+          "title": "Oregon Trail history",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "Pacific Northwest",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Missionary records",
+          "publisher": "Smithsonian",
+          "url": "https://www.si.edu/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Whitman Massacre 1847"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1847,
+      "historicalEra": "antebellum-civil-war"
+    },
+    {
+      "id": "haymarket-aftermath-trials",
+      "title": "After Haymarket: The Trials, Executions, and Pardons That Remade Labor Politics",
+      "hook": "The Haymarket bombing’s courtroom sequel — convictions, executions, and Altgeld’s pardons — shaped American labor for decades.",
+      "category": "Politics",
+      "angle": "Focus on the legal aftermath rather than the bombing night: evidence controversies, the executed anarchists, Governor Altgeld’s 1893 pardons, and May Day’s memory.",
+      "keywords": [
+        "Haymarket trial",
+        "Haymarket pardons Altgeld",
+        "Haymarket anarchists"
+      ],
+      "requiredSources": [
+        {
+          "title": "Haymarket Affair",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/today-in-history/may-04/"
+        },
+        {
+          "title": "Haymarket",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/"
+        },
+        {
+          "title": "Haymarket Affair",
+          "publisher": "Chicago History Museum",
+          "url": "https://www.chicagohistory.org/"
+        },
+        {
+          "title": "Labor history",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/"
+        },
+        {
+          "title": "Illinois labor",
+          "publisher": "Abraham Lincoln Presidential Library",
+          "url": "https://presidentlincoln.illinois.gov/"
+        }
+      ],
+      "imageSearchTerms": [
+        "Haymarket trial pardons 1886"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1886,
+      "historicalEra": "reconstruction-gilded-age"
+    },
+    {
+      "id": "gulf-of-tonkin-resolution-aftermath",
+      "title": "After the Gulf of Tonkin: How a Resolution Became a Blank Check for War",
+      "hook": "Congress’s 1964 Gulf of Tonkin Resolution handed Johnson sweeping war authority — long before the second “attack” was fully understood.",
+      "category": "Politics",
+      "angle": "The resolution’s text and vote, how administrations used it, the later NSA/historical reassessment of Aug. 4, and the 1970 repeal — distinct from the naval incidents article.",
+      "keywords": [
+        "Gulf of Tonkin Resolution",
+        "Tonkin Gulf Resolution 1964",
+        "Vietnam War powers"
+      ],
+      "requiredSources": [
+        {
+          "title": "Gulf of Tonkin Resolution",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/milestone-documents/tonkin-gulf-resolution"
+        },
+        {
+          "title": "Tonkin Gulf",
+          "publisher": "U.S. Senate",
+          "url": "https://www.senate.gov/"
+        },
+        {
+          "title": "Vietnam War powers",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/"
+        },
+        {
+          "title": "NSA Gulf of Tonkin releases",
+          "publisher": "National Security Agency",
+          "url": "https://www.nsa.gov/"
+        },
+        {
+          "title": "Foreign Relations of the United States",
+          "publisher": "U.S. Department of State Office of the Historian",
+          "url": "https://history.state.gov/historicaldocuments"
+        }
+      ],
+      "imageSearchTerms": [
+        "Gulf of Tonkin Resolution 1964"
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null,
+      "eventYear": 1964,
+      "historicalEra": "postwar-cold-war"
     }
   ]
 }

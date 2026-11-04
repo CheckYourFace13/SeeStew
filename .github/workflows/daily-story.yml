@@ -76,7 +76,7 @@ jobs:
 
       - name: Download story card image
         if: success()
-        run: node scripts/fetch-all-story-images.mjs
+        run: node scripts/fetch-all-story-images.mjs --fail-on-recent
 
       - name: Validate new article
         if: success()

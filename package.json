@@ -14,6 +14,8 @@
     "validate:articles": "node scripts/validate-articles.mjs",
     "validate:queue": "node scripts/validate-queue.mjs",
     "validate:quick-read-queue": "node scripts/validate-quick-read-queue.mjs",
+    "replenish:queues": "node scripts/replenish-queues.mjs",
+    "replenish:queues:discover": "node scripts/replenish-queues.mjs --discover",
     "report:publishing-health": "node scripts/publishing-health-report.mjs",
     "init:queue": "node scripts/init-story-queue.mjs",
     "backfill:eras": "node scripts/backfill-historical-eras.mjs",

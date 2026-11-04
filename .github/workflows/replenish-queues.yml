@@ -1,0 +1,66 @@
+name: Replenish Story Queues
+
+on:
+  schedule:
+    # 06:00 UTC daily — before daily story (10:00) and independent of publish
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+    inputs:
+      discover:
+        description: "Also run limited LLM topic discovery after curated merge"
+        required: false
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: seestew-replenish
+  cancel-in-progress: false
+
+jobs:
+  replenish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+          package-manager-cache: false
+
+      - name: Replenish queues (curated + optional discovery)
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ secrets.OPENROUTER_MODEL }}
+        run: |
+          DISCOVER_FLAG=""
+          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ inputs.discover }}" = "true" ]; then
+            DISCOVER_FLAG="--discover"
+          fi
+          node scripts/replenish-queues.mjs $DISCOVER_FLAG
+
+      - name: Validate queues
+        run: |
+          npm run validate:queue
+          npm run validate:quick-read-queue
+
+      - name: Commit replenished queues
+        env:
+          COMMIT_MESSAGE: "chore(queues): replenish full-story and Quick Read topics"
+        run: |
+          git add content/story-queue.json content/quick-read-queue.json content/story-queue/ || true
+          if git diff --cached --quiet; then
+            echo "No queue changes to commit."
+            exit 0
+          fi
+          node scripts/git-push-with-rebase.mjs

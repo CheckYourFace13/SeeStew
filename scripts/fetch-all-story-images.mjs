@@ -260,11 +260,53 @@ async function fetchForSlug(slug, queries) {
   return null;
 }
 
+function parseArgs(argv) {
+  const only = new Set();
+  let failOnRecent = false;
+  let recentHours = 12;
+  for (const a of argv) {
+    if (a.startsWith("--only=")) {
+      for (const s of a.slice("--only=".length).split(",")) {
+        if (s.trim()) only.add(s.trim());
+      }
+    } else if (a === "--fail-on-recent") {
+      failOnRecent = true;
+    } else if (a.startsWith("--recent-hours=")) {
+      recentHours = Number(a.slice("--recent-hours=".length)) || 12;
+    }
+  }
+  if (process.env.SEESTEW_IMAGE_FAIL_RECENT === "1") failOnRecent = true;
+  if (process.env.SEESTEW_IMAGE_SLUGS) {
+    for (const s of process.env.SEESTEW_IMAGE_SLUGS.split(",")) {
+      if (s.trim()) only.add(s.trim());
+    }
+  }
+  return { only, failOnRecent, recentHours };
+}
+
+function isRecentArticle(art, artPath, recentHours) {
+  const cutoff = Date.now() - recentHours * 3600 * 1000;
+  if (art?.createdAt) {
+    const t = new Date(art.createdAt).getTime();
+    if (!Number.isNaN(t) && t >= cutoff) return true;
+  }
+  try {
+    return statSync(artPath).mtimeMs >= cutoff;
+  } catch {
+    return false;
+  }
+}
+
 async function main() {
+  const { only, failOnRecent, recentHours } = parseArgs(process.argv.slice(2));
   const queueQueries = loadQueueQueries();
-  const slugs = readdirSync(CONTENT_DIR)
+  let slugs = readdirSync(CONTENT_DIR)
     .filter((f) => f.endsWith(".json"))
     .map((f) => f.replace(/\.json$/, ""));
+  if (only.size) {
+    slugs = slugs.filter((s) => only.has(s));
+    console.log(`Scoped to --only: ${[...only].join(", ")}`);
+  }
 
   const missing = slugs.filter((slug) => {
     const cardPath = join(PUBLIC_STORIES, slug, "card.jpg");
@@ -273,6 +315,7 @@ async function main() {
 
   console.log(`Fetching images for ${missing.length} article(s)...\n`);
   const failed = [];
+  const recentFailed = [];
 
   for (const slug of missing) {
     const artPath = join(CONTENT_DIR, `${slug}.json`);
@@ -290,11 +333,17 @@ async function main() {
     } catch (e) {
       console.log(`  ERROR: ${e.message}\n`);
       failed.push(slug);
+      if (only.has(slug) || isRecentArticle(art, artPath, recentHours)) {
+        recentFailed.push(slug);
+      }
       continue;
     }
     if (!result) {
       console.log("  NO SUITABLE IMAGE\n");
       failed.push(slug);
+      if (only.has(slug) || isRecentArticle(art, artPath, recentHours)) {
+        recentFailed.push(slug);
+      }
       continue;
     }
 
@@ -317,11 +366,37 @@ async function main() {
   console.log("---");
   if (failed.length) {
     console.log(`Still missing: ${failed.join(", ")}`);
+  }
+
+  // Fail closed for scoped/--only or newly created articles; warn for legacy gaps.
+  if (only.size) {
+    const scopedFail = failed.filter((s) => only.has(s));
+    if (scopedFail.length) {
+      console.error(`Required slug(s) still missing images: ${scopedFail.join(", ")}`);
+      process.exit(1);
+    }
+  } else if (failOnRecent) {
+    if (recentFailed.length) {
+      console.error(
+        `Recent article(s) still missing images: ${recentFailed.join(", ")}`
+      );
+      process.exit(1);
+    }
+    if (failed.length) {
+      console.warn(
+        `::warning::Pre-existing articles still missing cards (not failing job): ${failed.join(", ")}`
+      );
+    }
+  } else if (failed.length) {
     process.exit(1);
   }
-  console.log("All missing articles now have card images.");
-}
 
+  if (!failed.length) {
+    console.log("All missing articles now have card images.");
+  } else if (failOnRecent || only.size) {
+    console.log("Required/recent articles have card images (legacy gaps may remain).");
+  }
+}
 main().catch((e) => {
   console.error(e);
   process.exit(1);

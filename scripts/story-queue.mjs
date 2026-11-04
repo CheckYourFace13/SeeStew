@@ -5,15 +5,21 @@ import { QUEUE_BATCH_2 } from "./story-queue-batch-2.mjs";
 import { QUEUE_BATCH_3 } from "./story-queue-batch-3.mjs";
 import { QUEUE_BATCH_4 } from "./story-queue-batch-4.mjs";
 import { QUEUE_BATCH_5 } from "./story-queue-batch-5.mjs";
+import { QUEUE_BATCH_6 } from "./story-queue-batch-6.mjs";
 
 export const QUEUE_PATH = join(process.cwd(), "content", "story-queue.json");
 
 /**
- * Keep at least this many pending topics so the daily generator never starves.
- * Target reserve: 30. Warn / refill urgently when pending drops below 15.
+ * Pending full-story reserve (mission Nov 2026):
+ * Target 45–60 researched topics; replenish when below 30; critical warn below 15.
+ * MIN_PENDING_TOPICS kept as the “healthy reserve” floor used by validate/generate warnings.
  */
-export const MIN_PENDING_TOPICS = 30;
+export const FULL_TARGET_MIN = 45;
+export const FULL_TARGET_MAX = 60;
+export const FULL_REPLENISH_TRIGGER = 30;
+export const MIN_PENDING_TOPICS = FULL_TARGET_MIN;
 export const REFILL_PENDING_THRESHOLD = 15;
+export const MAX_DISCOVER_FULL_PER_RUN = 8;
 
 /** All curated seed batches — merge by id so new batches refill an exhausted queue. */
 export const ALL_QUEUE_SEEDS = [
@@ -22,6 +28,7 @@ export const ALL_QUEUE_SEEDS = [
   ...QUEUE_BATCH_3,
   ...QUEUE_BATCH_4,
   ...QUEUE_BATCH_5,
+  ...QUEUE_BATCH_6,
 ];
 
 export function loadQueue() {
