@@ -1,0 +1,45 @@
+{
+  "slug": "qr-radium-lip-pointing",
+  "title": "Lip-Pointing: The Habit That Poisoned the Radium Girls",
+  "excerpt": "Dial painters were taught to shape brush tips with their lips — ingesting radium with every stroke. (radium girls lip pointing)",
+  "seoTitle": "radium girls lip pointing",
+  "seoDescription": "Dial painters were taught to shape brush tips with their lips — ingesting radium with every stroke. (radium girls lip pointing)",
+  "readMinutes": 2,
+  "category": "Crime",
+  "format": "quick-read",
+  "eventYear": 1922,
+  "historicalEra": "twenties-depression",
+  "parentArticleSlug": "radium-girls-1920s",
+  "editorialAngle": "lip-pointing workplace technique vs lab precautions",
+  "canonicalEventId": "radium-lip-pointing::1922",
+  "relatedArticleSlugs": [
+    "radium-girls-1920s"
+  ],
+  "content": "In 1922, dial painters in New Jersey were instructed to use their lips to shape the tips of their paintbrushes, a practice known as lip-pointing. This technique was not only common but also encouraged by employers, leading to the ingestion of radium-laced paint with every stroke. The radium girls, as they became known, worked in factories where the glowing paint was used to make watches and instrument dials, and they were often unaware of the dangers posed by the radioactive material they handled daily [1].\n\nLip-pointing involved moistening the brush with the lips to create a fine point for detailed work. This method was particularly effective for the precision required in painting small numbers and markings on dials. However, it also meant that the workers were unknowingly consuming radium, which was believed at the time to be harmless and even beneficial. The radium girls would frequently lick their brushes to keep them pointed, leading to severe health consequences over time. Many of these women developed debilitating illnesses, including bone necrosis and cancer, as a result of radium exposure [2].\n\nIn stark contrast, male lab staff who worked with similar materials were provided with protective gear and were not subjected to the same practices as the female dial painters. This discrepancy highlights a troubling aspect of workplace safety and gender inequality in the early 20th century. While men were often afforded precautions that acknowledged the potential hazards of radioactive materials, women were left to rely on unsafe practices that prioritized productivity over health. This systemic oversight contributed to the tragic outcomes faced by the radium girls, who fought for recognition and compensation for their suffering [3].\n\nThe radium girls' plight eventually led to significant changes in labor laws and workplace safety regulations. Their story became a powerful example of the need for better protections for workers, particularly in industries dealing with hazardous materials. The legal battles they fought not only brought attention to the dangers of radium but also highlighted the importance of informed consent and the right to a safe working environment.\n\nThe legacy of the radium girls endures today, serving as a reminder of the consequences of neglecting worker safety in favor of profit.\n\n## Sources\n\n1. The Radium Dial Workers — *NIOSH / CDC*. [Link](https://www.cdc.gov/niosh/index.htm)\n2. The Radium Girls — *National Museum of Nuclear Science and History*. [Link](https://ahf.nuclearmuseum.org/ahf/history/radium-girls/)\n3. Radium contamination — *New Jersey Department of Health*. [Link](https://www.nj.gov/health/)",
+  "references": [
+    {
+      "title": "The Radium Dial Workers",
+      "publisher": "NIOSH / CDC",
+      "url": "https://www.cdc.gov/niosh/index.htm"
+    },
+    {
+      "title": "The Radium Girls",
+      "publisher": "National Museum of Nuclear Science and History",
+      "url": "https://ahf.nuclearmuseum.org/ahf/history/radium-girls/"
+    },
+    {
+      "title": "Radium contamination",
+      "publisher": "New Jersey Department of Health",
+      "url": "https://www.nj.gov/health/"
+    }
+  ],
+  "image": {
+    "card": "/stories/qr-radium-lip-pointing/card.jpg",
+    "hero": "/stories/qr-radium-lip-pointing/card.jpg",
+    "alt": "Lip-Pointing: The Habit That Poisoned the Radium Girls",
+    "credit": "Library of Congress",
+    "sourcePageUrl": "https://blogs.loc.gov/headlinesandheroes/2019/03/radium-girls-living-dead-women/"
+  },
+  "relatedVideoId": null,
+  "createdAt": "2026-11-05T20:57:08.839Z"
+}

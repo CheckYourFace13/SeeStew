@@ -215,8 +215,10 @@
       "imageSearchTerms": [
         "radium dial painters 1920s"
       ],
-      "status": "pending",
-      "format": "quick-read"
+      "status": "published",
+      "format": "quick-read",
+      "publishedSlug": "qr-radium-lip-pointing",
+      "publishedAt": "2026-11-05T20:57:08.840Z"
     },
     {
       "id": "qr-forrestal-zuni",
