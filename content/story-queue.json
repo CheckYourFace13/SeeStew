@@ -5632,11 +5632,24 @@
       "imageSearchTerms": [
         "Duquesne Spy Ring FBI"
       ],
-      "status": "pending",
+      "status": "editorial_review",
       "publishedSlug": null,
       "publishedAt": null,
       "eventYear": 1941,
-      "historicalEra": "world-war-ii"
+      "historicalEra": "world-war-ii",
+      "editorialHold": {
+        "action": "hold_for_review",
+        "at": "2026-11-05T17:57:27.848Z",
+        "blocks": [],
+        "holds": [
+          {
+            "reason": "missing_image",
+            "errors": [
+              "missing image.card"
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "fu-go-balloon-bombs",
@@ -5679,9 +5692,9 @@
       "imageSearchTerms": [
         "Japanese Fu-Go balloon bombs Oregon"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "fu-go-balloon-bombs",
+      "publishedAt": "2026-11-05T17:58:22.525Z",
       "eventYear": 1945,
       "historicalEra": "world-war-ii"
     },

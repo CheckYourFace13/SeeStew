@@ -41,6 +41,24 @@
       ],
       "heldAt": "2026-11-01T16:41:29.327Z",
       "status": "editorial_review"
+    },
+    {
+      "slug": "duquesne-spy-ring",
+      "title": "The Duquesne Spy Ring: The Largest Espionage Ring Convicted in U.S. History",
+      "format": "full",
+      "action": "hold_for_review",
+      "queueId": "duquesne-spy-ring",
+      "blocks": [],
+      "holds": [
+        {
+          "reason": "missing_image",
+          "errors": [
+            "missing image.card"
+          ]
+        }
+      ],
+      "heldAt": "2026-11-05T17:57:27.850Z",
+      "status": "editorial_review"
     }
   ]
 }

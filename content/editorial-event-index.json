@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-03T20:26:28.786Z",
-  "publishedCount": 135,
-  "queueCount": 20,
+  "generatedAt": "2026-11-05T17:58:22.647Z",
+  "publishedCount": 136,
+  "queueCount": 68,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -2799,6 +2799,32 @@
       "contentChars": 2342
     },
     {
+      "slug": "qr-triangle-locked-door",
+      "title": "Why the Triangle Shirtwaist Exit Was Locked",
+      "excerpt": "Managers said theft prevention — survivors and investigators said the lock trapped workers in the fire. (Triangle Shirtwaist locked door)",
+      "format": "quick-read",
+      "source": "published",
+      "eventYear": 1911,
+      "publishedAt": "2026-11-03T20:26:28.673Z",
+      "parentArticleSlug": "triangle-shirtwaist-fire-1911",
+      "editorialAngle": "Washington Place exit lock and contemporary testimony",
+      "canonicalEventId": "triangle-locked-exit::1911",
+      "titleEventKey": "triangle-shirtwaist-exit-locked::1911",
+      "places": [
+        "triangle",
+        "new york",
+        "washington"
+      ],
+      "namedHints": [
+        "triangle",
+        "shirtwaist",
+        "exit",
+        "locked"
+      ],
+      "opening": "On March 25, 1911, a fire broke out at the Triangle Shirtwaist Factory in New York City, claiming the lives of 146 workers, most of whom were young immigrant women. Among the many tragic details of this disaster was the locked exit door on Washington Place, which became a focal point of investigation and debate.",
+      "contentChars": 2461
+    },
+    {
       "slug": "radium-girls-1920s",
       "title": "Radium Girls: Dial Painters Poisoned by Glow-in-the-Dark Paint",
       "excerpt": "In the 1920s, young women painting watch dials with radium were told to lick their brushes. Their employer knew the paint was deadly. They found out when their bones started crumbling.",
@@ -3759,61 +3785,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "duquesne-spy-ring",
-      "title": "The Duquesne Spy Ring: The Largest Espionage Ring Convicted in U.S. History",
-      "excerpt": "FBI counterintelligence rolled up a Nazi spy network in New York — thirty-three convictions in one case.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1941,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "How William Sebold became a double agent, what the ring targeted, and how the FBI filmed the evidence.",
-      "canonicalEventId": "duquesne-spy-ring::1941",
-      "titleEventKey": "duquesne-spy-ring-largest-espionage-ring-convicted-history::1941",
-      "places": [
-        "new york"
-      ],
-      "namedHints": [
-        "duquesne",
-        "spy",
-        "ring",
-        "largest",
-        "espionage",
-        "convicted",
-        "history"
-      ],
-      "opening": "FBI counterintelligence rolled up a Nazi spy network in New York — thirty-three convictions in one case. How William Sebold became a double agent, what the ring targeted, and how the FBI filmed the evidence.",
-      "contentChars": 258
-    },
-    {
-      "slug": "fu-go-balloon-bombs",
-      "title": "Fu-Go Balloon Bombs: Japan’s Balloons Reached the American Mainland",
-      "excerpt": "Japan launched thousands of bomb-carrying balloons across the Pacific — one killed six people in Oregon.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1945,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "How the balloons worked, where they landed, the Oregon deaths, and wartime press secrecy.",
-      "canonicalEventId": "fu-go-balloon-bombs::1945",
-      "titleEventKey": "fu-go-balloon-bombs-japan-balloons-reached-american-mainland::1945",
-      "places": [
-        "oregon"
-      ],
-      "namedHints": [
-        "fu-go",
-        "balloon",
-        "bombs",
-        "japans",
-        "balloons",
-        "reached",
-        "american",
-        "mainland"
-      ],
-      "opening": "Japan launched thousands of bomb-carrying balloons across the Pacific — one killed six people in Oregon. How the balloons worked, where they landed, the Oregon deaths, and wartime press secrecy.",
-      "contentChars": 266
-    },
-    {
       "slug": "kingsland-explosion-1917",
       "title": "The Kingsland Explosion: A New Jersey Munitions Plant Fire Tied to Sabotage",
       "excerpt": "In 1917, shells cooked off for hours at a Kingsland munitions plant — investigators blamed German agents.",
@@ -4239,6 +4210,847 @@
       "contentChars": 263
     },
     {
+      "slug": "shays-rebellion-1786",
+      "title": "Shays’ Rebellion: When Farmers Closed the Courts of Massachusetts",
+      "excerpt": "Armed farmers shut down courthouses in 1786–87 — a crisis that pushed the Constitutional Convention.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1786,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "Why veterans and debtors rose, which courts were forced closed, how the state militia responded, and what the rebellion meant for the Constitution.",
+      "canonicalEventId": "shays-rebellion::1786",
+      "titleEventKey": "shays-rebellion-farmers-closed-courts-massachusetts::1786",
+      "places": [
+        "massachusetts"
+      ],
+      "namedHints": [
+        "shays",
+        "rebellion",
+        "farmers",
+        "closed",
+        "courts",
+        "massachusetts"
+      ],
+      "opening": "Armed farmers shut down courthouses in 1786–87 — a crisis that pushed the Constitutional Convention. Why veterans and debtors rose, which courts were forced closed, how the state militia responded, and what the rebellion meant for the Constitution.",
+      "contentChars": 316
+    },
+    {
+      "slug": "alien-and-sedition-acts-1798",
+      "title": "The Alien and Sedition Acts: When Criticizing the Government Became a Crime",
+      "excerpt": "Federalists passed laws targeting immigrants and newspaper critics — and Jeffersonians called it tyranny.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1798,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "What each act did, who was prosecuted under the Sedition Act, how states answered with the Virginia and Kentucky Resolutions, and the 1800 election aftermath.",
+      "canonicalEventId": "alien-and-sedition-acts::1798",
+      "titleEventKey": "alien-sedition-acts-criticizing-government-became-crime::1798",
+      "places": [
+        "virginia",
+        "kentucky"
+      ],
+      "namedHints": [
+        "alien",
+        "sedition",
+        "acts",
+        "criticizing",
+        "government",
+        "became",
+        "crime"
+      ],
+      "opening": "Federalists passed laws targeting immigrants and newspaper critics — and Jeffersonians called it tyranny. What each act did, who was prosecuted under the Sedition Act, how states answered with the Virginia and Kentucky Resolutions, and the 1800 election aftermath.",
+      "contentChars": 336
+    },
+    {
+      "slug": "nullification-crisis-1832",
+      "title": "The Nullification Crisis: South Carolina vs. the Tariff — and Jackson’s Force Bill",
+      "excerpt": "South Carolina declared federal tariffs void — Andrew Jackson threatened force, and a compromise cooled the crisis.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1832,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "The tariff fight, the Ordinance of Nullification, Calhoun’s theory, Jackson’s proclamation, and Clay’s compromise.",
+      "canonicalEventId": "nullification-crisis::1832",
+      "titleEventKey": "nullification-crisis-south-carolina-tariff-jackson-force-bill::1832",
+      "places": [
+        "south carolina"
+      ],
+      "namedHints": [
+        "nullification",
+        "crisis",
+        "south",
+        "carolina",
+        "tariff",
+        "jacksons",
+        "force",
+        "bill"
+      ],
+      "opening": "South Carolina declared federal tariffs void — Andrew Jackson threatened force, and a compromise cooled the crisis. The tariff fight, the Ordinance of Nullification, Calhoun’s theory, Jackson’s proclamation, and Clay’s compromise.",
+      "contentChars": 296
+    },
+    {
+      "slug": "dred-scott-decision-1857",
+      "title": "Dred Scott v. Sandford: The Supreme Court Decision That Deepened the Crisis",
+      "excerpt": "The Court ruled Dred Scott remained enslaved and that Congress could not ban slavery in the territories — a political earthquake.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1857,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "Scott’s suits for freedom, Taney’s opinion, what the Court claimed about citizenship, and how Republicans answered.",
+      "canonicalEventId": "dred-scott-decision::1857",
+      "titleEventKey": "dred-scott-sandford-supreme-court-decision-deepened-crisis::1857",
+      "places": [],
+      "namedHints": [
+        "dred",
+        "scott",
+        "sandford",
+        "supreme",
+        "court",
+        "decision",
+        "deepened",
+        "crisis"
+      ],
+      "opening": "The Court ruled Dred Scott remained enslaved and that Congress could not ban slavery in the territories — a political earthquake. Scott’s suits for freedom, Taney’s opinion, what the Court claimed about citizenship, and how Republicans answered.",
+      "contentChars": 307
+    },
+    {
+      "slug": "john-brown-harpers-ferry-1859",
+      "title": "John Brown at Harpers Ferry: The Raid That Made Civil War Feel Inevitable",
+      "excerpt": "Brown seized the federal armory in 1859 — a failed uprising that electrified North and South.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1859,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "The plan, the armory seizure, Robert E. Lee’s Marines, the trial, and how newspapers framed Brown as martyr or madman.",
+      "canonicalEventId": "john-brown-harpers-ferry::1859",
+      "titleEventKey": "john-brown-harpers-ferry-raid-made-civil-war::1859",
+      "places": [],
+      "namedHints": [
+        "john",
+        "brown",
+        "harpers",
+        "ferry",
+        "raid",
+        "made",
+        "civil",
+        "war",
+        "feel",
+        "inevitable"
+      ],
+      "opening": "Brown seized the federal armory in 1859 — a failed uprising that electrified North and South. The plan, the armory seizure, Robert E.",
+      "contentChars": 278
+    },
+    {
+      "slug": "sand-creek-massacre-1864",
+      "title": "The Sand Creek Massacre: A Dawn Attack on a Peace Camp in Colorado",
+      "excerpt": "U.S. volunteers attacked a Cheyenne and Arapaho camp under a U.S. flag — killing mostly women, children, and elders.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1864,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "Why Black Kettle’s camp flew a flag of truce, Chivington’s orders and assault, the congressional investigations that followed, and how survivors testified.",
+      "canonicalEventId": "sand-creek-massacre::1864",
+      "titleEventKey": "sand-creek-massacre-dawn-attack-peace-camp-colorado::1864",
+      "places": [
+        "colorado"
+      ],
+      "namedHints": [
+        "sand",
+        "creek",
+        "massacre",
+        "dawn",
+        "attack",
+        "peace",
+        "camp",
+        "colorado"
+      ],
+      "opening": "U.S. volunteers attacked a Cheyenne and Arapaho camp under a U.S.",
+      "contentChars": 341
+    },
+    {
+      "slug": "chinese-exclusion-act-1882",
+      "title": "The Chinese Exclusion Act: When Congress Banned Immigration by Race",
+      "excerpt": "In 1882 Congress barred Chinese laborers for ten years — the first major U.S. law to suspend immigration by nationality.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1882,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "West Coast politics, the 1882 Act’s terms, enforcement and paperwork, later extensions, and the 1943 repeal path.",
+      "canonicalEventId": "chinese-exclusion-act::1882",
+      "titleEventKey": "chinese-exclusion-act-congress-banned-immigration-race::1882",
+      "places": [],
+      "namedHints": [
+        "chinese",
+        "exclusion",
+        "act",
+        "congress",
+        "banned",
+        "immigration",
+        "race"
+      ],
+      "opening": "In 1882 Congress barred Chinese laborers for ten years — the first major U.S. law to suspend immigration by nationality.",
+      "contentChars": 303
+    },
+    {
+      "slug": "plessy-v-ferguson-1896",
+      "title": "Plessy v. Ferguson: How “Separate but Equal” Became Law",
+      "excerpt": "Homer Plessy’s challenge to a Louisiana train-car law produced the doctrine that legalized Jim Crow for generations.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1896,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "The Comité des Citoyens test case, Justice Brown’s majority, Harlan’s dissent, and how the ruling shaped segregation until Brown.",
+      "canonicalEventId": "plessy-v-ferguson::1896",
+      "titleEventKey": "plessy-ferguson-separate-but-equal-became-law::1896",
+      "places": [
+        "louisiana"
+      ],
+      "namedHints": [
+        "plessy",
+        "ferguson",
+        "separate",
+        "equal",
+        "became",
+        "law"
+      ],
+      "opening": "Homer Plessy’s challenge to a Louisiana train-car law produced the doctrine that legalized Jim Crow for generations. The Comité des Citoyens test case, Justice Brown’s majority, Harlan’s dissent, and how the ruling shaped segregation until Brown.",
+      "contentChars": 296
+    },
+    {
+      "slug": "uss-maine-explosion-1898",
+      "title": "The USS Maine Explosion: Havana Harbor, Yellow Press, and a Rush to War",
+      "excerpt": "The battleship Maine blew up in Havana — and Americans argued sabotage before investigators finished.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1898,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "What happened the night of Feb. 15, 1898, how Hearst/Pulitzer coverage framed Spain, the Sampson board findings, and later forensic debates — only what sources support.",
+      "canonicalEventId": "uss-maine-explosion::1898",
+      "titleEventKey": "uss-maine-explosion-havana-harbor-yellow-press-rush::1898",
+      "places": [
+        "maine"
+      ],
+      "namedHints": [
+        "uss",
+        "maine",
+        "explosion",
+        "havana",
+        "harbor",
+        "yellow",
+        "press",
+        "rush",
+        "war"
+      ],
+      "opening": "The battleship Maine blew up in Havana — and Americans argued sabotage before investigators finished. What happened the night of Feb.",
+      "contentChars": 328
+    },
+    {
+      "slug": "blair-mountain-1921",
+      "title": "The Battle of Blair Mountain: America’s Largest Labor Uprising",
+      "excerpt": "Thousands of armed miners marched in West Virginia in 1921 — until federal troops ended the largest labor uprising in U.S. history.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1921,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "Matewan’s aftermath, the miners’ march, company planes and machine guns, federal intervention, and why the battlefield nearly became strip-mined decades later.",
+      "canonicalEventId": "blair-mountain::1921",
+      "titleEventKey": "battle-blair-mountain-america-largest-labor-uprising::1921",
+      "places": [
+        "west virginia"
+      ],
+      "namedHints": [
+        "battle",
+        "blair",
+        "mountain",
+        "americas",
+        "largest",
+        "labor",
+        "uprising"
+      ],
+      "opening": "Thousands of armed miners marched in West Virginia in 1921 — until federal troops ended the largest labor uprising in U.S. history.",
+      "contentChars": 364
+    },
+    {
+      "slug": "chicago-race-riot-1919",
+      "title": "The Chicago Race Riot of 1919: A Beach Line, a Drowning, and a City on Fire",
+      "excerpt": "A Black teenager drifted across an unofficial beach color line — and Chicago erupted into days of racial violence.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1919,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "The 29th Street Beach incident, how mobs and police responded, death and injury counts from contemporary reports, and the Chicago Commission on Race Relations that followed.",
+      "canonicalEventId": "chicago-race-riot::1919",
+      "titleEventKey": "chicago-race-riot-beach-line-drowning-city-fire::1919",
+      "places": [
+        "chicago"
+      ],
+      "namedHints": [
+        "chicago",
+        "race",
+        "riot",
+        "beach",
+        "line",
+        "drowning",
+        "city",
+        "fire"
+      ],
+      "opening": "A Black teenager drifted across an unofficial beach color line — and Chicago erupted into days of racial violence. The 29th Street Beach incident, how mobs and police responded, death and injury counts from contemporary reports, and the Chicago Commission on Race Relations that followed.",
+      "contentChars": 352
+    },
+    {
+      "slug": "titanic-us-senate-hearings-1912",
+      "title": "The Titanic Senate Hearings: How America Interrogated a Disaster at Sea",
+      "excerpt": "After Titanic sank, a U.S. Senate inquiry grilled White Star officers — and rewrote safety rules.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1912,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "Senator Smith’s hearings in New York and Washington, key testimony about lifeboats and wireless, and the Seamen’s Act reforms that followed.",
+      "canonicalEventId": "titanic-us-senate-hearings::1912",
+      "titleEventKey": "titanic-senate-hearings-america-interrogated-disaster-sea::1912",
+      "places": [
+        "new york",
+        "washington"
+      ],
+      "namedHints": [
+        "titanic",
+        "senate",
+        "hearings",
+        "america",
+        "interrogated",
+        "disaster",
+        "sea"
+      ],
+      "opening": "After Titanic sank, a U.S. Senate inquiry grilled White Star officers — and rewrote safety rules.",
+      "contentChars": 311
+    },
+    {
+      "slug": "lusitania-sinking-1915",
+      "title": "The Lusitania Sinking and the American Debate Over War",
+      "excerpt": "A German U-boat sank Lusitania in 1915 — killing Americans aboard and shifting U.S. opinion toward intervention.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1915,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "The May 7 attack, passenger and cargo controversies as documented, Wilson’s notes to Germany, and how the sinking shaped neutrality politics — without inventing munitions claims.",
+      "canonicalEventId": "lusitania-sinking::1915",
+      "titleEventKey": "lusitania-sinking-american-debate-war::1915",
+      "places": [],
+      "namedHints": [
+        "lusitania",
+        "sinking",
+        "american",
+        "debate",
+        "war"
+      ],
+      "opening": "A German U-boat sank Lusitania in 1915 — killing Americans aboard and shifting U.S. opinion toward intervention.",
+      "contentChars": 347
+    },
+    {
+      "slug": "hindenburg-disaster-1937",
+      "title": "The Hindenburg Disaster at Lakehurst: Live Radio and a Burning Airship",
+      "excerpt": "The German airship Hindenburg burst into flames docking in New Jersey — captured in newsreels and Herbert Morrison’s radio cry.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1937,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "The May 6, 1937 approach, what investigators documented about ignition theories, American dead and injured, and why the disaster ended passenger zeppelin travel.",
+      "canonicalEventId": "hindenburg-disaster::1937",
+      "titleEventKey": "hindenburg-disaster-lakehurst-live-radio-burning-airship::1937",
+      "places": [
+        "new jersey"
+      ],
+      "namedHints": [
+        "hindenburg",
+        "disaster",
+        "lakehurst",
+        "live",
+        "radio",
+        "burning",
+        "airship"
+      ],
+      "opening": "The German airship Hindenburg burst into flames docking in New Jersey — captured in newsreels and Herbert Morrison’s radio cry. The May 6, 1937 approach, what investigators documented about ignition theories, American dead and injured, and why the disaster ended passenger zeppelin travel.",
+      "contentChars": 363
+    },
+    {
+      "slug": "executive-order-9981-1948",
+      "title": "Executive Order 9981: Truman’s Order to Desegregate the Armed Forces",
+      "excerpt": "In 1948 Truman ordered equality of treatment in the military — a landmark step that still took years to implement.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1948,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "A. Philip Randolph’s pressure, the order’s text, the Fahy Committee, and how desegregation actually proceeded in Korea-era practice.",
+      "canonicalEventId": "executive-order-9981::1948",
+      "titleEventKey": "executive-order-truman-order-desegregate-armed-forces::1948",
+      "places": [],
+      "namedHints": [
+        "executive",
+        "order",
+        "trumans",
+        "desegregate",
+        "armed",
+        "forces"
+      ],
+      "opening": "In 1948 Truman ordered equality of treatment in the military — a landmark step that still took years to implement. A.",
+      "contentChars": 323
+    },
+    {
+      "slug": "bay-of-pigs-1961",
+      "title": "The Bay of Pigs: A CIA Invasion That Collapsed in Three Days",
+      "excerpt": "CIA-trained Cuban exiles landed at the Bay of Pigs in 1961 — and Castro’s forces crushed the invasion.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1961,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "Planning under Eisenhower/Kennedy, the landing failure, air cover decisions as declassified, prisoners, and the political fallout.",
+      "canonicalEventId": "bay-of-pigs::1961",
+      "titleEventKey": "bay-pigs-cia-invasion-collapsed-three-days::1961",
+      "places": [],
+      "namedHints": [
+        "bay",
+        "pigs",
+        "cia",
+        "invasion",
+        "collapsed",
+        "three",
+        "days"
+      ],
+      "opening": "CIA-trained Cuban exiles landed at the Bay of Pigs in 1961 — and Castro’s forces crushed the invasion. Planning under Eisenhower/Kennedy, the landing failure, air cover decisions as declassified, prisoners, and the political fallout.",
+      "contentChars": 289
+    },
+    {
+      "slug": "freedom-riders-1961",
+      "title": "The Freedom Rides: Testing Supreme Court Rulings on Interstate Buses",
+      "excerpt": "Interracial teams rode buses into the Deep South in 1961 — and met firebombs, beatings, and federal intervention.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1961,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "CORE’s plan after Boynton, the Anniston firebombing, Birmingham and Montgomery violence, RFK and the Interstate Commerce Commission order.",
+      "canonicalEventId": "freedom-riders::1961",
+      "titleEventKey": "freedom-rides-testing-supreme-court-rulings-interstate-buses::1961",
+      "places": [
+        "montgomery"
+      ],
+      "namedHints": [
+        "freedom",
+        "rides",
+        "testing",
+        "supreme",
+        "court",
+        "rulings",
+        "interstate",
+        "buses"
+      ],
+      "opening": "Interracial teams rode buses into the Deep South in 1961 — and met firebombs, beatings, and federal intervention. CORE’s plan after Boynton, the Anniston firebombing, Birmingham and Montgomery violence, RFK and the Interstate Commerce Commission order.",
+      "contentChars": 313
+    },
+    {
+      "slug": "birmingham-church-bombing-1963",
+      "title": "The 16th Street Baptist Church Bombing: Four Girls Murdered in Birmingham",
+      "excerpt": "A Ku Klux Klan bomb killed four girls in a Birmingham church in 1963 — a atrocity that shocked the nation.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1963,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "The September 15 bombing, the victims, FBI investigation timeline, delayed prosecutions, and how the crime shaped the civil rights struggle.",
+      "canonicalEventId": "birmingham-church-bombing::1963",
+      "titleEventKey": "16th-street-baptist-church-bombing-four-girls-murdered::1963",
+      "places": [],
+      "namedHints": [
+        "street",
+        "baptist",
+        "church",
+        "bombing",
+        "four",
+        "girls",
+        "murdered",
+        "birmingham"
+      ],
+      "opening": "A Ku Klux Klan bomb killed four girls in a Birmingham church in 1963 — a atrocity that shocked the nation. The September 15 bombing, the victims, FBI investigation timeline, delayed prosecutions, and how the crime shaped the civil rights struggle.",
+      "contentChars": 331
+    },
+    {
+      "slug": "freedom-summer-1964",
+      "title": "Freedom Summer 1964: Voter Registration, Murder, and a National Awakening",
+      "excerpt": "Volunteers flooded Mississippi to register Black voters — and three civil rights workers were murdered.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1964,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "COFO’s plan, the disappearance of Chaney, Goodman, and Schwerner, the FBI investigation, and the Mississippi Freedom Democratic Party challenge.",
+      "canonicalEventId": "freedom-summer::1964",
+      "titleEventKey": "freedom-summer-voter-registration-murder-national-awakening::1964",
+      "places": [
+        "mississippi"
+      ],
+      "namedHints": [
+        "freedom",
+        "summer",
+        "voter",
+        "registration",
+        "murder",
+        "national",
+        "awakening"
+      ],
+      "opening": "Volunteers flooded Mississippi to register Black voters — and three civil rights workers were murdered. COFO’s plan, the disappearance of Chaney, Goodman, and Schwerner, the FBI investigation, and the Mississippi Freedom Democratic Party challenge.",
+      "contentChars": 324
+    },
+    {
+      "slug": "watts-rebellion-1965",
+      "title": "The Watts Rebellion of 1965: Six Days That Shook Los Angeles",
+      "excerpt": "A traffic stop in Watts ignited six days of uprising — leaving 34 dead and a city transformed.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1965,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "The Marquette Frye stop, the scale of the unrest, National Guard deployment, the McCone Commission findings, and what official reports documented about causes.",
+      "canonicalEventId": "watts-rebellion::1965",
+      "titleEventKey": "watts-rebellion-six-days-shook-los-angeles::1965",
+      "places": [
+        "los angeles"
+      ],
+      "namedHints": [
+        "watts",
+        "rebellion",
+        "six",
+        "days",
+        "shook",
+        "los",
+        "angeles"
+      ],
+      "opening": "A traffic stop in Watts ignited six days of uprising — leaving 34 dead and a city transformed. The Marquette Frye stop, the scale of the unrest, National Guard deployment, the McCone Commission findings, and what official reports documented about causes.",
+      "contentChars": 305
+    },
+    {
+      "slug": "detroit-uprising-1967",
+      "title": "The Detroit Uprising of 1967: The Blind Pig Raid That Ignited a City",
+      "excerpt": "A police raid on an after-hours club sparked days of violence — one of the deadliest urban uprisings in U.S. history.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1967,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "The July 23 raid, the death toll and destruction as reported, federal troops, and the Kerner Commission context that followed.",
+      "canonicalEventId": "detroit-uprising::1967",
+      "titleEventKey": "detroit-uprising-blind-pig-raid-ignited-city::1967",
+      "places": [
+        "detroit"
+      ],
+      "namedHints": [
+        "detroit",
+        "uprising",
+        "blind",
+        "pig",
+        "raid",
+        "ignited",
+        "city"
+      ],
+      "opening": "A police raid on an after-hours club sparked days of violence — one of the deadliest urban uprisings in U.S. history.",
+      "contentChars": 301
+    },
+    {
+      "slug": "tet-offensive-1968",
+      "title": "The Tet Offensive and the American Home Front",
+      "excerpt": "Communist forces struck across South Vietnam in 1968 — and U.S. public confidence in the war cracked.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1968,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "What Tet was militarily, Saigon and Hue coverage Americans saw, the credibility gap, and Johnson’s decision not to seek reelection — grounded in contemporary reporting and official histories.",
+      "canonicalEventId": "tet-offensive::1968",
+      "titleEventKey": "tet-offensive-american-home-front::1968",
+      "places": [],
+      "namedHints": [
+        "tet",
+        "offensive",
+        "american",
+        "home",
+        "front"
+      ],
+      "opening": "Communist forces struck across South Vietnam in 1968 — and U.S. public confidence in the war cracked.",
+      "contentChars": 355
+    },
+    {
+      "slug": "iran-hostage-crisis-1979",
+      "title": "The Iran Hostage Crisis: 444 Days That Gripped America",
+      "excerpt": "Militants seized the U.S. Embassy in Tehran in 1979 — holding Americans hostage for 444 days.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1979,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "The embassy takeover, failed Desert One rescue, negotiations, and the hostages’ release as Reagan took office — from State and military histories.",
+      "canonicalEventId": "iran-hostage-crisis::1979",
+      "titleEventKey": "iran-hostage-crisis-444-days-gripped-america::1979",
+      "places": [],
+      "namedHints": [
+        "iran",
+        "hostage",
+        "crisis",
+        "days",
+        "gripped",
+        "america"
+      ],
+      "opening": "Militants seized the U.S. Embassy in Tehran in 1979 — holding Americans hostage for 444 days.",
+      "contentChars": 301
+    },
+    {
+      "slug": "mount-st-helens-1980",
+      "title": "Mount St. Helens 1980: The Eruption That Flattened a Landscape",
+      "excerpt": "The volcano erupted on May 18, 1980 — killing dozens and blanketing the Northwest in ash.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1980,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "The bulge and warnings, the lateral blast, USGS monitoring, Harry Truman of Spirit Lake, and how ash disrupted aviation and daily life.",
+      "canonicalEventId": "mount-st-helens::1980",
+      "titleEventKey": "mount-helens-eruption-flattened-landscape::1980",
+      "places": [],
+      "namedHints": [
+        "mount",
+        "helens",
+        "eruption",
+        "flattened",
+        "landscape"
+      ],
+      "opening": "The volcano erupted on May 18, 1980 — killing dozens and blanketing the Northwest in ash. The bulge and warnings, the lateral blast, USGS monitoring, Harry Truman of Spirit Lake, and how ash disrupted aviation and daily life.",
+      "contentChars": 292
+    },
+    {
+      "slug": "hurricane-andrew-1992",
+      "title": "Hurricane Andrew: The Storm That Rewrote Florida Building Codes",
+      "excerpt": "Andrew smashed South Florida in 1992 — exposing weak construction and forcing tougher codes.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1992,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "Category assessment debates, Homestead damage, FEMA response criticism, and how Florida’s building code changed afterward.",
+      "canonicalEventId": "hurricane-andrew::1992",
+      "titleEventKey": "hurricane-andrew-storm-rewrote-florida-building-codes::1992",
+      "places": [
+        "florida"
+      ],
+      "namedHints": [
+        "hurricane",
+        "andrew",
+        "storm",
+        "rewrote",
+        "florida",
+        "building",
+        "codes"
+      ],
+      "opening": "Andrew smashed South Florida in 1992 — exposing weak construction and forcing tougher codes. Category assessment debates, Homestead damage, FEMA response criticism, and how Florida’s building code changed afterward.",
+      "contentChars": 293
+    },
+    {
+      "slug": "columbia-shuttle-disaster-2003",
+      "title": "Columbia’s Last Flight: Foam, Heat Shields, and a Broken Shuttle",
+      "excerpt": "Space Shuttle Columbia broke apart on reentry in 2003 — killing seven astronauts and grounding the fleet.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 2003,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "Foam strike on ascent, what engineers knew mid-mission, the CAIB findings, and how NASA returned to flight.",
+      "canonicalEventId": "columbia-shuttle-disaster::2003",
+      "titleEventKey": "columbia-last-flight-foam-heat-shields-broken-shuttle::2003",
+      "places": [],
+      "namedHints": [
+        "columbias",
+        "last",
+        "flight",
+        "foam",
+        "heat",
+        "shields",
+        "broken",
+        "shuttle"
+      ],
+      "opening": "Space Shuttle Columbia broke apart on reentry in 2003 — killing seven astronauts and grounding the fleet. Foam strike on ascent, what engineers knew mid-mission, the CAIB findings, and how NASA returned to flight.",
+      "contentChars": 271
+    },
+    {
+      "slug": "french-connection-heroin-bust",
+      "title": "The French Connection: How a Heroin Pipeline Was Broken in New York",
+      "excerpt": "NYPD and federal agents dismantled a Marseille-to-New York heroin route — a case later mythologized on film.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1962,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "The real investigation’s milestones, seizures documented by DEA/NYPD histories, courtroom outcomes, and what Hollywood compressed or invented.",
+      "canonicalEventId": "french-connection-heroin-bust::1962",
+      "titleEventKey": "french-connection-heroin-pipeline-broken-new-york::1962",
+      "places": [
+        "new york"
+      ],
+      "namedHints": [
+        "french",
+        "connection",
+        "heroin",
+        "pipeline",
+        "broken",
+        "new",
+        "york"
+      ],
+      "opening": "NYPD and federal agents dismantled a Marseille-to-New York heroin route — a case later mythologized on film. The real investigation’s milestones, seizures documented by DEA/NYPD histories, courtroom outcomes, and what Hollywood compressed or invented.",
+      "contentChars": 325
+    },
+    {
+      "slug": "pure-food-act-aftermath-1906",
+      "title": "After The Jungle: How the Pure Food and Drug Act Actually Passed",
+      "excerpt": "Upton Sinclair wanted workers’ rights — readers wanted clean meat. Congress answered with the 1906 Pure Food and Drug Act.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1906,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "Sinclair’s novel’s impact, Roosevelt’s commissioners, the Act’s provisions, Wiley’s enforcement, and limits of the first federal food law.",
+      "canonicalEventId": "pure-food-act-aftermath::1906",
+      "titleEventKey": "jungle-pure-food-drug-act-actually-passed::1906",
+      "places": [],
+      "namedHints": [
+        "jungle",
+        "pure",
+        "food",
+        "drug",
+        "act",
+        "actually",
+        "passed"
+      ],
+      "opening": "Upton Sinclair wanted workers’ rights — readers wanted clean meat. Congress answered with the 1906 Pure Food and Drug Act.",
+      "contentChars": 333
+    },
+    {
+      "slug": "factory-investigating-commission-1911",
+      "title": "The Factory Investigating Commission: How Triangle Forced New York to Rewrite Safety Law",
+      "excerpt": "After Triangle, New York’s Factory Investigating Commission held hearings that remade workplace codes.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1911,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "Frances Perkins and Al Smith’s commission, what witnesses revealed about locked doors and fire escapes, and which statutes followed — distinct from the fire narrative itself.",
+      "canonicalEventId": "factory-investigating-commission::1911",
+      "titleEventKey": "factory-investigating-commission-triangle-forced-new-york-rewrite::1911",
+      "places": [
+        "triangle",
+        "new york"
+      ],
+      "namedHints": [
+        "factory",
+        "investigating",
+        "commission",
+        "triangle",
+        "forced",
+        "new",
+        "york",
+        "rewrite",
+        "safety",
+        "law"
+      ],
+      "opening": "After Triangle, New York’s Factory Investigating Commission held hearings that remade workplace codes. Frances Perkins and Al Smith’s commission, what witnesses revealed about locked doors and fire escapes, and which statutes followed — distinct from the fire narrative itself.",
+      "contentChars": 362
+    },
+    {
+      "slug": "oregon-trail-whitman-massacre-1847",
+      "title": "The Whitman Massacre: A Mission, an Epidemic, and a Cascade of Violence",
+      "excerpt": "In 1847 Cayuse men killed missionaries Marcus and Narcissa Whitman — after a measles epidemic devastated Native communities.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1847,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "The mission’s context, disease and blame, the attack, trials that followed, and how the Cayuse War unfolded — without romanticizing or inventing dialogue.",
+      "canonicalEventId": "oregon-trail-whitman-massacre::1847",
+      "titleEventKey": "whitman-massacre-mission-epidemic-cascade-violence::1847",
+      "places": [],
+      "namedHints": [
+        "whitman",
+        "massacre",
+        "mission",
+        "epidemic",
+        "cascade",
+        "violence"
+      ],
+      "opening": "In 1847 Cayuse men killed missionaries Marcus and Narcissa Whitman — after a measles epidemic devastated Native communities. The mission’s context, disease and blame, the attack, trials that followed, and how the Cayuse War unfolded — without romanticizing or inventing dialogue.",
+      "contentChars": 328
+    },
+    {
+      "slug": "haymarket-aftermath-trials",
+      "title": "After Haymarket: The Trials, Executions, and Pardons That Remade Labor Politics",
+      "excerpt": "The Haymarket bombing’s courtroom sequel — convictions, executions, and Altgeld’s pardons — shaped American labor for decades.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1886,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "Focus on the legal aftermath rather than the bombing night: evidence controversies, the executed anarchists, Governor Altgeld’s 1893 pardons, and May Day’s memory.",
+      "canonicalEventId": "haymarket-aftermath-trials::1886",
+      "titleEventKey": "haymarket-trials-executions-pardons-remade-labor-politics::1886",
+      "places": [],
+      "namedHints": [
+        "haymarket",
+        "trials",
+        "executions",
+        "pardons",
+        "remade",
+        "labor",
+        "politics"
+      ],
+      "opening": "The Haymarket bombing’s courtroom sequel — convictions, executions, and Altgeld’s pardons — shaped American labor for decades. Focus on the legal aftermath rather than the bombing night: evidence controversies, the executed anarchists, Governor Altgeld’s 1893 pardons, and May Day’s memory.",
+      "contentChars": 353
+    },
+    {
+      "slug": "gulf-of-tonkin-resolution-aftermath",
+      "title": "After the Gulf of Tonkin: How a Resolution Became a Blank Check for War",
+      "excerpt": "Congress’s 1964 Gulf of Tonkin Resolution handed Johnson sweeping war authority — long before the second “attack” was fully understood.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1964,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "The resolution’s text and vote, how administrations used it, the later NSA/historical reassessment of Aug. 4, and the 1970 repeal — distinct from the naval incidents article.",
+      "canonicalEventId": "gulf-of-tonkin-resolution-aftermath::1964",
+      "titleEventKey": "gulf-tonkin-resolution-became-blank-check-war::1964",
+      "places": [],
+      "namedHints": [
+        "gulf",
+        "tonkin",
+        "resolution",
+        "became",
+        "blank",
+        "check",
+        "war"
+      ],
+      "opening": "Congress’s 1964 Gulf of Tonkin Resolution handed Johnson sweeping war authority — long before the second “attack” was fully understood. The resolution’s text and vote, how administrations used it, the later NSA/historical reassessment of Aug.",
+      "contentChars": 383
+    },
+    {
       "slug": "qr-radium-lip-pointing",
       "title": "Lip-Pointing: The Habit That Poisoned the Radium Girls",
       "excerpt": "Dial painters were taught to shape brush tips with their lips — ingesting radium with every stroke.",
@@ -4285,30 +5097,465 @@
       "contentChars": 238
     },
     {
-      "slug": "qr-triangle-locked-door",
-      "title": "Why the Triangle Shirtwaist Exit Was Locked",
-      "excerpt": "Managers said theft prevention — survivors and investigators said the lock trapped workers in the fire. (Triangle Shirtwaist locked door)",
+      "slug": "qr-peshtigo-same-day-chicago",
+      "title": "Peshtigo Burned the Same Day as Chicago — and Almost Nobody Noticed",
+      "excerpt": "America’s deadliest wildfire hit Wisconsin the same day as the Great Chicago Fire — and was overshadowed for generations.",
       "format": "quick-read",
-      "source": "published",
-      "eventYear": 1911,
-      "publishedAt": "2026-11-03T20:26:28.673Z",
-      "parentArticleSlug": "triangle-shirtwaist-fire-1911",
-      "editorialAngle": "Washington Place exit lock and contemporary testimony",
-      "canonicalEventId": "triangle-locked-exit::1911",
-      "titleEventKey": "triangle-shirtwaist-exit-locked::1911",
+      "source": "queue-quick-read",
+      "eventYear": 1871,
+      "publishedAt": null,
+      "parentArticleSlug": "peshtigo-fire-1871",
+      "editorialAngle": "Same-day overshadowing of Peshtigo by Chicago Fire news",
+      "canonicalEventId": "peshtigo-chicago-same-day::1871",
+      "titleEventKey": "peshtigo-burned-day-chicago-almost-nobody-noticed::1871",
       "places": [
-        "triangle",
-        "new york",
-        "washington"
+        "chicago",
+        "wisconsin"
       ],
       "namedHints": [
-        "triangle",
-        "shirtwaist",
-        "exit",
-        "locked"
+        "peshtigo",
+        "burned",
+        "day",
+        "chicago",
+        "almost",
+        "nobody",
+        "noticed"
       ],
-      "opening": "On March 25, 1911, a fire broke out at the Triangle Shirtwaist Factory in New York City, claiming the lives of 146 workers, most of whom were young immigrant women. Among the many tragic details of this disaster was the locked exit door on Washington Place, which became a focal point of investigation and debate.",
-      "contentChars": 2461
+      "opening": "America’s deadliest wildfire hit Wisconsin the same day as the Great Chicago Fire — and was overshadowed for generations. Focus only on the coincidence of dates and why Chicago dominated headlines; not a full Peshtigo narrative.",
+      "contentChars": 284
+    },
+    {
+      "slug": "qr-challenger-o-ring-cold",
+      "title": "The Cold Morning That Doomed Challenger’s O-Rings",
+      "excerpt": "Engineers warned that freezing temperatures could fail Challenger’s booster seals — and the January launch went ahead anyway.",
+      "format": "quick-read",
+      "source": "queue-quick-read",
+      "eventYear": 1986,
+      "publishedAt": null,
+      "parentArticleSlug": "challenger-disaster-1986",
+      "editorialAngle": "O-ring cold-temperature failure as Challenger ignition cause",
+      "canonicalEventId": "challenger-oring-cold::1986",
+      "titleEventKey": "cold-morning-doomed-challenger-o-rings::1986",
+      "places": [],
+      "namedHints": [
+        "cold",
+        "morning",
+        "doomed",
+        "challengers"
+      ],
+      "opening": "Engineers warned that freezing temperatures could fail Challenger’s booster seals — and the January launch went ahead anyway. One technical failure mode and the temperature debate — not the full shuttle program story.",
+      "contentChars": 276
+    },
+    {
+      "slug": "qr-johnstown-south-fork-club",
+      "title": "The South Fork Club Dam: Privilege Above Johnstown",
+      "excerpt": "A private resort club altered a dam above Johnstown — then largely escaped liability after the flood.",
+      "format": "quick-read",
+      "source": "queue-quick-read",
+      "eventYear": 1889,
+      "publishedAt": null,
+      "parentArticleSlug": "johnstown-flood-1889",
+      "editorialAngle": "South Fork Fishing and Hunting Club dam liability after Johnstown Flood",
+      "canonicalEventId": "johnstown-south-fork-club::1889",
+      "titleEventKey": "south-fork-club-dam-privilege-above-johnstown::1889",
+      "places": [
+        "johnstown"
+      ],
+      "namedHints": [
+        "south",
+        "fork",
+        "club",
+        "dam",
+        "privilege",
+        "above",
+        "johnstown"
+      ],
+      "opening": "A private resort club altered a dam above Johnstown — then largely escaped liability after the flood. Club ownership, dam modifications, and liability outcome — not the full flood chronology.",
+      "contentChars": 246
+    },
+    {
+      "slug": "qr-cocoanut-grove-exit",
+      "title": "Why Cocoanut Grove’s Exits Failed When Fire Hit",
+      "excerpt": "A revolving door and blocked exits turned a nightclub blaze into America’s deadliest club fire.",
+      "format": "quick-read",
+      "source": "queue-quick-read",
+      "eventYear": 1942,
+      "publishedAt": null,
+      "parentArticleSlug": "cocoanut-grove-fire-1942",
+      "editorialAngle": "Revolving door and blocked exits at Cocoanut Grove fire",
+      "canonicalEventId": "cocoanut-grove-exits::1942",
+      "titleEventKey": "cocoanut-grove-exits-failed-fire-hit::1942",
+      "places": [],
+      "namedHints": [
+        "cocoanut",
+        "groves",
+        "exits",
+        "failed",
+        "fire",
+        "hit"
+      ],
+      "opening": "A revolving door and blocked exits turned a nightclub blaze into America’s deadliest club fire. Exit design and locked/blocked egress only — not the full victim narrative.",
+      "contentChars": 222
+    },
+    {
+      "slug": "qr-apollo1-hatch",
+      "title": "The Inward Hatch That Trapped Apollo 1’s Crew",
+      "excerpt": "Apollo 1’s cabin hatch opened inward under pressure — and the crew could not escape the pad fire.",
+      "format": "quick-read",
+      "source": "queue-quick-read",
+      "eventYear": 1967,
+      "publishedAt": null,
+      "parentArticleSlug": "apollo-1-fire-1967",
+      "editorialAngle": "Inward-opening hatch as Apollo 1 escape barrier",
+      "canonicalEventId": "apollo1-hatch::1967",
+      "titleEventKey": "inward-hatch-trapped-apollo-crew::1967",
+      "places": [],
+      "namedHints": [
+        "inward",
+        "hatch",
+        "trapped",
+        "apollo",
+        "crew"
+      ],
+      "opening": "Apollo 1’s cabin hatch opened inward under pressure — and the crew could not escape the pad fire. Hatch design and escape impossibility during the pad fire — not the full program rebuild.",
+      "contentChars": 228
+    },
+    {
+      "slug": "qr-goldsboro-one-switch",
+      "title": "The Goldsboro Bomb That Was One Switch From Arming",
+      "excerpt": "After a B-52 broke up over North Carolina, one nuclear bomb’s arming sequence stopped at a single switch.",
+      "format": "quick-read",
+      "source": "queue-quick-read",
+      "eventYear": 1961,
+      "publishedAt": null,
+      "parentArticleSlug": "goldsboro-nuclear-accident-1961",
+      "editorialAngle": "Single arming switch that prevented Goldsboro bomb detonation",
+      "canonicalEventId": "goldsboro-switch::1961",
+      "titleEventKey": "goldsboro-bomb-one-switch-arming::1961",
+      "places": [
+        "north carolina"
+      ],
+      "namedHints": [
+        "goldsboro",
+        "bomb",
+        "one",
+        "switch",
+        "arming"
+      ],
+      "opening": "After a B-52 broke up over North Carolina, one nuclear bomb’s arming sequence stopped at a single switch. The intact switch detail from declassified accounts — not the full Goldsboro narrative.",
+      "contentChars": 245
+    },
+    {
+      "slug": "qr-palomares-missing-bomb",
+      "title": "The Palomares Bomb That Hid Underwater for Months",
+      "excerpt": "After a midair collision over Spain, one U.S. hydrogen bomb stayed lost at sea until a Navy search recovered it.",
+      "format": "quick-read",
+      "source": "queue-quick-read",
+      "eventYear": 1966,
+      "publishedAt": null,
+      "parentArticleSlug": "palomares-incident-1966",
+      "editorialAngle": "Underwater recovery of the missing Palomares hydrogen bomb",
+      "canonicalEventId": "palomares-missing-bomb::1966",
+      "titleEventKey": "palomares-bomb-hid-underwater-months::1966",
+      "places": [
+        "palomares"
+      ],
+      "namedHints": [
+        "palomares",
+        "bomb",
+        "hid",
+        "underwater",
+        "months"
+      ],
+      "opening": "After a midair collision over Spain, one U.S. hydrogen bomb stayed lost at sea until a Navy search recovered it.",
+      "contentChars": 254
+    },
+    {
+      "slug": "qr-indianapolis-delayed-rescue",
+      "title": "Why Help Took So Long After Indianapolis Sank",
+      "excerpt": "Survivors of USS Indianapolis drifted for days — because the Navy did not know the cruiser was overdue.",
+      "format": "quick-read",
+      "source": "queue-quick-read",
+      "eventYear": 1945,
+      "publishedAt": null,
+      "parentArticleSlug": "uss-indianapolis-1945",
+      "editorialAngle": "Delayed discovery that USS Indianapolis was overdue after sinking",
+      "canonicalEventId": "indianapolis-delayed-rescue::1945",
+      "titleEventKey": "help-took-long-indianapolis-sank::1945",
+      "places": [],
+      "namedHints": [
+        "help",
+        "took",
+        "long",
+        "indianapolis",
+        "sank"
+      ],
+      "opening": "Survivors of USS Indianapolis drifted for days — because the Navy did not know the cruiser was overdue. Radio silence, routing secrecy, and delayed distress recognition — not the shark attacks retelling.",
+      "contentChars": 261
+    },
+    {
+      "slug": "qr-three-mile-hydrogen-bubble",
+      "title": "The Hydrogen Bubble Scare Inside Three Mile Island",
+      "excerpt": "During TMI, engineers feared a hydrogen bubble could explode inside the reactor vessel — a crisis within the crisis.",
+      "format": "quick-read",
+      "source": "queue-quick-read",
+      "eventYear": 1979,
+      "publishedAt": null,
+      "parentArticleSlug": "three-mile-island-1979",
+      "editorialAngle": "Hydrogen bubble concern during Three Mile Island accident",
+      "canonicalEventId": "tmi-hydrogen-bubble::1979",
+      "titleEventKey": "hydrogen-bubble-scare-inside-three-mile-island::1979",
+      "places": [],
+      "namedHints": [
+        "hydrogen",
+        "bubble",
+        "scare",
+        "inside",
+        "three",
+        "mile",
+        "island"
+      ],
+      "opening": "During TMI, engineers feared a hydrogen bubble could explode inside the reactor vessel — a crisis within the crisis. Hydrogen bubble concern and how it was assessed — not the full accident timeline.",
+      "contentChars": 245
+    },
+    {
+      "slug": "qr-exxon-valdez-response-delay",
+      "title": "The Hours That Mattered After Exxon Valdez Grounded",
+      "excerpt": "After the tanker hit Bligh Reef, critics said containment boom and response came too slowly to limit the oil’s spread.",
+      "format": "quick-read",
+      "source": "queue-quick-read",
+      "eventYear": 1989,
+      "publishedAt": null,
+      "parentArticleSlug": "exxon-valdez-oil-spill-1989",
+      "editorialAngle": "Delayed containment response after Exxon Valdez grounding",
+      "canonicalEventId": "exxon-valdez-response::1989",
+      "titleEventKey": "hours-mattered-exxon-valdez-grounded::1989",
+      "places": [],
+      "namedHints": [
+        "hours",
+        "mattered",
+        "exxon",
+        "valdez",
+        "grounded"
+      ],
+      "opening": "After the tanker hit Bligh Reef, critics said containment boom and response came too slowly to limit the oil’s spread. Early response timing and boom deployment debates — not the full spill ecology story.",
+      "contentChars": 250
+    },
+    {
+      "slug": "qr-hartford-waterproofing",
+      "title": "The Waterproofing That Helped the Hartford Circus Tent Burn",
+      "excerpt": "Paraffin and gasoline waterproofing made the big top shed rain — and turned it into fuel when fire started.",
+      "format": "quick-read",
+      "source": "queue-quick-read",
+      "eventYear": 1944,
+      "publishedAt": null,
+      "parentArticleSlug": "hartford-circus-fire-1944",
+      "editorialAngle": "Paraffin-gasoline waterproofing of Hartford circus tent",
+      "canonicalEventId": "hartford-waterproofing::1944",
+      "titleEventKey": "waterproofing-helped-hartford-circus-tent-burn::1944",
+      "places": [],
+      "namedHints": [
+        "waterproofing",
+        "helped",
+        "hartford",
+        "circus",
+        "tent",
+        "burn"
+      ],
+      "opening": "Paraffin and gasoline waterproofing made the big top shed rain — and turned it into fuel when fire started. Tent waterproofing chemistry/practice as fire accelerant — not the full victim list.",
+      "contentChars": 252
+    },
+    {
+      "slug": "qr-eastland-stability",
+      "title": "Why Eastland Rolled Over at the Dock",
+      "excerpt": "SS Eastland capsized in the Chicago River while still tied up — a stability failure, not a storm at sea.",
+      "format": "quick-read",
+      "source": "queue-quick-read",
+      "eventYear": 1915,
+      "publishedAt": null,
+      "parentArticleSlug": "eastland-disaster-1915",
+      "editorialAngle": "Stability design failure that capsized Eastland at dock",
+      "canonicalEventId": "eastland-stability::1915",
+      "titleEventKey": "eastland-rolled-dock::1915",
+      "places": [
+        "chicago"
+      ],
+      "namedHints": [
+        "eastland",
+        "rolled",
+        "dock"
+      ],
+      "opening": "SS Eastland capsized in the Chicago River while still tied up — a stability failure, not a storm at sea. Top-heavy stability and dockside listing — not the full passenger tragedy retelling.",
+      "contentChars": 240
+    },
+    {
+      "slug": "qr-tulsa-airplanes",
+      "title": "Airplanes Over Greenwood: What Witnesses Reported in 1921",
+      "excerpt": "During the Tulsa Race Massacre, survivors described aircraft over Greenwood — a detail still debated in scope.",
+      "format": "quick-read",
+      "source": "queue-quick-read",
+      "eventYear": 1921,
+      "publishedAt": null,
+      "parentArticleSlug": "tulsa-race-massacre-1921",
+      "editorialAngle": "Aircraft over Greenwood during Tulsa Race Massacre",
+      "canonicalEventId": "tulsa-airplanes::1921",
+      "titleEventKey": "airplanes-greenwood-witnesses-reported::1921",
+      "places": [],
+      "namedHints": [
+        "airplanes",
+        "greenwood",
+        "witnesses",
+        "reported"
+      ],
+      "opening": "During the Tulsa Race Massacre, survivors described aircraft over Greenwood — a detail still debated in scope. Aircraft reports from contemporary and later testimony — carefully bounded; not the full massacre narrative.",
+      "contentChars": 271
+    },
+    {
+      "slug": "qr-my-lai-helicopter",
+      "title": "The Helicopter Crew That Interrupted My Lai",
+      "excerpt": "Warrant Officer Hugh Thompson landed between soldiers and civilians at My Lai — and ordered his crew to protect survivors.",
+      "format": "quick-read",
+      "source": "queue-quick-read",
+      "eventYear": 1968,
+      "publishedAt": null,
+      "parentArticleSlug": "my-lai-massacre-1968",
+      "editorialAngle": "Hugh Thompson helicopter intervention at My Lai",
+      "canonicalEventId": "my-lai-thompson::1968",
+      "titleEventKey": "helicopter-crew-interrupted-lai::1968",
+      "places": [],
+      "namedHints": [
+        "helicopter",
+        "crew",
+        "interrupted",
+        "lai"
+      ],
+      "opening": "Warrant Officer Hugh Thompson landed between soldiers and civilians at My Lai — and ordered his crew to protect survivors. Thompson’s intervention only — not the full massacre investigation.",
+      "contentChars": 242
+    },
+    {
+      "slug": "qr-black-tom-liberty",
+      "title": "Black Tom’s Blast That Scarred the Statue of Liberty",
+      "excerpt": "The 1916 Black Tom munitions explosion damaged the Statue of Liberty’s skirt and closed her torch to visitors.",
+      "format": "quick-read",
+      "source": "queue-quick-read",
+      "eventYear": 1916,
+      "publishedAt": null,
+      "parentArticleSlug": "black-tom-explosion-1916",
+      "editorialAngle": "Statue of Liberty damage from Black Tom explosion",
+      "canonicalEventId": "black-tom-liberty::1916",
+      "titleEventKey": "black-tom-blast-scarred-statue-liberty::1916",
+      "places": [],
+      "namedHints": [
+        "black",
+        "toms",
+        "blast",
+        "scarred",
+        "statue",
+        "liberty"
+      ],
+      "opening": "The 1916 Black Tom munitions explosion damaged the Statue of Liberty’s skirt and closed her torch to visitors. Statue of Liberty damage from Black Tom — not the full sabotage investigation.",
+      "contentChars": 241
+    },
+    {
+      "slug": "qr-donner-forlorn-hope",
+      "title": "The Forlorn Hope: The Donner Party’s Desperate Snowshoe Party",
+      "excerpt": "Fifteen people left the stranded Donner camps on snowshoes — a desperate breakout that cost most of their lives.",
+      "format": "quick-read",
+      "source": "queue-quick-read",
+      "eventYear": 1846,
+      "publishedAt": null,
+      "parentArticleSlug": "donner-party-1846",
+      "editorialAngle": "Forlorn Hope snowshoe party from Donner camps",
+      "canonicalEventId": "donner-forlorn-hope::1846",
+      "titleEventKey": "forlorn-hope-donner-party-desperate-snowshoe-party::1846",
+      "places": [],
+      "namedHints": [
+        "forlorn",
+        "hope",
+        "donner",
+        "partys",
+        "desperate",
+        "snowshoe",
+        "party"
+      ],
+      "opening": "Fifteen people left the stranded Donner camps on snowshoes — a desperate breakout that cost most of their lives. The snowshoe party’s departure and losses — not the full Donner winter narrative.",
+      "contentChars": 242
+    },
+    {
+      "slug": "qr-triangle-fire-escape",
+      "title": "The Fire Escape That Collapsed at Triangle",
+      "excerpt": "At Triangle Shirtwaist, a rear fire escape peeled away from the building — dropping workers into the courtyard.",
+      "format": "quick-read",
+      "source": "queue-quick-read",
+      "eventYear": 1911,
+      "publishedAt": null,
+      "parentArticleSlug": "triangle-shirtwaist-fire-1911",
+      "editorialAngle": "Collapsing rear fire escape during Triangle Shirtwaist fire",
+      "canonicalEventId": "triangle-fire-escape::1911",
+      "titleEventKey": "fire-escape-collapsed-triangle::1911",
+      "places": [
+        "triangle"
+      ],
+      "namedHints": [
+        "fire",
+        "escape",
+        "collapsed",
+        "triangle"
+      ],
+      "opening": "At Triangle Shirtwaist, a rear fire escape peeled away from the building — dropping workers into the courtyard. Fire-escape failure as a distinct mechanical detail — companion to the locked-door Quick Read, not a repeat.",
+      "contentChars": 282
+    },
+    {
+      "slug": "qr-kent-state-guard-orders",
+      "title": "What the Guard Was Ordered to Do at Kent State",
+      "excerpt": "On May 4, 1970, Ohio National Guard troops on campus opened fire — after orders and a tense advance that still fuels debate.",
+      "format": "quick-read",
+      "source": "queue-quick-read",
+      "eventYear": 1970,
+      "publishedAt": null,
+      "parentArticleSlug": "kent-state-shootings-1970",
+      "editorialAngle": "National Guard orders and advance before Kent State shootings",
+      "canonicalEventId": "kent-state-orders::1970",
+      "titleEventKey": "guard-ordered-kent-state::1970",
+      "places": [
+        "ohio"
+      ],
+      "namedHints": [
+        "guard",
+        "ordered",
+        "kent",
+        "state"
+      ],
+      "opening": "On May 4, 1970, Ohio National Guard troops on campus opened fire — after orders and a tense advance that still fuels debate. Orders and the moments before the volley — not a full campus-politics essay.",
+      "contentChars": 251
+    },
+    {
+      "slug": "fu-go-balloon-bombs",
+      "title": "Fu-Go Balloon Bombs: Japan’s Balloons Reached the American Mainland",
+      "excerpt": "Japan launched thousands of bomb-carrying balloons across the Pacific — one killed six people in Oregon. (Fu-Go balloon bombs)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1945,
+      "publishedAt": "2026-11-05T17:58:17.388Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "fu-go-balloon-bombs::1945",
+      "titleEventKey": "fu-go-balloon-bombs-japan-balloons-reached-american-mainland::1945",
+      "places": [
+        "oregon"
+      ],
+      "namedHints": [
+        "fu-go",
+        "balloon",
+        "bombs",
+        "japans",
+        "balloons",
+        "reached",
+        "american",
+        "mainland"
+      ],
+      "opening": "The Launch of Fu-Go Balloon Bombs: A Unique WWII Strategy In late 1944, Japan initiated an unconventional military strategy by launching thousands of balloon bombs, known as Fu-Go, across the Pacific Ocean. These bomb-carrying balloons were designed to reach the American mainland, causing destruction and instilling fear.",
+      "contentChars": 10232
     }
   ]
 }
