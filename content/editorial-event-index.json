@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-05T20:57:08.934Z",
-  "publishedCount": 137,
-  "queueCount": 67,
+  "generatedAt": "2026-11-06T17:17:47.879Z",
+  "publishedCount": 138,
+  "queueCount": 66,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -2827,6 +2827,31 @@
       "contentChars": 2342
     },
     {
+      "slug": "qr-radium-lip-pointing",
+      "title": "Lip-Pointing: The Habit That Poisoned the Radium Girls",
+      "excerpt": "Dial painters were taught to shape brush tips with their lips — ingesting radium with every stroke. (radium girls lip pointing)",
+      "format": "quick-read",
+      "source": "published",
+      "eventYear": 1922,
+      "publishedAt": "2026-11-05T20:57:08.839Z",
+      "parentArticleSlug": "radium-girls-1920s",
+      "editorialAngle": "lip-pointing workplace technique vs lab precautions",
+      "canonicalEventId": "radium-lip-pointing::1922",
+      "titleEventKey": "lip-pointing-habit-poisoned-radium-girls::1922",
+      "places": [
+        "new jersey"
+      ],
+      "namedHints": [
+        "lip-pointing",
+        "habit",
+        "poisoned",
+        "radium",
+        "girls"
+      ],
+      "opening": "In 1922, dial painters in New Jersey were instructed to use their lips to shape the tips of their paintbrushes, a practice known as lip-pointing. This technique was not only common but also encouraged by employers, leading to the ingestion of radium-laced paint with every stroke.",
+      "contentChars": 2338
+    },
+    {
       "slug": "qr-triangle-locked-door",
       "title": "Why the Triangle Shirtwaist Exit Was Locked",
       "excerpt": "Managers said theft prevention — survivors and investigators said the lock trapped workers in the fire. (Triangle Shirtwaist locked door)",
@@ -3811,35 +3836,6 @@
       ],
       "opening": "The Zoot Suit Riots: A Clash of Cultures in Wartime Los Angeles In June 1943, Los Angeles became the epicenter of racial violence as servicemen clashed with Mexican American youths, known for their distinctive zoot suits. Over several days, these sailors and soldiers roamed the streets, targeting young men dressed in flashy attire, resulting in a series of brutal assaults.",
       "contentChars": 10085
-    },
-    {
-      "slug": "kingsland-explosion-1917",
-      "title": "The Kingsland Explosion: A New Jersey Munitions Plant Fire Tied to Sabotage",
-      "excerpt": "In 1917, shells cooked off for hours at a Kingsland munitions plant — investigators blamed German agents.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1917,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "What burned, the sabotage theory, Black Tom connections, and how the case entered U.S.–German claims.",
-      "canonicalEventId": "kingsland-explosion::1917",
-      "titleEventKey": "kingsland-explosion-new-jersey-munitions-plant-fire-tied::1917",
-      "places": [
-        "new jersey"
-      ],
-      "namedHints": [
-        "kingsland",
-        "explosion",
-        "new",
-        "jersey",
-        "munitions",
-        "plant",
-        "fire",
-        "tied",
-        "sabotage"
-      ],
-      "opening": "In 1917, shells cooked off for hours at a Kingsland munitions plant — investigators blamed German agents. What burned, the sabotage theory, Black Tom connections, and how the case entered U.S.–German claims.",
-      "contentChars": 281
     },
     {
       "slug": "scopes-trial-1925",
@@ -5535,29 +5531,33 @@
       "contentChars": 251
     },
     {
-      "slug": "qr-radium-lip-pointing",
-      "title": "Lip-Pointing: The Habit That Poisoned the Radium Girls",
-      "excerpt": "Dial painters were taught to shape brush tips with their lips — ingesting radium with every stroke. (radium girls lip pointing)",
-      "format": "quick-read",
+      "slug": "kingsland-explosion-1917",
+      "title": "The Kingsland Explosion: A New Jersey Munitions Plant Fire Tied to Sabotage",
+      "excerpt": "In 1917, shells cooked off for hours at a Kingsland munitions plant — investigators blamed German agents. (Kingsland explosion 1917)",
+      "format": "full",
       "source": "published",
-      "eventYear": 1922,
-      "publishedAt": "2026-11-05T20:57:08.839Z",
-      "parentArticleSlug": "radium-girls-1920s",
-      "editorialAngle": "lip-pointing workplace technique vs lab precautions",
-      "canonicalEventId": "radium-lip-pointing::1922",
-      "titleEventKey": "lip-pointing-habit-poisoned-radium-girls::1922",
+      "eventYear": 1917,
+      "publishedAt": "2026-11-06T17:16:51.722Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "kingsland-explosion::1917",
+      "titleEventKey": "kingsland-explosion-new-jersey-munitions-plant-fire-tied::1917",
       "places": [
         "new jersey"
       ],
       "namedHints": [
-        "lip-pointing",
-        "habit",
-        "poisoned",
-        "radium",
-        "girls"
+        "kingsland",
+        "explosion",
+        "new",
+        "jersey",
+        "munitions",
+        "plant",
+        "fire",
+        "tied",
+        "sabotage"
       ],
-      "opening": "In 1922, dial painters in New Jersey were instructed to use their lips to shape the tips of their paintbrushes, a practice known as lip-pointing. This technique was not only common but also encouraged by employers, leading to the ingestion of radium-laced paint with every stroke.",
-      "contentChars": 2338
+      "opening": "The Kingsland Explosion: A 1917 Munitions Plant Fire in New Jersey On the night of July 30, 1917, a catastrophic explosion rocked the Kingsland munitions plant in New Jersey. The facility, operated by the E.",
+      "contentChars": 10535
     }
   ]
 }

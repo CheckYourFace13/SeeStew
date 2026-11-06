@@ -5739,9 +5739,9 @@
       "imageSearchTerms": [
         "Kingsland explosion 1917 New Jersey"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "kingsland-explosion-1917",
+      "publishedAt": "2026-11-06T17:17:47.786Z",
       "eventYear": 1917,
       "historicalEra": "progressive-wwi"
     },
