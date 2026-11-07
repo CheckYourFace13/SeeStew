@@ -36,6 +36,18 @@
       "rejected": [],
       "fullPending": 48,
       "qrPending": 19
+    },
+    {
+      "at": "2026-11-07T12:17:10.807Z",
+      "dryRun": false,
+      "discover": true,
+      "seededFull": 0,
+      "seededQr": 0,
+      "discoveredFull": [],
+      "discoveredQr": [],
+      "rejected": [],
+      "fullPending": 47,
+      "qrPending": 19
     }
   ]
 }
