@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-06T17:17:47.879Z",
-  "publishedCount": 138,
-  "queueCount": 66,
+  "generatedAt": "2026-11-07T16:13:07.361Z",
+  "publishedCount": 139,
+  "queueCount": 65,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -1718,6 +1718,35 @@
       ],
       "opening": "On May 4, 1970, at Kent State University in Ohio, a peaceful protest against the Vietnam War turned tragic when members of the Ohio National Guard opened fire on students. Four students were killed, and nine others were wounded [1].",
       "contentChars": 13762
+    },
+    {
+      "slug": "kingsland-explosion-1917",
+      "title": "The Kingsland Explosion: A New Jersey Munitions Plant Fire Tied to Sabotage",
+      "excerpt": "In 1917, shells cooked off for hours at a Kingsland munitions plant — investigators blamed German agents. (Kingsland explosion 1917)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1917,
+      "publishedAt": "2026-11-06T17:16:51.722Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "kingsland-explosion::1917",
+      "titleEventKey": "kingsland-explosion-new-jersey-munitions-plant-fire-tied::1917",
+      "places": [
+        "new jersey"
+      ],
+      "namedHints": [
+        "kingsland",
+        "explosion",
+        "new",
+        "jersey",
+        "munitions",
+        "plant",
+        "fire",
+        "tied",
+        "sabotage"
+      ],
+      "opening": "The Kingsland Explosion: A 1917 Munitions Plant Fire in New Jersey On the night of July 30, 1917, a catastrophic explosion rocked the Kingsland munitions plant in New Jersey. The facility, operated by the E.",
+      "contentChars": 10535
     },
     {
       "slug": "lake-peigneur-1980",
@@ -3838,34 +3867,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "scopes-trial-1925",
-      "title": "The Scopes Trial: What Actually Happened in Dayton Beyond the Myth",
-      "excerpt": "The 1925 “monkey trial” was courtroom theatre, a publicity stunt, and a real fight over teaching evolution.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1925,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "Why Dayton hosted the case, what the law said, Bryan vs. Darrow, and how Hollywood reshaped memory.",
-      "canonicalEventId": "scopes-trial::1925",
-      "titleEventKey": "scopes-trial-actually-happened-dayton-beyond-myth::1925",
-      "places": [
-        "dayton",
-        "tennessee"
-      ],
-      "namedHints": [
-        "scopes",
-        "trial",
-        "actually",
-        "happened",
-        "dayton",
-        "beyond",
-        "myth"
-      ],
-      "opening": "The 1925 “monkey trial” was courtroom theatre, a publicity stunt, and a real fight over teaching evolution. Why Dayton hosted the case, what the law said, Bryan vs.",
-      "contentChars": 267
-    },
-    {
       "slug": "loving-v-virginia-1967",
       "title": "Loving v. Virginia: The Couple Who Beat Anti-Miscegenation Law",
       "excerpt": "Richard and Mildred Loving’s fight against Virginia’s marriage ban reached the Supreme Court in 1967.",
@@ -5531,33 +5532,32 @@
       "contentChars": 251
     },
     {
-      "slug": "kingsland-explosion-1917",
-      "title": "The Kingsland Explosion: A New Jersey Munitions Plant Fire Tied to Sabotage",
-      "excerpt": "In 1917, shells cooked off for hours at a Kingsland munitions plant — investigators blamed German agents. (Kingsland explosion 1917)",
+      "slug": "scopes-trial-1925",
+      "title": "The Scopes Trial: What Actually Happened in Dayton Beyond the Myth",
+      "excerpt": "The 1925 “monkey trial” was courtroom theatre, a publicity stunt, and a real fight over teaching evolution. (Scopes Trial)",
       "format": "full",
       "source": "published",
-      "eventYear": 1917,
-      "publishedAt": "2026-11-06T17:16:51.722Z",
+      "eventYear": 1925,
+      "publishedAt": "2026-11-07T16:12:17.045Z",
       "parentArticleSlug": null,
       "editorialAngle": null,
-      "canonicalEventId": "kingsland-explosion::1917",
-      "titleEventKey": "kingsland-explosion-new-jersey-munitions-plant-fire-tied::1917",
+      "canonicalEventId": "scopes-trial::1925",
+      "titleEventKey": "scopes-trial-actually-happened-dayton-beyond-myth::1925",
       "places": [
-        "new jersey"
+        "dayton",
+        "tennessee"
       ],
       "namedHints": [
-        "kingsland",
-        "explosion",
-        "new",
-        "jersey",
-        "munitions",
-        "plant",
-        "fire",
-        "tied",
-        "sabotage"
+        "scopes",
+        "trial",
+        "actually",
+        "happened",
+        "dayton",
+        "beyond",
+        "myth"
       ],
-      "opening": "The Kingsland Explosion: A 1917 Munitions Plant Fire in New Jersey On the night of July 30, 1917, a catastrophic explosion rocked the Kingsland munitions plant in New Jersey. The facility, operated by the E.",
-      "contentChars": 10535
+      "opening": "The Scopes Trial: A Clash Over Evolution in Dayton, Tennessee In the summer of 1925, Dayton, Tennessee, became the epicenter of a national debate over science and religion during the infamous Scopes Trial, often dubbed the \"monkey trial.\" John T. Scopes, a high school teacher, was charged with violating Tennessee's Butler Act, which prohibited the teaching of evolution in public schools.",
+      "contentChars": 10112
     }
   ]
 }

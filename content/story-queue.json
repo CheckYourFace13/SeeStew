@@ -5786,9 +5786,9 @@
       "imageSearchTerms": [
         "Scopes Trial Dayton 1925"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "scopes-trial-1925",
+      "publishedAt": "2026-11-07T16:13:07.247Z",
       "eventYear": 1925,
       "historicalEra": "twenties-depression"
     },
