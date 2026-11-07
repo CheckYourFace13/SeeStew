@@ -1,0 +1,45 @@
+{
+  "slug": "qr-forrestal-zuni",
+  "title": "The Zuni Rocket That Started the Forrestal Inferno",
+  "excerpt": "A single misfired rocket on the USS Forrestal’s deck began the 1967 fire that killed 134 sailors. (Forrestal Zuni rocket)",
+  "seoTitle": "Forrestal Zuni rocket",
+  "seoDescription": "A single misfired rocket on the USS Forrestal’s deck began the 1967 fire that killed 134 sailors. (Forrestal Zuni rocket)",
+  "readMinutes": 2,
+  "category": "Military",
+  "format": "quick-read",
+  "eventYear": 1967,
+  "historicalEra": "postwar-cold-war",
+  "parentArticleSlug": "uss-forrestal-fire-1967",
+  "editorialAngle": "Zuni rocket misfire as the Forrestal fire ignition point",
+  "canonicalEventId": "forrestal-zuni::1967",
+  "relatedArticleSlugs": [
+    "uss-forrestal-fire-1967"
+  ],
+  "content": "On July 29, 1967, a single misfired Zuni rocket on the flight deck of the USS Forrestal ignited a catastrophic fire that ultimately claimed the lives of 134 sailors. The incident occurred while the aircraft carrier was operating in the Gulf of Tonkin, just off the coast of Vietnam, during a period of intense military engagement in the Vietnam War [1]. This tragic event not only highlighted the dangers of naval aviation but also underscored the critical importance of equipment reliability and safety protocols aboard military vessels.\n\nThe Zuni rocket, an air-to-ground weapon, was accidentally launched when an electrical surge triggered its firing mechanism. This mechanical failure set off a chain reaction of explosions as the rocket struck an F-4 Phantom jet, igniting its fuel tanks. The resulting fire quickly spread across the flight deck, engulfing aircraft and creating a chaotic scene as sailors attempted to fight the flames and evacuate the area. The rapid escalation of the fire was exacerbated by the presence of additional munitions on deck, which led to further explosions and increased the danger for the crew [3].\n\nOne surprising detail about the Forrestal fire is that it was not just the initial rocket misfire that caused the high casualty rate; it was the subsequent cook-off of munitions. Cook-off occurs when ammunition is exposed to high temperatures, causing it to ignite without an external trigger. In this case, the heat from the fire caused bombs and missiles to explode, compounding the disaster and making rescue efforts even more perilous. Sailors were trapped by flames and smoke, and many were unable to escape the inferno that engulfed the ship [1].\n\nThe aftermath of the Forrestal fire led to significant changes in naval safety protocols and equipment design. Investigations revealed deficiencies in training and emergency response procedures, prompting the Navy to implement stricter safety measures to prevent similar incidents in the future [2]. The tragedy served as a stark reminder of the inherent risks associated with military operations and the need for constant vigilance in equipment maintenance and crew training.\n\nThe USS Forrestal fire remains one of the deadliest peacetime disasters in U.S. naval history, illustrating how a single mechanical failure can lead to catastrophic consequences in a high-stakes environment [1].\n\n## Sources\n\n1. USS Forrestal (CVA-59) — *Naval History and Heritage Command*. [Link](https://www.history.navy.mil/research/histories/ship-histories/danfs/f/forrestal-cva-59.html)\n2. Vietnam War records — *National Archives*. [Link](https://www.archives.gov/research/military/vietnam-war)\n3. Naval History and Heritage Command — *U.S. Navy*. [Link](https://www.history.navy.mil/)",
+  "references": [
+    {
+      "title": "USS Forrestal (CVA-59)",
+      "publisher": "Naval History and Heritage Command",
+      "url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/f/forrestal-cva-59.html"
+    },
+    {
+      "title": "Vietnam War records",
+      "publisher": "National Archives",
+      "url": "https://www.archives.gov/research/military/vietnam-war"
+    },
+    {
+      "title": "Naval History and Heritage Command",
+      "publisher": "U.S. Navy",
+      "url": "https://www.history.navy.mil/"
+    }
+  ],
+  "image": {
+    "card": "/stories/qr-forrestal-zuni/card.jpg",
+    "hero": "/stories/qr-forrestal-zuni/card.jpg",
+    "alt": "The Zuni Rocket That Started the Forrestal Inferno",
+    "credit": "Library of Congress",
+    "sourcePageUrl": "https://www.loc.gov/item/usteledirec04728x/"
+  },
+  "relatedVideoId": null,
+  "createdAt": "2026-11-07T18:30:18.730Z"
+}

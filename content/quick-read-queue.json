@@ -258,8 +258,10 @@
       "imageSearchTerms": [
         "USS Forrestal fire 1967"
       ],
-      "status": "pending",
-      "format": "quick-read"
+      "status": "published",
+      "format": "quick-read",
+      "publishedSlug": "qr-forrestal-zuni",
+      "publishedAt": "2026-11-07T18:30:18.730Z"
     },
     {
       "id": "qr-peshtigo-same-day-chicago",

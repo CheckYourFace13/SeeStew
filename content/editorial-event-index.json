@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-07T16:13:07.361Z",
-  "publishedCount": 139,
-  "queueCount": 65,
+  "generatedAt": "2026-11-07T18:30:18.831Z",
+  "publishedCount": 140,
+  "queueCount": 64,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -3047,6 +3047,34 @@
       "contentChars": 10883
     },
     {
+      "slug": "scopes-trial-1925",
+      "title": "The Scopes Trial: What Actually Happened in Dayton Beyond the Myth",
+      "excerpt": "The 1925 “monkey trial” was courtroom theatre, a publicity stunt, and a real fight over teaching evolution. (Scopes Trial)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1925,
+      "publishedAt": "2026-11-07T16:12:17.045Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "scopes-trial::1925",
+      "titleEventKey": "scopes-trial-actually-happened-dayton-beyond-myth::1925",
+      "places": [
+        "dayton",
+        "tennessee"
+      ],
+      "namedHints": [
+        "scopes",
+        "trial",
+        "actually",
+        "happened",
+        "dayton",
+        "beyond",
+        "myth"
+      ],
+      "opening": "The Scopes Trial: A Clash Over Evolution in Dayton, Tennessee In the summer of 1925, Dayton, Tennessee, became the epicenter of a national debate over science and religion during the infamous Scopes Trial, often dubbed the \"monkey trial.\" John T. Scopes, a high school teacher, was charged with violating Tennessee's Butler Act, which prohibited the teaching of evolution in public schools.",
+      "contentChars": 10112
+    },
+    {
       "slug": "scottsboro-boys",
       "title": "The Scottsboro Boys: Nine Black Teens, False Accusations, and a Supreme Court Fight",
       "excerpt": "A freight-train encounter in Alabama became one of the most infamous wrongful-prosecution cases in U.S. history. (Scottsboro Boys)",
@@ -5076,29 +5104,6 @@
       "contentChars": 383
     },
     {
-      "slug": "qr-forrestal-zuni",
-      "title": "The Zuni Rocket That Started the Forrestal Inferno",
-      "excerpt": "A single misfired rocket on the USS Forrestal’s deck began the 1967 fire that killed 134 sailors.",
-      "format": "quick-read",
-      "source": "queue-quick-read",
-      "eventYear": 1967,
-      "publishedAt": null,
-      "parentArticleSlug": "uss-forrestal-fire-1967",
-      "editorialAngle": "Zuni rocket misfire as the Forrestal fire ignition point",
-      "canonicalEventId": "forrestal-zuni::1967",
-      "titleEventKey": "zuni-rocket-started-forrestal-inferno::1967",
-      "places": [],
-      "namedHints": [
-        "zuni",
-        "rocket",
-        "started",
-        "forrestal",
-        "inferno"
-      ],
-      "opening": "A single misfired rocket on the USS Forrestal’s deck began the 1967 fire that killed 134 sailors. One mechanical failure and the cook-off chain that followed — not the full carrier narrative.",
-      "contentChars": 238
-    },
-    {
       "slug": "qr-peshtigo-same-day-chicago",
       "title": "Peshtigo Burned the Same Day as Chicago — and Almost Nobody Noticed",
       "excerpt": "America’s deadliest wildfire hit Wisconsin the same day as the Great Chicago Fire — and was overshadowed for generations.",
@@ -5532,32 +5537,27 @@
       "contentChars": 251
     },
     {
-      "slug": "scopes-trial-1925",
-      "title": "The Scopes Trial: What Actually Happened in Dayton Beyond the Myth",
-      "excerpt": "The 1925 “monkey trial” was courtroom theatre, a publicity stunt, and a real fight over teaching evolution. (Scopes Trial)",
-      "format": "full",
+      "slug": "qr-forrestal-zuni",
+      "title": "The Zuni Rocket That Started the Forrestal Inferno",
+      "excerpt": "A single misfired rocket on the USS Forrestal’s deck began the 1967 fire that killed 134 sailors. (Forrestal Zuni rocket)",
+      "format": "quick-read",
       "source": "published",
-      "eventYear": 1925,
-      "publishedAt": "2026-11-07T16:12:17.045Z",
-      "parentArticleSlug": null,
-      "editorialAngle": null,
-      "canonicalEventId": "scopes-trial::1925",
-      "titleEventKey": "scopes-trial-actually-happened-dayton-beyond-myth::1925",
-      "places": [
-        "dayton",
-        "tennessee"
-      ],
+      "eventYear": 1967,
+      "publishedAt": "2026-11-07T18:30:18.730Z",
+      "parentArticleSlug": "uss-forrestal-fire-1967",
+      "editorialAngle": "Zuni rocket misfire as the Forrestal fire ignition point",
+      "canonicalEventId": "forrestal-zuni::1967",
+      "titleEventKey": "zuni-rocket-started-forrestal-inferno::1967",
+      "places": [],
       "namedHints": [
-        "scopes",
-        "trial",
-        "actually",
-        "happened",
-        "dayton",
-        "beyond",
-        "myth"
+        "zuni",
+        "rocket",
+        "started",
+        "forrestal",
+        "inferno"
       ],
-      "opening": "The Scopes Trial: A Clash Over Evolution in Dayton, Tennessee In the summer of 1925, Dayton, Tennessee, became the epicenter of a national debate over science and religion during the infamous Scopes Trial, often dubbed the \"monkey trial.\" John T. Scopes, a high school teacher, was charged with violating Tennessee's Butler Act, which prohibited the teaching of evolution in public schools.",
-      "contentChars": 10112
+      "opening": "On July 29, 1967, a single misfired Zuni rocket on the flight deck of the USS Forrestal ignited a catastrophic fire that ultimately claimed the lives of 134 sailors. The incident occurred while the aircraft carrier was operating in the Gulf of Tonkin, just off the coast of Vietnam, during a period of intense military engagement in the Vietnam War [1].",
+      "contentChars": 2377
     }
   ]
 }
