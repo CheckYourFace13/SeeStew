@@ -5833,9 +5833,9 @@
       "imageSearchTerms": [
         "Loving v Virginia 1967"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "loving-v-virginia-1967",
+      "publishedAt": "2026-11-08T16:35:16.439Z",
       "eventYear": 1967,
       "historicalEra": "postwar-cold-war"
     },

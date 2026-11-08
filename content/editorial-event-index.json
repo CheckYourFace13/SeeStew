@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-07T18:30:18.831Z",
-  "publishedCount": 140,
-  "queueCount": 64,
+  "generatedAt": "2026-11-08T16:35:16.560Z",
+  "publishedCount": 141,
+  "queueCount": 63,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -2832,6 +2832,29 @@
       "contentChars": 1909
     },
     {
+      "slug": "qr-forrestal-zuni",
+      "title": "The Zuni Rocket That Started the Forrestal Inferno",
+      "excerpt": "A single misfired rocket on the USS Forrestal’s deck began the 1967 fire that killed 134 sailors. (Forrestal Zuni rocket)",
+      "format": "quick-read",
+      "source": "published",
+      "eventYear": 1967,
+      "publishedAt": "2026-11-07T18:30:18.730Z",
+      "parentArticleSlug": "uss-forrestal-fire-1967",
+      "editorialAngle": "Zuni rocket misfire as the Forrestal fire ignition point",
+      "canonicalEventId": "forrestal-zuni::1967",
+      "titleEventKey": "zuni-rocket-started-forrestal-inferno::1967",
+      "places": [],
+      "namedHints": [
+        "zuni",
+        "rocket",
+        "started",
+        "forrestal",
+        "inferno"
+      ],
+      "opening": "On July 29, 1967, a single misfired Zuni rocket on the flight deck of the USS Forrestal ignited a catastrophic fire that ultimately claimed the lives of 134 sailors. The incident occurred while the aircraft carrier was operating in the Gulf of Tonkin, just off the coast of Vietnam, during a period of intense military engagement in the Vietnam War [1].",
+      "contentChars": 2377
+    },
+    {
       "slug": "qr-gaspee-aground",
       "title": "How a Sandbar Doomed HMS Gaspee",
       "excerpt": "The British customs schooner only became vulnerable after she chased a packet onto a Rhode Island sandbar. (Gaspee sandbar)",
@@ -3893,32 +3916,6 @@
       ],
       "opening": "The Zoot Suit Riots: A Clash of Cultures in Wartime Los Angeles In June 1943, Los Angeles became the epicenter of racial violence as servicemen clashed with Mexican American youths, known for their distinctive zoot suits. Over several days, these sailors and soldiers roamed the streets, targeting young men dressed in flashy attire, resulting in a series of brutal assaults.",
       "contentChars": 10085
-    },
-    {
-      "slug": "loving-v-virginia-1967",
-      "title": "Loving v. Virginia: The Couple Who Beat Anti-Miscegenation Law",
-      "excerpt": "Richard and Mildred Loving’s fight against Virginia’s marriage ban reached the Supreme Court in 1967.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1967,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "Their arrest, exile deal, legal strategy, and what the unanimous ruling changed.",
-      "canonicalEventId": "loving-v-virginia::1967",
-      "titleEventKey": "loving-virginia-couple-beat-anti-miscegenation-law::1967",
-      "places": [
-        "virginia"
-      ],
-      "namedHints": [
-        "loving",
-        "virginia",
-        "couple",
-        "beat",
-        "anti-miscegenation",
-        "law"
-      ],
-      "opening": "Richard and Mildred Loving’s fight against Virginia’s marriage ban reached the Supreme Court in 1967. Their arrest, exile deal, legal strategy, and what the unanimous ruling changed.",
-      "contentChars": 256
     },
     {
       "slug": "abscam-1980",
@@ -5537,27 +5534,31 @@
       "contentChars": 251
     },
     {
-      "slug": "qr-forrestal-zuni",
-      "title": "The Zuni Rocket That Started the Forrestal Inferno",
-      "excerpt": "A single misfired rocket on the USS Forrestal’s deck began the 1967 fire that killed 134 sailors. (Forrestal Zuni rocket)",
-      "format": "quick-read",
+      "slug": "loving-v-virginia-1967",
+      "title": "Loving v. Virginia: The Couple Who Beat Anti-Miscegenation Law",
+      "excerpt": "Richard and Mildred Loving’s fight against Virginia’s marriage ban reached the Supreme Court in 1967. (Loving v Virginia)",
+      "format": "full",
       "source": "published",
       "eventYear": 1967,
-      "publishedAt": "2026-11-07T18:30:18.730Z",
-      "parentArticleSlug": "uss-forrestal-fire-1967",
-      "editorialAngle": "Zuni rocket misfire as the Forrestal fire ignition point",
-      "canonicalEventId": "forrestal-zuni::1967",
-      "titleEventKey": "zuni-rocket-started-forrestal-inferno::1967",
-      "places": [],
-      "namedHints": [
-        "zuni",
-        "rocket",
-        "started",
-        "forrestal",
-        "inferno"
+      "publishedAt": "2026-11-08T16:34:44.436Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "loving-v-virginia::1967",
+      "titleEventKey": "loving-virginia-couple-beat-anti-miscegenation-law::1967",
+      "places": [
+        "virginia",
+        "washington"
       ],
-      "opening": "On July 29, 1967, a single misfired Zuni rocket on the flight deck of the USS Forrestal ignited a catastrophic fire that ultimately claimed the lives of 134 sailors. The incident occurred while the aircraft carrier was operating in the Gulf of Tonkin, just off the coast of Vietnam, during a period of intense military engagement in the Vietnam War [1].",
-      "contentChars": 2377
+      "namedHints": [
+        "loving",
+        "virginia",
+        "couple",
+        "beat",
+        "anti-miscegenation",
+        "law"
+      ],
+      "opening": "The Arrest of Richard and Mildred Loving in Virginia, 1958 On July 11, 1958, Richard Loving, a white man, and Mildred Jeter, a Black woman, were arrested in their home in Caroline County, Virginia. Their crime?",
+      "contentChars": 12208
     }
   ]
 }
