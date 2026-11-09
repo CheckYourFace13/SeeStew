@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-08T16:35:16.560Z",
-  "publishedCount": 141,
-  "queueCount": 63,
+  "generatedAt": "2026-11-09T20:37:48.628Z",
+  "publishedCount": 142,
+  "queueCount": 60,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -1999,6 +1999,33 @@
       "contentChars": 10257
     },
     {
+      "slug": "loving-v-virginia-1967",
+      "title": "Loving v. Virginia: The Couple Who Beat Anti-Miscegenation Law",
+      "excerpt": "Richard and Mildred Loving’s fight against Virginia’s marriage ban reached the Supreme Court in 1967. (Loving v Virginia)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1967,
+      "publishedAt": "2026-11-08T16:34:44.436Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "loving-v-virginia::1967",
+      "titleEventKey": "loving-virginia-couple-beat-anti-miscegenation-law::1967",
+      "places": [
+        "virginia",
+        "washington"
+      ],
+      "namedHints": [
+        "loving",
+        "virginia",
+        "couple",
+        "beat",
+        "anti-miscegenation",
+        "law"
+      ],
+      "opening": "The Arrest of Richard and Mildred Loving in Virginia, 1958 On July 11, 1958, Richard Loving, a white man, and Mildred Jeter, a Black woman, were arrested in their home in Caroline County, Virginia. Their crime?",
+      "contentChars": 12208
+    },
+    {
       "slug": "ludlow-massacre-1914",
       "title": "The Ludlow Massacre: When Colorado Militia Killed Striking Miners’ Families",
       "excerpt": "A tent colony burned; two women and eleven children died underground; and labor war erupted across the coalfields.",
@@ -3918,82 +3945,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "abscam-1980",
-      "title": "ABSCAM: The FBI Sting That Caught Members of Congress on Camera",
-      "excerpt": "Undercover agents posing as Arab sheikhs filmed politicians taking bribes — and Congress reeled.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1980,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "How the sting worked, who was convicted, civil-liberties criticism, and what the tapes showed.",
-      "canonicalEventId": "abscam::1980",
-      "titleEventKey": "abscam-fbi-sting-caught-members-congress-camera::1980",
-      "places": [],
-      "namedHints": [
-        "abscam",
-        "fbi",
-        "sting",
-        "caught",
-        "members",
-        "congress",
-        "camera"
-      ],
-      "opening": "Undercover agents posing as Arab sheikhs filmed politicians taking bribes — and Congress reeled. How the sting worked, who was convicted, civil-liberties criticism, and what the tapes showed.",
-      "contentChars": 232
-    },
-    {
-      "slug": "quiz-show-scandals-1950s",
-      "title": "The Quiz Show Scandals: When Primetime Contests Were Rigged",
-      "excerpt": "Fixed answers on Twenty-One and other shows shattered TV’s early credibility — and led to congressional hearings.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1958,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "How producers coached contestants, the Charles Van Doren case, and what Congress forced networks to change.",
-      "canonicalEventId": "quiz-show-scandals-1950s::1958",
-      "titleEventKey": "quiz-show-scandals-primetime-contests-rigged::1958",
-      "places": [],
-      "namedHints": [
-        "quiz",
-        "show",
-        "scandals",
-        "primetime",
-        "contests",
-        "rigged"
-      ],
-      "opening": "Fixed answers on Twenty-One and other shows shattered TV’s early credibility — and led to congressional hearings. How producers coached contestants, the Charles Van Doren case, and what Congress forced networks to change.",
-      "contentChars": 276
-    },
-    {
-      "slug": "st-valentines-day-massacre-1929",
-      "title": "The St. Valentine’s Day Massacre: Capone-Era Murder in a Chicago Garage",
-      "excerpt": "Seven men were lined up and machine-gunned on February 14, 1929 — a crime that defined Prohibition violence.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1929,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "Who was killed, why Capone was suspected, the police response, and what evidence never stuck.",
-      "canonicalEventId": "st-valentines-day-massacre::1929",
-      "titleEventKey": "valentine-day-massacre-capone-era-murder-chicago-garage::1929",
-      "places": [
-        "chicago"
-      ],
-      "namedHints": [
-        "valentines",
-        "day",
-        "massacre",
-        "capone-era",
-        "murder",
-        "chicago",
-        "garage"
-      ],
-      "opening": "Seven men were lined up and machine-gunned on February 14, 1929 — a crime that defined Prohibition violence. Who was killed, why Capone was suspected, the police response, and what evidence never stuck.",
-      "contentChars": 275
-    },
-    {
       "slug": "brinks-robbery-1950",
       "title": "The Brinks Robbery: The Nearly Perfect Heist That Unraveled Years Later",
       "excerpt": "In 1950, thieves took more than a million dollars from a Boston Brinks vault — then mistakes caught up with them.",
@@ -5534,31 +5485,31 @@
       "contentChars": 251
     },
     {
-      "slug": "loving-v-virginia-1967",
-      "title": "Loving v. Virginia: The Couple Who Beat Anti-Miscegenation Law",
-      "excerpt": "Richard and Mildred Loving’s fight against Virginia’s marriage ban reached the Supreme Court in 1967. (Loving v Virginia)",
+      "slug": "st-valentines-day-massacre-1929",
+      "title": "The St. Valentine’s Day Massacre: Capone-Era Murder in a Chicago Garage",
+      "excerpt": "Seven men were lined up and machine-gunned on February 14, 1929 — a crime that defined Prohibition violence. (St Valentine's Day Massacre)",
       "format": "full",
       "source": "published",
-      "eventYear": 1967,
-      "publishedAt": "2026-11-08T16:34:44.436Z",
+      "eventYear": 1929,
+      "publishedAt": "2026-11-09T20:36:59.476Z",
       "parentArticleSlug": null,
       "editorialAngle": null,
-      "canonicalEventId": "loving-v-virginia::1967",
-      "titleEventKey": "loving-virginia-couple-beat-anti-miscegenation-law::1967",
+      "canonicalEventId": "st-valentines-day-massacre::1929",
+      "titleEventKey": "valentine-day-massacre-capone-era-murder-chicago-garage::1929",
       "places": [
-        "virginia",
-        "washington"
+        "chicago"
       ],
       "namedHints": [
-        "loving",
-        "virginia",
-        "couple",
-        "beat",
-        "anti-miscegenation",
-        "law"
+        "valentines",
+        "day",
+        "massacre",
+        "capone-era",
+        "murder",
+        "chicago",
+        "garage"
       ],
-      "opening": "The Arrest of Richard and Mildred Loving in Virginia, 1958 On July 11, 1958, Richard Loving, a white man, and Mildred Jeter, a Black woman, were arrested in their home in Caroline County, Virginia. Their crime?",
-      "contentChars": 12208
+      "opening": "The St. Valentine’s Day Massacre: A Turning Point in Chicago's Gangland On February 14, 1929, a brutal crime unfolded in a garage at 2122 North Clark Street, Chicago.",
+      "contentChars": 13847
     }
   ]
 }

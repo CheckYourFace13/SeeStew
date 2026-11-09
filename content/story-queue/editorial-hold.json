@@ -59,6 +59,38 @@
       ],
       "heldAt": "2026-11-05T17:57:27.850Z",
       "status": "editorial_review"
+    },
+    {
+      "slug": "abscam-1980",
+      "title": "ABSCAM: The FBI Sting That Caught Members of Congress on Camera",
+      "format": "full",
+      "action": "hold_for_review",
+      "queueId": "abscam-1980",
+      "blocks": [],
+      "holds": [
+        {
+          "code": "opening_not_specific",
+          "message": "Opening should include a concrete date, figure, or factual detail unique to this event."
+        }
+      ],
+      "heldAt": "2026-11-09T20:32:39.146Z",
+      "status": "editorial_review"
+    },
+    {
+      "slug": "quiz-show-scandals-1950s",
+      "title": "The Quiz Show Scandals: When Primetime Contests Were Rigged",
+      "format": "full",
+      "action": "block",
+      "queueId": "quiz-show-scandals-1950s",
+      "blocks": [
+        {
+          "code": "event_year_absent",
+          "message": "Declared eventYear 1958 does not appear in article body."
+        }
+      ],
+      "holds": [],
+      "heldAt": "2026-11-09T20:34:24.477Z",
+      "status": "editorial_review"
     }
   ]
 }

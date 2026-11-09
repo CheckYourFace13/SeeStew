@@ -5880,11 +5880,23 @@
       "imageSearchTerms": [
         "ABSCAM FBI sting Congress"
       ],
-      "status": "pending",
+      "status": "editorial_review",
       "publishedSlug": null,
       "publishedAt": null,
       "eventYear": 1980,
-      "historicalEra": "postwar-cold-war"
+      "historicalEra": "postwar-cold-war",
+      "editorialHold": {
+        "action": "hold_for_review",
+        "at": "2026-11-09T20:32:39.144Z",
+        "blocks": [],
+        "holds": [
+          {
+            "code": "opening_not_specific",
+            "message": "Opening should include a concrete date, figure, or factual detail unique to this event."
+          }
+        ],
+        "conflictSlug": null
+      }
     },
     {
       "id": "quiz-show-scandals-1950s",
@@ -5927,11 +5939,23 @@
       "imageSearchTerms": [
         "Quiz show scandal Twenty-One 1950s"
       ],
-      "status": "pending",
+      "status": "editorial_review",
       "publishedSlug": null,
       "publishedAt": null,
       "eventYear": 1958,
-      "historicalEra": "postwar-cold-war"
+      "historicalEra": "postwar-cold-war",
+      "editorialHold": {
+        "action": "block",
+        "at": "2026-11-09T20:34:24.475Z",
+        "blocks": [
+          {
+            "code": "event_year_absent",
+            "message": "Declared eventYear 1958 does not appear in article body."
+          }
+        ],
+        "holds": [],
+        "conflictSlug": null
+      }
     },
     {
       "id": "st-valentines-day-massacre-1929",
@@ -5974,9 +5998,9 @@
       "imageSearchTerms": [
         "St Valentines Day Massacre 1929 Chicago"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "st-valentines-day-massacre-1929",
+      "publishedAt": "2026-11-09T20:37:48.528Z",
       "eventYear": 1929,
       "historicalEra": "twenties-depression"
     },
