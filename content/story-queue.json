@@ -6045,9 +6045,9 @@
       "imageSearchTerms": [
         "Brinks robbery Boston 1950"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "brinks-robbery-1950",
+      "publishedAt": "2026-11-10T17:37:32.651Z",
       "eventYear": 1950,
       "historicalEra": "postwar-cold-war"
     },

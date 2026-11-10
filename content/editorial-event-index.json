@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-09T20:37:48.628Z",
-  "publishedCount": 142,
-  "queueCount": 60,
+  "generatedAt": "2026-11-10T17:37:32.773Z",
+  "publishedCount": 143,
+  "queueCount": 59,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -3276,6 +3276,33 @@
       "contentChars": 12861
     },
     {
+      "slug": "st-valentines-day-massacre-1929",
+      "title": "The St. Valentine’s Day Massacre: Capone-Era Murder in a Chicago Garage",
+      "excerpt": "Seven men were lined up and machine-gunned on February 14, 1929 — a crime that defined Prohibition violence. (St Valentine's Day Massacre)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1929,
+      "publishedAt": "2026-11-09T20:36:59.476Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "st-valentines-day-massacre::1929",
+      "titleEventKey": "valentine-day-massacre-capone-era-murder-chicago-garage::1929",
+      "places": [
+        "chicago"
+      ],
+      "namedHints": [
+        "valentines",
+        "day",
+        "massacre",
+        "capone-era",
+        "murder",
+        "chicago",
+        "garage"
+      ],
+      "opening": "The St. Valentine’s Day Massacre: A Turning Point in Chicago's Gangland On February 14, 1929, a brutal crime unfolded in a garage at 2122 North Clark Street, Chicago.",
+      "contentChars": 13847
+    },
+    {
       "slug": "stonewall-riots-1969",
       "title": "The Stonewall Riots of 1969: How a Police Raid Sparked a Movement",
       "excerpt": "A raid on a Greenwich Village bar met unexpected resistance — and LGBTQ activism in America entered a new phase. (Stonewall Riots 1969)",
@@ -3943,34 +3970,6 @@
       ],
       "opening": "The Zoot Suit Riots: A Clash of Cultures in Wartime Los Angeles In June 1943, Los Angeles became the epicenter of racial violence as servicemen clashed with Mexican American youths, known for their distinctive zoot suits. Over several days, these sailors and soldiers roamed the streets, targeting young men dressed in flashy attire, resulting in a series of brutal assaults.",
       "contentChars": 10085
-    },
-    {
-      "slug": "brinks-robbery-1950",
-      "title": "The Brinks Robbery: The Nearly Perfect Heist That Unraveled Years Later",
-      "excerpt": "In 1950, thieves took more than a million dollars from a Boston Brinks vault — then mistakes caught up with them.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1950,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "The planning, the take, the years of silence, and how the FBI finally broke the case.",
-      "canonicalEventId": "brinks-robbery::1950",
-      "titleEventKey": "brinks-robbery-nearly-perfect-heist-unraveled-years-later::1950",
-      "places": [
-        "boston"
-      ],
-      "namedHints": [
-        "brinks",
-        "robbery",
-        "nearly",
-        "perfect",
-        "heist",
-        "unraveled",
-        "years",
-        "later"
-      ],
-      "opening": "In 1950, thieves took more than a million dollars from a Boston Brinks vault — then mistakes caught up with them. The planning, the take, the years of silence, and how the FBI finally broke the case.",
-      "contentChars": 260
     },
     {
       "slug": "willowbrook-hepatitis-studies",
@@ -5485,31 +5484,33 @@
       "contentChars": 251
     },
     {
-      "slug": "st-valentines-day-massacre-1929",
-      "title": "The St. Valentine’s Day Massacre: Capone-Era Murder in a Chicago Garage",
-      "excerpt": "Seven men were lined up and machine-gunned on February 14, 1929 — a crime that defined Prohibition violence. (St Valentine's Day Massacre)",
+      "slug": "brinks-robbery-1950",
+      "title": "The Brinks Robbery: The Nearly Perfect Heist That Unraveled Years Later",
+      "excerpt": "In 1950, thieves took more than a million dollars from a Boston Brinks vault — then mistakes caught up with them. (Brinks robbery Boston)",
       "format": "full",
       "source": "published",
-      "eventYear": 1929,
-      "publishedAt": "2026-11-09T20:36:59.476Z",
+      "eventYear": 1950,
+      "publishedAt": "2026-11-10T17:36:42.139Z",
       "parentArticleSlug": null,
       "editorialAngle": null,
-      "canonicalEventId": "st-valentines-day-massacre::1929",
-      "titleEventKey": "valentine-day-massacre-capone-era-murder-chicago-garage::1929",
+      "canonicalEventId": "brinks-robbery::1950",
+      "titleEventKey": "brinks-robbery-nearly-perfect-heist-unraveled-years-later::1950",
       "places": [
-        "chicago"
+        "boston",
+        "massachusetts"
       ],
       "namedHints": [
-        "valentines",
-        "day",
-        "massacre",
-        "capone-era",
-        "murder",
-        "chicago",
-        "garage"
+        "brinks",
+        "robbery",
+        "nearly",
+        "perfect",
+        "heist",
+        "unraveled",
+        "years",
+        "later"
       ],
-      "opening": "The St. Valentine’s Day Massacre: A Turning Point in Chicago's Gangland On February 14, 1929, a brutal crime unfolded in a garage at 2122 North Clark Street, Chicago.",
-      "contentChars": 13847
+      "opening": "The Great Brinks Robbery of 1950 in Boston On January 17, 1950, a group of armed robbers executed one of the most audacious heists in American history, stealing over $1.2 million from the Brink's Armored Car Depot in Boston, Massachusetts. This meticulously planned crime would come to be known as the Great Brinks Robbery.",
+      "contentChars": 12211
     }
   ]
 }
