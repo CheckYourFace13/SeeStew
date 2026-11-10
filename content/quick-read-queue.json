@@ -298,11 +298,13 @@
       "imageSearchTerms": [
         "Peshtigo fire 1871"
       ],
-      "status": "pending",
+      "status": "published",
       "format": "quick-read",
       "eventYear": 1871,
       "historicalEra": "reconstruction-gilded-age",
-      "canonicalEventId": "peshtigo-chicago-same-day::1871"
+      "canonicalEventId": "peshtigo-chicago-same-day::1871",
+      "publishedSlug": "qr-peshtigo-same-day-chicago",
+      "publishedAt": "2026-11-10T20:43:12.839Z"
     },
     {
       "id": "qr-challenger-o-ring-cold",

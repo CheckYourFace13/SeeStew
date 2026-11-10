@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-10T17:37:32.773Z",
-  "publishedCount": 143,
-  "queueCount": 59,
+  "generatedAt": "2026-11-10T20:43:12.936Z",
+  "publishedCount": 144,
+  "queueCount": 58,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -399,6 +399,35 @@
       ],
       "opening": "On March 5, 1770, a group of British soldiers opened fire on a crowd of colonists on King Street in Boston, Massachusetts. This tragic event, known as the Boston Massacre, resulted in the deaths of five men and became a pivotal moment in American history.",
       "contentChars": 12180
+    },
+    {
+      "slug": "brinks-robbery-1950",
+      "title": "The Brinks Robbery: The Nearly Perfect Heist That Unraveled Years Later",
+      "excerpt": "In 1950, thieves took more than a million dollars from a Boston Brinks vault — then mistakes caught up with them. (Brinks robbery Boston)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1950,
+      "publishedAt": "2026-11-10T17:36:42.139Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "brinks-robbery::1950",
+      "titleEventKey": "brinks-robbery-nearly-perfect-heist-unraveled-years-later::1950",
+      "places": [
+        "boston",
+        "massachusetts"
+      ],
+      "namedHints": [
+        "brinks",
+        "robbery",
+        "nearly",
+        "perfect",
+        "heist",
+        "unraveled",
+        "years",
+        "later"
+      ],
+      "opening": "The Great Brinks Robbery of 1950 in Boston On January 17, 1950, a group of armed robbers executed one of the most audacious heists in American history, stealing over $1.2 million from the Brink's Armored Car Depot in Boston, Massachusetts. This meticulously planned crime would come to be known as the Great Brinks Robbery.",
+      "contentChars": 12211
     },
     {
       "slug": "brown-v-board-1954",
@@ -5051,34 +5080,6 @@
       "contentChars": 383
     },
     {
-      "slug": "qr-peshtigo-same-day-chicago",
-      "title": "Peshtigo Burned the Same Day as Chicago — and Almost Nobody Noticed",
-      "excerpt": "America’s deadliest wildfire hit Wisconsin the same day as the Great Chicago Fire — and was overshadowed for generations.",
-      "format": "quick-read",
-      "source": "queue-quick-read",
-      "eventYear": 1871,
-      "publishedAt": null,
-      "parentArticleSlug": "peshtigo-fire-1871",
-      "editorialAngle": "Same-day overshadowing of Peshtigo by Chicago Fire news",
-      "canonicalEventId": "peshtigo-chicago-same-day::1871",
-      "titleEventKey": "peshtigo-burned-day-chicago-almost-nobody-noticed::1871",
-      "places": [
-        "chicago",
-        "wisconsin"
-      ],
-      "namedHints": [
-        "peshtigo",
-        "burned",
-        "day",
-        "chicago",
-        "almost",
-        "nobody",
-        "noticed"
-      ],
-      "opening": "America’s deadliest wildfire hit Wisconsin the same day as the Great Chicago Fire — and was overshadowed for generations. Focus only on the coincidence of dates and why Chicago dominated headlines; not a full Peshtigo narrative.",
-      "contentChars": 284
-    },
-    {
       "slug": "qr-challenger-o-ring-cold",
       "title": "The Cold Morning That Doomed Challenger’s O-Rings",
       "excerpt": "Engineers warned that freezing temperatures could fail Challenger’s booster seals — and the January launch went ahead anyway.",
@@ -5484,33 +5485,32 @@
       "contentChars": 251
     },
     {
-      "slug": "brinks-robbery-1950",
-      "title": "The Brinks Robbery: The Nearly Perfect Heist That Unraveled Years Later",
-      "excerpt": "In 1950, thieves took more than a million dollars from a Boston Brinks vault — then mistakes caught up with them. (Brinks robbery Boston)",
-      "format": "full",
+      "slug": "qr-peshtigo-same-day-chicago",
+      "title": "Peshtigo Burned the Same Day as Chicago — and Almost Nobody Noticed",
+      "excerpt": "America’s deadliest wildfire hit Wisconsin the same day as the Great Chicago Fire — and was overshadowed for generations. (Peshtigo fire same day Chicago)",
+      "format": "quick-read",
       "source": "published",
-      "eventYear": 1950,
-      "publishedAt": "2026-11-10T17:36:42.139Z",
-      "parentArticleSlug": null,
-      "editorialAngle": null,
-      "canonicalEventId": "brinks-robbery::1950",
-      "titleEventKey": "brinks-robbery-nearly-perfect-heist-unraveled-years-later::1950",
+      "eventYear": 1871,
+      "publishedAt": "2026-11-10T20:43:12.839Z",
+      "parentArticleSlug": "peshtigo-fire-1871",
+      "editorialAngle": "Same-day overshadowing of Peshtigo by Chicago Fire news",
+      "canonicalEventId": "peshtigo-chicago-same-day::1871",
+      "titleEventKey": "peshtigo-burned-day-chicago-almost-nobody-noticed::1871",
       "places": [
-        "boston",
-        "massachusetts"
+        "chicago",
+        "wisconsin"
       ],
       "namedHints": [
-        "brinks",
-        "robbery",
-        "nearly",
-        "perfect",
-        "heist",
-        "unraveled",
-        "years",
-        "later"
+        "peshtigo",
+        "burned",
+        "day",
+        "chicago",
+        "almost",
+        "nobody",
+        "noticed"
       ],
-      "opening": "The Great Brinks Robbery of 1950 in Boston On January 17, 1950, a group of armed robbers executed one of the most audacious heists in American history, stealing over $1.2 million from the Brink's Armored Car Depot in Boston, Massachusetts. This meticulously planned crime would come to be known as the Great Brinks Robbery.",
-      "contentChars": 12211
+      "opening": "On October 8, 1871, the same day the Great Chicago Fire raged through the city, a catastrophic wildfire swept through Peshtigo, Wisconsin, resulting in the deadliest wildfire in American history. While the Chicago fire claimed around 300 lives and destroyed thousands of buildings, the Peshtigo Fire resulted in an estimated 1,500 to 2,500 deaths, yet it barely made headlines outside of Wisconsin.",
+      "contentChars": 2386
     }
   ]
 }
