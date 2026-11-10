@@ -72,6 +72,37 @@
       "rejected": [],
       "fullPending": 45,
       "qrPending": 18
+    },
+    {
+      "at": "2026-11-10T14:09:03.485Z",
+      "dryRun": false,
+      "discover": true,
+      "seededFull": 0,
+      "seededQr": 0,
+      "discoveredFull": [],
+      "discoveredQr": [],
+      "rejected": [
+        {
+          "id": "the-great-salt-lake-flood-1983",
+          "reasons": [
+            "source URL probe failed: https://www.usu.edu/utahwater/floods/great-salt-lake-flood-1983 → HTTP 404; https://www.weather.gov/slc/1983Flood → HTTP 404; https://www.uen.org/utah_history_encyclopedia/g/great_salt_lake.shtml → HTTP 404; https://ugspub.nr.utah.gov/publications/pp-01-01.pdf → HTTP 404"
+          ]
+        },
+        {
+          "id": "the-1918-influenza-pandemic",
+          "reasons": [
+            "overlap hold_for_review vs spanish-flu-1918-america: ambiguous_overlap"
+          ]
+        },
+        {
+          "id": "the-1929-stock-market-crash",
+          "reasons": [
+            "source URL probe failed: https://www.loc.gov/exhibits/great-depression/great-depression.html → HTTP 404; https://www.archives.gov/education/lessons/great-depression → HTTP 404; https://www.dol.gov/general/aboutdol/history/greatdepression → HTTP 404"
+          ]
+        }
+      ],
+      "fullPending": 42,
+      "qrPending": 18
     }
   ]
 }
