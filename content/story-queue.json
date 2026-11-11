@@ -7977,6 +7977,50 @@
       "publishedAt": null,
       "eventYear": 1964,
       "historicalEra": "postwar-cold-war"
+    },
+    {
+      "id": "federal-reserve-creation-1913",
+      "title": "The Creation of the Federal Reserve System (1913)",
+      "hook": "Explore the establishment of the Federal Reserve and its lasting impact on the American economy.",
+      "category": "Economic History",
+      "angle": "Understanding the motivations and consequences behind the creation of the Federal Reserve.",
+      "keywords": [
+        "Federal Reserve",
+        "monetary policy",
+        "banking system",
+        "economic stability"
+      ],
+      "imageSearchTerms": [
+        "Federal Reserve building",
+        "Federal Reserve history"
+      ],
+      "eventYear": 1913,
+      "historicalEra": "Progressive Era",
+      "requiredSources": [
+        {
+          "title": "Federal Reserve History",
+          "publisher": "Federal Reserve Bank of St. Louis",
+          "url": "https://www.stlouisfed.org/education/federal-reserve-history"
+        },
+        {
+          "title": "The Federal Reserve Act",
+          "publisher": "U.S. Government Publishing Office",
+          "url": "https://www.govinfo.gov/content/pkg/STATUTE-38/pdf/STATUTE-38-Pg251.pdf"
+        },
+        {
+          "title": "The Origins of the Federal Reserve",
+          "publisher": "Federal Reserve Bank of New York",
+          "url": "https://www.newyorkfed.org/aboutthefed/history.html"
+        },
+        {
+          "title": "Federal Reserve Act of 1913",
+          "publisher": "U.S. Congress",
+          "url": "https://www.congress.gov/bill/63rd-congress/1st-session/169"
+        }
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
     }
   ]
 }

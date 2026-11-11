@@ -103,6 +103,39 @@
       ],
       "fullPending": 42,
       "qrPending": 18
+    },
+    {
+      "at": "2026-11-11T13:24:50.901Z",
+      "dryRun": false,
+      "discover": true,
+      "seededFull": 0,
+      "seededQr": 0,
+      "discoveredFull": [
+        "federal-reserve-creation-1913"
+      ],
+      "discoveredQr": [],
+      "rejected": [
+        {
+          "id": "women-suffrage-movement",
+          "reasons": [
+            "source URL probe failed: https://www.nps.gov/articles/womens-suffrage.htm → HTTP 404; https://www.archives.gov/women/19th-amendment → HTTP 404; https://www.loc.gov/teachers/classroommaterials/presentationsandactivities/presentations/womens-suffrage/ → HTTP 404"
+          ]
+        },
+        {
+          "id": "new-deal-programs-1930s",
+          "reasons": [
+            "only 1 credible sources (need 2+)"
+          ]
+        },
+        {
+          "id": "civil-rights-act-1964",
+          "reasons": [
+            "source URL probe failed: https://www.justice.gov/crt/history/title-vii-civil-rights-act-1964 → HTTP 404; https://www.archives.gov/exhibits/american_originals/civrigts.html → HTTP 404; https://www.congress.gov/bill/88th-congress/1st-session/hr7152 → HTTP 403; https://www.loc.gov/exhibits/civilrights/civilrights.html → HTTP 429"
+          ]
+        }
+      ],
+      "fullPending": 42,
+      "qrPending": 17
     }
   ]
 }
