@@ -91,6 +91,22 @@
       "holds": [],
       "heldAt": "2026-11-09T20:34:24.477Z",
       "status": "editorial_review"
+    },
+    {
+      "slug": "willowbrook-hepatitis-studies",
+      "title": "The Willowbrook Hepatitis Studies: Children Used in Medical Research",
+      "format": "full",
+      "action": "block",
+      "queueId": "willowbrook-hepatitis-studies",
+      "blocks": [
+        {
+          "code": "event_year_absent",
+          "message": "Declared eventYear 1965 does not appear in article body."
+        }
+      ],
+      "holds": [],
+      "heldAt": "2026-11-11T17:47:39.122Z",
+      "status": "editorial_review"
     }
   ]
 }

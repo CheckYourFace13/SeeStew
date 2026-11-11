@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-10T20:43:12.936Z",
-  "publishedCount": 144,
-  "queueCount": 58,
+  "generatedAt": "2026-11-11T17:49:56.950Z",
+  "publishedCount": 145,
+  "queueCount": 57,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -2935,6 +2935,34 @@
       "contentChars": 2342
     },
     {
+      "slug": "qr-peshtigo-same-day-chicago",
+      "title": "Peshtigo Burned the Same Day as Chicago — and Almost Nobody Noticed",
+      "excerpt": "America’s deadliest wildfire hit Wisconsin the same day as the Great Chicago Fire — and was overshadowed for generations. (Peshtigo fire same day Chicago)",
+      "format": "quick-read",
+      "source": "published",
+      "eventYear": 1871,
+      "publishedAt": "2026-11-10T20:43:12.839Z",
+      "parentArticleSlug": "peshtigo-fire-1871",
+      "editorialAngle": "Same-day overshadowing of Peshtigo by Chicago Fire news",
+      "canonicalEventId": "peshtigo-chicago-same-day::1871",
+      "titleEventKey": "peshtigo-burned-day-chicago-almost-nobody-noticed::1871",
+      "places": [
+        "chicago",
+        "wisconsin"
+      ],
+      "namedHints": [
+        "peshtigo",
+        "burned",
+        "day",
+        "chicago",
+        "almost",
+        "nobody",
+        "noticed"
+      ],
+      "opening": "On October 8, 1871, the same day the Great Chicago Fire raged through the city, a catastrophic wildfire swept through Peshtigo, Wisconsin, resulting in the deadliest wildfire in American history. While the Chicago fire claimed around 300 lives and destroyed thousands of buildings, the Peshtigo Fire resulted in an estimated 1,500 to 2,500 deaths, yet it barely made headlines outside of Wisconsin.",
+      "contentChars": 2386
+    },
+    {
       "slug": "qr-radium-lip-pointing",
       "title": "Lip-Pointing: The Habit That Poisoned the Radium Girls",
       "excerpt": "Dial painters were taught to shape brush tips with their lips — ingesting radium with every stroke. (radium girls lip pointing)",
@@ -4001,60 +4029,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "willowbrook-hepatitis-studies",
-      "title": "The Willowbrook Hepatitis Studies: Children Used in Medical Research",
-      "excerpt": "At Staten Island’s Willowbrook State School, researchers deliberately exposed children to hepatitis — and called it science.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1965,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "What the studies did, how consent failed, public exposure, and the ethics rules that followed.",
-      "canonicalEventId": "willowbrook-hepatitis-studies::1965",
-      "titleEventKey": "willowbrook-hepatitis-studies-children-used-medical-research::1965",
-      "places": [],
-      "namedHints": [
-        "willowbrook",
-        "hepatitis",
-        "studies",
-        "children",
-        "used",
-        "medical",
-        "research"
-      ],
-      "opening": "At Staten Island’s Willowbrook State School, researchers deliberately exposed children to hepatitis — and called it science. What the studies did, how consent failed, public exposure, and the ethics rules that followed.",
-      "contentChars": 297
-    },
-    {
-      "slug": "great-alaska-earthquake-1964",
-      "title": "The Great Alaska Earthquake of 1964: Quake, Tsunami, and Towns Washed Away",
-      "excerpt": "The strongest quake in U.S. history triggered tsunamis that erased coastal towns from Alaska to California.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1964,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "Magnitude and rupture, tsunami deaths, Valdez and Chenega, and how USGS/NOAA documented the event.",
-      "canonicalEventId": "great-alaska-earthquake::1964",
-      "titleEventKey": "great-alaska-earthquake-quake-tsunami-towns-washed-away::1964",
-      "places": [
-        "alaska",
-        "california"
-      ],
-      "namedHints": [
-        "great",
-        "alaska",
-        "earthquake",
-        "quake",
-        "tsunami",
-        "towns",
-        "washed",
-        "away"
-      ],
-      "opening": "The strongest quake in U.S. history triggered tsunamis that erased coastal towns from Alaska to California.",
-      "contentChars": 272
-    },
-    {
       "slug": "rhythm-club-fire-1940",
       "title": "The Rhythm Club Fire: A Jim Crow Dance Hall Became a Trap",
       "excerpt": "In Natchez in 1940, a packed dance hall fire killed about 200 people — mostly Black patrons blocked by barred windows.",
@@ -5080,6 +5054,28 @@
       "contentChars": 383
     },
     {
+      "slug": "federal-reserve-creation-1913",
+      "title": "The Creation of the Federal Reserve System (1913)",
+      "excerpt": "Explore the establishment of the Federal Reserve and its lasting impact on the American economy.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1913,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "Understanding the motivations and consequences behind the creation of the Federal Reserve.",
+      "canonicalEventId": "federal-reserve-creation::1913",
+      "titleEventKey": "creation-federal-reserve-system::1913",
+      "places": [],
+      "namedHints": [
+        "creation",
+        "federal",
+        "reserve",
+        "system"
+      ],
+      "opening": "Explore the establishment of the Federal Reserve and its lasting impact on the American economy. Understanding the motivations and consequences behind the creation of the Federal Reserve.",
+      "contentChars": 253
+    },
+    {
       "slug": "qr-challenger-o-ring-cold",
       "title": "The Cold Morning That Doomed Challenger’s O-Rings",
       "excerpt": "Engineers warned that freezing temperatures could fail Challenger’s booster seals — and the January launch went ahead anyway.",
@@ -5485,32 +5481,33 @@
       "contentChars": 251
     },
     {
-      "slug": "qr-peshtigo-same-day-chicago",
-      "title": "Peshtigo Burned the Same Day as Chicago — and Almost Nobody Noticed",
-      "excerpt": "America’s deadliest wildfire hit Wisconsin the same day as the Great Chicago Fire — and was overshadowed for generations. (Peshtigo fire same day Chicago)",
-      "format": "quick-read",
+      "slug": "great-alaska-earthquake-1964",
+      "title": "The Great Alaska Earthquake of 1964: Quake, Tsunami, and Towns Washed Away",
+      "excerpt": "The strongest quake in U.S. history triggered tsunamis that erased coastal towns from Alaska to California. (1964 Alaska earthquake)",
+      "format": "full",
       "source": "published",
-      "eventYear": 1871,
-      "publishedAt": "2026-11-10T20:43:12.839Z",
-      "parentArticleSlug": "peshtigo-fire-1871",
-      "editorialAngle": "Same-day overshadowing of Peshtigo by Chicago Fire news",
-      "canonicalEventId": "peshtigo-chicago-same-day::1871",
-      "titleEventKey": "peshtigo-burned-day-chicago-almost-nobody-noticed::1871",
+      "eventYear": 1964,
+      "publishedAt": "2026-11-11T17:48:21.180Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "great-alaska-earthquake::1964",
+      "titleEventKey": "great-alaska-earthquake-quake-tsunami-towns-washed-away::1964",
       "places": [
-        "chicago",
-        "wisconsin"
+        "alaska",
+        "california"
       ],
       "namedHints": [
-        "peshtigo",
-        "burned",
-        "day",
-        "chicago",
-        "almost",
-        "nobody",
-        "noticed"
+        "great",
+        "alaska",
+        "earthquake",
+        "quake",
+        "tsunami",
+        "towns",
+        "washed",
+        "away"
       ],
-      "opening": "On October 8, 1871, the same day the Great Chicago Fire raged through the city, a catastrophic wildfire swept through Peshtigo, Wisconsin, resulting in the deadliest wildfire in American history. While the Chicago fire claimed around 300 lives and destroyed thousands of buildings, the Peshtigo Fire resulted in an estimated 1,500 to 2,500 deaths, yet it barely made headlines outside of Wisconsin.",
-      "contentChars": 2386
+      "opening": "The 1964 Alaska Earthquake: A Catastrophic Natural Disaster On March 27, 1964, the strongest earthquake ever recorded in U.S. history struck Alaska, registering a magnitude of 9.2.",
+      "contentChars": 11733
     }
   ]
 }

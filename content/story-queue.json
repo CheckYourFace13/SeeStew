@@ -6092,11 +6092,23 @@
       "imageSearchTerms": [
         "Willowbrook hepatitis studies"
       ],
-      "status": "pending",
+      "status": "editorial_review",
       "publishedSlug": null,
       "publishedAt": null,
       "eventYear": 1965,
-      "historicalEra": "postwar-cold-war"
+      "historicalEra": "postwar-cold-war",
+      "editorialHold": {
+        "action": "block",
+        "at": "2026-11-11T17:47:39.121Z",
+        "blocks": [
+          {
+            "code": "event_year_absent",
+            "message": "Declared eventYear 1965 does not appear in article body."
+          }
+        ],
+        "holds": [],
+        "conflictSlug": null
+      }
     },
     {
       "id": "great-alaska-earthquake-1964",
@@ -6139,9 +6151,9 @@
       "imageSearchTerms": [
         "Great Alaska Earthquake 1964"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "great-alaska-earthquake-1964",
+      "publishedAt": "2026-11-11T17:49:56.875Z",
       "eventYear": 1964,
       "historicalEra": "postwar-cold-war"
     },
