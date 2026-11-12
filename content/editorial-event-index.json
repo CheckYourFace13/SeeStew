@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-11T17:49:56.950Z",
-  "publishedCount": 145,
-  "queueCount": 57,
+  "generatedAt": "2026-11-12T18:03:05.996Z",
+  "publishedCount": 146,
+  "queueCount": 59,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -1195,6 +1195,35 @@
       ],
       "opening": "A Routine Flight Goes Wrong At 12:33 a.m. on January 24, 1961, a B-52G Stratofortress — tail number 58-0187, assigned to the 4241st Strategic Wing — departed Seymour Johnson Air Force Base on a routine airborne alert mission designated \"Cover All 22.\" The aircraft was part of Strategic Air Command's Operation Chrome Dome, a continuous nuclear deterrence patrol that kept nuclear-armed bombers aloft 24 hours a day along predetermined routes, ready to strike Soviet targets on presidential order [1].",
       "contentChars": 15163
+    },
+    {
+      "slug": "great-alaska-earthquake-1964",
+      "title": "The Great Alaska Earthquake of 1964: Quake, Tsunami, and Towns Washed Away",
+      "excerpt": "The strongest quake in U.S. history triggered tsunamis that erased coastal towns from Alaska to California. (1964 Alaska earthquake)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1964,
+      "publishedAt": "2026-11-11T17:48:21.180Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "great-alaska-earthquake::1964",
+      "titleEventKey": "great-alaska-earthquake-quake-tsunami-towns-washed-away::1964",
+      "places": [
+        "alaska",
+        "california"
+      ],
+      "namedHints": [
+        "great",
+        "alaska",
+        "earthquake",
+        "quake",
+        "tsunami",
+        "towns",
+        "washed",
+        "away"
+      ],
+      "opening": "The 1964 Alaska Earthquake: A Catastrophic Natural Disaster On March 27, 1964, the strongest earthquake ever recorded in U.S. history struck Alaska, registering a magnitude of 9.2.",
+      "contentChars": 11733
     },
     {
       "slug": "great-baltimore-fire-1904",
@@ -4029,35 +4058,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "rhythm-club-fire-1940",
-      "title": "The Rhythm Club Fire: A Jim Crow Dance Hall Became a Trap",
-      "excerpt": "In Natchez in 1940, a packed dance hall fire killed about 200 people — mostly Black patrons blocked by barred windows.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1940,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "Why exits failed, segregation-era venue design, the death toll, and how memorials preserved the story.",
-      "canonicalEventId": "rhythm-club-fire::1940",
-      "titleEventKey": "rhythm-club-fire-jim-crow-dance-hall-became::1940",
-      "places": [
-        "natchez"
-      ],
-      "namedHints": [
-        "rhythm",
-        "club",
-        "fire",
-        "jim",
-        "crow",
-        "dance",
-        "hall",
-        "became",
-        "trap"
-      ],
-      "opening": "In Natchez in 1940, a packed dance hall fire killed about 200 people — mostly Black patrons blocked by barred windows. Why exits failed, segregation-era venue design, the death toll, and how memorials preserved the story.",
-      "contentChars": 292
-    },
-    {
       "slug": "keating-five",
       "title": "The Keating Five: Senators, a Thrift Collapse, and Soft Corruption",
       "excerpt": "Five U.S. senators intervened for Charles Keating’s failing S&L — and ethics investigators called it a national scandal.",
@@ -5076,6 +5076,76 @@
       "contentChars": 253
     },
     {
+      "slug": "women-suffrage-movement",
+      "title": "The Women's Suffrage Movement: A Fight for Equality",
+      "excerpt": "Delve into the struggle for women's right to vote in the United States and its impact on society.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1920,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "Examining the key figures, events, and strategies that led to the passage of the 19th Amendment.",
+      "canonicalEventId": "women-suffrage-movement::1920",
+      "titleEventKey": "women-suffrage-movement-fight-equality::1920",
+      "places": [],
+      "namedHints": [
+        "women's",
+        "suffrage",
+        "movement",
+        "fight",
+        "equality"
+      ],
+      "opening": "Delve into the struggle for women's right to vote in the United States and its impact on society. Examining the key figures, events, and strategies that led to the passage of the 19th Amendment.",
+      "contentChars": 276
+    },
+    {
+      "slug": "civil-rights-movement",
+      "title": "The Civil Rights Movement: A Struggle for Justice",
+      "excerpt": "Explore the key events, figures, and legislation that defined the Civil Rights Movement in the United States.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1964,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "Assessing the impact of grassroots activism and landmark legislation on American society.",
+      "canonicalEventId": "civil-rights-movement::1964",
+      "titleEventKey": "civil-rights-movement-struggle-justice::1964",
+      "places": [],
+      "namedHints": [
+        "civil",
+        "rights",
+        "movement",
+        "struggle",
+        "justice"
+      ],
+      "opening": "Explore the key events, figures, and legislation that defined the Civil Rights Movement in the United States. Assessing the impact of grassroots activism and landmark legislation on American society.",
+      "contentChars": 293
+    },
+    {
+      "slug": "moon-landing-1969",
+      "title": "The Apollo 11 Moon Landing: A Giant Leap for Mankind",
+      "excerpt": "Examine the historic Apollo 11 mission that landed the first humans on the Moon in 1969.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1969,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "Understanding the technological advancements and cultural significance of the Moon landing.",
+      "canonicalEventId": "moon-landing::1969",
+      "titleEventKey": "apollo-moon-landing-giant-leap-mankind::1969",
+      "places": [],
+      "namedHints": [
+        "apollo",
+        "moon",
+        "landing",
+        "giant",
+        "leap",
+        "mankind"
+      ],
+      "opening": "Examine the historic Apollo 11 mission that landed the first humans on the Moon in 1969. Understanding the technological advancements and cultural significance of the Moon landing.",
+      "contentChars": 231
+    },
+    {
       "slug": "qr-challenger-o-ring-cold",
       "title": "The Cold Morning That Doomed Challenger’s O-Rings",
       "excerpt": "Engineers warned that freezing temperatures could fail Challenger’s booster seals — and the January launch went ahead anyway.",
@@ -5481,33 +5551,34 @@
       "contentChars": 251
     },
     {
-      "slug": "great-alaska-earthquake-1964",
-      "title": "The Great Alaska Earthquake of 1964: Quake, Tsunami, and Towns Washed Away",
-      "excerpt": "The strongest quake in U.S. history triggered tsunamis that erased coastal towns from Alaska to California. (1964 Alaska earthquake)",
+      "slug": "rhythm-club-fire-1940",
+      "title": "The Rhythm Club Fire: A Jim Crow Dance Hall Became a Trap",
+      "excerpt": "In Natchez in 1940, a packed dance hall fire killed about 200 people — mostly Black patrons blocked by barred windows. (Rhythm Club fire)",
       "format": "full",
       "source": "published",
-      "eventYear": 1964,
-      "publishedAt": "2026-11-11T17:48:21.180Z",
+      "eventYear": 1940,
+      "publishedAt": "2026-11-12T18:01:30.218Z",
       "parentArticleSlug": null,
       "editorialAngle": null,
-      "canonicalEventId": "great-alaska-earthquake::1964",
-      "titleEventKey": "great-alaska-earthquake-quake-tsunami-towns-washed-away::1964",
+      "canonicalEventId": "rhythm-club-fire::1940",
+      "titleEventKey": "rhythm-club-fire-jim-crow-dance-hall-became::1940",
       "places": [
-        "alaska",
-        "california"
+        "natchez",
+        "mississippi"
       ],
       "namedHints": [
-        "great",
-        "alaska",
-        "earthquake",
-        "quake",
-        "tsunami",
-        "towns",
-        "washed",
-        "away"
+        "rhythm",
+        "club",
+        "fire",
+        "jim",
+        "crow",
+        "dance",
+        "hall",
+        "became",
+        "trap"
       ],
-      "opening": "The 1964 Alaska Earthquake: A Catastrophic Natural Disaster On March 27, 1964, the strongest earthquake ever recorded in U.S. history struck Alaska, registering a magnitude of 9.2.",
-      "contentChars": 11733
+      "opening": "The Tragic Natchez Rhythm Club Fire of 1940 On the night of April 23, 1940, a devastating fire broke out at the Rhythm Club in Natchez, Mississippi, claiming the lives of approximately 200 people. This dance hall, a popular venue for Black patrons during the Jim Crow era, became a deadly trap due to its inadequate safety measures and segregation-era design.",
+      "contentChars": 10213
     }
   ]
 }

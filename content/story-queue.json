@@ -6198,9 +6198,9 @@
       "imageSearchTerms": [
         "Rhythm Club fire Natchez 1940"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "rhythm-club-fire-1940",
+      "publishedAt": "2026-11-12T18:03:05.922Z",
       "eventYear": 1940,
       "historicalEra": "world-war-ii"
     },
