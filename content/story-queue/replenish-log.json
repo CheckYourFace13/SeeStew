@@ -136,6 +136,35 @@
       ],
       "fullPending": 42,
       "qrPending": 17
+    },
+    {
+      "at": "2026-11-12T14:30:00.457Z",
+      "dryRun": false,
+      "discover": true,
+      "seededFull": 0,
+      "seededQr": 0,
+      "discoveredFull": [
+        "women-suffrage-movement",
+        "civil-rights-movement",
+        "moon-landing-1969"
+      ],
+      "discoveredQr": [],
+      "rejected": [
+        {
+          "id": "great-migration",
+          "reasons": [
+            "source URL probe failed: https://www.nps.gov/articles/great-migration.htm → HTTP 404; https://www.loc.gov/exhibits/american_latino_heritage/great-migration.html → HTTP 404; https://www.si.edu/newsdesk/releases/great-migration → HTTP 403"
+          ]
+        },
+        {
+          "id": "the-new-deal",
+          "reasons": [
+            "only 1 credible sources (need 2+)"
+          ]
+        }
+      ],
+      "fullPending": 43,
+      "qrPending": 17
     }
   ]
 }

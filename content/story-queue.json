@@ -8033,6 +8033,144 @@
       "status": "pending",
       "publishedSlug": null,
       "publishedAt": null
+    },
+    {
+      "id": "women-suffrage-movement",
+      "title": "The Women's Suffrage Movement: A Fight for Equality",
+      "hook": "Delve into the struggle for women's right to vote in the United States and its impact on society.",
+      "category": "Political History",
+      "angle": "Examining the key figures, events, and strategies that led to the passage of the 19th Amendment.",
+      "keywords": [
+        "women's suffrage",
+        "19th Amendment",
+        "women's rights",
+        "political history",
+        "social movements"
+      ],
+      "imageSearchTerms": [
+        "women's suffrage",
+        "suffragettes",
+        "19th Amendment"
+      ],
+      "eventYear": 1920,
+      "historicalEra": "Progressive Era",
+      "requiredSources": [
+        {
+          "title": "Women’s Suffrage Movement",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/articles/womens-suffrage.htm"
+        },
+        {
+          "title": "The Fight for Women's Suffrage",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/collections/womens-suffrage-movement-collection/about-this-collection/"
+        },
+        {
+          "title": "The Women's Rights Movement",
+          "publisher": "U.S. History",
+          "url": "https://www.ushistory.org/us/54.asp"
+        },
+        {
+          "title": "The Women's Suffrage Movement: A Timeline",
+          "publisher": "Smithsonian Institution",
+          "url": "https://www.smithsonianmag.com/history/womens-suffrage-timeline-180960292/"
+        }
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "civil-rights-movement",
+      "title": "The Civil Rights Movement: A Struggle for Justice",
+      "hook": "Explore the key events, figures, and legislation that defined the Civil Rights Movement in the United States.",
+      "category": "Social Justice",
+      "angle": "Assessing the impact of grassroots activism and landmark legislation on American society.",
+      "keywords": [
+        "Civil Rights Movement",
+        "Martin Luther King Jr.",
+        "civil rights legislation",
+        "social justice",
+        "activism"
+      ],
+      "imageSearchTerms": [
+        "Civil Rights Movement",
+        "Martin Luther King Jr.",
+        "civil rights protests"
+      ],
+      "eventYear": 1964,
+      "historicalEra": "Modern Era",
+      "requiredSources": [
+        {
+          "title": "Civil Rights Movement",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/subjects/civilrights/index.htm"
+        },
+        {
+          "title": "Civil Rights Movement Overview",
+          "publisher": "U.S. History",
+          "url": "https://www.ushistory.org/us/54.asp"
+        },
+        {
+          "title": "Civil Rights Movement: A Timeline",
+          "publisher": "Smithsonian Institution",
+          "url": "https://www.si.edu/spotlight/civil-rights-movement"
+        },
+        {
+          "title": "Civil Rights Movement: A Historical Overview",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/exhibits/civilrights/"
+        }
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "moon-landing-1969",
+      "title": "The Apollo 11 Moon Landing: A Giant Leap for Mankind",
+      "hook": "Examine the historic Apollo 11 mission that landed the first humans on the Moon in 1969.",
+      "category": "Space Exploration",
+      "angle": "Understanding the technological advancements and cultural significance of the Moon landing.",
+      "keywords": [
+        "Apollo 11",
+        "moon landing",
+        "NASA",
+        "space exploration",
+        "1969"
+      ],
+      "imageSearchTerms": [
+        "Apollo 11",
+        "moon landing",
+        "Neil Armstrong"
+      ],
+      "eventYear": 1969,
+      "historicalEra": "Modern Era",
+      "requiredSources": [
+        {
+          "title": "Apollo 11 Mission Overview",
+          "publisher": "NASA",
+          "url": "https://www.nasa.gov/mission_pages/apollo/apollo11.html"
+        },
+        {
+          "title": "Apollo 11: The First Moon Landing",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/exhibits/apollo_11/"
+        },
+        {
+          "title": "The Historic Apollo 11 Mission",
+          "publisher": "Smithsonian National Air and Space Museum",
+          "url": "https://airandspace.si.edu/exhibitions/apollo-11/online/"
+        },
+        {
+          "title": "Apollo 11: The Moon Landing",
+          "publisher": "U.S. History",
+          "url": "https://www.ushistory.org/us/54.asp"
+        }
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
     }
   ]
 }
