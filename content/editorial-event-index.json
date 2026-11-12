@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-12T18:03:05.996Z",
-  "publishedCount": 146,
-  "queueCount": 59,
+  "generatedAt": "2026-11-12T21:21:08.293Z",
+  "publishedCount": 147,
+  "queueCount": 58,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -3070,6 +3070,36 @@
       "contentChars": 13841
     },
     {
+      "slug": "rhythm-club-fire-1940",
+      "title": "The Rhythm Club Fire: A Jim Crow Dance Hall Became a Trap",
+      "excerpt": "In Natchez in 1940, a packed dance hall fire killed about 200 people — mostly Black patrons blocked by barred windows. (Rhythm Club fire)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1940,
+      "publishedAt": "2026-11-12T18:01:30.218Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "rhythm-club-fire::1940",
+      "titleEventKey": "rhythm-club-fire-jim-crow-dance-hall-became::1940",
+      "places": [
+        "natchez",
+        "mississippi"
+      ],
+      "namedHints": [
+        "rhythm",
+        "club",
+        "fire",
+        "jim",
+        "crow",
+        "dance",
+        "hall",
+        "became",
+        "trap"
+      ],
+      "opening": "The Tragic Natchez Rhythm Club Fire of 1940 On the night of April 23, 1940, a devastating fire broke out at the Rhythm Club in Natchez, Mississippi, claiming the lives of approximately 200 people. This dance hall, a popular venue for Black patrons during the Jim Crow era, became a deadly trap due to its inadequate safety measures and segregation-era design.",
+      "contentChars": 10213
+    },
+    {
       "slug": "roswell-incident-1947",
       "title": "The Roswell Incident of 1947: Balloon Debris, a Retracted Story, and a UFO Legend",
       "excerpt": "The Army first said it recovered a “flying disc.” Then it said weather balloon. Decades of secrecy (and Project Mogul) fueled a myth. (Roswell incident 1947)",
@@ -5146,28 +5176,6 @@
       "contentChars": 231
     },
     {
-      "slug": "qr-challenger-o-ring-cold",
-      "title": "The Cold Morning That Doomed Challenger’s O-Rings",
-      "excerpt": "Engineers warned that freezing temperatures could fail Challenger’s booster seals — and the January launch went ahead anyway.",
-      "format": "quick-read",
-      "source": "queue-quick-read",
-      "eventYear": 1986,
-      "publishedAt": null,
-      "parentArticleSlug": "challenger-disaster-1986",
-      "editorialAngle": "O-ring cold-temperature failure as Challenger ignition cause",
-      "canonicalEventId": "challenger-oring-cold::1986",
-      "titleEventKey": "cold-morning-doomed-challenger-o-rings::1986",
-      "places": [],
-      "namedHints": [
-        "cold",
-        "morning",
-        "doomed",
-        "challengers"
-      ],
-      "opening": "Engineers warned that freezing temperatures could fail Challenger’s booster seals — and the January launch went ahead anyway. One technical failure mode and the temperature debate — not the full shuttle program story.",
-      "contentChars": 276
-    },
-    {
       "slug": "qr-johnstown-south-fork-club",
       "title": "The South Fork Club Dam: Privilege Above Johnstown",
       "excerpt": "A private resort club altered a dam above Johnstown — then largely escaped liability after the flood.",
@@ -5551,34 +5559,28 @@
       "contentChars": 251
     },
     {
-      "slug": "rhythm-club-fire-1940",
-      "title": "The Rhythm Club Fire: A Jim Crow Dance Hall Became a Trap",
-      "excerpt": "In Natchez in 1940, a packed dance hall fire killed about 200 people — mostly Black patrons blocked by barred windows. (Rhythm Club fire)",
-      "format": "full",
+      "slug": "qr-challenger-o-ring-cold",
+      "title": "The Cold Morning That Doomed Challenger’s O-Rings",
+      "excerpt": "Engineers warned that freezing temperatures could fail Challenger’s booster seals — and the January launch went ahead anyway. (Challenger O-ring cold)",
+      "format": "quick-read",
       "source": "published",
-      "eventYear": 1940,
-      "publishedAt": "2026-11-12T18:01:30.218Z",
-      "parentArticleSlug": null,
-      "editorialAngle": null,
-      "canonicalEventId": "rhythm-club-fire::1940",
-      "titleEventKey": "rhythm-club-fire-jim-crow-dance-hall-became::1940",
+      "eventYear": 1986,
+      "publishedAt": "2026-11-12T21:21:08.171Z",
+      "parentArticleSlug": "challenger-disaster-1986",
+      "editorialAngle": "O-ring cold-temperature failure as Challenger ignition cause",
+      "canonicalEventId": "challenger-oring-cold::1986",
+      "titleEventKey": "cold-morning-doomed-challenger-o-rings::1986",
       "places": [
-        "natchez",
-        "mississippi"
+        "florida"
       ],
       "namedHints": [
-        "rhythm",
-        "club",
-        "fire",
-        "jim",
-        "crow",
-        "dance",
-        "hall",
-        "became",
-        "trap"
+        "cold",
+        "morning",
+        "doomed",
+        "challengers"
       ],
-      "opening": "The Tragic Natchez Rhythm Club Fire of 1940 On the night of April 23, 1940, a devastating fire broke out at the Rhythm Club in Natchez, Mississippi, claiming the lives of approximately 200 people. This dance hall, a popular venue for Black patrons during the Jim Crow era, became a deadly trap due to its inadequate safety measures and segregation-era design.",
-      "contentChars": 10213
+      "opening": "On January 28, 1986, the Space Shuttle Challenger disintegrated just 73 seconds after launch, killing all seven crew members aboard. The disaster was attributed to the failure of O-rings in the solid rocket boosters, a critical component that was compromised by the unusually cold temperatures on the morning of the launch.",
+      "contentChars": 2319
     }
   ]
 }

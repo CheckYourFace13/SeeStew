@@ -1,0 +1,45 @@
+{
+  "slug": "qr-challenger-o-ring-cold",
+  "title": "The Cold Morning That Doomed Challenger’s O-Rings",
+  "excerpt": "Engineers warned that freezing temperatures could fail Challenger’s booster seals — and the January launch went ahead anyway. (Challenger O-ring cold)",
+  "seoTitle": "Challenger O-ring cold",
+  "seoDescription": "Engineers warned that freezing temperatures could fail Challenger’s booster seals — and the January launch went ahead anyway. (Challenger O-ring cold)",
+  "readMinutes": 2,
+  "category": "Weird America",
+  "format": "quick-read",
+  "eventYear": 1986,
+  "historicalEra": "postwar-cold-war",
+  "parentArticleSlug": "challenger-disaster-1986",
+  "editorialAngle": "O-ring cold-temperature failure as Challenger ignition cause",
+  "canonicalEventId": "challenger-oring-cold::1986",
+  "relatedArticleSlugs": [
+    "challenger-disaster-1986"
+  ],
+  "content": "On January 28, 1986, the Space Shuttle Challenger disintegrated just 73 seconds after launch, killing all seven crew members aboard. The disaster was attributed to the failure of O-rings in the solid rocket boosters, a critical component that was compromised by the unusually cold temperatures on the morning of the launch. The temperature at Cape Canaveral, Florida, had dropped to 36 degrees Fahrenheit, significantly lower than the 53 degrees that engineers deemed acceptable for safe operation of the O-rings [1].\n\nBefore the launch, engineers at Morton Thiokol, the contractor responsible for the solid rocket boosters, expressed grave concerns about the O-rings' performance in cold weather. They had conducted tests that demonstrated how low temperatures could lead to the O-rings losing their elasticity, thereby failing to create a proper seal. In a shocking turn of events, despite these warnings, NASA officials decided to proceed with the launch. This decision was influenced by a combination of factors, including the desire to maintain the launch schedule and the pressure from higher-ups within NASA to avoid further delays [2].\n\nThe O-rings were designed to prevent hot gases from escaping the boosters during launch. When the Challenger lifted off, the cold weather caused the O-rings to harden, preventing them from sealing properly. This failure allowed hot gases to escape, leading to the catastrophic explosion. The Rogers Commission, which investigated the disaster, highlighted the flawed decision-making process that prioritized schedule over safety [1]. \n\nOne particularly surprising detail that emerged from the investigation was the internal communication within Morton Thiokol. Engineers had initially recommended delaying the launch due to the cold weather, but after a conference call with NASA officials, the recommendation was reversed. This shift was influenced by a combination of corporate culture and the urgency to meet the launch schedule, which ultimately led to the tragic outcome [3].\n\nThe Challenger disaster serves as a stark reminder of the importance of safety in engineering and decision-making processes. The failure of the O-rings in cold temperatures was not just a technical oversight; it was a failure of communication and risk assessment that had devastating consequences.\n\n## Sources\n\n1. Rogers Commission Report — *NASA*. [Link](https://www.nasa.gov/history/rogersrep/genindex.htm)\n2. Challenger — *Smithsonian National Air and Space Museum*. [Link](https://airandspace.si.edu/)\n3. STS-51-L — *NASA*. [Link](https://www.nasa.gov/mission_pages/shuttle/shuttlemissions/archives/sts-51L.html)",
+  "references": [
+    {
+      "title": "Rogers Commission Report",
+      "publisher": "NASA",
+      "url": "https://www.nasa.gov/history/rogersrep/genindex.htm"
+    },
+    {
+      "title": "Challenger",
+      "publisher": "Smithsonian National Air and Space Museum",
+      "url": "https://airandspace.si.edu/"
+    },
+    {
+      "title": "STS-51-L",
+      "publisher": "NASA",
+      "url": "https://www.nasa.gov/mission_pages/shuttle/shuttlemissions/archives/sts-51L.html"
+    }
+  ],
+  "image": {
+    "card": "/stories/qr-challenger-o-ring-cold/card.jpg",
+    "hero": "/stories/qr-challenger-o-ring-cold/card.jpg",
+    "alt": "The Cold Morning That Doomed Challenger’s O-Rings",
+    "credit": "Library of Congress",
+    "sourcePageUrl": "https://www.loc.gov/item/usteledirec06843/"
+  },
+  "relatedVideoId": null,
+  "createdAt": "2026-11-12T21:21:08.171Z"
+}

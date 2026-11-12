@@ -341,11 +341,13 @@
       "imageSearchTerms": [
         "Challenger O-ring 1986"
       ],
-      "status": "pending",
+      "status": "published",
       "format": "quick-read",
       "eventYear": 1986,
       "historicalEra": "postwar-cold-war",
-      "canonicalEventId": "challenger-oring-cold::1986"
+      "canonicalEventId": "challenger-oring-cold::1986",
+      "publishedSlug": "qr-challenger-o-ring-cold",
+      "publishedAt": "2026-11-12T21:21:08.172Z"
     },
     {
       "id": "qr-johnstown-south-fork-club",
