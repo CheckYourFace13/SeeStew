@@ -6245,11 +6245,23 @@
       "imageSearchTerms": [
         "Keating Five Lincoln Savings"
       ],
-      "status": "pending",
+      "status": "editorial_review",
       "publishedSlug": null,
       "publishedAt": null,
       "eventYear": 1989,
-      "historicalEra": "postwar-cold-war"
+      "historicalEra": "postwar-cold-war",
+      "editorialHold": {
+        "action": "hold_for_review",
+        "at": "2026-11-13T17:35:52.633Z",
+        "blocks": [],
+        "holds": [
+          {
+            "code": "opening_not_specific",
+            "message": "Opening should include a concrete date, figure, or factual detail unique to this event."
+          }
+        ],
+        "conflictSlug": null
+      }
     },
     {
       "id": "leopold-loeb-1924",
@@ -6292,9 +6304,9 @@
       "imageSearchTerms": [
         "Leopold and Loeb trial 1924"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "leopold-loeb-1924",
+      "publishedAt": "2026-11-13T17:38:12.077Z",
       "eventYear": 1924,
       "historicalEra": "twenties-depression"
     },

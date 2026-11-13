@@ -107,6 +107,22 @@
       "holds": [],
       "heldAt": "2026-11-11T17:47:39.122Z",
       "status": "editorial_review"
+    },
+    {
+      "slug": "keating-five",
+      "title": "The Keating Five: Senators, a Thrift Collapse, and Soft Corruption",
+      "format": "full",
+      "action": "hold_for_review",
+      "queueId": "keating-five",
+      "blocks": [],
+      "holds": [
+        {
+          "code": "opening_not_specific",
+          "message": "Opening should include a concrete date, figure, or factual detail unique to this event."
+        }
+      ],
+      "heldAt": "2026-11-13T17:35:52.635Z",
+      "status": "editorial_review"
     }
   ]
 }

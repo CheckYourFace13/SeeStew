@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-12T21:21:08.293Z",
-  "publishedCount": 147,
-  "queueCount": 58,
+  "generatedAt": "2026-11-13T17:38:12.200Z",
+  "publishedCount": 148,
+  "queueCount": 56,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -2917,6 +2917,30 @@
       "contentChars": 1909
     },
     {
+      "slug": "qr-challenger-o-ring-cold",
+      "title": "The Cold Morning That Doomed Challenger’s O-Rings",
+      "excerpt": "Engineers warned that freezing temperatures could fail Challenger’s booster seals — and the January launch went ahead anyway. (Challenger O-ring cold)",
+      "format": "quick-read",
+      "source": "published",
+      "eventYear": 1986,
+      "publishedAt": "2026-11-12T21:21:08.171Z",
+      "parentArticleSlug": "challenger-disaster-1986",
+      "editorialAngle": "O-ring cold-temperature failure as Challenger ignition cause",
+      "canonicalEventId": "challenger-oring-cold::1986",
+      "titleEventKey": "cold-morning-doomed-challenger-o-rings::1986",
+      "places": [
+        "florida"
+      ],
+      "namedHints": [
+        "cold",
+        "morning",
+        "doomed",
+        "challengers"
+      ],
+      "opening": "On January 28, 1986, the Space Shuttle Challenger disintegrated just 73 seconds after launch, killing all seven crew members aboard. The disaster was attributed to the failure of O-rings in the solid rocket boosters, a critical component that was compromised by the unusually cold temperatures on the morning of the launch.",
+      "contentChars": 2319
+    },
+    {
       "slug": "qr-forrestal-zuni",
       "title": "The Zuni Rocket That Started the Forrestal Inferno",
       "excerpt": "A single misfired rocket on the USS Forrestal’s deck began the 1967 fire that killed 134 sailors. (Forrestal Zuni rocket)",
@@ -4086,58 +4110,6 @@
       ],
       "opening": "The Zoot Suit Riots: A Clash of Cultures in Wartime Los Angeles In June 1943, Los Angeles became the epicenter of racial violence as servicemen clashed with Mexican American youths, known for their distinctive zoot suits. Over several days, these sailors and soldiers roamed the streets, targeting young men dressed in flashy attire, resulting in a series of brutal assaults.",
       "contentChars": 10085
-    },
-    {
-      "slug": "keating-five",
-      "title": "The Keating Five: Senators, a Thrift Collapse, and Soft Corruption",
-      "excerpt": "Five U.S. senators intervened for Charles Keating’s failing S&L — and ethics investigators called it a national scandal.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1989,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "What Lincoln Savings did, how the meetings worked, the Senate ethics report, and the savings-and-loan crisis context.",
-      "canonicalEventId": "keating-five::1989",
-      "titleEventKey": "keating-five-senators-thrift-collapse-soft-corruption::1989",
-      "places": [],
-      "namedHints": [
-        "keating",
-        "five",
-        "senators",
-        "thrift",
-        "collapse",
-        "soft",
-        "corruption"
-      ],
-      "opening": "Five U.S. senators intervened for Charles Keating’s failing S&L — and ethics investigators called it a national scandal.",
-      "contentChars": 304
-    },
-    {
-      "slug": "leopold-loeb-1924",
-      "title": "Leopold and Loeb: The “Perfect Crime” Murder That Gripped 1920s America",
-      "excerpt": "Two wealthy Chicago students kidnapped and killed a boy to prove they could commit the perfect crime.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1924,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "The murder plan, the glasses clue, Darrow’s defense, and why the case obsessed the Jazz Age press.",
-      "canonicalEventId": "leopold-loeb::1924",
-      "titleEventKey": "leopold-loeb-perfect-crime-murder-gripped-1920s-america::1924",
-      "places": [
-        "chicago"
-      ],
-      "namedHints": [
-        "leopold",
-        "loeb",
-        "perfect",
-        "crime",
-        "murder",
-        "gripped",
-        "america"
-      ],
-      "opening": "Two wealthy Chicago students kidnapped and killed a boy to prove they could commit the perfect crime. The murder plan, the glasses clue, Darrow’s defense, and why the case obsessed the Jazz Age press.",
-      "contentChars": 263
     },
     {
       "slug": "massie-affair-1932",
@@ -5559,28 +5531,31 @@
       "contentChars": 251
     },
     {
-      "slug": "qr-challenger-o-ring-cold",
-      "title": "The Cold Morning That Doomed Challenger’s O-Rings",
-      "excerpt": "Engineers warned that freezing temperatures could fail Challenger’s booster seals — and the January launch went ahead anyway. (Challenger O-ring cold)",
-      "format": "quick-read",
+      "slug": "leopold-loeb-1924",
+      "title": "Leopold and Loeb: The “Perfect Crime” Murder That Gripped 1920s America",
+      "excerpt": "Two wealthy Chicago students kidnapped and killed a boy to prove they could commit the perfect crime. (Leopold and Loeb)",
+      "format": "full",
       "source": "published",
-      "eventYear": 1986,
-      "publishedAt": "2026-11-12T21:21:08.171Z",
-      "parentArticleSlug": "challenger-disaster-1986",
-      "editorialAngle": "O-ring cold-temperature failure as Challenger ignition cause",
-      "canonicalEventId": "challenger-oring-cold::1986",
-      "titleEventKey": "cold-morning-doomed-challenger-o-rings::1986",
+      "eventYear": 1924,
+      "publishedAt": "2026-11-13T17:37:27.041Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "leopold-loeb::1924",
+      "titleEventKey": "leopold-loeb-perfect-crime-murder-gripped-1920s-america::1924",
       "places": [
-        "florida"
+        "chicago"
       ],
       "namedHints": [
-        "cold",
-        "morning",
-        "doomed",
-        "challengers"
+        "leopold",
+        "loeb",
+        "perfect",
+        "crime",
+        "murder",
+        "gripped",
+        "america"
       ],
-      "opening": "On January 28, 1986, the Space Shuttle Challenger disintegrated just 73 seconds after launch, killing all seven crew members aboard. The disaster was attributed to the failure of O-rings in the solid rocket boosters, a critical component that was compromised by the unusually cold temperatures on the morning of the launch.",
-      "contentChars": 2319
+      "opening": "The Shocking Murder of Bobby Franks in Chicago, 1924 In May 1924, Chicago was rocked by the murder of 14-year-old Bobby Franks, a case that would soon be dubbed the \"crime of the century\" [2]. The perpetrators were Nathan Leopold and Richard Loeb, two affluent University of Chicago students who believed they could commit the perfect crime.",
+      "contentChars": 12115
     }
   ]
 }
