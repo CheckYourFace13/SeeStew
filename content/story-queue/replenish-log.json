@@ -165,6 +165,37 @@
       ],
       "fullPending": 43,
       "qrPending": 17
+    },
+    {
+      "at": "2026-11-13T13:47:23.860Z",
+      "dryRun": false,
+      "discover": true,
+      "seededFull": 0,
+      "seededQr": 0,
+      "discoveredFull": [],
+      "discoveredQr": [],
+      "rejected": [
+        {
+          "id": "suffrage-movement-19th-century",
+          "reasons": [
+            "overlap hold_for_review vs women-suffrage-movement: ambiguous_overlap"
+          ]
+        },
+        {
+          "id": "the-new-deal",
+          "reasons": [
+            "source URL probe failed: https://www.archives.gov/exhibits/american_originals/newdeal.html → HTTP 404; https://www.whitehousehistory.org/franklin-d-roosevelt-and-the-new-deal → HTTP 403; https://www.dol.gov/general/aboutdol/history/newdeal → HTTP 404"
+          ]
+        },
+        {
+          "id": "the-gi-bill",
+          "reasons": [
+            "source URL probe failed: https://www.va.gov/education/about-gi-bill-history.asp → HTTP 404; https://www.ed.gov/news/speeches/gi-bill-history → HTTP 403; https://www.archives.gov/exhibits/american_originals/gibill.html → HTTP 404; https://www.pewresearch.org/social-trends/2014/05/07/the-impact-of-the-gi-bill/ → HTTP 404"
+          ]
+        }
+      ],
+      "fullPending": 42,
+      "qrPending": 16
     }
   ]
 }
