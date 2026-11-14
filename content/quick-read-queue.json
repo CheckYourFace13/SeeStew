@@ -384,11 +384,13 @@
       "imageSearchTerms": [
         "Johnstown Flood South Fork dam"
       ],
-      "status": "pending",
+      "status": "published",
       "format": "quick-read",
       "eventYear": 1889,
       "historicalEra": "reconstruction-gilded-age",
-      "canonicalEventId": "johnstown-south-fork-club::1889"
+      "canonicalEventId": "johnstown-south-fork-club::1889",
+      "publishedSlug": "qr-johnstown-south-fork-club",
+      "publishedAt": "2026-11-14T18:58:24.944Z"
     },
     {
       "id": "qr-cocoanut-grove-exit",

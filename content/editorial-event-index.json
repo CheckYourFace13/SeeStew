@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-13T17:38:12.200Z",
-  "publishedCount": 148,
-  "queueCount": 56,
+  "generatedAt": "2026-11-14T18:58:25.067Z",
+  "publishedCount": 149,
+  "queueCount": 54,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -1833,6 +1833,33 @@
       ],
       "opening": "The Lake Peigneur Disaster: A Lake Swallowed Whole In 1980, an extraordinary event unfolded in Louisiana that would forever change the landscape of Lake Peigneur. This seemingly tranquil body of water became the epicenter of a disaster that involved a drilling rig, a salt mine, and an astonishing whirlpool that swallowed everything in its path.",
       "contentChars": 10761
+    },
+    {
+      "slug": "leopold-loeb-1924",
+      "title": "Leopold and Loeb: The “Perfect Crime” Murder That Gripped 1920s America",
+      "excerpt": "Two wealthy Chicago students kidnapped and killed a boy to prove they could commit the perfect crime. (Leopold and Loeb)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1924,
+      "publishedAt": "2026-11-13T17:37:27.041Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "leopold-loeb::1924",
+      "titleEventKey": "leopold-loeb-perfect-crime-murder-gripped-1920s-america::1924",
+      "places": [
+        "chicago"
+      ],
+      "namedHints": [
+        "leopold",
+        "loeb",
+        "perfect",
+        "crime",
+        "murder",
+        "gripped",
+        "america"
+      ],
+      "opening": "The Shocking Murder of Bobby Franks in Chicago, 1924 In May 1924, Chicago was rocked by the murder of 14-year-old Bobby Franks, a case that would soon be dubbed the \"crime of the century\" [2]. The perpetrators were Nathan Leopold and Richard Loeb, two affluent University of Chicago students who believed they could commit the perfect crime.",
+      "contentChars": 12115
     },
     {
       "slug": "lewis-and-clark-expedition",
@@ -4112,84 +4139,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "massie-affair-1932",
-      "title": "The Massie Affair: Race, Revenge, and a Famous Defense in Territorial Hawaii",
-      "excerpt": "After a Navy wife alleged assault in Honolulu, a kidnapping and killing ignited a racial and political crisis.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1932,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "The Ala Moana case, the murder of Joseph Kahahawai, Clarence Darrow’s defense, and territorial politics.",
-      "canonicalEventId": "massie-affair::1932",
-      "titleEventKey": "massie-affair-race-revenge-famous-defense-territorial-hawaii::1932",
-      "places": [
-        "hawaii"
-      ],
-      "namedHints": [
-        "massie",
-        "affair",
-        "race",
-        "revenge",
-        "famous",
-        "defense",
-        "territorial",
-        "hawaii"
-      ],
-      "opening": "After a Navy wife alleged assault in Honolulu, a kidnapping and killing ignited a racial and political crisis. The Ala Moana case, the murder of Joseph Kahahawai, Clarence Darrow’s defense, and territorial politics.",
-      "contentChars": 265
-    },
-    {
-      "slug": "des-drug-tragedy",
-      "title": "DES: The Prenatal Drug Later Linked to Cancers in Daughters",
-      "excerpt": "Doctors prescribed DES to prevent miscarriage — decades later, daughters developed rare cancers tied to the drug.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1971,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "Why DES was prescribed, the clear-cell adenocarcinoma link, FDA response, and litigation aftermath.",
-      "canonicalEventId": "des-drug-tragedy::1971",
-      "titleEventKey": "des-prenatal-drug-later-linked-cancers-daughters::1971",
-      "places": [],
-      "namedHints": [
-        "des",
-        "prenatal",
-        "drug",
-        "later",
-        "linked",
-        "cancers",
-        "daughters"
-      ],
-      "opening": "Doctors prescribed DES to prevent miscarriage — decades later, daughters developed rare cancers tied to the drug. Why DES was prescribed, the clear-cell adenocarcinoma link, FDA response, and litigation aftermath.",
-      "contentChars": 265
-    },
-    {
-      "slug": "dalkon-shield-scandal",
-      "title": "The Dalkon Shield: An IUD, Injuries, and a Corporate Liability Fight",
-      "excerpt": "A popular IUD left a trail of infections and lawsuits — becoming a landmark product-liability scandal.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1974,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "Design flaws alleged in court, FDA action, bankruptcy strategy, and what victims documented.",
-      "canonicalEventId": "dalkon-shield-scandal::1974",
-      "titleEventKey": "dalkon-shield-iud-injuries-corporate-liability-fight::1974",
-      "places": [],
-      "namedHints": [
-        "dalkon",
-        "shield",
-        "iud",
-        "injuries",
-        "corporate",
-        "liability",
-        "fight"
-      ],
-      "opening": "A popular IUD left a trail of infections and lawsuits — becoming a landmark product-liability scandal. Design flaws alleged in court, FDA action, bankruptcy strategy, and what victims documented.",
-      "contentChars": 255
-    },
-    {
       "slug": "rosenberg-trial-1951",
       "title": "The Rosenberg Trial: Espionage Convictions That Still Divide Historians",
       "excerpt": "Julius and Ethel Rosenberg were executed for atomic espionage — a case still argued over evidence and justice.",
@@ -5148,31 +5097,49 @@
       "contentChars": 231
     },
     {
-      "slug": "qr-johnstown-south-fork-club",
-      "title": "The South Fork Club Dam: Privilege Above Johnstown",
-      "excerpt": "A private resort club altered a dam above Johnstown — then largely escaped liability after the flood.",
-      "format": "quick-read",
-      "source": "queue-quick-read",
-      "eventYear": 1889,
+      "slug": "sacco-vanzetti-case",
+      "title": "The Sacco-Vanzetti Case: Justice or Injustice?",
+      "excerpt": "Explore the controversial trial of two Italian immigrants accused of murder, which sparked debates on immigration, race, and justice in America.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1920,
       "publishedAt": null,
-      "parentArticleSlug": "johnstown-flood-1889",
-      "editorialAngle": "South Fork Fishing and Hunting Club dam liability after Johnstown Flood",
-      "canonicalEventId": "johnstown-south-fork-club::1889",
-      "titleEventKey": "south-fork-club-dam-privilege-above-johnstown::1889",
-      "places": [
-        "johnstown"
-      ],
+      "parentArticleSlug": null,
+      "editorialAngle": "The case reflects the tensions of the 1920s, including xenophobia and the fight for civil rights.",
+      "canonicalEventId": "sacco-vanzetti-case::1920",
+      "titleEventKey": "sacco-vanzetti-case-justice-injustice::1920",
+      "places": [],
       "namedHints": [
-        "south",
-        "fork",
-        "club",
-        "dam",
-        "privilege",
-        "above",
-        "johnstown"
+        "sacco-vanzetti",
+        "case",
+        "justice",
+        "injustice"
       ],
-      "opening": "A private resort club altered a dam above Johnstown — then largely escaped liability after the flood. Club ownership, dam modifications, and liability outcome — not the full flood chronology.",
-      "contentChars": 246
+      "opening": "Explore the controversial trial of two Italian immigrants accused of murder, which sparked debates on immigration, race, and justice in America. The case reflects the tensions of the 1920s, including xenophobia and the fight for civil rights.",
+      "contentChars": 285
+    },
+    {
+      "slug": "the-civil-rights-movement",
+      "title": "The Civil Rights Movement: Struggle for Equality",
+      "excerpt": "Trace the events and key figures of the Civil Rights Movement that sought to end racial discrimination and secure equal rights.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1954,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "The movement was pivotal in shaping modern American society and legislation.",
+      "canonicalEventId": "the-civil-rights-movement::1954",
+      "titleEventKey": "civil-rights-movement-struggle-equality::1954",
+      "places": [],
+      "namedHints": [
+        "civil",
+        "rights",
+        "movement",
+        "struggle",
+        "equality"
+      ],
+      "opening": "Trace the events and key figures of the Civil Rights Movement that sought to end racial discrimination and secure equal rights. The movement was pivotal in shaping modern American society and legislation.",
+      "contentChars": 273
     },
     {
       "slug": "qr-cocoanut-grove-exit",
@@ -5531,31 +5498,32 @@
       "contentChars": 251
     },
     {
-      "slug": "leopold-loeb-1924",
-      "title": "Leopold and Loeb: The “Perfect Crime” Murder That Gripped 1920s America",
-      "excerpt": "Two wealthy Chicago students kidnapped and killed a boy to prove they could commit the perfect crime. (Leopold and Loeb)",
-      "format": "full",
+      "slug": "qr-johnstown-south-fork-club",
+      "title": "The South Fork Club Dam: Privilege Above Johnstown",
+      "excerpt": "A private resort club altered a dam above Johnstown — then largely escaped liability after the flood. (Johnstown Flood South Fork Club)",
+      "format": "quick-read",
       "source": "published",
-      "eventYear": 1924,
-      "publishedAt": "2026-11-13T17:37:27.041Z",
-      "parentArticleSlug": null,
-      "editorialAngle": null,
-      "canonicalEventId": "leopold-loeb::1924",
-      "titleEventKey": "leopold-loeb-perfect-crime-murder-gripped-1920s-america::1924",
+      "eventYear": 1889,
+      "publishedAt": "2026-11-14T18:58:24.943Z",
+      "parentArticleSlug": "johnstown-flood-1889",
+      "editorialAngle": "South Fork Fishing and Hunting Club dam liability after Johnstown Flood",
+      "canonicalEventId": "johnstown-south-fork-club::1889",
+      "titleEventKey": "south-fork-club-dam-privilege-above-johnstown::1889",
       "places": [
-        "chicago"
+        "johnstown",
+        "pennsylvania"
       ],
       "namedHints": [
-        "leopold",
-        "loeb",
-        "perfect",
-        "crime",
-        "murder",
-        "gripped",
-        "america"
+        "south",
+        "fork",
+        "club",
+        "dam",
+        "privilege",
+        "above",
+        "johnstown"
       ],
-      "opening": "The Shocking Murder of Bobby Franks in Chicago, 1924 In May 1924, Chicago was rocked by the murder of 14-year-old Bobby Franks, a case that would soon be dubbed the \"crime of the century\" [2]. The perpetrators were Nathan Leopold and Richard Loeb, two affluent University of Chicago students who believed they could commit the perfect crime.",
-      "contentChars": 12115
+      "opening": "On May 31, 1889, the South Fork Dam, owned by the South Fork Fishing and Hunting Club, failed catastrophically, unleashing a torrent of water that devastated the town of Johnstown, Pennsylvania. The flood claimed over 2,200 lives and destroyed more than 1,600 homes, making it one of the deadliest disasters in U.S.",
+      "contentChars": 2284
     }
   ]
 }
