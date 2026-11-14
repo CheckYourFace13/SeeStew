@@ -6351,11 +6351,24 @@
       "imageSearchTerms": [
         "Massie Affair Hawaii 1932"
       ],
-      "status": "pending",
+      "status": "editorial_review",
       "publishedSlug": null,
       "publishedAt": null,
       "eventYear": 1932,
-      "historicalEra": "twenties-depression"
+      "historicalEra": "twenties-depression",
+      "editorialHold": {
+        "action": "hold_for_review",
+        "at": "2026-11-14T16:29:26.911Z",
+        "blocks": [],
+        "holds": [
+          {
+            "reason": "missing_image",
+            "errors": [
+              "missing image.card"
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "des-drug-tragedy",
@@ -6398,11 +6411,23 @@
       "imageSearchTerms": [
         "DES diethylstilbestrol daughters"
       ],
-      "status": "pending",
+      "status": "editorial_review",
       "publishedSlug": null,
       "publishedAt": null,
       "eventYear": 1971,
-      "historicalEra": "postwar-cold-war"
+      "historicalEra": "postwar-cold-war",
+      "editorialHold": {
+        "action": "hold_for_review",
+        "at": "2026-11-14T16:30:17.154Z",
+        "blocks": [],
+        "holds": [
+          {
+            "code": "opening_not_specific",
+            "message": "Opening should include a concrete date, figure, or factual detail unique to this event."
+          }
+        ],
+        "conflictSlug": null
+      }
     },
     {
       "id": "dalkon-shield-scandal",
@@ -6445,11 +6470,23 @@
       "imageSearchTerms": [
         "Dalkon Shield IUD scandal"
       ],
-      "status": "pending",
+      "status": "editorial_review",
       "publishedSlug": null,
       "publishedAt": null,
       "eventYear": 1974,
-      "historicalEra": "postwar-cold-war"
+      "historicalEra": "postwar-cold-war",
+      "editorialHold": {
+        "action": "hold_for_review",
+        "at": "2026-11-14T16:31:08.798Z",
+        "blocks": [],
+        "holds": [
+          {
+            "code": "opening_not_specific",
+            "message": "Opening should include a concrete date, figure, or factual detail unique to this event."
+          }
+        ],
+        "conflictSlug": null
+      }
     },
     {
       "id": "rosenberg-trial-1951",

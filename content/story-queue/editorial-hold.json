@@ -123,6 +123,56 @@
       ],
       "heldAt": "2026-11-13T17:35:52.635Z",
       "status": "editorial_review"
+    },
+    {
+      "slug": "massie-affair-1932",
+      "title": "The Massie Affair: Race, Revenge, and a Famous Defense in Territorial Hawaii",
+      "format": "full",
+      "action": "hold_for_review",
+      "queueId": "massie-affair-1932",
+      "blocks": [],
+      "holds": [
+        {
+          "reason": "missing_image",
+          "errors": [
+            "missing image.card"
+          ]
+        }
+      ],
+      "heldAt": "2026-11-14T16:29:26.913Z",
+      "status": "editorial_review"
+    },
+    {
+      "slug": "des-drug-tragedy",
+      "title": "DES: The Prenatal Drug Later Linked to Cancers in Daughters",
+      "format": "full",
+      "action": "hold_for_review",
+      "queueId": "des-drug-tragedy",
+      "blocks": [],
+      "holds": [
+        {
+          "code": "opening_not_specific",
+          "message": "Opening should include a concrete date, figure, or factual detail unique to this event."
+        }
+      ],
+      "heldAt": "2026-11-14T16:30:17.155Z",
+      "status": "editorial_review"
+    },
+    {
+      "slug": "dalkon-shield-scandal",
+      "title": "The Dalkon Shield: An IUD, Injuries, and a Corporate Liability Fight",
+      "format": "full",
+      "action": "hold_for_review",
+      "queueId": "dalkon-shield-scandal",
+      "blocks": [],
+      "holds": [
+        {
+          "code": "opening_not_specific",
+          "message": "Opening should include a concrete date, figure, or factual detail unique to this event."
+        }
+      ],
+      "heldAt": "2026-11-14T16:31:08.799Z",
+      "status": "editorial_review"
     }
   ]
 }
