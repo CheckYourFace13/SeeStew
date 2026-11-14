@@ -196,6 +196,40 @@
       ],
       "fullPending": 42,
       "qrPending": 16
+    },
+    {
+      "at": "2026-11-14T12:52:17.278Z",
+      "dryRun": false,
+      "discover": true,
+      "seededFull": 0,
+      "seededQr": 0,
+      "discoveredFull": [
+        "sacco-vanzetti-case",
+        "the-civil-rights-movement"
+      ],
+      "discoveredQr": [],
+      "rejected": [
+        {
+          "id": "the-great-migration",
+          "reasons": [
+            "source URL probe failed: https://www.nps.gov/articles/great-migration.htm → HTTP 404; https://www.loc.gov/teachers/classroommaterials/presentationsandactivities/presentations/migration/great.html → HTTP 404; https://americanhistory.si.edu/exhibitions/great-migration → HTTP 403; https://www.nytimes.com/interactive/2020/06/05/us/great-migration.html → HTTP 404"
+          ]
+        },
+        {
+          "id": "the-19th-amendment",
+          "reasons": [
+            "overlap hold_for_review vs nineteenth-amendment-1920: ambiguous_overlap"
+          ]
+        },
+        {
+          "id": "the-new-deal",
+          "reasons": [
+            "source URL probe failed: https://www.archives.gov/exhibits/american_originals/newdeal.html → HTTP 404; https://www.loc.gov/exhibits/american-masters/new-deal.html → HTTP 429; https://www.nps.gov/articles/new-deal.htm → HTTP 404; https://www.historians.org/publications-and-directories/perspectives-on-history/december-2013/the-new-deal-and-its-legacy → HTTP 403"
+          ]
+        }
+      ],
+      "fullPending": 42,
+      "qrPending": 16
     }
   ]
 }

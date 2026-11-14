@@ -8183,6 +8183,97 @@
       "status": "pending",
       "publishedSlug": null,
       "publishedAt": null
+    },
+    {
+      "id": "sacco-vanzetti-case",
+      "title": "The Sacco-Vanzetti Case: Justice or Injustice?",
+      "hook": "Explore the controversial trial of two Italian immigrants accused of murder, which sparked debates on immigration, race, and justice in America.",
+      "category": "Legal History",
+      "angle": "The case reflects the tensions of the 1920s, including xenophobia and the fight for civil rights.",
+      "keywords": [
+        "Sacco",
+        "Vanzetti",
+        "trial",
+        "immigration",
+        "injustice"
+      ],
+      "imageSearchTerms": [
+        "Sacco Vanzetti trial",
+        "1920s courtroom",
+        "protest against Sacco Vanzetti"
+      ],
+      "eventYear": 1920,
+      "historicalEra": "Roaring Twenties",
+      "requiredSources": [
+        {
+          "title": "The Sacco-Vanzetti Case",
+          "publisher": "American Bar Association",
+          "url": "https://www.americanbar.org/groups/criminal_justice/publications/criminal-justice-section-record/2017/winter/sacco-vanzetti-case/"
+        },
+        {
+          "title": "Sacco and Vanzetti: A Documentary Reader",
+          "publisher": "University of Massachusetts Press",
+          "url": "https://www.umass.edu/umpress/title/sacco-and-vanzetti"
+        },
+        {
+          "title": "Sacco and Vanzetti Trial",
+          "publisher": "Massachusetts Historical Society",
+          "url": "https://www.masshist.org/collection-guides/view/fa0290"
+        },
+        {
+          "title": "Sacco and Vanzetti: The Case Revisited",
+          "publisher": "Harvard Law Review",
+          "url": "https://www.jstor.org/stable/1340585"
+        }
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "the-civil-rights-movement",
+      "title": "The Civil Rights Movement: Struggle for Equality",
+      "hook": "Trace the events and key figures of the Civil Rights Movement that sought to end racial discrimination and secure equal rights.",
+      "category": "Social Justice",
+      "angle": "The movement was pivotal in shaping modern American society and legislation.",
+      "keywords": [
+        "Civil Rights Movement",
+        "Martin Luther King Jr.",
+        "Rosa Parks",
+        "equal rights"
+      ],
+      "imageSearchTerms": [
+        "Civil Rights protests",
+        "Martin Luther King Jr. speech",
+        "Rosa Parks bus"
+      ],
+      "eventYear": 1954,
+      "historicalEra": "Post-War America",
+      "requiredSources": [
+        {
+          "title": "Civil Rights Movement",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/subjects/civilrights/index.htm"
+        },
+        {
+          "title": "The Civil Rights Movement: A Timeline",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/exhibits/civilrights/civilrights.html"
+        },
+        {
+          "title": "Civil Rights Movement Overview",
+          "publisher": "Smithsonian Institution",
+          "url": "https://www.smithsonianmag.com/history/the-civil-rights-movement-180960485/"
+        },
+        {
+          "title": "Civil Rights Movement: A Historical Overview",
+          "publisher": "American Historical Association",
+          "url": "https://www.historians.org/publications-and-directories/perspectives-on-history/september-2013/the-civil-rights-movement"
+        }
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
     }
   ]
 }
