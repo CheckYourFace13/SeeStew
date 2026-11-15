@@ -6529,9 +6529,9 @@
       "imageSearchTerms": [
         "Rosenberg trial espionage 1951"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "rosenberg-trial-1951",
+      "publishedAt": "2026-11-15T16:53:59.524Z",
       "eventYear": 1951,
       "historicalEra": "postwar-cold-war"
     },

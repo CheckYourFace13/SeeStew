@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-14T18:58:25.067Z",
-  "publishedCount": 149,
-  "queueCount": 54,
+  "generatedAt": "2026-11-15T16:53:59.643Z",
+  "publishedCount": 150,
+  "queueCount": 56,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -3015,6 +3015,34 @@
       "contentChars": 2342
     },
     {
+      "slug": "qr-johnstown-south-fork-club",
+      "title": "The South Fork Club Dam: Privilege Above Johnstown",
+      "excerpt": "A private resort club altered a dam above Johnstown — then largely escaped liability after the flood. (Johnstown Flood South Fork Club)",
+      "format": "quick-read",
+      "source": "published",
+      "eventYear": 1889,
+      "publishedAt": "2026-11-14T18:58:24.943Z",
+      "parentArticleSlug": "johnstown-flood-1889",
+      "editorialAngle": "South Fork Fishing and Hunting Club dam liability after Johnstown Flood",
+      "canonicalEventId": "johnstown-south-fork-club::1889",
+      "titleEventKey": "south-fork-club-dam-privilege-above-johnstown::1889",
+      "places": [
+        "johnstown",
+        "pennsylvania"
+      ],
+      "namedHints": [
+        "south",
+        "fork",
+        "club",
+        "dam",
+        "privilege",
+        "above",
+        "johnstown"
+      ],
+      "opening": "On May 31, 1889, the South Fork Dam, owned by the South Fork Fishing and Hunting Club, failed catastrophically, unleashing a torrent of water that devastated the town of Johnstown, Pennsylvania. The flood claimed over 2,200 lives and destroyed more than 1,600 homes, making it one of the deadliest disasters in U.S.",
+      "contentChars": 2284
+    },
+    {
       "slug": "qr-peshtigo-same-day-chicago",
       "title": "Peshtigo Burned the Same Day as Chicago — and Almost Nobody Noticed",
       "excerpt": "America’s deadliest wildfire hit Wisconsin the same day as the Great Chicago Fire — and was overshadowed for generations. (Peshtigo fire same day Chicago)",
@@ -4139,31 +4167,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "rosenberg-trial-1951",
-      "title": "The Rosenberg Trial: Espionage Convictions That Still Divide Historians",
-      "excerpt": "Julius and Ethel Rosenberg were executed for atomic espionage — a case still argued over evidence and justice.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1951,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "What the government proved, Venona context, the trial atmosphere, and why debates persist.",
-      "canonicalEventId": "rosenberg-trial::1951",
-      "titleEventKey": "rosenberg-trial-espionage-convictions-still-divide-historians::1951",
-      "places": [],
-      "namedHints": [
-        "rosenberg",
-        "trial",
-        "espionage",
-        "convictions",
-        "still",
-        "divide",
-        "historians"
-      ],
-      "opening": "Julius and Ethel Rosenberg were executed for atomic espionage — a case still argued over evidence and justice. What the government proved, Venona context, the trial atmosphere, and why debates persist.",
-      "contentChars": 263
-    },
-    {
       "slug": "shays-rebellion-1786",
       "title": "Shays’ Rebellion: When Farmers Closed the Courts of Massachusetts",
       "excerpt": "Armed farmers shut down courthouses in 1786–87 — a crisis that pushed the Constitutional Convention.",
@@ -5142,6 +5145,74 @@
       "contentChars": 273
     },
     {
+      "slug": "the-great-migration",
+      "title": "The Great Migration: A Movement of Hope and Change",
+      "excerpt": "The Great Migration reshaped the demographics and culture of urban America in the 20th century.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1916,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "Analyzing the causes and effects of the migration of African Americans from the rural South to urban centers.",
+      "canonicalEventId": "the-great-migration::1916",
+      "titleEventKey": "great-migration-movement-hope-change::1916",
+      "places": [],
+      "namedHints": [
+        "great",
+        "migration",
+        "movement",
+        "hope",
+        "change"
+      ],
+      "opening": "The Great Migration reshaped the demographics and culture of urban America in the 20th century. Analyzing the causes and effects of the migration of African Americans from the rural South to urban centers.",
+      "contentChars": 272
+    },
+    {
+      "slug": "the-woodstock-festival",
+      "title": "The Woodstock Festival: A Cultural Revolution",
+      "excerpt": "The Woodstock Festival of 1969 became a symbol of the counterculture movement and a defining moment in American music history.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1969,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "Exploring how Woodstock represented the ideals of peace, love, and music during a turbulent era.",
+      "canonicalEventId": "the-woodstock-festival::1969",
+      "titleEventKey": "woodstock-festival-cultural-revolution::1969",
+      "places": [],
+      "namedHints": [
+        "woodstock",
+        "festival",
+        "cultural",
+        "revolution"
+      ],
+      "opening": "The Woodstock Festival of 1969 became a symbol of the counterculture movement and a defining moment in American music history. Exploring how Woodstock represented the ideals of peace, love, and music during a turbulent era.",
+      "contentChars": 269
+    },
+    {
+      "slug": "the-new-deal",
+      "title": "The New Deal: A Response to the Great Depression",
+      "excerpt": "The New Deal was a series of programs and policies designed to alleviate the economic hardships of the Great Depression.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1933,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "Analyzing the effectiveness and legacy of the New Deal in reshaping American society.",
+      "canonicalEventId": "the-new-deal::1933",
+      "titleEventKey": "new-deal-response-great-depression::1933",
+      "places": [],
+      "namedHints": [
+        "new",
+        "deal",
+        "response",
+        "great",
+        "depression"
+      ],
+      "opening": "The New Deal was a series of programs and policies designed to alleviate the economic hardships of the Great Depression. Analyzing the effectiveness and legacy of the New Deal in reshaping American society.",
+      "contentChars": 252
+    },
+    {
       "slug": "qr-cocoanut-grove-exit",
       "title": "Why Cocoanut Grove’s Exits Failed When Fire Hit",
       "excerpt": "A revolving door and blocked exits turned a nightclub blaze into America’s deadliest club fire.",
@@ -5498,32 +5569,31 @@
       "contentChars": 251
     },
     {
-      "slug": "qr-johnstown-south-fork-club",
-      "title": "The South Fork Club Dam: Privilege Above Johnstown",
-      "excerpt": "A private resort club altered a dam above Johnstown — then largely escaped liability after the flood. (Johnstown Flood South Fork Club)",
-      "format": "quick-read",
+      "slug": "rosenberg-trial-1951",
+      "title": "The Rosenberg Trial: Espionage Convictions That Still Divide Historians",
+      "excerpt": "Julius and Ethel Rosenberg were executed for atomic espionage — a case still argued over evidence and justice. (Rosenberg trial)",
+      "format": "full",
       "source": "published",
-      "eventYear": 1889,
-      "publishedAt": "2026-11-14T18:58:24.943Z",
-      "parentArticleSlug": "johnstown-flood-1889",
-      "editorialAngle": "South Fork Fishing and Hunting Club dam liability after Johnstown Flood",
-      "canonicalEventId": "johnstown-south-fork-club::1889",
-      "titleEventKey": "south-fork-club-dam-privilege-above-johnstown::1889",
+      "eventYear": 1951,
+      "publishedAt": "2026-11-15T16:53:08.958Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "rosenberg-trial::1951",
+      "titleEventKey": "rosenberg-trial-espionage-convictions-still-divide-historians::1951",
       "places": [
-        "johnstown",
-        "pennsylvania"
+        "new york"
       ],
       "namedHints": [
-        "south",
-        "fork",
-        "club",
-        "dam",
-        "privilege",
-        "above",
-        "johnstown"
+        "rosenberg",
+        "trial",
+        "espionage",
+        "convictions",
+        "still",
+        "divide",
+        "historians"
       ],
-      "opening": "On May 31, 1889, the South Fork Dam, owned by the South Fork Fishing and Hunting Club, failed catastrophically, unleashing a torrent of water that devastated the town of Johnstown, Pennsylvania. The flood claimed over 2,200 lives and destroyed more than 1,600 homes, making it one of the deadliest disasters in U.S.",
-      "contentChars": 2284
+      "opening": "The Rosenberg Trial: A Case of Atomic Espionage in 1950s America In the early 1950s, Julius and Ethel Rosenberg were at the center of one of the most controversial espionage trials in American history. Accused of passing atomic secrets to the Soviet Union, the couple was convicted in 1951 and executed in 1953 [5].",
+      "contentChars": 10283
     }
   ]
 }
