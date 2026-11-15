@@ -230,6 +230,41 @@
       ],
       "fullPending": 42,
       "qrPending": 16
+    },
+    {
+      "at": "2026-11-15T13:19:04.226Z",
+      "dryRun": false,
+      "discover": true,
+      "seededFull": 0,
+      "seededQr": 0,
+      "discoveredFull": [
+        "the-great-migration",
+        "the-woodstock-festival",
+        "the-new-deal"
+      ],
+      "discoveredQr": [],
+      "rejected": [
+        {
+          "id": "sacco-vanzetti-trial",
+          "reasons": [
+            "id already in queue: sacco-vanzetti-trial"
+          ]
+        },
+        {
+          "id": "the-19th-amendment",
+          "reasons": [
+            "source URL probe failed: https://www.archives.gov/exhibits/american_originals/nineteenth.html → HTTP 404; https://www.loc.gov/rr/program/bib/suffrage/19th.html → HTTP 429; https://www.pbs.org/wgbh/americanexperience/features/women-suffrage/ → HTTP 404"
+          ]
+        },
+        {
+          "id": "the-oj-simpson-trial",
+          "reasons": [
+            "source URL probe failed: https://www.cnn.com/2016/06/17/us/oj-simpson-trial-timeline/index.html → HTTP 404; https://harvardlawreview.org/2016/03/the-oj-simpson-trial-a-case-study/ → HTTP 404; https://www.pbs.org/wgbh/frontline/article/the-impact-of-the-oj-simpson-trial-on-american-culture/ → HTTP 404"
+          ]
+        }
+      ],
+      "fullPending": 42,
+      "qrPending": 15
     }
   ]
 }

@@ -8311,6 +8311,141 @@
       "status": "pending",
       "publishedSlug": null,
       "publishedAt": null
+    },
+    {
+      "id": "the-great-migration",
+      "title": "The Great Migration: A Movement of Hope and Change",
+      "hook": "The Great Migration reshaped the demographics and culture of urban America in the 20th century.",
+      "category": "Social History",
+      "angle": "Analyzing the causes and effects of the migration of African Americans from the rural South to urban centers.",
+      "keywords": [
+        "Great Migration",
+        "African American history",
+        "urbanization",
+        "20th century"
+      ],
+      "imageSearchTerms": [
+        "Great Migration",
+        "African Americans",
+        "urban life"
+      ],
+      "eventYear": 1916,
+      "historicalEra": "Progressive Era",
+      "requiredSources": [
+        {
+          "title": "The Great Migration",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/articles/great-migration.htm"
+        },
+        {
+          "title": "The Great Migration: A Historical Overview",
+          "publisher": "U.S. History.org",
+          "url": "https://www.ushistory.org/us/54.asp"
+        },
+        {
+          "title": "The Great Migration: A Century of Change",
+          "publisher": "The Library of Congress",
+          "url": "https://www.loc.gov/exhibits/americanoriginals/greatmig.html"
+        },
+        {
+          "title": "The Great Migration: A Historical Overview",
+          "publisher": "PBS",
+          "url": "https://www.pbs.org/wnet/jimcrow/stories_events_greatmigration.html"
+        }
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "the-woodstock-festival",
+      "title": "The Woodstock Festival: A Cultural Revolution",
+      "hook": "The Woodstock Festival of 1969 became a symbol of the counterculture movement and a defining moment in American music history.",
+      "category": "Cultural History",
+      "angle": "Exploring how Woodstock represented the ideals of peace, love, and music during a turbulent era.",
+      "keywords": [
+        "Woodstock",
+        "counterculture",
+        "music festival",
+        "1960s"
+      ],
+      "imageSearchTerms": [
+        "Woodstock Festival",
+        "1969",
+        "counterculture"
+      ],
+      "eventYear": 1969,
+      "historicalEra": "1960s",
+      "requiredSources": [
+        {
+          "title": "Woodstock: 50 Years of Peace & Music",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/articles/woodstock-50-years-of-peace-and-music.htm"
+        },
+        {
+          "title": "The Woodstock Festival: A Historical Overview",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/the-woodstock-festival-50-years-later-180972928/"
+        },
+        {
+          "title": "Woodstock 1969: A Cultural Milestone",
+          "publisher": "PBS",
+          "url": "https://www.pbs.org/wgbh/americanexperience/features/woodstock-1969-cultural-milestone/"
+        },
+        {
+          "title": "Woodstock: The Event That Changed Music",
+          "publisher": "Rolling Stone",
+          "url": "https://www.rollingstone.com/music/music-news/woodstock-1969-anniversary-849939/"
+        }
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "the-new-deal",
+      "title": "The New Deal: A Response to the Great Depression",
+      "hook": "The New Deal was a series of programs and policies designed to alleviate the economic hardships of the Great Depression.",
+      "category": "Economic History",
+      "angle": "Analyzing the effectiveness and legacy of the New Deal in reshaping American society.",
+      "keywords": [
+        "New Deal",
+        "Great Depression",
+        "FDR",
+        "economic policy"
+      ],
+      "imageSearchTerms": [
+        "New Deal",
+        "FDR",
+        "1930s America"
+      ],
+      "eventYear": 1933,
+      "historicalEra": "Great Depression",
+      "requiredSources": [
+        {
+          "title": "The New Deal: A 21st Century Perspective",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/research/new-deal"
+        },
+        {
+          "title": "The New Deal: A Historical Overview",
+          "publisher": "U.S. History.org",
+          "url": "https://www.ushistory.org/us/48.asp"
+        },
+        {
+          "title": "The New Deal: A New Deal for the American People",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/exhibits/americanoriginals/newdeal.html"
+        },
+        {
+          "title": "Franklin D. Roosevelt and the New Deal",
+          "publisher": "PBS",
+          "url": "https://www.pbs.org/wgbh/americanexperience/features/roosevelt-new-deal/"
+        }
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
     }
   ]
 }
