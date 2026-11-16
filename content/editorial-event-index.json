@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-15T16:53:59.643Z",
-  "publishedCount": 150,
-  "queueCount": 56,
+  "generatedAt": "2026-11-16T20:11:07.857Z",
+  "publishedCount": 151,
+  "queueCount": 55,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -3179,6 +3179,33 @@
       "contentChars": 10213
     },
     {
+      "slug": "rosenberg-trial-1951",
+      "title": "The Rosenberg Trial: Espionage Convictions That Still Divide Historians",
+      "excerpt": "Julius and Ethel Rosenberg were executed for atomic espionage — a case still argued over evidence and justice. (Rosenberg trial)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1951,
+      "publishedAt": "2026-11-15T16:53:08.958Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "rosenberg-trial::1951",
+      "titleEventKey": "rosenberg-trial-espionage-convictions-still-divide-historians::1951",
+      "places": [
+        "new york"
+      ],
+      "namedHints": [
+        "rosenberg",
+        "trial",
+        "espionage",
+        "convictions",
+        "still",
+        "divide",
+        "historians"
+      ],
+      "opening": "The Rosenberg Trial: A Case of Atomic Espionage in 1950s America In the early 1950s, Julius and Ethel Rosenberg were at the center of one of the most controversial espionage trials in American history. Accused of passing atomic secrets to the Soviet Union, the couple was convicted in 1951 and executed in 1953 [5].",
+      "contentChars": 10283
+    },
+    {
       "slug": "roswell-incident-1947",
       "title": "The Roswell Incident of 1947: Balloon Debris, a Retracted Story, and a UFO Legend",
       "excerpt": "The Army first said it recovered a “flying disc.” Then it said weather balloon. Decades of secrecy (and Project Mogul) fueled a myth. (Roswell incident 1947)",
@@ -4165,32 +4192,6 @@
       ],
       "opening": "The Zoot Suit Riots: A Clash of Cultures in Wartime Los Angeles In June 1943, Los Angeles became the epicenter of racial violence as servicemen clashed with Mexican American youths, known for their distinctive zoot suits. Over several days, these sailors and soldiers roamed the streets, targeting young men dressed in flashy attire, resulting in a series of brutal assaults.",
       "contentChars": 10085
-    },
-    {
-      "slug": "shays-rebellion-1786",
-      "title": "Shays’ Rebellion: When Farmers Closed the Courts of Massachusetts",
-      "excerpt": "Armed farmers shut down courthouses in 1786–87 — a crisis that pushed the Constitutional Convention.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1786,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "Why veterans and debtors rose, which courts were forced closed, how the state militia responded, and what the rebellion meant for the Constitution.",
-      "canonicalEventId": "shays-rebellion::1786",
-      "titleEventKey": "shays-rebellion-farmers-closed-courts-massachusetts::1786",
-      "places": [
-        "massachusetts"
-      ],
-      "namedHints": [
-        "shays",
-        "rebellion",
-        "farmers",
-        "closed",
-        "courts",
-        "massachusetts"
-      ],
-      "opening": "Armed farmers shut down courthouses in 1786–87 — a crisis that pushed the Constitutional Convention. Why veterans and debtors rose, which courts were forced closed, how the state militia responded, and what the rebellion meant for the Constitution.",
-      "contentChars": 316
     },
     {
       "slug": "alien-and-sedition-acts-1798",
@@ -5569,31 +5570,30 @@
       "contentChars": 251
     },
     {
-      "slug": "rosenberg-trial-1951",
-      "title": "The Rosenberg Trial: Espionage Convictions That Still Divide Historians",
-      "excerpt": "Julius and Ethel Rosenberg were executed for atomic espionage — a case still argued over evidence and justice. (Rosenberg trial)",
+      "slug": "shays-rebellion-1786",
+      "title": "Shays’ Rebellion: When Farmers Closed the Courts of Massachusetts",
+      "excerpt": "Armed farmers shut down courthouses in 1786–87 — a crisis that pushed the Constitutional Convention. (Shays Rebellion)",
       "format": "full",
       "source": "published",
-      "eventYear": 1951,
-      "publishedAt": "2026-11-15T16:53:08.958Z",
+      "eventYear": 1786,
+      "publishedAt": "2026-11-16T20:09:31.627Z",
       "parentArticleSlug": null,
       "editorialAngle": null,
-      "canonicalEventId": "rosenberg-trial::1951",
-      "titleEventKey": "rosenberg-trial-espionage-convictions-still-divide-historians::1951",
+      "canonicalEventId": "shays-rebellion::1786",
+      "titleEventKey": "shays-rebellion-farmers-closed-courts-massachusetts::1786",
       "places": [
-        "new york"
+        "massachusetts"
       ],
       "namedHints": [
-        "rosenberg",
-        "trial",
-        "espionage",
-        "convictions",
-        "still",
-        "divide",
-        "historians"
+        "shays",
+        "rebellion",
+        "farmers",
+        "closed",
+        "courts",
+        "massachusetts"
       ],
-      "opening": "The Rosenberg Trial: A Case of Atomic Espionage in 1950s America In the early 1950s, Julius and Ethel Rosenberg were at the center of one of the most controversial espionage trials in American history. Accused of passing atomic secrets to the Soviet Union, the couple was convicted in 1951 and executed in 1953 [5].",
-      "contentChars": 10283
+      "opening": "Armed Farmers Shut Down Courts in Massachusetts (1786–87) In the late 1780s, a group of armed farmers in Massachusetts, led by Revolutionary War veteran Daniel Shays, took drastic measures to protest economic injustices. From 1786 to 1787, these farmers closed courthouses across the state, effectively halting legal proceedings and drawing national attention to their plight.",
+      "contentChars": 11695
     }
   ]
 }

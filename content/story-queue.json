@@ -6576,9 +6576,9 @@
       "imageSearchTerms": [
         "Shays Rebellion Massachusetts 1787"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "shays-rebellion-1786",
+      "publishedAt": "2026-11-16T20:11:07.729Z",
       "eventYear": 1786,
       "historicalEra": "revolution-early-republic"
     },
