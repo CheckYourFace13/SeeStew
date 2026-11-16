@@ -265,6 +265,43 @@
       ],
       "fullPending": 42,
       "qrPending": 15
+    },
+    {
+      "at": "2026-11-16T14:32:12.587Z",
+      "dryRun": false,
+      "discover": true,
+      "seededFull": 0,
+      "seededQr": 0,
+      "discoveredFull": [],
+      "discoveredQr": [],
+      "rejected": [
+        {
+          "id": "sacco-vanzetti-case",
+          "reasons": [
+            "id already in queue: sacco-vanzetti-case"
+          ]
+        },
+        {
+          "id": "the-1936-olympics",
+          "reasons": [
+            "source URL probe failed: https://encyclopedia.ushmm.org/content/en/article/the-1936-berlin-olympics → HTTP 404; https://www.pbs.org/wnet/americanmasters/the-politics-of-the-1936-olympics/ → HTTP 404; https://www.nps.gov/articles/jesse-owens-and-the-1936-olympics.htm → HTTP 404; https://www.history.com/topics/sports/1936-olympics → HTTP 404"
+          ]
+        },
+        {
+          "id": "the-great-depression",
+          "reasons": [
+            "source URL probe failed: https://www.loc.gov/exhibits/great-depression/great-depression-timeline.html → HTTP 404; https://www.archives.gov/exhibits/american_originals/greatdepression.html → HTTP 404; https://www.nps.gov/articles/new-deal-and-the-great-depression.htm → HTTP 404"
+          ]
+        },
+        {
+          "id": "the-19th-amendment",
+          "reasons": [
+            "overlap hold_for_review vs nineteenth-amendment-1920: ambiguous_overlap"
+          ]
+        }
+      ],
+      "fullPending": 41,
+      "qrPending": 15
     }
   ]
 }
