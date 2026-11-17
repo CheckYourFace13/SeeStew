@@ -427,11 +427,13 @@
       "imageSearchTerms": [
         "Cocoanut Grove fire exits 1942"
       ],
-      "status": "pending",
+      "status": "published",
       "format": "quick-read",
       "eventYear": 1942,
       "historicalEra": "world-war-ii",
-      "canonicalEventId": "cocoanut-grove-exits::1942"
+      "canonicalEventId": "cocoanut-grove-exits::1942",
+      "publishedSlug": "qr-cocoanut-grove-exit",
+      "publishedAt": "2026-11-17T22:04:27.829Z"
     },
     {
       "id": "qr-apollo1-hatch",

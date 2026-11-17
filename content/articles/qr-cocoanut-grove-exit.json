@@ -1,0 +1,45 @@
+{
+  "slug": "qr-cocoanut-grove-exit",
+  "title": "Why Cocoanut Grove’s Exits Failed When Fire Hit",
+  "excerpt": "A revolving door and blocked exits turned a nightclub blaze into America’s deadliest club fire. (Cocoanut Grove revolving door)",
+  "seoTitle": "Cocoanut Grove revolving door",
+  "seoDescription": "A revolving door and blocked exits turned a nightclub blaze into America’s deadliest club fire. (Cocoanut Grove revolving door)",
+  "readMinutes": 2,
+  "category": "Weird America",
+  "format": "quick-read",
+  "eventYear": 1942,
+  "historicalEra": "world-war-ii",
+  "parentArticleSlug": "cocoanut-grove-fire-1942",
+  "editorialAngle": "Revolving door and blocked exits at Cocoanut Grove fire",
+  "canonicalEventId": "cocoanut-grove-exits::1942",
+  "relatedArticleSlugs": [
+    "cocoanut-grove-fire-1942"
+  ],
+  "content": "On the night of November 28, 1942, the Cocoanut Grove nightclub in Boston became the site of the deadliest nightclub fire in U.S. history, claiming 492 lives. The tragedy was exacerbated by a series of design flaws in the club’s exits, which turned what should have been a safe egress into a deadly trap. Among these flaws was a revolving door that not only slowed down the evacuation but also became jammed, preventing many patrons from escaping the inferno [1].\n\nThe Cocoanut Grove was a popular venue, known for its lavish decor and vibrant atmosphere. However, its design did not prioritize safety. The nightclub featured a single revolving door as its main entrance and exit. When the fire broke out, the door became a bottleneck, as patrons rushed to flee the flames. The revolving door, designed for aesthetic appeal and crowd control, was ill-suited for emergency situations. It could not accommodate the rapid influx of people trying to escape, leading to a tragic delay in evacuation [2].\n\nIn addition to the revolving door, many of the club's exits were either locked or blocked. Some doors were secured with chains, while others were obstructed by furniture or decorations. This lack of accessible exits was a critical factor in the high casualty rate. According to reports, only a few of the exits were usable, and even those were not clearly marked, contributing to confusion and panic among the crowd as they sought a way out. The fire spread rapidly, fueled by highly flammable materials like the club's decor, making the situation even more dire [3].\n\nThe Cocoanut Grove fire prompted significant changes in building codes and fire safety regulations across the United States. In the aftermath, authorities recognized the need for stricter egress requirements, including the installation of panic hardware on doors and ensuring that exits were clearly marked and unobstructed. These changes aimed to prevent similar tragedies in the future and highlighted the importance of designing public spaces with safety as a priority [1].\n\nThe Cocoanut Grove disaster serves as a stark reminder of the consequences of neglecting safety in public venues. The combination of a revolving door and blocked exits turned a night of entertainment into a horrific tragedy, underscoring the need for effective fire safety measures in all public spaces [2].\n\n## Sources\n\n1. Cocoanut Grove Fire — *National Fire Protection Association*. [Link](https://www.nfpa.org/)\n2. Cocoanut Grove — *Library of Congress*. [Link](https://www.loc.gov/)\n3. Boston fire history — *National Archives*. [Link](https://www.archives.gov/)",
+  "references": [
+    {
+      "title": "Cocoanut Grove Fire",
+      "publisher": "National Fire Protection Association",
+      "url": "https://www.nfpa.org/"
+    },
+    {
+      "title": "Cocoanut Grove",
+      "publisher": "Library of Congress",
+      "url": "https://www.loc.gov/"
+    },
+    {
+      "title": "Boston fire history",
+      "publisher": "National Archives",
+      "url": "https://www.archives.gov/"
+    }
+  ],
+  "image": {
+    "card": "/stories/qr-cocoanut-grove-exit/card.jpg",
+    "hero": "/stories/qr-cocoanut-grove-exit/card.jpg",
+    "alt": "Why Cocoanut Grove’s Exits Failed When Fire Hit",
+    "credit": "Library of Congress",
+    "sourcePageUrl": "https://www.loc.gov/item/sf83008014/resource/gdcmassbookdig.hollywood31fawc-1942-07"
+  },
+  "relatedVideoId": null,
+  "createdAt": "2026-11-17T22:04:27.828Z"
+}

@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-17T19:01:54.915Z",
-  "publishedCount": 152,
-  "queueCount": 56,
+  "generatedAt": "2026-11-17T22:04:27.918Z",
+  "publishedCount": 153,
+  "queueCount": 55,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -30,6 +30,34 @@
       ],
       "opening": "The NATO Exercise That Nearly Triggered Nuclear War: Able Archer 83 In November 1983, a NATO command exercise known as Able Archer 83 took place, simulating a nuclear conflict scenario that inadvertently escalated tensions between the West and the Soviet Union. The exercise, conducted from November 2 to November 11, involved a series of war games that included the deployment of nuclear weapons and the mobilization of NATO forces.",
       "contentChars": 12112
+    },
+    {
+      "slug": "alien-and-sedition-acts-1798",
+      "title": "The Alien and Sedition Acts: When Criticizing the Government Became a Crime",
+      "excerpt": "Federalists passed laws targeting immigrants and newspaper critics — and Jeffersonians called it tyranny. (Alien and Sedition Acts)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1798,
+      "publishedAt": "2026-11-17T19:01:02.558Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "alien-and-sedition-acts::1798",
+      "titleEventKey": "alien-sedition-acts-criticizing-government-became-crime::1798",
+      "places": [
+        "virginia",
+        "kentucky"
+      ],
+      "namedHints": [
+        "alien",
+        "sedition",
+        "acts",
+        "criticizing",
+        "government",
+        "became",
+        "crime"
+      ],
+      "opening": "The Alien and Sedition Acts of 1798: A Federalist Crackdown on Dissent In 1798, the United States faced a political crisis that led to the passage of the Alien and Sedition Acts. These laws, enacted by the Federalist-controlled Congress, aimed to suppress dissent and curb the influence of immigrants, particularly those who supported the rival Jeffersonian party.",
+      "contentChars": 11338
     },
     {
       "slug": "amistad-revolt-1839",
@@ -5255,30 +5283,6 @@
       "contentChars": 225
     },
     {
-      "slug": "qr-cocoanut-grove-exit",
-      "title": "Why Cocoanut Grove’s Exits Failed When Fire Hit",
-      "excerpt": "A revolving door and blocked exits turned a nightclub blaze into America’s deadliest club fire.",
-      "format": "quick-read",
-      "source": "queue-quick-read",
-      "eventYear": 1942,
-      "publishedAt": null,
-      "parentArticleSlug": "cocoanut-grove-fire-1942",
-      "editorialAngle": "Revolving door and blocked exits at Cocoanut Grove fire",
-      "canonicalEventId": "cocoanut-grove-exits::1942",
-      "titleEventKey": "cocoanut-grove-exits-failed-fire-hit::1942",
-      "places": [],
-      "namedHints": [
-        "cocoanut",
-        "groves",
-        "exits",
-        "failed",
-        "fire",
-        "hit"
-      ],
-      "opening": "A revolving door and blocked exits turned a nightclub blaze into America’s deadliest club fire. Exit design and locked/blocked egress only — not the full victim narrative.",
-      "contentChars": 222
-    },
-    {
       "slug": "qr-apollo1-hatch",
       "title": "The Inward Hatch That Trapped Apollo 1’s Crew",
       "excerpt": "Apollo 1’s cabin hatch opened inward under pressure — and the crew could not escape the pad fire.",
@@ -5611,32 +5615,30 @@
       "contentChars": 251
     },
     {
-      "slug": "alien-and-sedition-acts-1798",
-      "title": "The Alien and Sedition Acts: When Criticizing the Government Became a Crime",
-      "excerpt": "Federalists passed laws targeting immigrants and newspaper critics — and Jeffersonians called it tyranny. (Alien and Sedition Acts)",
-      "format": "full",
+      "slug": "qr-cocoanut-grove-exit",
+      "title": "Why Cocoanut Grove’s Exits Failed When Fire Hit",
+      "excerpt": "A revolving door and blocked exits turned a nightclub blaze into America’s deadliest club fire. (Cocoanut Grove revolving door)",
+      "format": "quick-read",
       "source": "published",
-      "eventYear": 1798,
-      "publishedAt": "2026-11-17T19:01:02.558Z",
-      "parentArticleSlug": null,
-      "editorialAngle": null,
-      "canonicalEventId": "alien-and-sedition-acts::1798",
-      "titleEventKey": "alien-sedition-acts-criticizing-government-became-crime::1798",
+      "eventYear": 1942,
+      "publishedAt": "2026-11-17T22:04:27.828Z",
+      "parentArticleSlug": "cocoanut-grove-fire-1942",
+      "editorialAngle": "Revolving door and blocked exits at Cocoanut Grove fire",
+      "canonicalEventId": "cocoanut-grove-exits::1942",
+      "titleEventKey": "cocoanut-grove-exits-failed-fire-hit::1942",
       "places": [
-        "virginia",
-        "kentucky"
+        "boston"
       ],
       "namedHints": [
-        "alien",
-        "sedition",
-        "acts",
-        "criticizing",
-        "government",
-        "became",
-        "crime"
+        "cocoanut",
+        "groves",
+        "exits",
+        "failed",
+        "fire",
+        "hit"
       ],
-      "opening": "The Alien and Sedition Acts of 1798: A Federalist Crackdown on Dissent In 1798, the United States faced a political crisis that led to the passage of the Alien and Sedition Acts. These laws, enacted by the Federalist-controlled Congress, aimed to suppress dissent and curb the influence of immigrants, particularly those who supported the rival Jeffersonian party.",
-      "contentChars": 11338
+      "opening": "On the night of November 28, 1942, the Cocoanut Grove nightclub in Boston became the site of the deadliest nightclub fire in U.S. history, claiming 492 lives.",
+      "contentChars": 2350
     }
   ]
 }
