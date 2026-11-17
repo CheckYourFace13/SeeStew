@@ -6623,9 +6623,9 @@
       "imageSearchTerms": [
         "Alien Sedition Acts 1798"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "alien-and-sedition-acts-1798",
+      "publishedAt": "2026-11-17T19:01:54.845Z",
       "eventYear": 1798,
       "historicalEra": "revolution-early-republic"
     },

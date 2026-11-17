@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-16T20:11:07.857Z",
-  "publishedCount": 151,
-  "queueCount": 55,
+  "generatedAt": "2026-11-17T19:01:54.915Z",
+  "publishedCount": 152,
+  "queueCount": 56,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -3406,6 +3406,32 @@
       "contentChars": 10398
     },
     {
+      "slug": "shays-rebellion-1786",
+      "title": "Shays’ Rebellion: When Farmers Closed the Courts of Massachusetts",
+      "excerpt": "Armed farmers shut down courthouses in 1786–87 — a crisis that pushed the Constitutional Convention. (Shays Rebellion)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1786,
+      "publishedAt": "2026-11-16T20:09:31.627Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "shays-rebellion::1786",
+      "titleEventKey": "shays-rebellion-farmers-closed-courts-massachusetts::1786",
+      "places": [
+        "massachusetts"
+      ],
+      "namedHints": [
+        "shays",
+        "rebellion",
+        "farmers",
+        "closed",
+        "courts",
+        "massachusetts"
+      ],
+      "opening": "Armed Farmers Shut Down Courts in Massachusetts (1786–87) In the late 1780s, a group of armed farmers in Massachusetts, led by Revolutionary War veteran Daniel Shays, took drastic measures to protest economic injustices. From 1786 to 1787, these farmers closed courthouses across the state, effectively halting legal proceedings and drawing national attention to their plight.",
+      "contentChars": 11695
+    },
+    {
       "slug": "silver-bridge-collapse-1967",
       "title": "The Silver Bridge Collapse: When a Tiny Eye-Bar Crack Dropped 46 People into the Ohio River",
       "excerpt": "Rush-hour traffic plunged into freezing water — and a microscopic metal flaw in a 40-year-old bridge was enough. (Silver Bridge collapse 1967)",
@@ -4192,34 +4218,6 @@
       ],
       "opening": "The Zoot Suit Riots: A Clash of Cultures in Wartime Los Angeles In June 1943, Los Angeles became the epicenter of racial violence as servicemen clashed with Mexican American youths, known for their distinctive zoot suits. Over several days, these sailors and soldiers roamed the streets, targeting young men dressed in flashy attire, resulting in a series of brutal assaults.",
       "contentChars": 10085
-    },
-    {
-      "slug": "alien-and-sedition-acts-1798",
-      "title": "The Alien and Sedition Acts: When Criticizing the Government Became a Crime",
-      "excerpt": "Federalists passed laws targeting immigrants and newspaper critics — and Jeffersonians called it tyranny.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1798,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "What each act did, who was prosecuted under the Sedition Act, how states answered with the Virginia and Kentucky Resolutions, and the 1800 election aftermath.",
-      "canonicalEventId": "alien-and-sedition-acts::1798",
-      "titleEventKey": "alien-sedition-acts-criticizing-government-became-crime::1798",
-      "places": [
-        "virginia",
-        "kentucky"
-      ],
-      "namedHints": [
-        "alien",
-        "sedition",
-        "acts",
-        "criticizing",
-        "government",
-        "became",
-        "crime"
-      ],
-      "opening": "Federalists passed laws targeting immigrants and newspaper critics — and Jeffersonians called it tyranny. What each act did, who was prosecuted under the Sedition Act, how states answered with the Virginia and Kentucky Resolutions, and the 1800 election aftermath.",
-      "contentChars": 336
     },
     {
       "slug": "nullification-crisis-1832",
@@ -5214,6 +5212,49 @@
       "contentChars": 252
     },
     {
+      "slug": "the-1938-hurricane",
+      "title": "The 1938 New England Hurricane",
+      "excerpt": "A sudden and devastating hurricane that struck New England, leaving a lasting impact on the region's landscape and infrastructure.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1938,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "Analyzing the storm's path, damage, and the changes in hurricane preparedness that followed.",
+      "canonicalEventId": "the-1938-hurricane::1938",
+      "titleEventKey": "new-england-hurricane::1938",
+      "places": [],
+      "namedHints": [
+        "new",
+        "england",
+        "hurricane"
+      ],
+      "opening": "A sudden and devastating hurricane that struck New England, leaving a lasting impact on the region's landscape and infrastructure. Analyzing the storm's path, damage, and the changes in hurricane preparedness that followed.",
+      "contentChars": 273
+    },
+    {
+      "slug": "the-1970s-watergate",
+      "title": "The Watergate Scandal: A Political Crisis",
+      "excerpt": "The Watergate scandal led to the first resignation of a U.S. president and transformed American politics.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1972,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "Exploring the events, key players, and consequences of the scandal.",
+      "canonicalEventId": "the-1970s-watergate::1972",
+      "titleEventKey": "watergate-scandal-political-crisis::1972",
+      "places": [],
+      "namedHints": [
+        "watergate",
+        "scandal",
+        "political",
+        "crisis"
+      ],
+      "opening": "The Watergate scandal led to the first resignation of a U.S. president and transformed American politics.",
+      "contentChars": 225
+    },
+    {
       "slug": "qr-cocoanut-grove-exit",
       "title": "Why Cocoanut Grove’s Exits Failed When Fire Hit",
       "excerpt": "A revolving door and blocked exits turned a nightclub blaze into America’s deadliest club fire.",
@@ -5570,30 +5611,32 @@
       "contentChars": 251
     },
     {
-      "slug": "shays-rebellion-1786",
-      "title": "Shays’ Rebellion: When Farmers Closed the Courts of Massachusetts",
-      "excerpt": "Armed farmers shut down courthouses in 1786–87 — a crisis that pushed the Constitutional Convention. (Shays Rebellion)",
+      "slug": "alien-and-sedition-acts-1798",
+      "title": "The Alien and Sedition Acts: When Criticizing the Government Became a Crime",
+      "excerpt": "Federalists passed laws targeting immigrants and newspaper critics — and Jeffersonians called it tyranny. (Alien and Sedition Acts)",
       "format": "full",
       "source": "published",
-      "eventYear": 1786,
-      "publishedAt": "2026-11-16T20:09:31.627Z",
+      "eventYear": 1798,
+      "publishedAt": "2026-11-17T19:01:02.558Z",
       "parentArticleSlug": null,
       "editorialAngle": null,
-      "canonicalEventId": "shays-rebellion::1786",
-      "titleEventKey": "shays-rebellion-farmers-closed-courts-massachusetts::1786",
+      "canonicalEventId": "alien-and-sedition-acts::1798",
+      "titleEventKey": "alien-sedition-acts-criticizing-government-became-crime::1798",
       "places": [
-        "massachusetts"
+        "virginia",
+        "kentucky"
       ],
       "namedHints": [
-        "shays",
-        "rebellion",
-        "farmers",
-        "closed",
-        "courts",
-        "massachusetts"
+        "alien",
+        "sedition",
+        "acts",
+        "criticizing",
+        "government",
+        "became",
+        "crime"
       ],
-      "opening": "Armed Farmers Shut Down Courts in Massachusetts (1786–87) In the late 1780s, a group of armed farmers in Massachusetts, led by Revolutionary War veteran Daniel Shays, took drastic measures to protest economic injustices. From 1786 to 1787, these farmers closed courthouses across the state, effectively halting legal proceedings and drawing national attention to their plight.",
-      "contentChars": 11695
+      "opening": "The Alien and Sedition Acts of 1798: A Federalist Crackdown on Dissent In 1798, the United States faced a political crisis that led to the passage of the Alien and Sedition Acts. These laws, enacted by the Federalist-controlled Congress, aimed to suppress dissent and curb the influence of immigrants, particularly those who supported the rival Jeffersonian party.",
+      "contentChars": 11338
     }
   ]
 }
