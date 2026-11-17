@@ -8446,6 +8446,98 @@
       "status": "pending",
       "publishedSlug": null,
       "publishedAt": null
+    },
+    {
+      "id": "the-1938-hurricane",
+      "title": "The 1938 New England Hurricane",
+      "hook": "A sudden and devastating hurricane that struck New England, leaving a lasting impact on the region's landscape and infrastructure.",
+      "category": "Natural Disasters",
+      "angle": "Analyzing the storm's path, damage, and the changes in hurricane preparedness that followed.",
+      "keywords": [
+        "hurricane",
+        "New England",
+        "1938",
+        "natural disaster",
+        "storm"
+      ],
+      "imageSearchTerms": [
+        "1938 Hurricane New England",
+        "hurricane damage",
+        "New England storm"
+      ],
+      "eventYear": 1938,
+      "historicalEra": "Great Depression",
+      "requiredSources": [
+        {
+          "title": "The 1938 New England Hurricane: A Historical Perspective",
+          "publisher": "National Oceanic and Atmospheric Administration",
+          "url": "https://www.weather.gov/box/hurricane1938"
+        },
+        {
+          "title": "Hurricane of 1938",
+          "publisher": "Massachusetts Historical Society",
+          "url": "https://www.masshist.org/revolutionary-massachusetts/hurricane-of-1938"
+        },
+        {
+          "title": "The Great New England Hurricane of 1938",
+          "publisher": "University of Massachusetts",
+          "url": "https://scholarworks.umass.edu/cgi/viewcontent.cgi?article=1002&context=theses"
+        },
+        {
+          "title": "The 1938 Hurricane: A New England Disaster",
+          "publisher": "New England Historical Society",
+          "url": "https://www.newenglandhistoricalsociety.com/the-1938-hurricane/"
+        }
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "the-1970s-watergate",
+      "title": "The Watergate Scandal: A Political Crisis",
+      "hook": "The Watergate scandal led to the first resignation of a U.S. president and transformed American politics.",
+      "category": "Political History",
+      "angle": "Exploring the events, key players, and consequences of the scandal.",
+      "keywords": [
+        "Watergate",
+        "Nixon",
+        "political scandal",
+        "resignation",
+        "1970s"
+      ],
+      "imageSearchTerms": [
+        "Watergate scandal",
+        "Nixon resignation",
+        "political crisis"
+      ],
+      "eventYear": 1972,
+      "historicalEra": "Modern Era",
+      "requiredSources": [
+        {
+          "title": "Watergate: A Brief History",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/exhibits/american_originals/watergate.html"
+        },
+        {
+          "title": "The Watergate Scandal: A Timeline",
+          "publisher": "U.S. Senate Historical Office",
+          "url": "https://www.senate.gov/artandhistory/history/common/generic/Watergate.htm"
+        },
+        {
+          "title": "Watergate Scandal: An Overview",
+          "publisher": "C-SPAN",
+          "url": "https://www.c-span.org/video/?c4581381/user-clip-watergate-scandal-overview"
+        },
+        {
+          "title": "The Watergate Scandal: A Historical Overview",
+          "publisher": "Harvard Law School Library",
+          "url": "https://hollis.harvard.edu/resource/999999926530203941"
+        }
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
     }
   ]
 }

@@ -302,6 +302,40 @@
       ],
       "fullPending": 41,
       "qrPending": 15
+    },
+    {
+      "at": "2026-11-17T15:23:27.489Z",
+      "dryRun": false,
+      "discover": true,
+      "seededFull": 0,
+      "seededQr": 0,
+      "discoveredFull": [
+        "the-1938-hurricane",
+        "the-1970s-watergate"
+      ],
+      "discoveredQr": [],
+      "rejected": [
+        {
+          "id": "the-1927-flood",
+          "reasons": [
+            "source URL probe failed: https://www.usace.army.mil/Portals/2/docs/civilworks/engineering/Great_Mississippi_Flood_of_1927.pdf → HTTP 404; https://www.nps.gov/articles/the-mississippi-flood-of-1927.htm → HTTP 404; https://www.loc.gov/rr/program/bib/flood/flood.html → HTTP 403; https://aquila.usm.edu/cgi/viewcontent.cgi?article=1002&context=dissertations → HTTP 403"
+          ]
+        },
+        {
+          "id": "the-1944-d-day",
+          "reasons": [
+            "source URL probe failed: https://www.archives.gov/exhibits/american_originals/dday.html → HTTP 404; https://history.army.mil/html/books/070/70-29-1/index.html → HTTP 404; https://www.nationalww2museum.org/war/articles/d-day-allied-invasion-europe → HTTP 403; https://www.pbs.org/wgbh/americanexperience/features/d-day-invasion-normandy/ → HTTP 404"
+          ]
+        },
+        {
+          "id": "the-1963-birmingham",
+          "reasons": [
+            "non-https source"
+          ]
+        }
+      ],
+      "fullPending": 42,
+      "qrPending": 15
     }
   ]
 }
