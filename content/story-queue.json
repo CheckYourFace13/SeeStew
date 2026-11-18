@@ -8538,6 +8538,52 @@
       "status": "pending",
       "publishedSlug": null,
       "publishedAt": null
+    },
+    {
+      "id": "the-1964-civil-rights-act",
+      "title": "The 1964 Civil Rights Act: A Landmark Legislation",
+      "hook": "Delve into the passage of the Civil Rights Act of 1964, a pivotal moment in the American civil rights movement.",
+      "category": "Civil Rights",
+      "angle": "The Act marked a significant step towards ending segregation and discrimination in the United States.",
+      "keywords": [
+        "Civil Rights Act",
+        "1964",
+        "civil rights movement",
+        "segregation",
+        "discrimination"
+      ],
+      "imageSearchTerms": [
+        "Civil Rights Act signing",
+        "1964 civil rights protests",
+        "Martin Luther King Jr. 1964"
+      ],
+      "eventYear": 1964,
+      "historicalEra": "Civil Rights Era",
+      "requiredSources": [
+        {
+          "title": "The Civil Rights Act of 1964",
+          "publisher": "U.S. Department of Justice",
+          "url": "https://www.justice.gov/crt/history-civil-rights-act-1964"
+        },
+        {
+          "title": "Civil Rights Act of 1964: A Long Struggle for Freedom",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/exhibits/civilrights/civil-rights-act-of-1964.html"
+        },
+        {
+          "title": "The Civil Rights Act of 1964: A Historical Overview",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/education/lessons/civil-rights-act"
+        },
+        {
+          "title": "The Civil Rights Act of 1964: A Timeline",
+          "publisher": "U.S. House of Representatives",
+          "url": "https://history.house.gov/HistoricalHighlight/Detail/151"
+        }
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
     }
   ]
 }

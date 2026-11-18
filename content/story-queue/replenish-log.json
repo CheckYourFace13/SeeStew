@@ -336,6 +336,60 @@
       ],
       "fullPending": 42,
       "qrPending": 15
+    },
+    {
+      "at": "2026-11-18T14:57:47.850Z",
+      "dryRun": false,
+      "discover": true,
+      "seededFull": 0,
+      "seededQr": 0,
+      "discoveredFull": [
+        "the-1964-civil-rights-act"
+      ],
+      "discoveredQr": [],
+      "rejected": [
+        {
+          "id": "sacco-vanzetti-case",
+          "reasons": [
+            "id already in queue: sacco-vanzetti-case"
+          ]
+        },
+        {
+          "id": "the-1918-influenza-pandemic",
+          "reasons": [
+            "source URL probe failed: https://www.cdc.gov/flu/pandemic-resources/1918-pandemic-historical-illustrations.html → HTTP 404; https://www.archives.gov/publications/prologue/2003/winter/influenza.html → HTTP 404; https://www.loc.gov/rr/scitech/mysteries/influenza.html → HTTP 403"
+          ]
+        },
+        {
+          "id": "the-great-depression",
+          "reasons": [
+            "source URL probe failed: https://www.archives.gov/exhibits/american_originals/great_depression.html → HTTP 404; https://www.dol.gov/general/aboutdol/history/newdeal → HTTP 404; https://www.loc.gov/teachers/classroommaterials/presentationsandactivities/presentations/depression/ → HTTP 429"
+          ]
+        },
+        {
+          "id": "qr-001",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 credible sources (need 2+)",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "duplicate URL undefined",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "duplicate URL undefined"
+          ]
+        }
+      ],
+      "fullPending": 42,
+      "qrPending": 14
     }
   ]
 }
