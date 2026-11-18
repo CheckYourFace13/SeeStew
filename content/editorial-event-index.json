@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-17T22:04:27.918Z",
-  "publishedCount": 153,
+  "generatedAt": "2026-11-18T18:47:08.515Z",
+  "publishedCount": 154,
   "queueCount": 55,
   "entries": [
     {
@@ -2996,6 +2996,32 @@
       "contentChars": 2319
     },
     {
+      "slug": "qr-cocoanut-grove-exit",
+      "title": "Why Cocoanut Grove’s Exits Failed When Fire Hit",
+      "excerpt": "A revolving door and blocked exits turned a nightclub blaze into America’s deadliest club fire. (Cocoanut Grove revolving door)",
+      "format": "quick-read",
+      "source": "published",
+      "eventYear": 1942,
+      "publishedAt": "2026-11-17T22:04:27.828Z",
+      "parentArticleSlug": "cocoanut-grove-fire-1942",
+      "editorialAngle": "Revolving door and blocked exits at Cocoanut Grove fire",
+      "canonicalEventId": "cocoanut-grove-exits::1942",
+      "titleEventKey": "cocoanut-grove-exits-failed-fire-hit::1942",
+      "places": [
+        "boston"
+      ],
+      "namedHints": [
+        "cocoanut",
+        "groves",
+        "exits",
+        "failed",
+        "fire",
+        "hit"
+      ],
+      "opening": "On the night of November 28, 1942, the Cocoanut Grove nightclub in Boston became the site of the deadliest nightclub fire in U.S. history, claiming 492 lives.",
+      "contentChars": 2350
+    },
+    {
       "slug": "qr-forrestal-zuni",
       "title": "The Zuni Rocket That Started the Forrestal Inferno",
       "excerpt": "A single misfired rocket on the USS Forrestal’s deck began the 1967 fire that killed 134 sailors. (Forrestal Zuni rocket)",
@@ -4248,34 +4274,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "nullification-crisis-1832",
-      "title": "The Nullification Crisis: South Carolina vs. the Tariff — and Jackson’s Force Bill",
-      "excerpt": "South Carolina declared federal tariffs void — Andrew Jackson threatened force, and a compromise cooled the crisis.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1832,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "The tariff fight, the Ordinance of Nullification, Calhoun’s theory, Jackson’s proclamation, and Clay’s compromise.",
-      "canonicalEventId": "nullification-crisis::1832",
-      "titleEventKey": "nullification-crisis-south-carolina-tariff-jackson-force-bill::1832",
-      "places": [
-        "south carolina"
-      ],
-      "namedHints": [
-        "nullification",
-        "crisis",
-        "south",
-        "carolina",
-        "tariff",
-        "jacksons",
-        "force",
-        "bill"
-      ],
-      "opening": "South Carolina declared federal tariffs void — Andrew Jackson threatened force, and a compromise cooled the crisis. The tariff fight, the Ordinance of Nullification, Calhoun’s theory, Jackson’s proclamation, and Clay’s compromise.",
-      "contentChars": 296
-    },
-    {
       "slug": "dred-scott-decision-1857",
       "title": "Dred Scott v. Sandford: The Supreme Court Decision That Deepened the Crisis",
       "excerpt": "The Court ruled Dred Scott remained enslaved and that Congress could not ban slavery in the territories — a political earthquake.",
@@ -5283,6 +5281,29 @@
       "contentChars": 225
     },
     {
+      "slug": "the-1964-civil-rights-act",
+      "title": "The 1964 Civil Rights Act: A Landmark Legislation",
+      "excerpt": "Delve into the passage of the Civil Rights Act of 1964, a pivotal moment in the American civil rights movement.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1964,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "The Act marked a significant step towards ending segregation and discrimination in the United States.",
+      "canonicalEventId": "the-1964-civil-rights-act::1964",
+      "titleEventKey": "civil-rights-act-landmark-legislation::1964",
+      "places": [],
+      "namedHints": [
+        "civil",
+        "rights",
+        "act",
+        "landmark",
+        "legislation"
+      ],
+      "opening": "Delve into the passage of the Civil Rights Act of 1964, a pivotal moment in the American civil rights movement. The Act marked a significant step towards ending segregation and discrimination in the United States.",
+      "contentChars": 284
+    },
+    {
       "slug": "qr-apollo1-hatch",
       "title": "The Inward Hatch That Trapped Apollo 1’s Crew",
       "excerpt": "Apollo 1’s cabin hatch opened inward under pressure — and the crew could not escape the pad fire.",
@@ -5615,30 +5636,32 @@
       "contentChars": 251
     },
     {
-      "slug": "qr-cocoanut-grove-exit",
-      "title": "Why Cocoanut Grove’s Exits Failed When Fire Hit",
-      "excerpt": "A revolving door and blocked exits turned a nightclub blaze into America’s deadliest club fire. (Cocoanut Grove revolving door)",
-      "format": "quick-read",
+      "slug": "nullification-crisis-1832",
+      "title": "The Nullification Crisis: South Carolina vs. the Tariff — and Jackson’s Force Bill",
+      "excerpt": "South Carolina declared federal tariffs void — Andrew Jackson threatened force, and a compromise cooled the crisis. (Nullification Crisis)",
+      "format": "full",
       "source": "published",
-      "eventYear": 1942,
-      "publishedAt": "2026-11-17T22:04:27.828Z",
-      "parentArticleSlug": "cocoanut-grove-fire-1942",
-      "editorialAngle": "Revolving door and blocked exits at Cocoanut Grove fire",
-      "canonicalEventId": "cocoanut-grove-exits::1942",
-      "titleEventKey": "cocoanut-grove-exits-failed-fire-hit::1942",
+      "eventYear": 1832,
+      "publishedAt": "2026-11-18T18:46:17.461Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "nullification-crisis::1832",
+      "titleEventKey": "nullification-crisis-south-carolina-tariff-jackson-force-bill::1832",
       "places": [
-        "boston"
+        "south carolina"
       ],
       "namedHints": [
-        "cocoanut",
-        "groves",
-        "exits",
-        "failed",
-        "fire",
-        "hit"
+        "nullification",
+        "crisis",
+        "south",
+        "carolina",
+        "tariff",
+        "jacksons",
+        "force",
+        "bill"
       ],
-      "opening": "On the night of November 28, 1942, the Cocoanut Grove nightclub in Boston became the site of the deadliest nightclub fire in U.S. history, claiming 492 lives.",
-      "contentChars": 2350
+      "opening": "The Nullification Crisis of 1832: South Carolina's Stand Against Federal Tariffs In the early 1830s, South Carolina found itself at the center of a fierce political battle over federal tariffs. In November 1832, the state declared federal tariffs void within its borders through the Ordinance of Nullification [2].",
+      "contentChars": 12634
     }
   ]
 }
