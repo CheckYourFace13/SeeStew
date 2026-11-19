@@ -390,6 +390,64 @@
       ],
       "fullPending": 42,
       "qrPending": 14
+    },
+    {
+      "at": "2026-11-19T15:04:35.091Z",
+      "dryRun": false,
+      "discover": true,
+      "seededFull": 0,
+      "seededQr": 0,
+      "discoveredFull": [],
+      "discoveredQr": [],
+      "rejected": [
+        {
+          "id": "sacco-vanzetti-case",
+          "reasons": [
+            "id already in queue: sacco-vanzetti-case"
+          ]
+        },
+        {
+          "id": "the-great-depression",
+          "reasons": [
+            "source URL probe failed: https://www.archives.gov/exhibits/american_originals/greatdepression.html → HTTP 404; https://www.loc.gov/rr/program/bib/GreatDepression/overview.html → HTTP 429; https://www.archives.gov/education/lessons/new-deal → HTTP 404"
+          ]
+        },
+        {
+          "id": "the-19th-amendment",
+          "reasons": [
+            "overlap hold_for_review vs nineteenth-amendment-1920: ambiguous_overlap"
+          ]
+        },
+        {
+          "id": "the-civil-rights-act-1964",
+          "reasons": [
+            "overlap block vs the-1964-civil-rights-act: substantial_overlap"
+          ]
+        },
+        {
+          "id": "qr-001",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 credible sources (need 2+)",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "duplicate URL undefined",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "duplicate URL undefined"
+          ]
+        }
+      ],
+      "fullPending": 41,
+      "qrPending": 14
     }
   ]
 }
