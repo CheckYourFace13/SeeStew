@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-19T18:57:37.653Z",
-  "publishedCount": 155,
-  "queueCount": 54,
+  "generatedAt": "2026-11-19T21:59:25.485Z",
+  "publishedCount": 156,
+  "queueCount": 53,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -917,6 +917,37 @@
       ],
       "opening": "The Donora Smog of 1948: A Deadly Industrial Fog in Pennsylvania In October 1948, the small town of Donora, Pennsylvania, became the epicenter of a tragic environmental disaster. Over five days, a thick, yellow smog enveloped the town, resulting in the deaths of 20 residents and causing severe respiratory issues for thousands more [1].",
       "contentChars": 12038
+    },
+    {
+      "slug": "dred-scott-decision-1857",
+      "title": "Dred Scott v. Sandford: The Supreme Court Decision That Deepened the Crisis",
+      "excerpt": "The Court ruled Dred Scott remained enslaved and that Congress could not ban slavery in the territories — a political earthquake. (Dred Scott decision)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1857,
+      "publishedAt": "2026-11-19T18:56:07.456Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "dred-scott-decision::1857",
+      "titleEventKey": "dred-scott-sandford-supreme-court-decision-deepened-crisis::1857",
+      "places": [
+        "virginia",
+        "illinois",
+        "wisconsin",
+        "missouri"
+      ],
+      "namedHints": [
+        "dred",
+        "scott",
+        "sandford",
+        "supreme",
+        "court",
+        "decision",
+        "deepened",
+        "crisis"
+      ],
+      "opening": "The Dred Scott Decision: A Turning Point in American History On March 6, 1857, the Supreme Court of the United States delivered its ruling in Dred Scott v. Sandford , a decision that would have profound implications for the nation.",
+      "contentChars": 11584
     },
     {
       "slug": "dust-bowl-1930s",
@@ -5306,29 +5337,6 @@
       "contentChars": 284
     },
     {
-      "slug": "qr-apollo1-hatch",
-      "title": "The Inward Hatch That Trapped Apollo 1’s Crew",
-      "excerpt": "Apollo 1’s cabin hatch opened inward under pressure — and the crew could not escape the pad fire.",
-      "format": "quick-read",
-      "source": "queue-quick-read",
-      "eventYear": 1967,
-      "publishedAt": null,
-      "parentArticleSlug": "apollo-1-fire-1967",
-      "editorialAngle": "Inward-opening hatch as Apollo 1 escape barrier",
-      "canonicalEventId": "apollo1-hatch::1967",
-      "titleEventKey": "inward-hatch-trapped-apollo-crew::1967",
-      "places": [],
-      "namedHints": [
-        "inward",
-        "hatch",
-        "trapped",
-        "apollo",
-        "crew"
-      ],
-      "opening": "Apollo 1’s cabin hatch opened inward under pressure — and the crew could not escape the pad fire. Hatch design and escape impossibility during the pad fire — not the full program rebuild.",
-      "contentChars": 228
-    },
-    {
       "slug": "qr-goldsboro-one-switch",
       "title": "The Goldsboro Bomb That Was One Switch From Arming",
       "excerpt": "After a B-52 broke up over North Carolina, one nuclear bomb’s arming sequence stopped at a single switch.",
@@ -5638,35 +5646,29 @@
       "contentChars": 251
     },
     {
-      "slug": "dred-scott-decision-1857",
-      "title": "Dred Scott v. Sandford: The Supreme Court Decision That Deepened the Crisis",
-      "excerpt": "The Court ruled Dred Scott remained enslaved and that Congress could not ban slavery in the territories — a political earthquake. (Dred Scott decision)",
-      "format": "full",
+      "slug": "qr-apollo1-hatch",
+      "title": "The Inward Hatch That Trapped Apollo 1’s Crew",
+      "excerpt": "Apollo 1’s cabin hatch opened inward under pressure — and the crew could not escape the pad fire. (Apollo 1 hatch)",
+      "format": "quick-read",
       "source": "published",
-      "eventYear": 1857,
-      "publishedAt": "2026-11-19T18:56:07.456Z",
-      "parentArticleSlug": null,
-      "editorialAngle": null,
-      "canonicalEventId": "dred-scott-decision::1857",
-      "titleEventKey": "dred-scott-sandford-supreme-court-decision-deepened-crisis::1857",
+      "eventYear": 1967,
+      "publishedAt": "2026-11-19T21:59:25.358Z",
+      "parentArticleSlug": "apollo-1-fire-1967",
+      "editorialAngle": "Inward-opening hatch as Apollo 1 escape barrier",
+      "canonicalEventId": "apollo1-hatch::1967",
+      "titleEventKey": "inward-hatch-trapped-apollo-crew::1967",
       "places": [
-        "virginia",
-        "illinois",
-        "wisconsin",
-        "missouri"
+        "florida"
       ],
       "namedHints": [
-        "dred",
-        "scott",
-        "sandford",
-        "supreme",
-        "court",
-        "decision",
-        "deepened",
-        "crisis"
+        "inward",
+        "hatch",
+        "trapped",
+        "apollo",
+        "crew"
       ],
-      "opening": "The Dred Scott Decision: A Turning Point in American History On March 6, 1857, the Supreme Court of the United States delivered its ruling in Dred Scott v. Sandford , a decision that would have profound implications for the nation.",
-      "contentChars": 11584
+      "opening": "On January 27, 1967, a fire broke out in the Apollo 1 command module during a pre-launch test at Cape Kennedy Air Force Station in Florida, killing all three astronauts aboard: Gus Grissom, Ed White, and Roger B. Chaffee.",
+      "contentChars": 2216
     }
   ]
 }

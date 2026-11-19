@@ -470,11 +470,13 @@
       "imageSearchTerms": [
         "Apollo 1 hatch 1967"
       ],
-      "status": "pending",
+      "status": "published",
       "format": "quick-read",
       "eventYear": 1967,
       "historicalEra": "postwar-cold-war",
-      "canonicalEventId": "apollo1-hatch::1967"
+      "canonicalEventId": "apollo1-hatch::1967",
+      "publishedSlug": "qr-apollo1-hatch",
+      "publishedAt": "2026-11-19T21:59:25.358Z"
     },
     {
       "id": "qr-goldsboro-one-switch",
