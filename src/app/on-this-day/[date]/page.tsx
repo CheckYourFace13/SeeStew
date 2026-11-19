@@ -135,6 +135,9 @@ export default async function OnThisDayDatePage({ params }: Props) {
           ) : (
             <span />
           )}
+          <Link href="/on-this-day" className="text-ink-muted hover:text-brand-mid">
+            All months
+          </Link>
           {next ? (
             <Link href={`/on-this-day/${next}`} className="text-brand-mid underline">
               {formatDateSlugLabel(next)} →

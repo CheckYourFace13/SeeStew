@@ -106,22 +106,48 @@ export default function OnThisDayPage() {
       <section className="mt-14">
         <h2 className="font-heading text-2xl font-bold text-ink">Full anniversary list</h2>
         <p className="mt-2 text-sm text-ink-muted">{all.length} curated dates with live articles.</p>
-        <ul className="mt-6 columns-1 gap-4 sm:columns-2 text-sm">
-          {all.map((ann) => (
-            <li key={ann.slug} className="mb-2 break-inside-avoid">
-              <Link
-                href={`/on-this-day/${datePathSlug(ann.month, ann.day)}`}
-                className="text-brand-mid underline"
-              >
-                {monthName(ann.month)} {ann.day}
-              </Link>
-              {": "}
-              <Link href={`/articles/${ann.slug}`} className="text-ink hover:underline">
-                {ann.label}
-              </Link>
-            </li>
+        <nav
+          className="mt-4 flex flex-wrap gap-2 text-sm"
+          aria-label="Jump to month"
+        >
+          {[...new Set(all.map((a) => a.month))].map((m) => (
+            <a
+              key={m}
+              href={`#month-${m}`}
+              className="rounded-md border border-brand-wash bg-white px-2.5 py-1 text-brand-mid hover:bg-brand-wash"
+            >
+              {monthName(m).slice(0, 3)}
+            </a>
           ))}
-        </ul>
+        </nav>
+        <div className="mt-8 space-y-10">
+          {[...new Set(all.map((a) => a.month))].map((m) => {
+            const monthItems = all.filter((a) => a.month === m);
+            return (
+              <div key={m} id={`month-${m}`}>
+                <h3 className="font-heading text-lg font-bold text-ink">
+                  {monthName(m)}
+                </h3>
+                <ul className="mt-3 columns-1 gap-4 sm:columns-2 text-sm">
+                  {monthItems.map((ann) => (
+                    <li key={ann.slug} className="mb-2 break-inside-avoid">
+                      <Link
+                        href={`/on-this-day/${datePathSlug(ann.month, ann.day)}`}
+                        className="text-brand-mid underline"
+                      >
+                        {monthName(ann.month)} {ann.day}
+                      </Link>
+                      {": "}
+                      <Link href={`/articles/${ann.slug}`} className="text-ink hover:underline">
+                        {ann.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
       </section>
     </div>
   );

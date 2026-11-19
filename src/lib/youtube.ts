@@ -16,6 +16,11 @@ export type YouTubeVideo = {
   durationSeconds: number;
   /** Original feed/watch/shorts URL when known — used to classify Shorts. */
   sourceUrl?: string;
+  /**
+   * Real YouTube publish date (YYYY-MM-DD) when known from API/RSS.
+   * Never invent — omit from VideoObject when missing.
+   */
+  uploadDate?: string;
 };
 
 const FALLBACK_VIDEOS: YouTubeVideo[] = [
@@ -239,6 +244,7 @@ async function fetchFromYouTubeApi(
       snippet: {
         title: string;
         description: string;
+        publishedAt?: string;
         thumbnails: { high?: { url: string }; medium?: { url: string } };
       };
       contentDetails: { duration: string };
@@ -258,6 +264,7 @@ async function fetchFromYouTubeApi(
         item.snippet.description,
         `https://www.youtube.com/watch?v=${id}`
       );
+      const uploadDate = item.snippet.publishedAt?.slice(0, 10) || undefined;
       return {
         id,
         title,
@@ -270,6 +277,7 @@ async function fetchFromYouTubeApi(
         format,
         durationSeconds,
         sourceUrl: `https://www.youtube.com/watch?v=${id}`,
+        ...(uploadDate ? { uploadDate } : {}),
       };
     })
     .filter((v): v is YouTubeVideo => v !== null);
@@ -307,6 +315,10 @@ function parseRssItem(item: string): YouTubeVideo | null {
   const cleanTitle = title.replace(/^[^-]+-\s*/, "").trim();
   const durationSeconds = extractRssDurationSeconds(item);
   const format = classifyFormat(durationSeconds, cleanTitle, description, link);
+  const published =
+    item.match(/<published>([^<]+)<\/published>/)?.[1] ??
+    item.match(/<updated>([^<]+)<\/updated>/)?.[1];
+  const uploadDate = published?.slice(0, 10);
 
   return {
     id,
@@ -317,6 +329,7 @@ function parseRssItem(item: string): YouTubeVideo | null {
     format,
     durationSeconds,
     sourceUrl: link,
+    ...(uploadDate && /^\d{4}-\d{2}-\d{2}$/.test(uploadDate) ? { uploadDate } : {}),
   };
 }
 

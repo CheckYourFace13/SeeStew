@@ -33,15 +33,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const video = await getVideoBySlug(slug);
   if (!video || !isLongFormVideo(video)) return { title: "Video not found" };
 
+  const summary = getVideoSummary(video);
   return {
     title: video.title,
-    description:
-      video.description?.slice(0, 155) ||
-      `Watch ${video.title} — a SeeStew story from American history.`,
+    description: summary.slice(0, 160),
     alternates: { canonical: `${siteConfig.url}/videos/${slug}` },
     openGraph: {
       type: "video.other",
       title: video.title,
+      description: summary.slice(0, 160),
       images: [video.thumbnail],
     },
   };
@@ -92,6 +92,7 @@ export default async function VideoWatchPage({ params }: Props) {
           <MediaCrossLinks
             kind="video"
             relatedArticles={relatedStories}
+            relatedLongVideos={moreEpisodes}
             relatedShorts={relatedShorts}
           />
           <div className="prose-history mt-10">

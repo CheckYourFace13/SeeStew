@@ -35,9 +35,9 @@ export default async function VideosPage() {
           History videos
         </h1>
         <p className="mt-4 text-lg text-ink-muted">
-          Longer films from the SeeStew YouTube channel. They cover their own historical subjects —
-          not recaps of the written articles — and range from American history to broader world
-          stories. Also on{" "}
+          Longer films from the SeeStew YouTube channel. Each episode is its own subject — not a
+          recap of a written Story — and topics range from U.S. history to wider world exploration.
+          Watch here or on{" "}
           <SocialInlineLink platform="youtube">@SeeStew</SocialInlineLink>.
         </p>
         <p className="mt-3 text-ink-muted">
