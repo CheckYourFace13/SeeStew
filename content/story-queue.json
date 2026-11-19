@@ -6717,9 +6717,9 @@
       "imageSearchTerms": [
         "Dred Scott decision 1857"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "dred-scott-decision-1857",
+      "publishedAt": "2026-11-19T18:57:37.562Z",
       "eventYear": 1857,
       "historicalEra": "antebellum-civil-war"
     },

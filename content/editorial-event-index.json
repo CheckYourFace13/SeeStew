@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-18T18:47:08.515Z",
-  "publishedCount": 154,
-  "queueCount": 55,
+  "generatedAt": "2026-11-19T18:57:37.653Z",
+  "publishedCount": 155,
+  "queueCount": 54,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -2440,6 +2440,34 @@
       "contentChars": 12262
     },
     {
+      "slug": "nullification-crisis-1832",
+      "title": "The Nullification Crisis: South Carolina vs. the Tariff — and Jackson’s Force Bill",
+      "excerpt": "South Carolina declared federal tariffs void — Andrew Jackson threatened force, and a compromise cooled the crisis. (Nullification Crisis)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1832,
+      "publishedAt": "2026-11-18T18:46:17.461Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "nullification-crisis::1832",
+      "titleEventKey": "nullification-crisis-south-carolina-tariff-jackson-force-bill::1832",
+      "places": [
+        "south carolina"
+      ],
+      "namedHints": [
+        "nullification",
+        "crisis",
+        "south",
+        "carolina",
+        "tariff",
+        "jacksons",
+        "force",
+        "bill"
+      ],
+      "opening": "The Nullification Crisis of 1832: South Carolina's Stand Against Federal Tariffs In the early 1830s, South Carolina found itself at the center of a fierce political battle over federal tariffs. In November 1832, the state declared federal tariffs void within its borders through the Ordinance of Nullification [2].",
+      "contentChars": 12634
+    },
+    {
       "slug": "oklahoma-city-bombing-1995",
       "title": "The Oklahoma City Bombing: The Domestic Terror Attack That Shook 1995 America",
       "excerpt": "A truck bomb destroyed the Alfred P. Murrah Federal Building — killing 168 people in the deadliest act of domestic terrorism in U.S. history.",
@@ -4274,32 +4302,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "dred-scott-decision-1857",
-      "title": "Dred Scott v. Sandford: The Supreme Court Decision That Deepened the Crisis",
-      "excerpt": "The Court ruled Dred Scott remained enslaved and that Congress could not ban slavery in the territories — a political earthquake.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1857,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "Scott’s suits for freedom, Taney’s opinion, what the Court claimed about citizenship, and how Republicans answered.",
-      "canonicalEventId": "dred-scott-decision::1857",
-      "titleEventKey": "dred-scott-sandford-supreme-court-decision-deepened-crisis::1857",
-      "places": [],
-      "namedHints": [
-        "dred",
-        "scott",
-        "sandford",
-        "supreme",
-        "court",
-        "decision",
-        "deepened",
-        "crisis"
-      ],
-      "opening": "The Court ruled Dred Scott remained enslaved and that Congress could not ban slavery in the territories — a political earthquake. Scott’s suits for freedom, Taney’s opinion, what the Court claimed about citizenship, and how Republicans answered.",
-      "contentChars": 307
-    },
-    {
       "slug": "john-brown-harpers-ferry-1859",
       "title": "John Brown at Harpers Ferry: The Raid That Made Civil War Feel Inevitable",
       "excerpt": "Brown seized the federal armory in 1859 — a failed uprising that electrified North and South.",
@@ -5636,32 +5638,35 @@
       "contentChars": 251
     },
     {
-      "slug": "nullification-crisis-1832",
-      "title": "The Nullification Crisis: South Carolina vs. the Tariff — and Jackson’s Force Bill",
-      "excerpt": "South Carolina declared federal tariffs void — Andrew Jackson threatened force, and a compromise cooled the crisis. (Nullification Crisis)",
+      "slug": "dred-scott-decision-1857",
+      "title": "Dred Scott v. Sandford: The Supreme Court Decision That Deepened the Crisis",
+      "excerpt": "The Court ruled Dred Scott remained enslaved and that Congress could not ban slavery in the territories — a political earthquake. (Dred Scott decision)",
       "format": "full",
       "source": "published",
-      "eventYear": 1832,
-      "publishedAt": "2026-11-18T18:46:17.461Z",
+      "eventYear": 1857,
+      "publishedAt": "2026-11-19T18:56:07.456Z",
       "parentArticleSlug": null,
       "editorialAngle": null,
-      "canonicalEventId": "nullification-crisis::1832",
-      "titleEventKey": "nullification-crisis-south-carolina-tariff-jackson-force-bill::1832",
+      "canonicalEventId": "dred-scott-decision::1857",
+      "titleEventKey": "dred-scott-sandford-supreme-court-decision-deepened-crisis::1857",
       "places": [
-        "south carolina"
+        "virginia",
+        "illinois",
+        "wisconsin",
+        "missouri"
       ],
       "namedHints": [
-        "nullification",
-        "crisis",
-        "south",
-        "carolina",
-        "tariff",
-        "jacksons",
-        "force",
-        "bill"
+        "dred",
+        "scott",
+        "sandford",
+        "supreme",
+        "court",
+        "decision",
+        "deepened",
+        "crisis"
       ],
-      "opening": "The Nullification Crisis of 1832: South Carolina's Stand Against Federal Tariffs In the early 1830s, South Carolina found itself at the center of a fierce political battle over federal tariffs. In November 1832, the state declared federal tariffs void within its borders through the Ordinance of Nullification [2].",
-      "contentChars": 12634
+      "opening": "The Dred Scott Decision: A Turning Point in American History On March 6, 1857, the Supreme Court of the United States delivered its ruling in Dred Scott v. Sandford , a decision that would have profound implications for the nation.",
+      "contentChars": 11584
     }
   ]
 }
