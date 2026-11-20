@@ -448,6 +448,79 @@
       ],
       "fullPending": 41,
       "qrPending": 14
+    },
+    {
+      "at": "2026-11-20T14:45:55.711Z",
+      "dryRun": false,
+      "discover": true,
+      "seededFull": 0,
+      "seededQr": 0,
+      "discoveredFull": [
+        "the-1921-lynching-of-jessie-harvey"
+      ],
+      "discoveredQr": [],
+      "rejected": [
+        {
+          "id": "new-york-city-draft-riots-1863",
+          "reasons": [
+            "source URL probe failed: https://www.nps.gov/articles/new-york-city-draft-riots.htm → HTTP 404; https://www.loc.gov/item/ihas.200035600/ → HTTP 403; https://www.nyhistory.org/exhibitions/draft-riots-1863 → HTTP 403; https://www.historians.org/publications-and-directories/perspectives-on-history/december-2013/the-new-york-draft-riots → HTTP 403"
+          ]
+        },
+        {
+          "id": "the-chicago-heat-wave-of-1995",
+          "reasons": [
+            "source URL probe failed: https://www.cdc.gov/mmwr/preview/mmwrhtml/mm4425a1.htm → HTTP 404; https://www.weather.gov/lot/1995HeatWave → HTTP 404; https://www.apha.org/Topics-and-Issues/Climate-Change/Heat-Related-Illness → HTTP 404; https://journals.lww.com/jphmp/Abstract/2001/11010/The_1995_Chicago_Heat_Wave__A_Review_of_the.2.aspx → HTTP 403"
+          ]
+        },
+        {
+          "id": "the-1937-flood-of-the-ohio-river",
+          "reasons": [
+            "source URL probe failed: https://www.lrl.usace.army.mil/Portals/64/docs/History/Floods/GreatOhioFlood1937.pdf → fetch failed; https://www.nps.gov/articles/1937-flood.htm → HTTP 404; https://www.ohiohistory.org/learn/collections/ohio-history-connection/1937-ohio-river-flood → HTTP 403; https://pubs.usgs.gov/circ/2004/1252/pdf/circ1252.pdf → HTTP 404"
+          ]
+        },
+        {
+          "id": "the-sacco-and-vanzetti-case",
+          "reasons": [
+            "source URL probe failed: https://www.americanbar.org/groups/criminal_justice/publications/criminal-justice-magazine/2020/spring/sacco-and-vanzetti/ → HTTP 403; https://library.law.harvard.edu/sacco-and-vanzetti/ → This operation was aborted; https://www.nps.gov/articles/sacco-and-vanzetti.htm → HTTP 404"
+          ]
+        },
+        {
+          "id": "qr-001",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 credible sources (need 2+)",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "duplicate URL undefined"
+          ]
+        },
+        {
+          "id": "qr-002",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 credible sources (need 2+)",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "duplicate URL undefined"
+          ]
+        }
+      ],
+      "fullPending": 41,
+      "qrPending": 13
     }
   ]
 }

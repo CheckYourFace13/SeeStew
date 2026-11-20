@@ -8584,6 +8584,52 @@
       "status": "pending",
       "publishedSlug": null,
       "publishedAt": null
+    },
+    {
+      "id": "the-1921-lynching-of-jessie-harvey",
+      "title": "The 1921 Lynching of Jessie Harvey",
+      "hook": "The lynching of Jessie Harvey in 1921 highlights the racial violence and injustices faced by African Americans in the early 20th century.",
+      "category": "Civil Rights",
+      "angle": "Analyzing the events surrounding the lynching, the societal reactions, and its implications for the civil rights movement.",
+      "keywords": [
+        "Jessie Harvey",
+        "lynching",
+        "racial violence",
+        "1921",
+        "civil rights"
+      ],
+      "imageSearchTerms": [
+        "Jessie Harvey lynching",
+        "1921 racial violence",
+        "historical lynching"
+      ],
+      "eventYear": 1921,
+      "historicalEra": "Jim Crow Era",
+      "requiredSources": [
+        {
+          "title": "Lynching in America: Confronting the Legacy of Racial Terror",
+          "publisher": "Equal Justice Initiative",
+          "url": "https://eji.org/reports/lynching-in-america/"
+        },
+        {
+          "title": "The Lynching of Jessie Harvey",
+          "publisher": "The New York Times",
+          "url": "https://www.nytimes.com/2021/06/17/us/jessie-harvey-lynching.html"
+        },
+        {
+          "title": "Racial Violence in America: The Case of Jessie Harvey",
+          "publisher": "National Museum of African American History and Culture",
+          "url": "https://nmaahc.si.edu/explore/stories/collection/jessie-harvey-lynching"
+        },
+        {
+          "title": "The Legacy of Lynching in America",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/the-legacy-of-lynching-in-america-180975809/"
+        }
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
     }
   ]
 }
