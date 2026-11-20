@@ -6764,9 +6764,9 @@
       "imageSearchTerms": [
         "John Brown Harpers Ferry raid 1859"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "john-brown-harpers-ferry-1859",
+      "publishedAt": "2026-11-20T18:27:54.255Z",
       "eventYear": 1859,
       "historicalEra": "antebellum-civil-war"
     },

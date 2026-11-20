@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-19T21:59:25.485Z",
-  "publishedCount": 156,
+  "generatedAt": "2026-11-20T18:27:54.380Z",
+  "publishedCount": 157,
   "queueCount": 53,
   "entries": [
     {
@@ -3031,6 +3031,31 @@
       "contentChars": 1909
     },
     {
+      "slug": "qr-apollo1-hatch",
+      "title": "The Inward Hatch That Trapped Apollo 1’s Crew",
+      "excerpt": "Apollo 1’s cabin hatch opened inward under pressure — and the crew could not escape the pad fire. (Apollo 1 hatch)",
+      "format": "quick-read",
+      "source": "published",
+      "eventYear": 1967,
+      "publishedAt": "2026-11-19T21:59:25.358Z",
+      "parentArticleSlug": "apollo-1-fire-1967",
+      "editorialAngle": "Inward-opening hatch as Apollo 1 escape barrier",
+      "canonicalEventId": "apollo1-hatch::1967",
+      "titleEventKey": "inward-hatch-trapped-apollo-crew::1967",
+      "places": [
+        "florida"
+      ],
+      "namedHints": [
+        "inward",
+        "hatch",
+        "trapped",
+        "apollo",
+        "crew"
+      ],
+      "opening": "On January 27, 1967, a fire broke out in the Apollo 1 command module during a pre-launch test at Cape Kennedy Air Force Station in Florida, killing all three astronauts aboard: Gus Grissom, Ed White, and Roger B. Chaffee.",
+      "contentChars": 2216
+    },
+    {
       "slug": "qr-challenger-o-ring-cold",
       "title": "The Cold Morning That Doomed Challenger’s O-Rings",
       "excerpt": "Engineers warned that freezing temperatures could fail Challenger’s booster seals — and the January launch went ahead anyway. (Challenger O-ring cold)",
@@ -4333,34 +4358,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "john-brown-harpers-ferry-1859",
-      "title": "John Brown at Harpers Ferry: The Raid That Made Civil War Feel Inevitable",
-      "excerpt": "Brown seized the federal armory in 1859 — a failed uprising that electrified North and South.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1859,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "The plan, the armory seizure, Robert E. Lee’s Marines, the trial, and how newspapers framed Brown as martyr or madman.",
-      "canonicalEventId": "john-brown-harpers-ferry::1859",
-      "titleEventKey": "john-brown-harpers-ferry-raid-made-civil-war::1859",
-      "places": [],
-      "namedHints": [
-        "john",
-        "brown",
-        "harpers",
-        "ferry",
-        "raid",
-        "made",
-        "civil",
-        "war",
-        "feel",
-        "inevitable"
-      ],
-      "opening": "Brown seized the federal armory in 1859 — a failed uprising that electrified North and South. The plan, the armory seizure, Robert E.",
-      "contentChars": 278
-    },
-    {
       "slug": "sand-creek-massacre-1864",
       "title": "The Sand Creek Massacre: A Dawn Attack on a Peace Camp in Colorado",
       "excerpt": "U.S. volunteers attacked a Cheyenne and Arapaho camp under a U.S. flag — killing mostly women, children, and elders.",
@@ -5337,6 +5334,27 @@
       "contentChars": 284
     },
     {
+      "slug": "the-1921-lynching-of-jessie-harvey",
+      "title": "The 1921 Lynching of Jessie Harvey",
+      "excerpt": "The lynching of Jessie Harvey in 1921 highlights the racial violence and injustices faced by African Americans in the early 20th century.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1921,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "Analyzing the events surrounding the lynching, the societal reactions, and its implications for the civil rights movement.",
+      "canonicalEventId": "the-1921-lynching-of-jessie-harvey::1921",
+      "titleEventKey": "lynching-jessie-harvey::1921",
+      "places": [],
+      "namedHints": [
+        "lynching",
+        "jessie",
+        "harvey"
+      ],
+      "opening": "The lynching of Jessie Harvey in 1921 highlights the racial violence and injustices faced by African Americans in the early 20th century. Analyzing the events surrounding the lynching, the societal reactions, and its implications for the civil rights movement.",
+      "contentChars": 317
+    },
+    {
       "slug": "qr-goldsboro-one-switch",
       "title": "The Goldsboro Bomb That Was One Switch From Arming",
       "excerpt": "After a B-52 broke up over North Carolina, one nuclear bomb’s arming sequence stopped at a single switch.",
@@ -5646,29 +5664,35 @@
       "contentChars": 251
     },
     {
-      "slug": "qr-apollo1-hatch",
-      "title": "The Inward Hatch That Trapped Apollo 1’s Crew",
-      "excerpt": "Apollo 1’s cabin hatch opened inward under pressure — and the crew could not escape the pad fire. (Apollo 1 hatch)",
-      "format": "quick-read",
+      "slug": "john-brown-harpers-ferry-1859",
+      "title": "John Brown at Harpers Ferry: The Raid That Made Civil War Feel Inevitable",
+      "excerpt": "Brown seized the federal armory in 1859 — a failed uprising that electrified North and South. (John Brown Harpers Ferry)",
+      "format": "full",
       "source": "published",
-      "eventYear": 1967,
-      "publishedAt": "2026-11-19T21:59:25.358Z",
-      "parentArticleSlug": "apollo-1-fire-1967",
-      "editorialAngle": "Inward-opening hatch as Apollo 1 escape barrier",
-      "canonicalEventId": "apollo1-hatch::1967",
-      "titleEventKey": "inward-hatch-trapped-apollo-crew::1967",
+      "eventYear": 1859,
+      "publishedAt": "2026-11-20T18:27:03.346Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "john-brown-harpers-ferry::1859",
+      "titleEventKey": "john-brown-harpers-ferry-raid-made-civil-war::1859",
       "places": [
-        "florida"
+        "virginia",
+        "kansas"
       ],
       "namedHints": [
-        "inward",
-        "hatch",
-        "trapped",
-        "apollo",
-        "crew"
+        "john",
+        "brown",
+        "harpers",
+        "ferry",
+        "raid",
+        "made",
+        "civil",
+        "war",
+        "feel",
+        "inevitable"
       ],
-      "opening": "On January 27, 1967, a fire broke out in the Apollo 1 command module during a pre-launch test at Cape Kennedy Air Force Station in Florida, killing all three astronauts aboard: Gus Grissom, Ed White, and Roger B. Chaffee.",
-      "contentChars": 2216
+      "opening": "John Brown's Raid at Harpers Ferry: A Prelude to Civil War On the night of October 16, 1859, John Brown and a small band of followers launched a daring raid on the federal armory in Harpers Ferry, Virginia [1]. This audacious attempt aimed to seize weapons and incite a slave rebellion across the South.",
+      "contentChars": 11522
     }
   ]
 }
