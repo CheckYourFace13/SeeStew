@@ -513,11 +513,13 @@
       "imageSearchTerms": [
         "Goldsboro nuclear accident switch"
       ],
-      "status": "pending",
+      "status": "published",
       "format": "quick-read",
       "eventYear": 1961,
       "historicalEra": "postwar-cold-war",
-      "canonicalEventId": "goldsboro-switch::1961"
+      "canonicalEventId": "goldsboro-switch::1961",
+      "publishedSlug": "qr-goldsboro-one-switch",
+      "publishedAt": "2026-11-21T20:24:26.727Z"
     },
     {
       "id": "qr-palomares-missing-bomb",

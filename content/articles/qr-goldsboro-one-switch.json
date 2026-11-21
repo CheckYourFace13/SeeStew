@@ -1,0 +1,45 @@
+{
+  "slug": "qr-goldsboro-one-switch",
+  "title": "The Goldsboro Bomb That Was One Switch From Arming",
+  "excerpt": "After a B-52 broke up over North Carolina, one nuclear bomb’s arming sequence stopped at a single switch. (Goldsboro nuclear bomb switch)",
+  "seoTitle": "Goldsboro nuclear bomb switch",
+  "seoDescription": "After a B-52 broke up over North Carolina, one nuclear bomb’s arming sequence stopped at a single switch. (Goldsboro nuclear bomb switch)",
+  "readMinutes": 2,
+  "category": "Military",
+  "format": "quick-read",
+  "eventYear": 1961,
+  "historicalEra": "postwar-cold-war",
+  "parentArticleSlug": "goldsboro-nuclear-accident-1961",
+  "editorialAngle": "Single arming switch that prevented Goldsboro bomb detonation",
+  "canonicalEventId": "goldsboro-switch::1961",
+  "relatedArticleSlugs": [
+    "goldsboro-nuclear-accident-1961"
+  ],
+  "content": "On January 24, 1961, a B-52 bomber carrying two nuclear bombs broke apart in mid-air over Goldsboro, North Carolina. One of those bombs, a Mark 39, came perilously close to detonation, with its arming sequence halted by the failure of a single switch. This incident, later classified as a \"Broken Arrow,\" highlighted the chilling risks associated with nuclear weapons during the Cold War [1][2].\n\nThe B-52 was on a routine flight when it encountered mechanical failure, leading to the catastrophic breakup. As the aircraft disintegrated, one bomb fell to the ground, while the other was ejected and landed in a nearby field. The bomb that fell intact had a complex arming mechanism designed to prevent accidental detonation. However, the failure of a single switch meant that the bomb was only one step away from being fully armed. This detail underscores the precarious nature of nuclear weapons management at the time and raises questions about the safety protocols in place [3].\n\nIn the aftermath of the incident, the U.S. Air Force conducted extensive recovery operations. The bomb that fell to the ground was eventually located and retrieved, but the potential for disaster was immense. Had the switch not failed, the consequences could have been catastrophic, affecting not only the immediate area but potentially escalating into a larger conflict. The Goldsboro incident is often cited as a critical moment in understanding the risks associated with nuclear arsenals, particularly during a period marked by heightened tensions between the United States and the Soviet Union [2].\n\nThe Goldsboro incident is not an isolated case; it is part of a broader history of nuclear accidents and near-misses during the Cold War. The U.S. government has since declassified many documents related to these events, revealing the precarious balance of power and the constant threat of nuclear warfare. The single switch that prevented a disaster serves as a stark reminder of the fragility of safety measures surrounding nuclear weapons and the importance of stringent protocols to prevent future accidents [1][3].\n\nThe Goldsboro incident remains a significant case study in military history, illustrating both the technological advancements and the inherent dangers of nuclear armament during a tense geopolitical era [2].\n\n## Sources\n\n1. Goldsboro broken arrow — *U.S. Air Force historical materials*. [Link](https://www.afhistory.af.mil/)\n2. Nuclear weapons accidents — *National Security Archive*. [Link](https://nsarchive.gwu.edu/)\n3. Broken Arrow — *Department of Defense FOIA / National Archives*. [Link](https://www.archives.gov/)",
+  "references": [
+    {
+      "title": "Goldsboro broken arrow",
+      "publisher": "U.S. Air Force historical materials",
+      "url": "https://www.afhistory.af.mil/"
+    },
+    {
+      "title": "Nuclear weapons accidents",
+      "publisher": "National Security Archive",
+      "url": "https://nsarchive.gwu.edu/"
+    },
+    {
+      "title": "Broken Arrow",
+      "publisher": "Department of Defense FOIA / National Archives",
+      "url": "https://www.archives.gov/"
+    }
+  ],
+  "image": {
+    "card": "/stories/qr-goldsboro-one-switch/card.jpg",
+    "hero": "/stories/qr-goldsboro-one-switch/card.jpg",
+    "alt": "The Goldsboro Bomb That Was One Switch From Arming",
+    "credit": "Library of Congress",
+    "sourcePageUrl": "https://www.loc.gov/item/2020394768/"
+  },
+  "relatedVideoId": null,
+  "createdAt": "2026-11-21T20:24:26.726Z"
+}

@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-21T17:17:18.391Z",
-  "publishedCount": 158,
-  "queueCount": 53,
+  "generatedAt": "2026-11-21T20:24:26.859Z",
+  "publishedCount": 159,
+  "queueCount": 52,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -3488,6 +3488,34 @@
       "contentChars": 10883
     },
     {
+      "slug": "sand-creek-massacre-1864",
+      "title": "The Sand Creek Massacre: A Dawn Attack on a Peace Camp in Colorado",
+      "excerpt": "U.S. volunteers attacked a Cheyenne and Arapaho camp under a U.S. flag — killing mostly women, children, and elders. (Sand Creek Massacre)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1864,
+      "publishedAt": "2026-11-21T17:16:26.921Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "sand-creek-massacre::1864",
+      "titleEventKey": "sand-creek-massacre-dawn-attack-peace-camp-colorado::1864",
+      "places": [
+        "colorado"
+      ],
+      "namedHints": [
+        "sand",
+        "creek",
+        "massacre",
+        "dawn",
+        "attack",
+        "peace",
+        "camp",
+        "colorado"
+      ],
+      "opening": "The Sand Creek Massacre: A Dawn Attack on a Peace Camp in Colorado On the morning of November 29, 1864, a group of U.S. volunteers attacked a peaceful encampment of Cheyenne and Arapaho tribes near Sand Creek in Colorado.",
+      "contentChars": 13182
+    },
+    {
       "slug": "scopes-trial-1925",
       "title": "The Scopes Trial: What Actually Happened in Dayton Beyond the Myth",
       "excerpt": "The 1925 “monkey trial” was courtroom theatre, a publicity stunt, and a real fight over teaching evolution. (Scopes Trial)",
@@ -5380,31 +5408,6 @@
       "contentChars": 251
     },
     {
-      "slug": "qr-goldsboro-one-switch",
-      "title": "The Goldsboro Bomb That Was One Switch From Arming",
-      "excerpt": "After a B-52 broke up over North Carolina, one nuclear bomb’s arming sequence stopped at a single switch.",
-      "format": "quick-read",
-      "source": "queue-quick-read",
-      "eventYear": 1961,
-      "publishedAt": null,
-      "parentArticleSlug": "goldsboro-nuclear-accident-1961",
-      "editorialAngle": "Single arming switch that prevented Goldsboro bomb detonation",
-      "canonicalEventId": "goldsboro-switch::1961",
-      "titleEventKey": "goldsboro-bomb-one-switch-arming::1961",
-      "places": [
-        "north carolina"
-      ],
-      "namedHints": [
-        "goldsboro",
-        "bomb",
-        "one",
-        "switch",
-        "arming"
-      ],
-      "opening": "After a B-52 broke up over North Carolina, one nuclear bomb’s arming sequence stopped at a single switch. The intact switch detail from declassified accounts — not the full Goldsboro narrative.",
-      "contentChars": 245
-    },
-    {
       "slug": "qr-palomares-missing-bomb",
       "title": "The Palomares Bomb That Hid Underwater for Months",
       "excerpt": "After a midair collision over Spain, one U.S. hydrogen bomb stayed lost at sea until a Navy search recovered it.",
@@ -5689,32 +5692,29 @@
       "contentChars": 251
     },
     {
-      "slug": "sand-creek-massacre-1864",
-      "title": "The Sand Creek Massacre: A Dawn Attack on a Peace Camp in Colorado",
-      "excerpt": "U.S. volunteers attacked a Cheyenne and Arapaho camp under a U.S. flag — killing mostly women, children, and elders. (Sand Creek Massacre)",
-      "format": "full",
+      "slug": "qr-goldsboro-one-switch",
+      "title": "The Goldsboro Bomb That Was One Switch From Arming",
+      "excerpt": "After a B-52 broke up over North Carolina, one nuclear bomb’s arming sequence stopped at a single switch. (Goldsboro nuclear bomb switch)",
+      "format": "quick-read",
       "source": "published",
-      "eventYear": 1864,
-      "publishedAt": "2026-11-21T17:16:26.921Z",
-      "parentArticleSlug": null,
-      "editorialAngle": null,
-      "canonicalEventId": "sand-creek-massacre::1864",
-      "titleEventKey": "sand-creek-massacre-dawn-attack-peace-camp-colorado::1864",
+      "eventYear": 1961,
+      "publishedAt": "2026-11-21T20:24:26.726Z",
+      "parentArticleSlug": "goldsboro-nuclear-accident-1961",
+      "editorialAngle": "Single arming switch that prevented Goldsboro bomb detonation",
+      "canonicalEventId": "goldsboro-switch::1961",
+      "titleEventKey": "goldsboro-bomb-one-switch-arming::1961",
       "places": [
-        "colorado"
+        "north carolina"
       ],
       "namedHints": [
-        "sand",
-        "creek",
-        "massacre",
-        "dawn",
-        "attack",
-        "peace",
-        "camp",
-        "colorado"
+        "goldsboro",
+        "bomb",
+        "one",
+        "switch",
+        "arming"
       ],
-      "opening": "The Sand Creek Massacre: A Dawn Attack on a Peace Camp in Colorado On the morning of November 29, 1864, a group of U.S. volunteers attacked a peaceful encampment of Cheyenne and Arapaho tribes near Sand Creek in Colorado.",
-      "contentChars": 13182
+      "opening": "On January 24, 1961, a B-52 bomber carrying two nuclear bombs broke apart in mid-air over Goldsboro, North Carolina. One of those bombs, a Mark 39, came perilously close to detonation, with its arming sequence halted by the failure of a single switch.",
+      "contentChars": 2311
     }
   ]
 }
