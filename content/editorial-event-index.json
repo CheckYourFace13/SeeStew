@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-20T18:27:54.380Z",
-  "publishedCount": 157,
+  "generatedAt": "2026-11-21T17:17:18.391Z",
+  "publishedCount": 158,
   "queueCount": 53,
   "entries": [
     {
@@ -1779,6 +1779,37 @@
       ],
       "opening": "The Oregon Balloon Bomb: When WWII Reached the Continental U.S. and Killed Civilians World War II was a global conflict that engulfed nations and continents, but for many Americans, the war felt distant and abstract.",
       "contentChars": 10523
+    },
+    {
+      "slug": "john-brown-harpers-ferry-1859",
+      "title": "John Brown at Harpers Ferry: The Raid That Made Civil War Feel Inevitable",
+      "excerpt": "Brown seized the federal armory in 1859 — a failed uprising that electrified North and South. (John Brown Harpers Ferry)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1859,
+      "publishedAt": "2026-11-20T18:27:03.346Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "john-brown-harpers-ferry::1859",
+      "titleEventKey": "john-brown-harpers-ferry-raid-made-civil-war::1859",
+      "places": [
+        "virginia",
+        "kansas"
+      ],
+      "namedHints": [
+        "john",
+        "brown",
+        "harpers",
+        "ferry",
+        "raid",
+        "made",
+        "civil",
+        "war",
+        "feel",
+        "inevitable"
+      ],
+      "opening": "John Brown's Raid at Harpers Ferry: A Prelude to Civil War On the night of October 16, 1859, John Brown and a small band of followers launched a daring raid on the federal armory in Harpers Ferry, Virginia [1]. This audacious attempt aimed to seize weapons and incite a slave rebellion across the South.",
+      "contentChars": 11522
     },
     {
       "slug": "johnstown-flood-1889",
@@ -4358,34 +4389,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "sand-creek-massacre-1864",
-      "title": "The Sand Creek Massacre: A Dawn Attack on a Peace Camp in Colorado",
-      "excerpt": "U.S. volunteers attacked a Cheyenne and Arapaho camp under a U.S. flag — killing mostly women, children, and elders.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1864,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "Why Black Kettle’s camp flew a flag of truce, Chivington’s orders and assault, the congressional investigations that followed, and how survivors testified.",
-      "canonicalEventId": "sand-creek-massacre::1864",
-      "titleEventKey": "sand-creek-massacre-dawn-attack-peace-camp-colorado::1864",
-      "places": [
-        "colorado"
-      ],
-      "namedHints": [
-        "sand",
-        "creek",
-        "massacre",
-        "dawn",
-        "attack",
-        "peace",
-        "camp",
-        "colorado"
-      ],
-      "opening": "U.S. volunteers attacked a Cheyenne and Arapaho camp under a U.S.",
-      "contentChars": 341
-    },
-    {
       "slug": "chinese-exclusion-act-1882",
       "title": "The Chinese Exclusion Act: When Congress Banned Immigration by Race",
       "excerpt": "In 1882 Congress barred Chinese laborers for ten years — the first major U.S. law to suspend immigration by nationality.",
@@ -5355,6 +5358,28 @@
       "contentChars": 317
     },
     {
+      "slug": "the-1944-gi-bill",
+      "title": "The GI Bill of 1944: Transforming American Society",
+      "excerpt": "Learn about the GI Bill of 1944 and its significant role in shaping post-war America by providing veterans with educational benefits.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1944,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "Exploring the long-term effects of the GI Bill on education and the economy.",
+      "canonicalEventId": "the-1944-gi-bill::1944",
+      "titleEventKey": "bill-transforming-american-society::1944",
+      "places": [],
+      "namedHints": [
+        "bill",
+        "transforming",
+        "american",
+        "society"
+      ],
+      "opening": "Learn about the GI Bill of 1944 and its significant role in shaping post-war America by providing veterans with educational benefits. Exploring the long-term effects of the GI Bill on education and the economy.",
+      "contentChars": 251
+    },
+    {
       "slug": "qr-goldsboro-one-switch",
       "title": "The Goldsboro Bomb That Was One Switch From Arming",
       "excerpt": "After a B-52 broke up over North Carolina, one nuclear bomb’s arming sequence stopped at a single switch.",
@@ -5664,35 +5689,32 @@
       "contentChars": 251
     },
     {
-      "slug": "john-brown-harpers-ferry-1859",
-      "title": "John Brown at Harpers Ferry: The Raid That Made Civil War Feel Inevitable",
-      "excerpt": "Brown seized the federal armory in 1859 — a failed uprising that electrified North and South. (John Brown Harpers Ferry)",
+      "slug": "sand-creek-massacre-1864",
+      "title": "The Sand Creek Massacre: A Dawn Attack on a Peace Camp in Colorado",
+      "excerpt": "U.S. volunteers attacked a Cheyenne and Arapaho camp under a U.S. flag — killing mostly women, children, and elders. (Sand Creek Massacre)",
       "format": "full",
       "source": "published",
-      "eventYear": 1859,
-      "publishedAt": "2026-11-20T18:27:03.346Z",
+      "eventYear": 1864,
+      "publishedAt": "2026-11-21T17:16:26.921Z",
       "parentArticleSlug": null,
       "editorialAngle": null,
-      "canonicalEventId": "john-brown-harpers-ferry::1859",
-      "titleEventKey": "john-brown-harpers-ferry-raid-made-civil-war::1859",
+      "canonicalEventId": "sand-creek-massacre::1864",
+      "titleEventKey": "sand-creek-massacre-dawn-attack-peace-camp-colorado::1864",
       "places": [
-        "virginia",
-        "kansas"
+        "colorado"
       ],
       "namedHints": [
-        "john",
-        "brown",
-        "harpers",
-        "ferry",
-        "raid",
-        "made",
-        "civil",
-        "war",
-        "feel",
-        "inevitable"
+        "sand",
+        "creek",
+        "massacre",
+        "dawn",
+        "attack",
+        "peace",
+        "camp",
+        "colorado"
       ],
-      "opening": "John Brown's Raid at Harpers Ferry: A Prelude to Civil War On the night of October 16, 1859, John Brown and a small band of followers launched a daring raid on the federal armory in Harpers Ferry, Virginia [1]. This audacious attempt aimed to seize weapons and incite a slave rebellion across the South.",
-      "contentChars": 11522
+      "opening": "The Sand Creek Massacre: A Dawn Attack on a Peace Camp in Colorado On the morning of November 29, 1864, a group of U.S. volunteers attacked a peaceful encampment of Cheyenne and Arapaho tribes near Sand Creek in Colorado.",
+      "contentChars": 13182
     }
   ]
 }

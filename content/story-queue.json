@@ -6811,9 +6811,9 @@
       "imageSearchTerms": [
         "Sand Creek Massacre 1864"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "sand-creek-massacre-1864",
+      "publishedAt": "2026-11-21T17:17:18.266Z",
       "eventYear": 1864,
       "historicalEra": "antebellum-civil-war"
     },
