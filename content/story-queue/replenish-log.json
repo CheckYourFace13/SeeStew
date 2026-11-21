@@ -521,6 +521,79 @@
       ],
       "fullPending": 41,
       "qrPending": 13
+    },
+    {
+      "at": "2026-11-21T14:02:07.950Z",
+      "dryRun": false,
+      "discover": true,
+      "seededFull": 0,
+      "seededQr": 0,
+      "discoveredFull": [
+        "the-1944-gi-bill"
+      ],
+      "discoveredQr": [],
+      "rejected": [
+        {
+          "id": "sacco-vanzetti-case",
+          "reasons": [
+            "id already in queue: sacco-vanzetti-case"
+          ]
+        },
+        {
+          "id": "the-chicago-race-riot-of-1919",
+          "reasons": [
+            "source URL probe failed: https://www.chicagohistory.org/chicago-race-riot-1919/ → HTTP 403; https://www.nps.gov/articles/race-riot-of-1919.htm → HTTP 404; https://www.uic.edu/depts/ahp/1919-race-riot/ → fetch failed"
+          ]
+        },
+        {
+          "id": "the-1927-great-mississippi-flood",
+          "reasons": [
+            "source URL probe failed: https://www.usgs.gov/special-topic/water-science-school/science/great-mississippi-flood-1927 → HTTP 404; https://www.archives.gov/exhibits/american_originals/flood.html → HTTP 404; https://www.lsu.edu/artsandsciences/history/1927flood.php → HTTP 404; https://www.pbs.org/wgbh/americanexperience/features/mississippi-flood-1927/ → HTTP 404"
+          ]
+        },
+        {
+          "id": "the-1936-texas-drought",
+          "reasons": [
+            "source URL probe failed: https://www.tamu.edu/1936-drought/ → HTTP 404; https://www.nrcs.usda.gov/wps/portal/nrcs/detail/national/home/?cid=nrcs144p2_058050 → HTTP 404; https://www.weather.gov/media/owp/drought/1936Drought.pdf → HTTP 404"
+          ]
+        },
+        {
+          "id": "qr-1",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 credible sources (need 2+)",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "duplicate URL undefined"
+          ]
+        },
+        {
+          "id": "qr-2",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 credible sources (need 2+)",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "duplicate URL undefined"
+          ]
+        }
+      ],
+      "fullPending": 41,
+      "qrPending": 13
     }
   ]
 }

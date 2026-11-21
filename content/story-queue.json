@@ -8630,6 +8630,52 @@
       "status": "pending",
       "publishedSlug": null,
       "publishedAt": null
+    },
+    {
+      "id": "the-1944-gi-bill",
+      "title": "The GI Bill of 1944: Transforming American Society",
+      "hook": "Learn about the GI Bill of 1944 and its significant role in shaping post-war America by providing veterans with educational benefits.",
+      "category": "Legislative History",
+      "angle": "Exploring the long-term effects of the GI Bill on education and the economy.",
+      "keywords": [
+        "GI Bill",
+        "1944",
+        "veterans",
+        "education",
+        "post-war"
+      ],
+      "imageSearchTerms": [
+        "GI Bill 1944",
+        "veterans education",
+        "post-war America"
+      ],
+      "eventYear": 1944,
+      "historicalEra": "World War II",
+      "requiredSources": [
+        {
+          "title": "The Servicemen’s Readjustment Act of 1944 (GI Bill)",
+          "publisher": "U.S. Department of Veterans Affairs",
+          "url": "https://www.va.gov/education/about-gi-bill-benefits/"
+        },
+        {
+          "title": "The GI Bill: A Brief History",
+          "publisher": "U.S. Department of Education",
+          "url": "https://www.ed.gov/news/press-releases/gi-bill-75th-anniversary"
+        },
+        {
+          "title": "The Impact of the GI Bill on Postwar America",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/publications/prologue/2004/spring/gi-bill.html"
+        },
+        {
+          "title": "The GI Bill: A New Deal for Veterans",
+          "publisher": "American History Magazine",
+          "url": "https://www.history.com/topics/world-war-ii/gi-bill"
+        }
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
     }
   ]
 }
