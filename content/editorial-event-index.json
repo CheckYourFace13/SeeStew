@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-21T20:24:26.859Z",
-  "publishedCount": 159,
+  "generatedAt": "2026-11-22T17:50:11.239Z",
+  "publishedCount": 160,
   "queueCount": 52,
   "entries": [
     {
@@ -3184,6 +3184,31 @@
       "contentChars": 2342
     },
     {
+      "slug": "qr-goldsboro-one-switch",
+      "title": "The Goldsboro Bomb That Was One Switch From Arming",
+      "excerpt": "After a B-52 broke up over North Carolina, one nuclear bomb’s arming sequence stopped at a single switch. (Goldsboro nuclear bomb switch)",
+      "format": "quick-read",
+      "source": "published",
+      "eventYear": 1961,
+      "publishedAt": "2026-11-21T20:24:26.726Z",
+      "parentArticleSlug": "goldsboro-nuclear-accident-1961",
+      "editorialAngle": "Single arming switch that prevented Goldsboro bomb detonation",
+      "canonicalEventId": "goldsboro-switch::1961",
+      "titleEventKey": "goldsboro-bomb-one-switch-arming::1961",
+      "places": [
+        "north carolina"
+      ],
+      "namedHints": [
+        "goldsboro",
+        "bomb",
+        "one",
+        "switch",
+        "arming"
+      ],
+      "opening": "On January 24, 1961, a B-52 bomber carrying two nuclear bombs broke apart in mid-air over Goldsboro, North Carolina. One of those bombs, a Mark 39, came perilously close to detonation, with its arming sequence halted by the failure of a single switch.",
+      "contentChars": 2311
+    },
+    {
       "slug": "qr-johnstown-south-fork-club",
       "title": "The South Fork Club Dam: Privilege Above Johnstown",
       "excerpt": "A private resort club altered a dam above Johnstown — then largely escaped liability after the flood. (Johnstown Flood South Fork Club)",
@@ -4417,31 +4442,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "chinese-exclusion-act-1882",
-      "title": "The Chinese Exclusion Act: When Congress Banned Immigration by Race",
-      "excerpt": "In 1882 Congress barred Chinese laborers for ten years — the first major U.S. law to suspend immigration by nationality.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1882,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "West Coast politics, the 1882 Act’s terms, enforcement and paperwork, later extensions, and the 1943 repeal path.",
-      "canonicalEventId": "chinese-exclusion-act::1882",
-      "titleEventKey": "chinese-exclusion-act-congress-banned-immigration-race::1882",
-      "places": [],
-      "namedHints": [
-        "chinese",
-        "exclusion",
-        "act",
-        "congress",
-        "banned",
-        "immigration",
-        "race"
-      ],
-      "opening": "In 1882 Congress barred Chinese laborers for ten years — the first major U.S. law to suspend immigration by nationality.",
-      "contentChars": 303
-    },
-    {
       "slug": "plessy-v-ferguson-1896",
       "title": "Plessy v. Ferguson: How “Separate but Equal” Became Law",
       "excerpt": "Homer Plessy’s challenge to a Louisiana train-car law produced the doctrine that legalized Jim Crow for generations.",
@@ -5408,6 +5408,28 @@
       "contentChars": 251
     },
     {
+      "slug": "the-1936-olympics",
+      "title": "The 1936 Olympics: A Stage for Politics and Propaganda",
+      "excerpt": "Explore how the 1936 Berlin Olympics became a platform for Nazi propaganda and international tensions.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1936,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "The intersection of sports and politics during a pivotal moment in history.",
+      "canonicalEventId": "the-1936-olympics::1936",
+      "titleEventKey": "olympics-stage-politics-propaganda::1936",
+      "places": [],
+      "namedHints": [
+        "olympics",
+        "stage",
+        "politics",
+        "propaganda"
+      ],
+      "opening": "Explore how the 1936 Berlin Olympics became a platform for Nazi propaganda and international tensions. The intersection of sports and politics during a pivotal moment in history.",
+      "contentChars": 262
+    },
+    {
       "slug": "qr-palomares-missing-bomb",
       "title": "The Palomares Bomb That Hid Underwater for Months",
       "excerpt": "After a midair collision over Spain, one U.S. hydrogen bomb stayed lost at sea until a Navy search recovered it.",
@@ -5692,29 +5714,32 @@
       "contentChars": 251
     },
     {
-      "slug": "qr-goldsboro-one-switch",
-      "title": "The Goldsboro Bomb That Was One Switch From Arming",
-      "excerpt": "After a B-52 broke up over North Carolina, one nuclear bomb’s arming sequence stopped at a single switch. (Goldsboro nuclear bomb switch)",
-      "format": "quick-read",
+      "slug": "chinese-exclusion-act-1882",
+      "title": "The Chinese Exclusion Act: When Congress Banned Immigration by Race",
+      "excerpt": "In 1882 Congress barred Chinese laborers for ten years — the first major U.S. law to suspend immigration by nationality. (Chinese Exclusion Act)",
+      "format": "full",
       "source": "published",
-      "eventYear": 1961,
-      "publishedAt": "2026-11-21T20:24:26.726Z",
-      "parentArticleSlug": "goldsboro-nuclear-accident-1961",
-      "editorialAngle": "Single arming switch that prevented Goldsboro bomb detonation",
-      "canonicalEventId": "goldsboro-switch::1961",
-      "titleEventKey": "goldsboro-bomb-one-switch-arming::1961",
+      "eventYear": 1882,
+      "publishedAt": "2026-11-22T17:42:44.211Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "chinese-exclusion-act::1882",
+      "titleEventKey": "chinese-exclusion-act-congress-banned-immigration-race::1882",
       "places": [
-        "north carolina"
+        "california",
+        "san francisco"
       ],
       "namedHints": [
-        "goldsboro",
-        "bomb",
-        "one",
-        "switch",
-        "arming"
+        "chinese",
+        "exclusion",
+        "act",
+        "congress",
+        "banned",
+        "immigration",
+        "race"
       ],
-      "opening": "On January 24, 1961, a B-52 bomber carrying two nuclear bombs broke apart in mid-air over Goldsboro, North Carolina. One of those bombs, a Mark 39, came perilously close to detonation, with its arming sequence halted by the failure of a single switch.",
-      "contentChars": 2311
+      "opening": "The Chinese Exclusion Act of 1882: A Landmark in Immigration Restriction On May 6, 1882, the United States Congress enacted the Chinese Exclusion Act, a law that prohibited Chinese laborers from immigrating to the U.S. for ten years.",
+      "contentChars": 13099
     }
   ]
 }

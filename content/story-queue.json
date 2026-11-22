@@ -6858,9 +6858,9 @@
       "imageSearchTerms": [
         "Chinese Exclusion Act 1882"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "chinese-exclusion-act-1882",
+      "publishedAt": "2026-11-22T17:50:11.134Z",
       "eventYear": 1882,
       "historicalEra": "reconstruction-gilded-age"
     },
