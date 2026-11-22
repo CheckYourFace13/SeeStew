@@ -8676,6 +8676,52 @@
       "status": "pending",
       "publishedSlug": null,
       "publishedAt": null
+    },
+    {
+      "id": "the-1936-olympics",
+      "title": "The 1936 Olympics: A Stage for Politics and Propaganda",
+      "hook": "Explore how the 1936 Berlin Olympics became a platform for Nazi propaganda and international tensions.",
+      "category": "Sports History",
+      "angle": "The intersection of sports and politics during a pivotal moment in history.",
+      "keywords": [
+        "1936 Olympics",
+        "Nazi Germany",
+        "political propaganda",
+        "Jesse Owens",
+        "international relations"
+      ],
+      "imageSearchTerms": [
+        "1936 Olympics",
+        "Nazi Germany",
+        "Jesse Owens"
+      ],
+      "eventYear": 1936,
+      "historicalEra": "Interwar Period",
+      "requiredSources": [
+        {
+          "title": "The 1936 Olympics: A New Perspective",
+          "publisher": "U.S. Holocaust Memorial Museum",
+          "url": "https://www.ushmm.org/learn/timeline-of-events/1936-olympics"
+        },
+        {
+          "title": "Olympics and the Nazi Propaganda Machine",
+          "publisher": "Smithsonian Magazine",
+          "url": "https://www.smithsonianmag.com/history/olympics-and-the-nazi-propaganda-machine-180960714/"
+        },
+        {
+          "title": "Jesse Owens and the 1936 Berlin Olympics",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/articles/jesse-owens-and-the-1936-berlin-olympics.htm"
+        },
+        {
+          "title": "The 1936 Berlin Olympics: A Historical Overview",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/today-in-history/august-01/"
+        }
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
     }
   ]
 }

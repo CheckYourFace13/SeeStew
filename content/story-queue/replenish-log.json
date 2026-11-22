@@ -594,6 +594,108 @@
       ],
       "fullPending": 41,
       "qrPending": 13
+    },
+    {
+      "at": "2026-11-22T13:55:35.629Z",
+      "dryRun": false,
+      "discover": true,
+      "seededFull": 0,
+      "seededQr": 0,
+      "discoveredFull": [
+        "the-1936-olympics"
+      ],
+      "discoveredQr": [],
+      "rejected": [
+        {
+          "id": "the-great-society",
+          "reasons": [
+            "source URL probe failed: https://www.presidency.ucsb.edu/documents/great-society → HTTP 404; https://www.archives.gov/exhibits/american_originals/greatsoc.html → HTTP 404; https://www.whha.org/lyndon-b-johnson-and-the-great-society/ → HTTP 403; https://aspe.hhs.gov/report/war-poverty-retrospective → HTTP 403"
+          ]
+        },
+        {
+          "id": "the-1950s-suburbanization",
+          "reasons": [
+            "source URL probe failed: https://www.nps.gov/articles/suburbanization-of-america.htm → HTTP 404; https://www.census.gov/library/stories/2020/06/suburbanization-in-the-1950s.html → This operation was aborted; https://americanhistory.si.edu/suburbia → HTTP 403; https://www.harvard.edu/suburbanization-american-dream → HTTP 404"
+          ]
+        },
+        {
+          "id": "the-19th-amendment",
+          "reasons": [
+            "overlap hold_for_review vs nineteenth-amendment-1920: ambiguous_overlap"
+          ]
+        },
+        {
+          "id": "the-new-deal",
+          "reasons": [
+            "id already in queue: the-new-deal"
+          ]
+        },
+        {
+          "id": "qr-001",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 credible sources (need 2+)",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "duplicate URL undefined",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "duplicate URL undefined"
+          ]
+        },
+        {
+          "id": "qr-002",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 credible sources (need 2+)",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "duplicate URL undefined",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "duplicate URL undefined"
+          ]
+        },
+        {
+          "id": "qr-003",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 credible sources (need 2+)",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "duplicate URL undefined",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "duplicate URL undefined"
+          ]
+        }
+      ],
+      "fullPending": 41,
+      "qrPending": 12
     }
   ]
 }
