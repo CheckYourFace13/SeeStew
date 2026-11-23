@@ -696,6 +696,112 @@
       ],
       "fullPending": 41,
       "qrPending": 12
+    },
+    {
+      "at": "2026-11-23T17:07:37.409Z",
+      "dryRun": false,
+      "discover": true,
+      "seededFull": 0,
+      "seededQr": 0,
+      "discoveredFull": [],
+      "discoveredQr": [],
+      "rejected": [
+        {
+          "id": "chicago-railroad-strike-1877",
+          "reasons": [
+            "source URL probe failed: https://www.loc.gov/item/ihas.200002032/ → HTTP 403; https://www.nps.gov/articles/great-railroad-strike-of-1877.htm → HTTP 404; https://www.pbs.org/wgbh/americanexperience/features/railroad-strike-1877/ → HTTP 404; https://www.history.ucsb.edu/projects/great-railroad-strike-of-1877/ → HTTP 404"
+          ]
+        },
+        {
+          "id": "women-suffrage-movement",
+          "reasons": [
+            "id already in queue: women-suffrage-movement"
+          ]
+        },
+        {
+          "id": "the-1929-stock-market-crash",
+          "reasons": [
+            "source URL probe failed: https://www.loc.gov/exhibits/american-memories/great-crash.html → HTTP 404; https://www.archives.gov/exhibits/american_originals/crash.html → HTTP 404; https://electionstudies.org/wp-content/uploads/2020/07/Stock-Market-Crash-1929.pdf → HTTP 403"
+          ]
+        },
+        {
+          "id": "the-oregon-trail",
+          "reasons": [
+            "source URL probe failed: https://www.nps.gov/oreg/planyourvisit/oregon-trail.htm → HTTP 404; https://www.ohs.org/research-and-collections/oregon-trail.cfm → HTTP 404; https://history.unl.edu/oregon-trail → HTTP 404; https://americanhistory.si.edu/oregon-trail → HTTP 403"
+          ]
+        },
+        {
+          "id": "the-new-deal",
+          "reasons": [
+            "id already in queue: the-new-deal"
+          ]
+        },
+        {
+          "id": "qr-001",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 credible sources (need 2+)",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "duplicate URL undefined",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "duplicate URL undefined"
+          ]
+        },
+        {
+          "id": "qr-002",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 credible sources (need 2+)",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "duplicate URL undefined",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "duplicate URL undefined"
+          ]
+        },
+        {
+          "id": "qr-003",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 credible sources (need 2+)",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "duplicate URL undefined",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "duplicate URL undefined"
+          ]
+        }
+      ],
+      "fullPending": 40,
+      "qrPending": 12
     }
   ]
 }
