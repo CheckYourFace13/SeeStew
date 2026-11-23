@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-22T17:50:11.239Z",
-  "publishedCount": 160,
-  "queueCount": 52,
+  "generatedAt": "2026-11-23T22:00:36.125Z",
+  "publishedCount": 161,
+  "queueCount": 51,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -685,6 +685,34 @@
       ],
       "opening": "The Children’s Blizzard of 1888: A Sudden Storm Turns Deadly On January 12, 1888, a seemingly warm winter day across the Great Plains turned into a deadly nightmare for schoolchildren. As temperatures soared to mild levels, many children left their schoolhouses in Nebraska, South Dakota, and Minnesota, unaware that a fierce blizzard was about to engulf them.",
       "contentChars": 9661
+    },
+    {
+      "slug": "chinese-exclusion-act-1882",
+      "title": "The Chinese Exclusion Act: When Congress Banned Immigration by Race",
+      "excerpt": "In 1882 Congress barred Chinese laborers for ten years — the first major U.S. law to suspend immigration by nationality. (Chinese Exclusion Act)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1882,
+      "publishedAt": "2026-11-22T17:42:44.211Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "chinese-exclusion-act::1882",
+      "titleEventKey": "chinese-exclusion-act-congress-banned-immigration-race::1882",
+      "places": [
+        "california",
+        "san francisco"
+      ],
+      "namedHints": [
+        "chinese",
+        "exclusion",
+        "act",
+        "congress",
+        "banned",
+        "immigration",
+        "race"
+      ],
+      "opening": "The Chinese Exclusion Act of 1882: A Landmark in Immigration Restriction On May 6, 1882, the United States Congress enacted the Chinese Exclusion Act, a law that prohibited Chinese laborers from immigrating to the U.S. for ten years.",
+      "contentChars": 13099
     },
     {
       "slug": "cocoanut-grove-fire-1942",
@@ -4442,32 +4470,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "plessy-v-ferguson-1896",
-      "title": "Plessy v. Ferguson: How “Separate but Equal” Became Law",
-      "excerpt": "Homer Plessy’s challenge to a Louisiana train-car law produced the doctrine that legalized Jim Crow for generations.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1896,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "The Comité des Citoyens test case, Justice Brown’s majority, Harlan’s dissent, and how the ruling shaped segregation until Brown.",
-      "canonicalEventId": "plessy-v-ferguson::1896",
-      "titleEventKey": "plessy-ferguson-separate-but-equal-became-law::1896",
-      "places": [
-        "louisiana"
-      ],
-      "namedHints": [
-        "plessy",
-        "ferguson",
-        "separate",
-        "equal",
-        "became",
-        "law"
-      ],
-      "opening": "Homer Plessy’s challenge to a Louisiana train-car law produced the doctrine that legalized Jim Crow for generations. The Comité des Citoyens test case, Justice Brown’s majority, Harlan’s dissent, and how the ruling shaped segregation until Brown.",
-      "contentChars": 296
-    },
-    {
       "slug": "uss-maine-explosion-1898",
       "title": "The USS Maine Explosion: Havana Harbor, Yellow Press, and a Rush to War",
       "excerpt": "The battleship Maine blew up in Havana — and Americans argued sabotage before investigators finished.",
@@ -5714,32 +5716,31 @@
       "contentChars": 251
     },
     {
-      "slug": "chinese-exclusion-act-1882",
-      "title": "The Chinese Exclusion Act: When Congress Banned Immigration by Race",
-      "excerpt": "In 1882 Congress barred Chinese laborers for ten years — the first major U.S. law to suspend immigration by nationality. (Chinese Exclusion Act)",
+      "slug": "plessy-v-ferguson-1896",
+      "title": "Plessy v. Ferguson: How “Separate but Equal” Became Law",
+      "excerpt": "Homer Plessy’s challenge to a Louisiana train-car law produced the doctrine that legalized Jim Crow for generations. (Plessy v Ferguson)",
       "format": "full",
       "source": "published",
-      "eventYear": 1882,
-      "publishedAt": "2026-11-22T17:42:44.211Z",
+      "eventYear": 1896,
+      "publishedAt": "2026-11-23T21:58:20.746Z",
       "parentArticleSlug": null,
       "editorialAngle": null,
-      "canonicalEventId": "chinese-exclusion-act::1882",
-      "titleEventKey": "chinese-exclusion-act-congress-banned-immigration-race::1882",
+      "canonicalEventId": "plessy-v-ferguson::1896",
+      "titleEventKey": "plessy-ferguson-separate-but-equal-became-law::1896",
       "places": [
-        "california",
-        "san francisco"
+        "louisiana",
+        "orleans"
       ],
       "namedHints": [
-        "chinese",
-        "exclusion",
-        "act",
-        "congress",
-        "banned",
-        "immigration",
-        "race"
+        "plessy",
+        "ferguson",
+        "separate",
+        "equal",
+        "became",
+        "law"
       ],
-      "opening": "The Chinese Exclusion Act of 1882: A Landmark in Immigration Restriction On May 6, 1882, the United States Congress enacted the Chinese Exclusion Act, a law that prohibited Chinese laborers from immigrating to the U.S. for ten years.",
-      "contentChars": 13099
+      "opening": "The Challenge of Homer Plessy in Louisiana, 1892 On June 7, 1892, Homer Plessy boarded a train in New Orleans, Louisiana, intending to challenge the state’s segregation laws. Plessy, who was of mixed race, deliberately sat in the \"whites-only\" section of the train, knowing he would be arrested.",
+      "contentChars": 11393
     }
   ]
 }

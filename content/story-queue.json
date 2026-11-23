@@ -6905,9 +6905,9 @@
       "imageSearchTerms": [
         "Plessy v Ferguson 1896"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "plessy-v-ferguson-1896",
+      "publishedAt": "2026-11-23T22:00:36.029Z",
       "eventYear": 1896,
       "historicalEra": "reconstruction-gilded-age"
     },
