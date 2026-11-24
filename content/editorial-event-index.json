@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-23T22:00:36.125Z",
-  "publishedCount": 161,
-  "queueCount": 51,
+  "generatedAt": "2026-11-24T20:35:38.930Z",
+  "publishedCount": 162,
+  "queueCount": 52,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -2925,6 +2925,33 @@
       "contentChars": 11248
     },
     {
+      "slug": "plessy-v-ferguson-1896",
+      "title": "Plessy v. Ferguson: How “Separate but Equal” Became Law",
+      "excerpt": "Homer Plessy’s challenge to a Louisiana train-car law produced the doctrine that legalized Jim Crow for generations. (Plessy v Ferguson)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1896,
+      "publishedAt": "2026-11-23T21:58:20.746Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "plessy-v-ferguson::1896",
+      "titleEventKey": "plessy-ferguson-separate-but-equal-became-law::1896",
+      "places": [
+        "louisiana",
+        "orleans"
+      ],
+      "namedHints": [
+        "plessy",
+        "ferguson",
+        "separate",
+        "equal",
+        "became",
+        "law"
+      ],
+      "opening": "The Challenge of Homer Plessy in Louisiana, 1892 On June 7, 1892, Homer Plessy boarded a train in New Orleans, Louisiana, intending to challenge the state’s segregation laws. Plessy, who was of mixed race, deliberately sat in the \"whites-only\" section of the train, knowing he would be arrested.",
+      "contentChars": 11393
+    },
+    {
       "slug": "poison-squad-wiley",
       "title": "The Poison Squad: When Civil Servants Ate Borax to Prove Food Was Fake",
       "excerpt": "Harvey Wiley’s volunteers swallowed preservatives so Congress would pass the Pure Food and Drug Act.",
@@ -4470,35 +4497,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "uss-maine-explosion-1898",
-      "title": "The USS Maine Explosion: Havana Harbor, Yellow Press, and a Rush to War",
-      "excerpt": "The battleship Maine blew up in Havana — and Americans argued sabotage before investigators finished.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1898,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "What happened the night of Feb. 15, 1898, how Hearst/Pulitzer coverage framed Spain, the Sampson board findings, and later forensic debates — only what sources support.",
-      "canonicalEventId": "uss-maine-explosion::1898",
-      "titleEventKey": "uss-maine-explosion-havana-harbor-yellow-press-rush::1898",
-      "places": [
-        "maine"
-      ],
-      "namedHints": [
-        "uss",
-        "maine",
-        "explosion",
-        "havana",
-        "harbor",
-        "yellow",
-        "press",
-        "rush",
-        "war"
-      ],
-      "opening": "The battleship Maine blew up in Havana — and Americans argued sabotage before investigators finished. What happened the night of Feb.",
-      "contentChars": 328
-    },
-    {
       "slug": "blair-mountain-1921",
       "title": "The Battle of Blair Mountain: America’s Largest Labor Uprising",
       "excerpt": "Thousands of armed miners marched in West Virginia in 1921 — until federal troops ended the largest labor uprising in U.S. history.",
@@ -5432,6 +5430,52 @@
       "contentChars": 262
     },
     {
+      "slug": "the-great-depression-1929",
+      "title": "The Great Depression: Causes and Consequences",
+      "excerpt": "Delve into the economic collapse of 1929 and its profound effects on American society.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1929,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "A comprehensive look at the factors leading to the Great Depression and its long-term implications.",
+      "canonicalEventId": "the-great-depression::1929",
+      "titleEventKey": "great-depression-causes-consequences::1929",
+      "places": [],
+      "namedHints": [
+        "great",
+        "depression",
+        "causes",
+        "consequences"
+      ],
+      "opening": "Delve into the economic collapse of 1929 and its profound effects on American society. A comprehensive look at the factors leading to the Great Depression and its long-term implications.",
+      "contentChars": 253
+    },
+    {
+      "slug": "the-battle-of-gettysburg-1863",
+      "title": "The Battle of Gettysburg: Turning Point of the Civil War",
+      "excerpt": "Examine the pivotal Battle of Gettysburg and its significance in the American Civil War.",
+      "format": "full",
+      "source": "queue-full",
+      "eventYear": 1863,
+      "publishedAt": null,
+      "parentArticleSlug": null,
+      "editorialAngle": "A detailed look at the events of the Battle of Gettysburg and its impact on the Civil War.",
+      "canonicalEventId": "the-battle-of-gettysburg::1863",
+      "titleEventKey": "battle-gettysburg-turning-point-civil-war::1863",
+      "places": [],
+      "namedHints": [
+        "battle",
+        "gettysburg",
+        "turning",
+        "point",
+        "civil",
+        "war"
+      ],
+      "opening": "Examine the pivotal Battle of Gettysburg and its significance in the American Civil War. A detailed look at the events of the Battle of Gettysburg and its impact on the Civil War.",
+      "contentChars": 229
+    },
+    {
       "slug": "qr-palomares-missing-bomb",
       "title": "The Palomares Bomb That Hid Underwater for Months",
       "excerpt": "After a midair collision over Spain, one U.S. hydrogen bomb stayed lost at sea until a Navy search recovered it.",
@@ -5716,31 +5760,33 @@
       "contentChars": 251
     },
     {
-      "slug": "plessy-v-ferguson-1896",
-      "title": "Plessy v. Ferguson: How “Separate but Equal” Became Law",
-      "excerpt": "Homer Plessy’s challenge to a Louisiana train-car law produced the doctrine that legalized Jim Crow for generations. (Plessy v Ferguson)",
+      "slug": "uss-maine-explosion-1898",
+      "title": "The USS Maine Explosion: Havana Harbor, Yellow Press, and a Rush to War",
+      "excerpt": "The battleship Maine blew up in Havana — and Americans argued sabotage before investigators finished. (USS Maine explosion)",
       "format": "full",
       "source": "published",
-      "eventYear": 1896,
-      "publishedAt": "2026-11-23T21:58:20.746Z",
+      "eventYear": 1898,
+      "publishedAt": "2026-11-24T20:33:55.752Z",
       "parentArticleSlug": null,
       "editorialAngle": null,
-      "canonicalEventId": "plessy-v-ferguson::1896",
-      "titleEventKey": "plessy-ferguson-separate-but-equal-became-law::1896",
+      "canonicalEventId": "uss-maine-explosion::1898",
+      "titleEventKey": "uss-maine-explosion-havana-harbor-yellow-press-rush::1898",
       "places": [
-        "louisiana",
-        "orleans"
+        "maine"
       ],
       "namedHints": [
-        "plessy",
-        "ferguson",
-        "separate",
-        "equal",
-        "became",
-        "law"
+        "uss",
+        "maine",
+        "explosion",
+        "havana",
+        "harbor",
+        "yellow",
+        "press",
+        "rush",
+        "war"
       ],
-      "opening": "The Challenge of Homer Plessy in Louisiana, 1892 On June 7, 1892, Homer Plessy boarded a train in New Orleans, Louisiana, intending to challenge the state’s segregation laws. Plessy, who was of mixed race, deliberately sat in the \"whites-only\" section of the train, knowing he would be arrested.",
-      "contentChars": 11393
+      "opening": "On the night of February 15, 1898, a catastrophic explosion rocked Havana Harbor, claiming the lives of 266 crew members aboard the USS Maine, an American battleship. The Maine was anchored in the harbor ostensibly to protect American interests during the Cuban War of Independence, which had been marked by a brutal struggle against Spanish colonial rule.",
+      "contentChars": 10046
     }
   ]
 }

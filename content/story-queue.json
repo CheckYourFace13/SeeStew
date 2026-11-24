@@ -6952,9 +6952,9 @@
       "imageSearchTerms": [
         "USS Maine Havana explosion 1898"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "uss-maine-explosion-1898",
+      "publishedAt": "2026-11-24T20:35:38.802Z",
       "eventYear": 1898,
       "historicalEra": "reconstruction-gilded-age"
     },
