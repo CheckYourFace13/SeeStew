@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-24T20:35:38.930Z",
-  "publishedCount": 162,
-  "queueCount": 52,
+  "generatedAt": "2026-11-24T23:25:00.294Z",
+  "publishedCount": 163,
+  "queueCount": 51,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -4250,6 +4250,35 @@
       "contentChars": 14371
     },
     {
+      "slug": "uss-maine-explosion-1898",
+      "title": "The USS Maine Explosion: Havana Harbor, Yellow Press, and a Rush to War",
+      "excerpt": "The battleship Maine blew up in Havana — and Americans argued sabotage before investigators finished. (USS Maine explosion)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1898,
+      "publishedAt": "2026-11-24T20:33:55.752Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "uss-maine-explosion::1898",
+      "titleEventKey": "uss-maine-explosion-havana-harbor-yellow-press-rush::1898",
+      "places": [
+        "maine"
+      ],
+      "namedHints": [
+        "uss",
+        "maine",
+        "explosion",
+        "havana",
+        "harbor",
+        "yellow",
+        "press",
+        "rush",
+        "war"
+      ],
+      "opening": "On the night of February 15, 1898, a catastrophic explosion rocked Havana Harbor, claiming the lives of 266 crew members aboard the USS Maine, an American battleship. The Maine was anchored in the harbor ostensibly to protect American interests during the Cuban War of Independence, which had been marked by a brutal struggle against Spanish colonial rule.",
+      "contentChars": 10046
+    },
+    {
       "slug": "waco-siege-1993",
       "title": "The Waco Siege of 1993: How a 51-Day Standoff Ended in Fire",
       "excerpt": "Federal agents tried to serve a warrant at Mount Carmel — and the confrontation with the Branch Davidians ended with dozens dead. (Waco siege 1993)",
@@ -5476,31 +5505,6 @@
       "contentChars": 229
     },
     {
-      "slug": "qr-palomares-missing-bomb",
-      "title": "The Palomares Bomb That Hid Underwater for Months",
-      "excerpt": "After a midair collision over Spain, one U.S. hydrogen bomb stayed lost at sea until a Navy search recovered it.",
-      "format": "quick-read",
-      "source": "queue-quick-read",
-      "eventYear": 1966,
-      "publishedAt": null,
-      "parentArticleSlug": "palomares-incident-1966",
-      "editorialAngle": "Underwater recovery of the missing Palomares hydrogen bomb",
-      "canonicalEventId": "palomares-missing-bomb::1966",
-      "titleEventKey": "palomares-bomb-hid-underwater-months::1966",
-      "places": [
-        "palomares"
-      ],
-      "namedHints": [
-        "palomares",
-        "bomb",
-        "hid",
-        "underwater",
-        "months"
-      ],
-      "opening": "After a midair collision over Spain, one U.S. hydrogen bomb stayed lost at sea until a Navy search recovered it.",
-      "contentChars": 254
-    },
-    {
       "slug": "qr-indianapolis-delayed-rescue",
       "title": "Why Help Took So Long After Indianapolis Sank",
       "excerpt": "Survivors of USS Indianapolis drifted for days — because the Navy did not know the cruiser was overdue.",
@@ -5760,33 +5764,29 @@
       "contentChars": 251
     },
     {
-      "slug": "uss-maine-explosion-1898",
-      "title": "The USS Maine Explosion: Havana Harbor, Yellow Press, and a Rush to War",
-      "excerpt": "The battleship Maine blew up in Havana — and Americans argued sabotage before investigators finished. (USS Maine explosion)",
-      "format": "full",
+      "slug": "qr-palomares-missing-bomb",
+      "title": "The Palomares Bomb That Hid Underwater for Months",
+      "excerpt": "After a midair collision over Spain, one U.S. hydrogen bomb stayed lost at sea until a Navy search recovered it. (Palomares missing bomb)",
+      "format": "quick-read",
       "source": "published",
-      "eventYear": 1898,
-      "publishedAt": "2026-11-24T20:33:55.752Z",
-      "parentArticleSlug": null,
-      "editorialAngle": null,
-      "canonicalEventId": "uss-maine-explosion::1898",
-      "titleEventKey": "uss-maine-explosion-havana-harbor-yellow-press-rush::1898",
+      "eventYear": 1966,
+      "publishedAt": "2026-11-24T23:25:00.160Z",
+      "parentArticleSlug": "palomares-incident-1966",
+      "editorialAngle": "Underwater recovery of the missing Palomares hydrogen bomb",
+      "canonicalEventId": "palomares-missing-bomb::1966",
+      "titleEventKey": "palomares-bomb-hid-underwater-months::1966",
       "places": [
-        "maine"
+        "palomares"
       ],
       "namedHints": [
-        "uss",
-        "maine",
-        "explosion",
-        "havana",
-        "harbor",
-        "yellow",
-        "press",
-        "rush",
-        "war"
+        "palomares",
+        "bomb",
+        "hid",
+        "underwater",
+        "months"
       ],
-      "opening": "On the night of February 15, 1898, a catastrophic explosion rocked Havana Harbor, claiming the lives of 266 crew members aboard the USS Maine, an American battleship. The Maine was anchored in the harbor ostensibly to protect American interests during the Cuban War of Independence, which had been marked by a brutal struggle against Spanish colonial rule.",
-      "contentChars": 10046
+      "opening": "In January 1966, a U.S. Air Force B-52 bomber collided with a refueling plane over Palomares, Spain, resulting in the loss of four hydrogen bombs.",
+      "contentChars": 2170
     }
   ]
 }

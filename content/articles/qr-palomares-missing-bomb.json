@@ -1,0 +1,45 @@
+{
+  "slug": "qr-palomares-missing-bomb",
+  "title": "The Palomares Bomb That Hid Underwater for Months",
+  "excerpt": "After a midair collision over Spain, one U.S. hydrogen bomb stayed lost at sea until a Navy search recovered it. (Palomares missing bomb)",
+  "seoTitle": "Palomares missing bomb",
+  "seoDescription": "After a midair collision over Spain, one U.S. hydrogen bomb stayed lost at sea until a Navy search recovered it. (Palomares missing bomb)",
+  "readMinutes": 2,
+  "category": "Military",
+  "format": "quick-read",
+  "eventYear": 1966,
+  "historicalEra": "postwar-cold-war",
+  "parentArticleSlug": "palomares-incident-1966",
+  "editorialAngle": "Underwater recovery of the missing Palomares hydrogen bomb",
+  "canonicalEventId": "palomares-missing-bomb::1966",
+  "relatedArticleSlugs": [
+    "palomares-incident-1966"
+  ],
+  "content": "In January 1966, a U.S. Air Force B-52 bomber collided with a refueling plane over Palomares, Spain, resulting in the loss of four hydrogen bombs. While three were recovered relatively quickly, one bomb remained missing underwater for nearly three months, prompting an extensive search and recovery operation [1].\n\nThe incident occurred on January 17, 1966, during the Cold War, a time when the U.S. was heavily invested in nuclear deterrence strategies. The B-52 was part of a routine mission, but the collision caused the bomber to drop its payload, which included the four bombs. Fortunately, there were no fatalities from the crash, but the loss of the bombs raised significant concerns about nuclear safety and environmental contamination in the Mediterranean Sea [2].\n\nThe missing bomb, designated as a Mark 28, was a thermonuclear weapon. Its recovery became a priority for the U.S. military, not only to prevent potential environmental hazards but also to maintain national security. The search operation was extensive, involving the deployment of multiple naval vessels and aircraft. The U.S. Navy's submersible vehicle, Alvin, played a crucial role in locating the bomb. On April 7, 1966, after weeks of searching, Alvin successfully located the bomb on the seafloor at a depth of about 2,600 feet [3].\n\nOne surprising detail about the recovery operation is that the bomb was found intact, with its nuclear components still secure. This was a relief for military officials, as the potential for a nuclear accident had been a significant concern throughout the search. The recovery of the bomb was completed on April 11, 1966, and it was subsequently transported to the U.S. for analysis and decontamination [1].\n\nThe Palomares incident highlighted the risks associated with nuclear weapons and the importance of rigorous safety protocols. It also underscored the complexities of military operations during the Cold War, where accidents could have far-reaching implications. The successful recovery of the missing bomb demonstrated the capabilities of U.S. naval technology and the commitment to ensuring that such incidents did not escalate into larger crises [2].\n\n## Sources\n\n1. Palomares — *U.S. Air Force historical materials*. [Link](https://www.afhistory.af.mil/)\n2. Palomares incident — *National Archives*. [Link](https://www.archives.gov/)\n3. Naval History — *Naval History and Heritage Command*. [Link](https://www.history.navy.mil/)",
+  "references": [
+    {
+      "title": "Palomares",
+      "publisher": "U.S. Air Force historical materials",
+      "url": "https://www.afhistory.af.mil/"
+    },
+    {
+      "title": "Palomares incident",
+      "publisher": "National Archives",
+      "url": "https://www.archives.gov/"
+    },
+    {
+      "title": "Naval History",
+      "publisher": "Naval History and Heritage Command",
+      "url": "https://www.history.navy.mil/"
+    }
+  ],
+  "image": {
+    "card": "/stories/qr-palomares-missing-bomb/card.jpg",
+    "hero": "/stories/qr-palomares-missing-bomb/card.jpg",
+    "alt": "The Palomares Bomb That Hid Underwater for Months",
+    "credit": "Library of Congress",
+    "sourcePageUrl": "https://www.loc.gov/item/usteledirec03317/"
+  },
+  "relatedVideoId": null,
+  "createdAt": "2026-11-24T23:25:00.160Z"
+}

@@ -556,11 +556,13 @@
       "imageSearchTerms": [
         "Palomares missing bomb 1966"
       ],
-      "status": "pending",
+      "status": "published",
       "format": "quick-read",
       "eventYear": 1966,
       "historicalEra": "postwar-cold-war",
-      "canonicalEventId": "palomares-missing-bomb::1966"
+      "canonicalEventId": "palomares-missing-bomb::1966",
+      "publishedSlug": "qr-palomares-missing-bomb",
+      "publishedAt": "2026-11-24T23:25:00.160Z"
     },
     {
       "id": "qr-indianapolis-delayed-rescue",
