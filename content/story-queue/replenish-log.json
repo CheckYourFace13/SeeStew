@@ -802,6 +802,73 @@
       ],
       "fullPending": 40,
       "qrPending": 12
+    },
+    {
+      "at": "2026-11-24T16:52:29.448Z",
+      "dryRun": false,
+      "discover": true,
+      "seededFull": 0,
+      "seededQr": 0,
+      "discoveredFull": [
+        "the-great-depression-1929",
+        "the-battle-of-gettysburg-1863"
+      ],
+      "discoveredQr": [],
+      "rejected": [
+        {
+          "id": "sand-creek-massacre-1864",
+          "reasons": [
+            "id already in queue: sand-creek-massacre-1864"
+          ]
+        },
+        {
+          "id": "the-19th-amendment-1920",
+          "reasons": [
+            "overlap hold_for_review vs nineteenth-amendment-1920: ambiguous_overlap"
+          ]
+        },
+        {
+          "id": "the-oregon-trail-1840s",
+          "reasons": [
+            "source URL probe failed: https://octa-trails.org/oregon-trail/ → HTTP 403; https://www.kshs.org/kansapedia/the-oregon-trail/12089 → HTTP 404; https://americanhistory.si.edu/oregon-trail → HTTP 403"
+          ]
+        },
+        {
+          "id": "qr-001",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 sources (need 2+)",
+            "only 0 credible sources (need 2+)"
+          ]
+        },
+        {
+          "id": "qr-002",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 sources (need 2+)",
+            "only 0 credible sources (need 2+)"
+          ]
+        },
+        {
+          "id": "qr-003",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 sources (need 2+)",
+            "only 0 credible sources (need 2+)"
+          ]
+        }
+      ],
+      "fullPending": 41,
+      "qrPending": 12
     }
   ]
 }

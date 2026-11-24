@@ -8722,6 +8722,98 @@
       "status": "pending",
       "publishedSlug": null,
       "publishedAt": null
+    },
+    {
+      "id": "the-great-depression-1929",
+      "title": "The Great Depression: Causes and Consequences",
+      "hook": "Delve into the economic collapse of 1929 and its profound effects on American society.",
+      "category": "Economic History",
+      "angle": "A comprehensive look at the factors leading to the Great Depression and its long-term implications.",
+      "keywords": [
+        "Great Depression",
+        "1929",
+        "economic history",
+        "New Deal",
+        "stock market crash"
+      ],
+      "imageSearchTerms": [
+        "Great Depression",
+        "1929 stock market crash",
+        "New Deal"
+      ],
+      "eventYear": 1929,
+      "historicalEra": "Interwar Period",
+      "requiredSources": [
+        {
+          "title": "The Great Depression: A Brief Overview",
+          "publisher": "Federal Reserve History",
+          "url": "https://www.federalreservehistory.org/essays/great-depression"
+        },
+        {
+          "title": "The Great Depression",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/exhibits/great-depression/great-depression.html"
+        },
+        {
+          "title": "The Great Depression: An Overview",
+          "publisher": "National Archives",
+          "url": "https://www.archives.gov/exhibits/american_originals/greatdepression.html"
+        },
+        {
+          "title": "The Great Depression and the New Deal",
+          "publisher": "U.S. History.org",
+          "url": "https://www.ushistory.org/us/48.asp"
+        }
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
+    },
+    {
+      "id": "the-battle-of-gettysburg-1863",
+      "title": "The Battle of Gettysburg: Turning Point of the Civil War",
+      "hook": "Examine the pivotal Battle of Gettysburg and its significance in the American Civil War.",
+      "category": "Military History",
+      "angle": "A detailed look at the events of the Battle of Gettysburg and its impact on the Civil War.",
+      "keywords": [
+        "Gettysburg",
+        "Civil War",
+        "battle",
+        "1863",
+        "military history"
+      ],
+      "imageSearchTerms": [
+        "Battle of Gettysburg",
+        "Civil War",
+        "1863"
+      ],
+      "eventYear": 1863,
+      "historicalEra": "Civil War Era",
+      "requiredSources": [
+        {
+          "title": "The Battle of Gettysburg",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/gett/index.htm"
+        },
+        {
+          "title": "Gettysburg: The Battle and its Legacy",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/collections/gettysburg-1863/about-this-collection/"
+        },
+        {
+          "title": "The Battle of Gettysburg: A Historical Overview",
+          "publisher": "American Battlefield Trust",
+          "url": "https://www.battlefields.org/learn/articles/battle-gettysburg"
+        },
+        {
+          "title": "Gettysburg National Military Park",
+          "publisher": "National Park Service",
+          "url": "https://www.nps.gov/gett/planyourvisit/index.htm"
+        }
+      ],
+      "status": "pending",
+      "publishedSlug": null,
+      "publishedAt": null
     }
   ]
 }
