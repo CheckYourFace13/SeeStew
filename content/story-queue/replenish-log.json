@@ -869,6 +869,93 @@
       ],
       "fullPending": 41,
       "qrPending": 12
+    },
+    {
+      "at": "2026-11-25T16:39:56.149Z",
+      "dryRun": false,
+      "discover": true,
+      "seededFull": 0,
+      "seededQr": 0,
+      "discoveredFull": [],
+      "discoveredQr": [],
+      "rejected": [
+        {
+          "id": "suffrage-movement",
+          "reasons": [
+            "overlap hold_for_review vs women-suffrage-movement: ambiguous_overlap"
+          ]
+        },
+        {
+          "id": "new-deal",
+          "reasons": [
+            "overlap block vs the-new-deal: substantial_overlap"
+          ]
+        },
+        {
+          "id": "civil-rights-act-1964",
+          "reasons": [
+            "overlap hold_for_review vs civil-rights-movement: ambiguous_overlap"
+          ]
+        },
+        {
+          "id": "moon-landing-1969",
+          "reasons": [
+            "id already in queue: moon-landing-1969"
+          ]
+        },
+        {
+          "id": "prohibition-era",
+          "reasons": [
+            "source URL probe failed: https://www.archives.gov/exhibits/american_originals/prohibition.html → HTTP 404; https://www.loc.gov/teachers/classroommaterials/presentationsandactivities/presentations/prohibition/ → HTTP 404; https://www.pbs.org/wgbh/americanexperience/features/prohibition-rise-and-fall/ → HTTP 404"
+          ]
+        },
+        {
+          "id": "qr-1",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 sources (need 2+)",
+            "only 0 credible sources (need 2+)"
+          ]
+        },
+        {
+          "id": "qr-2",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 sources (need 2+)",
+            "only 0 credible sources (need 2+)"
+          ]
+        },
+        {
+          "id": "qr-3",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 sources (need 2+)",
+            "only 0 credible sources (need 2+)"
+          ]
+        },
+        {
+          "id": "qr-4",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 sources (need 2+)",
+            "only 0 credible sources (need 2+)"
+          ]
+        }
+      ],
+      "fullPending": 40,
+      "qrPending": 11
     }
   ]
 }
