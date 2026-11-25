@@ -6999,9 +6999,9 @@
       "imageSearchTerms": [
         "Battle of Blair Mountain 1921"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "blair-mountain-1921",
+      "publishedAt": "2026-11-25T19:51:56.434Z",
       "eventYear": 1921,
       "historicalEra": "twenties-depression"
     },

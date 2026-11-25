@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-24T23:25:00.294Z",
-  "publishedCount": 163,
-  "queueCount": 51,
+  "generatedAt": "2026-11-25T19:51:56.562Z",
+  "publishedCount": 164,
+  "queueCount": 50,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -3292,6 +3292,31 @@
       "contentChars": 2284
     },
     {
+      "slug": "qr-palomares-missing-bomb",
+      "title": "The Palomares Bomb That Hid Underwater for Months",
+      "excerpt": "After a midair collision over Spain, one U.S. hydrogen bomb stayed lost at sea until a Navy search recovered it. (Palomares missing bomb)",
+      "format": "quick-read",
+      "source": "published",
+      "eventYear": 1966,
+      "publishedAt": "2026-11-24T23:25:00.160Z",
+      "parentArticleSlug": "palomares-incident-1966",
+      "editorialAngle": "Underwater recovery of the missing Palomares hydrogen bomb",
+      "canonicalEventId": "palomares-missing-bomb::1966",
+      "titleEventKey": "palomares-bomb-hid-underwater-months::1966",
+      "places": [
+        "palomares"
+      ],
+      "namedHints": [
+        "palomares",
+        "bomb",
+        "hid",
+        "underwater",
+        "months"
+      ],
+      "opening": "In January 1966, a U.S. Air Force B-52 bomber collided with a refueling plane over Palomares, Spain, resulting in the loss of four hydrogen bombs.",
+      "contentChars": 2170
+    },
+    {
       "slug": "qr-peshtigo-same-day-chicago",
       "title": "Peshtigo Burned the Same Day as Chicago — and Almost Nobody Noticed",
       "excerpt": "America’s deadliest wildfire hit Wisconsin the same day as the Great Chicago Fire — and was overshadowed for generations. (Peshtigo fire same day Chicago)",
@@ -4526,33 +4551,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "blair-mountain-1921",
-      "title": "The Battle of Blair Mountain: America’s Largest Labor Uprising",
-      "excerpt": "Thousands of armed miners marched in West Virginia in 1921 — until federal troops ended the largest labor uprising in U.S. history.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1921,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "Matewan’s aftermath, the miners’ march, company planes and machine guns, federal intervention, and why the battlefield nearly became strip-mined decades later.",
-      "canonicalEventId": "blair-mountain::1921",
-      "titleEventKey": "battle-blair-mountain-america-largest-labor-uprising::1921",
-      "places": [
-        "west virginia"
-      ],
-      "namedHints": [
-        "battle",
-        "blair",
-        "mountain",
-        "americas",
-        "largest",
-        "labor",
-        "uprising"
-      ],
-      "opening": "Thousands of armed miners marched in West Virginia in 1921 — until federal troops ended the largest labor uprising in U.S. history.",
-      "contentChars": 364
-    },
-    {
       "slug": "chicago-race-riot-1919",
       "title": "The Chicago Race Riot of 1919: A Beach Line, a Drowning, and a City on Fire",
       "excerpt": "A Black teenager drifted across an unofficial beach color line — and Chicago erupted into days of racial violence.",
@@ -5764,29 +5762,31 @@
       "contentChars": 251
     },
     {
-      "slug": "qr-palomares-missing-bomb",
-      "title": "The Palomares Bomb That Hid Underwater for Months",
-      "excerpt": "After a midair collision over Spain, one U.S. hydrogen bomb stayed lost at sea until a Navy search recovered it. (Palomares missing bomb)",
-      "format": "quick-read",
+      "slug": "blair-mountain-1921",
+      "title": "The Battle of Blair Mountain: America’s Largest Labor Uprising",
+      "excerpt": "Thousands of armed miners marched in West Virginia in 1921 — until federal troops ended the largest labor uprising in U.S. history. (Battle of Blair Mountain)",
+      "format": "full",
       "source": "published",
-      "eventYear": 1966,
-      "publishedAt": "2026-11-24T23:25:00.160Z",
-      "parentArticleSlug": "palomares-incident-1966",
-      "editorialAngle": "Underwater recovery of the missing Palomares hydrogen bomb",
-      "canonicalEventId": "palomares-missing-bomb::1966",
-      "titleEventKey": "palomares-bomb-hid-underwater-months::1966",
+      "eventYear": 1921,
+      "publishedAt": "2026-11-25T19:51:06.187Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "blair-mountain::1921",
+      "titleEventKey": "battle-blair-mountain-america-largest-labor-uprising::1921",
       "places": [
-        "palomares"
+        "west virginia"
       ],
       "namedHints": [
-        "palomares",
-        "bomb",
-        "hid",
-        "underwater",
-        "months"
+        "battle",
+        "blair",
+        "mountain",
+        "americas",
+        "largest",
+        "labor",
+        "uprising"
       ],
-      "opening": "In January 1966, a U.S. Air Force B-52 bomber collided with a refueling plane over Palomares, Spain, resulting in the loss of four hydrogen bombs.",
-      "contentChars": 2170
+      "opening": "The Battle of Blair Mountain: The Largest Labor Uprising in U.S. History In late August 1921, thousands of armed miners marched through the hills of West Virginia, igniting the largest labor uprising in American history.",
+      "contentChars": 11332
     }
   ]
 }
