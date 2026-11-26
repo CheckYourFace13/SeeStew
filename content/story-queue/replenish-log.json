@@ -956,6 +956,99 @@
       ],
       "fullPending": 40,
       "qrPending": 11
+    },
+    {
+      "at": "2026-11-26T16:13:12.416Z",
+      "dryRun": false,
+      "discover": true,
+      "seededFull": 0,
+      "seededQr": 0,
+      "discoveredFull": [],
+      "discoveredQr": [],
+      "rejected": [
+        {
+          "id": "sacco-vanzetti-trial",
+          "reasons": [
+            "id already in queue: sacco-vanzetti-trial"
+          ]
+        },
+        {
+          "id": "the-great-depression",
+          "reasons": [
+            "overlap block vs the-great-depression-1929: substantial_overlap"
+          ]
+        },
+        {
+          "id": "the-19th-amendment",
+          "reasons": [
+            "overlap hold_for_review vs nineteenth-amendment-1920: ambiguous_overlap"
+          ]
+        },
+        {
+          "id": "the-new-deal",
+          "reasons": [
+            "id already in queue: the-new-deal"
+          ]
+        },
+        {
+          "id": "the-cold-war",
+          "reasons": [
+            "source URL probe failed: https://www.archives.gov/research/cold-war → HTTP 404; https://history.state.gov/milestones/1945-1952/cold-war → HTTP 404; https://www.pbs.org/wgbh/americanexperience/features/cold-war-brief-history/ → HTTP 404"
+          ]
+        },
+        {
+          "id": "the-civil-rights-movement",
+          "reasons": [
+            "id already in queue: the-civil-rights-movement"
+          ]
+        },
+        {
+          "id": "qr-1",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 sources (need 2+)",
+            "only 0 credible sources (need 2+)"
+          ]
+        },
+        {
+          "id": "qr-2",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 sources (need 2+)",
+            "only 0 credible sources (need 2+)"
+          ]
+        },
+        {
+          "id": "qr-3",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 sources (need 2+)",
+            "only 0 credible sources (need 2+)"
+          ]
+        },
+        {
+          "id": "qr-4",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 sources (need 2+)",
+            "only 0 credible sources (need 2+)"
+          ]
+        }
+      ],
+      "fullPending": 39,
+      "qrPending": 11
     }
   ]
 }
