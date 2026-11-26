@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-25T19:51:56.562Z",
-  "publishedCount": 164,
-  "queueCount": 50,
+  "generatedAt": "2026-11-26T19:35:31.936Z",
+  "publishedCount": 165,
+  "queueCount": 49,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -338,6 +338,33 @@
       ],
       "opening": "A Quiet Night on the Waterfront At 2:08 a.m. on July 30, 1916, a series of explosions ripped through Black Tom Island, a small landfill peninsula jutting into New York Harbor from Jersey City, New Jersey.",
       "contentChars": 12939
+    },
+    {
+      "slug": "blair-mountain-1921",
+      "title": "The Battle of Blair Mountain: America’s Largest Labor Uprising",
+      "excerpt": "Thousands of armed miners marched in West Virginia in 1921 — until federal troops ended the largest labor uprising in U.S. history. (Battle of Blair Mountain)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1921,
+      "publishedAt": "2026-11-25T19:51:06.187Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "blair-mountain::1921",
+      "titleEventKey": "battle-blair-mountain-america-largest-labor-uprising::1921",
+      "places": [
+        "west virginia"
+      ],
+      "namedHints": [
+        "battle",
+        "blair",
+        "mountain",
+        "americas",
+        "largest",
+        "labor",
+        "uprising"
+      ],
+      "opening": "The Battle of Blair Mountain: The Largest Labor Uprising in U.S. History In late August 1921, thousands of armed miners marched through the hills of West Virginia, igniting the largest labor uprising in American history.",
+      "contentChars": 11332
     },
     {
       "slug": "bleeding-kansas-1856",
@@ -4551,34 +4578,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "chicago-race-riot-1919",
-      "title": "The Chicago Race Riot of 1919: A Beach Line, a Drowning, and a City on Fire",
-      "excerpt": "A Black teenager drifted across an unofficial beach color line — and Chicago erupted into days of racial violence.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1919,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "The 29th Street Beach incident, how mobs and police responded, death and injury counts from contemporary reports, and the Chicago Commission on Race Relations that followed.",
-      "canonicalEventId": "chicago-race-riot::1919",
-      "titleEventKey": "chicago-race-riot-beach-line-drowning-city-fire::1919",
-      "places": [
-        "chicago"
-      ],
-      "namedHints": [
-        "chicago",
-        "race",
-        "riot",
-        "beach",
-        "line",
-        "drowning",
-        "city",
-        "fire"
-      ],
-      "opening": "A Black teenager drifted across an unofficial beach color line — and Chicago erupted into days of racial violence. The 29th Street Beach incident, how mobs and police responded, death and injury counts from contemporary reports, and the Chicago Commission on Race Relations that followed.",
-      "contentChars": 352
-    },
-    {
       "slug": "titanic-us-senate-hearings-1912",
       "title": "The Titanic Senate Hearings: How America Interrogated a Disaster at Sea",
       "excerpt": "After Titanic sank, a U.S. Senate inquiry grilled White Star officers — and rewrote safety rules.",
@@ -5762,31 +5761,33 @@
       "contentChars": 251
     },
     {
-      "slug": "blair-mountain-1921",
-      "title": "The Battle of Blair Mountain: America’s Largest Labor Uprising",
-      "excerpt": "Thousands of armed miners marched in West Virginia in 1921 — until federal troops ended the largest labor uprising in U.S. history. (Battle of Blair Mountain)",
+      "slug": "chicago-race-riot-1919",
+      "title": "The Chicago Race Riot of 1919: A Beach Line, a Drowning, and a City on Fire",
+      "excerpt": "A Black teenager drifted across an unofficial beach color line — and Chicago erupted into days of racial violence. (Chicago race riot 1919)",
       "format": "full",
       "source": "published",
-      "eventYear": 1921,
-      "publishedAt": "2026-11-25T19:51:06.187Z",
+      "eventYear": 1919,
+      "publishedAt": "2026-11-26T19:28:05.181Z",
       "parentArticleSlug": null,
       "editorialAngle": null,
-      "canonicalEventId": "blair-mountain::1921",
-      "titleEventKey": "battle-blair-mountain-america-largest-labor-uprising::1921",
+      "canonicalEventId": "chicago-race-riot::1919",
+      "titleEventKey": "chicago-race-riot-beach-line-drowning-city-fire::1919",
       "places": [
-        "west virginia"
+        "chicago",
+        "washington"
       ],
       "namedHints": [
-        "battle",
-        "blair",
-        "mountain",
-        "americas",
-        "largest",
-        "labor",
-        "uprising"
+        "chicago",
+        "race",
+        "riot",
+        "beach",
+        "line",
+        "drowning",
+        "city",
+        "fire"
       ],
-      "opening": "The Battle of Blair Mountain: The Largest Labor Uprising in U.S. History In late August 1921, thousands of armed miners marched through the hills of West Virginia, igniting the largest labor uprising in American history.",
-      "contentChars": 11332
+      "opening": "The Chicago Race Riot of 1919: A Beach Line, a Drowning, and a City on Fire On July 27, 1919, a tragic incident at the 29th Street Beach in Chicago ignited one of the most violent racial confrontations in American history. A Black teenager named Eugene Williams drifted across an unofficial color line while swimming, leading to a confrontation with white beachgoers.",
+      "contentChars": 10142
     }
   ]
 }

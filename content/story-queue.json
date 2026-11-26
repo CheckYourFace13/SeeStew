@@ -7046,9 +7046,9 @@
       "imageSearchTerms": [
         "Chicago race riot 1919"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "chicago-race-riot-1919",
+      "publishedAt": "2026-11-26T19:35:31.823Z",
       "eventYear": 1919,
       "historicalEra": "progressive-wwi"
     },
