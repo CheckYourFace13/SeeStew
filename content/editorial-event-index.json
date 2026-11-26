@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-26T19:35:31.936Z",
-  "publishedCount": 165,
-  "queueCount": 49,
+  "generatedAt": "2026-11-26T22:51:37.619Z",
+  "publishedCount": 166,
+  "queueCount": 48,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -683,6 +683,35 @@
       ],
       "opening": "The Challenger Disaster: A Tragic Launch Decision in 1986 On January 28, 1986, the Space Shuttle Challenger disintegrated just 73 seconds after liftoff from the Kennedy Space Center in Florida [1]. The disaster unfolded live on national television, shocking millions of viewers.",
       "contentChars": 10873
+    },
+    {
+      "slug": "chicago-race-riot-1919",
+      "title": "The Chicago Race Riot of 1919: A Beach Line, a Drowning, and a City on Fire",
+      "excerpt": "A Black teenager drifted across an unofficial beach color line — and Chicago erupted into days of racial violence. (Chicago race riot 1919)",
+      "format": "full",
+      "source": "published",
+      "eventYear": 1919,
+      "publishedAt": "2026-11-26T19:28:05.181Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "chicago-race-riot::1919",
+      "titleEventKey": "chicago-race-riot-beach-line-drowning-city-fire::1919",
+      "places": [
+        "chicago",
+        "washington"
+      ],
+      "namedHints": [
+        "chicago",
+        "race",
+        "riot",
+        "beach",
+        "line",
+        "drowning",
+        "city",
+        "fire"
+      ],
+      "opening": "The Chicago Race Riot of 1919: A Beach Line, a Drowning, and a City on Fire On July 27, 1919, a tragic incident at the 29th Street Beach in Chicago ignited one of the most violent racial confrontations in American history. A Black teenager named Eugene Williams drifted across an unofficial color line while swimming, leading to a confrontation with white beachgoers.",
+      "contentChars": 10142
     },
     {
       "slug": "childrens-blizzard-1888",
@@ -5502,29 +5531,6 @@
       "contentChars": 229
     },
     {
-      "slug": "qr-indianapolis-delayed-rescue",
-      "title": "Why Help Took So Long After Indianapolis Sank",
-      "excerpt": "Survivors of USS Indianapolis drifted for days — because the Navy did not know the cruiser was overdue.",
-      "format": "quick-read",
-      "source": "queue-quick-read",
-      "eventYear": 1945,
-      "publishedAt": null,
-      "parentArticleSlug": "uss-indianapolis-1945",
-      "editorialAngle": "Delayed discovery that USS Indianapolis was overdue after sinking",
-      "canonicalEventId": "indianapolis-delayed-rescue::1945",
-      "titleEventKey": "help-took-long-indianapolis-sank::1945",
-      "places": [],
-      "namedHints": [
-        "help",
-        "took",
-        "long",
-        "indianapolis",
-        "sank"
-      ],
-      "opening": "Survivors of USS Indianapolis drifted for days — because the Navy did not know the cruiser was overdue. Radio silence, routing secrecy, and delayed distress recognition — not the shark attacks retelling.",
-      "contentChars": 261
-    },
-    {
       "slug": "qr-three-mile-hydrogen-bubble",
       "title": "The Hydrogen Bubble Scare Inside Three Mile Island",
       "excerpt": "During TMI, engineers feared a hydrogen bubble could explode inside the reactor vessel — a crisis within the crisis.",
@@ -5761,33 +5767,27 @@
       "contentChars": 251
     },
     {
-      "slug": "chicago-race-riot-1919",
-      "title": "The Chicago Race Riot of 1919: A Beach Line, a Drowning, and a City on Fire",
-      "excerpt": "A Black teenager drifted across an unofficial beach color line — and Chicago erupted into days of racial violence. (Chicago race riot 1919)",
-      "format": "full",
+      "slug": "qr-indianapolis-delayed-rescue",
+      "title": "Why Help Took So Long After Indianapolis Sank",
+      "excerpt": "Survivors of USS Indianapolis drifted for days — because the Navy did not know the cruiser was overdue. (USS Indianapolis delayed rescue)",
+      "format": "quick-read",
       "source": "published",
-      "eventYear": 1919,
-      "publishedAt": "2026-11-26T19:28:05.181Z",
-      "parentArticleSlug": null,
-      "editorialAngle": null,
-      "canonicalEventId": "chicago-race-riot::1919",
-      "titleEventKey": "chicago-race-riot-beach-line-drowning-city-fire::1919",
-      "places": [
-        "chicago",
-        "washington"
-      ],
+      "eventYear": 1945,
+      "publishedAt": "2026-11-26T22:51:37.512Z",
+      "parentArticleSlug": "uss-indianapolis-1945",
+      "editorialAngle": "Delayed discovery that USS Indianapolis was overdue after sinking",
+      "canonicalEventId": "indianapolis-delayed-rescue::1945",
+      "titleEventKey": "help-took-long-indianapolis-sank::1945",
+      "places": [],
       "namedHints": [
-        "chicago",
-        "race",
-        "riot",
-        "beach",
-        "line",
-        "drowning",
-        "city",
-        "fire"
+        "help",
+        "took",
+        "long",
+        "indianapolis",
+        "sank"
       ],
-      "opening": "The Chicago Race Riot of 1919: A Beach Line, a Drowning, and a City on Fire On July 27, 1919, a tragic incident at the 29th Street Beach in Chicago ignited one of the most violent racial confrontations in American history. A Black teenager named Eugene Williams drifted across an unofficial color line while swimming, leading to a confrontation with white beachgoers.",
-      "contentChars": 10142
+      "opening": "On July 30, 1945, the USS Indianapolis sank in the Philippine Sea after being torpedoed by a Japanese submarine. Of the nearly 1,200 crew members aboard, approximately 300 went down with the ship, while the remaining survivors faced a harrowing ordeal, drifting in the open ocean for four days before rescue efforts began.",
+      "contentChars": 2246
     }
   ]
 }

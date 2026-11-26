@@ -1,0 +1,45 @@
+{
+  "slug": "qr-indianapolis-delayed-rescue",
+  "title": "Why Help Took So Long After Indianapolis Sank",
+  "excerpt": "Survivors of USS Indianapolis drifted for days — because the Navy did not know the cruiser was overdue. (USS Indianapolis delayed rescue)",
+  "seoTitle": "USS Indianapolis delayed rescue",
+  "seoDescription": "Survivors of USS Indianapolis drifted for days — because the Navy did not know the cruiser was overdue. (USS Indianapolis delayed rescue)",
+  "readMinutes": 2,
+  "category": "Military",
+  "format": "quick-read",
+  "eventYear": 1945,
+  "historicalEra": "world-war-ii",
+  "parentArticleSlug": "uss-indianapolis-1945",
+  "editorialAngle": "Delayed discovery that USS Indianapolis was overdue after sinking",
+  "canonicalEventId": "indianapolis-delayed-rescue::1945",
+  "relatedArticleSlugs": [
+    "uss-indianapolis-1945"
+  ],
+  "content": "On July 30, 1945, the USS Indianapolis sank in the Philippine Sea after being torpedoed by a Japanese submarine. Of the nearly 1,200 crew members aboard, approximately 300 went down with the ship, while the remaining survivors faced a harrowing ordeal, drifting in the open ocean for four days before rescue efforts began. The delay in rescue was primarily due to the Navy's lack of awareness that the cruiser was overdue, a situation exacerbated by radio silence and routing secrecy [1].\n\nThe Indianapolis had just completed a secret mission delivering components for the atomic bomb to the island of Tinian. Following this mission, the ship was instructed to proceed to Leyte Gulf without sending a report of its position. This lack of communication was not unusual for wartime operations, where secrecy was paramount. However, it meant that when the ship failed to arrive at its destination, no one immediately recognized that it was missing. The Navy's protocol at the time did not prioritize tracking vessels that were not actively reporting their positions, leading to a tragic oversight [2].\n\nSurvivors of the sinking faced extreme conditions, including exposure to the sun, dehydration, and shark attacks. Yet, the most critical factor in their suffering was the Navy's failure to respond promptly. It wasn't until August 2, 1945, when a routine flight spotted the survivors, that rescue efforts were initiated. By then, only 316 of the original crew had survived the ordeal, a stark reminder of the consequences of communication failures in military operations [3].\n\nThe Indianapolis tragedy highlighted significant flaws in naval communication protocols during World War II. The Navy's reliance on secrecy and the absence of a systematic approach to tracking vessels contributed to the delayed recognition of the ship's distress. This incident prompted changes in naval procedures, emphasizing the importance of regular position reporting and improved search and rescue operations.\n\nThe sinking of the USS Indianapolis remains one of the most significant maritime disasters in U.S. naval history, not just for the loss of life but for the lessons learned about the importance of communication and timely response in military operations [1].\n\n## Sources\n\n1. USS Indianapolis — *Naval History and Heritage Command*. [Link](https://www.history.navy.mil/research/histories/ship-histories/danfs/i/indianapolis-ca-35.html)\n2. USS Indianapolis — *National Archives*. [Link](https://www.archives.gov/)\n3. World War II Navy — *Library of Congress*. [Link](https://www.loc.gov/)",
+  "references": [
+    {
+      "title": "USS Indianapolis",
+      "publisher": "Naval History and Heritage Command",
+      "url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/i/indianapolis-ca-35.html"
+    },
+    {
+      "title": "USS Indianapolis",
+      "publisher": "National Archives",
+      "url": "https://www.archives.gov/"
+    },
+    {
+      "title": "World War II Navy",
+      "publisher": "Library of Congress",
+      "url": "https://www.loc.gov/"
+    }
+  ],
+  "image": {
+    "card": "/stories/qr-indianapolis-delayed-rescue/card.jpg",
+    "hero": "/stories/qr-indianapolis-delayed-rescue/card.jpg",
+    "alt": "Why Help Took So Long After Indianapolis Sank",
+    "credit": "Library of Congress",
+    "sourcePageUrl": "https://www.history.navy.mil/content/history/nhhc/research/histories/ship-histories/danfs/i/indianapolis-ca-35.html"
+  },
+  "relatedVideoId": null,
+  "createdAt": "2026-11-26T22:51:37.512Z"
+}

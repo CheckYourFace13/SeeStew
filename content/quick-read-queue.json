@@ -599,11 +599,13 @@
       "imageSearchTerms": [
         "USS Indianapolis delayed rescue"
       ],
-      "status": "pending",
+      "status": "published",
       "format": "quick-read",
       "eventYear": 1945,
       "historicalEra": "world-war-ii",
-      "canonicalEventId": "indianapolis-delayed-rescue::1945"
+      "canonicalEventId": "indianapolis-delayed-rescue::1945",
+      "publishedSlug": "qr-indianapolis-delayed-rescue",
+      "publishedAt": "2026-11-26T22:51:37.512Z"
     },
     {
       "id": "qr-three-mile-hydrogen-bubble",
