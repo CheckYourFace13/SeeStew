@@ -1049,6 +1049,140 @@
       ],
       "fullPending": 39,
       "qrPending": 11
+    },
+    {
+      "at": "2026-11-27T15:58:57.498Z",
+      "dryRun": false,
+      "discover": true,
+      "seededFull": 0,
+      "seededQr": 0,
+      "discoveredFull": [],
+      "discoveredQr": [],
+      "rejected": [
+        {
+          "id": "suffrage-movement",
+          "reasons": [
+            "overlap hold_for_review vs women-suffrage-movement: ambiguous_overlap"
+          ]
+        },
+        {
+          "id": "the-great-depression",
+          "reasons": [
+            "only 1 credible sources (need 2+)"
+          ]
+        },
+        {
+          "id": "civil-rights-act-1964",
+          "reasons": [
+            "overlap block vs the-1964-civil-rights-act: substantial_overlap"
+          ]
+        },
+        {
+          "id": "the-ronald-reagan-era",
+          "reasons": [
+            "source URL probe failed: https://www.whitehouse.gov/about-the-white-house/presidents/ronald-reagan/ → HTTP 404; https://millercenter.org/president/reagan/essays/reagan-era-timeline → HTTP 404; https://www.heritage.org/political-process/report/reaganomics-the-economic-policies-ronald-reagan → HTTP 403; https://history.state.gov/milestones/1981-1988/reagan → HTTP 404"
+          ]
+        },
+        {
+          "id": "the-immigration-act-of-1965",
+          "reasons": [
+            "source URL probe failed: https://www.uscis.gov/history-and-genealogy/our-history/immigration-act-1965 → HTTP 404; https://www.migrationpolicy.org/article/impact-1965-immigration-act → HTTP 403; https://www.loc.gov/collections/immigration-act-of-1965/about-this-collection/ → HTTP 403; https://www.historians.org/publications-and-directories/perspectives-on-history/march-2015/the-1965-immigration-act-a-turning-point → HTTP 403"
+          ]
+        },
+        {
+          "id": "the-space-race",
+          "reasons": [
+            "source URL probe failed: https://history.state.gov/milestones/1957-1962/space-race → HTTP 404; https://airandspace.si.edu/exhibits/space-race → HTTP 404; https://www.archives.gov/exhibits/american_originals/spacerace.html → HTTP 404"
+          ]
+        },
+        {
+          "id": "qr-001",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 credible sources (need 2+)",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "duplicate URL undefined"
+          ]
+        },
+        {
+          "id": "qr-002",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 credible sources (need 2+)",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "duplicate URL undefined"
+          ]
+        },
+        {
+          "id": "qr-003",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 credible sources (need 2+)",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "duplicate URL undefined"
+          ]
+        },
+        {
+          "id": "qr-004",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 credible sources (need 2+)",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "duplicate URL undefined"
+          ]
+        },
+        {
+          "id": "qr-005",
+          "reasons": [
+            "title too short",
+            "hook too short",
+            "missing category",
+            "angle too short",
+            "only 0 credible sources (need 2+)",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "non-https source",
+            "source missing title",
+            "source missing publisher",
+            "duplicate URL undefined"
+          ]
+        }
+      ],
+      "fullPending": 38,
+      "qrPending": 10
     }
   ]
 }
