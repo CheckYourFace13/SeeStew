@@ -7093,9 +7093,9 @@
       "imageSearchTerms": [
         "Titanic Senate hearings 1912"
       ],
-      "status": "pending",
-      "publishedSlug": null,
-      "publishedAt": null,
+      "status": "published",
+      "publishedSlug": "titanic-us-senate-hearings-1912",
+      "publishedAt": "2026-11-27T19:25:55.451Z",
       "eventYear": 1912,
       "historicalEra": "progressive-wwi"
     },

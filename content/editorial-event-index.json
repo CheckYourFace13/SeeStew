@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-26T22:51:37.619Z",
-  "publishedCount": 166,
-  "queueCount": 48,
+  "generatedAt": "2026-11-27T19:25:55.580Z",
+  "publishedCount": 167,
+  "queueCount": 47,
   "entries": [
     {
       "slug": "able-archer-83",
@@ -3320,6 +3320,29 @@
       "contentChars": 2311
     },
     {
+      "slug": "qr-indianapolis-delayed-rescue",
+      "title": "Why Help Took So Long After Indianapolis Sank",
+      "excerpt": "Survivors of USS Indianapolis drifted for days — because the Navy did not know the cruiser was overdue. (USS Indianapolis delayed rescue)",
+      "format": "quick-read",
+      "source": "published",
+      "eventYear": 1945,
+      "publishedAt": "2026-11-26T22:51:37.512Z",
+      "parentArticleSlug": "uss-indianapolis-1945",
+      "editorialAngle": "Delayed discovery that USS Indianapolis was overdue after sinking",
+      "canonicalEventId": "indianapolis-delayed-rescue::1945",
+      "titleEventKey": "help-took-long-indianapolis-sank::1945",
+      "places": [],
+      "namedHints": [
+        "help",
+        "took",
+        "long",
+        "indianapolis",
+        "sank"
+      ],
+      "opening": "On July 30, 1945, the USS Indianapolis sank in the Philippine Sea after being torpedoed by a Japanese submarine. Of the nearly 1,200 crew members aboard, approximately 300 went down with the ship, while the remaining survivors faced a harrowing ordeal, drifting in the open ocean for four days before rescue efforts began.",
+      "contentChars": 2246
+    },
+    {
       "slug": "qr-johnstown-south-fork-club",
       "title": "The South Fork Club Dam: Privilege Above Johnstown",
       "excerpt": "A private resort club altered a dam above Johnstown — then largely escaped liability after the flood. (Johnstown Flood South Fork Club)",
@@ -4607,34 +4630,6 @@
       "contentChars": 10085
     },
     {
-      "slug": "titanic-us-senate-hearings-1912",
-      "title": "The Titanic Senate Hearings: How America Interrogated a Disaster at Sea",
-      "excerpt": "After Titanic sank, a U.S. Senate inquiry grilled White Star officers — and rewrote safety rules.",
-      "format": "full",
-      "source": "queue-full",
-      "eventYear": 1912,
-      "publishedAt": null,
-      "parentArticleSlug": null,
-      "editorialAngle": "Senator Smith’s hearings in New York and Washington, key testimony about lifeboats and wireless, and the Seamen’s Act reforms that followed.",
-      "canonicalEventId": "titanic-us-senate-hearings::1912",
-      "titleEventKey": "titanic-senate-hearings-america-interrogated-disaster-sea::1912",
-      "places": [
-        "new york",
-        "washington"
-      ],
-      "namedHints": [
-        "titanic",
-        "senate",
-        "hearings",
-        "america",
-        "interrogated",
-        "disaster",
-        "sea"
-      ],
-      "opening": "After Titanic sank, a U.S. Senate inquiry grilled White Star officers — and rewrote safety rules.",
-      "contentChars": 311
-    },
-    {
       "slug": "lusitania-sinking-1915",
       "title": "The Lusitania Sinking and the American Debate Over War",
       "excerpt": "A German U-boat sank Lusitania in 1915 — killing Americans aboard and shifting U.S. opinion toward intervention.",
@@ -5767,27 +5762,33 @@
       "contentChars": 251
     },
     {
-      "slug": "qr-indianapolis-delayed-rescue",
-      "title": "Why Help Took So Long After Indianapolis Sank",
-      "excerpt": "Survivors of USS Indianapolis drifted for days — because the Navy did not know the cruiser was overdue. (USS Indianapolis delayed rescue)",
-      "format": "quick-read",
+      "slug": "titanic-us-senate-hearings-1912",
+      "title": "The Titanic Senate Hearings: How America Interrogated a Disaster at Sea",
+      "excerpt": "After Titanic sank, a U.S. Senate inquiry grilled White Star officers — and rewrote safety rules. (Titanic Senate inquiry)",
+      "format": "full",
       "source": "published",
-      "eventYear": 1945,
-      "publishedAt": "2026-11-26T22:51:37.512Z",
-      "parentArticleSlug": "uss-indianapolis-1945",
-      "editorialAngle": "Delayed discovery that USS Indianapolis was overdue after sinking",
-      "canonicalEventId": "indianapolis-delayed-rescue::1945",
-      "titleEventKey": "help-took-long-indianapolis-sank::1945",
-      "places": [],
-      "namedHints": [
-        "help",
-        "took",
-        "long",
-        "indianapolis",
-        "sank"
+      "eventYear": 1912,
+      "publishedAt": "2026-11-27T19:25:10.698Z",
+      "parentArticleSlug": null,
+      "editorialAngle": null,
+      "canonicalEventId": "titanic-us-senate-hearings::1912",
+      "titleEventKey": "titanic-senate-hearings-america-interrogated-disaster-sea::1912",
+      "places": [
+        "new york",
+        "washington",
+        "michigan"
       ],
-      "opening": "On July 30, 1945, the USS Indianapolis sank in the Philippine Sea after being torpedoed by a Japanese submarine. Of the nearly 1,200 crew members aboard, approximately 300 went down with the ship, while the remaining survivors faced a harrowing ordeal, drifting in the open ocean for four days before rescue efforts began.",
-      "contentChars": 2246
+      "namedHints": [
+        "titanic",
+        "senate",
+        "hearings",
+        "america",
+        "interrogated",
+        "disaster",
+        "sea"
+      ],
+      "opening": "The Titanic Senate Hearings of 1912: A National Inquiry into Maritime Safety On April 15, 1912, the RMS Titanic sank after hitting an iceberg on its maiden voyage, resulting in the deaths of over 1,500 passengers and crew [1]. This catastrophic event shocked the world and prompted immediate calls for accountability.",
+      "contentChars": 11942
     }
   ]
 }
