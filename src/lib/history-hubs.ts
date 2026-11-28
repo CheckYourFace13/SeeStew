@@ -24,6 +24,8 @@ export type HistoryHub = {
   stateCode?: string;
   /** Explicit article slugs for city/list hubs (preferred over fuzzy matching). */
   articleSlugs?: string[];
+  /** Optional featured stories called out under the hub intro. */
+  featuredArticleSlugs?: string[];
 };
 
 const DECADE_COPY: Record<number, { title: string; description: string; intro: string }> = {
@@ -193,6 +195,15 @@ function allHubDefinitions(): HistoryHub[] {
       title: era.title,
       description: era.description,
       intro: era.intro,
+      ...(era.slug === "revolution-early-republic"
+        ? {
+            featuredArticleSlugs: [
+              "benedict-arnold-west-point-1780",
+              "newburgh-conspiracy-1783",
+              "shays-rebellion-1786",
+            ],
+          }
+        : {}),
     });
   }
   // Legacy cold-war hub kept as a list-style era alias (1947–1991 subset).

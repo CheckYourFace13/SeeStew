@@ -92,6 +92,24 @@ export default async function HistoryHubPage({ params }: Props) {
       />
       <h1 className="font-heading text-4xl font-bold text-ink">{hub.title}</h1>
       <p className="mt-3 max-w-3xl text-lg text-ink-muted">{hub.intro}</p>
+      {hub.featuredArticleSlugs?.length ? (
+        <ul className="mt-4 max-w-3xl space-y-2 text-base text-ink">
+          {hub.featuredArticleSlugs.map((featuredSlug) => {
+            const featured = allArticles.find((a) => a.slug === featuredSlug);
+            if (!featured) return null;
+            return (
+              <li key={featured.slug}>
+                <Link
+                  href={`/articles/${featured.slug}`}
+                  className="font-medium text-brand-mid underline hover:text-brand-bright"
+                >
+                  {featured.title}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      ) : null}
       {!indexable ? (
         <p className="mt-3 text-sm text-ink-muted">
           This hub currently indexes a small set of related stories for navigation.

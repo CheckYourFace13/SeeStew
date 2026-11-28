@@ -38,7 +38,7 @@ export const HISTORICAL_ERAS: HistoricalEra[] = [
     description:
       "American Revolution and Early Republic (1775–1820) — founding crises and early national flashpoints with citations.",
     intro:
-      "From independence through the Early Republic. These SeeStew stories stick to named sources.",
+      "Beyond the battles everyone remembers, the Revolution and Early Republic left stranger paper trails — spy plots, near-mutinies, and tax revolts that still surprise people. These SeeStew stories stay with named sources rather than founding myths.",
   },
   {
     slug: "antebellum-civil-war",
