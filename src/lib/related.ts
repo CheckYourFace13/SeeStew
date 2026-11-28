@@ -1,4 +1,5 @@
 import type { Article } from "./articles";
+import { articleSeasonalScore } from "./seasonal";
 import type { YouTubeVideo } from "./youtube";
 import { isLongFormVideo, isShortFormVideo } from "./youtube";
 import {
@@ -91,12 +92,20 @@ export function relatedArticlesForArticle(
   all: Article[],
   limit = 4
 ): Article[] {
+  const now = new Date();
+  const sourceSeasonal = articleSeasonalScore(article, now) > 0;
   const pool = all.filter((a) => a.slug !== article.slug);
   const scored = pool
     .map((a) => {
       const sameTopic = a.category === article.category;
       const overlap = overlapScore(articleSearchText(article), articleSearchText(a));
-      return { a, sameTopic, score: overlap + (sameTopic ? 1 : 0) };
+      const seasonalBoost =
+        sourceSeasonal && articleSeasonalScore(a, now) > 0 ? 2 : 0;
+      return {
+        a,
+        sameTopic,
+        score: overlap + (sameTopic ? 1 : 0) + seasonalBoost,
+      };
     })
     // cross-topic stories need genuine overlap; same-topic ones always qualify
     .filter((x) => x.sameTopic || x.score >= 3)

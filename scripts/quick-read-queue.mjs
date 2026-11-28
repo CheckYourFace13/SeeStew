@@ -6,6 +6,10 @@
 import { readFileSync, writeFileSync, existsSync } from "fs";
 import { join } from "path";
 import { QR_QUEUE_SEED } from "./quick-read-queue-seed.mjs";
+import {
+  isSeasonalPublishCandidate,
+  queueItemSeasonalScore,
+} from "./seasonal-calendar.mjs";
 
 export const QR_QUEUE_PATH = join(process.cwd(), "content", "quick-read-queue.json");
 
@@ -60,21 +64,41 @@ export function ensureQrQueueDepth(queue, { minPending = MIN_QR_PENDING } = {}) 
   };
 }
 
-export function pickNextQuickRead(queue, existingSlugs) {
-  const pending = (queue.items || []).filter((i) => i.status === "pending");
-  for (const item of pending) {
-    if (existingSlugs.has(item.id)) continue;
-    if (item.publishedSlug && existingSlugs.has(item.publishedSlug)) continue;
-    return item;
-  }
-  return null;
+export function pickNextQuickRead(queue, existingSlugs, now = new Date()) {
+  const pending = (queue.items || []).filter((i) => {
+    if (i.status !== "pending") return false;
+    if (existingSlugs.has(i.id)) return false;
+    if (i.publishedSlug && existingSlugs.has(i.publishedSlug)) return false;
+    return true;
+  });
+  if (!pending.length) return null;
+
+  const seasonal = pending
+    .filter((item) => isSeasonalPublishCandidate(item, now))
+    .sort(
+      (a, b) =>
+        queueItemSeasonalScore(b, now) - queueItemSeasonalScore(a, now)
+    );
+  const evergreen = pending.filter(
+    (item) => !isSeasonalPublishCandidate(item, now)
+  );
+  const recent = (queue.items || [])
+    .filter((i) => i.status === "published" && i.publishedAt)
+    .sort((a, b) => String(b.publishedAt).localeCompare(String(a.publishedAt)))
+    .slice(0, 1);
+  const lastWasSeasonal = recent[0]?.seasonalPick === true;
+
+  if (lastWasSeasonal && evergreen.length) return evergreen[0];
+  if (seasonal.length) return seasonal[0];
+  return pending[0];
 }
 
-export function markQuickReadPublished(queue, itemId, slug) {
+export function markQuickReadPublished(queue, itemId, slug, now = new Date()) {
   const item = (queue.items || []).find((i) => i.id === itemId);
   if (!item) return false;
   item.status = "published";
   item.publishedSlug = slug;
   item.publishedAt = new Date().toISOString();
+  item.seasonalPick = isSeasonalPublishCandidate(item, now);
   return true;
 }

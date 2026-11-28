@@ -1,0 +1,309 @@
+{
+  "version": 1,
+  "timezone": "America/New_York",
+  "discoverDaysBefore": 60,
+  "publishPriorityDaysBefore": 60,
+  "publishPriorityDaysAfterPeak": 2,
+  "featureDaysBefore": 45,
+  "featureDaysAfterPeak": 7,
+  "observances": [
+    {
+      "id": "new-years",
+      "label": "New Year's",
+      "kind": "fixed",
+      "month": 1,
+      "day": 1,
+      "keywords": ["new year", "january", "winter", "blizzard", "cold"],
+      "promoteSlugs": [
+        "great-molasses-flood-1919",
+        "childrens-blizzard-1888",
+        "challenger-disaster-1986",
+        "goldsboro-nuclear-accident-1961",
+        "palomares-incident-1966",
+        "thule-b52-crash-1968"
+      ],
+      "hubSlugs": ["1880s", "1960s", "cold-war"],
+      "topicHints": [
+        "lesser-known January American disasters and cold-weather crises with archival dates",
+        "New Year period industrial accidents and winter survival episodes — not generic resolutions"
+      ]
+    },
+    {
+      "id": "mlk-day",
+      "label": "Martin Luther King Jr. Day",
+      "kind": "nth-weekday",
+      "month": 1,
+      "weekday": 1,
+      "nth": 3,
+      "keywords": ["king", "civil rights", "montgomery", "selma", "march on washington"],
+      "promoteSlugs": [
+        "montgomery-bus-boycott-1955",
+        "selma-to-montgomery-1965",
+        "march-on-washington-1963",
+        "birmingham-church-bombing-1963"
+      ],
+      "hubSlugs": ["1950s", "1960s", "postwar-cold-war"],
+      "topicHints": [
+        "lesser-known documented civil rights flashpoints tied to winter organizing and federal response"
+      ]
+    },
+    {
+      "id": "winter-history",
+      "label": "Winter history",
+      "kind": "season",
+      "startMonth": 12,
+      "startDay": 21,
+      "endMonth": 3,
+      "endDay": 20,
+      "featureDaysBefore": 14,
+      "featureDaysAfterPeak": 0,
+      "keywords": ["winter", "blizzard", "snow", "cold", "ice", "frozen"],
+      "promoteSlugs": [
+        "childrens-blizzard-1888",
+        "donner-party-1846",
+        "dust-bowl-1930s",
+        "challenger-disaster-1986",
+        "qr-challenger-o-ring-cold"
+      ],
+      "hubSlugs": ["1880s", "1940s"],
+      "topicHints": [
+        "documented American winter disasters, polar expeditions, and cold-weather military crises"
+      ]
+    },
+    {
+      "id": "black-history-month",
+      "label": "Black History Month",
+      "kind": "month-span",
+      "startMonth": 2,
+      "startDay": 1,
+      "endMonth": 2,
+      "endDay": 28,
+      "keywords": ["civil rights", "black", "african american", "slavery", "emancipation", "tulsa", "scottsboro"],
+      "promoteSlugs": [
+        "tulsa-race-massacre-1921",
+        "scottsboro-boys",
+        "montgomery-bus-boycott-1955",
+        "japanese-american-incarceration-wwii"
+      ],
+      "hubSlugs": ["1920s", "1950s", "1960s"],
+      "topicHints": [
+        "lesser-known documented African American history episodes with named archival sources — not generic month filler"
+      ]
+    },
+    {
+      "id": "presidents-day",
+      "label": "Presidents' Day",
+      "kind": "nth-weekday",
+      "month": 2,
+      "weekday": 1,
+      "nth": 3,
+      "keywords": ["president", "washington", "lincoln", "white house", "executive"],
+      "promoteSlugs": [
+        "white-house-burning-1814",
+        "watergate-break-in-1972",
+        "alien-and-sedition-acts-1798"
+      ],
+      "hubSlugs": ["revolution-early-republic", "1970s"],
+      "topicHints": [
+        "documented presidential crises, wartime White House episodes, and lesser-known executive decisions"
+      ]
+    },
+    {
+      "id": "valentines",
+      "label": "Valentine's Day historical interest",
+      "kind": "fixed",
+      "month": 2,
+      "day": 14,
+      "keywords": ["valentine", "capone", "chicago"],
+      "promoteSlugs": ["st-valentines-day-massacre-1929"],
+      "hubSlugs": ["1920s", "illinois"],
+      "topicHints": [
+        "documented February crime and Prohibition episodes — avoid romantic holiday filler"
+      ]
+    },
+    {
+      "id": "womens-history-month",
+      "label": "Women's History Month",
+      "kind": "month-span",
+      "startMonth": 3,
+      "startDay": 1,
+      "endMonth": 3,
+      "endDay": 31,
+      "keywords": ["women", "suffrage", "nineteenth", "triangle", "shirtwaist"],
+      "promoteSlugs": [
+        "triangle-shirtwaist-fire-1911",
+        "nineteenth-amendment-1920",
+        "selma-to-montgomery-1965"
+      ],
+      "hubSlugs": ["1910s", "1920s"],
+      "topicHints": [
+        "lesser-known documented women's labor, suffrage, and rights episodes with archival sources"
+      ]
+    },
+    {
+      "id": "spring-history",
+      "label": "Spring history",
+      "kind": "season",
+      "startMonth": 3,
+      "startDay": 20,
+      "endMonth": 6,
+      "endDay": 20,
+      "featureDaysBefore": 14,
+      "featureDaysAfterPeak": 0,
+      "keywords": ["spring", "flood", "tornado", "april"],
+      "promoteSlugs": [
+        "johnstown-flood-1889",
+        "san-francisco-earthquake-1906",
+        "oklahoma-city-bombing-1995",
+        "deepwater-horizon-2010"
+      ],
+      "hubSlugs": ["1880s", "1900s"],
+      "topicHints": [
+        "documented spring disasters, floods, and political flashpoints with verifiable dates"
+      ]
+    },
+    {
+      "id": "memorial-day",
+      "label": "Memorial Day",
+      "kind": "nth-weekday",
+      "month": 5,
+      "weekday": 1,
+      "nth": -1,
+      "keywords": ["memorial", "veteran", "military", "war", "soldier"],
+      "promoteSlugs": [
+        "uss-indianapolis-1945",
+        "kent-state-shootings-1970",
+        "my-lai-massacre-1968",
+        "port-chicago-explosion-1944"
+      ],
+      "hubSlugs": ["1940s", "1960s", "world-war-ii", "cold-war-close-calls"],
+      "topicHints": [
+        "lesser-known documented American military losses, home-front disasters, and remembrance episodes"
+      ]
+    },
+    {
+      "id": "independence-day",
+      "label": "Independence Day",
+      "kind": "fixed",
+      "month": 7,
+      "day": 4,
+      "keywords": ["independence", "revolution", "july", "declaration", "founding"],
+      "promoteSlugs": [
+        "boston-massacre-1770",
+        "whiskey-rebellion-1794",
+        "benedict-arnold-west-point-1780",
+        "newburgh-conspiracy-1783",
+        "shays-rebellion-1786"
+      ],
+      "hubSlugs": ["revolution-early-republic"],
+      "topicHints": [
+        "lesser-known Revolutionary and Early Republic crises — not generic July 4th pageantry"
+      ]
+    },
+    {
+      "id": "summer-history",
+      "label": "Summer history",
+      "kind": "season",
+      "startMonth": 6,
+      "startDay": 21,
+      "endMonth": 9,
+      "endDay": 22,
+      "featureDaysBefore": 14,
+      "featureDaysAfterPeak": 0,
+      "keywords": ["summer", "heat", "hurricane", "july", "august"],
+      "promoteSlugs": [
+        "eastland-disaster-1915",
+        "hartford-circus-fire-1944",
+        "hurricane-katrina-2005",
+        "black-tom-explosion-1916"
+      ],
+      "hubSlugs": ["1910s", "1940s"],
+      "topicHints": [
+        "documented summer disasters, heat waves, and wartime sabotage with archival sources"
+      ]
+    },
+    {
+      "id": "labor-day",
+      "label": "Labor Day",
+      "kind": "nth-weekday",
+      "month": 9,
+      "weekday": 1,
+      "nth": 1,
+      "keywords": ["labor", "strike", "union", "worker", "haymarket", "homestead", "ludlow"],
+      "promoteSlugs": [
+        "haymarket-affair-1886",
+        "homestead-strike-1892",
+        "ludlow-massacre-1914",
+        "triangle-shirtwaist-fire-1911",
+        "blair-mountain-1921"
+      ],
+      "hubSlugs": ["1880s", "1890s", "1910s"],
+      "topicHints": [
+        "lesser-known documented labor conflicts and workplace disasters — not generic holiday copy"
+      ]
+    },
+    {
+      "id": "fall-history",
+      "label": "Fall history",
+      "kind": "season",
+      "startMonth": 9,
+      "startDay": 22,
+      "endMonth": 12,
+      "endDay": 20,
+      "featureDaysBefore": 14,
+      "featureDaysAfterPeak": 0,
+      "keywords": ["fall", "autumn", "october", "fire", "hurricane"],
+      "promoteSlugs": [
+        "great-chicago-fire-1871",
+        "peshtigo-fire-1871",
+        "galveston-hurricane-1900",
+        "hinckley-fire-1894"
+      ],
+      "hubSlugs": ["1870s", "1890s", "1900s"],
+      "topicHints": [
+        "documented autumn fires, storms, and industrial accidents with verifiable dates"
+      ]
+    },
+    {
+      "id": "thanksgiving",
+      "label": "Thanksgiving",
+      "kind": "nth-weekday",
+      "month": 11,
+      "weekday": 4,
+      "nth": 4,
+      "keywords": ["thanksgiving", "november", "pilgrim"],
+      "promoteSlugs": [
+        "cocoanut-grove-fire-1942",
+        "donner-party-1846",
+        "wounded-knee-massacre-1890"
+      ],
+      "hubSlugs": ["1940s"],
+      "topicHints": [
+        "lesser-known late-November American disasters and frontier crises — avoid turkey-day filler"
+      ]
+    },
+    {
+      "id": "christmas",
+      "label": "Christmas",
+      "kind": "fixed",
+      "month": 12,
+      "day": 25,
+      "keywords": ["christmas", "december", "holiday", "winter", "eggnog", "trenton", "crossing"],
+      "promoteSlugs": [
+        "iroquois-theatre-fire-1903",
+        "winecoff-hotel-fire-1946",
+        "monongah-mining-disaster-1907",
+        "wounded-knee-massacre-1890",
+        "montgomery-bus-boycott-1955",
+        "our-lady-of-the-angels-fire-1958",
+        "silver-bridge-collapse-1967",
+        "cocoanut-grove-fire-1942"
+      ],
+      "hubSlugs": ["1900s", "1940s", "1950s", "1960s", "revolution-early-republic"],
+      "topicHints": [
+        "lesser-known Christmas-week and December American disasters, wartime winters, and Early Republic December campaigns",
+        "West Point Eggnog Riot, Washington Crossing, Battle of Trenton, Battle of the Bulge — only if not already published"
+      ]
+    }
+  ]
+}

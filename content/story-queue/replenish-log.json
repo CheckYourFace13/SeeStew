@@ -1183,6 +1183,62 @@
       ],
       "fullPending": 38,
       "qrPending": 10
+    },
+    {
+      "at": "2026-11-28T00:47:19.659Z",
+      "dryRun": false,
+      "discover": false,
+      "seasonal": [
+        {
+          "id": "thanksgiving",
+          "daysUntilPeak": -1,
+          "discoveryActive": false,
+          "publishActive": true,
+          "featureActive": true
+        },
+        {
+          "id": "fall-history",
+          "daysUntilPeak": -22,
+          "discoveryActive": false,
+          "publishActive": true,
+          "featureActive": true
+        },
+        {
+          "id": "christmas",
+          "daysUntilPeak": 28,
+          "discoveryActive": true,
+          "publishActive": true,
+          "featureActive": true
+        },
+        {
+          "id": "new-years",
+          "daysUntilPeak": 35,
+          "discoveryActive": true,
+          "publishActive": true,
+          "featureActive": true
+        },
+        {
+          "id": "mlk-day",
+          "daysUntilPeak": 52,
+          "discoveryActive": true,
+          "publishActive": true,
+          "featureActive": false
+        },
+        {
+          "id": "winter-history",
+          "daysUntilPeak": 68,
+          "discoveryActive": true,
+          "publishActive": true,
+          "featureActive": false
+        }
+      ],
+      "seededFull": 6,
+      "seededQr": 0,
+      "discoveredFull": [],
+      "discoveredQr": [],
+      "rejected": [],
+      "fullPending": 43,
+      "qrPending": 10
     }
   ]
 }

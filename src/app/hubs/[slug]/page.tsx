@@ -15,6 +15,7 @@ import {
   HUB_MIN_ARTICLES,
   isIndexableHistoryHub,
 } from "@/lib/history-hubs";
+import { getSeasonalHubFeaturedSlugs } from "@/lib/seasonal";
 import { buildBreadcrumbJsonLd } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -60,6 +61,11 @@ export default async function HistoryHubPage({ params }: Props) {
     })
     .slice(0, 6);
   const networkPlacements = placementsForHub(slug);
+  const publishedSlugs = new Set(allArticles.map((a) => a.slug));
+  const featuredSlugs = [
+    ...(hub.featuredArticleSlugs || []),
+    ...getSeasonalHubFeaturedSlugs(slug, publishedSlugs, new Date(), 3),
+  ].filter((s, i, arr) => arr.indexOf(s) === i);
 
   return (
     <div className="page-shell">
@@ -92,9 +98,9 @@ export default async function HistoryHubPage({ params }: Props) {
       />
       <h1 className="font-heading text-4xl font-bold text-ink">{hub.title}</h1>
       <p className="mt-3 max-w-3xl text-lg text-ink-muted">{hub.intro}</p>
-      {hub.featuredArticleSlugs?.length ? (
+      {featuredSlugs.length ? (
         <ul className="mt-4 max-w-3xl space-y-2 text-base text-ink">
-          {hub.featuredArticleSlugs.map((featuredSlug) => {
+          {featuredSlugs.map((featuredSlug) => {
             const featured = allArticles.find((a) => a.slug === featuredSlug);
             if (!featured) return null;
             return (

@@ -16,6 +16,7 @@ import {
   todayPartsInSiteTz,
   upcomingAnniversaries,
 } from "@/lib/on-this-day";
+import { getSeasonalHomepageFeatures } from "@/lib/seasonal";
 import { homeFaqs } from "@/lib/seo";
 import { getPopulatedTopics } from "@/lib/topic-seo";
 import { getLongFormVideos, getShortFormVideos, getYouTubeVideos } from "@/lib/youtube";
@@ -47,6 +48,7 @@ export default async function HomePage() {
       ? todayAnniversaries.slice(0, 3)
       : upcomingAnniversaries(slugSet, new Date(), 3)
     : [];
+  const seasonalFeature = getSeasonalHomepageFeatures(allArticles, new Date(), 3);
 
   return (
     <>
@@ -183,9 +185,37 @@ export default async function HomePage() {
         </section>
       )}
 
+      {seasonalFeature && seasonalFeature.articles.length > 0 && (
+        <section className="section-pad section-muted">
+          <div className="container-page">
+            <div className="mb-8 max-w-3xl">
+              <h2 className="font-heading text-3xl font-semibold text-brand-primary md:text-4xl">
+                {seasonalFeature.label} in American history
+              </h2>
+              <p className="mt-2 text-ink-muted">
+                Documented stories from the SeeStew library that match this season — resurfaced
+                automatically, not republished.
+              </p>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {seasonalFeature.articles.map((article) => (
+                <StoryCard
+                  key={`seasonal-${article.slug}`}
+                  article={article}
+                  youtubeThumbnail={
+                    article.relatedVideoId
+                      ? thumbByVideoId.get(article.relatedVideoId)
+                      : undefined
+                  }
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Ads only after substantial original story content */}
       <AdSlot className="container-page" format="horizontal" />
-
       <section className="section-pad">
         <div className="container-page">
           <h2 className="font-heading text-3xl font-semibold text-brand-primary">

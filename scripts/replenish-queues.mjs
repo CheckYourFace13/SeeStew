@@ -43,6 +43,10 @@ import {
 import { ensureEventIndex } from "./editorial/prepublish-gate.mjs";
 import { loadEventIndex } from "./editorial/event-index.mjs";
 import { candidateFromDraft, findOverlaps, classifyOverlap } from "./editorial/overlap.mjs";
+import {
+  getActiveDiscoveryHints,
+  getCurrentSeasonalPriorities,
+} from "./seasonal-calendar.mjs";
 
 const DRY_RUN =
   process.env.DRY_RUN === "1" || process.argv.includes("--dry-run");
@@ -204,11 +208,22 @@ async function openRouterJson(prompt) {
   return JSON.parse(raw);
 }
 
-async function discoverFullTopics({ need, excludeIds, published }) {
+async function discoverFullTopics({ need, excludeIds, published, seasonalHints = [] }) {
   if (need <= 0) return { accepted: [], rejected: [] };
   const cap = Math.min(need, MAX_DISCOVER_FULL_PER_RUN);
   const exclude = [...excludeIds].slice(0, 120).join(", ");
+  const seasonalBlock =
+    seasonalHints.length > 0
+      ? `
+
+Seasonal editorial priority (anticipate peak interest 30–60 days ahead):
+${seasonalHints.map((h) => `- ${h}`).join("\n")}
+Prefer about half of the topics to match those seasonal priorities when you can name real archival sources.
+Do NOT invent generic holiday filler, “best Christmas traditions,” or unsupported feel-good lists.
+Do NOT duplicate published or queued events. Evergreen sourced topics may fill the rest.`
+      : "";
   const prompt = `Propose up to ${cap} DISTINCT, sourceable U.S. history FULL-STORY topics not in this exclude list: ${exclude}.
+${seasonalBlock}
 
 Each topic MUST include:
 - id (kebab-case slug)
@@ -269,11 +284,20 @@ Return {"topics":[...]}`;
   return { accepted, rejected };
 }
 
-async function discoverQrTopics({ need, excludeIds, published }) {
+async function discoverQrTopics({ need, excludeIds, published, seasonalHints = [] }) {
   if (need <= 0) return { accepted: [], rejected: [] };
   const cap = Math.min(need, MAX_DISCOVER_QR_PER_RUN);
   const parents = [...published].filter((s) => !s.startsWith("qr-")).slice(0, 80);
+  const seasonalBlock =
+    seasonalHints.length > 0
+      ? `
+
+When a parent matches active seasonal priorities, prefer those companions first:
+${seasonalHints.map((h) => `- ${h}`).join("\n")}
+Still require a distinct angle and real sources — no holiday filler.`
+      : "";
   const prompt = `Propose up to ${cap} Quick Read topics for SeeStew. Prefer companions that expand ONE fascinating detail from an existing parent article slug in: ${parents.join(", ")}.
+${seasonalBlock}
 
 Each MUST have distinct angle from the parent, parentArticleSlug, editorialAngle, format "quick-read", eventYear, historicalEra, 2–4 real https requiredSources, imageSearchTerms, keywords, id starting with qr-.
 
@@ -350,6 +374,19 @@ async function main() {
   console.log("=== SeeStew Queue Replenishment ===\n");
   if (DRY_RUN) console.log("DRY_RUN=1 — will not write queue files.\n");
 
+  const now = new Date();
+  const seasonalPriorities = getCurrentSeasonalPriorities(now);
+  const seasonalHints = getActiveDiscoveryHints(now);
+  if (seasonalPriorities.length) {
+    console.log("Seasonal priorities (active windows):");
+    for (const p of seasonalPriorities.slice(0, 8)) {
+      console.log(
+        `  - ${p.label} (peak in ${p.daysUntilPeak}d; discover=${p.discoveryActive} publish=${p.publishActive} feature=${p.featureActive})`
+      );
+    }
+    console.log("");
+  }
+
   const published = articleSlugs();
   const fullQueue = loadQueue();
   const qrQueue = loadQuickReadQueue();
@@ -400,6 +437,7 @@ async function main() {
           need: room,
           excludeIds: exclude,
           published,
+          seasonalHints,
         });
         discoveredFull = result.accepted;
         rejected.push(...result.rejected);
@@ -412,6 +450,7 @@ async function main() {
           need: room,
           excludeIds: exclude,
           published,
+          seasonalHints,
         });
         discoveredQr = result.accepted;
         rejected.push(...result.rejected);
@@ -460,6 +499,13 @@ async function main() {
     at: new Date().toISOString(),
     dryRun: DRY_RUN,
     discover: DISCOVER,
+    seasonal: seasonalPriorities.map((p) => ({
+      id: p.id,
+      daysUntilPeak: p.daysUntilPeak,
+      discoveryActive: p.discoveryActive,
+      publishActive: p.publishActive,
+      featureActive: p.featureActive,
+    })),
     seededFull,
     seededQr,
     discoveredFull: discoveredFull.map((i) => i.id),

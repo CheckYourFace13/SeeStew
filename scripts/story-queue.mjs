@@ -6,6 +6,11 @@ import { QUEUE_BATCH_3 } from "./story-queue-batch-3.mjs";
 import { QUEUE_BATCH_4 } from "./story-queue-batch-4.mjs";
 import { QUEUE_BATCH_5 } from "./story-queue-batch-5.mjs";
 import { QUEUE_BATCH_6 } from "./story-queue-batch-6.mjs";
+import { QUEUE_SEASONAL } from "./story-queue-seasonal.mjs";
+import {
+  isSeasonalPublishCandidate,
+  queueItemSeasonalScore,
+} from "./seasonal-calendar.mjs";
 
 export const QUEUE_PATH = join(process.cwd(), "content", "story-queue.json");
 
@@ -29,6 +34,7 @@ export const ALL_QUEUE_SEEDS = [
   ...QUEUE_BATCH_4,
   ...QUEUE_BATCH_5,
   ...QUEUE_BATCH_6,
+  ...QUEUE_SEASONAL,
 ];
 
 export function loadQueue() {
@@ -77,26 +83,51 @@ export function ensureQueueDepth(queue, { minPending = MIN_PENDING_TOPICS } = {}
   };
 }
 
-export function pickNextQueueItem(queue, existingSlugs) {
-  const pending = queue.items.filter((item) => item.status === "pending");
-  for (const item of pending) {
-    if (existingSlugs.has(item.id)) {
-      continue;
-    }
-    if (item.publishedSlug && existingSlugs.has(item.publishedSlug)) {
-      continue;
-    }
-    return item;
-  }
-  return null;
+function eligiblePending(queue, existingSlugs) {
+  return queue.items.filter((item) => {
+    if (item.status !== "pending") return false;
+    if (existingSlugs.has(item.id)) return false;
+    if (item.publishedSlug && existingSlugs.has(item.publishedSlug)) return false;
+    return true;
+  });
 }
 
-export function markQueueItemPublished(queue, itemId, slug) {
+/**
+ * Prefer seasonal matches 30–60 days before peak, but never starve evergreen:
+ * if the most recent publish was a seasonal pick and evergreen remains, take evergreen next.
+ */
+export function pickNextQueueItem(queue, existingSlugs, now = new Date()) {
+  const eligible = eligiblePending(queue, existingSlugs);
+  if (!eligible.length) return null;
+
+  const seasonal = eligible
+    .filter((item) => isSeasonalPublishCandidate(item, now))
+    .sort(
+      (a, b) =>
+        queueItemSeasonalScore(b, now) - queueItemSeasonalScore(a, now)
+    );
+  const evergreen = eligible.filter(
+    (item) => !isSeasonalPublishCandidate(item, now)
+  );
+
+  const recent = queue.items
+    .filter((i) => i.status === "published" && i.publishedAt)
+    .sort((a, b) => String(b.publishedAt).localeCompare(String(a.publishedAt)))
+    .slice(0, 1);
+  const lastWasSeasonal = recent[0]?.seasonalPick === true;
+
+  if (lastWasSeasonal && evergreen.length) return evergreen[0];
+  if (seasonal.length) return seasonal[0];
+  return eligible[0];
+}
+
+export function markQueueItemPublished(queue, itemId, slug, now = new Date()) {
   const item = queue.items.find((i) => i.id === itemId);
   if (!item) return false;
   item.status = "published";
   item.publishedSlug = slug;
   item.publishedAt = new Date().toISOString();
+  item.seasonalPick = isSeasonalPublishCandidate(item, now);
   return true;
 }
 
