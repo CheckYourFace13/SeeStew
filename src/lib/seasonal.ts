@@ -370,14 +370,23 @@ export function getSeasonalHomepageFeatures(
   limit = 3
 ): { label: string; articles: Article[] } | null {
   const bySlug = new Map(articles.map((a) => [a.slug, a]));
-  const windows = getActiveFeatureWindows(now).sort(
-    (a, b) => a.daysUntilPeak - b.daysUntilPeak
-  );
+  const windows = getActiveFeatureWindows(now).sort((a, b) => {
+    // Upcoming peaks before just-passed; nearer first; seasons last
+    const aSeason = a.observance.kind === "season" ? 1 : 0;
+    const bSeason = b.observance.kind === "season" ? 1 : 0;
+    if (aSeason !== bSeason) return aSeason - bSeason;
+    const aUpcoming = a.daysUntilPeak >= 0 ? 0 : 1;
+    const bUpcoming = b.daysUntilPeak >= 0 ? 0 : 1;
+    if (aUpcoming !== bUpcoming) return aUpcoming - bUpcoming;
+    return Math.abs(a.daysUntilPeak) - Math.abs(b.daysUntilPeak);
+  });
   if (!windows.length) return null;
 
-  // Prefer holiday/observance windows over broad seasons for the label
+  // Prefer upcoming holiday/observance windows (e.g. Christmas over just-passed Thanksgiving)
   const primary =
-    windows.find((w) => w.observance.kind !== "season") || windows[0];
+    windows.find((w) => w.observance.kind !== "season" && w.daysUntilPeak >= 0) ||
+    windows.find((w) => w.observance.kind !== "season") ||
+    windows[0];
   const seen = new Set<string>();
   const picked: Article[] = [];
 
